@@ -1,0 +1,1407 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Mvvm.DisplayBindableBase
+  commentId: T:H.Mvvm.DisplayBindableBase
+  id: DisplayBindableBase
+  parent: H.Mvvm
+  children:
+  - H.Mvvm.DisplayBindableBase.#ctor
+  - H.Mvvm.DisplayBindableBase.Commands
+  - H.Mvvm.DisplayBindableBase.CreateCommands
+  - H.Mvvm.DisplayBindableBase.Description
+  - H.Mvvm.DisplayBindableBase.GroupName
+  - H.Mvvm.DisplayBindableBase.ID
+  - H.Mvvm.DisplayBindableBase.Icon
+  - H.Mvvm.DisplayBindableBase.IsLoaded
+  - H.Mvvm.DisplayBindableBase.LoadDefault
+  - H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+  - H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  - H.Mvvm.DisplayBindableBase.LoadedCommand
+  - H.Mvvm.DisplayBindableBase.Name
+  - H.Mvvm.DisplayBindableBase.Order
+  - H.Mvvm.DisplayBindableBase.ShortName
+  langs:
+  - csharp
+  - vb
+  name: DisplayBindableBase
+  nameWithType: DisplayBindableBase
+  fullName: H.Mvvm.DisplayBindableBase
+  type: Class
+  source:
+    id: DisplayBindableBase
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 13
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: 'public abstract class DisplayBindableBase : BindableBase, INotifyPropertyChanged, IDable'
+    content.vb: Public MustInherit Class DisplayBindableBase Inherits BindableBase Implements INotifyPropertyChanged, IDable
+  inheritance:
+  - System.Object
+  - H.Mvvm.BindableBase
+  derivedClasses:
+  - H.Mvvm.DesignPresenterBase
+  - H.Mvvm.DisplayBindable`1
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  - H.Mvvm.IDable
+  inheritedMembers:
+  - H.Mvvm.BindableBase.Init
+  - H.Mvvm.BindableBase.PropertyChanged
+  - H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  - H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  - H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: H.Mvvm.DisplayBindableBase.#ctor
+  commentId: M:H.Mvvm.DisplayBindableBase.#ctor
+  id: '#ctor'
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: DisplayBindableBase()
+  nameWithType: DisplayBindableBase.DisplayBindableBase()
+  fullName: H.Mvvm.DisplayBindableBase.DisplayBindableBase()
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 15
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public DisplayBindableBase()
+    content.vb: Public Sub New()
+  overload: H.Mvvm.DisplayBindableBase.#ctor*
+  nameWithType.vb: DisplayBindableBase.New()
+  fullName.vb: H.Mvvm.DisplayBindableBase.New()
+  name.vb: New()
+- uid: H.Mvvm.DisplayBindableBase.Commands
+  commentId: P:H.Mvvm.DisplayBindableBase.Commands
+  id: Commands
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: Commands
+  nameWithType: DisplayBindableBase.Commands
+  fullName: H.Mvvm.DisplayBindableBase.Commands
+  type: Property
+  source:
+    id: Commands
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 35
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      [JsonIgnore]
+
+      public ObservableCollection<ICommand> Commands { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{System.Windows.Input.ICommand}
+    content.vb: >-
+      <Browsable(False)>
+
+      <JsonIgnore>
+
+      Public ReadOnly Property Commands As ObservableCollection(Of ICommand)
+  overload: H.Mvvm.DisplayBindableBase.Commands*
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: H.Mvvm.DisplayBindableBase.CreateCommands
+  commentId: M:H.Mvvm.DisplayBindableBase.CreateCommands
+  id: CreateCommands
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: CreateCommands()
+  nameWithType: DisplayBindableBase.CreateCommands()
+  fullName: H.Mvvm.DisplayBindableBase.CreateCommands()
+  type: Method
+  source:
+    id: CreateCommands
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 41
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: protected virtual IEnumerable<ICommand> CreateCommands()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Windows.Input.ICommand}
+    content.vb: Protected Overridable Function CreateCommands() As IEnumerable(Of ICommand)
+  overload: H.Mvvm.DisplayBindableBase.CreateCommands*
+- uid: H.Mvvm.DisplayBindableBase.LoadedCommand
+  commentId: P:H.Mvvm.DisplayBindableBase.LoadedCommand
+  id: LoadedCommand
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: LoadedCommand
+  nameWithType: DisplayBindableBase.LoadedCommand
+  fullName: H.Mvvm.DisplayBindableBase.LoadedCommand
+  type: Property
+  source:
+    id: LoadedCommand
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 57
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      [JsonIgnore]
+
+      public RelayCommand LoadedCommand { get; }
+    parameters: []
+    return:
+      type: H.Mvvm.RelayCommand
+    content.vb: >-
+      <Browsable(False)>
+
+      <JsonIgnore>
+
+      Public ReadOnly Property LoadedCommand As RelayCommand
+  overload: H.Mvvm.DisplayBindableBase.LoadedCommand*
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: H.Mvvm.DisplayBindableBase.IsLoaded
+  commentId: P:H.Mvvm.DisplayBindableBase.IsLoaded
+  id: IsLoaded
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: IsLoaded
+  nameWithType: DisplayBindableBase.IsLoaded
+  fullName: H.Mvvm.DisplayBindableBase.IsLoaded
+  type: Property
+  source:
+    id: IsLoaded
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 63
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      [JsonIgnore]
+
+      public bool IsLoaded { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Browsable(False)>
+
+      <JsonIgnore>
+
+      Public Property IsLoaded As Boolean
+  overload: H.Mvvm.DisplayBindableBase.IsLoaded*
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  commentId: M:H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  id: Loaded(System.Object)
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: Loaded(object)
+  nameWithType: DisplayBindableBase.Loaded(object)
+  fullName: H.Mvvm.DisplayBindableBase.Loaded(object)
+  type: Method
+  source:
+    id: Loaded
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 68
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: protected virtual void Loaded(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    content.vb: Protected Overridable Sub Loaded(obj As Object)
+  overload: H.Mvvm.DisplayBindableBase.Loaded*
+  nameWithType.vb: DisplayBindableBase.Loaded(Object)
+  fullName.vb: H.Mvvm.DisplayBindableBase.Loaded(Object)
+  name.vb: Loaded(Object)
+- uid: H.Mvvm.DisplayBindableBase.ID
+  commentId: P:H.Mvvm.DisplayBindableBase.ID
+  id: ID
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: DisplayBindableBase.ID
+  fullName: H.Mvvm.DisplayBindableBase.ID
+  type: Property
+  source:
+    id: ID
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 74
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      public virtual string ID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Browsable(False)>
+
+      Public Overridable Property ID As String
+  overload: H.Mvvm.DisplayBindableBase.ID*
+  implements:
+  - H.Mvvm.IDable.ID
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Mvvm.DisplayBindableBase.Name
+  commentId: P:H.Mvvm.DisplayBindableBase.Name
+  id: Name
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: DisplayBindableBase.Name
+  fullName: H.Mvvm.DisplayBindableBase.Name
+  type: Property
+  source:
+    id: Name
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 86
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Browsable(false)]
+
+      public virtual string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      <Browsable(False)>
+
+      Public Overridable Property Name As String
+  overload: H.Mvvm.DisplayBindableBase.Name*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Mvvm.DisplayBindableBase.Icon
+  commentId: P:H.Mvvm.DisplayBindableBase.Icon
+  id: Icon
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: Icon
+  nameWithType: DisplayBindableBase.Icon
+  fullName: H.Mvvm.DisplayBindableBase.Icon
+  type: Property
+  source:
+    id: Icon
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 101
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Browsable(false)]
+
+      public virtual string Icon { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      <Browsable(False)>
+
+      Public Overridable Property Icon As String
+  overload: H.Mvvm.DisplayBindableBase.Icon*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Mvvm.DisplayBindableBase.ShortName
+  commentId: P:H.Mvvm.DisplayBindableBase.ShortName
+  id: ShortName
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: ShortName
+  nameWithType: DisplayBindableBase.ShortName
+  fullName: H.Mvvm.DisplayBindableBase.ShortName
+  type: Property
+  source:
+    id: ShortName
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 116
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Browsable(false)]
+
+      public virtual string ShortName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      <Browsable(False)>
+
+      Public Overridable Property ShortName As String
+  overload: H.Mvvm.DisplayBindableBase.ShortName*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Mvvm.DisplayBindableBase.GroupName
+  commentId: P:H.Mvvm.DisplayBindableBase.GroupName
+  id: GroupName
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: GroupName
+  nameWithType: DisplayBindableBase.GroupName
+  fullName: H.Mvvm.DisplayBindableBase.GroupName
+  type: Property
+  source:
+    id: GroupName
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 131
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Browsable(false)]
+
+      public virtual string GroupName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      <Browsable(False)>
+
+      Public Overridable Property GroupName As String
+  overload: H.Mvvm.DisplayBindableBase.GroupName*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Mvvm.DisplayBindableBase.Description
+  commentId: P:H.Mvvm.DisplayBindableBase.Description
+  id: Description
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: DisplayBindableBase.Description
+  fullName: H.Mvvm.DisplayBindableBase.Description
+  type: Property
+  source:
+    id: Description
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 146
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Browsable(false)]
+
+      public virtual string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      <Browsable(False)>
+
+      Public Overridable Property Description As String
+  overload: H.Mvvm.DisplayBindableBase.Description*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Mvvm.DisplayBindableBase.Order
+  commentId: P:H.Mvvm.DisplayBindableBase.Order
+  id: Order
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: Order
+  nameWithType: DisplayBindableBase.Order
+  fullName: H.Mvvm.DisplayBindableBase.Order
+  type: Property
+  source:
+    id: Order
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 162
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Browsable(false)]
+
+      public virtual int Order { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonIgnore>
+
+      <Browsable(False)>
+
+      Public Overridable Property Order As Integer
+  overload: H.Mvvm.DisplayBindableBase.Order*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+  commentId: P:H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+  id: LoadDefaultCommand
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: LoadDefaultCommand
+  nameWithType: DisplayBindableBase.LoadDefaultCommand
+  fullName: H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+  type: Property
+  source:
+    id: LoadDefaultCommand
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 176
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Display(Name = "恢复默认")]
+
+      [Browsable(false)]
+
+      public virtual RelayCommand LoadDefaultCommand { get; }
+    parameters: []
+    return:
+      type: H.Mvvm.RelayCommand
+    content.vb: >-
+      <JsonIgnore>
+
+      <Display(Name:="恢复默认")>
+
+      <Browsable(False)>
+
+      Public Overridable ReadOnly Property LoadDefaultCommand As RelayCommand
+  overload: H.Mvvm.DisplayBindableBase.LoadDefaultCommand*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 恢复默认
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Mvvm.DisplayBindableBase.LoadDefault
+  commentId: M:H.Mvvm.DisplayBindableBase.LoadDefault
+  id: LoadDefault
+  parent: H.Mvvm.DisplayBindableBase
+  langs:
+  - csharp
+  - vb
+  name: LoadDefault()
+  nameWithType: DisplayBindableBase.LoadDefault()
+  fullName: H.Mvvm.DisplayBindableBase.LoadDefault()
+  type: Method
+  source:
+    id: LoadDefault
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DisplayBindableBase.cs
+    startLine: 186
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public virtual void LoadDefault()
+    content.vb: Public Overridable Sub LoadDefault()
+  overload: H.Mvvm.DisplayBindableBase.LoadDefault*
+references:
+- uid: H.Mvvm
+  commentId: N:H.Mvvm
+  href: H.html
+  name: H.Mvvm
+  nameWithType: H.Mvvm
+  fullName: H.Mvvm
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: H.Mvvm.BindableBase
+  commentId: T:H.Mvvm.BindableBase
+  parent: H.Mvvm
+  href: H.Mvvm.BindableBase.html
+  name: BindableBase
+  nameWithType: BindableBase
+  fullName: H.Mvvm.BindableBase
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: H.Mvvm.IDable
+  commentId: T:H.Mvvm.IDable
+  parent: H.Mvvm
+  href: H.Mvvm.IDable.html
+  name: IDable
+  nameWithType: IDable
+  fullName: H.Mvvm.IDable
+- uid: H.Mvvm.BindableBase.Init
+  commentId: M:H.Mvvm.BindableBase.Init
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  name: Init()
+  nameWithType: BindableBase.Init()
+  fullName: H.Mvvm.BindableBase.Init()
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.Init
+    name: Init
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.Init
+    name: Init
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  - name: (
+  - name: )
+- uid: H.Mvvm.BindableBase.PropertyChanged
+  commentId: E:H.Mvvm.BindableBase.PropertyChanged
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BindableBase.PropertyChanged
+  fullName: H.Mvvm.BindableBase.PropertyChanged
+- uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  parent: H.Mvvm.BindableBase
+  isExternal: true
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  name: RaisePropertyChanged(string)
+  nameWithType: BindableBase.RaisePropertyChanged(string)
+  fullName: H.Mvvm.BindableBase.RaisePropertyChanged(string)
+  nameWithType.vb: BindableBase.RaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.BindableBase.RaisePropertyChanged(String)
+  name.vb: RaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  parent: H.Mvvm.BindableBase
+  isExternal: true
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  name: DispatcherRaisePropertyChanged(string)
+  nameWithType: BindableBase.DispatcherRaisePropertyChanged(string)
+  fullName: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(string)
+  nameWithType.vb: BindableBase.DispatcherRaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(String)
+  name.vb: DispatcherRaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+    name: DispatcherRaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+    name: DispatcherRaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  commentId: M:H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  name: OnDispatcherPropertyChanged()
+  nameWithType: BindableBase.OnDispatcherPropertyChanged()
+  fullName: H.Mvvm.BindableBase.OnDispatcherPropertyChanged()
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+    name: OnDispatcherPropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+    name: OnDispatcherPropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: H.Mvvm.DisplayBindableBase.#ctor*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.#ctor
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase__ctor
+  name: DisplayBindableBase
+  nameWithType: DisplayBindableBase.DisplayBindableBase
+  fullName: H.Mvvm.DisplayBindableBase.DisplayBindableBase
+  nameWithType.vb: DisplayBindableBase.New
+  fullName.vb: H.Mvvm.DisplayBindableBase.New
+  name.vb: New
+- uid: H.Mvvm.DisplayBindableBase.Commands*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.Commands
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands
+  name: Commands
+  nameWithType: DisplayBindableBase.Commands
+  fullName: H.Mvvm.DisplayBindableBase.Commands
+- uid: System.Collections.ObjectModel.ObservableCollection{System.Windows.Input.ICommand}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{System.Windows.Input.ICommand}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<ICommand>
+  nameWithType: ObservableCollection<ICommand>
+  fullName: System.Collections.ObjectModel.ObservableCollection<System.Windows.Input.ICommand>
+  nameWithType.vb: ObservableCollection(Of ICommand)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of System.Windows.Input.ICommand)
+  name.vb: ObservableCollection(Of ICommand)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: System.Windows.Input.ICommand
+    name: ICommand
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.input.icommand
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.Input.ICommand
+    name: ICommand
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.input.icommand
+  - name: )
+- uid: System.Collections.ObjectModel.ObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<T>
+  nameWithType: ObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ObservableCollection<T>
+  nameWithType.vb: ObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of T)
+  name.vb: ObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: H.Mvvm.DisplayBindableBase.CreateCommands*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.CreateCommands
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
+  name: CreateCommands
+  nameWithType: DisplayBindableBase.CreateCommands
+  fullName: H.Mvvm.DisplayBindableBase.CreateCommands
+- uid: System.Collections.Generic.IEnumerable{System.Windows.Input.ICommand}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Windows.Input.ICommand}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ICommand>
+  nameWithType: IEnumerable<ICommand>
+  fullName: System.Collections.Generic.IEnumerable<System.Windows.Input.ICommand>
+  nameWithType.vb: IEnumerable(Of ICommand)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Windows.Input.ICommand)
+  name.vb: IEnumerable(Of ICommand)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Windows.Input.ICommand
+    name: ICommand
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.input.icommand
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.Input.ICommand
+    name: ICommand
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.input.icommand
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: H.Mvvm.DisplayBindableBase.LoadedCommand*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.LoadedCommand
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand
+  name: LoadedCommand
+  nameWithType: DisplayBindableBase.LoadedCommand
+  fullName: H.Mvvm.DisplayBindableBase.LoadedCommand
+- uid: H.Mvvm.RelayCommand
+  commentId: T:H.Mvvm.RelayCommand
+  parent: H.Mvvm
+  href: H.Mvvm.RelayCommand.html
+  name: RelayCommand
+  nameWithType: RelayCommand
+  fullName: H.Mvvm.RelayCommand
+- uid: H.Mvvm.DisplayBindableBase.IsLoaded*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.IsLoaded
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded
+  name: IsLoaded
+  nameWithType: DisplayBindableBase.IsLoaded
+  fullName: H.Mvvm.DisplayBindableBase.IsLoaded
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: H.Mvvm.DisplayBindableBase.Loaded*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.Loaded
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+  name: Loaded
+  nameWithType: DisplayBindableBase.Loaded
+  fullName: H.Mvvm.DisplayBindableBase.Loaded
+- uid: H.Mvvm.DisplayBindableBase.ID*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.ID
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID
+  name: ID
+  nameWithType: DisplayBindableBase.ID
+  fullName: H.Mvvm.DisplayBindableBase.ID
+- uid: H.Mvvm.IDable.ID
+  commentId: P:H.Mvvm.IDable.ID
+  parent: H.Mvvm.IDable
+  href: H.Mvvm.IDable.html#H_Mvvm_IDable_ID
+  name: ID
+  nameWithType: IDable.ID
+  fullName: H.Mvvm.IDable.ID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: H.Mvvm.DisplayBindableBase.Name*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.Name
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name
+  name: Name
+  nameWithType: DisplayBindableBase.Name
+  fullName: H.Mvvm.DisplayBindableBase.Name
+- uid: H.Mvvm.DisplayBindableBase.Icon*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.Icon
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon
+  name: Icon
+  nameWithType: DisplayBindableBase.Icon
+  fullName: H.Mvvm.DisplayBindableBase.Icon
+- uid: H.Mvvm.DisplayBindableBase.ShortName*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.ShortName
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName
+  name: ShortName
+  nameWithType: DisplayBindableBase.ShortName
+  fullName: H.Mvvm.DisplayBindableBase.ShortName
+- uid: H.Mvvm.DisplayBindableBase.GroupName*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.GroupName
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName
+  name: GroupName
+  nameWithType: DisplayBindableBase.GroupName
+  fullName: H.Mvvm.DisplayBindableBase.GroupName
+- uid: H.Mvvm.DisplayBindableBase.Description*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.Description
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description
+  name: Description
+  nameWithType: DisplayBindableBase.Description
+  fullName: H.Mvvm.DisplayBindableBase.Description
+- uid: H.Mvvm.DisplayBindableBase.Order*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.Order
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order
+  name: Order
+  nameWithType: DisplayBindableBase.Order
+  fullName: H.Mvvm.DisplayBindableBase.Order
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: H.Mvvm.DisplayBindableBase.LoadDefaultCommand*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefaultCommand
+  name: LoadDefaultCommand
+  nameWithType: DisplayBindableBase.LoadDefaultCommand
+  fullName: H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+- uid: H.Mvvm.DisplayBindableBase.LoadDefault*
+  commentId: Overload:H.Mvvm.DisplayBindableBase.LoadDefault
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault
+  name: LoadDefault
+  nameWithType: DisplayBindableBase.LoadDefault
+  fullName: H.Mvvm.DisplayBindableBase.LoadDefault

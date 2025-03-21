@@ -1,0 +1,247 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Mvvm.ITreeNode
+  commentId: T:H.Mvvm.ITreeNode
+  id: ITreeNode
+  parent: H.Mvvm
+  children:
+  - H.Mvvm.ITreeNode.IsChecked
+  - H.Mvvm.ITreeNode.IsExpanded
+  - H.Mvvm.ITreeNode.Visibility
+  langs:
+  - csharp
+  - vb
+  name: ITreeNode
+  nameWithType: ITreeNode
+  fullName: H.Mvvm.ITreeNode
+  type: Interface
+  source:
+    id: ITreeNode
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\ITreeNode.cs
+    startLine: 6
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public interface ITreeNode
+    content.vb: Public Interface ITreeNode
+- uid: H.Mvvm.ITreeNode.IsExpanded
+  commentId: P:H.Mvvm.ITreeNode.IsExpanded
+  id: IsExpanded
+  parent: H.Mvvm.ITreeNode
+  langs:
+  - csharp
+  - vb
+  name: IsExpanded
+  nameWithType: ITreeNode.IsExpanded
+  fullName: H.Mvvm.ITreeNode.IsExpanded
+  type: Property
+  source:
+    id: IsExpanded
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\ITreeNode.cs
+    startLine: 8
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: bool IsExpanded { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Property IsExpanded As Boolean
+  overload: H.Mvvm.ITreeNode.IsExpanded*
+- uid: H.Mvvm.ITreeNode.IsChecked
+  commentId: P:H.Mvvm.ITreeNode.IsChecked
+  id: IsChecked
+  parent: H.Mvvm.ITreeNode
+  langs:
+  - csharp
+  - vb
+  name: IsChecked
+  nameWithType: ITreeNode.IsChecked
+  fullName: H.Mvvm.ITreeNode.IsChecked
+  type: Property
+  source:
+    id: IsChecked
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\ITreeNode.cs
+    startLine: 9
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: bool? IsChecked { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Property IsChecked As Boolean?
+  overload: H.Mvvm.ITreeNode.IsChecked*
+- uid: H.Mvvm.ITreeNode.Visibility
+  commentId: P:H.Mvvm.ITreeNode.Visibility
+  id: Visibility
+  parent: H.Mvvm.ITreeNode
+  langs:
+  - csharp
+  - vb
+  name: Visibility
+  nameWithType: ITreeNode.Visibility
+  fullName: H.Mvvm.ITreeNode.Visibility
+  type: Property
+  source:
+    id: Visibility
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\ITreeNode.cs
+    startLine: 10
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: Visibility Visibility { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Visibility
+    content.vb: Property Visibility As Visibility
+  overload: H.Mvvm.ITreeNode.Visibility*
+references:
+- uid: H.Mvvm
+  commentId: N:H.Mvvm
+  href: H.html
+  name: H.Mvvm
+  nameWithType: H.Mvvm
+  fullName: H.Mvvm
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+- uid: H.Mvvm.ITreeNode.IsExpanded*
+  commentId: Overload:H.Mvvm.ITreeNode.IsExpanded
+  href: H.Mvvm.ITreeNode.html#H_Mvvm_ITreeNode_IsExpanded
+  name: IsExpanded
+  nameWithType: ITreeNode.IsExpanded
+  fullName: H.Mvvm.ITreeNode.IsExpanded
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: H.Mvvm.ITreeNode.IsChecked*
+  commentId: Overload:H.Mvvm.ITreeNode.IsChecked
+  href: H.Mvvm.ITreeNode.html#H_Mvvm_ITreeNode_IsChecked
+  name: IsChecked
+  nameWithType: ITreeNode.IsChecked
+  fullName: H.Mvvm.ITreeNode.IsChecked
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Mvvm.ITreeNode.Visibility*
+  commentId: Overload:H.Mvvm.ITreeNode.Visibility
+  href: H.Mvvm.ITreeNode.html#H_Mvvm_ITreeNode_Visibility
+  name: Visibility
+  nameWithType: ITreeNode.Visibility
+  fullName: H.Mvvm.ITreeNode.Visibility
+- uid: System.Windows.Visibility
+  commentId: T:System.Windows.Visibility
+  parent: System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.visibility
+  name: Visibility
+  nameWithType: Visibility
+  fullName: System.Windows.Visibility
+- uid: System.Windows
+  commentId: N:System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows
+  nameWithType: System.Windows
+  fullName: System.Windows
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows

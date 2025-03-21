@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IDesignPresenterBase | WPF-Control </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IDesignPresenterBase | WPF-Control ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="WPF-Control">
+            WPF-Control
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="H.Mvvm.IDesignPresenterBase">
+
+
+
+  <h1 id="H_Mvvm_IDesignPresenterBase" data-uid="H.Mvvm.IDesignPresenterBase" class="text-break">
+Interface IDesignPresenterBase  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="H.html">H</a>.<a class="xref" href="H.Mvvm.html">Mvvm</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>H.Mvvm.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDesignPresenterBase</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_Background_" data-uid="H.Mvvm.IDesignPresenterBase.Background*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_Background" data-uid="H.Mvvm.IDesignPresenterBase.Background">
+  Background
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Brush Background { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.brush">Brush</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_BorderBrush_" data-uid="H.Mvvm.IDesignPresenterBase.BorderBrush*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_BorderBrush" data-uid="H.Mvvm.IDesignPresenterBase.BorderBrush">
+  BorderBrush
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Brush BorderBrush { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.brush">Brush</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_BorderThickness_" data-uid="H.Mvvm.IDesignPresenterBase.BorderThickness*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_BorderThickness" data-uid="H.Mvvm.IDesignPresenterBase.BorderThickness">
+  BorderThickness
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Thickness BorderThickness { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_Column_" data-uid="H.Mvvm.IDesignPresenterBase.Column*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_Column" data-uid="H.Mvvm.IDesignPresenterBase.Column">
+  Column
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Column { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_ColumnSpan_" data-uid="H.Mvvm.IDesignPresenterBase.ColumnSpan*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_ColumnSpan" data-uid="H.Mvvm.IDesignPresenterBase.ColumnSpan">
+  ColumnSpan
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ColumnSpan { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_DeleteCommand_" data-uid="H.Mvvm.IDesignPresenterBase.DeleteCommand*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_DeleteCommand" data-uid="H.Mvvm.IDesignPresenterBase.DeleteCommand">
+  DeleteCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">RelayCommand DeleteCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_Height_" data-uid="H.Mvvm.IDesignPresenterBase.Height*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_Height" data-uid="H.Mvvm.IDesignPresenterBase.Height">
+  Height
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double Height { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_HorizontalAlignment_" data-uid="H.Mvvm.IDesignPresenterBase.HorizontalAlignment*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_HorizontalAlignment" data-uid="H.Mvvm.IDesignPresenterBase.HorizontalAlignment">
+  HorizontalAlignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">HorizontalAlignment HorizontalAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.horizontalalignment">HorizontalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_HorizontalContentAlignment_" data-uid="H.Mvvm.IDesignPresenterBase.HorizontalContentAlignment*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_HorizontalContentAlignment" data-uid="H.Mvvm.IDesignPresenterBase.HorizontalContentAlignment">
+  HorizontalContentAlignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">HorizontalAlignment HorizontalContentAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.horizontalalignment">HorizontalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_IsEnabled_" data-uid="H.Mvvm.IDesignPresenterBase.IsEnabled*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_IsEnabled" data-uid="H.Mvvm.IDesignPresenterBase.IsEnabled">
+  IsEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_IsMouseOver_" data-uid="H.Mvvm.IDesignPresenterBase.IsMouseOver*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_IsMouseOver" data-uid="H.Mvvm.IDesignPresenterBase.IsMouseOver">
+  IsMouseOver
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsMouseOver { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_IsSelected_" data-uid="H.Mvvm.IDesignPresenterBase.IsSelected*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_IsSelected" data-uid="H.Mvvm.IDesignPresenterBase.IsSelected">
+  IsSelected
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsSelected { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_IsVisible_" data-uid="H.Mvvm.IDesignPresenterBase.IsVisible*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_IsVisible" data-uid="H.Mvvm.IDesignPresenterBase.IsVisible">
+  IsVisible
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsVisible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_Margin_" data-uid="H.Mvvm.IDesignPresenterBase.Margin*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_Margin" data-uid="H.Mvvm.IDesignPresenterBase.Margin">
+  Margin
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Thickness Margin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_MinHeight_" data-uid="H.Mvvm.IDesignPresenterBase.MinHeight*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_MinHeight" data-uid="H.Mvvm.IDesignPresenterBase.MinHeight">
+  MinHeight
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double MinHeight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_MinWidth_" data-uid="H.Mvvm.IDesignPresenterBase.MinWidth*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_MinWidth" data-uid="H.Mvvm.IDesignPresenterBase.MinWidth">
+  MinWidth
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double MinWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_Opacity_" data-uid="H.Mvvm.IDesignPresenterBase.Opacity*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_Opacity" data-uid="H.Mvvm.IDesignPresenterBase.Opacity">
+  Opacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double Opacity { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_Padding_" data-uid="H.Mvvm.IDesignPresenterBase.Padding*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_Padding" data-uid="H.Mvvm.IDesignPresenterBase.Padding">
+  Padding
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Thickness Padding { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_Row_" data-uid="H.Mvvm.IDesignPresenterBase.Row*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_Row" data-uid="H.Mvvm.IDesignPresenterBase.Row">
+  Row
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Row { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_RowSpan_" data-uid="H.Mvvm.IDesignPresenterBase.RowSpan*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_RowSpan" data-uid="H.Mvvm.IDesignPresenterBase.RowSpan">
+  RowSpan
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int RowSpan { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_VerticalAlignment_" data-uid="H.Mvvm.IDesignPresenterBase.VerticalAlignment*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_VerticalAlignment" data-uid="H.Mvvm.IDesignPresenterBase.VerticalAlignment">
+  VerticalAlignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">VerticalAlignment VerticalAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.verticalalignment">VerticalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_VerticalContentAlignment_" data-uid="H.Mvvm.IDesignPresenterBase.VerticalContentAlignment*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_VerticalContentAlignment" data-uid="H.Mvvm.IDesignPresenterBase.VerticalContentAlignment">
+  VerticalContentAlignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">VerticalAlignment VerticalContentAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.verticalalignment">VerticalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_IDesignPresenterBase_Width_" data-uid="H.Mvvm.IDesignPresenterBase.Width*"></a>
+
+  <h3 id="H_Mvvm_IDesignPresenterBase_Width" data-uid="H.Mvvm.IDesignPresenterBase.Width">
+  Width
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double Width { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
