@@ -2,7 +2,7 @@
 _layout: landing
 ---
 
-# 欢迎访问 **WPF-Control** 文档
+# 欢迎访问 **WPF-Control** 开发文档
 
 [点击此处打开开发文档](https://hebiangu.github.io/WPF-Control-Docs/api/H.Iocable.html)
 
