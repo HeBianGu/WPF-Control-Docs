@@ -1,0 +1,819 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Iocable.IocAsyncMarkupCommandBase
+  commentId: T:H.Iocable.IocAsyncMarkupCommandBase
+  id: IocAsyncMarkupCommandBase
+  parent: H.Iocable
+  children:
+  - H.Iocable.IocAsyncMarkupCommandBase.CanExecute(System.Object)
+  - H.Iocable.IocAsyncMarkupCommandBase.Execute(System.Object)
+  - H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync(System.Object)
+  - H.Iocable.IocAsyncMarkupCommandBase.IsExecuting
+  - H.Iocable.IocAsyncMarkupCommandBase.Message
+  langs:
+  - csharp
+  - vb
+  name: IocAsyncMarkupCommandBase
+  nameWithType: IocAsyncMarkupCommandBase
+  fullName: H.Iocable.IocAsyncMarkupCommandBase
+  type: Class
+  source:
+    id: IocAsyncMarkupCommandBase
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Iocable\IocAsyncMarkupCommandBase.cs
+    startLine: 4
+  assemblies:
+  - H.Iocable
+  namespace: H.Iocable
+  syntax:
+    content: 'public abstract class IocAsyncMarkupCommandBase : IocMarkupCommandBase, ICommand, INotifyPropertyChanged'
+    content.vb: Public MustInherit Class IocAsyncMarkupCommandBase Inherits IocMarkupCommandBase Implements ICommand, INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - System.Windows.Markup.MarkupExtension
+  - H.Iocable.IocMarkupCommandBase
+  implements:
+  - System.Windows.Input.ICommand
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - H.Iocable.IocMarkupCommandBase.CanExecuteChanged
+  - H.Iocable.IocMarkupCommandBase.ProvideValue(System.IServiceProvider)
+  - H.Iocable.IocMarkupCommandBase.PropertyChanged
+  - H.Iocable.IocMarkupCommandBase.RaisePropertyChanged(System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: H.Iocable.IocAsyncMarkupCommandBase.IsExecuting
+  commentId: P:H.Iocable.IocAsyncMarkupCommandBase.IsExecuting
+  id: IsExecuting
+  parent: H.Iocable.IocAsyncMarkupCommandBase
+  langs:
+  - csharp
+  - vb
+  name: IsExecuting
+  nameWithType: IocAsyncMarkupCommandBase.IsExecuting
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.IsExecuting
+  type: Property
+  source:
+    id: IsExecuting
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Iocable\IocAsyncMarkupCommandBase.cs
+    startLine: 7
+  assemblies:
+  - H.Iocable
+  namespace: H.Iocable
+  syntax:
+    content: public bool IsExecuting { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsExecuting As Boolean
+  overload: H.Iocable.IocAsyncMarkupCommandBase.IsExecuting*
+- uid: H.Iocable.IocAsyncMarkupCommandBase.Message
+  commentId: P:H.Iocable.IocAsyncMarkupCommandBase.Message
+  id: Message
+  parent: H.Iocable.IocAsyncMarkupCommandBase
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: IocAsyncMarkupCommandBase.Message
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.Message
+  type: Property
+  source:
+    id: Message
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Iocable\IocAsyncMarkupCommandBase.cs
+    startLine: 18
+  assemblies:
+  - H.Iocable
+  namespace: H.Iocable
+  syntax:
+    content: public string Message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: H.Iocable.IocAsyncMarkupCommandBase.Message*
+- uid: H.Iocable.IocAsyncMarkupCommandBase.Execute(System.Object)
+  commentId: M:H.Iocable.IocAsyncMarkupCommandBase.Execute(System.Object)
+  id: Execute(System.Object)
+  parent: H.Iocable.IocAsyncMarkupCommandBase
+  langs:
+  - csharp
+  - vb
+  name: Execute(object)
+  nameWithType: IocAsyncMarkupCommandBase.Execute(object)
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.Execute(object)
+  type: Method
+  source:
+    id: Execute
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Iocable\IocAsyncMarkupCommandBase.cs
+    startLine: 28
+  assemblies:
+  - H.Iocable
+  namespace: H.Iocable
+  summary: Defines the method to be called when the command is invoked.
+  example: []
+  syntax:
+    content: public override void Execute(object parameter)
+    parameters:
+    - id: parameter
+      type: System.Object
+      description: Data used by the command.  If the command does not require data to be passed, this object can be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Public Overrides Sub Execute(parameter As Object)
+  overridden: H.Iocable.IocMarkupCommandBase.Execute(System.Object)
+  overload: H.Iocable.IocAsyncMarkupCommandBase.Execute*
+  nameWithType.vb: IocAsyncMarkupCommandBase.Execute(Object)
+  fullName.vb: H.Iocable.IocAsyncMarkupCommandBase.Execute(Object)
+  name.vb: Execute(Object)
+- uid: H.Iocable.IocAsyncMarkupCommandBase.CanExecute(System.Object)
+  commentId: M:H.Iocable.IocAsyncMarkupCommandBase.CanExecute(System.Object)
+  id: CanExecute(System.Object)
+  parent: H.Iocable.IocAsyncMarkupCommandBase
+  langs:
+  - csharp
+  - vb
+  name: CanExecute(object)
+  nameWithType: IocAsyncMarkupCommandBase.CanExecute(object)
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.CanExecute(object)
+  type: Method
+  source:
+    id: CanExecute
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Iocable\IocAsyncMarkupCommandBase.cs
+    startLine: 59
+  assemblies:
+  - H.Iocable
+  namespace: H.Iocable
+  summary: Defines the method that determines whether the command can execute in its current state.
+  example: []
+  syntax:
+    content: public override bool CanExecute(object parameter)
+    parameters:
+    - id: parameter
+      type: System.Object
+      description: Data used by the command.  If the command does not require data to be passed, this object can be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if this command can be executed; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function CanExecute(parameter As Object) As Boolean
+  overridden: H.Iocable.IocMarkupCommandBase.CanExecute(System.Object)
+  overload: H.Iocable.IocAsyncMarkupCommandBase.CanExecute*
+  nameWithType.vb: IocAsyncMarkupCommandBase.CanExecute(Object)
+  fullName.vb: H.Iocable.IocAsyncMarkupCommandBase.CanExecute(Object)
+  name.vb: CanExecute(Object)
+- uid: H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync(System.Object)
+  commentId: M:H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync(System.Object)
+  id: ExecuteAsync(System.Object)
+  parent: H.Iocable.IocAsyncMarkupCommandBase
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(object)
+  nameWithType: IocAsyncMarkupCommandBase.ExecuteAsync(object)
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync(object)
+  type: Method
+  source:
+    id: ExecuteAsync
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Iocable\IocAsyncMarkupCommandBase.cs
+    startLine: 64
+  assemblies:
+  - H.Iocable
+  namespace: H.Iocable
+  syntax:
+    content: public virtual Task ExecuteAsync(object parameter)
+    parameters:
+    - id: parameter
+      type: System.Object
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function ExecuteAsync(parameter As Object) As Task
+  overload: H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync*
+  nameWithType.vb: IocAsyncMarkupCommandBase.ExecuteAsync(Object)
+  fullName.vb: H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync(Object)
+  name.vb: ExecuteAsync(Object)
+references:
+- uid: H.Iocable
+  commentId: N:H.Iocable
+  href: H.html
+  name: H.Iocable
+  nameWithType: H.Iocable
+  fullName: H.Iocable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Iocable
+    name: Iocable
+    href: H.Iocable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Iocable
+    name: Iocable
+    href: H.Iocable.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Windows.Markup.MarkupExtension
+  commentId: T:System.Windows.Markup.MarkupExtension
+  parent: System.Windows.Markup
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.markup.markupextension
+  name: MarkupExtension
+  nameWithType: MarkupExtension
+  fullName: System.Windows.Markup.MarkupExtension
+- uid: H.Iocable.IocMarkupCommandBase
+  commentId: T:H.Iocable.IocMarkupCommandBase
+  parent: H.Iocable
+  href: H.Iocable.IocMarkupCommandBase.html
+  name: IocMarkupCommandBase
+  nameWithType: IocMarkupCommandBase
+  fullName: H.Iocable.IocMarkupCommandBase
+- uid: System.Windows.Input.ICommand
+  commentId: T:System.Windows.Input.ICommand
+  parent: System.Windows.Input
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.input.icommand
+  name: ICommand
+  nameWithType: ICommand
+  fullName: System.Windows.Input.ICommand
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: H.Iocable.IocMarkupCommandBase.CanExecuteChanged
+  commentId: E:H.Iocable.IocMarkupCommandBase.CanExecuteChanged
+  parent: H.Iocable.IocMarkupCommandBase
+  href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_CanExecuteChanged
+  name: CanExecuteChanged
+  nameWithType: IocMarkupCommandBase.CanExecuteChanged
+  fullName: H.Iocable.IocMarkupCommandBase.CanExecuteChanged
+- uid: H.Iocable.IocMarkupCommandBase.ProvideValue(System.IServiceProvider)
+  commentId: M:H.Iocable.IocMarkupCommandBase.ProvideValue(System.IServiceProvider)
+  parent: H.Iocable.IocMarkupCommandBase
+  isExternal: true
+  href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_ProvideValue_System_IServiceProvider_
+  name: ProvideValue(IServiceProvider)
+  nameWithType: IocMarkupCommandBase.ProvideValue(IServiceProvider)
+  fullName: H.Iocable.IocMarkupCommandBase.ProvideValue(System.IServiceProvider)
+  spec.csharp:
+  - uid: H.Iocable.IocMarkupCommandBase.ProvideValue(System.IServiceProvider)
+    name: ProvideValue
+    href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_ProvideValue_System_IServiceProvider_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: )
+  spec.vb:
+  - uid: H.Iocable.IocMarkupCommandBase.ProvideValue(System.IServiceProvider)
+    name: ProvideValue
+    href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_ProvideValue_System_IServiceProvider_
+  - name: (
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: )
+- uid: H.Iocable.IocMarkupCommandBase.PropertyChanged
+  commentId: E:H.Iocable.IocMarkupCommandBase.PropertyChanged
+  parent: H.Iocable.IocMarkupCommandBase
+  href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_PropertyChanged
+  name: PropertyChanged
+  nameWithType: IocMarkupCommandBase.PropertyChanged
+  fullName: H.Iocable.IocMarkupCommandBase.PropertyChanged
+- uid: H.Iocable.IocMarkupCommandBase.RaisePropertyChanged(System.String)
+  commentId: M:H.Iocable.IocMarkupCommandBase.RaisePropertyChanged(System.String)
+  parent: H.Iocable.IocMarkupCommandBase
+  isExternal: true
+  href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_RaisePropertyChanged_System_String_
+  name: RaisePropertyChanged(string)
+  nameWithType: IocMarkupCommandBase.RaisePropertyChanged(string)
+  fullName: H.Iocable.IocMarkupCommandBase.RaisePropertyChanged(string)
+  nameWithType.vb: IocMarkupCommandBase.RaisePropertyChanged(String)
+  fullName.vb: H.Iocable.IocMarkupCommandBase.RaisePropertyChanged(String)
+  name.vb: RaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Iocable.IocMarkupCommandBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Iocable.IocMarkupCommandBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Windows.Markup
+  commentId: N:System.Windows.Markup
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Markup
+  nameWithType: System.Windows.Markup
+  fullName: System.Windows.Markup
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Markup
+    name: Markup
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.markup
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Markup
+    name: Markup
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.markup
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Input
+    name: Input
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.input
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Input
+    name: Input
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.input
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: H.Iocable.IocAsyncMarkupCommandBase.IsExecuting*
+  commentId: Overload:H.Iocable.IocAsyncMarkupCommandBase.IsExecuting
+  href: H.Iocable.IocAsyncMarkupCommandBase.html#H_Iocable_IocAsyncMarkupCommandBase_IsExecuting
+  name: IsExecuting
+  nameWithType: IocAsyncMarkupCommandBase.IsExecuting
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.IsExecuting
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: H.Iocable.IocAsyncMarkupCommandBase.Message*
+  commentId: Overload:H.Iocable.IocAsyncMarkupCommandBase.Message
+  href: H.Iocable.IocAsyncMarkupCommandBase.html#H_Iocable_IocAsyncMarkupCommandBase_Message
+  name: Message
+  nameWithType: IocAsyncMarkupCommandBase.Message
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.Message
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: H.Iocable.IocMarkupCommandBase.Execute(System.Object)
+  commentId: M:H.Iocable.IocMarkupCommandBase.Execute(System.Object)
+  parent: H.Iocable.IocMarkupCommandBase
+  isExternal: true
+  href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_Execute_System_Object_
+  name: Execute(object)
+  nameWithType: IocMarkupCommandBase.Execute(object)
+  fullName: H.Iocable.IocMarkupCommandBase.Execute(object)
+  nameWithType.vb: IocMarkupCommandBase.Execute(Object)
+  fullName.vb: H.Iocable.IocMarkupCommandBase.Execute(Object)
+  name.vb: Execute(Object)
+  spec.csharp:
+  - uid: H.Iocable.IocMarkupCommandBase.Execute(System.Object)
+    name: Execute
+    href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_Execute_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Iocable.IocMarkupCommandBase.Execute(System.Object)
+    name: Execute
+    href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_Execute_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Iocable.IocAsyncMarkupCommandBase.Execute*
+  commentId: Overload:H.Iocable.IocAsyncMarkupCommandBase.Execute
+  href: H.Iocable.IocAsyncMarkupCommandBase.html#H_Iocable_IocAsyncMarkupCommandBase_Execute_System_Object_
+  name: Execute
+  nameWithType: IocAsyncMarkupCommandBase.Execute
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.Execute
+- uid: H.Iocable.IocMarkupCommandBase.CanExecute(System.Object)
+  commentId: M:H.Iocable.IocMarkupCommandBase.CanExecute(System.Object)
+  parent: H.Iocable.IocMarkupCommandBase
+  isExternal: true
+  href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_CanExecute_System_Object_
+  name: CanExecute(object)
+  nameWithType: IocMarkupCommandBase.CanExecute(object)
+  fullName: H.Iocable.IocMarkupCommandBase.CanExecute(object)
+  nameWithType.vb: IocMarkupCommandBase.CanExecute(Object)
+  fullName.vb: H.Iocable.IocMarkupCommandBase.CanExecute(Object)
+  name.vb: CanExecute(Object)
+  spec.csharp:
+  - uid: H.Iocable.IocMarkupCommandBase.CanExecute(System.Object)
+    name: CanExecute
+    href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_CanExecute_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Iocable.IocMarkupCommandBase.CanExecute(System.Object)
+    name: CanExecute
+    href: H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_CanExecute_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Iocable.IocAsyncMarkupCommandBase.CanExecute*
+  commentId: Overload:H.Iocable.IocAsyncMarkupCommandBase.CanExecute
+  href: H.Iocable.IocAsyncMarkupCommandBase.html#H_Iocable_IocAsyncMarkupCommandBase_CanExecute_System_Object_
+  name: CanExecute
+  nameWithType: IocAsyncMarkupCommandBase.CanExecute
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.CanExecute
+- uid: H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync*
+  commentId: Overload:H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync
+  href: H.Iocable.IocAsyncMarkupCommandBase.html#H_Iocable_IocAsyncMarkupCommandBase_ExecuteAsync_System_Object_
+  name: ExecuteAsync
+  nameWithType: IocAsyncMarkupCommandBase.ExecuteAsync
+  fullName: H.Iocable.IocAsyncMarkupCommandBase.ExecuteAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

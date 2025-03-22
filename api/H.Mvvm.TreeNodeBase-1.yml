@@ -1,0 +1,2092 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Mvvm.TreeNodeBase`1
+  commentId: T:H.Mvvm.TreeNodeBase`1
+  id: TreeNodeBase`1
+  parent: H.Mvvm
+  children:
+  - H.Mvvm.TreeNodeBase`1.#ctor(`0)
+  - H.Mvvm.TreeNodeBase`1.AddNode(H.Mvvm.TreeNodeBase{`0})
+  - H.Mvvm.TreeNodeBase`1.Filter(System.String)
+  - H.Mvvm.TreeNodeBase`1.FindAll(System.Predicate{H.Mvvm.TreeNodeBase{`0}})
+  - H.Mvvm.TreeNodeBase`1.FindAllParent(System.Predicate{H.Mvvm.TreeNodeBase{`0}})
+  - H.Mvvm.TreeNodeBase`1.Foreach(System.Action{H.Mvvm.TreeNodeBase{`0}})
+  - H.Mvvm.TreeNodeBase`1.IsCheckable
+  - H.Mvvm.TreeNodeBase`1.IsChecked
+  - H.Mvvm.TreeNodeBase`1.IsExpanded
+  - H.Mvvm.TreeNodeBase`1.IsLoaded
+  - H.Mvvm.TreeNodeBase`1.Nodes
+  - H.Mvvm.TreeNodeBase`1.Parent
+  - H.Mvvm.TreeNodeBase`1.TreeNodeEntity
+  - H.Mvvm.TreeNodeBase`1.Visibility
+  langs:
+  - csharp
+  - vb
+  name: TreeNodeBase<T>
+  nameWithType: TreeNodeBase<T>
+  fullName: H.Mvvm.TreeNodeBase<T>
+  type: Class
+  source:
+    id: TreeNodeBase
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 10
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: 'public class TreeNodeBase<T> : SelectBindable<T>, INotifyPropertyChanged, IModelBindable<T>, IModelBindable, ISelectBindable, ITreeNode, ISearchable'
+    typeParameters:
+    - id: T
+    content.vb: Public Class TreeNodeBase(Of T) Inherits SelectBindable(Of T) Implements INotifyPropertyChanged, IModelBindable(Of T), IModelBindable, ISelectBindable, ITreeNode, ISearchable
+  inheritance:
+  - System.Object
+  - H.Mvvm.BindableBase
+  - H.Mvvm.ModelBindable{{T}}
+  - H.Mvvm.SelectBindable{{T}}
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  - H.Mvvm.IModelBindable{{T}}
+  - H.Mvvm.IModelBindable
+  - H.Mvvm.ISelectBindable
+  - H.Mvvm.ITreeNode
+  - H.Mvvm.ISearchable
+  inheritedMembers:
+  - H.Mvvm.SelectBindable{{T}}.IsSelected
+  - H.Mvvm.ModelBindable{{T}}.Model
+  - H.Mvvm.ModelBindable{{T}}.GetModel
+  - H.Mvvm.ModelBindable{{T}}.Visible
+  - H.Mvvm.ModelBindable{{T}}.IsEnbled
+  - H.Mvvm.ModelBindable{{T}}.IsBuzy
+  - H.Mvvm.ModelBindable{{T}}.Value
+  - H.Mvvm.ModelBindable{{T}}.Message
+  - H.Mvvm.ModelBindable{{T}}.LoadValue(System.String@)
+  - H.Mvvm.ModelBindable{{T}}.SaveValue(System.String@)
+  - H.Mvvm.BindableBase.Init
+  - H.Mvvm.BindableBase.PropertyChanged
+  - H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  - H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  - H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: TreeNodeBase(Of T)
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T)
+  name.vb: TreeNodeBase(Of T)
+- uid: H.Mvvm.TreeNodeBase`1.#ctor(`0)
+  commentId: M:H.Mvvm.TreeNodeBase`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: TreeNodeBase(T)
+  nameWithType: TreeNodeBase<T>.TreeNodeBase(T)
+  fullName: H.Mvvm.TreeNodeBase<T>.TreeNodeBase(T)
+  type: Constructor
+  source:
+    id: .ctor
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 12
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public TreeNodeBase(T t)
+    parameters:
+    - id: t
+      type: '{T}'
+    content.vb: Public Sub New(t As T)
+  overload: H.Mvvm.TreeNodeBase`1.#ctor*
+  nameWithType.vb: TreeNodeBase(Of T).New(T)
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).New(T)
+  name.vb: New(T)
+- uid: H.Mvvm.TreeNodeBase`1.TreeNodeEntity
+  commentId: P:H.Mvvm.TreeNodeBase`1.TreeNodeEntity
+  id: TreeNodeEntity
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: TreeNodeEntity
+  nameWithType: TreeNodeBase<T>.TreeNodeEntity
+  fullName: H.Mvvm.TreeNodeBase<T>.TreeNodeEntity
+  type: Property
+  source:
+    id: TreeNodeEntity
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 17
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public TreeNodeBase<T> TreeNodeEntity { get; set; }
+    parameters: []
+    return:
+      type: H.Mvvm.TreeNodeBase`1
+    content.vb: Public Property TreeNodeEntity As TreeNodeBase(Of T)
+  overload: H.Mvvm.TreeNodeBase`1.TreeNodeEntity*
+  nameWithType.vb: TreeNodeBase(Of T).TreeNodeEntity
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).TreeNodeEntity
+- uid: H.Mvvm.TreeNodeBase`1.IsChecked
+  commentId: P:H.Mvvm.TreeNodeBase`1.IsChecked
+  id: IsChecked
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: IsChecked
+  nameWithType: TreeNodeBase<T>.IsChecked
+  fullName: H.Mvvm.TreeNodeBase<T>.IsChecked
+  type: Property
+  source:
+    id: IsChecked
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 21
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: public bool? IsChecked { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsChecked As Boolean?
+  overload: H.Mvvm.TreeNodeBase`1.IsChecked*
+  implements:
+  - H.Mvvm.ITreeNode.IsChecked
+  nameWithType.vb: TreeNodeBase(Of T).IsChecked
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).IsChecked
+- uid: H.Mvvm.TreeNodeBase`1.IsCheckable
+  commentId: P:H.Mvvm.TreeNodeBase`1.IsCheckable
+  id: IsCheckable
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: IsCheckable
+  nameWithType: TreeNodeBase<T>.IsCheckable
+  fullName: H.Mvvm.TreeNodeBase<T>.IsCheckable
+  type: Property
+  source:
+    id: IsCheckable
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 34
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public bool IsCheckable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsCheckable As Boolean
+  overload: H.Mvvm.TreeNodeBase`1.IsCheckable*
+  nameWithType.vb: TreeNodeBase(Of T).IsCheckable
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).IsCheckable
+- uid: H.Mvvm.TreeNodeBase`1.Visibility
+  commentId: P:H.Mvvm.TreeNodeBase`1.Visibility
+  id: Visibility
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: Visibility
+  nameWithType: TreeNodeBase<T>.Visibility
+  fullName: H.Mvvm.TreeNodeBase<T>.Visibility
+  type: Property
+  source:
+    id: Visibility
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 120
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: public Visibility Visibility { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Visibility
+    content.vb: Public Property Visibility As Visibility
+  overload: H.Mvvm.TreeNodeBase`1.Visibility*
+  implements:
+  - H.Mvvm.ITreeNode.Visibility
+  nameWithType.vb: TreeNodeBase(Of T).Visibility
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Visibility
+- uid: H.Mvvm.TreeNodeBase`1.IsExpanded
+  commentId: P:H.Mvvm.TreeNodeBase`1.IsExpanded
+  id: IsExpanded
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: IsExpanded
+  nameWithType: TreeNodeBase<T>.IsExpanded
+  fullName: H.Mvvm.TreeNodeBase<T>.IsExpanded
+  type: Property
+  source:
+    id: IsExpanded
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 133
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: public bool IsExpanded { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsExpanded As Boolean
+  overload: H.Mvvm.TreeNodeBase`1.IsExpanded*
+  implements:
+  - H.Mvvm.ITreeNode.IsExpanded
+  nameWithType.vb: TreeNodeBase(Of T).IsExpanded
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).IsExpanded
+- uid: H.Mvvm.TreeNodeBase`1.IsLoaded
+  commentId: P:H.Mvvm.TreeNodeBase`1.IsLoaded
+  id: IsLoaded
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: IsLoaded
+  nameWithType: TreeNodeBase<T>.IsLoaded
+  fullName: H.Mvvm.TreeNodeBase<T>.IsLoaded
+  type: Property
+  source:
+    id: IsLoaded
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 143
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public bool IsLoaded { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsLoaded As Boolean
+  overload: H.Mvvm.TreeNodeBase`1.IsLoaded*
+  nameWithType.vb: TreeNodeBase(Of T).IsLoaded
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).IsLoaded
+- uid: H.Mvvm.TreeNodeBase`1.Parent
+  commentId: P:H.Mvvm.TreeNodeBase`1.Parent
+  id: Parent
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: TreeNodeBase<T>.Parent
+  fullName: H.Mvvm.TreeNodeBase<T>.Parent
+  type: Property
+  source:
+    id: Parent
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 145
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public TreeNodeBase<T> Parent { get; set; }
+    parameters: []
+    return:
+      type: H.Mvvm.TreeNodeBase`1
+    content.vb: Public Property Parent As TreeNodeBase(Of T)
+  overload: H.Mvvm.TreeNodeBase`1.Parent*
+  nameWithType.vb: TreeNodeBase(Of T).Parent
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Parent
+- uid: H.Mvvm.TreeNodeBase`1.Nodes
+  commentId: P:H.Mvvm.TreeNodeBase`1.Nodes
+  id: Nodes
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: Nodes
+  nameWithType: TreeNodeBase<T>.Nodes
+  fullName: H.Mvvm.TreeNodeBase<T>.Nodes
+  type: Property
+  source:
+    id: Nodes
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 149
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public ObservableCollection<TreeNodeBase<T>> Nodes { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{H.Mvvm.TreeNodeBase`1}
+    content.vb: Public Property Nodes As ObservableCollection(Of TreeNodeBase(Of T))
+  overload: H.Mvvm.TreeNodeBase`1.Nodes*
+  nameWithType.vb: TreeNodeBase(Of T).Nodes
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Nodes
+- uid: H.Mvvm.TreeNodeBase`1.AddNode(H.Mvvm.TreeNodeBase{`0})
+  commentId: M:H.Mvvm.TreeNodeBase`1.AddNode(H.Mvvm.TreeNodeBase{`0})
+  id: AddNode(H.Mvvm.TreeNodeBase{`0})
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: AddNode(TreeNodeBase<T>)
+  nameWithType: TreeNodeBase<T>.AddNode(TreeNodeBase<T>)
+  fullName: H.Mvvm.TreeNodeBase<T>.AddNode(H.Mvvm.TreeNodeBase<T>)
+  type: Method
+  source:
+    id: AddNode
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 159
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public void AddNode(TreeNodeBase<T> node)
+    parameters:
+    - id: node
+      type: H.Mvvm.TreeNodeBase`1
+    content.vb: Public Sub AddNode(node As TreeNodeBase(Of T))
+  overload: H.Mvvm.TreeNodeBase`1.AddNode*
+  nameWithType.vb: TreeNodeBase(Of T).AddNode(TreeNodeBase(Of T))
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).AddNode(H.Mvvm.TreeNodeBase(Of T))
+  name.vb: AddNode(TreeNodeBase(Of T))
+- uid: H.Mvvm.TreeNodeBase`1.Foreach(System.Action{H.Mvvm.TreeNodeBase{`0}})
+  commentId: M:H.Mvvm.TreeNodeBase`1.Foreach(System.Action{H.Mvvm.TreeNodeBase{`0}})
+  id: Foreach(System.Action{H.Mvvm.TreeNodeBase{`0}})
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: Foreach(Action<TreeNodeBase<T>>)
+  nameWithType: TreeNodeBase<T>.Foreach(Action<TreeNodeBase<T>>)
+  fullName: H.Mvvm.TreeNodeBase<T>.Foreach(System.Action<H.Mvvm.TreeNodeBase<T>>)
+  type: Method
+  source:
+    id: Foreach
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 165
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public void Foreach(Action<TreeNodeBase<T>> action)
+    parameters:
+    - id: action
+      type: System.Action{H.Mvvm.TreeNodeBase`1}
+    content.vb: Public Sub Foreach(action As Action(Of TreeNodeBase(Of T)))
+  overload: H.Mvvm.TreeNodeBase`1.Foreach*
+  nameWithType.vb: TreeNodeBase(Of T).Foreach(Action(Of TreeNodeBase(Of T)))
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Foreach(System.Action(Of H.Mvvm.TreeNodeBase(Of T)))
+  name.vb: Foreach(Action(Of TreeNodeBase(Of T)))
+- uid: H.Mvvm.TreeNodeBase`1.FindAll(System.Predicate{H.Mvvm.TreeNodeBase{`0}})
+  commentId: M:H.Mvvm.TreeNodeBase`1.FindAll(System.Predicate{H.Mvvm.TreeNodeBase{`0}})
+  id: FindAll(System.Predicate{H.Mvvm.TreeNodeBase{`0}})
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: FindAll(Predicate<TreeNodeBase<T>>)
+  nameWithType: TreeNodeBase<T>.FindAll(Predicate<TreeNodeBase<T>>)
+  fullName: H.Mvvm.TreeNodeBase<T>.FindAll(System.Predicate<H.Mvvm.TreeNodeBase<T>>)
+  type: Method
+  source:
+    id: FindAll
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 174
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public IEnumerable<TreeNodeBase<T>> FindAll(Predicate<TreeNodeBase<T>> action = null)
+    parameters:
+    - id: action
+      type: System.Predicate{H.Mvvm.TreeNodeBase`1}
+    return:
+      type: System.Collections.Generic.IEnumerable{H.Mvvm.TreeNodeBase`1}
+    content.vb: Public Function FindAll(action As Predicate(Of TreeNodeBase(Of T)) = Nothing) As IEnumerable(Of TreeNodeBase(Of T))
+  overload: H.Mvvm.TreeNodeBase`1.FindAll*
+  nameWithType.vb: TreeNodeBase(Of T).FindAll(Predicate(Of TreeNodeBase(Of T)))
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).FindAll(System.Predicate(Of H.Mvvm.TreeNodeBase(Of T)))
+  name.vb: FindAll(Predicate(Of TreeNodeBase(Of T)))
+- uid: H.Mvvm.TreeNodeBase`1.FindAllParent(System.Predicate{H.Mvvm.TreeNodeBase{`0}})
+  commentId: M:H.Mvvm.TreeNodeBase`1.FindAllParent(System.Predicate{H.Mvvm.TreeNodeBase{`0}})
+  id: FindAllParent(System.Predicate{H.Mvvm.TreeNodeBase{`0}})
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: FindAllParent(Predicate<TreeNodeBase<T>>)
+  nameWithType: TreeNodeBase<T>.FindAllParent(Predicate<TreeNodeBase<T>>)
+  fullName: H.Mvvm.TreeNodeBase<T>.FindAllParent(System.Predicate<H.Mvvm.TreeNodeBase<T>>)
+  type: Method
+  source:
+    id: FindAllParent
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 190
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: public IEnumerable<TreeNodeBase<T>> FindAllParent(Predicate<TreeNodeBase<T>> action = null)
+    parameters:
+    - id: action
+      type: System.Predicate{H.Mvvm.TreeNodeBase`1}
+    return:
+      type: System.Collections.Generic.IEnumerable{H.Mvvm.TreeNodeBase`1}
+    content.vb: Public Function FindAllParent(action As Predicate(Of TreeNodeBase(Of T)) = Nothing) As IEnumerable(Of TreeNodeBase(Of T))
+  overload: H.Mvvm.TreeNodeBase`1.FindAllParent*
+  nameWithType.vb: TreeNodeBase(Of T).FindAllParent(Predicate(Of TreeNodeBase(Of T)))
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).FindAllParent(System.Predicate(Of H.Mvvm.TreeNodeBase(Of T)))
+  name.vb: FindAllParent(Predicate(Of TreeNodeBase(Of T)))
+- uid: H.Mvvm.TreeNodeBase`1.Filter(System.String)
+  commentId: M:H.Mvvm.TreeNodeBase`1.Filter(System.String)
+  id: Filter(System.String)
+  parent: H.Mvvm.TreeNodeBase`1
+  langs:
+  - csharp
+  - vb
+  name: Filter(string)
+  nameWithType: TreeNodeBase<T>.Filter(string)
+  fullName: H.Mvvm.TreeNodeBase<T>.Filter(string)
+  type: Method
+  source:
+    id: Filter
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\Tree\TreeNodeBase.cs
+    startLine: 200
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: public override bool Filter(string txt)
+    parameters:
+    - id: txt
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Filter(txt As String) As Boolean
+  overridden: H.Mvvm.ModelBindable{{T}}.Filter(System.String)
+  overload: H.Mvvm.TreeNodeBase`1.Filter*
+  implements:
+  - H.Mvvm.ISearchable.Filter(System.String)
+  nameWithType.vb: TreeNodeBase(Of T).Filter(String)
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Filter(String)
+  name.vb: Filter(String)
+references:
+- uid: H.Mvvm
+  commentId: N:H.Mvvm
+  href: H.html
+  name: H.Mvvm
+  nameWithType: H.Mvvm
+  fullName: H.Mvvm
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: H.Mvvm.BindableBase
+  commentId: T:H.Mvvm.BindableBase
+  parent: H.Mvvm
+  href: H.Mvvm.BindableBase.html
+  name: BindableBase
+  nameWithType: BindableBase
+  fullName: H.Mvvm.BindableBase
+- uid: H.Mvvm.ModelBindable{{T}}
+  commentId: T:H.Mvvm.ModelBindable{`0}
+  parent: H.Mvvm
+  definition: H.Mvvm.ModelBindable`1
+  href: H.Mvvm.ModelBindable-1.html
+  name: ModelBindable<T>
+  nameWithType: ModelBindable<T>
+  fullName: H.Mvvm.ModelBindable<T>
+  nameWithType.vb: ModelBindable(Of T)
+  fullName.vb: H.Mvvm.ModelBindable(Of T)
+  name.vb: ModelBindable(Of T)
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable`1
+    name: ModelBindable
+    href: H.Mvvm.ModelBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable`1
+    name: ModelBindable
+    href: H.Mvvm.ModelBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Mvvm.SelectBindable{{T}}
+  commentId: T:H.Mvvm.SelectBindable{`0}
+  parent: H.Mvvm
+  definition: H.Mvvm.SelectBindable`1
+  href: H.Mvvm.SelectBindable-1.html
+  name: SelectBindable<T>
+  nameWithType: SelectBindable<T>
+  fullName: H.Mvvm.SelectBindable<T>
+  nameWithType.vb: SelectBindable(Of T)
+  fullName.vb: H.Mvvm.SelectBindable(Of T)
+  name.vb: SelectBindable(Of T)
+  spec.csharp:
+  - uid: H.Mvvm.SelectBindable`1
+    name: SelectBindable
+    href: H.Mvvm.SelectBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: H.Mvvm.SelectBindable`1
+    name: SelectBindable
+    href: H.Mvvm.SelectBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: H.Mvvm.IModelBindable{{T}}
+  commentId: T:H.Mvvm.IModelBindable{`0}
+  parent: H.Mvvm
+  definition: H.Mvvm.IModelBindable`1
+  href: H.Mvvm.IModelBindable-1.html
+  name: IModelBindable<T>
+  nameWithType: IModelBindable<T>
+  fullName: H.Mvvm.IModelBindable<T>
+  nameWithType.vb: IModelBindable(Of T)
+  fullName.vb: H.Mvvm.IModelBindable(Of T)
+  name.vb: IModelBindable(Of T)
+  spec.csharp:
+  - uid: H.Mvvm.IModelBindable`1
+    name: IModelBindable
+    href: H.Mvvm.IModelBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: H.Mvvm.IModelBindable`1
+    name: IModelBindable
+    href: H.Mvvm.IModelBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Mvvm.IModelBindable
+  commentId: T:H.Mvvm.IModelBindable
+  parent: H.Mvvm
+  href: H.Mvvm.IModelBindable.html
+  name: IModelBindable
+  nameWithType: IModelBindable
+  fullName: H.Mvvm.IModelBindable
+- uid: H.Mvvm.ISelectBindable
+  commentId: T:H.Mvvm.ISelectBindable
+  parent: H.Mvvm
+  href: H.Mvvm.ISelectBindable.html
+  name: ISelectBindable
+  nameWithType: ISelectBindable
+  fullName: H.Mvvm.ISelectBindable
+- uid: H.Mvvm.ITreeNode
+  commentId: T:H.Mvvm.ITreeNode
+  parent: H.Mvvm
+  href: H.Mvvm.ITreeNode.html
+  name: ITreeNode
+  nameWithType: ITreeNode
+  fullName: H.Mvvm.ITreeNode
+- uid: H.Mvvm.ISearchable
+  commentId: T:H.Mvvm.ISearchable
+  parent: H.Mvvm
+  href: H.Mvvm.ISearchable.html
+  name: ISearchable
+  nameWithType: ISearchable
+  fullName: H.Mvvm.ISearchable
+- uid: H.Mvvm.SelectBindable{{T}}.IsSelected
+  commentId: P:H.Mvvm.SelectBindable{`0}.IsSelected
+  parent: H.Mvvm.SelectBindable{{T}}
+  definition: H.Mvvm.SelectBindable`1.IsSelected
+  href: H.Mvvm.SelectBindable-1.html#H_Mvvm_SelectBindable_1_IsSelected
+  name: IsSelected
+  nameWithType: SelectBindable<T>.IsSelected
+  fullName: H.Mvvm.SelectBindable<T>.IsSelected
+  nameWithType.vb: SelectBindable(Of T).IsSelected
+  fullName.vb: H.Mvvm.SelectBindable(Of T).IsSelected
+- uid: H.Mvvm.ModelBindable{{T}}.Model
+  commentId: P:H.Mvvm.ModelBindable{`0}.Model
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.Model
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Model
+  name: Model
+  nameWithType: ModelBindable<T>.Model
+  fullName: H.Mvvm.ModelBindable<T>.Model
+  nameWithType.vb: ModelBindable(Of T).Model
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Model
+- uid: H.Mvvm.ModelBindable{{T}}.GetModel
+  commentId: M:H.Mvvm.ModelBindable{`0}.GetModel
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.GetModel
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_GetModel
+  name: GetModel()
+  nameWithType: ModelBindable<T>.GetModel()
+  fullName: H.Mvvm.ModelBindable<T>.GetModel()
+  nameWithType.vb: ModelBindable(Of T).GetModel()
+  fullName.vb: H.Mvvm.ModelBindable(Of T).GetModel()
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable{`0}.GetModel
+    name: GetModel
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_GetModel
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable{`0}.GetModel
+    name: GetModel
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_GetModel
+  - name: (
+  - name: )
+- uid: H.Mvvm.ModelBindable{{T}}.Visible
+  commentId: P:H.Mvvm.ModelBindable{`0}.Visible
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.Visible
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Visible
+  name: Visible
+  nameWithType: ModelBindable<T>.Visible
+  fullName: H.Mvvm.ModelBindable<T>.Visible
+  nameWithType.vb: ModelBindable(Of T).Visible
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Visible
+- uid: H.Mvvm.ModelBindable{{T}}.IsEnbled
+  commentId: P:H.Mvvm.ModelBindable{`0}.IsEnbled
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.IsEnbled
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_IsEnbled
+  name: IsEnbled
+  nameWithType: ModelBindable<T>.IsEnbled
+  fullName: H.Mvvm.ModelBindable<T>.IsEnbled
+  nameWithType.vb: ModelBindable(Of T).IsEnbled
+  fullName.vb: H.Mvvm.ModelBindable(Of T).IsEnbled
+- uid: H.Mvvm.ModelBindable{{T}}.IsBuzy
+  commentId: P:H.Mvvm.ModelBindable{`0}.IsBuzy
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.IsBuzy
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_IsBuzy
+  name: IsBuzy
+  nameWithType: ModelBindable<T>.IsBuzy
+  fullName: H.Mvvm.ModelBindable<T>.IsBuzy
+  nameWithType.vb: ModelBindable(Of T).IsBuzy
+  fullName.vb: H.Mvvm.ModelBindable(Of T).IsBuzy
+- uid: H.Mvvm.ModelBindable{{T}}.Value
+  commentId: P:H.Mvvm.ModelBindable{`0}.Value
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.Value
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Value
+  name: Value
+  nameWithType: ModelBindable<T>.Value
+  fullName: H.Mvvm.ModelBindable<T>.Value
+  nameWithType.vb: ModelBindable(Of T).Value
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Value
+- uid: H.Mvvm.ModelBindable{{T}}.Message
+  commentId: P:H.Mvvm.ModelBindable{`0}.Message
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.Message
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Message
+  name: Message
+  nameWithType: ModelBindable<T>.Message
+  fullName: H.Mvvm.ModelBindable<T>.Message
+  nameWithType.vb: ModelBindable(Of T).Message
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Message
+- uid: H.Mvvm.ModelBindable{{T}}.LoadValue(System.String@)
+  commentId: M:H.Mvvm.ModelBindable{`0}.LoadValue(System.String@)
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.LoadValue(System.String@)
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_LoadValue_System_String__
+  name: LoadValue(out string)
+  nameWithType: ModelBindable<T>.LoadValue(out string)
+  fullName: H.Mvvm.ModelBindable<T>.LoadValue(out string)
+  nameWithType.vb: ModelBindable(Of T).LoadValue(String)
+  fullName.vb: H.Mvvm.ModelBindable(Of T).LoadValue(String)
+  name.vb: LoadValue(String)
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable{`0}.LoadValue(System.String@)
+    name: LoadValue
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_LoadValue_System_String__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable{`0}.LoadValue(System.String@)
+    name: LoadValue
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_LoadValue_System_String__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.ModelBindable{{T}}.SaveValue(System.String@)
+  commentId: M:H.Mvvm.ModelBindable{`0}.SaveValue(System.String@)
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.SaveValue(System.String@)
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_SaveValue_System_String__
+  name: SaveValue(out string)
+  nameWithType: ModelBindable<T>.SaveValue(out string)
+  fullName: H.Mvvm.ModelBindable<T>.SaveValue(out string)
+  nameWithType.vb: ModelBindable(Of T).SaveValue(String)
+  fullName.vb: H.Mvvm.ModelBindable(Of T).SaveValue(String)
+  name.vb: SaveValue(String)
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable{`0}.SaveValue(System.String@)
+    name: SaveValue
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_SaveValue_System_String__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable{`0}.SaveValue(System.String@)
+    name: SaveValue
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_SaveValue_System_String__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.Init
+  commentId: M:H.Mvvm.BindableBase.Init
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  name: Init()
+  nameWithType: BindableBase.Init()
+  fullName: H.Mvvm.BindableBase.Init()
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.Init
+    name: Init
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.Init
+    name: Init
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  - name: (
+  - name: )
+- uid: H.Mvvm.BindableBase.PropertyChanged
+  commentId: E:H.Mvvm.BindableBase.PropertyChanged
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BindableBase.PropertyChanged
+  fullName: H.Mvvm.BindableBase.PropertyChanged
+- uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  parent: H.Mvvm.BindableBase
+  isExternal: true
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  name: RaisePropertyChanged(string)
+  nameWithType: BindableBase.RaisePropertyChanged(string)
+  fullName: H.Mvvm.BindableBase.RaisePropertyChanged(string)
+  nameWithType.vb: BindableBase.RaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.BindableBase.RaisePropertyChanged(String)
+  name.vb: RaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  parent: H.Mvvm.BindableBase
+  isExternal: true
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  name: DispatcherRaisePropertyChanged(string)
+  nameWithType: BindableBase.DispatcherRaisePropertyChanged(string)
+  fullName: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(string)
+  nameWithType.vb: BindableBase.DispatcherRaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(String)
+  name.vb: DispatcherRaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+    name: DispatcherRaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+    name: DispatcherRaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  commentId: M:H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  name: OnDispatcherPropertyChanged()
+  nameWithType: BindableBase.OnDispatcherPropertyChanged()
+  fullName: H.Mvvm.BindableBase.OnDispatcherPropertyChanged()
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+    name: OnDispatcherPropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+    name: OnDispatcherPropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: H.Mvvm.ModelBindable`1
+  commentId: T:H.Mvvm.ModelBindable`1
+  href: H.Mvvm.ModelBindable-1.html
+  name: ModelBindable<T>
+  nameWithType: ModelBindable<T>
+  fullName: H.Mvvm.ModelBindable<T>
+  nameWithType.vb: ModelBindable(Of T)
+  fullName.vb: H.Mvvm.ModelBindable(Of T)
+  name.vb: ModelBindable(Of T)
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable`1
+    name: ModelBindable
+    href: H.Mvvm.ModelBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable`1
+    name: ModelBindable
+    href: H.Mvvm.ModelBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Mvvm.SelectBindable`1
+  commentId: T:H.Mvvm.SelectBindable`1
+  href: H.Mvvm.SelectBindable-1.html
+  name: SelectBindable<T>
+  nameWithType: SelectBindable<T>
+  fullName: H.Mvvm.SelectBindable<T>
+  nameWithType.vb: SelectBindable(Of T)
+  fullName.vb: H.Mvvm.SelectBindable(Of T)
+  name.vb: SelectBindable(Of T)
+  spec.csharp:
+  - uid: H.Mvvm.SelectBindable`1
+    name: SelectBindable
+    href: H.Mvvm.SelectBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: H.Mvvm.SelectBindable`1
+    name: SelectBindable
+    href: H.Mvvm.SelectBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: H.Mvvm.IModelBindable`1
+  commentId: T:H.Mvvm.IModelBindable`1
+  href: H.Mvvm.IModelBindable-1.html
+  name: IModelBindable<T>
+  nameWithType: IModelBindable<T>
+  fullName: H.Mvvm.IModelBindable<T>
+  nameWithType.vb: IModelBindable(Of T)
+  fullName.vb: H.Mvvm.IModelBindable(Of T)
+  name.vb: IModelBindable(Of T)
+  spec.csharp:
+  - uid: H.Mvvm.IModelBindable`1
+    name: IModelBindable
+    href: H.Mvvm.IModelBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: H.Mvvm.IModelBindable`1
+    name: IModelBindable
+    href: H.Mvvm.IModelBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Mvvm.SelectBindable`1.IsSelected
+  commentId: P:H.Mvvm.SelectBindable`1.IsSelected
+  href: H.Mvvm.SelectBindable-1.html#H_Mvvm_SelectBindable_1_IsSelected
+  name: IsSelected
+  nameWithType: SelectBindable<T>.IsSelected
+  fullName: H.Mvvm.SelectBindable<T>.IsSelected
+  nameWithType.vb: SelectBindable(Of T).IsSelected
+  fullName.vb: H.Mvvm.SelectBindable(Of T).IsSelected
+- uid: H.Mvvm.ModelBindable`1.Model
+  commentId: P:H.Mvvm.ModelBindable`1.Model
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Model
+  name: Model
+  nameWithType: ModelBindable<T>.Model
+  fullName: H.Mvvm.ModelBindable<T>.Model
+  nameWithType.vb: ModelBindable(Of T).Model
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Model
+- uid: H.Mvvm.ModelBindable`1.GetModel
+  commentId: M:H.Mvvm.ModelBindable`1.GetModel
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_GetModel
+  name: GetModel()
+  nameWithType: ModelBindable<T>.GetModel()
+  fullName: H.Mvvm.ModelBindable<T>.GetModel()
+  nameWithType.vb: ModelBindable(Of T).GetModel()
+  fullName.vb: H.Mvvm.ModelBindable(Of T).GetModel()
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable`1.GetModel
+    name: GetModel
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_GetModel
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable`1.GetModel
+    name: GetModel
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_GetModel
+  - name: (
+  - name: )
+- uid: H.Mvvm.ModelBindable`1.Visible
+  commentId: P:H.Mvvm.ModelBindable`1.Visible
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Visible
+  name: Visible
+  nameWithType: ModelBindable<T>.Visible
+  fullName: H.Mvvm.ModelBindable<T>.Visible
+  nameWithType.vb: ModelBindable(Of T).Visible
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Visible
+- uid: H.Mvvm.ModelBindable`1.IsEnbled
+  commentId: P:H.Mvvm.ModelBindable`1.IsEnbled
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_IsEnbled
+  name: IsEnbled
+  nameWithType: ModelBindable<T>.IsEnbled
+  fullName: H.Mvvm.ModelBindable<T>.IsEnbled
+  nameWithType.vb: ModelBindable(Of T).IsEnbled
+  fullName.vb: H.Mvvm.ModelBindable(Of T).IsEnbled
+- uid: H.Mvvm.ModelBindable`1.IsBuzy
+  commentId: P:H.Mvvm.ModelBindable`1.IsBuzy
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_IsBuzy
+  name: IsBuzy
+  nameWithType: ModelBindable<T>.IsBuzy
+  fullName: H.Mvvm.ModelBindable<T>.IsBuzy
+  nameWithType.vb: ModelBindable(Of T).IsBuzy
+  fullName.vb: H.Mvvm.ModelBindable(Of T).IsBuzy
+- uid: H.Mvvm.ModelBindable`1.Value
+  commentId: P:H.Mvvm.ModelBindable`1.Value
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Value
+  name: Value
+  nameWithType: ModelBindable<T>.Value
+  fullName: H.Mvvm.ModelBindable<T>.Value
+  nameWithType.vb: ModelBindable(Of T).Value
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Value
+- uid: H.Mvvm.ModelBindable`1.Message
+  commentId: P:H.Mvvm.ModelBindable`1.Message
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Message
+  name: Message
+  nameWithType: ModelBindable<T>.Message
+  fullName: H.Mvvm.ModelBindable<T>.Message
+  nameWithType.vb: ModelBindable(Of T).Message
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Message
+- uid: H.Mvvm.ModelBindable`1.LoadValue(System.String@)
+  commentId: M:H.Mvvm.ModelBindable`1.LoadValue(System.String@)
+  isExternal: true
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_LoadValue_System_String__
+  name: LoadValue(out string)
+  nameWithType: ModelBindable<T>.LoadValue(out string)
+  fullName: H.Mvvm.ModelBindable<T>.LoadValue(out string)
+  nameWithType.vb: ModelBindable(Of T).LoadValue(String)
+  fullName.vb: H.Mvvm.ModelBindable(Of T).LoadValue(String)
+  name.vb: LoadValue(String)
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable`1.LoadValue(System.String@)
+    name: LoadValue
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_LoadValue_System_String__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable`1.LoadValue(System.String@)
+    name: LoadValue
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_LoadValue_System_String__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.ModelBindable`1.SaveValue(System.String@)
+  commentId: M:H.Mvvm.ModelBindable`1.SaveValue(System.String@)
+  isExternal: true
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_SaveValue_System_String__
+  name: SaveValue(out string)
+  nameWithType: ModelBindable<T>.SaveValue(out string)
+  fullName: H.Mvvm.ModelBindable<T>.SaveValue(out string)
+  nameWithType.vb: ModelBindable(Of T).SaveValue(String)
+  fullName.vb: H.Mvvm.ModelBindable(Of T).SaveValue(String)
+  name.vb: SaveValue(String)
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable`1.SaveValue(System.String@)
+    name: SaveValue
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_SaveValue_System_String__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable`1.SaveValue(System.String@)
+    name: SaveValue
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_SaveValue_System_String__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.TreeNodeBase`1.#ctor*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.#ctor
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1__ctor__0_
+  name: TreeNodeBase
+  nameWithType: TreeNodeBase<T>.TreeNodeBase
+  fullName: H.Mvvm.TreeNodeBase<T>.TreeNodeBase
+  nameWithType.vb: TreeNodeBase(Of T).New
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).New
+  name.vb: New
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: H.Mvvm.TreeNodeBase`1.TreeNodeEntity*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.TreeNodeEntity
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_TreeNodeEntity
+  name: TreeNodeEntity
+  nameWithType: TreeNodeBase<T>.TreeNodeEntity
+  fullName: H.Mvvm.TreeNodeBase<T>.TreeNodeEntity
+  nameWithType.vb: TreeNodeBase(Of T).TreeNodeEntity
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).TreeNodeEntity
+- uid: H.Mvvm.TreeNodeBase`1
+  commentId: T:H.Mvvm.TreeNodeBase`1
+  parent: H.Mvvm
+  href: H.Mvvm.TreeNodeBase-1.html
+  name: TreeNodeBase<T>
+  nameWithType: TreeNodeBase<T>
+  fullName: H.Mvvm.TreeNodeBase<T>
+  nameWithType.vb: TreeNodeBase(Of T)
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T)
+  name.vb: TreeNodeBase(Of T)
+  spec.csharp:
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Mvvm.TreeNodeBase`1.IsChecked*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.IsChecked
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_IsChecked
+  name: IsChecked
+  nameWithType: TreeNodeBase<T>.IsChecked
+  fullName: H.Mvvm.TreeNodeBase<T>.IsChecked
+  nameWithType.vb: TreeNodeBase(Of T).IsChecked
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).IsChecked
+- uid: H.Mvvm.ITreeNode.IsChecked
+  commentId: P:H.Mvvm.ITreeNode.IsChecked
+  parent: H.Mvvm.ITreeNode
+  href: H.Mvvm.ITreeNode.html#H_Mvvm_ITreeNode_IsChecked
+  name: IsChecked
+  nameWithType: ITreeNode.IsChecked
+  fullName: H.Mvvm.ITreeNode.IsChecked
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Mvvm.TreeNodeBase`1.IsCheckable*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.IsCheckable
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_IsCheckable
+  name: IsCheckable
+  nameWithType: TreeNodeBase<T>.IsCheckable
+  fullName: H.Mvvm.TreeNodeBase<T>.IsCheckable
+  nameWithType.vb: TreeNodeBase(Of T).IsCheckable
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).IsCheckable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: H.Mvvm.TreeNodeBase`1.Visibility*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.Visibility
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Visibility
+  name: Visibility
+  nameWithType: TreeNodeBase<T>.Visibility
+  fullName: H.Mvvm.TreeNodeBase<T>.Visibility
+  nameWithType.vb: TreeNodeBase(Of T).Visibility
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Visibility
+- uid: H.Mvvm.ITreeNode.Visibility
+  commentId: P:H.Mvvm.ITreeNode.Visibility
+  parent: H.Mvvm.ITreeNode
+  href: H.Mvvm.ITreeNode.html#H_Mvvm_ITreeNode_Visibility
+  name: Visibility
+  nameWithType: ITreeNode.Visibility
+  fullName: H.Mvvm.ITreeNode.Visibility
+- uid: System.Windows.Visibility
+  commentId: T:System.Windows.Visibility
+  parent: System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.visibility
+  name: Visibility
+  nameWithType: Visibility
+  fullName: System.Windows.Visibility
+- uid: System.Windows
+  commentId: N:System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows
+  nameWithType: System.Windows
+  fullName: System.Windows
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+- uid: H.Mvvm.TreeNodeBase`1.IsExpanded*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.IsExpanded
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_IsExpanded
+  name: IsExpanded
+  nameWithType: TreeNodeBase<T>.IsExpanded
+  fullName: H.Mvvm.TreeNodeBase<T>.IsExpanded
+  nameWithType.vb: TreeNodeBase(Of T).IsExpanded
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).IsExpanded
+- uid: H.Mvvm.ITreeNode.IsExpanded
+  commentId: P:H.Mvvm.ITreeNode.IsExpanded
+  parent: H.Mvvm.ITreeNode
+  href: H.Mvvm.ITreeNode.html#H_Mvvm_ITreeNode_IsExpanded
+  name: IsExpanded
+  nameWithType: ITreeNode.IsExpanded
+  fullName: H.Mvvm.ITreeNode.IsExpanded
+- uid: H.Mvvm.TreeNodeBase`1.IsLoaded*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.IsLoaded
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_IsLoaded
+  name: IsLoaded
+  nameWithType: TreeNodeBase<T>.IsLoaded
+  fullName: H.Mvvm.TreeNodeBase<T>.IsLoaded
+  nameWithType.vb: TreeNodeBase(Of T).IsLoaded
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).IsLoaded
+- uid: H.Mvvm.TreeNodeBase`1.Parent*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.Parent
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Parent
+  name: Parent
+  nameWithType: TreeNodeBase<T>.Parent
+  fullName: H.Mvvm.TreeNodeBase<T>.Parent
+  nameWithType.vb: TreeNodeBase(Of T).Parent
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Parent
+- uid: H.Mvvm.TreeNodeBase`1.Nodes*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.Nodes
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Nodes
+  name: Nodes
+  nameWithType: TreeNodeBase<T>.Nodes
+  fullName: H.Mvvm.TreeNodeBase<T>.Nodes
+  nameWithType.vb: TreeNodeBase(Of T).Nodes
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Nodes
+- uid: System.Collections.ObjectModel.ObservableCollection{H.Mvvm.TreeNodeBase`1}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{H.Mvvm.TreeNodeBase`1}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<TreeNodeBase<T>>
+  nameWithType: ObservableCollection<TreeNodeBase<T>>
+  fullName: System.Collections.ObjectModel.ObservableCollection<H.Mvvm.TreeNodeBase<T>>
+  nameWithType.vb: ObservableCollection(Of TreeNodeBase(Of T))
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of H.Mvvm.TreeNodeBase(Of T))
+  name.vb: ObservableCollection(Of TreeNodeBase(Of T))
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.ObjectModel.ObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<T>
+  nameWithType: ObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ObservableCollection<T>
+  nameWithType.vb: ObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of T)
+  name.vb: ObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: H.Mvvm.TreeNodeBase`1.AddNode*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.AddNode
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_AddNode_H_Mvvm_TreeNodeBase__0__
+  name: AddNode
+  nameWithType: TreeNodeBase<T>.AddNode
+  fullName: H.Mvvm.TreeNodeBase<T>.AddNode
+  nameWithType.vb: TreeNodeBase(Of T).AddNode
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).AddNode
+- uid: H.Mvvm.TreeNodeBase`1.Foreach*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.Foreach
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Foreach_System_Action_H_Mvvm_TreeNodeBase__0___
+  name: Foreach
+  nameWithType: TreeNodeBase<T>.Foreach
+  fullName: H.Mvvm.TreeNodeBase<T>.Foreach
+  nameWithType.vb: TreeNodeBase(Of T).Foreach
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Foreach
+- uid: System.Action{H.Mvvm.TreeNodeBase`1}
+  commentId: T:System.Action{H.Mvvm.TreeNodeBase`1}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TreeNodeBase<T>>
+  nameWithType: Action<TreeNodeBase<T>>
+  fullName: System.Action<H.Mvvm.TreeNodeBase<T>>
+  nameWithType.vb: Action(Of TreeNodeBase(Of T))
+  fullName.vb: System.Action(Of H.Mvvm.TreeNodeBase(Of T))
+  name.vb: Action(Of TreeNodeBase(Of T))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Mvvm.TreeNodeBase`1.FindAll*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.FindAll
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_FindAll_System_Predicate_H_Mvvm_TreeNodeBase__0___
+  name: FindAll
+  nameWithType: TreeNodeBase<T>.FindAll
+  fullName: H.Mvvm.TreeNodeBase<T>.FindAll
+  nameWithType.vb: TreeNodeBase(Of T).FindAll
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).FindAll
+- uid: System.Predicate{H.Mvvm.TreeNodeBase`1}
+  commentId: T:System.Predicate{H.Mvvm.TreeNodeBase`1}
+  parent: System
+  definition: System.Predicate`1
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<TreeNodeBase<T>>
+  nameWithType: Predicate<TreeNodeBase<T>>
+  fullName: System.Predicate<H.Mvvm.TreeNodeBase<T>>
+  nameWithType.vb: Predicate(Of TreeNodeBase(Of T))
+  fullName.vb: System.Predicate(Of H.Mvvm.TreeNodeBase(Of T))
+  name.vb: Predicate(Of TreeNodeBase(Of T))
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{H.Mvvm.TreeNodeBase`1}
+  commentId: T:System.Collections.Generic.IEnumerable{H.Mvvm.TreeNodeBase`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<TreeNodeBase<T>>
+  nameWithType: IEnumerable<TreeNodeBase<T>>
+  fullName: System.Collections.Generic.IEnumerable<H.Mvvm.TreeNodeBase<T>>
+  nameWithType.vb: IEnumerable(Of TreeNodeBase(Of T))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of H.Mvvm.TreeNodeBase(Of T))
+  name.vb: IEnumerable(Of TreeNodeBase(Of T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Mvvm.TreeNodeBase`1
+    name: TreeNodeBase
+    href: H.Mvvm.TreeNodeBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: H.Mvvm.TreeNodeBase`1.FindAllParent*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.FindAllParent
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_FindAllParent_System_Predicate_H_Mvvm_TreeNodeBase__0___
+  name: FindAllParent
+  nameWithType: TreeNodeBase<T>.FindAllParent
+  fullName: H.Mvvm.TreeNodeBase<T>.FindAllParent
+  nameWithType.vb: TreeNodeBase(Of T).FindAllParent
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).FindAllParent
+- uid: H.Mvvm.ModelBindable{{T}}.Filter(System.String)
+  commentId: M:H.Mvvm.ModelBindable{`0}.Filter(System.String)
+  parent: H.Mvvm.ModelBindable{{T}}
+  definition: H.Mvvm.ModelBindable`1.Filter(System.String)
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Filter_System_String_
+  name: Filter(string)
+  nameWithType: ModelBindable<T>.Filter(string)
+  fullName: H.Mvvm.ModelBindable<T>.Filter(string)
+  nameWithType.vb: ModelBindable(Of T).Filter(String)
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Filter(String)
+  name.vb: Filter(String)
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable{`0}.Filter(System.String)
+    name: Filter
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Filter_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable{`0}.Filter(System.String)
+    name: Filter
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Filter_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.TreeNodeBase`1.Filter*
+  commentId: Overload:H.Mvvm.TreeNodeBase`1.Filter
+  href: H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Filter_System_String_
+  name: Filter
+  nameWithType: TreeNodeBase<T>.Filter
+  fullName: H.Mvvm.TreeNodeBase<T>.Filter
+  nameWithType.vb: TreeNodeBase(Of T).Filter
+  fullName.vb: H.Mvvm.TreeNodeBase(Of T).Filter
+- uid: H.Mvvm.ISearchable.Filter(System.String)
+  commentId: M:H.Mvvm.ISearchable.Filter(System.String)
+  parent: H.Mvvm.ISearchable
+  isExternal: true
+  href: H.Mvvm.ISearchable.html#H_Mvvm_ISearchable_Filter_System_String_
+  name: Filter(string)
+  nameWithType: ISearchable.Filter(string)
+  fullName: H.Mvvm.ISearchable.Filter(string)
+  nameWithType.vb: ISearchable.Filter(String)
+  fullName.vb: H.Mvvm.ISearchable.Filter(String)
+  name.vb: Filter(String)
+  spec.csharp:
+  - uid: H.Mvvm.ISearchable.Filter(System.String)
+    name: Filter
+    href: H.Mvvm.ISearchable.html#H_Mvvm_ISearchable_Filter_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ISearchable.Filter(System.String)
+    name: Filter
+    href: H.Mvvm.ISearchable.html#H_Mvvm_ISearchable_Filter_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: H.Mvvm.ModelBindable`1.Filter(System.String)
+  commentId: M:H.Mvvm.ModelBindable`1.Filter(System.String)
+  isExternal: true
+  href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Filter_System_String_
+  name: Filter(string)
+  nameWithType: ModelBindable<T>.Filter(string)
+  fullName: H.Mvvm.ModelBindable<T>.Filter(string)
+  nameWithType.vb: ModelBindable(Of T).Filter(String)
+  fullName.vb: H.Mvvm.ModelBindable(Of T).Filter(String)
+  name.vb: Filter(String)
+  spec.csharp:
+  - uid: H.Mvvm.ModelBindable`1.Filter(System.String)
+    name: Filter
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Filter_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ModelBindable`1.Filter(System.String)
+    name: Filter
+    href: H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Filter_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

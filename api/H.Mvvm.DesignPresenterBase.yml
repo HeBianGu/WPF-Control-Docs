@@ -1,0 +1,2200 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Mvvm.DesignPresenterBase
+  commentId: T:H.Mvvm.DesignPresenterBase
+  id: DesignPresenterBase
+  parent: H.Mvvm
+  children:
+  - H.Mvvm.DesignPresenterBase.Background
+  - H.Mvvm.DesignPresenterBase.BorderBrush
+  - H.Mvvm.DesignPresenterBase.BorderThickness
+  - H.Mvvm.DesignPresenterBase.Column
+  - H.Mvvm.DesignPresenterBase.ColumnSpan
+  - H.Mvvm.DesignPresenterBase.Delete(System.Object)
+  - H.Mvvm.DesignPresenterBase.DeleteCommand
+  - H.Mvvm.DesignPresenterBase.Height
+  - H.Mvvm.DesignPresenterBase.HorizontalAlignment
+  - H.Mvvm.DesignPresenterBase.HorizontalContentAlignment
+  - H.Mvvm.DesignPresenterBase.IsEnabled
+  - H.Mvvm.DesignPresenterBase.IsMouseOver
+  - H.Mvvm.DesignPresenterBase.IsSelected
+  - H.Mvvm.DesignPresenterBase.IsVisible
+  - H.Mvvm.DesignPresenterBase.Margin
+  - H.Mvvm.DesignPresenterBase.MinHeight
+  - H.Mvvm.DesignPresenterBase.MinWidth
+  - H.Mvvm.DesignPresenterBase.Opacity
+  - H.Mvvm.DesignPresenterBase.Padding
+  - H.Mvvm.DesignPresenterBase.Row
+  - H.Mvvm.DesignPresenterBase.RowSpan
+  - H.Mvvm.DesignPresenterBase.VerticalAlignment
+  - H.Mvvm.DesignPresenterBase.VerticalContentAlignment
+  - H.Mvvm.DesignPresenterBase.Width
+  langs:
+  - csharp
+  - vb
+  name: DesignPresenterBase
+  nameWithType: DesignPresenterBase
+  fullName: H.Mvvm.DesignPresenterBase
+  type: Class
+  source:
+    id: DesignPresenterBase
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 13
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: 'public abstract class DesignPresenterBase : DisplayBindableBase, INotifyPropertyChanged, IDable, IDesignPresenterBase'
+    content.vb: Public MustInherit Class DesignPresenterBase Inherits DisplayBindableBase Implements INotifyPropertyChanged, IDable, IDesignPresenterBase
+  inheritance:
+  - System.Object
+  - H.Mvvm.BindableBase
+  - H.Mvvm.DisplayBindableBase
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  - H.Mvvm.IDable
+  - H.Mvvm.IDesignPresenterBase
+  inheritedMembers:
+  - H.Mvvm.DisplayBindableBase.Commands
+  - H.Mvvm.DisplayBindableBase.CreateCommands
+  - H.Mvvm.DisplayBindableBase.LoadedCommand
+  - H.Mvvm.DisplayBindableBase.IsLoaded
+  - H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  - H.Mvvm.DisplayBindableBase.ID
+  - H.Mvvm.DisplayBindableBase.Name
+  - H.Mvvm.DisplayBindableBase.Icon
+  - H.Mvvm.DisplayBindableBase.ShortName
+  - H.Mvvm.DisplayBindableBase.GroupName
+  - H.Mvvm.DisplayBindableBase.Description
+  - H.Mvvm.DisplayBindableBase.Order
+  - H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+  - H.Mvvm.DisplayBindableBase.LoadDefault
+  - H.Mvvm.BindableBase.Init
+  - H.Mvvm.BindableBase.PropertyChanged
+  - H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  - H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  - H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: H.Mvvm.DesignPresenterBase.IsSelected
+  commentId: P:H.Mvvm.DesignPresenterBase.IsSelected
+  id: IsSelected
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: IsSelected
+  nameWithType: DesignPresenterBase.IsSelected
+  fullName: H.Mvvm.DesignPresenterBase.IsSelected
+  type: Property
+  source:
+    id: IsSelected
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 16
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      [JsonIgnore]
+
+      public bool IsSelected { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Browsable(False)>
+
+      <JsonIgnore>
+
+      Public Property IsSelected As Boolean
+  overload: H.Mvvm.DesignPresenterBase.IsSelected*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.IsSelected
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: H.Mvvm.DesignPresenterBase.IsMouseOver
+  commentId: P:H.Mvvm.DesignPresenterBase.IsMouseOver
+  id: IsMouseOver
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: IsMouseOver
+  nameWithType: DesignPresenterBase.IsMouseOver
+  fullName: H.Mvvm.DesignPresenterBase.IsMouseOver
+  type: Property
+  source:
+    id: IsMouseOver
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 31
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      [JsonIgnore]
+
+      public bool IsMouseOver { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Browsable(False)>
+
+      <JsonIgnore>
+
+      Public Property IsMouseOver As Boolean
+  overload: H.Mvvm.DesignPresenterBase.IsMouseOver*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.IsMouseOver
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: H.Mvvm.DesignPresenterBase.Height
+  commentId: P:H.Mvvm.DesignPresenterBase.Height
+  id: Height
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: DesignPresenterBase.Height
+  fullName: H.Mvvm.DesignPresenterBase.Height
+  type: Property
+  source:
+    id: Height
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 47
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "高", GroupName = "常用,布局")]
+
+      [TypeConverter(typeof(LengthConverter))]
+
+      public double Height { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <Display(Name:="高", GroupName:="常用,布局")>
+
+      <TypeConverter(GetType(LengthConverter))>
+
+      Public Property Height As Double
+  overload: H.Mvvm.DesignPresenterBase.Height*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.Height
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 高
+    - name: GroupName
+      type: System.String
+      value: 常用,布局
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Windows.LengthConverter
+- uid: H.Mvvm.DesignPresenterBase.Width
+  commentId: P:H.Mvvm.DesignPresenterBase.Width
+  id: Width
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: DesignPresenterBase.Width
+  fullName: H.Mvvm.DesignPresenterBase.Width
+  type: Property
+  source:
+    id: Width
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 61
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "宽", GroupName = "常用,布局")]
+
+      [TypeConverter(typeof(LengthConverter))]
+
+      public double Width { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <Display(Name:="宽", GroupName:="常用,布局")>
+
+      <TypeConverter(GetType(LengthConverter))>
+
+      Public Property Width As Double
+  overload: H.Mvvm.DesignPresenterBase.Width*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.Width
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 宽
+    - name: GroupName
+      type: System.String
+      value: 常用,布局
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Windows.LengthConverter
+- uid: H.Mvvm.DesignPresenterBase.MinHeight
+  commentId: P:H.Mvvm.DesignPresenterBase.MinHeight
+  id: MinHeight
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: MinHeight
+  nameWithType: DesignPresenterBase.MinHeight
+  fullName: H.Mvvm.DesignPresenterBase.MinHeight
+  type: Property
+  source:
+    id: MinHeight
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 75
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "最小高度", GroupName = "布局")]
+
+      [TypeConverter(typeof(LengthConverter))]
+
+      public double MinHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <Display(Name:="最小高度", GroupName:="布局")>
+
+      <TypeConverter(GetType(LengthConverter))>
+
+      Public Property MinHeight As Double
+  overload: H.Mvvm.DesignPresenterBase.MinHeight*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.MinHeight
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 最小高度
+    - name: GroupName
+      type: System.String
+      value: 布局
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Windows.LengthConverter
+- uid: H.Mvvm.DesignPresenterBase.MinWidth
+  commentId: P:H.Mvvm.DesignPresenterBase.MinWidth
+  id: MinWidth
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: MinWidth
+  nameWithType: DesignPresenterBase.MinWidth
+  fullName: H.Mvvm.DesignPresenterBase.MinWidth
+  type: Property
+  source:
+    id: MinWidth
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 89
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "最小宽度", GroupName = "布局")]
+
+      [TypeConverter(typeof(LengthConverter))]
+
+      public double MinWidth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <Display(Name:="最小宽度", GroupName:="布局")>
+
+      <TypeConverter(GetType(LengthConverter))>
+
+      Public Property MinWidth As Double
+  overload: H.Mvvm.DesignPresenterBase.MinWidth*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.MinWidth
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 最小宽度
+    - name: GroupName
+      type: System.String
+      value: 布局
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Windows.LengthConverter
+- uid: H.Mvvm.DesignPresenterBase.Margin
+  commentId: P:H.Mvvm.DesignPresenterBase.Margin
+  id: Margin
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Margin
+  nameWithType: DesignPresenterBase.Margin
+  fullName: H.Mvvm.DesignPresenterBase.Margin
+  type: Property
+  source:
+    id: Margin
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 103
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "外部间距", GroupName = "布局")]
+
+      public Thickness Margin { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Thickness
+    content.vb: >-
+      <Display(Name:="外部间距", GroupName:="布局")>
+
+      Public Property Margin As Thickness
+  overload: H.Mvvm.DesignPresenterBase.Margin*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.Margin
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 外部间距
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.Padding
+  commentId: P:H.Mvvm.DesignPresenterBase.Padding
+  id: Padding
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Padding
+  nameWithType: DesignPresenterBase.Padding
+  fullName: H.Mvvm.DesignPresenterBase.Padding
+  type: Property
+  source:
+    id: Padding
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 116
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "内部间距", GroupName = "布局")]
+
+      public Thickness Padding { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Thickness
+    content.vb: >-
+      <Display(Name:="内部间距", GroupName:="布局")>
+
+      Public Property Padding As Thickness
+  overload: H.Mvvm.DesignPresenterBase.Padding*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.Padding
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 内部间距
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.HorizontalAlignment
+  commentId: P:H.Mvvm.DesignPresenterBase.HorizontalAlignment
+  id: HorizontalAlignment
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: HorizontalAlignment
+  nameWithType: DesignPresenterBase.HorizontalAlignment
+  fullName: H.Mvvm.DesignPresenterBase.HorizontalAlignment
+  type: Property
+  source:
+    id: HorizontalAlignment
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 129
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "水平对齐", GroupName = "布局")]
+
+      public HorizontalAlignment HorizontalAlignment { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.HorizontalAlignment
+    content.vb: >-
+      <Display(Name:="水平对齐", GroupName:="布局")>
+
+      Public Property HorizontalAlignment As HorizontalAlignment
+  overload: H.Mvvm.DesignPresenterBase.HorizontalAlignment*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.HorizontalAlignment
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 水平对齐
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.HorizontalContentAlignment
+  commentId: P:H.Mvvm.DesignPresenterBase.HorizontalContentAlignment
+  id: HorizontalContentAlignment
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: HorizontalContentAlignment
+  nameWithType: DesignPresenterBase.HorizontalContentAlignment
+  fullName: H.Mvvm.DesignPresenterBase.HorizontalContentAlignment
+  type: Property
+  source:
+    id: HorizontalContentAlignment
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 142
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "水平内容对齐", GroupName = "布局")]
+
+      public HorizontalAlignment HorizontalContentAlignment { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.HorizontalAlignment
+    content.vb: >-
+      <Display(Name:="水平内容对齐", GroupName:="布局")>
+
+      Public Property HorizontalContentAlignment As HorizontalAlignment
+  overload: H.Mvvm.DesignPresenterBase.HorizontalContentAlignment*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.HorizontalContentAlignment
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 水平内容对齐
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.VerticalAlignment
+  commentId: P:H.Mvvm.DesignPresenterBase.VerticalAlignment
+  id: VerticalAlignment
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: VerticalAlignment
+  nameWithType: DesignPresenterBase.VerticalAlignment
+  fullName: H.Mvvm.DesignPresenterBase.VerticalAlignment
+  type: Property
+  source:
+    id: VerticalAlignment
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 155
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "垂直对齐", GroupName = "布局")]
+
+      public VerticalAlignment VerticalAlignment { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.VerticalAlignment
+    content.vb: >-
+      <Display(Name:="垂直对齐", GroupName:="布局")>
+
+      Public Property VerticalAlignment As VerticalAlignment
+  overload: H.Mvvm.DesignPresenterBase.VerticalAlignment*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.VerticalAlignment
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 垂直对齐
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.VerticalContentAlignment
+  commentId: P:H.Mvvm.DesignPresenterBase.VerticalContentAlignment
+  id: VerticalContentAlignment
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: VerticalContentAlignment
+  nameWithType: DesignPresenterBase.VerticalContentAlignment
+  fullName: H.Mvvm.DesignPresenterBase.VerticalContentAlignment
+  type: Property
+  source:
+    id: VerticalContentAlignment
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 168
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "垂直内部对齐", GroupName = "布局")]
+
+      public VerticalAlignment VerticalContentAlignment { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.VerticalAlignment
+    content.vb: >-
+      <Display(Name:="垂直内部对齐", GroupName:="布局")>
+
+      Public Property VerticalContentAlignment As VerticalAlignment
+  overload: H.Mvvm.DesignPresenterBase.VerticalContentAlignment*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.VerticalContentAlignment
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 垂直内部对齐
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.Background
+  commentId: P:H.Mvvm.DesignPresenterBase.Background
+  id: Background
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Background
+  nameWithType: DesignPresenterBase.Background
+  fullName: H.Mvvm.DesignPresenterBase.Background
+  type: Property
+  source:
+    id: Background
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 182
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "背景颜色", GroupName = "样式")]
+
+      public Brush Background { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Brush
+    content.vb: >-
+      <Display(Name:="背景颜色", GroupName:="样式")>
+
+      Public Property Background As Brush
+  overload: H.Mvvm.DesignPresenterBase.Background*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.Background
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 背景颜色
+    - name: GroupName
+      type: System.String
+      value: 样式
+- uid: H.Mvvm.DesignPresenterBase.BorderBrush
+  commentId: P:H.Mvvm.DesignPresenterBase.BorderBrush
+  id: BorderBrush
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: BorderBrush
+  nameWithType: DesignPresenterBase.BorderBrush
+  fullName: H.Mvvm.DesignPresenterBase.BorderBrush
+  type: Property
+  source:
+    id: BorderBrush
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 195
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "边框颜色", GroupName = "样式")]
+
+      public Brush BorderBrush { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Brush
+    content.vb: >-
+      <Display(Name:="边框颜色", GroupName:="样式")>
+
+      Public Property BorderBrush As Brush
+  overload: H.Mvvm.DesignPresenterBase.BorderBrush*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.BorderBrush
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 边框颜色
+    - name: GroupName
+      type: System.String
+      value: 样式
+- uid: H.Mvvm.DesignPresenterBase.BorderThickness
+  commentId: P:H.Mvvm.DesignPresenterBase.BorderThickness
+  id: BorderThickness
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: BorderThickness
+  nameWithType: DesignPresenterBase.BorderThickness
+  fullName: H.Mvvm.DesignPresenterBase.BorderThickness
+  type: Property
+  source:
+    id: BorderThickness
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 208
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "边框粗细", GroupName = "样式")]
+
+      public Thickness BorderThickness { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Thickness
+    content.vb: >-
+      <Display(Name:="边框粗细", GroupName:="样式")>
+
+      Public Property BorderThickness As Thickness
+  overload: H.Mvvm.DesignPresenterBase.BorderThickness*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.BorderThickness
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 边框粗细
+    - name: GroupName
+      type: System.String
+      value: 样式
+- uid: H.Mvvm.DesignPresenterBase.Opacity
+  commentId: P:H.Mvvm.DesignPresenterBase.Opacity
+  id: Opacity
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Opacity
+  nameWithType: DesignPresenterBase.Opacity
+  fullName: H.Mvvm.DesignPresenterBase.Opacity
+  type: Property
+  source:
+    id: Opacity
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 221
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "透明度", GroupName = "样式")]
+
+      public double Opacity { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <Display(Name:="透明度", GroupName:="样式")>
+
+      Public Property Opacity As Double
+  overload: H.Mvvm.DesignPresenterBase.Opacity*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.Opacity
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 透明度
+    - name: GroupName
+      type: System.String
+      value: 样式
+- uid: H.Mvvm.DesignPresenterBase.IsVisible
+  commentId: P:H.Mvvm.DesignPresenterBase.IsVisible
+  id: IsVisible
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: IsVisible
+  nameWithType: DesignPresenterBase.IsVisible
+  fullName: H.Mvvm.DesignPresenterBase.IsVisible
+  type: Property
+  source:
+    id: IsVisible
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 235
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "可见", GroupName = "样式")]
+
+      public bool IsVisible { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Display(Name:="可见", GroupName:="样式")>
+
+      Public Property IsVisible As Boolean
+  overload: H.Mvvm.DesignPresenterBase.IsVisible*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.IsVisible
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 可见
+    - name: GroupName
+      type: System.String
+      value: 样式
+- uid: H.Mvvm.DesignPresenterBase.IsEnabled
+  commentId: P:H.Mvvm.DesignPresenterBase.IsEnabled
+  id: IsEnabled
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: DesignPresenterBase.IsEnabled
+  fullName: H.Mvvm.DesignPresenterBase.IsEnabled
+  type: Property
+  source:
+    id: IsEnabled
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 248
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "可用", GroupName = "样式")]
+
+      public bool IsEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Display(Name:="可用", GroupName:="样式")>
+
+      Public Property IsEnabled As Boolean
+  overload: H.Mvvm.DesignPresenterBase.IsEnabled*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.IsEnabled
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 可用
+    - name: GroupName
+      type: System.String
+      value: 样式
+- uid: H.Mvvm.DesignPresenterBase.Row
+  commentId: P:H.Mvvm.DesignPresenterBase.Row
+  id: Row
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Row
+  nameWithType: DesignPresenterBase.Row
+  fullName: H.Mvvm.DesignPresenterBase.Row
+  type: Property
+  source:
+    id: Row
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 262
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "行", GroupName = "布局")]
+
+      public int Row { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Display(Name:="行", GroupName:="布局")>
+
+      Public Property Row As Integer
+  overload: H.Mvvm.DesignPresenterBase.Row*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.Row
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 行
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.Column
+  commentId: P:H.Mvvm.DesignPresenterBase.Column
+  id: Column
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Column
+  nameWithType: DesignPresenterBase.Column
+  fullName: H.Mvvm.DesignPresenterBase.Column
+  type: Property
+  source:
+    id: Column
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 276
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "列", GroupName = "布局")]
+
+      public int Column { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Display(Name:="列", GroupName:="布局")>
+
+      Public Property Column As Integer
+  overload: H.Mvvm.DesignPresenterBase.Column*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.Column
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 列
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.RowSpan
+  commentId: P:H.Mvvm.DesignPresenterBase.RowSpan
+  id: RowSpan
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: RowSpan
+  nameWithType: DesignPresenterBase.RowSpan
+  fullName: H.Mvvm.DesignPresenterBase.RowSpan
+  type: Property
+  source:
+    id: RowSpan
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 290
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "行跨距", GroupName = "布局")]
+
+      public int RowSpan { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Display(Name:="行跨距", GroupName:="布局")>
+
+      Public Property RowSpan As Integer
+  overload: H.Mvvm.DesignPresenterBase.RowSpan*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.RowSpan
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 行跨距
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.ColumnSpan
+  commentId: P:H.Mvvm.DesignPresenterBase.ColumnSpan
+  id: ColumnSpan
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: ColumnSpan
+  nameWithType: DesignPresenterBase.ColumnSpan
+  fullName: H.Mvvm.DesignPresenterBase.ColumnSpan
+  type: Property
+  source:
+    id: ColumnSpan
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 303
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "列跨距", GroupName = "布局")]
+
+      public int ColumnSpan { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Display(Name:="列跨距", GroupName:="布局")>
+
+      Public Property ColumnSpan As Integer
+  overload: H.Mvvm.DesignPresenterBase.ColumnSpan*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.ColumnSpan
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 列跨距
+    - name: GroupName
+      type: System.String
+      value: 布局
+- uid: H.Mvvm.DesignPresenterBase.DeleteCommand
+  commentId: P:H.Mvvm.DesignPresenterBase.DeleteCommand
+  id: DeleteCommand
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: DeleteCommand
+  nameWithType: DesignPresenterBase.DeleteCommand
+  fullName: H.Mvvm.DesignPresenterBase.DeleteCommand
+  type: Property
+  source:
+    id: DeleteCommand
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 315
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "删除")]
+
+      public RelayCommand DeleteCommand { get; }
+    parameters: []
+    return:
+      type: H.Mvvm.RelayCommand
+    content.vb: >-
+      <Display(Name:="删除")>
+
+      Public ReadOnly Property DeleteCommand As RelayCommand
+  overload: H.Mvvm.DesignPresenterBase.DeleteCommand*
+  implements:
+  - H.Mvvm.IDesignPresenterBase.DeleteCommand
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 删除
+- uid: H.Mvvm.DesignPresenterBase.Delete(System.Object)
+  commentId: M:H.Mvvm.DesignPresenterBase.Delete(System.Object)
+  id: Delete(System.Object)
+  parent: H.Mvvm.DesignPresenterBase
+  langs:
+  - csharp
+  - vb
+  name: Delete(object)
+  nameWithType: DesignPresenterBase.Delete(object)
+  fullName: H.Mvvm.DesignPresenterBase.Delete(object)
+  type: Method
+  source:
+    id: Delete
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Providers\H.Mvvm\ViewModels\DesignPresenterBase.cs
+    startLine: 321
+  assemblies:
+  - H.Mvvm
+  namespace: H.Mvvm
+  syntax:
+    content: protected virtual void Delete(object e)
+    parameters:
+    - id: e
+      type: System.Object
+    content.vb: Protected Overridable Sub Delete(e As Object)
+  overload: H.Mvvm.DesignPresenterBase.Delete*
+  nameWithType.vb: DesignPresenterBase.Delete(Object)
+  fullName.vb: H.Mvvm.DesignPresenterBase.Delete(Object)
+  name.vb: Delete(Object)
+references:
+- uid: H.Mvvm
+  commentId: N:H.Mvvm
+  href: H.html
+  name: H.Mvvm
+  nameWithType: H.Mvvm
+  fullName: H.Mvvm
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: H.Mvvm.BindableBase
+  commentId: T:H.Mvvm.BindableBase
+  parent: H.Mvvm
+  href: H.Mvvm.BindableBase.html
+  name: BindableBase
+  nameWithType: BindableBase
+  fullName: H.Mvvm.BindableBase
+- uid: H.Mvvm.DisplayBindableBase
+  commentId: T:H.Mvvm.DisplayBindableBase
+  parent: H.Mvvm
+  href: H.Mvvm.DisplayBindableBase.html
+  name: DisplayBindableBase
+  nameWithType: DisplayBindableBase
+  fullName: H.Mvvm.DisplayBindableBase
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: H.Mvvm.IDable
+  commentId: T:H.Mvvm.IDable
+  parent: H.Mvvm
+  href: H.Mvvm.IDable.html
+  name: IDable
+  nameWithType: IDable
+  fullName: H.Mvvm.IDable
+- uid: H.Mvvm.IDesignPresenterBase
+  commentId: T:H.Mvvm.IDesignPresenterBase
+  parent: H.Mvvm
+  href: H.Mvvm.IDesignPresenterBase.html
+  name: IDesignPresenterBase
+  nameWithType: IDesignPresenterBase
+  fullName: H.Mvvm.IDesignPresenterBase
+- uid: H.Mvvm.DisplayBindableBase.Commands
+  commentId: P:H.Mvvm.DisplayBindableBase.Commands
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands
+  name: Commands
+  nameWithType: DisplayBindableBase.Commands
+  fullName: H.Mvvm.DisplayBindableBase.Commands
+- uid: H.Mvvm.DisplayBindableBase.CreateCommands
+  commentId: M:H.Mvvm.DisplayBindableBase.CreateCommands
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
+  name: CreateCommands()
+  nameWithType: DisplayBindableBase.CreateCommands()
+  fullName: H.Mvvm.DisplayBindableBase.CreateCommands()
+  spec.csharp:
+  - uid: H.Mvvm.DisplayBindableBase.CreateCommands
+    name: CreateCommands
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.DisplayBindableBase.CreateCommands
+    name: CreateCommands
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
+  - name: (
+  - name: )
+- uid: H.Mvvm.DisplayBindableBase.LoadedCommand
+  commentId: P:H.Mvvm.DisplayBindableBase.LoadedCommand
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand
+  name: LoadedCommand
+  nameWithType: DisplayBindableBase.LoadedCommand
+  fullName: H.Mvvm.DisplayBindableBase.LoadedCommand
+- uid: H.Mvvm.DisplayBindableBase.IsLoaded
+  commentId: P:H.Mvvm.DisplayBindableBase.IsLoaded
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded
+  name: IsLoaded
+  nameWithType: DisplayBindableBase.IsLoaded
+  fullName: H.Mvvm.DisplayBindableBase.IsLoaded
+- uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  commentId: M:H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  parent: H.Mvvm.DisplayBindableBase
+  isExternal: true
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+  name: Loaded(object)
+  nameWithType: DisplayBindableBase.Loaded(object)
+  fullName: H.Mvvm.DisplayBindableBase.Loaded(object)
+  nameWithType.vb: DisplayBindableBase.Loaded(Object)
+  fullName.vb: H.Mvvm.DisplayBindableBase.Loaded(Object)
+  name.vb: Loaded(Object)
+  spec.csharp:
+  - uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+    name: Loaded
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+    name: Loaded
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Mvvm.DisplayBindableBase.ID
+  commentId: P:H.Mvvm.DisplayBindableBase.ID
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID
+  name: ID
+  nameWithType: DisplayBindableBase.ID
+  fullName: H.Mvvm.DisplayBindableBase.ID
+- uid: H.Mvvm.DisplayBindableBase.Name
+  commentId: P:H.Mvvm.DisplayBindableBase.Name
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name
+  name: Name
+  nameWithType: DisplayBindableBase.Name
+  fullName: H.Mvvm.DisplayBindableBase.Name
+- uid: H.Mvvm.DisplayBindableBase.Icon
+  commentId: P:H.Mvvm.DisplayBindableBase.Icon
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon
+  name: Icon
+  nameWithType: DisplayBindableBase.Icon
+  fullName: H.Mvvm.DisplayBindableBase.Icon
+- uid: H.Mvvm.DisplayBindableBase.ShortName
+  commentId: P:H.Mvvm.DisplayBindableBase.ShortName
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName
+  name: ShortName
+  nameWithType: DisplayBindableBase.ShortName
+  fullName: H.Mvvm.DisplayBindableBase.ShortName
+- uid: H.Mvvm.DisplayBindableBase.GroupName
+  commentId: P:H.Mvvm.DisplayBindableBase.GroupName
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName
+  name: GroupName
+  nameWithType: DisplayBindableBase.GroupName
+  fullName: H.Mvvm.DisplayBindableBase.GroupName
+- uid: H.Mvvm.DisplayBindableBase.Description
+  commentId: P:H.Mvvm.DisplayBindableBase.Description
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description
+  name: Description
+  nameWithType: DisplayBindableBase.Description
+  fullName: H.Mvvm.DisplayBindableBase.Description
+- uid: H.Mvvm.DisplayBindableBase.Order
+  commentId: P:H.Mvvm.DisplayBindableBase.Order
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order
+  name: Order
+  nameWithType: DisplayBindableBase.Order
+  fullName: H.Mvvm.DisplayBindableBase.Order
+- uid: H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+  commentId: P:H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefaultCommand
+  name: LoadDefaultCommand
+  nameWithType: DisplayBindableBase.LoadDefaultCommand
+  fullName: H.Mvvm.DisplayBindableBase.LoadDefaultCommand
+- uid: H.Mvvm.DisplayBindableBase.LoadDefault
+  commentId: M:H.Mvvm.DisplayBindableBase.LoadDefault
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault
+  name: LoadDefault()
+  nameWithType: DisplayBindableBase.LoadDefault()
+  fullName: H.Mvvm.DisplayBindableBase.LoadDefault()
+  spec.csharp:
+  - uid: H.Mvvm.DisplayBindableBase.LoadDefault
+    name: LoadDefault
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.DisplayBindableBase.LoadDefault
+    name: LoadDefault
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault
+  - name: (
+  - name: )
+- uid: H.Mvvm.BindableBase.Init
+  commentId: M:H.Mvvm.BindableBase.Init
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  name: Init()
+  nameWithType: BindableBase.Init()
+  fullName: H.Mvvm.BindableBase.Init()
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.Init
+    name: Init
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.Init
+    name: Init
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  - name: (
+  - name: )
+- uid: H.Mvvm.BindableBase.PropertyChanged
+  commentId: E:H.Mvvm.BindableBase.PropertyChanged
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BindableBase.PropertyChanged
+  fullName: H.Mvvm.BindableBase.PropertyChanged
+- uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  parent: H.Mvvm.BindableBase
+  isExternal: true
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  name: RaisePropertyChanged(string)
+  nameWithType: BindableBase.RaisePropertyChanged(string)
+  fullName: H.Mvvm.BindableBase.RaisePropertyChanged(string)
+  nameWithType.vb: BindableBase.RaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.BindableBase.RaisePropertyChanged(String)
+  name.vb: RaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  parent: H.Mvvm.BindableBase
+  isExternal: true
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  name: DispatcherRaisePropertyChanged(string)
+  nameWithType: BindableBase.DispatcherRaisePropertyChanged(string)
+  fullName: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(string)
+  nameWithType.vb: BindableBase.DispatcherRaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(String)
+  name.vb: DispatcherRaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+    name: DispatcherRaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+    name: DispatcherRaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  commentId: M:H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  name: OnDispatcherPropertyChanged()
+  nameWithType: BindableBase.OnDispatcherPropertyChanged()
+  fullName: H.Mvvm.BindableBase.OnDispatcherPropertyChanged()
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+    name: OnDispatcherPropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+    name: OnDispatcherPropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: H.Mvvm.DesignPresenterBase.IsSelected*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.IsSelected
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_IsSelected
+  name: IsSelected
+  nameWithType: DesignPresenterBase.IsSelected
+  fullName: H.Mvvm.DesignPresenterBase.IsSelected
+- uid: H.Mvvm.IDesignPresenterBase.IsSelected
+  commentId: P:H.Mvvm.IDesignPresenterBase.IsSelected
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_IsSelected
+  name: IsSelected
+  nameWithType: IDesignPresenterBase.IsSelected
+  fullName: H.Mvvm.IDesignPresenterBase.IsSelected
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: H.Mvvm.DesignPresenterBase.IsMouseOver*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.IsMouseOver
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_IsMouseOver
+  name: IsMouseOver
+  nameWithType: DesignPresenterBase.IsMouseOver
+  fullName: H.Mvvm.DesignPresenterBase.IsMouseOver
+- uid: H.Mvvm.IDesignPresenterBase.IsMouseOver
+  commentId: P:H.Mvvm.IDesignPresenterBase.IsMouseOver
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_IsMouseOver
+  name: IsMouseOver
+  nameWithType: IDesignPresenterBase.IsMouseOver
+  fullName: H.Mvvm.IDesignPresenterBase.IsMouseOver
+- uid: H.Mvvm.DesignPresenterBase.Height*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Height
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Height
+  name: Height
+  nameWithType: DesignPresenterBase.Height
+  fullName: H.Mvvm.DesignPresenterBase.Height
+- uid: H.Mvvm.IDesignPresenterBase.Height
+  commentId: P:H.Mvvm.IDesignPresenterBase.Height
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_Height
+  name: Height
+  nameWithType: IDesignPresenterBase.Height
+  fullName: H.Mvvm.IDesignPresenterBase.Height
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: H.Mvvm.DesignPresenterBase.Width*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Width
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Width
+  name: Width
+  nameWithType: DesignPresenterBase.Width
+  fullName: H.Mvvm.DesignPresenterBase.Width
+- uid: H.Mvvm.IDesignPresenterBase.Width
+  commentId: P:H.Mvvm.IDesignPresenterBase.Width
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_Width
+  name: Width
+  nameWithType: IDesignPresenterBase.Width
+  fullName: H.Mvvm.IDesignPresenterBase.Width
+- uid: H.Mvvm.DesignPresenterBase.MinHeight*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.MinHeight
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_MinHeight
+  name: MinHeight
+  nameWithType: DesignPresenterBase.MinHeight
+  fullName: H.Mvvm.DesignPresenterBase.MinHeight
+- uid: H.Mvvm.IDesignPresenterBase.MinHeight
+  commentId: P:H.Mvvm.IDesignPresenterBase.MinHeight
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_MinHeight
+  name: MinHeight
+  nameWithType: IDesignPresenterBase.MinHeight
+  fullName: H.Mvvm.IDesignPresenterBase.MinHeight
+- uid: H.Mvvm.DesignPresenterBase.MinWidth*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.MinWidth
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_MinWidth
+  name: MinWidth
+  nameWithType: DesignPresenterBase.MinWidth
+  fullName: H.Mvvm.DesignPresenterBase.MinWidth
+- uid: H.Mvvm.IDesignPresenterBase.MinWidth
+  commentId: P:H.Mvvm.IDesignPresenterBase.MinWidth
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_MinWidth
+  name: MinWidth
+  nameWithType: IDesignPresenterBase.MinWidth
+  fullName: H.Mvvm.IDesignPresenterBase.MinWidth
+- uid: H.Mvvm.DesignPresenterBase.Margin*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Margin
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Margin
+  name: Margin
+  nameWithType: DesignPresenterBase.Margin
+  fullName: H.Mvvm.DesignPresenterBase.Margin
+- uid: H.Mvvm.IDesignPresenterBase.Margin
+  commentId: P:H.Mvvm.IDesignPresenterBase.Margin
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_Margin
+  name: Margin
+  nameWithType: IDesignPresenterBase.Margin
+  fullName: H.Mvvm.IDesignPresenterBase.Margin
+- uid: System.Windows.Thickness
+  commentId: T:System.Windows.Thickness
+  parent: System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.thickness
+  name: Thickness
+  nameWithType: Thickness
+  fullName: System.Windows.Thickness
+- uid: System.Windows
+  commentId: N:System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows
+  nameWithType: System.Windows
+  fullName: System.Windows
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+- uid: H.Mvvm.DesignPresenterBase.Padding*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Padding
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Padding
+  name: Padding
+  nameWithType: DesignPresenterBase.Padding
+  fullName: H.Mvvm.DesignPresenterBase.Padding
+- uid: H.Mvvm.IDesignPresenterBase.Padding
+  commentId: P:H.Mvvm.IDesignPresenterBase.Padding
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_Padding
+  name: Padding
+  nameWithType: IDesignPresenterBase.Padding
+  fullName: H.Mvvm.IDesignPresenterBase.Padding
+- uid: H.Mvvm.DesignPresenterBase.HorizontalAlignment*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.HorizontalAlignment
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_HorizontalAlignment
+  name: HorizontalAlignment
+  nameWithType: DesignPresenterBase.HorizontalAlignment
+  fullName: H.Mvvm.DesignPresenterBase.HorizontalAlignment
+- uid: H.Mvvm.IDesignPresenterBase.HorizontalAlignment
+  commentId: P:H.Mvvm.IDesignPresenterBase.HorizontalAlignment
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_HorizontalAlignment
+  name: HorizontalAlignment
+  nameWithType: IDesignPresenterBase.HorizontalAlignment
+  fullName: H.Mvvm.IDesignPresenterBase.HorizontalAlignment
+- uid: System.Windows.HorizontalAlignment
+  commentId: T:System.Windows.HorizontalAlignment
+  parent: System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.horizontalalignment
+  name: HorizontalAlignment
+  nameWithType: HorizontalAlignment
+  fullName: System.Windows.HorizontalAlignment
+- uid: H.Mvvm.DesignPresenterBase.HorizontalContentAlignment*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.HorizontalContentAlignment
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_HorizontalContentAlignment
+  name: HorizontalContentAlignment
+  nameWithType: DesignPresenterBase.HorizontalContentAlignment
+  fullName: H.Mvvm.DesignPresenterBase.HorizontalContentAlignment
+- uid: H.Mvvm.IDesignPresenterBase.HorizontalContentAlignment
+  commentId: P:H.Mvvm.IDesignPresenterBase.HorizontalContentAlignment
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_HorizontalContentAlignment
+  name: HorizontalContentAlignment
+  nameWithType: IDesignPresenterBase.HorizontalContentAlignment
+  fullName: H.Mvvm.IDesignPresenterBase.HorizontalContentAlignment
+- uid: H.Mvvm.DesignPresenterBase.VerticalAlignment*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.VerticalAlignment
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_VerticalAlignment
+  name: VerticalAlignment
+  nameWithType: DesignPresenterBase.VerticalAlignment
+  fullName: H.Mvvm.DesignPresenterBase.VerticalAlignment
+- uid: H.Mvvm.IDesignPresenterBase.VerticalAlignment
+  commentId: P:H.Mvvm.IDesignPresenterBase.VerticalAlignment
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_VerticalAlignment
+  name: VerticalAlignment
+  nameWithType: IDesignPresenterBase.VerticalAlignment
+  fullName: H.Mvvm.IDesignPresenterBase.VerticalAlignment
+- uid: System.Windows.VerticalAlignment
+  commentId: T:System.Windows.VerticalAlignment
+  parent: System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.verticalalignment
+  name: VerticalAlignment
+  nameWithType: VerticalAlignment
+  fullName: System.Windows.VerticalAlignment
+- uid: H.Mvvm.DesignPresenterBase.VerticalContentAlignment*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.VerticalContentAlignment
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_VerticalContentAlignment
+  name: VerticalContentAlignment
+  nameWithType: DesignPresenterBase.VerticalContentAlignment
+  fullName: H.Mvvm.DesignPresenterBase.VerticalContentAlignment
+- uid: H.Mvvm.IDesignPresenterBase.VerticalContentAlignment
+  commentId: P:H.Mvvm.IDesignPresenterBase.VerticalContentAlignment
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_VerticalContentAlignment
+  name: VerticalContentAlignment
+  nameWithType: IDesignPresenterBase.VerticalContentAlignment
+  fullName: H.Mvvm.IDesignPresenterBase.VerticalContentAlignment
+- uid: H.Mvvm.DesignPresenterBase.Background*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Background
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Background
+  name: Background
+  nameWithType: DesignPresenterBase.Background
+  fullName: H.Mvvm.DesignPresenterBase.Background
+- uid: H.Mvvm.IDesignPresenterBase.Background
+  commentId: P:H.Mvvm.IDesignPresenterBase.Background
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_Background
+  name: Background
+  nameWithType: IDesignPresenterBase.Background
+  fullName: H.Mvvm.IDesignPresenterBase.Background
+- uid: System.Windows.Media.Brush
+  commentId: T:System.Windows.Media.Brush
+  parent: System.Windows.Media
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.media.brush
+  name: Brush
+  nameWithType: Brush
+  fullName: System.Windows.Media.Brush
+- uid: System.Windows.Media
+  commentId: N:System.Windows.Media
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Media
+  nameWithType: System.Windows.Media
+  fullName: System.Windows.Media
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Media
+    name: Media
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.media
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Media
+    name: Media
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.media
+- uid: H.Mvvm.DesignPresenterBase.BorderBrush*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.BorderBrush
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_BorderBrush
+  name: BorderBrush
+  nameWithType: DesignPresenterBase.BorderBrush
+  fullName: H.Mvvm.DesignPresenterBase.BorderBrush
+- uid: H.Mvvm.IDesignPresenterBase.BorderBrush
+  commentId: P:H.Mvvm.IDesignPresenterBase.BorderBrush
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_BorderBrush
+  name: BorderBrush
+  nameWithType: IDesignPresenterBase.BorderBrush
+  fullName: H.Mvvm.IDesignPresenterBase.BorderBrush
+- uid: H.Mvvm.DesignPresenterBase.BorderThickness*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.BorderThickness
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_BorderThickness
+  name: BorderThickness
+  nameWithType: DesignPresenterBase.BorderThickness
+  fullName: H.Mvvm.DesignPresenterBase.BorderThickness
+- uid: H.Mvvm.IDesignPresenterBase.BorderThickness
+  commentId: P:H.Mvvm.IDesignPresenterBase.BorderThickness
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_BorderThickness
+  name: BorderThickness
+  nameWithType: IDesignPresenterBase.BorderThickness
+  fullName: H.Mvvm.IDesignPresenterBase.BorderThickness
+- uid: H.Mvvm.DesignPresenterBase.Opacity*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Opacity
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Opacity
+  name: Opacity
+  nameWithType: DesignPresenterBase.Opacity
+  fullName: H.Mvvm.DesignPresenterBase.Opacity
+- uid: H.Mvvm.IDesignPresenterBase.Opacity
+  commentId: P:H.Mvvm.IDesignPresenterBase.Opacity
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_Opacity
+  name: Opacity
+  nameWithType: IDesignPresenterBase.Opacity
+  fullName: H.Mvvm.IDesignPresenterBase.Opacity
+- uid: H.Mvvm.DesignPresenterBase.IsVisible*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.IsVisible
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_IsVisible
+  name: IsVisible
+  nameWithType: DesignPresenterBase.IsVisible
+  fullName: H.Mvvm.DesignPresenterBase.IsVisible
+- uid: H.Mvvm.IDesignPresenterBase.IsVisible
+  commentId: P:H.Mvvm.IDesignPresenterBase.IsVisible
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_IsVisible
+  name: IsVisible
+  nameWithType: IDesignPresenterBase.IsVisible
+  fullName: H.Mvvm.IDesignPresenterBase.IsVisible
+- uid: H.Mvvm.DesignPresenterBase.IsEnabled*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.IsEnabled
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_IsEnabled
+  name: IsEnabled
+  nameWithType: DesignPresenterBase.IsEnabled
+  fullName: H.Mvvm.DesignPresenterBase.IsEnabled
+- uid: H.Mvvm.IDesignPresenterBase.IsEnabled
+  commentId: P:H.Mvvm.IDesignPresenterBase.IsEnabled
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_IsEnabled
+  name: IsEnabled
+  nameWithType: IDesignPresenterBase.IsEnabled
+  fullName: H.Mvvm.IDesignPresenterBase.IsEnabled
+- uid: H.Mvvm.DesignPresenterBase.Row*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Row
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Row
+  name: Row
+  nameWithType: DesignPresenterBase.Row
+  fullName: H.Mvvm.DesignPresenterBase.Row
+- uid: H.Mvvm.IDesignPresenterBase.Row
+  commentId: P:H.Mvvm.IDesignPresenterBase.Row
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_Row
+  name: Row
+  nameWithType: IDesignPresenterBase.Row
+  fullName: H.Mvvm.IDesignPresenterBase.Row
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: H.Mvvm.DesignPresenterBase.Column*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Column
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Column
+  name: Column
+  nameWithType: DesignPresenterBase.Column
+  fullName: H.Mvvm.DesignPresenterBase.Column
+- uid: H.Mvvm.IDesignPresenterBase.Column
+  commentId: P:H.Mvvm.IDesignPresenterBase.Column
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_Column
+  name: Column
+  nameWithType: IDesignPresenterBase.Column
+  fullName: H.Mvvm.IDesignPresenterBase.Column
+- uid: H.Mvvm.DesignPresenterBase.RowSpan*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.RowSpan
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_RowSpan
+  name: RowSpan
+  nameWithType: DesignPresenterBase.RowSpan
+  fullName: H.Mvvm.DesignPresenterBase.RowSpan
+- uid: H.Mvvm.IDesignPresenterBase.RowSpan
+  commentId: P:H.Mvvm.IDesignPresenterBase.RowSpan
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_RowSpan
+  name: RowSpan
+  nameWithType: IDesignPresenterBase.RowSpan
+  fullName: H.Mvvm.IDesignPresenterBase.RowSpan
+- uid: H.Mvvm.DesignPresenterBase.ColumnSpan*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.ColumnSpan
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_ColumnSpan
+  name: ColumnSpan
+  nameWithType: DesignPresenterBase.ColumnSpan
+  fullName: H.Mvvm.DesignPresenterBase.ColumnSpan
+- uid: H.Mvvm.IDesignPresenterBase.ColumnSpan
+  commentId: P:H.Mvvm.IDesignPresenterBase.ColumnSpan
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_ColumnSpan
+  name: ColumnSpan
+  nameWithType: IDesignPresenterBase.ColumnSpan
+  fullName: H.Mvvm.IDesignPresenterBase.ColumnSpan
+- uid: H.Mvvm.DesignPresenterBase.DeleteCommand*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.DeleteCommand
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_DeleteCommand
+  name: DeleteCommand
+  nameWithType: DesignPresenterBase.DeleteCommand
+  fullName: H.Mvvm.DesignPresenterBase.DeleteCommand
+- uid: H.Mvvm.IDesignPresenterBase.DeleteCommand
+  commentId: P:H.Mvvm.IDesignPresenterBase.DeleteCommand
+  parent: H.Mvvm.IDesignPresenterBase
+  href: H.Mvvm.IDesignPresenterBase.html#H_Mvvm_IDesignPresenterBase_DeleteCommand
+  name: DeleteCommand
+  nameWithType: IDesignPresenterBase.DeleteCommand
+  fullName: H.Mvvm.IDesignPresenterBase.DeleteCommand
+- uid: H.Mvvm.RelayCommand
+  commentId: T:H.Mvvm.RelayCommand
+  parent: H.Mvvm
+  href: H.Mvvm.RelayCommand.html
+  name: RelayCommand
+  nameWithType: RelayCommand
+  fullName: H.Mvvm.RelayCommand
+- uid: H.Mvvm.DesignPresenterBase.Delete*
+  commentId: Overload:H.Mvvm.DesignPresenterBase.Delete
+  href: H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Delete_System_Object_
+  name: Delete
+  nameWithType: DesignPresenterBase.Delete
+  fullName: H.Mvvm.DesignPresenterBase.Delete
