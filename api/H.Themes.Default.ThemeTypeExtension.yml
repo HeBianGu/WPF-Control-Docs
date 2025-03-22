@@ -1,0 +1,673 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Themes.Default.ThemeTypeExtension
+  commentId: T:H.Themes.Default.ThemeTypeExtension
+  id: ThemeTypeExtension
+  parent: H.Themes.Default
+  children:
+  - H.Themes.Default.ThemeTypeExtension.ChangeFontSizeThemeType(H.Themes.Default.FontSizeThemeType)
+  - H.Themes.Default.ThemeTypeExtension.ChangeLayoutThemeType(H.Themes.Default.LayoutThemeType)
+  - H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary(System.Windows.ResourceDictionary,System.Func{System.Windows.ResourceDictionary,System.Boolean},System.Boolean)
+  - H.Themes.Default.ThemeTypeExtension.GetFontSizeResource(H.Themes.Default.FontSizeThemeType)
+  - H.Themes.Default.ThemeTypeExtension.GetLayoutResource(H.Themes.Default.LayoutThemeType)
+  - H.Themes.Default.ThemeTypeExtension.GetSystemsResource
+  - H.Themes.Default.ThemeTypeExtension.RefreshBrushResourceDictionary
+  langs:
+  - csharp
+  - vb
+  name: ThemeTypeExtension
+  nameWithType: ThemeTypeExtension
+  fullName: H.Themes.Default.ThemeTypeExtension
+  type: Class
+  source:
+    id: ThemeTypeExtension
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Extensions\ThemeTypeExtension.cs
+    startLine: 8
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static class ThemeTypeExtension
+    content.vb: Public Module ThemeTypeExtension
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: H.Themes.Default.ThemeTypeExtension.ChangeFontSizeThemeType(H.Themes.Default.FontSizeThemeType)
+  commentId: M:H.Themes.Default.ThemeTypeExtension.ChangeFontSizeThemeType(H.Themes.Default.FontSizeThemeType)
+  id: ChangeFontSizeThemeType(H.Themes.Default.FontSizeThemeType)
+  isExtensionMethod: true
+  parent: H.Themes.Default.ThemeTypeExtension
+  langs:
+  - csharp
+  - vb
+  name: ChangeFontSizeThemeType(FontSizeThemeType)
+  nameWithType: ThemeTypeExtension.ChangeFontSizeThemeType(FontSizeThemeType)
+  fullName: H.Themes.Default.ThemeTypeExtension.ChangeFontSizeThemeType(H.Themes.Default.FontSizeThemeType)
+  type: Method
+  source:
+    id: ChangeFontSizeThemeType
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Extensions\ThemeTypeExtension.cs
+    startLine: 46
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static void ChangeFontSizeThemeType(this FontSizeThemeType n)
+    parameters:
+    - id: n
+      type: H.Themes.Default.FontSizeThemeType
+    content.vb: Public Shared Sub ChangeFontSizeThemeType(n As FontSizeThemeType)
+  overload: H.Themes.Default.ThemeTypeExtension.ChangeFontSizeThemeType*
+- uid: H.Themes.Default.ThemeTypeExtension.ChangeLayoutThemeType(H.Themes.Default.LayoutThemeType)
+  commentId: M:H.Themes.Default.ThemeTypeExtension.ChangeLayoutThemeType(H.Themes.Default.LayoutThemeType)
+  id: ChangeLayoutThemeType(H.Themes.Default.LayoutThemeType)
+  isExtensionMethod: true
+  parent: H.Themes.Default.ThemeTypeExtension
+  langs:
+  - csharp
+  - vb
+  name: ChangeLayoutThemeType(LayoutThemeType)
+  nameWithType: ThemeTypeExtension.ChangeLayoutThemeType(LayoutThemeType)
+  fullName: H.Themes.Default.ThemeTypeExtension.ChangeLayoutThemeType(H.Themes.Default.LayoutThemeType)
+  type: Method
+  source:
+    id: ChangeLayoutThemeType
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Extensions\ThemeTypeExtension.cs
+    startLine: 52
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static void ChangeLayoutThemeType(this LayoutThemeType n)
+    parameters:
+    - id: n
+      type: H.Themes.Default.LayoutThemeType
+    content.vb: Public Shared Sub ChangeLayoutThemeType(n As LayoutThemeType)
+  overload: H.Themes.Default.ThemeTypeExtension.ChangeLayoutThemeType*
+- uid: H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary(System.Windows.ResourceDictionary,System.Func{System.Windows.ResourceDictionary,System.Boolean},System.Boolean)
+  commentId: M:H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary(System.Windows.ResourceDictionary,System.Func{System.Windows.ResourceDictionary,System.Boolean},System.Boolean)
+  id: ChangeResourceDictionary(System.Windows.ResourceDictionary,System.Func{System.Windows.ResourceDictionary,System.Boolean},System.Boolean)
+  isExtensionMethod: true
+  parent: H.Themes.Default.ThemeTypeExtension
+  langs:
+  - csharp
+  - vb
+  name: ChangeResourceDictionary(ResourceDictionary, Func<ResourceDictionary, bool>, bool)
+  nameWithType: ThemeTypeExtension.ChangeResourceDictionary(ResourceDictionary, Func<ResourceDictionary, bool>, bool)
+  fullName: H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary(System.Windows.ResourceDictionary, System.Func<System.Windows.ResourceDictionary, bool>, bool)
+  type: Method
+  source:
+    id: ChangeResourceDictionary
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Extensions\ThemeTypeExtension.cs
+    startLine: 58
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static void ChangeResourceDictionary(this ResourceDictionary n, Func<ResourceDictionary, bool> predicate, bool force = false)
+    parameters:
+    - id: n
+      type: System.Windows.ResourceDictionary
+    - id: predicate
+      type: System.Func{System.Windows.ResourceDictionary,System.Boolean}
+    - id: force
+      type: System.Boolean
+    content.vb: Public Shared Sub ChangeResourceDictionary(n As ResourceDictionary, predicate As Func(Of ResourceDictionary, Boolean), force As Boolean = False)
+  overload: H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary*
+  nameWithType.vb: ThemeTypeExtension.ChangeResourceDictionary(ResourceDictionary, Func(Of ResourceDictionary, Boolean), Boolean)
+  fullName.vb: H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary(System.Windows.ResourceDictionary, System.Func(Of System.Windows.ResourceDictionary, Boolean), Boolean)
+  name.vb: ChangeResourceDictionary(ResourceDictionary, Func(Of ResourceDictionary, Boolean), Boolean)
+- uid: H.Themes.Default.ThemeTypeExtension.GetLayoutResource(H.Themes.Default.LayoutThemeType)
+  commentId: M:H.Themes.Default.ThemeTypeExtension.GetLayoutResource(H.Themes.Default.LayoutThemeType)
+  id: GetLayoutResource(H.Themes.Default.LayoutThemeType)
+  isExtensionMethod: true
+  parent: H.Themes.Default.ThemeTypeExtension
+  langs:
+  - csharp
+  - vb
+  name: GetLayoutResource(LayoutThemeType)
+  nameWithType: ThemeTypeExtension.GetLayoutResource(LayoutThemeType)
+  fullName: H.Themes.Default.ThemeTypeExtension.GetLayoutResource(H.Themes.Default.LayoutThemeType)
+  type: Method
+  source:
+    id: GetLayoutResource
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Extensions\ThemeTypeExtension.cs
+    startLine: 79
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static ResourceDictionary GetLayoutResource(this LayoutThemeType type)
+    parameters:
+    - id: type
+      type: H.Themes.Default.LayoutThemeType
+    return:
+      type: System.Windows.ResourceDictionary
+    content.vb: Public Shared Function GetLayoutResource(type As LayoutThemeType) As ResourceDictionary
+  overload: H.Themes.Default.ThemeTypeExtension.GetLayoutResource*
+- uid: H.Themes.Default.ThemeTypeExtension.GetFontSizeResource(H.Themes.Default.FontSizeThemeType)
+  commentId: M:H.Themes.Default.ThemeTypeExtension.GetFontSizeResource(H.Themes.Default.FontSizeThemeType)
+  id: GetFontSizeResource(H.Themes.Default.FontSizeThemeType)
+  isExtensionMethod: true
+  parent: H.Themes.Default.ThemeTypeExtension
+  langs:
+  - csharp
+  - vb
+  name: GetFontSizeResource(FontSizeThemeType)
+  nameWithType: ThemeTypeExtension.GetFontSizeResource(FontSizeThemeType)
+  fullName: H.Themes.Default.ThemeTypeExtension.GetFontSizeResource(H.Themes.Default.FontSizeThemeType)
+  type: Method
+  source:
+    id: GetFontSizeResource
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Extensions\ThemeTypeExtension.cs
+    startLine: 84
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static ResourceDictionary GetFontSizeResource(this FontSizeThemeType type)
+    parameters:
+    - id: type
+      type: H.Themes.Default.FontSizeThemeType
+    return:
+      type: System.Windows.ResourceDictionary
+    content.vb: Public Shared Function GetFontSizeResource(type As FontSizeThemeType) As ResourceDictionary
+  overload: H.Themes.Default.ThemeTypeExtension.GetFontSizeResource*
+- uid: H.Themes.Default.ThemeTypeExtension.GetSystemsResource
+  commentId: M:H.Themes.Default.ThemeTypeExtension.GetSystemsResource
+  id: GetSystemsResource
+  parent: H.Themes.Default.ThemeTypeExtension
+  langs:
+  - csharp
+  - vb
+  name: GetSystemsResource()
+  nameWithType: ThemeTypeExtension.GetSystemsResource()
+  fullName: H.Themes.Default.ThemeTypeExtension.GetSystemsResource()
+  type: Method
+  source:
+    id: GetSystemsResource
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Extensions\ThemeTypeExtension.cs
+    startLine: 89
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static ResourceDictionary GetSystemsResource()
+    return:
+      type: System.Windows.ResourceDictionary
+    content.vb: Public Shared Function GetSystemsResource() As ResourceDictionary
+  overload: H.Themes.Default.ThemeTypeExtension.GetSystemsResource*
+- uid: H.Themes.Default.ThemeTypeExtension.RefreshBrushResourceDictionary
+  commentId: M:H.Themes.Default.ThemeTypeExtension.RefreshBrushResourceDictionary
+  id: RefreshBrushResourceDictionary
+  parent: H.Themes.Default.ThemeTypeExtension
+  langs:
+  - csharp
+  - vb
+  name: RefreshBrushResourceDictionary()
+  nameWithType: ThemeTypeExtension.RefreshBrushResourceDictionary()
+  fullName: H.Themes.Default.ThemeTypeExtension.RefreshBrushResourceDictionary()
+  type: Method
+  source:
+    id: RefreshBrushResourceDictionary
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Extensions\ThemeTypeExtension.cs
+    startLine: 94
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static void RefreshBrushResourceDictionary()
+    content.vb: Public Shared Sub RefreshBrushResourceDictionary()
+  overload: H.Themes.Default.ThemeTypeExtension.RefreshBrushResourceDictionary*
+references:
+- uid: H.Themes.Default
+  commentId: N:H.Themes.Default
+  href: H.html
+  name: H.Themes.Default
+  nameWithType: H.Themes.Default
+  fullName: H.Themes.Default
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Themes
+    name: Themes
+    href: H.Themes.html
+  - name: .
+  - uid: H.Themes.Default
+    name: Default
+    href: H.Themes.Default.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Themes
+    name: Themes
+    href: H.Themes.html
+  - name: .
+  - uid: H.Themes.Default
+    name: Default
+    href: H.Themes.Default.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: H.Themes.Default.ThemeTypeExtension.ChangeFontSizeThemeType*
+  commentId: Overload:H.Themes.Default.ThemeTypeExtension.ChangeFontSizeThemeType
+  href: H.Themes.Default.ThemeTypeExtension.html#H_Themes_Default_ThemeTypeExtension_ChangeFontSizeThemeType_H_Themes_Default_FontSizeThemeType_
+  name: ChangeFontSizeThemeType
+  nameWithType: ThemeTypeExtension.ChangeFontSizeThemeType
+  fullName: H.Themes.Default.ThemeTypeExtension.ChangeFontSizeThemeType
+- uid: H.Themes.Default.FontSizeThemeType
+  commentId: T:H.Themes.Default.FontSizeThemeType
+  parent: H.Themes.Default
+  href: H.Themes.Default.FontSizeThemeType.html
+  name: FontSizeThemeType
+  nameWithType: FontSizeThemeType
+  fullName: H.Themes.Default.FontSizeThemeType
+- uid: H.Themes.Default.ThemeTypeExtension.ChangeLayoutThemeType*
+  commentId: Overload:H.Themes.Default.ThemeTypeExtension.ChangeLayoutThemeType
+  href: H.Themes.Default.ThemeTypeExtension.html#H_Themes_Default_ThemeTypeExtension_ChangeLayoutThemeType_H_Themes_Default_LayoutThemeType_
+  name: ChangeLayoutThemeType
+  nameWithType: ThemeTypeExtension.ChangeLayoutThemeType
+  fullName: H.Themes.Default.ThemeTypeExtension.ChangeLayoutThemeType
+- uid: H.Themes.Default.LayoutThemeType
+  commentId: T:H.Themes.Default.LayoutThemeType
+  parent: H.Themes.Default
+  href: H.Themes.Default.LayoutThemeType.html
+  name: LayoutThemeType
+  nameWithType: LayoutThemeType
+  fullName: H.Themes.Default.LayoutThemeType
+- uid: H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary*
+  commentId: Overload:H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary
+  href: H.Themes.Default.ThemeTypeExtension.html#H_Themes_Default_ThemeTypeExtension_ChangeResourceDictionary_System_Windows_ResourceDictionary_System_Func_System_Windows_ResourceDictionary_System_Boolean__System_Boolean_
+  name: ChangeResourceDictionary
+  nameWithType: ThemeTypeExtension.ChangeResourceDictionary
+  fullName: H.Themes.Default.ThemeTypeExtension.ChangeResourceDictionary
+- uid: System.Windows.ResourceDictionary
+  commentId: T:System.Windows.ResourceDictionary
+  parent: System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.resourcedictionary
+  name: ResourceDictionary
+  nameWithType: ResourceDictionary
+  fullName: System.Windows.ResourceDictionary
+- uid: System.Func{System.Windows.ResourceDictionary,System.Boolean}
+  commentId: T:System.Func{System.Windows.ResourceDictionary,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<ResourceDictionary, bool>
+  nameWithType: Func<ResourceDictionary, bool>
+  fullName: System.Func<System.Windows.ResourceDictionary, bool>
+  nameWithType.vb: Func(Of ResourceDictionary, Boolean)
+  fullName.vb: System.Func(Of System.Windows.ResourceDictionary, Boolean)
+  name.vb: Func(Of ResourceDictionary, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Windows.ResourceDictionary
+    name: ResourceDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.resourcedictionary
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.ResourceDictionary
+    name: ResourceDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.resourcedictionary
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Windows
+  commentId: N:System.Windows
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows
+  nameWithType: System.Windows
+  fullName: System.Windows
+  spec.csharp:
+  - uid: System
+    name: System
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  spec.vb:
+  - uid: System
+    name: System
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: H.Themes.Default.ThemeTypeExtension.GetLayoutResource*
+  commentId: Overload:H.Themes.Default.ThemeTypeExtension.GetLayoutResource
+  href: H.Themes.Default.ThemeTypeExtension.html#H_Themes_Default_ThemeTypeExtension_GetLayoutResource_H_Themes_Default_LayoutThemeType_
+  name: GetLayoutResource
+  nameWithType: ThemeTypeExtension.GetLayoutResource
+  fullName: H.Themes.Default.ThemeTypeExtension.GetLayoutResource
+- uid: H.Themes.Default.ThemeTypeExtension.GetFontSizeResource*
+  commentId: Overload:H.Themes.Default.ThemeTypeExtension.GetFontSizeResource
+  href: H.Themes.Default.ThemeTypeExtension.html#H_Themes_Default_ThemeTypeExtension_GetFontSizeResource_H_Themes_Default_FontSizeThemeType_
+  name: GetFontSizeResource
+  nameWithType: ThemeTypeExtension.GetFontSizeResource
+  fullName: H.Themes.Default.ThemeTypeExtension.GetFontSizeResource
+- uid: H.Themes.Default.ThemeTypeExtension.GetSystemsResource*
+  commentId: Overload:H.Themes.Default.ThemeTypeExtension.GetSystemsResource
+  href: H.Themes.Default.ThemeTypeExtension.html#H_Themes_Default_ThemeTypeExtension_GetSystemsResource
+  name: GetSystemsResource
+  nameWithType: ThemeTypeExtension.GetSystemsResource
+  fullName: H.Themes.Default.ThemeTypeExtension.GetSystemsResource
+- uid: H.Themes.Default.ThemeTypeExtension.RefreshBrushResourceDictionary*
+  commentId: Overload:H.Themes.Default.ThemeTypeExtension.RefreshBrushResourceDictionary
+  href: H.Themes.Default.ThemeTypeExtension.html#H_Themes_Default_ThemeTypeExtension_RefreshBrushResourceDictionary
+  name: RefreshBrushResourceDictionary
+  nameWithType: ThemeTypeExtension.RefreshBrushResourceDictionary
+  fullName: H.Themes.Default.ThemeTypeExtension.RefreshBrushResourceDictionary

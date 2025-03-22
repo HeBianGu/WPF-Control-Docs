@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DiagramBase | WPF-Control </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DiagramBase | WPF-Control ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="WPF-Control">
+            WPF-Control
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="H.Controls.Diagram.Extension.DiagramBase">
+
+
+
+  <h1 id="H_Controls_Diagram_Extension_DiagramBase" data-uid="H.Controls.Diagram.Extension.DiagramBase" class="text-break">
+Class DiagramBase  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="H.html">H</a>.<a class="xref" href="H.Controls.html">Controls</a>.<a class="xref" href="H.Controls.Diagram.html">Diagram</a>.<a class="xref" href="H.Controls.Diagram.Extension.html">Extension</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>H.Controls.Diagram.Extension.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class DiagramBase : DisplayBindableBase, INotifyPropertyChanged, IDable, IDiagram, ICloneable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="H.Mvvm.BindableBase.html">BindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.DisplayBindableBase.html">DisplayBindableBase</a></div>
+      <div><span class="xref">DiagramBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="H.Mvvm.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Controls.Diagram.Extension.IDiagram.html">IDiagram</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="H.Controls.Diagram.Extension.FlowableDiagramBase.html">FlowableDiagramBase</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands">DisplayBindableBase.Commands</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands">DisplayBindableBase.CreateCommands()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand">DisplayBindableBase.LoadedCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init">BindableBase.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_">BindableBase.DispatcherRaisePropertyChanged(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged">BindableBase.OnDispatcherPropertyChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Action_System_Object__System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, IList, Action&lt;object&gt;, Action, DispatcherPriority)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, IList, Func&lt;IList&gt;, Action, DispatcherPriority)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase__ctor_" data-uid="H.Controls.Diagram.Extension.DiagramBase.#ctor*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase__ctor" data-uid="H.Controls.Diagram.Extension.DiagramBase.#ctor">
+  DiagramBase()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiagramBase()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_AlignmentCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.AlignmentCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_AlignmentCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.AlignmentCommand">
+  AlignmentCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Display(Name = &quot;自动对齐&quot;, GroupName = &quot;操作&quot;, Order = 5)]
+public virtual RelayCommand AlignmentCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ApplayLinkStyleCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ApplayLinkStyleCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ApplayLinkStyleCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.ApplayLinkStyleCommand">
+  ApplayLinkStyleCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelayCommand ApplayLinkStyleCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ApplayNodeStyleCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ApplayNodeStyleCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ApplayNodeStyleCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.ApplayNodeStyleCommand">
+  ApplayNodeStyleCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelayCommand ApplayNodeStyleCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ApplayPortStyleCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ApplayPortStyleCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ApplayPortStyleCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.ApplayPortStyleCommand">
+  ApplayPortStyleCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelayCommand ApplayPortStyleCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ApplyDiagramThemeCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ApplyDiagramThemeCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ApplyDiagramThemeCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.ApplyDiagramThemeCommand">
+  ApplyDiagramThemeCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelayCommand ApplyDiagramThemeCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_BackgroundSelectedIndex_" data-uid="H.Controls.Diagram.Extension.DiagramBase.BackgroundSelectedIndex*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_BackgroundSelectedIndex" data-uid="H.Controls.Diagram.Extension.DiagramBase.BackgroundSelectedIndex">
+  BackgroundSelectedIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BackgroundSelectedIndex { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ClearCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ClearCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ClearCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.ClearCommand">
+  ClearCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;清空&quot;, GroupName = &quot;操作&quot;, Order = 5, Description = &quot;点击此功能，删除所有节点、连线和端口&quot;)]
+public virtual RelayCommand ClearCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_DeleteCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.DeleteCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_DeleteCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.DeleteCommand">
+  DeleteCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;删除&quot;, GroupName = &quot;操作&quot;, Order = 4, Description = &quot;点击此功能，删除选中的节点、连线或端口&quot;)]
+public virtual RelayCommand DeleteCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_DeleteReferenceTemplateCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.DeleteReferenceTemplateCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_DeleteReferenceTemplateCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.DeleteReferenceTemplateCommand">
+  DeleteReferenceTemplateCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelayCommand DeleteReferenceTemplateCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_DiagramThemeGroups_" data-uid="H.Controls.Diagram.Extension.DiagramBase.DiagramThemeGroups*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_DiagramThemeGroups" data-uid="H.Controls.Diagram.Extension.DiagramBase.DiagramThemeGroups">
+  DiagramThemeGroups
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public ObservableCollection&lt;DiagramThemeGroup&gt; DiagramThemeGroups { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="H.Controls.Diagram.Extension.DiagramThemeGroup.html">DiagramThemeGroup</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Height_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Height*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Height" data-uid="H.Controls.Diagram.Extension.DiagramBase.Height">
+  Height
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;面板高度&quot;, GroupName = &quot;基础信息&quot;, Order = 0)]
+public double Height { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ItemsChangedCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ItemsChangedCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ItemsChangedCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.ItemsChangedCommand">
+  ItemsChangedCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelayCommand ItemsChangedCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Layout_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Layout*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Layout" data-uid="H.Controls.Diagram.Extension.DiagramBase.Layout">
+  Layout
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public ILayout Layout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Controls.Diagram.ILayout.html">ILayout</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Layouts_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Layouts*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Layouts" data-uid="H.Controls.Diagram.Extension.DiagramBase.Layouts">
+  Layouts
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Browsable(false)]
+public ObservableCollection&lt;ILayout&gt; Layouts { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="H.Controls.Diagram.ILayout.html">ILayout</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LinkDrawer_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LinkDrawer*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LinkDrawer" data-uid="H.Controls.Diagram.Extension.DiagramBase.LinkDrawer">
+  LinkDrawer
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>说明</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public ILinkDrawer LinkDrawer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Controls.Diagram.ILinkDrawer.html">ILinkDrawer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LinkDrawers_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LinkDrawers*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LinkDrawers" data-uid="H.Controls.Diagram.Extension.DiagramBase.LinkDrawers">
+  LinkDrawers
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Browsable(false)]
+public ObservableCollection&lt;ILinkDrawer&gt; LinkDrawers { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="H.Controls.Diagram.ILinkDrawer.html">ILinkDrawer</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LoadDefaultCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LoadDefaultCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LoadDefaultCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.LoadDefaultCommand">
+  LoadDefaultCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;默认样式&quot;, GroupName = &quot;操作&quot;, Order = 6, Description = &quot;点击此功能，恢复所有节点、连线和端口默认样式&quot;)]
+public RelayCommand LoadDefaultCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LocateCenterCallBack_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateCenterCallBack*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LocateCenterCallBack" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateCenterCallBack">
+  LocateCenterCallBack
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public Action&lt;Point&gt; LocateCenterCallBack { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.point">Point</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LocateCenterCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateCenterCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LocateCenterCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateCenterCommand">
+  LocateCenterCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;平移定位&quot;, GroupName = &quot;操作&quot;, Order = 5)]
+public virtual RelayCommand LocateCenterCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LocateRectCallBack_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateRectCallBack*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LocateRectCallBack" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateRectCallBack">
+  LocateRectCallBack
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public Action&lt;Rect&gt; LocateRectCallBack { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.rect">Rect</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Location_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Location*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Location" data-uid="H.Controls.Diagram.Extension.DiagramBase.Location">
+  Location
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point Location { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.point">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_NextCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.NextCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_NextCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.NextCommand">
+  NextCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Display(Name = &quot;下一个&quot;, GroupName = &quot;操作&quot;, Order = 5)]
+public virtual RelayCommand NextCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_NodeGroups_" data-uid="H.Controls.Diagram.Extension.DiagramBase.NodeGroups*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_NodeGroups" data-uid="H.Controls.Diagram.Extension.DiagramBase.NodeGroups">
+  NodeGroups
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>数据源</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public ObservableCollection&lt;NodeGroup&gt; NodeGroups { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="H.Controls.Diagram.Extension.NodeGroup.html">NodeGroup</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_NodeType_" data-uid="H.Controls.Diagram.Extension.DiagramBase.NodeType*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_NodeType" data-uid="H.Controls.Diagram.Extension.DiagramBase.NodeType">
+  NodeType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public Type NodeType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Nodes_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Nodes*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Nodes" data-uid="H.Controls.Diagram.Extension.DiagramBase.Nodes">
+  Nodes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>工具拖动数据源</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public ObservableCollection&lt;Node&gt; Nodes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="H.Controls.Diagram.Node.html">Node</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ProviewCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ProviewCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ProviewCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.ProviewCommand">
+  ProviewCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Display(Name = &quot;上一个&quot;, GroupName = &quot;操作&quot;, Order = 5)]
+public virtual RelayCommand ProviewCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ReferenceTemplateNodeDatas_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ReferenceTemplateNodeDatas*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ReferenceTemplateNodeDatas" data-uid="H.Controls.Diagram.Extension.DiagramBase.ReferenceTemplateNodeDatas">
+  ReferenceTemplateNodeDatas
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public ObservableCollection&lt;FlowableDiagramTemplateNodeData&gt; ReferenceTemplateNodeDatas { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="H.Controls.Diagram.Extension.FlowableDiagramTemplateNodeData.html">FlowableDiagramTemplateNodeData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Root_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Root*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Root" data-uid="H.Controls.Diagram.Extension.DiagramBase.Root">
+  Root
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public TreeNodeBase&lt;Part&gt; Root { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.TreeNodeBase-1.html">TreeNodeBase</a>&lt;<a class="xref" href="H.Controls.Diagram.Part.html">Part</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_SelectedPart_" data-uid="H.Controls.Diagram.Extension.DiagramBase.SelectedPart*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_SelectedPart" data-uid="H.Controls.Diagram.Extension.DiagramBase.SelectedPart">
+  SelectedPart
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public Part SelectedPart { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Controls.Diagram.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_SelectedPartChangedCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.SelectedPartChangedCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_SelectedPartChangedCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.SelectedPartChangedCommand">
+  SelectedPartChangedCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelayCommand SelectedPartChangedCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_SelectedTreeNodeChanged_" data-uid="H.Controls.Diagram.Extension.DiagramBase.SelectedTreeNodeChanged*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_SelectedTreeNodeChanged" data-uid="H.Controls.Diagram.Extension.DiagramBase.SelectedTreeNodeChanged">
+  SelectedTreeNodeChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelayCommand SelectedTreeNodeChanged { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_TypeName_" data-uid="H.Controls.Diagram.Extension.DiagramBase.TypeName*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_TypeName" data-uid="H.Controls.Diagram.Extension.DiagramBase.TypeName">
+  TypeName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TypeName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Vip_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Vip*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Vip" data-uid="H.Controls.Diagram.Extension.DiagramBase.Vip">
+  Vip
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Vip { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Width_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Width*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Width" data-uid="H.Controls.Diagram.Extension.DiagramBase.Width">
+  Width
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;面板宽度&quot;, GroupName = &quot;基础信息&quot;, Order = 0)]
+public double Width { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ZoomAllCommand_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ZoomAllCommand*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ZoomAllCommand" data-uid="H.Controls.Diagram.Extension.DiagramBase.ZoomAllCommand">
+  ZoomAllCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;缩放定位&quot;, GroupName = &quot;操作&quot;, Order = 5)]
+public virtual RelayCommand ZoomAllCommand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Aligment_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Aligment*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Aligment" data-uid="H.Controls.Diagram.Extension.DiagramBase.Aligment">
+  Aligment()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Aligment()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Clear_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Clear*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Clear" data-uid="H.Controls.Diagram.Extension.DiagramBase.Clear">
+  Clear()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_Clone_" data-uid="H.Controls.Diagram.Extension.DiagramBase.Clone*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_Clone" data-uid="H.Controls.Diagram.Extension.DiagramBase.Clone">
+  Clone()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>A new object that is a copy of this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_CreateDiagramThemes_" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateDiagramThemes*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_CreateDiagramThemes" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateDiagramThemes">
+  CreateDiagramThemes()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;DiagramThemeGroup&gt; CreateDiagramThemes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.Extension.DiagramThemeGroup.html">DiagramThemeGroup</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_CreateFromXml_" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateFromXml*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_CreateFromXml_System_String_System_Type_" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateFromXml(System.String,System.Type)">
+  CreateFromXml(string, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDiagram CreateFromXml(string xml, Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Controls.Diagram.Extension.IDiagram.html">IDiagram</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_CreateFromXml_" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateFromXml*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_CreateFromXml__1_System_String_" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateFromXml``1(System.String)">
+  CreateFromXml&lt;T&gt;(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T CreateFromXml&lt;T&gt;(string xml) where T : class, IDiagram</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_CreateLayousSource_" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateLayousSource*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_CreateLayousSource" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateLayousSource">
+  CreateLayousSource()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;ILayout&gt; CreateLayousSource()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.ILayout.html">ILayout</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_CreateLinkDrawerSource_" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateLinkDrawerSource*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_CreateLinkDrawerSource" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateLinkDrawerSource">
+  CreateLinkDrawerSource()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;ILinkDrawer&gt; CreateLinkDrawerSource()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.ILinkDrawer.html">ILinkDrawer</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_CreateNodeGroups_" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateNodeGroups*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_CreateNodeGroups" data-uid="H.Controls.Diagram.Extension.DiagramBase.CreateNodeGroups">
+  CreateNodeGroups()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;NodeGroup&gt; CreateNodeGroups()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.Extension.NodeGroup.html">NodeGroup</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_DeleteReferenceTemplate_" data-uid="H.Controls.Diagram.Extension.DiagramBase.DeleteReferenceTemplate*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_DeleteReferenceTemplate_H_Controls_Diagram_Extension_FlowableDiagramTemplateNodeData_" data-uid="H.Controls.Diagram.Extension.DiagramBase.DeleteReferenceTemplate(H.Controls.Diagram.Extension.FlowableDiagramTemplateNodeData)">
+  DeleteReferenceTemplate(FlowableDiagramTemplateNodeData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeleteReferenceTemplate(FlowableDiagramTemplateNodeData data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="H.Controls.Diagram.Extension.FlowableDiagramTemplateNodeData.html">FlowableDiagramTemplateNodeData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_FromXml_" data-uid="H.Controls.Diagram.Extension.DiagramBase.FromXml*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_FromXml_System_Xml_XmlElement_System_Xml_XmlDocument_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__" data-uid="H.Controls.Diagram.Extension.DiagramBase.FromXml(System.Xml.XmlElement,System.Xml.XmlDocument,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})">
+  FromXml(XmlElement, XmlDocument, Func&lt;PropertyInfo, object, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FromXml(XmlElement xmlEle, XmlDocument cnt, Func&lt;PropertyInfo, object, bool&gt; match = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xmlEle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
+    <dd></dd>
+    <dt><code>cnt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmldocument">XmlDocument</a></dt>
+    <dd></dd>
+    <dt><code>match</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo">PropertyInfo</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LoadNodes_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LoadNodes*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LoadNodes_System_Collections_Generic_IEnumerable_H_Controls_Diagram_INodeData__System_Collections_Generic_IEnumerable_H_Controls_Diagram_ILinkData__" data-uid="H.Controls.Diagram.Extension.DiagramBase.LoadNodes(System.Collections.Generic.IEnumerable{H.Controls.Diagram.INodeData},System.Collections.Generic.IEnumerable{H.Controls.Diagram.ILinkData})">
+  LoadNodes(IEnumerable&lt;INodeData&gt;, IEnumerable&lt;ILinkData&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;Node&gt; LoadNodes(IEnumerable&lt;INodeData&gt; nodeDatas, IEnumerable&lt;ILinkData&gt; linkDatas)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nodeDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.INodeData.html">INodeData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>linkDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.ILinkData.html">ILinkData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.Node.html">Node</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LocateCenter_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateCenter*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LocateCenter" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateCenter">
+  LocateCenter()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LocateCenter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LocateCenter_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateCenter*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LocateCenter_H_Controls_Diagram_Part_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateCenter(H.Controls.Diagram.Part)">
+  LocateCenter(Part)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LocateCenter(Part part)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>part</code> <a class="xref" href="H.Controls.Diagram.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_LocateRect_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateRect*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_LocateRect_H_Controls_Diagram_Part_" data-uid="H.Controls.Diagram.Extension.DiagramBase.LocateRect(H.Controls.Diagram.Part)">
+  LocateRect(Part)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LocateRect(Part part)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>part</code> <a class="xref" href="H.Controls.Diagram.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_RefreshRoot_" data-uid="H.Controls.Diagram.Extension.DiagramBase.RefreshRoot*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_RefreshRoot" data-uid="H.Controls.Diagram.Extension.DiagramBase.RefreshRoot">
+  RefreshRoot()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RefreshRoot()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_SaveDatas_" data-uid="H.Controls.Diagram.Extension.DiagramBase.SaveDatas*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_SaveDatas_System_Collections_Generic_IEnumerable_H_Controls_Diagram_Node__" data-uid="H.Controls.Diagram.Extension.DiagramBase.SaveDatas(System.Collections.Generic.IEnumerable{H.Controls.Diagram.Node})">
+  SaveDatas(IEnumerable&lt;Node&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Tuple&lt;IEnumerable&lt;INodeData&gt;, IEnumerable&lt;ILinkData&gt;&gt; SaveDatas(IEnumerable&lt;Node&gt; nodes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nodes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.Node.html">Node</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.INodeData.html">INodeData</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.ILinkData.html">ILinkData</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ToXml_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ToXml*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ToXml_System_Xml_XmlElement_System_Xml_XmlDocument_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__" data-uid="H.Controls.Diagram.Extension.DiagramBase.ToXml(System.Xml.XmlElement,System.Xml.XmlDocument,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})">
+  ToXml(XmlElement, XmlDocument, Func&lt;PropertyInfo, object, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToXml(XmlElement xmlEle, XmlDocument cnt, Func&lt;PropertyInfo, object, bool&gt; match = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xmlEle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
+    <dd></dd>
+    <dt><code>cnt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmldocument">XmlDocument</a></dt>
+    <dd></dd>
+    <dt><code>match</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo">PropertyInfo</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ToXmlString_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ToXmlString*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ToXmlString" data-uid="H.Controls.Diagram.Extension.DiagramBase.ToXmlString">
+  ToXmlString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToXmlString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Extension_DiagramBase_ZoomAll_" data-uid="H.Controls.Diagram.Extension.DiagramBase.ZoomAll*"></a>
+
+  <h3 id="H_Controls_Diagram_Extension_DiagramBase_ZoomAll" data-uid="H.Controls.Diagram.Extension.DiagramBase.ZoomAll">
+  ZoomAll()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ZoomAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

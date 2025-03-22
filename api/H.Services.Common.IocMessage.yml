@@ -1,0 +1,950 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Services.Common.IocMessage
+  commentId: T:H.Services.Common.IocMessage
+  id: IocMessage
+  parent: H.Services.Common
+  children:
+  - H.Services.Common.IocMessage.Adorner
+  - H.Services.Common.IocMessage.Dialog
+  - H.Services.Common.IocMessage.Form
+  - H.Services.Common.IocMessage.Notify
+  - H.Services.Common.IocMessage.ShowDialog(System.Object,System.Action{H.Services.Common.IDialog})
+  - H.Services.Common.IocMessage.ShowDialogMessage(System.String,System.String,H.Services.Common.DialogButton)
+  - H.Services.Common.IocMessage.ShowSnackMessage(System.String)
+  - H.Services.Common.IocMessage.ShowWindowMessage(System.String,System.String,H.Services.Common.DialogButton)
+  - H.Services.Common.IocMessage.Snack
+  - H.Services.Common.IocMessage.SystemNotify
+  - H.Services.Common.IocMessage.TaskBar
+  - H.Services.Common.IocMessage.Window
+  langs:
+  - csharp
+  - vb
+  name: IocMessage
+  nameWithType: IocMessage
+  fullName: H.Services.Common.IocMessage
+  type: Class
+  source:
+    id: IocMessage
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 4
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static class IocMessage
+    content.vb: Public Module IocMessage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: H.Services.Common.IocMessage.Adorner
+  commentId: P:H.Services.Common.IocMessage.Adorner
+  id: Adorner
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: Adorner
+  nameWithType: IocMessage.Adorner
+  fullName: H.Services.Common.IocMessage.Adorner
+  type: Property
+  source:
+    id: Adorner
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 6
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static IAdornerDialogMessageService Adorner { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.IAdornerDialogMessageService
+    content.vb: Public Shared ReadOnly Property Adorner As IAdornerDialogMessageService
+  overload: H.Services.Common.IocMessage.Adorner*
+- uid: H.Services.Common.IocMessage.Window
+  commentId: P:H.Services.Common.IocMessage.Window
+  id: Window
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: Window
+  nameWithType: IocMessage.Window
+  fullName: H.Services.Common.IocMessage.Window
+  type: Property
+  source:
+    id: Window
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 7
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static IWindowDialogMessageService Window { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.IWindowDialogMessageService
+    content.vb: Public Shared ReadOnly Property Window As IWindowDialogMessageService
+  overload: H.Services.Common.IocMessage.Window*
+- uid: H.Services.Common.IocMessage.Dialog
+  commentId: P:H.Services.Common.IocMessage.Dialog
+  id: Dialog
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: Dialog
+  nameWithType: IocMessage.Dialog
+  fullName: H.Services.Common.IocMessage.Dialog
+  type: Property
+  source:
+    id: Dialog
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 8
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static IDialogMessageService Dialog { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.IDialogMessageService
+    content.vb: Public Shared ReadOnly Property Dialog As IDialogMessageService
+  overload: H.Services.Common.IocMessage.Dialog*
+- uid: H.Services.Common.IocMessage.Snack
+  commentId: P:H.Services.Common.IocMessage.Snack
+  id: Snack
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: Snack
+  nameWithType: IocMessage.Snack
+  fullName: H.Services.Common.IocMessage.Snack
+  type: Property
+  source:
+    id: Snack
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 9
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static ISnackMessageService Snack { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.ISnackMessageService
+    content.vb: Public Shared ReadOnly Property Snack As ISnackMessageService
+  overload: H.Services.Common.IocMessage.Snack*
+- uid: H.Services.Common.IocMessage.TaskBar
+  commentId: P:H.Services.Common.IocMessage.TaskBar
+  id: TaskBar
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: TaskBar
+  nameWithType: IocMessage.TaskBar
+  fullName: H.Services.Common.IocMessage.TaskBar
+  type: Property
+  source:
+    id: TaskBar
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 10
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static ITaskBarMessage TaskBar { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.ITaskBarMessage
+    content.vb: Public Shared ReadOnly Property TaskBar As ITaskBarMessage
+  overload: H.Services.Common.IocMessage.TaskBar*
+- uid: H.Services.Common.IocMessage.SystemNotify
+  commentId: P:H.Services.Common.IocMessage.SystemNotify
+  id: SystemNotify
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: SystemNotify
+  nameWithType: IocMessage.SystemNotify
+  fullName: H.Services.Common.IocMessage.SystemNotify
+  type: Property
+  source:
+    id: SystemNotify
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 11
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static ISystemNotifyMessage SystemNotify { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.ISystemNotifyMessage
+    content.vb: Public Shared ReadOnly Property SystemNotify As ISystemNotifyMessage
+  overload: H.Services.Common.IocMessage.SystemNotify*
+- uid: H.Services.Common.IocMessage.Notify
+  commentId: P:H.Services.Common.IocMessage.Notify
+  id: Notify
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: Notify
+  nameWithType: IocMessage.Notify
+  fullName: H.Services.Common.IocMessage.Notify
+  type: Property
+  source:
+    id: Notify
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 12
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static INoticeMessageService Notify { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.INoticeMessageService
+    content.vb: Public Shared ReadOnly Property Notify As INoticeMessageService
+  overload: H.Services.Common.IocMessage.Notify*
+- uid: H.Services.Common.IocMessage.Form
+  commentId: P:H.Services.Common.IocMessage.Form
+  id: Form
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: Form
+  nameWithType: IocMessage.Form
+  fullName: H.Services.Common.IocMessage.Form
+  type: Property
+  source:
+    id: Form
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 13
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static IFormMessageService Form { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.IFormMessageService
+    content.vb: Public Shared ReadOnly Property Form As IFormMessageService
+  overload: H.Services.Common.IocMessage.Form*
+- uid: H.Services.Common.IocMessage.ShowDialogMessage(System.String,System.String,H.Services.Common.DialogButton)
+  commentId: M:H.Services.Common.IocMessage.ShowDialogMessage(System.String,System.String,H.Services.Common.DialogButton)
+  id: ShowDialogMessage(System.String,System.String,H.Services.Common.DialogButton)
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: ShowDialogMessage(string, string, DialogButton)
+  nameWithType: IocMessage.ShowDialogMessage(string, string, DialogButton)
+  fullName: H.Services.Common.IocMessage.ShowDialogMessage(string, string, H.Services.Common.DialogButton)
+  type: Method
+  source:
+    id: ShowDialogMessage
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 15
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowDialogMessage(string message, string title = "提示", DialogButton dialogButton = DialogButton.Sumit)
+    parameters:
+    - id: message
+      type: System.String
+    - id: title
+      type: System.String
+    - id: dialogButton
+      type: H.Services.Common.DialogButton
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowDialogMessage(message As String, title As String = "提示", dialogButton As DialogButton = DialogButton.Sumit) As Task(Of Boolean?)
+  overload: H.Services.Common.IocMessage.ShowDialogMessage*
+  nameWithType.vb: IocMessage.ShowDialogMessage(String, String, DialogButton)
+  fullName.vb: H.Services.Common.IocMessage.ShowDialogMessage(String, String, H.Services.Common.DialogButton)
+  name.vb: ShowDialogMessage(String, String, DialogButton)
+- uid: H.Services.Common.IocMessage.ShowDialog(System.Object,System.Action{H.Services.Common.IDialog})
+  commentId: M:H.Services.Common.IocMessage.ShowDialog(System.Object,System.Action{H.Services.Common.IDialog})
+  id: ShowDialog(System.Object,System.Action{H.Services.Common.IDialog})
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: ShowDialog(object, Action<IDialog>)
+  nameWithType: IocMessage.ShowDialog(object, Action<IDialog>)
+  fullName: H.Services.Common.IocMessage.ShowDialog(object, System.Action<H.Services.Common.IDialog>)
+  type: Method
+  source:
+    id: ShowDialog
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 52
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowDialog(object presenter, Action<IDialog> builder = null)
+    parameters:
+    - id: presenter
+      type: System.Object
+    - id: builder
+      type: System.Action{H.Services.Common.IDialog}
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowDialog(presenter As Object, builder As Action(Of IDialog) = Nothing) As Task(Of Boolean?)
+  overload: H.Services.Common.IocMessage.ShowDialog*
+  nameWithType.vb: IocMessage.ShowDialog(Object, Action(Of IDialog))
+  fullName.vb: H.Services.Common.IocMessage.ShowDialog(Object, System.Action(Of H.Services.Common.IDialog))
+  name.vb: ShowDialog(Object, Action(Of IDialog))
+- uid: H.Services.Common.IocMessage.ShowWindowMessage(System.String,System.String,H.Services.Common.DialogButton)
+  commentId: M:H.Services.Common.IocMessage.ShowWindowMessage(System.String,System.String,H.Services.Common.DialogButton)
+  id: ShowWindowMessage(System.String,System.String,H.Services.Common.DialogButton)
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: ShowWindowMessage(string, string, DialogButton)
+  nameWithType: IocMessage.ShowWindowMessage(string, string, DialogButton)
+  fullName: H.Services.Common.IocMessage.ShowWindowMessage(string, string, H.Services.Common.DialogButton)
+  type: Method
+  source:
+    id: ShowWindowMessage
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 71
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowWindowMessage(string message, string title = "提示", DialogButton dialogButton = DialogButton.Sumit)
+    parameters:
+    - id: message
+      type: System.String
+    - id: title
+      type: System.String
+    - id: dialogButton
+      type: H.Services.Common.DialogButton
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowWindowMessage(message As String, title As String = "提示", dialogButton As DialogButton = DialogButton.Sumit) As Task(Of Boolean?)
+  overload: H.Services.Common.IocMessage.ShowWindowMessage*
+  nameWithType.vb: IocMessage.ShowWindowMessage(String, String, DialogButton)
+  fullName.vb: H.Services.Common.IocMessage.ShowWindowMessage(String, String, H.Services.Common.DialogButton)
+  name.vb: ShowWindowMessage(String, String, DialogButton)
+- uid: H.Services.Common.IocMessage.ShowSnackMessage(System.String)
+  commentId: M:H.Services.Common.IocMessage.ShowSnackMessage(System.String)
+  id: ShowSnackMessage(System.String)
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: ShowSnackMessage(string)
+  nameWithType: IocMessage.ShowSnackMessage(string)
+  fullName: H.Services.Common.IocMessage.ShowSnackMessage(string)
+  type: Method
+  source:
+    id: ShowSnackMessage
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 96
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static void ShowSnackMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub ShowSnackMessage(message As String)
+  overload: H.Services.Common.IocMessage.ShowSnackMessage*
+  nameWithType.vb: IocMessage.ShowSnackMessage(String)
+  fullName.vb: H.Services.Common.IocMessage.ShowSnackMessage(String)
+  name.vb: ShowSnackMessage(String)
+references:
+- uid: H.Services.Common
+  commentId: N:H.Services.Common
+  href: H.html
+  name: H.Services.Common
+  nameWithType: H.Services.Common
+  fullName: H.Services.Common
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Services
+    name: Services
+    href: H.Services.html
+  - name: .
+  - uid: H.Services.Common
+    name: Common
+    href: H.Services.Common.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Services
+    name: Services
+    href: H.Services.html
+  - name: .
+  - uid: H.Services.Common
+    name: Common
+    href: H.Services.Common.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: H.Services.Common.IocMessage.Adorner*
+  commentId: Overload:H.Services.Common.IocMessage.Adorner
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_Adorner
+  name: Adorner
+  nameWithType: IocMessage.Adorner
+  fullName: H.Services.Common.IocMessage.Adorner
+- uid: H.Services.Common.IAdornerDialogMessageService
+  commentId: T:H.Services.Common.IAdornerDialogMessageService
+  parent: H.Services.Common
+  href: H.Services.Common.IAdornerDialogMessageService.html
+  name: IAdornerDialogMessageService
+  nameWithType: IAdornerDialogMessageService
+  fullName: H.Services.Common.IAdornerDialogMessageService
+- uid: H.Services.Common.IocMessage.Window*
+  commentId: Overload:H.Services.Common.IocMessage.Window
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_Window
+  name: Window
+  nameWithType: IocMessage.Window
+  fullName: H.Services.Common.IocMessage.Window
+- uid: H.Services.Common.IWindowDialogMessageService
+  commentId: T:H.Services.Common.IWindowDialogMessageService
+  parent: H.Services.Common
+  href: H.Services.Common.IWindowDialogMessageService.html
+  name: IWindowDialogMessageService
+  nameWithType: IWindowDialogMessageService
+  fullName: H.Services.Common.IWindowDialogMessageService
+- uid: H.Services.Common.IocMessage.Dialog*
+  commentId: Overload:H.Services.Common.IocMessage.Dialog
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_Dialog
+  name: Dialog
+  nameWithType: IocMessage.Dialog
+  fullName: H.Services.Common.IocMessage.Dialog
+- uid: H.Services.Common.IDialogMessageService
+  commentId: T:H.Services.Common.IDialogMessageService
+  parent: H.Services.Common
+  href: H.Services.Common.IDialogMessageService.html
+  name: IDialogMessageService
+  nameWithType: IDialogMessageService
+  fullName: H.Services.Common.IDialogMessageService
+- uid: H.Services.Common.IocMessage.Snack*
+  commentId: Overload:H.Services.Common.IocMessage.Snack
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_Snack
+  name: Snack
+  nameWithType: IocMessage.Snack
+  fullName: H.Services.Common.IocMessage.Snack
+- uid: H.Services.Common.ISnackMessageService
+  commentId: T:H.Services.Common.ISnackMessageService
+  parent: H.Services.Common
+  href: H.Services.Common.ISnackMessageService.html
+  name: ISnackMessageService
+  nameWithType: ISnackMessageService
+  fullName: H.Services.Common.ISnackMessageService
+- uid: H.Services.Common.IocMessage.TaskBar*
+  commentId: Overload:H.Services.Common.IocMessage.TaskBar
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_TaskBar
+  name: TaskBar
+  nameWithType: IocMessage.TaskBar
+  fullName: H.Services.Common.IocMessage.TaskBar
+- uid: H.Services.Common.ITaskBarMessage
+  commentId: T:H.Services.Common.ITaskBarMessage
+  parent: H.Services.Common
+  href: H.Services.Common.ITaskBarMessage.html
+  name: ITaskBarMessage
+  nameWithType: ITaskBarMessage
+  fullName: H.Services.Common.ITaskBarMessage
+- uid: H.Services.Common.IocMessage.SystemNotify*
+  commentId: Overload:H.Services.Common.IocMessage.SystemNotify
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_SystemNotify
+  name: SystemNotify
+  nameWithType: IocMessage.SystemNotify
+  fullName: H.Services.Common.IocMessage.SystemNotify
+- uid: H.Services.Common.ISystemNotifyMessage
+  commentId: T:H.Services.Common.ISystemNotifyMessage
+  parent: H.Services.Common
+  href: H.Services.Common.ISystemNotifyMessage.html
+  name: ISystemNotifyMessage
+  nameWithType: ISystemNotifyMessage
+  fullName: H.Services.Common.ISystemNotifyMessage
+- uid: H.Services.Common.IocMessage.Notify*
+  commentId: Overload:H.Services.Common.IocMessage.Notify
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_Notify
+  name: Notify
+  nameWithType: IocMessage.Notify
+  fullName: H.Services.Common.IocMessage.Notify
+- uid: H.Services.Common.INoticeMessageService
+  commentId: T:H.Services.Common.INoticeMessageService
+  parent: H.Services.Common
+  href: H.Services.Common.INoticeMessageService.html
+  name: INoticeMessageService
+  nameWithType: INoticeMessageService
+  fullName: H.Services.Common.INoticeMessageService
+- uid: H.Services.Common.IocMessage.Form*
+  commentId: Overload:H.Services.Common.IocMessage.Form
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_Form
+  name: Form
+  nameWithType: IocMessage.Form
+  fullName: H.Services.Common.IocMessage.Form
+- uid: H.Services.Common.IFormMessageService
+  commentId: T:H.Services.Common.IFormMessageService
+  parent: H.Services.Common
+  href: H.Services.Common.IFormMessageService.html
+  name: IFormMessageService
+  nameWithType: IFormMessageService
+  fullName: H.Services.Common.IFormMessageService
+- uid: H.Services.Common.IocMessage.ShowDialogMessage*
+  commentId: Overload:H.Services.Common.IocMessage.ShowDialogMessage
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_ShowDialogMessage_System_String_System_String_H_Services_Common_DialogButton_
+  name: ShowDialogMessage
+  nameWithType: IocMessage.ShowDialogMessage
+  fullName: H.Services.Common.IocMessage.ShowDialogMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: H.Services.Common.DialogButton
+  commentId: T:H.Services.Common.DialogButton
+  parent: H.Services.Common
+  href: H.Services.Common.DialogButton.html
+  name: DialogButton
+  nameWithType: DialogButton
+  fullName: H.Services.Common.DialogButton
+- uid: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+  commentId: T:System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool?>
+  nameWithType: Task<bool?>
+  fullName: System.Threading.Tasks.Task<bool?>
+  nameWithType.vb: Task(Of Boolean?)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean?)
+  name.vb: Task(Of Boolean?)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: H.Services.Common.IocMessage.ShowDialog*
+  commentId: Overload:H.Services.Common.IocMessage.ShowDialog
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_ShowDialog_System_Object_System_Action_H_Services_Common_IDialog__
+  name: ShowDialog
+  nameWithType: IocMessage.ShowDialog
+  fullName: H.Services.Common.IocMessage.ShowDialog
+- uid: System.Action{H.Services.Common.IDialog}
+  commentId: T:System.Action{H.Services.Common.IDialog}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<IDialog>
+  nameWithType: Action<IDialog>
+  fullName: System.Action<H.Services.Common.IDialog>
+  nameWithType.vb: Action(Of IDialog)
+  fullName.vb: System.Action(Of H.Services.Common.IDialog)
+  name.vb: Action(Of IDialog)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Services.Common.IocMessage.ShowWindowMessage*
+  commentId: Overload:H.Services.Common.IocMessage.ShowWindowMessage
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_ShowWindowMessage_System_String_System_String_H_Services_Common_DialogButton_
+  name: ShowWindowMessage
+  nameWithType: IocMessage.ShowWindowMessage
+  fullName: H.Services.Common.IocMessage.ShowWindowMessage
+- uid: H.Services.Common.IocMessage.ShowSnackMessage*
+  commentId: Overload:H.Services.Common.IocMessage.ShowSnackMessage
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_ShowSnackMessage_System_String_
+  name: ShowSnackMessage
+  nameWithType: IocMessage.ShowSnackMessage
+  fullName: H.Services.Common.IocMessage.ShowSnackMessage

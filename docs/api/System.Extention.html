@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Extention | WPF-Control </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Extention | WPF-Control ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="WPF-Control">
+            WPF-Control
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="System.Extention">
+
+
+
+  <h1 id="System_Extention" data-uid="System.Extention" class="text-break">
+Class Extention  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="System.html">System</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>H.Modules.About.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Extention</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Extention</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="System_Extention_AddAbout_" data-uid="System.Extention.AddAbout*"></a>
+
+  <h3 id="System_Extention_AddAbout_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_About_IAboutViewPresenterOption__" data-uid="System.Extention.AddAbout(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.About.IAboutViewPresenterOption})">
+  AddAbout(IServiceCollection, Action&lt;IAboutViewPresenterOption&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddAbout(this IServiceCollection service, Action&lt;IAboutViewPresenterOption&gt; action = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.About.IAboutViewPresenterOption.html">IAboutViewPresenterOption</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddAdornerDialogMessage_" data-uid="System.Extention.AddAdornerDialogMessage*"></a>
+
+  <h3 id="System_Extention_AddAdornerDialogMessage_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddAdornerDialogMessage(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddAdornerDialogMessage(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddAdornerDialogMessage(this IServiceCollection services)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddAuthorityViewPresenter_" data-uid="System.Extention.AddAuthorityViewPresenter*"></a>
+
+  <h3 id="System_Extention_AddAuthorityViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddAuthorityViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddAuthorityViewPresenter(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddAuthorityViewPresenter(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddAutoUpgrade_" data-uid="System.Extention.AddAutoUpgrade*"></a>
+
+  <h3 id="System_Extention_AddAutoUpgrade_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Upgrade_UpgradeOptions__" data-uid="System.Extention.AddAutoUpgrade(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Upgrade.UpgradeOptions})">
+  AddAutoUpgrade(IServiceCollection, Action&lt;UpgradeOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddAutoUpgrade(this IServiceCollection services, Action&lt;UpgradeOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Upgrade.UpgradeOptions.html">UpgradeOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddDESCryptService_" data-uid="System.Extention.AddDESCryptService*"></a>
+
+  <h3 id="System_Extention_AddDESCryptService_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddDESCryptService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddDESCryptService(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddDESCryptService(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddDiagram_" data-uid="System.Extention.AddDiagram*"></a>
+
+  <h3 id="System_Extention_AddDiagram_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddDiagram(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddDiagram(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddDiagram(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddFFMpeg_" data-uid="System.Extention.AddFFMpeg*"></a>
+
+  <h3 id="System_Extention_AddFFMpeg_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Extensions_FFMpeg_FFMpegOption__" data-uid="System.Extention.AddFFMpeg(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.FFMpeg.FFMpegOption})">
+  AddFFMpeg(IServiceCollection, Action&lt;FFMpegOption&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddFFMpeg(this IServiceCollection services, Action&lt;FFMpegOption&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.FFMpeg.FFMpegOption.html">FFMpegOption</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddFormMessageService_" data-uid="System.Extention.AddFormMessageService*"></a>
+
+  <h3 id="System_Extention_AddFormMessageService_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddFormMessageService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddFormMessageService(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddFormMessageService(this IServiceCollection services)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddGuideService_" data-uid="System.Extention.AddGuideService*"></a>
+
+  <h3 id="System_Extention_AddGuideService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Guide_GuideOptions__" data-uid="System.Extention.AddGuideService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Guide.GuideOptions})">
+  AddGuideService(IServiceCollection, Action&lt;GuideOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddGuideService(this IServiceCollection services, Action&lt;GuideOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Guide.GuideOptions.html">GuideOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddLog4net_" data-uid="System.Extention.AddLog4net*"></a>
+
+  <h3 id="System_Extention_AddLog4net_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Extensions_Revertible_Log4netOptions__" data-uid="System.Extention.AddLog4net(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.Log4netOptions})">
+  AddLog4net(IServiceCollection, Action&lt;Log4netOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddLog4net(this IServiceCollection services, Action&lt;Log4netOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.Revertible.Log4netOptions.html">Log4netOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddLoginService_" data-uid="System.Extention.AddLoginService*"></a>
+
+  <h3 id="System_Extention_AddLoginService_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddLoginService(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddLoginService(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddMail_" data-uid="System.Extention.AddMail*"></a>
+
+  <h3 id="System_Extention_AddMail_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Extensions_Mail_SmtpSendOptions__" data-uid="System.Extention.AddMail(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Mail.SmtpSendOptions})">
+  AddMail(IServiceCollection, Action&lt;SmtpSendOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddMail(this IServiceCollection services, Action&lt;SmtpSendOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.Mail.SmtpSendOptions.html">SmtpSendOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddNoticeMessage_" data-uid="System.Extention.AddNoticeMessage*"></a>
+
+  <h3 id="System_Extention_AddNoticeMessage_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddNoticeMessage(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddNoticeMessage(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddNoticeMessage(this IServiceCollection services)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddNpoiService_" data-uid="System.Extention.AddNpoiService*"></a>
+
+  <h3 id="System_Extention_AddNpoiService_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddNpoiService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddNpoiService(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddNpoiService(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddOperationService_" data-uid="System.Extention.AddOperationService*"></a>
+
+  <h3 id="System_Extention_AddOperationService_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddOperationService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddOperationService(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddOperationService(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddOperationViewPresenter_" data-uid="System.Extention.AddOperationViewPresenter*"></a>
+
+  <h3 id="System_Extention_AddOperationViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddOperationViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddOperationViewPresenter(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddOperationViewPresenter(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddProject_" data-uid="System.Extention.AddProject*"></a>
+
+  <h3 id="System_Extention_AddProject_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_ProjectOptions__" data-uid="System.Extention.AddProject(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ProjectOptions})">
+  AddProject(IServiceCollection, Action&lt;ProjectOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddProject(this IServiceCollection services, Action&lt;ProjectOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.ProjectOptions.html">ProjectOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddProject_" data-uid="System.Extention.AddProject*"></a>
+
+  <h3 id="System_Extention_AddProject__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_ProjectOptions__" data-uid="System.Extention.AddProject``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ProjectOptions})">
+  AddProject&lt;T&gt;(IServiceCollection, Action&lt;ProjectOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddProject&lt;T&gt;(this IServiceCollection services, Action&lt;ProjectOptions&gt; setupAction = null) where T : class, IProjectService</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.ProjectOptions.html">ProjectOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddRegisterService_" data-uid="System.Extention.AddRegisterService*"></a>
+
+  <h3 id="System_Extention_AddRegisterService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Identity_IdentifyOptions__" data-uid="System.Extention.AddRegisterService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Identity.IdentifyOptions})">
+  AddRegisterService(IServiceCollection, Action&lt;IdentifyOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddRegisterService(this IServiceCollection services, Action&lt;IdentifyOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Identity.IdentifyOptions.html">IdentifyOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddRoleViewPresenter_" data-uid="System.Extention.AddRoleViewPresenter*"></a>
+
+  <h3 id="System_Extention_AddRoleViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddRoleViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddRoleViewPresenter(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddRoleViewPresenter(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddSnackMessage_" data-uid="System.Extention.AddSnackMessage*"></a>
+
+  <h3 id="System_Extention_AddSnackMessage_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddSnackMessage(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddSnackMessage(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddSnackMessage(this IServiceCollection services)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddTorrent_" data-uid="System.Extention.AddTorrent*"></a>
+
+  <h3 id="System_Extention_AddTorrent_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddTorrent(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddTorrent(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddTorrent(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddTypeLicense_" data-uid="System.Extention.AddTypeLicense*"></a>
+
+  <h3 id="System_Extention_AddTypeLicense_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Extensions_TypeLicense_TypeLicenseOptions__" data-uid="System.Extention.AddTypeLicense(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.TypeLicense.TypeLicenseOptions})">
+  AddTypeLicense(IServiceCollection, Action&lt;TypeLicenseOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTypeLicense(this IServiceCollection services, Action&lt;TypeLicenseOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.TypeLicense.TypeLicenseOptions.html">TypeLicenseOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddUserViewPresenter_" data-uid="System.Extention.AddUserViewPresenter*"></a>
+
+  <h3 id="System_Extention_AddUserViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddUserViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddUserViewPresenter(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddUserViewPresenter(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddWindowDialogMessage_" data-uid="System.Extention.AddWindowDialogMessage*"></a>
+
+  <h3 id="System_Extention_AddWindowDialogMessage_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddWindowDialogMessage(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddWindowDialogMessage(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddWindowDialogMessage(this IServiceCollection services)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddWindowMessage_" data-uid="System.Extention.AddWindowMessage*"></a>
+
+  <h3 id="System_Extention_AddWindowMessage_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddWindowMessage(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddWindowMessage(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddWindowMessage(this IServiceCollection services)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_AddXmlMetaSettingService_" data-uid="System.Extention.AddXmlMetaSettingService*"></a>
+
+  <h3 id="System_Extention_AddXmlMetaSettingService_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="System.Extention.AddXmlMetaSettingService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddXmlMetaSettingService(IServiceCollection)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>注册</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddXmlMetaSettingService(this IServiceCollection service)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_BuildIdentifySeed_" data-uid="System.Extention.BuildIdentifySeed*"></a>
+
+  <h3 id="System_Extention_BuildIdentifySeed_Microsoft_EntityFrameworkCore_ModelBuilder_" data-uid="System.Extention.BuildIdentifySeed(Microsoft.EntityFrameworkCore.ModelBuilder)">
+  BuildIdentifySeed(ModelBuilder)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void BuildIdentifySeed(this ModelBuilder modelBuilder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>modelBuilder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder">ModelBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseAbout_" data-uid="System.Extention.UseAbout*"></a>
+
+  <h3 id="System_Extention_UseAbout_System_IApplicationBuilder_System_Action_H_Modules_About_IAboutViewPresenterOption__" data-uid="System.Extention.UseAbout(System.IApplicationBuilder,System.Action{H.Modules.About.IAboutViewPresenterOption})">
+  UseAbout(IApplicationBuilder, Action&lt;IAboutViewPresenterOption&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>配置</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseAbout(this IApplicationBuilder service, Action&lt;IAboutViewPresenterOption&gt; action = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.About.IAboutViewPresenterOption.html">IAboutViewPresenterOption</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseAddLog4netSetting_" data-uid="System.Extention.UseAddLog4netSetting*"></a>
+
+  <h3 id="System_Extention_UseAddLog4netSetting_System_IApplicationBuilder_System_Action_H_Extensions_Revertible_Log4netOptions__" data-uid="System.Extention.UseAddLog4netSetting(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.Log4netOptions})">
+  UseAddLog4netSetting(IApplicationBuilder, Action&lt;Log4netOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseAddLog4netSetting(this IApplicationBuilder builder, Action&lt;Log4netOptions&gt; option = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.Revertible.Log4netOptions.html">Log4netOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseAdorner_" data-uid="System.Extention.UseAdorner*"></a>
+
+  <h3 id="System_Extention_UseAdorner_System_IApplicationBuilder_System_Action_H_Controls_Adorner_AdornerSetting__" data-uid="System.Extention.UseAdorner(System.IApplicationBuilder,System.Action{H.Controls.Adorner.AdornerSetting})">
+  UseAdorner(IApplicationBuilder, Action&lt;AdornerSetting&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>配置</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseAdorner(this IApplicationBuilder service, Action&lt;AdornerSetting&gt; action = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.Adorner.AdornerSetting.html">AdornerSetting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseApp_" data-uid="System.Extention.UseApp*"></a>
+
+  <h3 id="System_Extention_UseApp_System_IApplicationBuilder_System_Action_H_Controls_Diagram_Extension_AppSetting__" data-uid="System.Extention.UseApp(System.IApplicationBuilder,System.Action{H.Controls.Diagram.Extension.AppSetting})">
+  UseApp(IApplicationBuilder, Action&lt;AppSetting&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>配置</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseApp(this IApplicationBuilder service, Action&lt;AppSetting&gt; action = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.Diagram.Extension.AppSetting.html">AppSetting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseDiagram_" data-uid="System.Extention.UseDiagram*"></a>
+
+  <h3 id="System_Extention_UseDiagram_System_IApplicationBuilder_System_Action_H_Controls_Diagram_Extension_DiagramSetting__" data-uid="System.Extention.UseDiagram(System.IApplicationBuilder,System.Action{H.Controls.Diagram.Extension.DiagramSetting})">
+  UseDiagram(IApplicationBuilder, Action&lt;DiagramSetting&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>配置</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseDiagram(this IApplicationBuilder service, Action&lt;DiagramSetting&gt; action = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.Diagram.Extension.DiagramSetting.html">DiagramSetting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseFFMpeg_" data-uid="System.Extention.UseFFMpeg*"></a>
+
+  <h3 id="System_Extention_UseFFMpeg_System_IApplicationBuilder_System_Action_H_Extensions_FFMpeg_FFMpegOption__" data-uid="System.Extention.UseFFMpeg(System.IApplicationBuilder,System.Action{H.Extensions.FFMpeg.FFMpegOption})">
+  UseFFMpeg(IApplicationBuilder, Action&lt;FFMpegOption&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseFFMpeg(this IApplicationBuilder builder, Action&lt;FFMpegOption&gt; action = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.FFMpeg.FFMpegOption.html">FFMpegOption</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseIdentify_" data-uid="System.Extention.UseIdentify*"></a>
+
+  <h3 id="System_Extention_UseIdentify_System_IApplicationBuilder_System_Action_H_Modules_Identity_IdentifyOptions__" data-uid="System.Extention.UseIdentify(System.IApplicationBuilder,System.Action{H.Modules.Identity.IdentifyOptions})">
+  UseIdentify(IApplicationBuilder, Action&lt;IdentifyOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseIdentify(this IApplicationBuilder builder, Action&lt;IdentifyOptions&gt; option = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Identity.IdentifyOptions.html">IdentifyOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseMail_" data-uid="System.Extention.UseMail*"></a>
+
+  <h3 id="System_Extention_UseMail_System_IApplicationBuilder_System_Action_H_Extensions_Mail_SmtpSendOptions__" data-uid="System.Extention.UseMail(System.IApplicationBuilder,System.Action{H.Extensions.Mail.SmtpSendOptions})">
+  UseMail(IApplicationBuilder, Action&lt;SmtpSendOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseMail(this IApplicationBuilder builder, Action&lt;SmtpSendOptions&gt; option = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.Mail.SmtpSendOptions.html">SmtpSendOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseProject_" data-uid="System.Extention.UseProject*"></a>
+
+  <h3 id="System_Extention_UseProject_System_IApplicationBuilder_System_Action_H_Modules_Login_ProjectOptions__" data-uid="System.Extention.UseProject(System.IApplicationBuilder,System.Action{H.Modules.Login.ProjectOptions})">
+  UseProject(IApplicationBuilder, Action&lt;ProjectOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>配置</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseProject(this IApplicationBuilder builder, Action&lt;ProjectOptions&gt; option = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.ProjectOptions.html">ProjectOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseTypeLicense_" data-uid="System.Extention.UseTypeLicense*"></a>
+
+  <h3 id="System_Extention_UseTypeLicense_System_IApplicationBuilder_System_Action_H_Extensions_TypeLicense_TypeLicenseOptions__" data-uid="System.Extention.UseTypeLicense(System.IApplicationBuilder,System.Action{H.Extensions.TypeLicense.TypeLicenseOptions})">
+  UseTypeLicense(IApplicationBuilder, Action&lt;TypeLicenseOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseTypeLicense(this IApplicationBuilder builder, Action&lt;TypeLicenseOptions&gt; option = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.TypeLicense.TypeLicenseOptions.html">TypeLicenseOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extention_UseUpgrade_" data-uid="System.Extention.UseUpgrade*"></a>
+
+  <h3 id="System_Extention_UseUpgrade_System_IApplicationBuilder_System_Action_H_Modules_Upgrade_UpgradeOptions__" data-uid="System.Extention.UseUpgrade(System.IApplicationBuilder,System.Action{H.Modules.Upgrade.UpgradeOptions})">
+  UseUpgrade(IApplicationBuilder, Action&lt;UpgradeOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>配置</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseUpgrade(this IApplicationBuilder service, Action&lt;UpgradeOptions&gt; action = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Upgrade.UpgradeOptions.html">UpgradeOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

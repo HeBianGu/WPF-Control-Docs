@@ -1,0 +1,3599 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Controls.Diagram.Extension.FlowableLinkData`1
+  commentId: T:H.Controls.Diagram.Extension.FlowableLinkData`1
+  id: FlowableLinkData`1
+  parent: H.Controls.Diagram.Extension
+  children:
+  - H.Controls.Diagram.Extension.FlowableLinkData`1.#ctor
+  - H.Controls.Diagram.Extension.FlowableLinkData`1.IsMatchResult(H.Controls.Diagram.FlowableResult)
+  - H.Controls.Diagram.Extension.FlowableLinkData`1.NodeResult
+  langs:
+  - csharp
+  - vb
+  name: FlowableLinkData<T>
+  nameWithType: FlowableLinkData<T>
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData<T>
+  type: Class
+  source:
+    id: FlowableLinkData
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram.Extension\Presenter\Link\FlowableLinkData.cs
+    startLine: 177
+  assemblies:
+  - H.Controls.Diagram.Extension
+  namespace: H.Controls.Diagram.Extension
+  syntax:
+    content: 'public class FlowableLinkData<T> : FlowableLinkData, INotifyPropertyChanged, IDable, ILinkData, IData, IFlowableLink, IFlowable, IDisposable where T : Enum'
+    typeParameters:
+    - id: T
+    content.vb: Public Class FlowableLinkData(Of T As [Enum]) Inherits FlowableLinkData Implements INotifyPropertyChanged, IDable, ILinkData, IData, IFlowableLink, IFlowable, IDisposable
+  inheritance:
+  - System.Object
+  - H.Mvvm.BindableBase
+  - H.Mvvm.DisplayBindableBase
+  - H.Controls.Diagram.Extension.LinkDataBase
+  - H.Controls.Diagram.Extension.LinkData
+  - H.Controls.Diagram.Extension.TextLinkData
+  - H.Controls.Diagram.Extension.FlowableLinkData
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  - H.Mvvm.IDable
+  - H.Controls.Diagram.ILinkData
+  - H.Controls.Diagram.IData
+  - H.Controls.Diagram.IFlowableLink
+  - H.Controls.Diagram.IFlowable
+  - System.IDisposable
+  inheritedMembers:
+  - H.Controls.Diagram.Extension.FlowableLinkData.State
+  - H.Controls.Diagram.Extension.FlowableLinkData.Message
+  - H.Controls.Diagram.Extension.FlowableLinkData.IsBuzy
+  - H.Controls.Diagram.Extension.FlowableLinkData.UseInfoLogger
+  - H.Controls.Diagram.Extension.FlowableLinkData.Exception
+  - H.Controls.Diagram.Extension.FlowableLinkData.Random
+  - H.Controls.Diagram.Extension.FlowableLinkData.OK(System.String)
+  - H.Controls.Diagram.Extension.FlowableLinkData.Error(System.String)
+  - H.Controls.Diagram.Extension.FlowableLinkData.InvokeCommand
+  - H.Controls.Diagram.Extension.FlowableLinkData.Invoke(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  - H.Controls.Diagram.Extension.FlowableLinkData.InvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  - H.Controls.Diagram.Extension.FlowableLinkData.TryInvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  - H.Controls.Diagram.Extension.FlowableLinkData.Clear
+  - H.Controls.Diagram.Extension.FlowableLinkData.Dispose
+  - H.Controls.Diagram.Extension.TextLinkData.LoadDefault
+  - H.Controls.Diagram.Extension.TextLinkData.Text
+  - H.Controls.Diagram.Extension.TextLinkData.Foreground
+  - H.Controls.Diagram.Extension.TextLinkData.Background
+  - H.Controls.Diagram.Extension.TextLinkData.FontSize
+  - H.Controls.Diagram.Extension.TextLinkData.FontFamily
+  - H.Controls.Diagram.Extension.TextLinkData.FontStyle
+  - H.Controls.Diagram.Extension.TextLinkData.FontWeight
+  - H.Controls.Diagram.Extension.TextLinkData.FontStretch
+  - H.Controls.Diagram.Extension.TextLinkData.ApplayStyleTo(H.Controls.Diagram.ILinkData)
+  - H.Controls.Diagram.Extension.LinkData.Stroke
+  - H.Controls.Diagram.Extension.LinkData.StrokeThickness
+  - H.Controls.Diagram.Extension.LinkData.StrokeDashArray
+  - H.Controls.Diagram.Extension.LinkData.StrokeDashCap
+  - H.Controls.Diagram.Extension.LinkData.StrokeDashOffset
+  - H.Controls.Diagram.Extension.LinkData.StrokeStartLineCap
+  - H.Controls.Diagram.Extension.LinkData.StrokeEndLineCap
+  - H.Controls.Diagram.Extension.LinkData.StrokeLineJoin
+  - H.Controls.Diagram.Extension.LinkDataBase.FromNodeID
+  - H.Controls.Diagram.Extension.LinkDataBase.ToNodeID
+  - H.Controls.Diagram.Extension.LinkDataBase.FromPortID
+  - H.Controls.Diagram.Extension.LinkDataBase.ToPortID
+  - H.Controls.Diagram.Extension.LinkDataBase.LoadDefaultCommand
+  - H.Controls.Diagram.Extension.LinkDataBase.DeleteCommand
+  - H.Controls.Diagram.Extension.LinkDataBase.SaveAsTemplateCommand
+  - H.Controls.Diagram.Extension.LinkDataBase.LocateFullCommand
+  - H.Controls.Diagram.Extension.LinkDataBase.LocateMoveCommand
+  - H.Controls.Diagram.Extension.LinkDataBase.ApplyToAllCommand
+  - H.Controls.Diagram.Extension.LinkDataBase.ApplyToTypeCommand
+  - H.Mvvm.DisplayBindableBase.Commands
+  - H.Mvvm.DisplayBindableBase.CreateCommands
+  - H.Mvvm.DisplayBindableBase.LoadedCommand
+  - H.Mvvm.DisplayBindableBase.IsLoaded
+  - H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  - H.Mvvm.DisplayBindableBase.ID
+  - H.Mvvm.DisplayBindableBase.Name
+  - H.Mvvm.DisplayBindableBase.Icon
+  - H.Mvvm.DisplayBindableBase.ShortName
+  - H.Mvvm.DisplayBindableBase.GroupName
+  - H.Mvvm.DisplayBindableBase.Description
+  - H.Mvvm.DisplayBindableBase.Order
+  - H.Mvvm.BindableBase.Init
+  - H.Mvvm.BindableBase.PropertyChanged
+  - H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  - H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  - H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - H.Controls.Diagram.Extension.FlowableLinkData`1.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
+  - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
+  - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
+  - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
+  - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+  - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+  - System.Object.System.ObjectExtension.IsMacth(System.String)
+  - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
+  - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType``1
+  - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
+  - System.Object.System.ObjectExtension.TryConvertToString
+  - System.Object.System.ObjectExtension.TryConvertToString(System.String@)
+  - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Action,System.Windows.Threading.DispatcherPriority)
+  - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+  - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+  nameWithType.vb: FlowableLinkData(Of T)
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData(Of T)
+  name.vb: FlowableLinkData(Of T)
+- uid: H.Controls.Diagram.Extension.FlowableLinkData`1.#ctor
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData`1.#ctor
+  id: '#ctor'
+  parent: H.Controls.Diagram.Extension.FlowableLinkData`1
+  langs:
+  - csharp
+  - vb
+  name: FlowableLinkData()
+  nameWithType: FlowableLinkData<T>.FlowableLinkData()
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData<T>.FlowableLinkData()
+  type: Constructor
+  source:
+    id: .ctor
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram.Extension\Presenter\Link\FlowableLinkData.cs
+    startLine: 179
+  assemblies:
+  - H.Controls.Diagram.Extension
+  namespace: H.Controls.Diagram.Extension
+  syntax:
+    content: public FlowableLinkData()
+    content.vb: Public Sub New()
+  overload: H.Controls.Diagram.Extension.FlowableLinkData`1.#ctor*
+  nameWithType.vb: FlowableLinkData(Of T).New()
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData(Of T).New()
+  name.vb: New()
+- uid: H.Controls.Diagram.Extension.FlowableLinkData`1.NodeResult
+  commentId: P:H.Controls.Diagram.Extension.FlowableLinkData`1.NodeResult
+  id: NodeResult
+  parent: H.Controls.Diagram.Extension.FlowableLinkData`1
+  langs:
+  - csharp
+  - vb
+  name: NodeResult
+  nameWithType: FlowableLinkData<T>.NodeResult
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData<T>.NodeResult
+  type: Property
+  source:
+    id: NodeResult
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram.Extension\Presenter\Link\FlowableLinkData.cs
+    startLine: 184
+  assemblies:
+  - H.Controls.Diagram.Extension
+  namespace: H.Controls.Diagram.Extension
+  syntax:
+    content: >-
+      [Display(Name = "节点结果", GroupName = "常用")]
+
+      public T NodeResult { get; set; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: >-
+      <Display(Name:="节点结果", GroupName:="常用")>
+
+      Public Property NodeResult As T
+  overload: H.Controls.Diagram.Extension.FlowableLinkData`1.NodeResult*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 节点结果
+    - name: GroupName
+      type: System.String
+      value: 常用
+  nameWithType.vb: FlowableLinkData(Of T).NodeResult
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData(Of T).NodeResult
+- uid: H.Controls.Diagram.Extension.FlowableLinkData`1.IsMatchResult(H.Controls.Diagram.FlowableResult)
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData`1.IsMatchResult(H.Controls.Diagram.FlowableResult)
+  id: IsMatchResult(H.Controls.Diagram.FlowableResult)
+  parent: H.Controls.Diagram.Extension.FlowableLinkData`1
+  langs:
+  - csharp
+  - vb
+  name: IsMatchResult(FlowableResult)
+  nameWithType: FlowableLinkData<T>.IsMatchResult(FlowableResult)
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData<T>.IsMatchResult(H.Controls.Diagram.FlowableResult)
+  type: Method
+  source:
+    id: IsMatchResult
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram.Extension\Presenter\Link\FlowableLinkData.cs
+    startLine: 201
+  assemblies:
+  - H.Controls.Diagram.Extension
+  namespace: H.Controls.Diagram.Extension
+  summary: 匹配运行时判定指向的哪个流程
+  example: []
+  syntax:
+    content: public override bool IsMatchResult(FlowableResult flowableResult)
+    parameters:
+    - id: flowableResult
+      type: H.Controls.Diagram.FlowableResult
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function IsMatchResult(flowableResult As FlowableResult) As Boolean
+  overridden: H.Controls.Diagram.Extension.FlowableLinkData.IsMatchResult(H.Controls.Diagram.FlowableResult)
+  overload: H.Controls.Diagram.Extension.FlowableLinkData`1.IsMatchResult*
+  nameWithType.vb: FlowableLinkData(Of T).IsMatchResult(FlowableResult)
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData(Of T).IsMatchResult(H.Controls.Diagram.FlowableResult)
+references:
+- uid: H.Controls.Diagram.Extension
+  commentId: N:H.Controls.Diagram.Extension
+  href: H.html
+  name: H.Controls.Diagram.Extension
+  nameWithType: H.Controls.Diagram.Extension
+  fullName: H.Controls.Diagram.Extension
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Extension
+    name: Extension
+    href: H.Controls.Diagram.Extension.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Extension
+    name: Extension
+    href: H.Controls.Diagram.Extension.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: H.Mvvm.BindableBase
+  commentId: T:H.Mvvm.BindableBase
+  parent: H.Mvvm
+  href: H.Mvvm.BindableBase.html
+  name: BindableBase
+  nameWithType: BindableBase
+  fullName: H.Mvvm.BindableBase
+- uid: H.Mvvm.DisplayBindableBase
+  commentId: T:H.Mvvm.DisplayBindableBase
+  parent: H.Mvvm
+  href: H.Mvvm.DisplayBindableBase.html
+  name: DisplayBindableBase
+  nameWithType: DisplayBindableBase
+  fullName: H.Mvvm.DisplayBindableBase
+- uid: H.Controls.Diagram.Extension.LinkDataBase
+  commentId: T:H.Controls.Diagram.Extension.LinkDataBase
+  parent: H.Controls.Diagram.Extension
+  href: H.Controls.Diagram.Extension.LinkDataBase.html
+  name: LinkDataBase
+  nameWithType: LinkDataBase
+  fullName: H.Controls.Diagram.Extension.LinkDataBase
+- uid: H.Controls.Diagram.Extension.LinkData
+  commentId: T:H.Controls.Diagram.Extension.LinkData
+  parent: H.Controls.Diagram.Extension
+  href: H.Controls.Diagram.Extension.LinkData.html
+  name: LinkData
+  nameWithType: LinkData
+  fullName: H.Controls.Diagram.Extension.LinkData
+- uid: H.Controls.Diagram.Extension.TextLinkData
+  commentId: T:H.Controls.Diagram.Extension.TextLinkData
+  parent: H.Controls.Diagram.Extension
+  href: H.Controls.Diagram.Extension.TextLinkData.html
+  name: TextLinkData
+  nameWithType: TextLinkData
+  fullName: H.Controls.Diagram.Extension.TextLinkData
+- uid: H.Controls.Diagram.Extension.FlowableLinkData
+  commentId: T:H.Controls.Diagram.Extension.FlowableLinkData
+  parent: H.Controls.Diagram.Extension
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html
+  name: FlowableLinkData
+  nameWithType: FlowableLinkData
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: H.Mvvm.IDable
+  commentId: T:H.Mvvm.IDable
+  parent: H.Mvvm
+  href: H.Mvvm.IDable.html
+  name: IDable
+  nameWithType: IDable
+  fullName: H.Mvvm.IDable
+- uid: H.Controls.Diagram.ILinkData
+  commentId: T:H.Controls.Diagram.ILinkData
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.ILinkData.html
+  name: ILinkData
+  nameWithType: ILinkData
+  fullName: H.Controls.Diagram.ILinkData
+- uid: H.Controls.Diagram.IData
+  commentId: T:H.Controls.Diagram.IData
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.IData.html
+  name: IData
+  nameWithType: IData
+  fullName: H.Controls.Diagram.IData
+- uid: H.Controls.Diagram.IFlowableLink
+  commentId: T:H.Controls.Diagram.IFlowableLink
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.IFlowableLink.html
+  name: IFlowableLink
+  nameWithType: IFlowableLink
+  fullName: H.Controls.Diagram.IFlowableLink
+- uid: H.Controls.Diagram.IFlowable
+  commentId: T:H.Controls.Diagram.IFlowable
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.IFlowable.html
+  name: IFlowable
+  nameWithType: IFlowable
+  fullName: H.Controls.Diagram.IFlowable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.State
+  commentId: P:H.Controls.Diagram.Extension.FlowableLinkData.State
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_State
+  name: State
+  nameWithType: FlowableLinkData.State
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.State
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.Message
+  commentId: P:H.Controls.Diagram.Extension.FlowableLinkData.Message
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Message
+  name: Message
+  nameWithType: FlowableLinkData.Message
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.Message
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.IsBuzy
+  commentId: P:H.Controls.Diagram.Extension.FlowableLinkData.IsBuzy
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_IsBuzy
+  name: IsBuzy
+  nameWithType: FlowableLinkData.IsBuzy
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.IsBuzy
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.UseInfoLogger
+  commentId: P:H.Controls.Diagram.Extension.FlowableLinkData.UseInfoLogger
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_UseInfoLogger
+  name: UseInfoLogger
+  nameWithType: FlowableLinkData.UseInfoLogger
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.UseInfoLogger
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.Exception
+  commentId: P:H.Controls.Diagram.Extension.FlowableLinkData.Exception
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Exception
+  name: Exception
+  nameWithType: FlowableLinkData.Exception
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.Exception
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.Random
+  commentId: P:H.Controls.Diagram.Extension.FlowableLinkData.Random
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Random
+  name: Random
+  nameWithType: FlowableLinkData.Random
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.Random
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.OK(System.String)
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData.OK(System.String)
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  isExternal: true
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_OK_System_String_
+  name: OK(string)
+  nameWithType: FlowableLinkData.OK(string)
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.OK(string)
+  nameWithType.vb: FlowableLinkData.OK(String)
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData.OK(String)
+  name.vb: OK(String)
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.OK(System.String)
+    name: OK
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_OK_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.OK(System.String)
+    name: OK
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_OK_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.Error(System.String)
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData.Error(System.String)
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  isExternal: true
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Error_System_String_
+  name: Error(string)
+  nameWithType: FlowableLinkData.Error(string)
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.Error(string)
+  nameWithType.vb: FlowableLinkData.Error(String)
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData.Error(String)
+  name.vb: Error(String)
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.Error(System.String)
+    name: Error
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Error_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.Error(System.String)
+    name: Error
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Error_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.InvokeCommand
+  commentId: P:H.Controls.Diagram.Extension.FlowableLinkData.InvokeCommand
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_InvokeCommand
+  name: InvokeCommand
+  nameWithType: FlowableLinkData.InvokeCommand
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.InvokeCommand
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.Invoke(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData.Invoke(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Invoke_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  name: Invoke(Part, Link)
+  nameWithType: FlowableLinkData.Invoke(Part, Link)
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.Invoke(H.Controls.Diagram.Part, H.Controls.Diagram.Link)
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.Invoke(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+    name: Invoke
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Invoke_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  - name: (
+  - uid: H.Controls.Diagram.Part
+    name: Part
+    href: H.Controls.Diagram.Part.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Link
+    name: Link
+    href: H.Controls.Diagram.Link.html
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.Invoke(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+    name: Invoke
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Invoke_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  - name: (
+  - uid: H.Controls.Diagram.Part
+    name: Part
+    href: H.Controls.Diagram.Part.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Link
+    name: Link
+    href: H.Controls.Diagram.Link.html
+  - name: )
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.InvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData.InvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_InvokeAsync_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  name: InvokeAsync(Part, Link)
+  nameWithType: FlowableLinkData.InvokeAsync(Part, Link)
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.InvokeAsync(H.Controls.Diagram.Part, H.Controls.Diagram.Link)
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.InvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+    name: InvokeAsync
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_InvokeAsync_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  - name: (
+  - uid: H.Controls.Diagram.Part
+    name: Part
+    href: H.Controls.Diagram.Part.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Link
+    name: Link
+    href: H.Controls.Diagram.Link.html
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.InvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+    name: InvokeAsync
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_InvokeAsync_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  - name: (
+  - uid: H.Controls.Diagram.Part
+    name: Part
+    href: H.Controls.Diagram.Part.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Link
+    name: Link
+    href: H.Controls.Diagram.Link.html
+  - name: )
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.TryInvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData.TryInvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_TryInvokeAsync_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  name: TryInvokeAsync(Part, Link)
+  nameWithType: FlowableLinkData.TryInvokeAsync(Part, Link)
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.TryInvokeAsync(H.Controls.Diagram.Part, H.Controls.Diagram.Link)
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.TryInvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+    name: TryInvokeAsync
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_TryInvokeAsync_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  - name: (
+  - uid: H.Controls.Diagram.Part
+    name: Part
+    href: H.Controls.Diagram.Part.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Link
+    name: Link
+    href: H.Controls.Diagram.Link.html
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.TryInvokeAsync(H.Controls.Diagram.Part,H.Controls.Diagram.Link)
+    name: TryInvokeAsync
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_TryInvokeAsync_H_Controls_Diagram_Part_H_Controls_Diagram_Link_
+  - name: (
+  - uid: H.Controls.Diagram.Part
+    name: Part
+    href: H.Controls.Diagram.Part.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Link
+    name: Link
+    href: H.Controls.Diagram.Link.html
+  - name: )
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.Clear
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData.Clear
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Clear
+  name: Clear()
+  nameWithType: FlowableLinkData.Clear()
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.Clear()
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.Clear
+    name: Clear
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.Clear
+    name: Clear
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Clear
+  - name: (
+  - name: )
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.Dispose
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData.Dispose
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Dispose
+  name: Dispose()
+  nameWithType: FlowableLinkData.Dispose()
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.Dispose()
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.Dispose
+    name: Dispose
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.Dispose
+    name: Dispose
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_Dispose
+  - name: (
+  - name: )
+- uid: H.Controls.Diagram.Extension.TextLinkData.LoadDefault
+  commentId: M:H.Controls.Diagram.Extension.TextLinkData.LoadDefault
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_LoadDefault
+  name: LoadDefault()
+  nameWithType: TextLinkData.LoadDefault()
+  fullName: H.Controls.Diagram.Extension.TextLinkData.LoadDefault()
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.TextLinkData.LoadDefault
+    name: LoadDefault
+    href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_LoadDefault
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.TextLinkData.LoadDefault
+    name: LoadDefault
+    href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_LoadDefault
+  - name: (
+  - name: )
+- uid: H.Controls.Diagram.Extension.TextLinkData.Text
+  commentId: P:H.Controls.Diagram.Extension.TextLinkData.Text
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_Text
+  name: Text
+  nameWithType: TextLinkData.Text
+  fullName: H.Controls.Diagram.Extension.TextLinkData.Text
+- uid: H.Controls.Diagram.Extension.TextLinkData.Foreground
+  commentId: P:H.Controls.Diagram.Extension.TextLinkData.Foreground
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_Foreground
+  name: Foreground
+  nameWithType: TextLinkData.Foreground
+  fullName: H.Controls.Diagram.Extension.TextLinkData.Foreground
+- uid: H.Controls.Diagram.Extension.TextLinkData.Background
+  commentId: P:H.Controls.Diagram.Extension.TextLinkData.Background
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_Background
+  name: Background
+  nameWithType: TextLinkData.Background
+  fullName: H.Controls.Diagram.Extension.TextLinkData.Background
+- uid: H.Controls.Diagram.Extension.TextLinkData.FontSize
+  commentId: P:H.Controls.Diagram.Extension.TextLinkData.FontSize
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_FontSize
+  name: FontSize
+  nameWithType: TextLinkData.FontSize
+  fullName: H.Controls.Diagram.Extension.TextLinkData.FontSize
+- uid: H.Controls.Diagram.Extension.TextLinkData.FontFamily
+  commentId: P:H.Controls.Diagram.Extension.TextLinkData.FontFamily
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_FontFamily
+  name: FontFamily
+  nameWithType: TextLinkData.FontFamily
+  fullName: H.Controls.Diagram.Extension.TextLinkData.FontFamily
+- uid: H.Controls.Diagram.Extension.TextLinkData.FontStyle
+  commentId: P:H.Controls.Diagram.Extension.TextLinkData.FontStyle
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_FontStyle
+  name: FontStyle
+  nameWithType: TextLinkData.FontStyle
+  fullName: H.Controls.Diagram.Extension.TextLinkData.FontStyle
+- uid: H.Controls.Diagram.Extension.TextLinkData.FontWeight
+  commentId: P:H.Controls.Diagram.Extension.TextLinkData.FontWeight
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_FontWeight
+  name: FontWeight
+  nameWithType: TextLinkData.FontWeight
+  fullName: H.Controls.Diagram.Extension.TextLinkData.FontWeight
+- uid: H.Controls.Diagram.Extension.TextLinkData.FontStretch
+  commentId: P:H.Controls.Diagram.Extension.TextLinkData.FontStretch
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_FontStretch
+  name: FontStretch
+  nameWithType: TextLinkData.FontStretch
+  fullName: H.Controls.Diagram.Extension.TextLinkData.FontStretch
+- uid: H.Controls.Diagram.Extension.TextLinkData.ApplayStyleTo(H.Controls.Diagram.ILinkData)
+  commentId: M:H.Controls.Diagram.Extension.TextLinkData.ApplayStyleTo(H.Controls.Diagram.ILinkData)
+  parent: H.Controls.Diagram.Extension.TextLinkData
+  href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_ApplayStyleTo_H_Controls_Diagram_ILinkData_
+  name: ApplayStyleTo(ILinkData)
+  nameWithType: TextLinkData.ApplayStyleTo(ILinkData)
+  fullName: H.Controls.Diagram.Extension.TextLinkData.ApplayStyleTo(H.Controls.Diagram.ILinkData)
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.TextLinkData.ApplayStyleTo(H.Controls.Diagram.ILinkData)
+    name: ApplayStyleTo
+    href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_ApplayStyleTo_H_Controls_Diagram_ILinkData_
+  - name: (
+  - uid: H.Controls.Diagram.ILinkData
+    name: ILinkData
+    href: H.Controls.Diagram.ILinkData.html
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.TextLinkData.ApplayStyleTo(H.Controls.Diagram.ILinkData)
+    name: ApplayStyleTo
+    href: H.Controls.Diagram.Extension.TextLinkData.html#H_Controls_Diagram_Extension_TextLinkData_ApplayStyleTo_H_Controls_Diagram_ILinkData_
+  - name: (
+  - uid: H.Controls.Diagram.ILinkData
+    name: ILinkData
+    href: H.Controls.Diagram.ILinkData.html
+  - name: )
+- uid: H.Controls.Diagram.Extension.LinkData.Stroke
+  commentId: P:H.Controls.Diagram.Extension.LinkData.Stroke
+  parent: H.Controls.Diagram.Extension.LinkData
+  href: H.Controls.Diagram.Extension.LinkData.html#H_Controls_Diagram_Extension_LinkData_Stroke
+  name: Stroke
+  nameWithType: LinkData.Stroke
+  fullName: H.Controls.Diagram.Extension.LinkData.Stroke
+- uid: H.Controls.Diagram.Extension.LinkData.StrokeThickness
+  commentId: P:H.Controls.Diagram.Extension.LinkData.StrokeThickness
+  parent: H.Controls.Diagram.Extension.LinkData
+  href: H.Controls.Diagram.Extension.LinkData.html#H_Controls_Diagram_Extension_LinkData_StrokeThickness
+  name: StrokeThickness
+  nameWithType: LinkData.StrokeThickness
+  fullName: H.Controls.Diagram.Extension.LinkData.StrokeThickness
+- uid: H.Controls.Diagram.Extension.LinkData.StrokeDashArray
+  commentId: P:H.Controls.Diagram.Extension.LinkData.StrokeDashArray
+  parent: H.Controls.Diagram.Extension.LinkData
+  href: H.Controls.Diagram.Extension.LinkData.html#H_Controls_Diagram_Extension_LinkData_StrokeDashArray
+  name: StrokeDashArray
+  nameWithType: LinkData.StrokeDashArray
+  fullName: H.Controls.Diagram.Extension.LinkData.StrokeDashArray
+- uid: H.Controls.Diagram.Extension.LinkData.StrokeDashCap
+  commentId: P:H.Controls.Diagram.Extension.LinkData.StrokeDashCap
+  parent: H.Controls.Diagram.Extension.LinkData
+  href: H.Controls.Diagram.Extension.LinkData.html#H_Controls_Diagram_Extension_LinkData_StrokeDashCap
+  name: StrokeDashCap
+  nameWithType: LinkData.StrokeDashCap
+  fullName: H.Controls.Diagram.Extension.LinkData.StrokeDashCap
+- uid: H.Controls.Diagram.Extension.LinkData.StrokeDashOffset
+  commentId: P:H.Controls.Diagram.Extension.LinkData.StrokeDashOffset
+  parent: H.Controls.Diagram.Extension.LinkData
+  href: H.Controls.Diagram.Extension.LinkData.html#H_Controls_Diagram_Extension_LinkData_StrokeDashOffset
+  name: StrokeDashOffset
+  nameWithType: LinkData.StrokeDashOffset
+  fullName: H.Controls.Diagram.Extension.LinkData.StrokeDashOffset
+- uid: H.Controls.Diagram.Extension.LinkData.StrokeStartLineCap
+  commentId: P:H.Controls.Diagram.Extension.LinkData.StrokeStartLineCap
+  parent: H.Controls.Diagram.Extension.LinkData
+  href: H.Controls.Diagram.Extension.LinkData.html#H_Controls_Diagram_Extension_LinkData_StrokeStartLineCap
+  name: StrokeStartLineCap
+  nameWithType: LinkData.StrokeStartLineCap
+  fullName: H.Controls.Diagram.Extension.LinkData.StrokeStartLineCap
+- uid: H.Controls.Diagram.Extension.LinkData.StrokeEndLineCap
+  commentId: P:H.Controls.Diagram.Extension.LinkData.StrokeEndLineCap
+  parent: H.Controls.Diagram.Extension.LinkData
+  href: H.Controls.Diagram.Extension.LinkData.html#H_Controls_Diagram_Extension_LinkData_StrokeEndLineCap
+  name: StrokeEndLineCap
+  nameWithType: LinkData.StrokeEndLineCap
+  fullName: H.Controls.Diagram.Extension.LinkData.StrokeEndLineCap
+- uid: H.Controls.Diagram.Extension.LinkData.StrokeLineJoin
+  commentId: P:H.Controls.Diagram.Extension.LinkData.StrokeLineJoin
+  parent: H.Controls.Diagram.Extension.LinkData
+  href: H.Controls.Diagram.Extension.LinkData.html#H_Controls_Diagram_Extension_LinkData_StrokeLineJoin
+  name: StrokeLineJoin
+  nameWithType: LinkData.StrokeLineJoin
+  fullName: H.Controls.Diagram.Extension.LinkData.StrokeLineJoin
+- uid: H.Controls.Diagram.Extension.LinkDataBase.FromNodeID
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.FromNodeID
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_FromNodeID
+  name: FromNodeID
+  nameWithType: LinkDataBase.FromNodeID
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.FromNodeID
+- uid: H.Controls.Diagram.Extension.LinkDataBase.ToNodeID
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.ToNodeID
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_ToNodeID
+  name: ToNodeID
+  nameWithType: LinkDataBase.ToNodeID
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.ToNodeID
+- uid: H.Controls.Diagram.Extension.LinkDataBase.FromPortID
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.FromPortID
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_FromPortID
+  name: FromPortID
+  nameWithType: LinkDataBase.FromPortID
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.FromPortID
+- uid: H.Controls.Diagram.Extension.LinkDataBase.ToPortID
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.ToPortID
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_ToPortID
+  name: ToPortID
+  nameWithType: LinkDataBase.ToPortID
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.ToPortID
+- uid: H.Controls.Diagram.Extension.LinkDataBase.LoadDefaultCommand
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.LoadDefaultCommand
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_LoadDefaultCommand
+  name: LoadDefaultCommand
+  nameWithType: LinkDataBase.LoadDefaultCommand
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.LoadDefaultCommand
+- uid: H.Controls.Diagram.Extension.LinkDataBase.DeleteCommand
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.DeleteCommand
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_DeleteCommand
+  name: DeleteCommand
+  nameWithType: LinkDataBase.DeleteCommand
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.DeleteCommand
+- uid: H.Controls.Diagram.Extension.LinkDataBase.SaveAsTemplateCommand
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.SaveAsTemplateCommand
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_SaveAsTemplateCommand
+  name: SaveAsTemplateCommand
+  nameWithType: LinkDataBase.SaveAsTemplateCommand
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.SaveAsTemplateCommand
+- uid: H.Controls.Diagram.Extension.LinkDataBase.LocateFullCommand
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.LocateFullCommand
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_LocateFullCommand
+  name: LocateFullCommand
+  nameWithType: LinkDataBase.LocateFullCommand
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.LocateFullCommand
+- uid: H.Controls.Diagram.Extension.LinkDataBase.LocateMoveCommand
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.LocateMoveCommand
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_LocateMoveCommand
+  name: LocateMoveCommand
+  nameWithType: LinkDataBase.LocateMoveCommand
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.LocateMoveCommand
+- uid: H.Controls.Diagram.Extension.LinkDataBase.ApplyToAllCommand
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.ApplyToAllCommand
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_ApplyToAllCommand
+  name: ApplyToAllCommand
+  nameWithType: LinkDataBase.ApplyToAllCommand
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.ApplyToAllCommand
+- uid: H.Controls.Diagram.Extension.LinkDataBase.ApplyToTypeCommand
+  commentId: P:H.Controls.Diagram.Extension.LinkDataBase.ApplyToTypeCommand
+  parent: H.Controls.Diagram.Extension.LinkDataBase
+  href: H.Controls.Diagram.Extension.LinkDataBase.html#H_Controls_Diagram_Extension_LinkDataBase_ApplyToTypeCommand
+  name: ApplyToTypeCommand
+  nameWithType: LinkDataBase.ApplyToTypeCommand
+  fullName: H.Controls.Diagram.Extension.LinkDataBase.ApplyToTypeCommand
+- uid: H.Mvvm.DisplayBindableBase.Commands
+  commentId: P:H.Mvvm.DisplayBindableBase.Commands
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands
+  name: Commands
+  nameWithType: DisplayBindableBase.Commands
+  fullName: H.Mvvm.DisplayBindableBase.Commands
+- uid: H.Mvvm.DisplayBindableBase.CreateCommands
+  commentId: M:H.Mvvm.DisplayBindableBase.CreateCommands
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
+  name: CreateCommands()
+  nameWithType: DisplayBindableBase.CreateCommands()
+  fullName: H.Mvvm.DisplayBindableBase.CreateCommands()
+  spec.csharp:
+  - uid: H.Mvvm.DisplayBindableBase.CreateCommands
+    name: CreateCommands
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.DisplayBindableBase.CreateCommands
+    name: CreateCommands
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
+  - name: (
+  - name: )
+- uid: H.Mvvm.DisplayBindableBase.LoadedCommand
+  commentId: P:H.Mvvm.DisplayBindableBase.LoadedCommand
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand
+  name: LoadedCommand
+  nameWithType: DisplayBindableBase.LoadedCommand
+  fullName: H.Mvvm.DisplayBindableBase.LoadedCommand
+- uid: H.Mvvm.DisplayBindableBase.IsLoaded
+  commentId: P:H.Mvvm.DisplayBindableBase.IsLoaded
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded
+  name: IsLoaded
+  nameWithType: DisplayBindableBase.IsLoaded
+  fullName: H.Mvvm.DisplayBindableBase.IsLoaded
+- uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  commentId: M:H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  parent: H.Mvvm.DisplayBindableBase
+  isExternal: true
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+  name: Loaded(object)
+  nameWithType: DisplayBindableBase.Loaded(object)
+  fullName: H.Mvvm.DisplayBindableBase.Loaded(object)
+  nameWithType.vb: DisplayBindableBase.Loaded(Object)
+  fullName.vb: H.Mvvm.DisplayBindableBase.Loaded(Object)
+  name.vb: Loaded(Object)
+  spec.csharp:
+  - uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+    name: Loaded
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+    name: Loaded
+    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Mvvm.DisplayBindableBase.ID
+  commentId: P:H.Mvvm.DisplayBindableBase.ID
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID
+  name: ID
+  nameWithType: DisplayBindableBase.ID
+  fullName: H.Mvvm.DisplayBindableBase.ID
+- uid: H.Mvvm.DisplayBindableBase.Name
+  commentId: P:H.Mvvm.DisplayBindableBase.Name
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name
+  name: Name
+  nameWithType: DisplayBindableBase.Name
+  fullName: H.Mvvm.DisplayBindableBase.Name
+- uid: H.Mvvm.DisplayBindableBase.Icon
+  commentId: P:H.Mvvm.DisplayBindableBase.Icon
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon
+  name: Icon
+  nameWithType: DisplayBindableBase.Icon
+  fullName: H.Mvvm.DisplayBindableBase.Icon
+- uid: H.Mvvm.DisplayBindableBase.ShortName
+  commentId: P:H.Mvvm.DisplayBindableBase.ShortName
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName
+  name: ShortName
+  nameWithType: DisplayBindableBase.ShortName
+  fullName: H.Mvvm.DisplayBindableBase.ShortName
+- uid: H.Mvvm.DisplayBindableBase.GroupName
+  commentId: P:H.Mvvm.DisplayBindableBase.GroupName
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName
+  name: GroupName
+  nameWithType: DisplayBindableBase.GroupName
+  fullName: H.Mvvm.DisplayBindableBase.GroupName
+- uid: H.Mvvm.DisplayBindableBase.Description
+  commentId: P:H.Mvvm.DisplayBindableBase.Description
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description
+  name: Description
+  nameWithType: DisplayBindableBase.Description
+  fullName: H.Mvvm.DisplayBindableBase.Description
+- uid: H.Mvvm.DisplayBindableBase.Order
+  commentId: P:H.Mvvm.DisplayBindableBase.Order
+  parent: H.Mvvm.DisplayBindableBase
+  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order
+  name: Order
+  nameWithType: DisplayBindableBase.Order
+  fullName: H.Mvvm.DisplayBindableBase.Order
+- uid: H.Mvvm.BindableBase.Init
+  commentId: M:H.Mvvm.BindableBase.Init
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  name: Init()
+  nameWithType: BindableBase.Init()
+  fullName: H.Mvvm.BindableBase.Init()
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.Init
+    name: Init
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.Init
+    name: Init
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+  - name: (
+  - name: )
+- uid: H.Mvvm.BindableBase.PropertyChanged
+  commentId: E:H.Mvvm.BindableBase.PropertyChanged
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BindableBase.PropertyChanged
+  fullName: H.Mvvm.BindableBase.PropertyChanged
+- uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  parent: H.Mvvm.BindableBase
+  isExternal: true
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  name: RaisePropertyChanged(string)
+  nameWithType: BindableBase.RaisePropertyChanged(string)
+  fullName: H.Mvvm.BindableBase.RaisePropertyChanged(string)
+  nameWithType.vb: BindableBase.RaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.BindableBase.RaisePropertyChanged(String)
+  name.vb: RaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+    name: RaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+  parent: H.Mvvm.BindableBase
+  isExternal: true
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  name: DispatcherRaisePropertyChanged(string)
+  nameWithType: BindableBase.DispatcherRaisePropertyChanged(string)
+  fullName: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(string)
+  nameWithType.vb: BindableBase.DispatcherRaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(String)
+  name.vb: DispatcherRaisePropertyChanged(String)
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+    name: DispatcherRaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
+    name: DispatcherRaisePropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  commentId: M:H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  parent: H.Mvvm.BindableBase
+  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  name: OnDispatcherPropertyChanged()
+  nameWithType: BindableBase.OnDispatcherPropertyChanged()
+  fullName: H.Mvvm.BindableBase.OnDispatcherPropertyChanged()
+  spec.csharp:
+  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+    name: OnDispatcherPropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+    name: OnDispatcherPropertyChanged
+    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: H.Controls.Diagram.Extension.FlowableLinkData`1.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
+  commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
+  href: System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__
+  name: CloneCast<FlowableLinkData<T>>(FlowableLinkData<T>, Predicate<PropertyInfo>)
+  nameWithType: ObjectExtension.CloneCast<FlowableLinkData<T>>(FlowableLinkData<T>, Predicate<PropertyInfo>)
+  fullName: System.ObjectExtension.CloneCast<H.Controls.Diagram.Extension.FlowableLinkData<T>>(H.Controls.Diagram.Extension.FlowableLinkData<T>, System.Predicate<System.Reflection.PropertyInfo>)
+  nameWithType.vb: ObjectExtension.CloneCast(Of FlowableLinkData(Of T))(FlowableLinkData(Of T), Predicate(Of PropertyInfo))
+  fullName.vb: System.ObjectExtension.CloneCast(Of H.Controls.Diagram.Extension.FlowableLinkData(Of T))(H.Controls.Diagram.Extension.FlowableLinkData(Of T), System.Predicate(Of System.Reflection.PropertyInfo))
+  name.vb: CloneCast(Of FlowableLinkData(Of T))(FlowableLinkData(Of T), Predicate(Of PropertyInfo))
+  spec.csharp:
+  - uid: System.ObjectExtension.CloneCast``1(H.Controls.Diagram.Extension.FlowableLinkData{`0},System.Predicate{System.Reflection.PropertyInfo})
+    name: CloneCast
+    href: System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__
+  - name: <
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData`1
+    name: FlowableLinkData
+    href: H.Controls.Diagram.Extension.FlowableLinkData-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData`1
+    name: FlowableLinkData
+    href: H.Controls.Diagram.Extension.FlowableLinkData-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.CloneCast``1(H.Controls.Diagram.Extension.FlowableLinkData{`0},System.Predicate{System.Reflection.PropertyInfo})
+    name: CloneCast
+    href: System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData`1
+    name: FlowableLinkData
+    href: H.Controls.Diagram.Extension.FlowableLinkData-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData`1
+    name: FlowableLinkData
+    href: H.Controls.Diagram.Extension.FlowableLinkData-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: )
+  - name: )
+- uid: System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
+  commentId: M:H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.Object,System.String)
+  parent: H.Controls.FilterColumnDataGrid.Extensions
+  definition: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.Object,System.String)
+  href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_
+  name: GetPropertyValue(object, string)
+  nameWithType: Extensions.GetPropertyValue(object, string)
+  fullName: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(object, string)
+  nameWithType.vb: Extensions.GetPropertyValue(Object, String)
+  fullName.vb: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(Object, String)
+  name.vb: GetPropertyValue(Object, String)
+  spec.csharp:
+  - uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.Object,System.String)
+    name: GetPropertyValue
+    href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.Object,System.String)
+    name: GetPropertyValue
+    href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
+  commentId: M:H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.Object,System.String)
+  parent: H.Controls.FilterColumnDataGrid.Extensions
+  definition: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.Object,System.String)
+  href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_
+  name: GetPropertyValue<T>(object, string)
+  nameWithType: Extensions.GetPropertyValue<T>(object, string)
+  fullName: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue<T>(object, string)
+  nameWithType.vb: Extensions.GetPropertyValue(Of T)(Object, String)
+  fullName.vb: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(Of T)(Object, String)
+  name.vb: GetPropertyValue(Of T)(Object, String)
+  spec.csharp:
+  - uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.Object,System.String)
+    name: GetPropertyValue
+    href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.Object,System.String)
+    name: GetPropertyValue
+    href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  commentId: M:H.Controls.Form.PropertyInfoExtention.ChangeType``1(System.Object)
+  parent: H.Controls.Form.PropertyInfoExtention
+  definition: H.Controls.Form.PropertyInfoExtention.ChangeType``1(System.Object)
+  href: H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_
+  name: ChangeType<T>(object)
+  nameWithType: PropertyInfoExtention.ChangeType<T>(object)
+  fullName: H.Controls.Form.PropertyInfoExtention.ChangeType<T>(object)
+  nameWithType.vb: PropertyInfoExtention.ChangeType(Of T)(Object)
+  fullName.vb: H.Controls.Form.PropertyInfoExtention.ChangeType(Of T)(Object)
+  name.vb: ChangeType(Of T)(Object)
+  spec.csharp:
+  - uid: H.Controls.Form.PropertyInfoExtention.ChangeType``1(System.Object)
+    name: ChangeType
+    href: H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Form.PropertyInfoExtention.ChangeType``1(System.Object)
+    name: ChangeType
+    href: H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
+  commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
+  href: System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__
+  name: CloneBy(object, Predicate<PropertyInfo>)
+  nameWithType: ObjectExtension.CloneBy(object, Predicate<PropertyInfo>)
+  fullName: System.ObjectExtension.CloneBy(object, System.Predicate<System.Reflection.PropertyInfo>)
+  nameWithType.vb: ObjectExtension.CloneBy(Object, Predicate(Of PropertyInfo))
+  fullName.vb: System.ObjectExtension.CloneBy(Object, System.Predicate(Of System.Reflection.PropertyInfo))
+  name.vb: CloneBy(Object, Predicate(Of PropertyInfo))
+  spec.csharp:
+  - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
+    name: CloneBy
+    href: System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
+    name: CloneBy
+    href: System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: )
+  - name: )
+- uid: System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+  commentId: M:System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+  href: System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__
+  name: CopyPropertyValueFrom(object, object, Predicate<PropertyInfo>, Func<PropertyInfo, PropertyInfo, bool>)
+  nameWithType: ObjectExtension.CopyPropertyValueFrom(object, object, Predicate<PropertyInfo>, Func<PropertyInfo, PropertyInfo, bool>)
+  fullName: System.ObjectExtension.CopyPropertyValueFrom(object, object, System.Predicate<System.Reflection.PropertyInfo>, System.Func<System.Reflection.PropertyInfo, System.Reflection.PropertyInfo, bool>)
+  nameWithType.vb: ObjectExtension.CopyPropertyValueFrom(Object, Object, Predicate(Of PropertyInfo), Func(Of PropertyInfo, PropertyInfo, Boolean))
+  fullName.vb: System.ObjectExtension.CopyPropertyValueFrom(Object, Object, System.Predicate(Of System.Reflection.PropertyInfo), System.Func(Of System.Reflection.PropertyInfo, System.Reflection.PropertyInfo, Boolean))
+  name.vb: CopyPropertyValueFrom(Object, Object, Predicate(Of PropertyInfo), Func(Of PropertyInfo, PropertyInfo, Boolean))
+  spec.csharp:
+  - uid: System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+    name: CopyPropertyValueFrom
+    href: System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+    name: CopyPropertyValueFrom
+    href: System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+  commentId: M:System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+  href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__
+  name: IsMacth(object, Func<PropertyInfo, object, bool>)
+  nameWithType: ObjectExtension.IsMacth(object, Func<PropertyInfo, object, bool>)
+  fullName: System.ObjectExtension.IsMacth(object, System.Func<System.Reflection.PropertyInfo, object, bool>)
+  nameWithType.vb: ObjectExtension.IsMacth(Object, Func(Of PropertyInfo, Object, Boolean))
+  fullName.vb: System.ObjectExtension.IsMacth(Object, System.Func(Of System.Reflection.PropertyInfo, Object, Boolean))
+  name.vb: IsMacth(Object, Func(Of PropertyInfo, Object, Boolean))
+  spec.csharp:
+  - uid: System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+    name: IsMacth
+    href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+    name: IsMacth
+    href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Object.System.ObjectExtension.IsMacth(System.String)
+  commentId: M:System.ObjectExtension.IsMacth(System.Object,System.String)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.IsMacth(System.Object,System.String)
+  href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_
+  name: IsMacth(object, string)
+  nameWithType: ObjectExtension.IsMacth(object, string)
+  fullName: System.ObjectExtension.IsMacth(object, string)
+  nameWithType.vb: ObjectExtension.IsMacth(Object, String)
+  fullName.vb: System.ObjectExtension.IsMacth(Object, String)
+  name.vb: IsMacth(Object, String)
+  spec.csharp:
+  - uid: System.ObjectExtension.IsMacth(System.Object,System.String)
+    name: IsMacth
+    href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.IsMacth(System.Object,System.String)
+    name: IsMacth
+    href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
+  commentId: M:System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
+  href: System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___
+  name: ModelState(object, out List<string>)
+  nameWithType: ObjectExtension.ModelState(object, out List<string>)
+  fullName: System.ObjectExtension.ModelState(object, out System.Collections.Generic.List<string>)
+  nameWithType.vb: ObjectExtension.ModelState(Object, List(Of String))
+  fullName.vb: System.ObjectExtension.ModelState(Object, System.Collections.Generic.List(Of String))
+  name.vb: ModelState(Object, List(Of String))
+  spec.csharp:
+  - uid: System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
+    name: ModelState
+    href: System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
+    name: ModelState
+    href: System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  commentId: M:System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+  href: System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__
+  name: ModelStateDeep(object, out string)
+  nameWithType: ObjectExtension.ModelStateDeep(object, out string)
+  fullName: System.ObjectExtension.ModelStateDeep(object, out string)
+  nameWithType.vb: ObjectExtension.ModelStateDeep(Object, String)
+  fullName.vb: System.ObjectExtension.ModelStateDeep(Object, String)
+  name.vb: ModelStateDeep(Object, String)
+  spec.csharp:
+  - uid: System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+    name: ModelStateDeep
+    href: System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+    name: ModelStateDeep
+    href: System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType``1
+  commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType``1(System.Object)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_
+  name: TryChangeType<T>(object)
+  nameWithType: ObjectExtension.TryChangeType<T>(object)
+  fullName: System.ObjectExtension.TryChangeType<T>(object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Of T)(Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Of T)(Object)
+  name.vb: TryChangeType(Of T)(Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType``1(System.Object)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType``1(System.Object)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType``1({T}@)
+  commentId: M:System.ObjectExtension.TryChangeType``1(System.Object,``0@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType``1(System.Object,``0@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__
+  name: TryChangeType<T>(object, out T)
+  nameWithType: ObjectExtension.TryChangeType<T>(object, out T)
+  fullName: System.ObjectExtension.TryChangeType<T>(object, out T)
+  nameWithType.vb: ObjectExtension.TryChangeType(Of T)(Object, T)
+  fullName.vb: System.ObjectExtension.TryChangeType(Of T)(Object, T)
+  name.vb: TryChangeType(Of T)(Object, T)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType``1(System.Object,``0@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType``1(System.Object,``0@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryConvertToString
+  commentId: M:System.ObjectExtension.TryConvertToString(System.Object)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryConvertToString(System.Object)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_
+  name: TryConvertToString(object)
+  nameWithType: ObjectExtension.TryConvertToString(object)
+  fullName: System.ObjectExtension.TryConvertToString(object)
+  nameWithType.vb: ObjectExtension.TryConvertToString(Object)
+  fullName.vb: System.ObjectExtension.TryConvertToString(Object)
+  name.vb: TryConvertToString(Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryConvertToString(System.Object)
+    name: TryConvertToString
+    href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryConvertToString(System.Object)
+    name: TryConvertToString
+    href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryConvertToString(System.String@)
+  commentId: M:System.ObjectExtension.TryConvertToString(System.Object,System.String@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryConvertToString(System.Object,System.String@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__
+  name: TryConvertToString(object, out string)
+  nameWithType: ObjectExtension.TryConvertToString(object, out string)
+  fullName: System.ObjectExtension.TryConvertToString(object, out string)
+  nameWithType.vb: ObjectExtension.TryConvertToString(Object, String)
+  fullName.vb: System.ObjectExtension.TryConvertToString(Object, String)
+  name.vb: TryConvertToString(Object, String)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryConvertToString(System.Object,System.String@)
+    name: TryConvertToString
+    href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryConvertToString(System.Object,System.String@)
+    name: TryConvertToString
+    href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Action,System.Windows.Threading.DispatcherPriority)
+  commentId: M:System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
+  parent: System.Windows.Threading.DispatcherExtension
+  definition: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
+  href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_
+  name: DelayInvoke(object, Action, DispatcherPriority)
+  nameWithType: DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)
+  fullName: System.Windows.Threading.DispatcherExtension.DelayInvoke(object, System.Action, System.Windows.Threading.DispatcherPriority)
+  nameWithType.vb: DispatcherExtension.DelayInvoke(Object, Action, DispatcherPriority)
+  fullName.vb: System.Windows.Threading.DispatcherExtension.DelayInvoke(Object, System.Action, System.Windows.Threading.DispatcherPriority)
+  name.vb: DelayInvoke(Object, Action, DispatcherPriority)
+  spec.csharp:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+  spec.vb:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+- uid: System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+  commentId: M:System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+  parent: System.Windows.Threading.DispatcherExtension
+  definition: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+  href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Action_System_Object__System_Action_System_Windows_Threading_DispatcherPriority_
+  name: DelayInvoke(object, IList, Action<object>, Action, DispatcherPriority)
+  nameWithType: DispatcherExtension.DelayInvoke(object, IList, Action<object>, Action, DispatcherPriority)
+  fullName: System.Windows.Threading.DispatcherExtension.DelayInvoke(object, System.Collections.IList, System.Action<object>, System.Action, System.Windows.Threading.DispatcherPriority)
+  nameWithType.vb: DispatcherExtension.DelayInvoke(Object, IList, Action(Of Object), Action, DispatcherPriority)
+  fullName.vb: System.Windows.Threading.DispatcherExtension.DelayInvoke(Object, System.Collections.IList, System.Action(Of Object), System.Action, System.Windows.Threading.DispatcherPriority)
+  name.vb: DelayInvoke(Object, IList, Action(Of Object), Action, DispatcherPriority)
+  spec.csharp:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Action_System_Object__System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+  spec.vb:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Action_System_Object__System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+- uid: System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+  commentId: M:System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+  parent: System.Windows.Threading.DispatcherExtension
+  definition: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+  href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_
+  name: DelayInvoke(object, IList, Func<IList>, Action, DispatcherPriority)
+  nameWithType: DispatcherExtension.DelayInvoke(object, IList, Func<IList>, Action, DispatcherPriority)
+  fullName: System.Windows.Threading.DispatcherExtension.DelayInvoke(object, System.Collections.IList, System.Func<System.Collections.IList>, System.Action, System.Windows.Threading.DispatcherPriority)
+  nameWithType.vb: DispatcherExtension.DelayInvoke(Object, IList, Func(Of IList), Action, DispatcherPriority)
+  fullName.vb: System.Windows.Threading.DispatcherExtension.DelayInvoke(Object, System.Collections.IList, System.Func(Of System.Collections.IList), System.Action, System.Windows.Threading.DispatcherPriority)
+  name.vb: DelayInvoke(Object, IList, Func(Of IList), Action, DispatcherPriority)
+  spec.csharp:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+  spec.vb:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: H.Mvvm
+  commentId: N:H.Mvvm
+  href: H.html
+  name: H.Mvvm
+  nameWithType: H.Mvvm
+  fullName: H.Mvvm
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: H.Controls.Diagram
+  commentId: N:H.Controls.Diagram
+  href: H.html
+  name: H.Controls.Diagram
+  nameWithType: H.Controls.Diagram
+  fullName: H.Controls.Diagram
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+- uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
+  commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__
+  name: CloneCast<T>(T, Predicate<PropertyInfo>)
+  nameWithType: ObjectExtension.CloneCast<T>(T, Predicate<PropertyInfo>)
+  fullName: System.ObjectExtension.CloneCast<T>(T, System.Predicate<System.Reflection.PropertyInfo>)
+  nameWithType.vb: ObjectExtension.CloneCast(Of T)(T, Predicate(Of PropertyInfo))
+  fullName.vb: System.ObjectExtension.CloneCast(Of T)(T, System.Predicate(Of System.Reflection.PropertyInfo))
+  name.vb: CloneCast(Of T)(T, Predicate(Of PropertyInfo))
+  spec.csharp:
+  - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
+    name: CloneCast
+    href: System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
+    name: CloneCast
+    href: System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: )
+  - name: )
+- uid: System.ObjectExtension
+  commentId: T:System.ObjectExtension
+  parent: System
+  href: System.ObjectExtension.html
+  name: ObjectExtension
+  nameWithType: ObjectExtension
+  fullName: System.ObjectExtension
+- uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.Object,System.String)
+  commentId: M:H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.Object,System.String)
+  isExternal: true
+  href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_
+  name: GetPropertyValue(object, string)
+  nameWithType: Extensions.GetPropertyValue(object, string)
+  fullName: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(object, string)
+  nameWithType.vb: Extensions.GetPropertyValue(Object, String)
+  fullName.vb: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(Object, String)
+  name.vb: GetPropertyValue(Object, String)
+  spec.csharp:
+  - uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.Object,System.String)
+    name: GetPropertyValue
+    href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.Object,System.String)
+    name: GetPropertyValue
+    href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Controls.FilterColumnDataGrid.Extensions
+  commentId: T:H.Controls.FilterColumnDataGrid.Extensions
+  parent: H.Controls.FilterColumnDataGrid
+  href: H.Controls.FilterColumnDataGrid.Extensions.html
+  name: Extensions
+  nameWithType: Extensions
+  fullName: H.Controls.FilterColumnDataGrid.Extensions
+- uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.Object,System.String)
+  commentId: M:H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.Object,System.String)
+  isExternal: true
+  href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_
+  name: GetPropertyValue<T>(object, string)
+  nameWithType: Extensions.GetPropertyValue<T>(object, string)
+  fullName: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue<T>(object, string)
+  nameWithType.vb: Extensions.GetPropertyValue(Of T)(Object, String)
+  fullName.vb: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(Of T)(Object, String)
+  name.vb: GetPropertyValue(Of T)(Object, String)
+  spec.csharp:
+  - uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.Object,System.String)
+    name: GetPropertyValue
+    href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.Object,System.String)
+    name: GetPropertyValue
+    href: H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Controls.Form.PropertyInfoExtention.ChangeType``1(System.Object)
+  commentId: M:H.Controls.Form.PropertyInfoExtention.ChangeType``1(System.Object)
+  isExternal: true
+  href: H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_
+  name: ChangeType<T>(object)
+  nameWithType: PropertyInfoExtention.ChangeType<T>(object)
+  fullName: H.Controls.Form.PropertyInfoExtention.ChangeType<T>(object)
+  nameWithType.vb: PropertyInfoExtention.ChangeType(Of T)(Object)
+  fullName.vb: H.Controls.Form.PropertyInfoExtention.ChangeType(Of T)(Object)
+  name.vb: ChangeType(Of T)(Object)
+  spec.csharp:
+  - uid: H.Controls.Form.PropertyInfoExtention.ChangeType``1(System.Object)
+    name: ChangeType
+    href: H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Form.PropertyInfoExtention.ChangeType``1(System.Object)
+    name: ChangeType
+    href: H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Controls.Form.PropertyInfoExtention
+  commentId: T:H.Controls.Form.PropertyInfoExtention
+  parent: H.Controls.Form
+  href: H.Controls.Form.PropertyInfoExtention.html
+  name: PropertyInfoExtention
+  nameWithType: PropertyInfoExtention
+  fullName: H.Controls.Form.PropertyInfoExtention
+- uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
+  commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__
+  name: CloneBy(object, Predicate<PropertyInfo>)
+  nameWithType: ObjectExtension.CloneBy(object, Predicate<PropertyInfo>)
+  fullName: System.ObjectExtension.CloneBy(object, System.Predicate<System.Reflection.PropertyInfo>)
+  nameWithType.vb: ObjectExtension.CloneBy(Object, Predicate(Of PropertyInfo))
+  fullName.vb: System.ObjectExtension.CloneBy(Object, System.Predicate(Of System.Reflection.PropertyInfo))
+  name.vb: CloneBy(Object, Predicate(Of PropertyInfo))
+  spec.csharp:
+  - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
+    name: CloneBy
+    href: System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
+    name: CloneBy
+    href: System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: )
+  - name: )
+- uid: System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+  commentId: M:System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__
+  name: CopyPropertyValueFrom(object, object, Predicate<PropertyInfo>, Func<PropertyInfo, PropertyInfo, bool>)
+  nameWithType: ObjectExtension.CopyPropertyValueFrom(object, object, Predicate<PropertyInfo>, Func<PropertyInfo, PropertyInfo, bool>)
+  fullName: System.ObjectExtension.CopyPropertyValueFrom(object, object, System.Predicate<System.Reflection.PropertyInfo>, System.Func<System.Reflection.PropertyInfo, System.Reflection.PropertyInfo, bool>)
+  nameWithType.vb: ObjectExtension.CopyPropertyValueFrom(Object, Object, Predicate(Of PropertyInfo), Func(Of PropertyInfo, PropertyInfo, Boolean))
+  fullName.vb: System.ObjectExtension.CopyPropertyValueFrom(Object, Object, System.Predicate(Of System.Reflection.PropertyInfo), System.Func(Of System.Reflection.PropertyInfo, System.Reflection.PropertyInfo, Boolean))
+  name.vb: CopyPropertyValueFrom(Object, Object, Predicate(Of PropertyInfo), Func(Of PropertyInfo, PropertyInfo, Boolean))
+  spec.csharp:
+  - uid: System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+    name: CopyPropertyValueFrom
+    href: System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+    name: CopyPropertyValueFrom
+    href: System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+  commentId: M:System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__
+  name: IsMacth(object, Func<PropertyInfo, object, bool>)
+  nameWithType: ObjectExtension.IsMacth(object, Func<PropertyInfo, object, bool>)
+  fullName: System.ObjectExtension.IsMacth(object, System.Func<System.Reflection.PropertyInfo, object, bool>)
+  nameWithType.vb: ObjectExtension.IsMacth(Object, Func(Of PropertyInfo, Object, Boolean))
+  fullName.vb: System.ObjectExtension.IsMacth(Object, System.Func(Of System.Reflection.PropertyInfo, Object, Boolean))
+  name.vb: IsMacth(Object, Func(Of PropertyInfo, Object, Boolean))
+  spec.csharp:
+  - uid: System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+    name: IsMacth
+    href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
+    name: IsMacth
+    href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.PropertyInfo
+    name: PropertyInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.ObjectExtension.IsMacth(System.Object,System.String)
+  commentId: M:System.ObjectExtension.IsMacth(System.Object,System.String)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_
+  name: IsMacth(object, string)
+  nameWithType: ObjectExtension.IsMacth(object, string)
+  fullName: System.ObjectExtension.IsMacth(object, string)
+  nameWithType.vb: ObjectExtension.IsMacth(Object, String)
+  fullName.vb: System.ObjectExtension.IsMacth(Object, String)
+  name.vb: IsMacth(Object, String)
+  spec.csharp:
+  - uid: System.ObjectExtension.IsMacth(System.Object,System.String)
+    name: IsMacth
+    href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.IsMacth(System.Object,System.String)
+    name: IsMacth
+    href: System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
+  commentId: M:System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___
+  name: ModelState(object, out List<string>)
+  nameWithType: ObjectExtension.ModelState(object, out List<string>)
+  fullName: System.ObjectExtension.ModelState(object, out System.Collections.Generic.List<string>)
+  nameWithType.vb: ObjectExtension.ModelState(Object, List(Of String))
+  fullName.vb: System.ObjectExtension.ModelState(Object, System.Collections.Generic.List(Of String))
+  name.vb: ModelState(Object, List(Of String))
+  spec.csharp:
+  - uid: System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
+    name: ModelState
+    href: System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
+    name: ModelState
+    href: System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+  commentId: M:System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__
+  name: ModelStateDeep(object, out string)
+  nameWithType: ObjectExtension.ModelStateDeep(object, out string)
+  fullName: System.ObjectExtension.ModelStateDeep(object, out string)
+  nameWithType.vb: ObjectExtension.ModelStateDeep(Object, String)
+  fullName.vb: System.ObjectExtension.ModelStateDeep(Object, String)
+  name.vb: ModelStateDeep(Object, String)
+  spec.csharp:
+  - uid: System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+    name: ModelStateDeep
+    href: System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+    name: ModelStateDeep
+    href: System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType``1(System.Object)
+  commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_
+  name: TryChangeType<T>(object)
+  nameWithType: ObjectExtension.TryChangeType<T>(object)
+  fullName: System.ObjectExtension.TryChangeType<T>(object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Of T)(Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Of T)(Object)
+  name.vb: TryChangeType(Of T)(Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType``1(System.Object)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType``1(System.Object)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ObjectExtension.TryChangeType``1(System.Object,``0@)
+  commentId: M:System.ObjectExtension.TryChangeType``1(System.Object,``0@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__
+  name: TryChangeType<T>(object, out T)
+  nameWithType: ObjectExtension.TryChangeType<T>(object, out T)
+  fullName: System.ObjectExtension.TryChangeType<T>(object, out T)
+  nameWithType.vb: ObjectExtension.TryChangeType(Of T)(Object, T)
+  fullName.vb: System.ObjectExtension.TryChangeType(Of T)(Object, T)
+  name.vb: TryChangeType(Of T)(Object, T)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType``1(System.Object,``0@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType``1(System.Object,``0@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ObjectExtension.TryConvertToString(System.Object)
+  commentId: M:System.ObjectExtension.TryConvertToString(System.Object)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_
+  name: TryConvertToString(object)
+  nameWithType: ObjectExtension.TryConvertToString(object)
+  fullName: System.ObjectExtension.TryConvertToString(object)
+  nameWithType.vb: ObjectExtension.TryConvertToString(Object)
+  fullName.vb: System.ObjectExtension.TryConvertToString(Object)
+  name.vb: TryConvertToString(Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryConvertToString(System.Object)
+    name: TryConvertToString
+    href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryConvertToString(System.Object)
+    name: TryConvertToString
+    href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ObjectExtension.TryConvertToString(System.Object,System.String@)
+  commentId: M:System.ObjectExtension.TryConvertToString(System.Object,System.String@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__
+  name: TryConvertToString(object, out string)
+  nameWithType: ObjectExtension.TryConvertToString(object, out string)
+  fullName: System.ObjectExtension.TryConvertToString(object, out string)
+  nameWithType.vb: ObjectExtension.TryConvertToString(Object, String)
+  fullName.vb: System.ObjectExtension.TryConvertToString(Object, String)
+  name.vb: TryConvertToString(Object, String)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryConvertToString(System.Object,System.String@)
+    name: TryConvertToString
+    href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryConvertToString(System.Object,System.String@)
+    name: TryConvertToString
+    href: System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
+  commentId: M:System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
+  isExternal: true
+  href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_
+  name: DelayInvoke(object, Action, DispatcherPriority)
+  nameWithType: DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)
+  fullName: System.Windows.Threading.DispatcherExtension.DelayInvoke(object, System.Action, System.Windows.Threading.DispatcherPriority)
+  nameWithType.vb: DispatcherExtension.DelayInvoke(Object, Action, DispatcherPriority)
+  fullName.vb: System.Windows.Threading.DispatcherExtension.DelayInvoke(Object, System.Action, System.Windows.Threading.DispatcherPriority)
+  name.vb: DelayInvoke(Object, Action, DispatcherPriority)
+  spec.csharp:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+  spec.vb:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+- uid: System.Windows.Threading.DispatcherExtension
+  commentId: T:System.Windows.Threading.DispatcherExtension
+  parent: System.Windows.Threading
+  href: System.Windows.Threading.DispatcherExtension.html
+  name: DispatcherExtension
+  nameWithType: DispatcherExtension
+  fullName: System.Windows.Threading.DispatcherExtension
+- uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+  commentId: M:System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+  isExternal: true
+  href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Action_System_Object__System_Action_System_Windows_Threading_DispatcherPriority_
+  name: DelayInvoke(object, IList, Action<object>, Action, DispatcherPriority)
+  nameWithType: DispatcherExtension.DelayInvoke(object, IList, Action<object>, Action, DispatcherPriority)
+  fullName: System.Windows.Threading.DispatcherExtension.DelayInvoke(object, System.Collections.IList, System.Action<object>, System.Action, System.Windows.Threading.DispatcherPriority)
+  nameWithType.vb: DispatcherExtension.DelayInvoke(Object, IList, Action(Of Object), Action, DispatcherPriority)
+  fullName.vb: System.Windows.Threading.DispatcherExtension.DelayInvoke(Object, System.Collections.IList, System.Action(Of Object), System.Action, System.Windows.Threading.DispatcherPriority)
+  name.vb: DelayInvoke(Object, IList, Action(Of Object), Action, DispatcherPriority)
+  spec.csharp:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Action_System_Object__System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+  spec.vb:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Action_System_Object__System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+- uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+  commentId: M:System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+  isExternal: true
+  href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_
+  name: DelayInvoke(object, IList, Func<IList>, Action, DispatcherPriority)
+  nameWithType: DispatcherExtension.DelayInvoke(object, IList, Func<IList>, Action, DispatcherPriority)
+  fullName: System.Windows.Threading.DispatcherExtension.DelayInvoke(object, System.Collections.IList, System.Func<System.Collections.IList>, System.Action, System.Windows.Threading.DispatcherPriority)
+  nameWithType.vb: DispatcherExtension.DelayInvoke(Object, IList, Func(Of IList), Action, DispatcherPriority)
+  fullName.vb: System.Windows.Threading.DispatcherExtension.DelayInvoke(Object, System.Collections.IList, System.Func(Of System.Collections.IList), System.Action, System.Windows.Threading.DispatcherPriority)
+  name.vb: DelayInvoke(Object, IList, Func(Of IList), Action, DispatcherPriority)
+  spec.csharp:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+  spec.vb:
+  - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
+    name: DelayInvoke
+    href: System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.IList
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Threading.DispatcherPriority
+    name: DispatcherPriority
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
+  - name: )
+- uid: H.Controls.FilterColumnDataGrid
+  commentId: N:H.Controls.FilterColumnDataGrid
+  href: H.html
+  name: H.Controls.FilterColumnDataGrid
+  nameWithType: H.Controls.FilterColumnDataGrid
+  fullName: H.Controls.FilterColumnDataGrid
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.FilterColumnDataGrid
+    name: FilterColumnDataGrid
+    href: H.Controls.FilterColumnDataGrid.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.FilterColumnDataGrid
+    name: FilterColumnDataGrid
+    href: H.Controls.FilterColumnDataGrid.html
+- uid: H.Controls.Form
+  commentId: N:H.Controls.Form
+  href: H.html
+  name: H.Controls.Form
+  nameWithType: H.Controls.Form
+  fullName: H.Controls.Form
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Form
+    name: Form
+    href: H.Controls.Form.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Form
+    name: Form
+    href: H.Controls.Form.html
+- uid: System.Windows.Threading
+  commentId: N:System.Windows.Threading
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Threading
+  nameWithType: System.Windows.Threading
+  fullName: System.Windows.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Threading
+    name: Threading
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading
+  spec.vb:
+  - uid: System
+    name: System
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Threading
+    name: Threading
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading
+- uid: H.Controls.Diagram.Extension.FlowableLinkData`1.#ctor*
+  commentId: Overload:H.Controls.Diagram.Extension.FlowableLinkData`1.#ctor
+  href: H.Controls.Diagram.Extension.FlowableLinkData-1.html#H_Controls_Diagram_Extension_FlowableLinkData_1__ctor
+  name: FlowableLinkData
+  nameWithType: FlowableLinkData<T>.FlowableLinkData
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData<T>.FlowableLinkData
+  nameWithType.vb: FlowableLinkData(Of T).New
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData(Of T).New
+  name.vb: New
+- uid: H.Controls.Diagram.Extension.FlowableLinkData`1.NodeResult*
+  commentId: Overload:H.Controls.Diagram.Extension.FlowableLinkData`1.NodeResult
+  href: H.Controls.Diagram.Extension.FlowableLinkData-1.html#H_Controls_Diagram_Extension_FlowableLinkData_1_NodeResult
+  name: NodeResult
+  nameWithType: FlowableLinkData<T>.NodeResult
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData<T>.NodeResult
+  nameWithType.vb: FlowableLinkData(Of T).NodeResult
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData(Of T).NodeResult
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: H.Controls.Diagram.Extension.FlowableLinkData.IsMatchResult(H.Controls.Diagram.FlowableResult)
+  commentId: M:H.Controls.Diagram.Extension.FlowableLinkData.IsMatchResult(H.Controls.Diagram.FlowableResult)
+  parent: H.Controls.Diagram.Extension.FlowableLinkData
+  href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_IsMatchResult_H_Controls_Diagram_FlowableResult_
+  name: IsMatchResult(FlowableResult)
+  nameWithType: FlowableLinkData.IsMatchResult(FlowableResult)
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData.IsMatchResult(H.Controls.Diagram.FlowableResult)
+  spec.csharp:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.IsMatchResult(H.Controls.Diagram.FlowableResult)
+    name: IsMatchResult
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_IsMatchResult_H_Controls_Diagram_FlowableResult_
+  - name: (
+  - uid: H.Controls.Diagram.FlowableResult
+    name: FlowableResult
+    href: H.Controls.Diagram.FlowableResult.html
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.Extension.FlowableLinkData.IsMatchResult(H.Controls.Diagram.FlowableResult)
+    name: IsMatchResult
+    href: H.Controls.Diagram.Extension.FlowableLinkData.html#H_Controls_Diagram_Extension_FlowableLinkData_IsMatchResult_H_Controls_Diagram_FlowableResult_
+  - name: (
+  - uid: H.Controls.Diagram.FlowableResult
+    name: FlowableResult
+    href: H.Controls.Diagram.FlowableResult.html
+  - name: )
+- uid: H.Controls.Diagram.Extension.FlowableLinkData`1.IsMatchResult*
+  commentId: Overload:H.Controls.Diagram.Extension.FlowableLinkData`1.IsMatchResult
+  href: H.Controls.Diagram.Extension.FlowableLinkData-1.html#H_Controls_Diagram_Extension_FlowableLinkData_1_IsMatchResult_H_Controls_Diagram_FlowableResult_
+  name: IsMatchResult
+  nameWithType: FlowableLinkData<T>.IsMatchResult
+  fullName: H.Controls.Diagram.Extension.FlowableLinkData<T>.IsMatchResult
+  nameWithType.vb: FlowableLinkData(Of T).IsMatchResult
+  fullName.vb: H.Controls.Diagram.Extension.FlowableLinkData(Of T).IsMatchResult
+- uid: H.Controls.Diagram.FlowableResult
+  commentId: T:H.Controls.Diagram.FlowableResult
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.FlowableResult.html
+  name: FlowableResult
+  nameWithType: FlowableResult
+  fullName: H.Controls.Diagram.FlowableResult
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
