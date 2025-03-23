@@ -5,26 +5,22 @@ items:
   id: H.Mvvm
   children:
   - H.Mvvm.AsyncMarkupCommandBase
-  - H.Mvvm.Bindable
-  - H.Mvvm.BindableBase
   - H.Mvvm.BindingProxy
   - H.Mvvm.CommandBase
   - H.Mvvm.Commands
-  - H.Mvvm.DesignPresenterBase
-  - H.Mvvm.DisplayBindableBase
   - H.Mvvm.DisplayBindable`1
   - H.Mvvm.DisplayCommand
   - H.Mvvm.DisplayCommand`1
-  - H.Mvvm.IDAttribute
-  - H.Mvvm.IDable
+  - H.Mvvm.DisplayMarkupCommandBase
+  - H.Mvvm.IDescriptionable
   - H.Mvvm.IDesignPresenterBase
+  - H.Mvvm.IDisplayBindable
   - H.Mvvm.IDisplayCommand
+  - H.Mvvm.IIconable
+  - H.Mvvm.IInvokeCommand
   - H.Mvvm.IModelBindable
   - H.Mvvm.IModelBindable`1
-  - H.Mvvm.IRelayCommand
-  - H.Mvvm.ISearchable
-  - H.Mvvm.ISelectBindable
-  - H.Mvvm.ITransactionCommand
+  - H.Mvvm.IOrderable
   - H.Mvvm.ITreeNode
   - H.Mvvm.InvokeCommand
   - H.Mvvm.MarkupCommandBase
@@ -33,7 +29,6 @@ items:
   - H.Mvvm.RelayCommand`1
   - H.Mvvm.RoutedEventArgs`1
   - H.Mvvm.SelectBindable`1
-  - H.Mvvm.TransactionCommand
   - H.Mvvm.TreeNodeBase`1
   langs:
   - csharp
@@ -67,6 +62,7 @@ references:
   fullName: H.Mvvm.Commands
 - uid: H.Mvvm.DisplayCommand
   commentId: T:H.Mvvm.DisplayCommand
+  parent: H.Mvvm
   href: H.Mvvm.DisplayCommand.html
   name: DisplayCommand
   nameWithType: DisplayCommand
@@ -96,6 +92,13 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: H.Mvvm.DisplayMarkupCommandBase
+  commentId: T:H.Mvvm.DisplayMarkupCommandBase
+  parent: H.Mvvm
+  href: H.Mvvm.DisplayMarkupCommandBase.html
+  name: DisplayMarkupCommandBase
+  nameWithType: DisplayMarkupCommandBase
+  fullName: H.Mvvm.DisplayMarkupCommandBase
 - uid: H.Mvvm.IDisplayCommand
   commentId: T:H.Mvvm.IDisplayCommand
   parent: H.Mvvm
@@ -103,6 +106,13 @@ references:
   name: IDisplayCommand
   nameWithType: IDisplayCommand
   fullName: H.Mvvm.IDisplayCommand
+- uid: H.Mvvm.IInvokeCommand
+  commentId: T:H.Mvvm.IInvokeCommand
+  parent: H.Mvvm
+  href: H.Mvvm.IInvokeCommand.html
+  name: IInvokeCommand
+  nameWithType: IInvokeCommand
+  fullName: H.Mvvm.IInvokeCommand
 - uid: H.Mvvm.InvokeCommand
   commentId: T:H.Mvvm.InvokeCommand
   parent: H.Mvvm
@@ -117,13 +127,13 @@ references:
   name: MarkupCommandBase
   nameWithType: MarkupCommandBase
   fullName: H.Mvvm.MarkupCommandBase
-- uid: H.Mvvm.IRelayCommand
-  commentId: T:H.Mvvm.IRelayCommand
+- uid: H.Mvvm.RelayCommand
+  commentId: T:H.Mvvm.RelayCommand
   parent: H.Mvvm
-  href: H.Mvvm.IRelayCommand.html
-  name: IRelayCommand
-  nameWithType: IRelayCommand
-  fullName: H.Mvvm.IRelayCommand
+  href: H.Mvvm.RelayCommand.html
+  name: RelayCommand
+  nameWithType: RelayCommand
+  fullName: H.Mvvm.RelayCommand
 - uid: H.Mvvm.RelayCommand`1
   commentId: T:H.Mvvm.RelayCommand`1
   href: H.Mvvm.RelayCommand-1.html
@@ -149,27 +159,6 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: H.Mvvm.RelayCommand
-  commentId: T:H.Mvvm.RelayCommand
-  parent: H.Mvvm
-  href: H.Mvvm.RelayCommand.html
-  name: RelayCommand
-  nameWithType: RelayCommand
-  fullName: H.Mvvm.RelayCommand
-- uid: H.Mvvm.ITransactionCommand
-  commentId: T:H.Mvvm.ITransactionCommand
-  parent: H.Mvvm
-  href: H.Mvvm.ITransactionCommand.html
-  name: ITransactionCommand
-  nameWithType: ITransactionCommand
-  fullName: H.Mvvm.ITransactionCommand
-- uid: H.Mvvm.TransactionCommand
-  commentId: T:H.Mvvm.TransactionCommand
-  parent: H.Mvvm
-  href: H.Mvvm.TransactionCommand.html
-  name: TransactionCommand
-  nameWithType: TransactionCommand
-  fullName: H.Mvvm.TransactionCommand
 - uid: H.Mvvm.RoutedEventArgs`1
   commentId: T:H.Mvvm.RoutedEventArgs`1
   href: H.Mvvm.RoutedEventArgs-1.html
@@ -195,33 +184,12 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: H.Mvvm.Bindable
-  commentId: T:H.Mvvm.Bindable
-  parent: H.Mvvm
-  href: H.Mvvm.Bindable.html
-  name: Bindable
-  nameWithType: Bindable
-  fullName: H.Mvvm.Bindable
-- uid: H.Mvvm.BindableBase
-  commentId: T:H.Mvvm.BindableBase
-  parent: H.Mvvm
-  href: H.Mvvm.BindableBase.html
-  name: BindableBase
-  nameWithType: BindableBase
-  fullName: H.Mvvm.BindableBase
 - uid: H.Mvvm.BindingProxy
   commentId: T:H.Mvvm.BindingProxy
   href: H.Mvvm.BindingProxy.html
   name: BindingProxy
   nameWithType: BindingProxy
   fullName: H.Mvvm.BindingProxy
-- uid: H.Mvvm.DesignPresenterBase
-  commentId: T:H.Mvvm.DesignPresenterBase
-  parent: H.Mvvm
-  href: H.Mvvm.DesignPresenterBase.html
-  name: DesignPresenterBase
-  nameWithType: DesignPresenterBase
-  fullName: H.Mvvm.DesignPresenterBase
 - uid: H.Mvvm.DisplayBindable`1
   commentId: T:H.Mvvm.DisplayBindable`1
   href: H.Mvvm.DisplayBindable-1.html
@@ -247,26 +215,13 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: H.Mvvm.DisplayBindableBase
-  commentId: T:H.Mvvm.DisplayBindableBase
+- uid: H.Mvvm.IDescriptionable
+  commentId: T:H.Mvvm.IDescriptionable
   parent: H.Mvvm
-  href: H.Mvvm.DisplayBindableBase.html
-  name: DisplayBindableBase
-  nameWithType: DisplayBindableBase
-  fullName: H.Mvvm.DisplayBindableBase
-- uid: H.Mvvm.IDable
-  commentId: T:H.Mvvm.IDable
-  parent: H.Mvvm
-  href: H.Mvvm.IDable.html
-  name: IDable
-  nameWithType: IDable
-  fullName: H.Mvvm.IDable
-- uid: H.Mvvm.IDAttribute
-  commentId: T:H.Mvvm.IDAttribute
-  href: H.Mvvm.IDAttribute.html
-  name: IDAttribute
-  nameWithType: IDAttribute
-  fullName: H.Mvvm.IDAttribute
+  href: H.Mvvm.IDescriptionable.html
+  name: IDescriptionable
+  nameWithType: IDescriptionable
+  fullName: H.Mvvm.IDescriptionable
 - uid: H.Mvvm.IDesignPresenterBase
   commentId: T:H.Mvvm.IDesignPresenterBase
   parent: H.Mvvm
@@ -274,6 +229,20 @@ references:
   name: IDesignPresenterBase
   nameWithType: IDesignPresenterBase
   fullName: H.Mvvm.IDesignPresenterBase
+- uid: H.Mvvm.IDisplayBindable
+  commentId: T:H.Mvvm.IDisplayBindable
+  parent: H.Mvvm
+  href: H.Mvvm.IDisplayBindable.html
+  name: IDisplayBindable
+  nameWithType: IDisplayBindable
+  fullName: H.Mvvm.IDisplayBindable
+- uid: H.Mvvm.IIconable
+  commentId: T:H.Mvvm.IIconable
+  parent: H.Mvvm
+  href: H.Mvvm.IIconable.html
+  name: IIconable
+  nameWithType: IIconable
+  fullName: H.Mvvm.IIconable
 - uid: H.Mvvm.IModelBindable
   commentId: T:H.Mvvm.IModelBindable
   parent: H.Mvvm
@@ -306,20 +275,13 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: H.Mvvm.ISearchable
-  commentId: T:H.Mvvm.ISearchable
+- uid: H.Mvvm.IOrderable
+  commentId: T:H.Mvvm.IOrderable
   parent: H.Mvvm
-  href: H.Mvvm.ISearchable.html
-  name: ISearchable
-  nameWithType: ISearchable
-  fullName: H.Mvvm.ISearchable
-- uid: H.Mvvm.ISelectBindable
-  commentId: T:H.Mvvm.ISelectBindable
-  parent: H.Mvvm
-  href: H.Mvvm.ISelectBindable.html
-  name: ISelectBindable
-  nameWithType: ISelectBindable
-  fullName: H.Mvvm.ISelectBindable
+  href: H.Mvvm.IOrderable.html
+  name: IOrderable
+  nameWithType: IOrderable
+  fullName: H.Mvvm.IOrderable
 - uid: H.Mvvm.ModelBindable`1
   commentId: T:H.Mvvm.ModelBindable`1
   href: H.Mvvm.ModelBindable-1.html

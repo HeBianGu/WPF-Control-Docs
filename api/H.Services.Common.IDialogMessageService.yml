@@ -21,24 +21,36 @@ items:
   source:
     id: IDialogMessageService
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\Dialog\IDialogMessageService.cs
-    startLine: 4
+    startLine: 9
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
+  summary: 对话框消息服务接口
+  example: []
   syntax:
     content: public interface IDialogMessageService
     content.vb: Public Interface IDialogMessageService
   extensionMethods:
+  - H.Services.Common.IDialogMessageService.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  - H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(System.Action{System.Nullable{System.Boolean}})
+  - H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowDeleteDialog(System.Action{System.Nullable{System.Boolean}})
+  - H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowDialog(System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+  - H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowDialog``1(System.Action{{T}},System.Action{{T}},System.Action{H.Services.Common.IDialog},System.Func{{T},System.Boolean})
+  - H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog
   - H.Services.Common.IDialogMessageService.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -60,21 +72,27 @@ items:
   source:
     id: Show
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\Dialog\IDialogMessageService.cs
-    startLine: 6
+    startLine: 18
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
+  summary: 显示对话框
+  example: []
   syntax:
     content: Task<bool?> Show(object presenter, Action<IDialog> builder = null, Func<bool> canSumit = null)
     parameters:
     - id: presenter
       type: System.Object
+      description: 对话框的呈现者
     - id: builder
       type: System.Action{H.Services.Common.IDialog}
+      description: 对话框构建器
     - id: canSumit
       type: System.Func{System.Boolean}
+      description: 确定按钮是否可用的条件
     return:
       type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+      description: 对话框的结果
     content.vb: Function Show(presenter As Object, builder As Action(Of IDialog) = Nothing, canSumit As Func(Of Boolean) = Nothing) As Task(Of Boolean?)
   overload: H.Services.Common.IDialogMessageService.Show*
   nameWithType.vb: IDialogMessageService.Show(Object, Action(Of IDialog), Func(Of Boolean))
@@ -94,24 +112,32 @@ items:
   source:
     id: ShowAction
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\Dialog\IDialogMessageService.cs
-    startLine: 7
+    startLine: 29
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
+  summary: 显示带操作的对话框
+  example: []
   syntax:
     content: Task<T> ShowAction<P, T>(P presenter, Action<IDialog> builder = null, Func<IDialog, P, T> action = null)
     parameters:
     - id: presenter
       type: '{P}'
+      description: 对话框的呈现者
     - id: builder
       type: System.Action{H.Services.Common.IDialog}
+      description: 对话框构建器
     - id: action
       type: System.Func{H.Services.Common.IDialog,{P},{T}}
+      description: 对话框操作的委托
     typeParameters:
     - id: P
+      description: 呈现者的类型
     - id: T
+      description: 操作结果的类型
     return:
       type: System.Threading.Tasks.Task{{T}}
+      description: 对话框的操作结果
     content.vb: Function ShowAction(Of P, T)(presenter As P, builder As Action(Of IDialog) = Nothing, action As Func(Of IDialog, P, T) = Nothing) As Task(Of T)
   overload: H.Services.Common.IDialogMessageService.ShowAction*
   nameWithType.vb: IDialogMessageService.ShowAction(Of P, T)(P, Action(Of IDialog), Func(Of IDialog, P, T))
@@ -131,21 +157,27 @@ items:
   source:
     id: ShowPercent
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\Dialog\IDialogMessageService.cs
-    startLine: 8
+    startLine: 38
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
+  summary: 显示百分比对话框
+  example: []
   syntax:
     content: Task<T> ShowPercent<T>(Func<IDialog, IPercentPresenter, T> action, Action<IDialog> build = null)
     parameters:
     - id: action
       type: System.Func{H.Services.Common.IDialog,H.Services.Common.IPercentPresenter,{T}}
+      description: 百分比对话框操作的委托
     - id: build
       type: System.Action{H.Services.Common.IDialog}
+      description: 对话框构建器
     typeParameters:
     - id: T
+      description: 操作结果的类型
     return:
       type: System.Threading.Tasks.Task{{T}}
+      description: 对话框的操作结果
     content.vb: Function ShowPercent(Of T)(action As Func(Of IDialog, IPercentPresenter, T), build As Action(Of IDialog) = Nothing) As Task(Of T)
   overload: H.Services.Common.IDialogMessageService.ShowPercent*
   nameWithType.vb: IDialogMessageService.ShowPercent(Of T)(Func(Of IDialog, IPercentPresenter, T), Action(Of IDialog))
@@ -165,21 +197,27 @@ items:
   source:
     id: ShowString
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\Dialog\IDialogMessageService.cs
-    startLine: 9
+    startLine: 47
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
+  summary: 显示字符串对话框
+  example: []
   syntax:
     content: Task<T> ShowString<T>(Func<IDialog, IStringPresenter, T> action, Action<IDialog> build = null)
     parameters:
     - id: action
       type: System.Func{H.Services.Common.IDialog,H.Services.Common.IStringPresenter,{T}}
+      description: 字符串对话框操作的委托
     - id: build
       type: System.Action{H.Services.Common.IDialog}
+      description: 对话框构建器
     typeParameters:
     - id: T
+      description: 操作结果的类型
     return:
       type: System.Threading.Tasks.Task{{T}}
+      description: 对话框的操作结果
     content.vb: Function ShowString(Of T)(action As Func(Of IDialog, IStringPresenter, T), build As Action(Of IDialog) = Nothing) As Task(Of T)
   overload: H.Services.Common.IDialogMessageService.ShowString*
   nameWithType.vb: IDialogMessageService.ShowString(Of T)(Func(Of IDialog, IStringPresenter, T), Action(Of IDialog))
@@ -199,21 +237,27 @@ items:
   source:
     id: ShowWait
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\Dialog\IDialogMessageService.cs
-    startLine: 10
+    startLine: 56
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
+  summary: 显示等待对话框
+  example: []
   syntax:
     content: Task<T> ShowWait<T>(Func<IDialog, T> action, Action<IDialog> build = null)
     parameters:
     - id: action
       type: System.Func{H.Services.Common.IDialog,{T}}
+      description: 等待对话框操作的委托
     - id: build
       type: System.Action{H.Services.Common.IDialog}
+      description: 对话框构建器
     typeParameters:
     - id: T
+      description: 操作结果的类型
     return:
       type: System.Threading.Tasks.Task{{T}}
+      description: 对话框的操作结果
     content.vb: Function ShowWait(Of T)(action As Func(Of IDialog, T), build As Action(Of IDialog) = Nothing) As Task(Of T)
   overload: H.Services.Common.IDialogMessageService.ShowWait*
   nameWithType.vb: IDialogMessageService.ShowWait(Of T)(Func(Of IDialog, T), Action(Of IDialog))
@@ -233,23 +277,30 @@ items:
   source:
     id: ShowForeach
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\Dialog\IDialogMessageService.cs
-    startLine: 12
+    startLine: 66
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
+  summary: 显示循环对话框
+  example: []
   syntax:
     content: Task<bool> ShowForeach<T>(Func<IEnumerable<T>> getList, Func<T, Tuple<bool, string>> itemAction, Action<IDialog> build = null)
     parameters:
     - id: getList
       type: System.Func{System.Collections.Generic.IEnumerable{{T}}}
+      description: 获取列表的委托
     - id: itemAction
       type: System.Func{{T},System.Tuple{System.Boolean,System.String}}
+      description: 列表项操作的委托
     - id: build
       type: System.Action{H.Services.Common.IDialog}
+      description: 对话框构建器
     typeParameters:
     - id: T
+      description: 列表项的类型
     return:
       type: System.Threading.Tasks.Task{System.Boolean}
+      description: 对话框的操作结果
     content.vb: Function ShowForeach(Of T)(getList As Func(Of IEnumerable(Of T)), itemAction As Func(Of T, Tuple(Of Boolean, String)), build As Action(Of IDialog) = Nothing) As Task(Of Boolean)
   overload: H.Services.Common.IDialogMessageService.ShowForeach*
   nameWithType.vb: IDialogMessageService.ShowForeach(Of T)(Func(Of IEnumerable(Of T)), Func(Of T, Tuple(Of Boolean, String)), Action(Of IDialog))
@@ -286,6 +337,439 @@ references:
   - uid: H.Services.Common
     name: Common
     href: H.Services.Common.html
+- uid: H.Services.Common.IDialogMessageService.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<IDialogMessageService>(IDialogMessageService)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<IDialogMessageService>(IDialogMessageService)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Services.Common.IDialogMessageService>(H.Services.Common.IDialogMessageService)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of IDialogMessageService)(IDialogMessageService)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Services.Common.IDialogMessageService)(H.Services.Common.IDialogMessageService)
+  name.vb: CloneByNewtonsoftJson(Of IDialogMessageService)(IDialogMessageService)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Services.Common.IDialogMessageService)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: '>'
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Services.Common.IDialogMessageService)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: )
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: )
+- uid: H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(System.Action{System.Nullable{System.Boolean}})
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+  parent: H.Services.Common.DialogMessageExtension
+  definition: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteAllDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  name: ShowDeleteAllDialog(IDialogMessageService, Action<bool?>)
+  nameWithType: DialogMessageExtension.ShowDeleteAllDialog(IDialogMessageService, Action<bool?>)
+  fullName: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService, System.Action<bool?>)
+  nameWithType.vb: DialogMessageExtension.ShowDeleteAllDialog(IDialogMessageService, Action(Of Boolean?))
+  fullName.vb: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService, System.Action(Of Boolean?))
+  name.vb: ShowDeleteAllDialog(IDialogMessageService, Action(Of Boolean?))
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+    name: ShowDeleteAllDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteAllDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+    name: ShowDeleteAllDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteAllDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+  - name: )
+- uid: H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowDeleteDialog(System.Action{System.Nullable{System.Boolean}})
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+  parent: H.Services.Common.DialogMessageExtension
+  definition: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  name: ShowDeleteDialog(IDialogMessageService, Action<bool?>)
+  nameWithType: DialogMessageExtension.ShowDeleteDialog(IDialogMessageService, Action<bool?>)
+  fullName: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService, System.Action<bool?>)
+  nameWithType.vb: DialogMessageExtension.ShowDeleteDialog(IDialogMessageService, Action(Of Boolean?))
+  fullName.vb: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService, System.Action(Of Boolean?))
+  name.vb: ShowDeleteDialog(IDialogMessageService, Action(Of Boolean?))
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+    name: ShowDeleteDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+    name: ShowDeleteDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+  - name: )
+- uid: H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowDialog(System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService,System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+  parent: H.Services.Common.DialogMessageExtension
+  definition: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService,System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog_H_Services_Common_IDialogMessageService_System_Object_System_Action_System_Nullable_System_Boolean___System_Action_H_Services_Common_IDialog__System_Func_System_Boolean__
+  name: ShowDialog(IDialogMessageService, object, Action<bool?>, Action<IDialog>, Func<bool>)
+  nameWithType: DialogMessageExtension.ShowDialog(IDialogMessageService, object, Action<bool?>, Action<IDialog>, Func<bool>)
+  fullName: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService, object, System.Action<bool?>, System.Action<H.Services.Common.IDialog>, System.Func<bool>)
+  nameWithType.vb: DialogMessageExtension.ShowDialog(IDialogMessageService, Object, Action(Of Boolean?), Action(Of IDialog), Func(Of Boolean))
+  fullName.vb: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService, Object, System.Action(Of Boolean?), System.Action(Of H.Services.Common.IDialog), System.Func(Of Boolean))
+  name.vb: ShowDialog(IDialogMessageService, Object, Action(Of Boolean?), Action(Of IDialog), Func(Of Boolean))
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService,System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+    name: ShowDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog_H_Services_Common_IDialogMessageService_System_Object_System_Action_System_Nullable_System_Boolean___System_Action_H_Services_Common_IDialog__System_Func_System_Boolean__
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService,System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+    name: ShowDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog_H_Services_Common_IDialogMessageService_System_Object_System_Action_System_Nullable_System_Boolean___System_Action_H_Services_Common_IDialog__System_Func_System_Boolean__
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowDialog``1(System.Action{{T}},System.Action{{T}},System.Action{H.Services.Common.IDialog},System.Func{{T},System.Boolean})
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowDialog``1(H.Services.Common.IDialogMessageService,System.Action{``0},System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{``0,System.Boolean})
+  parent: H.Services.Common.DialogMessageExtension
+  definition: H.Services.Common.DialogMessageExtension.ShowDialog``1(H.Services.Common.IDialogMessageService,System.Action{``0},System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{``0,System.Boolean})
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog__1_H_Services_Common_IDialogMessageService_System_Action___0__System_Action___0__System_Action_H_Services_Common_IDialog__System_Func___0_System_Boolean__
+  name: ShowDialog<T>(IDialogMessageService, Action<T>, Action<T>, Action<IDialog>, Func<T, bool>)
+  nameWithType: DialogMessageExtension.ShowDialog<T>(IDialogMessageService, Action<T>, Action<T>, Action<IDialog>, Func<T, bool>)
+  fullName: H.Services.Common.DialogMessageExtension.ShowDialog<T>(H.Services.Common.IDialogMessageService, System.Action<T>, System.Action<T>, System.Action<H.Services.Common.IDialog>, System.Func<T, bool>)
+  nameWithType.vb: DialogMessageExtension.ShowDialog(Of T)(IDialogMessageService, Action(Of T), Action(Of T), Action(Of IDialog), Func(Of T, Boolean))
+  fullName.vb: H.Services.Common.DialogMessageExtension.ShowDialog(Of T)(H.Services.Common.IDialogMessageService, System.Action(Of T), System.Action(Of T), System.Action(Of H.Services.Common.IDialog), System.Func(Of T, Boolean))
+  name.vb: ShowDialog(Of T)(IDialogMessageService, Action(Of T), Action(Of T), Action(Of IDialog), Func(Of T, Boolean))
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDialog``1(H.Services.Common.IDialogMessageService,System.Action{``0},System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{``0,System.Boolean})
+    name: ShowDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog__1_H_Services_Common_IDialogMessageService_System_Action___0__System_Action___0__System_Action_H_Services_Common_IDialog__System_Func___0_System_Boolean__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDialog``1(H.Services.Common.IDialogMessageService,System.Action{``0},System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{``0,System.Boolean})
+    name: ShowDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog__1_H_Services_Common_IDialogMessageService_System_Action___0__System_Action___0__System_Action_H_Services_Common_IDialog__System_Func___0_System_Boolean__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: H.Services.Common.IDialogMessageService.H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+  parent: H.Services.Common.DialogMessageExtension
+  definition: H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowNotImplementedDialog_H_Services_Common_IDialogMessageService_
+  name: ShowNotImplementedDialog(IDialogMessageService)
+  nameWithType: DialogMessageExtension.ShowNotImplementedDialog(IDialogMessageService)
+  fullName: H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+    name: ShowNotImplementedDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowNotImplementedDialog_H_Services_Common_IDialogMessageService_
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+    name: ShowNotImplementedDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowNotImplementedDialog_H_Services_Common_IDialogMessageService_
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: )
 - uid: H.Services.Common.IDialogMessageService.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -485,6 +969,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -890,6 +1515,63 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
   parent: System.ObjectExtension
@@ -1293,6 +1975,437 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+- uid: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+  isExternal: true
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteAllDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  name: ShowDeleteAllDialog(IDialogMessageService, Action<bool?>)
+  nameWithType: DialogMessageExtension.ShowDeleteAllDialog(IDialogMessageService, Action<bool?>)
+  fullName: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService, System.Action<bool?>)
+  nameWithType.vb: DialogMessageExtension.ShowDeleteAllDialog(IDialogMessageService, Action(Of Boolean?))
+  fullName.vb: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService, System.Action(Of Boolean?))
+  name.vb: ShowDeleteAllDialog(IDialogMessageService, Action(Of Boolean?))
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+    name: ShowDeleteAllDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteAllDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDeleteAllDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+    name: ShowDeleteAllDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteAllDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+  - name: )
+- uid: H.Services.Common.DialogMessageExtension
+  commentId: T:H.Services.Common.DialogMessageExtension
+  parent: H.Services.Common
+  href: H.Services.Common.DialogMessageExtension.html
+  name: DialogMessageExtension
+  nameWithType: DialogMessageExtension
+  fullName: H.Services.Common.DialogMessageExtension
+- uid: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+  isExternal: true
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  name: ShowDeleteDialog(IDialogMessageService, Action<bool?>)
+  nameWithType: DialogMessageExtension.ShowDeleteDialog(IDialogMessageService, Action<bool?>)
+  fullName: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService, System.Action<bool?>)
+  nameWithType.vb: DialogMessageExtension.ShowDeleteDialog(IDialogMessageService, Action(Of Boolean?))
+  fullName.vb: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService, System.Action(Of Boolean?))
+  name.vb: ShowDeleteDialog(IDialogMessageService, Action(Of Boolean?))
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+    name: ShowDeleteDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDeleteDialog(H.Services.Common.IDialogMessageService,System.Action{System.Nullable{System.Boolean}})
+    name: ShowDeleteDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+  - name: )
+- uid: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService,System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService,System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+  isExternal: true
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog_H_Services_Common_IDialogMessageService_System_Object_System_Action_System_Nullable_System_Boolean___System_Action_H_Services_Common_IDialog__System_Func_System_Boolean__
+  name: ShowDialog(IDialogMessageService, object, Action<bool?>, Action<IDialog>, Func<bool>)
+  nameWithType: DialogMessageExtension.ShowDialog(IDialogMessageService, object, Action<bool?>, Action<IDialog>, Func<bool>)
+  fullName: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService, object, System.Action<bool?>, System.Action<H.Services.Common.IDialog>, System.Func<bool>)
+  nameWithType.vb: DialogMessageExtension.ShowDialog(IDialogMessageService, Object, Action(Of Boolean?), Action(Of IDialog), Func(Of Boolean))
+  fullName.vb: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService, Object, System.Action(Of Boolean?), System.Action(Of H.Services.Common.IDialog), System.Func(Of Boolean))
+  name.vb: ShowDialog(IDialogMessageService, Object, Action(Of Boolean?), Action(Of IDialog), Func(Of Boolean))
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService,System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+    name: ShowDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog_H_Services_Common_IDialogMessageService_System_Object_System_Action_System_Nullable_System_Boolean___System_Action_H_Services_Common_IDialog__System_Func_System_Boolean__
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDialog(H.Services.Common.IDialogMessageService,System.Object,System.Action{System.Nullable{System.Boolean}},System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+    name: ShowDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog_H_Services_Common_IDialogMessageService_System_Object_System_Action_System_Nullable_System_Boolean___System_Action_H_Services_Common_IDialog__System_Func_System_Boolean__
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: H.Services.Common.DialogMessageExtension.ShowDialog``1(H.Services.Common.IDialogMessageService,System.Action{``0},System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{``0,System.Boolean})
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowDialog``1(H.Services.Common.IDialogMessageService,System.Action{``0},System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{``0,System.Boolean})
+  isExternal: true
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog__1_H_Services_Common_IDialogMessageService_System_Action___0__System_Action___0__System_Action_H_Services_Common_IDialog__System_Func___0_System_Boolean__
+  name: ShowDialog<T>(IDialogMessageService, Action<T>, Action<T>, Action<IDialog>, Func<T, bool>)
+  nameWithType: DialogMessageExtension.ShowDialog<T>(IDialogMessageService, Action<T>, Action<T>, Action<IDialog>, Func<T, bool>)
+  fullName: H.Services.Common.DialogMessageExtension.ShowDialog<T>(H.Services.Common.IDialogMessageService, System.Action<T>, System.Action<T>, System.Action<H.Services.Common.IDialog>, System.Func<T, bool>)
+  nameWithType.vb: DialogMessageExtension.ShowDialog(Of T)(IDialogMessageService, Action(Of T), Action(Of T), Action(Of IDialog), Func(Of T, Boolean))
+  fullName.vb: H.Services.Common.DialogMessageExtension.ShowDialog(Of T)(H.Services.Common.IDialogMessageService, System.Action(Of T), System.Action(Of T), System.Action(Of H.Services.Common.IDialog), System.Func(Of T, Boolean))
+  name.vb: ShowDialog(Of T)(IDialogMessageService, Action(Of T), Action(Of T), Action(Of IDialog), Func(Of T, Boolean))
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDialog``1(H.Services.Common.IDialogMessageService,System.Action{``0},System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{``0,System.Boolean})
+    name: ShowDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog__1_H_Services_Common_IDialogMessageService_System_Action___0__System_Action___0__System_Action_H_Services_Common_IDialog__System_Func___0_System_Boolean__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowDialog``1(H.Services.Common.IDialogMessageService,System.Action{``0},System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{``0,System.Boolean})
+    name: ShowDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog__1_H_Services_Common_IDialogMessageService_System_Action___0__System_Action___0__System_Action_H_Services_Common_IDialog__System_Func___0_System_Boolean__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+  commentId: M:H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+  href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowNotImplementedDialog_H_Services_Common_IDialogMessageService_
+  name: ShowNotImplementedDialog(IDialogMessageService)
+  nameWithType: DialogMessageExtension.ShowNotImplementedDialog(IDialogMessageService)
+  fullName: H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+  spec.csharp:
+  - uid: H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+    name: ShowNotImplementedDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowNotImplementedDialog_H_Services_Common_IDialogMessageService_
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.DialogMessageExtension.ShowNotImplementedDialog(H.Services.Common.IDialogMessageService)
+    name: ShowNotImplementedDialog
+    href: H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowNotImplementedDialog_H_Services_Common_IDialogMessageService_
+  - name: (
+  - uid: H.Services.Common.IDialogMessageService
+    name: IDialogMessageService
+    href: H.Services.Common.IDialogMessageService.html
+  - name: )
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1502,6 +2615,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1899,6 +3157,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -2303,6 +3617,36 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: System
   commentId: N:System
   href: https://learn.microsoft.com/dotnet/api/system
@@ -2369,6 +3713,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: System.Windows.Threading
   commentId: N:System.Windows.Threading
   href: https://learn.microsoft.com/dotnet/api/system

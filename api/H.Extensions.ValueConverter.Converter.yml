@@ -18,6 +18,7 @@ items:
   - H.Extensions.ValueConverter.Converter.GetCommands
   - H.Extensions.ValueConverter.Converter.GetComparable
   - H.Extensions.ValueConverter.Converter.GetComparableAllTrueToVisible
+  - H.Extensions.ValueConverter.Converter.GetDateTimeNowToString
   - H.Extensions.ValueConverter.Converter.GetDateTimeParseExact
   - H.Extensions.ValueConverter.Converter.GetDateTimeToAddDays
   - H.Extensions.ValueConverter.Converter.GetDateTimeToAddHours
@@ -1502,7 +1503,7 @@ items:
   source:
     id: GetIEnumerableDistinct
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 150
+    startLine: 151
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1527,7 +1528,7 @@ items:
   source:
     id: GetIEnumerableExcept
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 159
+    startLine: 160
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1552,7 +1553,7 @@ items:
   source:
     id: GetIEnumerableReverse
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 168
+    startLine: 169
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1577,7 +1578,7 @@ items:
   source:
     id: GetIEnumerablePropertyList
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 177
+    startLine: 178
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1602,7 +1603,7 @@ items:
   source:
     id: GetComparable
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 198
+    startLine: 199
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1627,7 +1628,7 @@ items:
   source:
     id: GetObjType
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 202
+    startLine: 203
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1652,7 +1653,7 @@ items:
   source:
     id: GetObjTypeName
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 203
+    startLine: 204
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1677,7 +1678,7 @@ items:
   source:
     id: GetObjTypeFullName
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 204
+    startLine: 205
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1702,7 +1703,7 @@ items:
   source:
     id: GetDiaplayName
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 205
+    startLine: 206
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1727,7 +1728,7 @@ items:
   source:
     id: GetDiaplayDescription
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 206
+    startLine: 207
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1752,7 +1753,7 @@ items:
   source:
     id: GetIsAssignableFrom
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 207
+    startLine: 208
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1777,7 +1778,7 @@ items:
   source:
     id: GetPropertyInfoDiaplayName
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 213
+    startLine: 214
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1802,7 +1803,7 @@ items:
   source:
     id: GetIsValueType
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 214
+    startLine: 215
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1827,7 +1828,7 @@ items:
   source:
     id: GetIsClass
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 215
+    startLine: 216
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1852,7 +1853,7 @@ items:
   source:
     id: GetIsEnum
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 216
+    startLine: 217
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1877,7 +1878,7 @@ items:
   source:
     id: GetIsGenericType
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 217
+    startLine: 218
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1902,7 +1903,7 @@ items:
   source:
     id: IsInterface
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 218
+    startLine: 219
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1927,7 +1928,7 @@ items:
   source:
     id: GetIsAbstract
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 219
+    startLine: 220
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1952,7 +1953,7 @@ items:
   source:
     id: GetIsArray
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 220
+    startLine: 221
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -1977,7 +1978,7 @@ items:
   source:
     id: GetCommands
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 222
+    startLine: 223
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2002,7 +2003,7 @@ items:
   source:
     id: GetDirectoryName
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 248
+    startLine: 249
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2027,7 +2028,7 @@ items:
   source:
     id: GetExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 249
+    startLine: 250
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2052,7 +2053,7 @@ items:
   source:
     id: GetFileName
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 250
+    startLine: 251
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2077,7 +2078,7 @@ items:
   source:
     id: GetFileNameWithoutExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 251
+    startLine: 252
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2102,7 +2103,7 @@ items:
   source:
     id: GetFullPath
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 252
+    startLine: 253
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2127,7 +2128,7 @@ items:
   source:
     id: GetPathRoot
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 253
+    startLine: 254
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2152,7 +2153,7 @@ items:
   source:
     id: GetChangeExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 254
+    startLine: 255
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2177,7 +2178,7 @@ items:
   source:
     id: GetHasExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 255
+    startLine: 256
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2202,7 +2203,7 @@ items:
   source:
     id: GetFileReadAllText
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 259
+    startLine: 260
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2227,7 +2228,7 @@ items:
   source:
     id: GetFileExists
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 260
+    startLine: 261
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2252,7 +2253,7 @@ items:
   source:
     id: GetFileCreationTime
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 261
+    startLine: 262
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2277,7 +2278,7 @@ items:
   source:
     id: GetFileLastAccessTime
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 262
+    startLine: 263
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2302,7 +2303,7 @@ items:
   source:
     id: GetFileFileAttributes
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 263
+    startLine: 264
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2327,7 +2328,7 @@ items:
   source:
     id: GetFileImageSource
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 264
+    startLine: 265
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2352,7 +2353,7 @@ items:
   source:
     id: GetFileLength
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 265
+    startLine: 266
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2377,7 +2378,7 @@ items:
   source:
     id: GetImagePixelDisplay
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 277
+    startLine: 278
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2402,7 +2403,7 @@ items:
   source:
     id: GetFileImageSourceInMemory
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 288
+    startLine: 289
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2427,7 +2428,7 @@ items:
   source:
     id: GetDirectoryExists
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 299
+    startLine: 300
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2452,7 +2453,7 @@ items:
   source:
     id: GetDirectoryFiles
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 300
+    startLine: 301
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2477,7 +2478,7 @@ items:
   source:
     id: GetDirectoryCreationTime
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 301
+    startLine: 302
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2502,7 +2503,7 @@ items:
   source:
     id: GetDirectoryDirectories
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 302
+    startLine: 303
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2527,7 +2528,7 @@ items:
   source:
     id: GetDirectoryFileSystemEntries
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 303
+    startLine: 304
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2552,7 +2553,7 @@ items:
   source:
     id: GetDirectoryLastAccessTime
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 304
+    startLine: 305
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2577,7 +2578,7 @@ items:
   source:
     id: GetDirectoryLastWriteTime
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 305
+    startLine: 306
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2602,7 +2603,7 @@ items:
   source:
     id: GetDirectoryParent
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 306
+    startLine: 307
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2627,7 +2628,7 @@ items:
   source:
     id: GetAllFile
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 308
+    startLine: 309
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2652,7 +2653,7 @@ items:
   source:
     id: GetTrueToFalse
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 313
+    startLine: 314
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2677,7 +2678,7 @@ items:
   source:
     id: GetIntToBoolen
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 314
+    startLine: 315
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2702,7 +2703,7 @@ items:
   source:
     id: GetNullToFalse
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 315
+    startLine: 316
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2727,7 +2728,7 @@ items:
   source:
     id: GetTrue
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 316
+    startLine: 317
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2752,7 +2753,7 @@ items:
   source:
     id: GetFalse
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 317
+    startLine: 318
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2777,7 +2778,7 @@ items:
   source:
     id: GetBoolNullFalseToVisble
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 321
+    startLine: 322
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2802,7 +2803,7 @@ items:
   source:
     id: GetBoolNullAndTrueToVisble
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 322
+    startLine: 323
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2827,7 +2828,7 @@ items:
   source:
     id: GetTrueToCollapsed
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 324
+    startLine: 325
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2852,7 +2853,7 @@ items:
   source:
     id: GetTrueToHidden
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 325
+    startLine: 326
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2877,7 +2878,7 @@ items:
   source:
     id: GetFalseToHidden
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 326
+    startLine: 327
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2902,7 +2903,7 @@ items:
   source:
     id: GetTrueToVisible
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 327
+    startLine: 328
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2927,7 +2928,7 @@ items:
   source:
     id: GetVisibleToTrue
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 329
+    startLine: 330
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2952,7 +2953,7 @@ items:
   source:
     id: GetTrueAllToVisible
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 330
+    startLine: 331
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -2977,7 +2978,7 @@ items:
   source:
     id: GetNullToCollapsed
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 331
+    startLine: 332
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3002,7 +3003,7 @@ items:
   source:
     id: GetNullToVisible
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 332
+    startLine: 333
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3027,7 +3028,7 @@ items:
   source:
     id: GetListEmptyToCollapsed
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 333
+    startLine: 334
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3052,7 +3053,7 @@ items:
   source:
     id: GetListEmptyToVisible
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 334
+    startLine: 335
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3077,7 +3078,7 @@ items:
   source:
     id: GetAllTrueToVisible
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 336
+    startLine: 337
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3102,7 +3103,7 @@ items:
   source:
     id: GetIntToCollapsed
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 338
+    startLine: 339
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3127,7 +3128,7 @@ items:
   source:
     id: GetIntToVisible
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 339
+    startLine: 340
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3152,7 +3153,7 @@ items:
   source:
     id: GetAllEqualsToVisible
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 341
+    startLine: 342
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3177,7 +3178,7 @@ items:
   source:
     id: GetComparableAllTrueToVisible
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 350
+    startLine: 351
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3202,7 +3203,7 @@ items:
   source:
     id: GetDateTimeToString
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 361
+    startLine: 362
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3227,7 +3228,7 @@ items:
   source:
     id: GetDateTimeToDateString
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 362
+    startLine: 363
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3252,7 +3253,7 @@ items:
   source:
     id: GetDateTimeToAge
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 363
+    startLine: 364
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3277,7 +3278,7 @@ items:
   source:
     id: GetDateTimeToDate
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 369
+    startLine: 370
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3302,7 +3303,7 @@ items:
   source:
     id: GetDateTimeToAddDays
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 370
+    startLine: 371
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3327,7 +3328,7 @@ items:
   source:
     id: GetDateTimeToAddHours
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 371
+    startLine: 372
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3352,7 +3353,7 @@ items:
   source:
     id: GetDateTimeToAddMilliseconds
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 372
+    startLine: 373
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3377,7 +3378,7 @@ items:
   source:
     id: GetDateTimeToAddSeconds
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 373
+    startLine: 374
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3402,7 +3403,7 @@ items:
   source:
     id: GetDateTimeToAddMonths
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 374
+    startLine: 375
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3427,7 +3428,7 @@ items:
   source:
     id: GetDateTimeToAddTicks
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 375
+    startLine: 376
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3452,7 +3453,7 @@ items:
   source:
     id: GetDateTimeToAddYears
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 376
+    startLine: 377
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3477,7 +3478,7 @@ items:
   source:
     id: GetDateTimeParseExact
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 377
+    startLine: 378
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3502,7 +3503,7 @@ items:
   source:
     id: GetDateTimeToTicks
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 378
+    startLine: 379
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3513,6 +3514,31 @@ items:
       type: System.Windows.Data.IValueConverter
     content.vb: Public Shared ReadOnly Property GetDateTimeToTicks As IValueConverter
   overload: H.Extensions.ValueConverter.Converter.GetDateTimeToTicks*
+- uid: H.Extensions.ValueConverter.Converter.GetDateTimeNowToString
+  commentId: P:H.Extensions.ValueConverter.Converter.GetDateTimeNowToString
+  id: GetDateTimeNowToString
+  parent: H.Extensions.ValueConverter.Converter
+  langs:
+  - csharp
+  - vb
+  name: GetDateTimeNowToString
+  nameWithType: Converter.GetDateTimeNowToString
+  fullName: H.Extensions.ValueConverter.Converter.GetDateTimeNowToString
+  type: Property
+  source:
+    id: GetDateTimeNowToString
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
+    startLine: 381
+  assemblies:
+  - H.Extensions.ValueConverter
+  namespace: H.Extensions.ValueConverter
+  syntax:
+    content: public static IValueConverter GetDateTimeNowToString { get; }
+    parameters: []
+    return:
+      type: System.Windows.Data.IValueConverter
+    content.vb: Public Shared ReadOnly Property GetDateTimeNowToString As IValueConverter
+  overload: H.Extensions.ValueConverter.Converter.GetDateTimeNowToString*
 - uid: H.Extensions.ValueConverter.Converter.GetUri
   commentId: P:H.Extensions.ValueConverter.Converter.GetUri
   id: GetUri
@@ -3527,7 +3553,7 @@ items:
   source:
     id: GetUri
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 382
+    startLine: 385
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3552,7 +3578,7 @@ items:
   source:
     id: GetUriRelative
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 383
+    startLine: 386
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3577,7 +3603,7 @@ items:
   source:
     id: GetUriAbsolute
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 384
+    startLine: 387
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3602,7 +3628,7 @@ items:
   source:
     id: GetColorToSolidColorBrush
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 433
+    startLine: 436
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3627,7 +3653,7 @@ items:
   source:
     id: GetSolidColorBrushToColor
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 435
+    startLine: 438
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3652,7 +3678,7 @@ items:
   source:
     id: GetTreeViewItemMargin
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 441
+    startLine: 444
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3677,7 +3703,7 @@ items:
   source:
     id: GetTreeViewItemLevel
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 447
+    startLine: 450
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3702,7 +3728,7 @@ items:
   source:
     id: GetDoubleToCornerRadius
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 471
+    startLine: 474
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3727,7 +3753,7 @@ items:
   source:
     id: GetDoubleToCornerRadiusLeft
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 472
+    startLine: 475
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3752,7 +3778,7 @@ items:
   source:
     id: GetDoubleToCornerRadiusTop
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 473
+    startLine: 476
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3777,7 +3803,7 @@ items:
   source:
     id: GetDoubleToCornerRadiusRigth
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 474
+    startLine: 477
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3802,7 +3828,7 @@ items:
   source:
     id: GetDoubleToCornerRadiusBottm
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 475
+    startLine: 478
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3827,7 +3853,7 @@ items:
   source:
     id: GetDoubleToCornerRadiusLeftTop
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 476
+    startLine: 479
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3852,7 +3878,7 @@ items:
   source:
     id: GetDoubleToCornerRadiusLeftBottom
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 477
+    startLine: 480
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3877,7 +3903,7 @@ items:
   source:
     id: GetDoubleToCornerRadiusRightTop
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 478
+    startLine: 481
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3902,7 +3928,7 @@ items:
   source:
     id: GetDoubleToCornerRadiusRightBottom
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 479
+    startLine: 482
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -3927,7 +3953,7 @@ items:
   source:
     id: GetEnumSource
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.ValueConverter\Converter.cs
-    startLine: 483
+    startLine: 486
   assemblies:
   - H.Extensions.ValueConverter
   namespace: H.Extensions.ValueConverter
@@ -5075,6 +5101,12 @@ references:
   name: GetDateTimeToTicks
   nameWithType: Converter.GetDateTimeToTicks
   fullName: H.Extensions.ValueConverter.Converter.GetDateTimeToTicks
+- uid: H.Extensions.ValueConverter.Converter.GetDateTimeNowToString*
+  commentId: Overload:H.Extensions.ValueConverter.Converter.GetDateTimeNowToString
+  href: H.Extensions.ValueConverter.Converter.html#H_Extensions_ValueConverter_Converter_GetDateTimeNowToString
+  name: GetDateTimeNowToString
+  nameWithType: Converter.GetDateTimeNowToString
+  fullName: H.Extensions.ValueConverter.Converter.GetDateTimeNowToString
 - uid: H.Extensions.ValueConverter.Converter.GetUri*
   commentId: Overload:H.Extensions.ValueConverter.Converter.GetUri
   href: H.Extensions.ValueConverter.Converter.html#H_Extensions_ValueConverter_Converter_GetUri

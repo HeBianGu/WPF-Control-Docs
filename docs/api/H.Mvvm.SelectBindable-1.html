@@ -116,7 +116,7 @@ Class SelectBindable&lt;T&gt;
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Mvvm.BindableBase.html">BindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html">BindableBase</a></div>
       <div><a class="xref" href="H.Mvvm.ModelBindable-1.html">ModelBindable</a>&lt;T&gt;</div>
       <div><span class="xref">SelectBindable&lt;T&gt;</span></div>
     </dd>
@@ -128,19 +128,19 @@ Class SelectBindable&lt;T&gt;
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="H.Mvvm.IModelBindable-1.html">IModelBindable</a>&lt;T&gt;</div>
       <div><a class="xref" href="H.Mvvm.IModelBindable.html">IModelBindable</a></div>
-      <div><a class="xref" href="H.Mvvm.ISearchable.html">ISearchable</a></div>
-      <div><a class="xref" href="H.Mvvm.ISelectBindable.html">ISelectBindable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.ISearchable.html">ISearchable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.ISelectBindable.html">ISelectBindable</a></div>
     </dd>
   </dl>
 
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="H.Controls.Diagram.Extension.AutoTestResult.html">AutoTestResult</a></div>
+      <div><a class="xref" href="H.Controls.Diagram.Extension.AutoTest.AutoTestResult.html">AutoTestResult</a></div>
       <div><a class="xref" href="H.Extensions.Validation.ValidationSelectedViewModel-1.html">ValidationSelectedViewModel&lt;T&gt;</a></div>
       <div><a class="xref" href="H.Modules.Identity.Role.html">Role</a></div>
       <div><a class="xref" href="H.Modules.Identity.User.html">User</a></div>
-      <div><a class="xref" href="H.Modules.Project.ProjectItemViewModel.html">ProjectItemViewModel</a></div>
+      <div><a class="xref" href="H.Modules.Project.Base.ProjectItemViewModel.html">ProjectItemViewModel</a></div>
       <div><a class="xref" href="H.Mvvm.TreeNodeBase-1.html">TreeNodeBase&lt;T&gt;</a></div>
     </dd>
   </dl>
@@ -179,19 +179,13 @@ Class SelectBindable&lt;T&gt;
       <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Filter_System_String_">ModelBindable&lt;T&gt;.Filter(string)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init">BindableBase.Init()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init">BindableBase.Init()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_">BindableBase.DispatcherRaisePropertyChanged(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged">BindableBase.OnDispatcherPropertyChanged()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -220,6 +214,9 @@ Class SelectBindable&lt;T&gt;
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -230,6 +227,15 @@ Class SelectBindable&lt;T&gt;
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -248,6 +254,9 @@ Class SelectBindable&lt;T&gt;
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>

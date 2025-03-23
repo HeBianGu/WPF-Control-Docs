@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface ILogService | WPF-Control ">
       
-      
+      <meta name="description" content="提供日志记录功能的接口。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,8 @@ Interface ILogService
   <dl><dt>Assembly</dt><dd>H.Services.Logger.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>提供日志记录功能的接口。</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -115,6 +116,9 @@ Interface ILogService
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -125,6 +129,15 @@ Interface ILogService
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -143,6 +156,9 @@ Interface ILogService
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -182,7 +198,8 @@ Interface ILogService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>记录调试级别的日志消息。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -192,7 +209,8 @@ Interface ILogService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>要记录的日志消息。</p>
+</dd>
   </dl>
 
 
@@ -213,7 +231,8 @@ Interface ILogService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>记录错误级别的日志消息。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -223,7 +242,8 @@ Interface ILogService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a>[]</dt>
-    <dd></dd>
+    <dd><p>要记录的日志消息。</p>
+</dd>
   </dl>
 
 
@@ -244,7 +264,8 @@ Interface ILogService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>记录错误级别的日志消息。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -254,7 +275,8 @@ Interface ILogService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>要记录的日志消息。</p>
+</dd>
   </dl>
 
 
@@ -275,7 +297,8 @@ Interface ILogService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>记录致命错误级别的日志消息。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -285,7 +308,8 @@ Interface ILogService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a>[]</dt>
-    <dd></dd>
+    <dd><p>要记录的日志消息。</p>
+</dd>
   </dl>
 
 
@@ -306,7 +330,8 @@ Interface ILogService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>记录致命错误级别的日志消息。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -316,7 +341,8 @@ Interface ILogService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>要记录的日志消息。</p>
+</dd>
   </dl>
 
 
@@ -337,7 +363,8 @@ Interface ILogService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>记录信息级别的日志消息。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -347,7 +374,8 @@ Interface ILogService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>要记录的日志消息。</p>
+</dd>
   </dl>
 
 
@@ -368,7 +396,8 @@ Interface ILogService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>记录跟踪级别的日志消息。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -378,7 +407,8 @@ Interface ILogService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>要记录的日志消息。</p>
+</dd>
   </dl>
 
 
@@ -399,7 +429,8 @@ Interface ILogService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>记录警告级别的日志消息。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -409,7 +440,8 @@ Interface ILogService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>要记录的日志消息。</p>
+</dd>
   </dl>
 
 

@@ -9,12 +9,15 @@ items:
   - System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   - System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   - System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
+  - System.ObjectExtension.GetAttributeValue``2(System.Type,System.Func{``0,``1})
   - System.ObjectExtension.GetDisplayName(System.Type)
   - System.ObjectExtension.GetGenericArgumentType(System.Collections.IEnumerable)
   - System.ObjectExtension.IsMacth(System.Object,System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.ObjectExtension.IsMacth(System.Object,System.String)
   - System.ObjectExtension.ModelState(System.Object,System.Collections.Generic.List{System.String}@)
   - System.ObjectExtension.ModelStateDeep(System.Object,System.String@)
+  - System.ObjectExtension.ToByTypeConverter``1(System.String)
+  - System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
   - System.ObjectExtension.TryChangeType``1(System.Object)
   - System.ObjectExtension.TryChangeType``1(System.Object,``0@)
   - System.ObjectExtension.TryConvertFromString(System.Type,System.String,System.String@)
@@ -239,7 +242,7 @@ items:
   source:
     id: TryConvertToString
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 165
+    startLine: 159
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -270,7 +273,7 @@ items:
   source:
     id: TryConvertToString
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 169
+    startLine: 163
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -303,7 +306,7 @@ items:
   source:
     id: ModelState
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 207
+    startLine: 194
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -338,7 +341,7 @@ items:
   source:
     id: ModelStateDeep
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 234
+    startLine: 221
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -373,7 +376,7 @@ items:
   source:
     id: IsMacth
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 298
+    startLine: 285
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -406,7 +409,7 @@ items:
   source:
     id: IsMacth
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 312
+    startLine: 299
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -439,7 +442,7 @@ items:
   source:
     id: TryChangeType
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 334
+    startLine: 321
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -472,7 +475,7 @@ items:
   source:
     id: TryChangeType
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 339
+    startLine: 326
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -492,6 +495,41 @@ items:
   nameWithType.vb: ObjectExtension.TryChangeType(Of T)(Object, T)
   fullName.vb: System.ObjectExtension.TryChangeType(Of T)(Object, T)
   name.vb: TryChangeType(Of T)(Object, T)
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  id: TryChangeType(System.Object,System.Type,System.Object@)
+  isExtensionMethod: true
+  parent: System.ObjectExtension
+  langs:
+  - csharp
+  - vb
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  type: Method
+  source:
+    id: TryChangeType
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
+    startLine: 340
+  assemblies:
+  - H.Extensions.Common
+  namespace: System
+  syntax:
+    content: public static bool TryChangeType(this object obj, Type rType, out object result)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: rType
+      type: System.Type
+    - id: result
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryChangeType(obj As Object, rType As Type, result As Object) As Boolean
+  overload: System.ObjectExtension.TryChangeType*
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
 - uid: System.ObjectExtension.GetDisplayName(System.Type)
   commentId: M:System.ObjectExtension.GetDisplayName(System.Type)
   id: GetDisplayName(System.Type)
@@ -507,7 +545,7 @@ items:
   source:
     id: GetDisplayName
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
-    startLine: 376
+    startLine: 368
   assemblies:
   - H.Extensions.Common
   namespace: System
@@ -520,6 +558,42 @@ items:
       type: System.String
     content.vb: Public Shared Function GetDisplayName(type As Type) As String
   overload: System.ObjectExtension.GetDisplayName*
+- uid: System.ObjectExtension.GetAttributeValue``2(System.Type,System.Func{``0,``1})
+  commentId: M:System.ObjectExtension.GetAttributeValue``2(System.Type,System.Func{``0,``1})
+  id: GetAttributeValue``2(System.Type,System.Func{``0,``1})
+  isExtensionMethod: true
+  parent: System.ObjectExtension
+  langs:
+  - csharp
+  - vb
+  name: GetAttributeValue<T, R>(Type, Func<T, R>)
+  nameWithType: ObjectExtension.GetAttributeValue<T, R>(Type, Func<T, R>)
+  fullName: System.ObjectExtension.GetAttributeValue<T, R>(System.Type, System.Func<T, R>)
+  type: Method
+  source:
+    id: GetAttributeValue
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
+    startLine: 373
+  assemblies:
+  - H.Extensions.Common
+  namespace: System
+  syntax:
+    content: 'public static R GetAttributeValue<T, R>(this Type type, Func<T, R> func) where T : Attribute'
+    parameters:
+    - id: type
+      type: System.Type
+    - id: func
+      type: System.Func{{T},{R}}
+    typeParameters:
+    - id: T
+    - id: R
+    return:
+      type: '{R}'
+    content.vb: Public Shared Function GetAttributeValue(Of T As Attribute, R)(type As Type, func As Func(Of T, R)) As R
+  overload: System.ObjectExtension.GetAttributeValue*
+  nameWithType.vb: ObjectExtension.GetAttributeValue(Of T, R)(Type, Func(Of T, R))
+  fullName.vb: System.ObjectExtension.GetAttributeValue(Of T, R)(System.Type, System.Func(Of T, R))
+  name.vb: GetAttributeValue(Of T, R)(Type, Func(Of T, R))
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   id: CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -623,6 +697,39 @@ items:
   nameWithType.vb: ObjectExtension.CopyPropertyValueFrom(Object, Object, Predicate(Of PropertyInfo), Func(Of PropertyInfo, PropertyInfo, Boolean))
   fullName.vb: System.ObjectExtension.CopyPropertyValueFrom(Object, Object, System.Predicate(Of System.Reflection.PropertyInfo), System.Func(Of System.Reflection.PropertyInfo, System.Reflection.PropertyInfo, Boolean))
   name.vb: CopyPropertyValueFrom(Object, Object, Predicate(Of PropertyInfo), Func(Of PropertyInfo, PropertyInfo, Boolean))
+- uid: System.ObjectExtension.ToByTypeConverter``1(System.String)
+  commentId: M:System.ObjectExtension.ToByTypeConverter``1(System.String)
+  id: ToByTypeConverter``1(System.String)
+  isExtensionMethod: true
+  parent: System.ObjectExtension
+  langs:
+  - csharp
+  - vb
+  name: ToByTypeConverter<T>(string)
+  nameWithType: ObjectExtension.ToByTypeConverter<T>(string)
+  fullName: System.ObjectExtension.ToByTypeConverter<T>(string)
+  type: Method
+  source:
+    id: ToByTypeConverter
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Object.cs
+    startLine: 491
+  assemblies:
+  - H.Extensions.Common
+  namespace: System
+  syntax:
+    content: public static T ToByTypeConverter<T>(this string str)
+    parameters:
+    - id: str
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function ToByTypeConverter(Of T)(str As String) As T
+  overload: System.ObjectExtension.ToByTypeConverter*
+  nameWithType.vb: ObjectExtension.ToByTypeConverter(Of T)(String)
+  fullName.vb: System.ObjectExtension.ToByTypeConverter(Of T)(String)
+  name.vb: ToByTypeConverter(Of T)(String)
 references:
 - uid: System
   commentId: N:System
@@ -1200,6 +1307,91 @@ references:
   name: GetDisplayName
   nameWithType: ObjectExtension.GetDisplayName
   fullName: System.ObjectExtension.GetDisplayName
+- uid: System.ObjectExtension.GetAttributeValue*
+  commentId: Overload:System.ObjectExtension.GetAttributeValue
+  href: System.ObjectExtension.html#System_ObjectExtension_GetAttributeValue__2_System_Type_System_Func___0___1__
+  name: GetAttributeValue
+  nameWithType: ObjectExtension.GetAttributeValue
+  fullName: System.ObjectExtension.GetAttributeValue
+- uid: System.Func{{T},{R}}
+  commentId: T:System.Func{``0,``1}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, R>
+  nameWithType: Func<T, R>
+  fullName: System.Func<T, R>
+  nameWithType.vb: Func(Of T, R)
+  fullName.vb: System.Func(Of T, R)
+  name.vb: Func(Of T, R)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: R
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: R
+  - name: )
+- uid: '{R}'
+  commentId: '!:R'
+  definition: R
+  name: R
+  nameWithType: R
+  fullName: R
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: R
+  name: R
+  nameWithType: R
+  fullName: R
 - uid: System.ObjectExtension.CloneBy*
   commentId: Overload:System.ObjectExtension.CloneBy
   href: System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__
@@ -1340,3 +1532,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
+- uid: System.ObjectExtension.ToByTypeConverter*
+  commentId: Overload:System.ObjectExtension.ToByTypeConverter
+  href: System.ObjectExtension.html#System_ObjectExtension_ToByTypeConverter__1_System_String_
+  name: ToByTypeConverter
+  nameWithType: ObjectExtension.ToByTypeConverter
+  fullName: System.ObjectExtension.ToByTypeConverter

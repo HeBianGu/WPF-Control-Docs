@@ -21,6 +21,7 @@ items:
   - H.Extensions.Common.FileExtension.IsVedio(System.String)
   - H.Extensions.Common.FileExtension.ToDirectoryEx(System.String)
   - H.Extensions.Common.FileExtension.ToFileEx(System.String)
+  - H.Extensions.Common.FileExtension.ToImageSource(System.String)
   - H.Extensions.Common.FileExtension.VedioExtension
   - H.Extensions.Common.FileExtension.VedioExtensions
   - H.Extensions.Common.FileExtension.VedioExtensionsFilter
@@ -34,7 +35,7 @@ items:
   source:
     id: FileExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 119
+    startLine: 177
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -65,7 +66,7 @@ items:
   source:
     id: ImageExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -88,7 +89,7 @@ items:
   source:
     id: VedioExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -111,7 +112,7 @@ items:
   source:
     id: AudioExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -134,7 +135,7 @@ items:
   source:
     id: ImageExtensions
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -159,7 +160,7 @@ items:
   source:
     id: VedioExtensions
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -184,7 +185,7 @@ items:
   source:
     id: AudioExtensions
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -210,7 +211,7 @@ items:
   source:
     id: GetAllImages
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -241,7 +242,7 @@ items:
   source:
     id: IsImage
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -257,6 +258,37 @@ items:
   nameWithType.vb: FileExtension.IsImage(String)
   fullName.vb: H.Extensions.Common.FileExtension.IsImage(String)
   name.vb: IsImage(String)
+- uid: H.Extensions.Common.FileExtension.ToImageSource(System.String)
+  commentId: M:H.Extensions.Common.FileExtension.ToImageSource(System.String)
+  id: ToImageSource(System.String)
+  isExtensionMethod: true
+  parent: H.Extensions.Common.FileExtension
+  langs:
+  - csharp
+  - vb
+  name: ToImageSource(string)
+  nameWithType: FileExtension.ToImageSource(string)
+  fullName: H.Extensions.Common.FileExtension.ToImageSource(string)
+  type: Method
+  source:
+    id: ToImageSource
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
+    startLine: 36
+  assemblies:
+  - H.Extensions.Common
+  namespace: H.Extensions.Common
+  syntax:
+    content: public static ImageSource ToImageSource(this string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    return:
+      type: System.Windows.Media.ImageSource
+    content.vb: Public Shared Function ToImageSource(filePath As String) As ImageSource
+  overload: H.Extensions.Common.FileExtension.ToImageSource*
+  nameWithType.vb: FileExtension.ToImageSource(String)
+  fullName.vb: H.Extensions.Common.FileExtension.ToImageSource(String)
+  name.vb: ToImageSource(String)
 - uid: H.Extensions.Common.FileExtension.GetAllVedios(System.String)
   commentId: M:H.Extensions.Common.FileExtension.GetAllVedios(System.String)
   id: GetAllVedios(System.String)
@@ -271,7 +303,7 @@ items:
   source:
     id: GetAllVedios
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 31
+    startLine: 43
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -302,7 +334,7 @@ items:
   source:
     id: IsVedio
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 38
+    startLine: 50
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -332,7 +364,7 @@ items:
   source:
     id: GetAllAudios
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 43
+    startLine: 57
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -363,7 +395,7 @@ items:
   source:
     id: IsAudio
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 48
+    startLine: 62
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -393,7 +425,7 @@ items:
   source:
     id: ImageExtensionsFilter
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 52
+    startLine: 68
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -418,7 +450,7 @@ items:
   source:
     id: VedioExtensionsFilter
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 53
+    startLine: 69
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -443,7 +475,7 @@ items:
   source:
     id: AudioExtensionsFilter
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 54
+    startLine: 70
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -468,7 +500,7 @@ items:
   source:
     id: GetExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 56
+    startLine: 72
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -499,7 +531,7 @@ items:
   source:
     id: GetDirectorySize
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 65
+    startLine: 81
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -527,7 +559,7 @@ items:
   source:
     id: ToDirectoryEx
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 121
+    startLine: 179
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -558,7 +590,7 @@ items:
   source:
     id: ToFileEx
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.File.cs
-    startLine: 123
+    startLine: 181
   assemblies:
   - H.Extensions.Common
   namespace: H.Extensions.Common
@@ -1016,6 +1048,50 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: H.Extensions.Common.FileExtension.ToImageSource*
+  commentId: Overload:H.Extensions.Common.FileExtension.ToImageSource
+  href: H.Extensions.Common.FileExtension.html#H_Extensions_Common_FileExtension_ToImageSource_System_String_
+  name: ToImageSource
+  nameWithType: FileExtension.ToImageSource
+  fullName: H.Extensions.Common.FileExtension.ToImageSource
+- uid: System.Windows.Media.ImageSource
+  commentId: T:System.Windows.Media.ImageSource
+  parent: System.Windows.Media
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.media.imagesource
+  name: ImageSource
+  nameWithType: ImageSource
+  fullName: System.Windows.Media.ImageSource
+- uid: System.Windows.Media
+  commentId: N:System.Windows.Media
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Media
+  nameWithType: System.Windows.Media
+  fullName: System.Windows.Media
+  spec.csharp:
+  - uid: System
+    name: System
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Media
+    name: Media
+    href: https://learn.microsoft.com/dotnet/api/system.windows.media
+  spec.vb:
+  - uid: System
+    name: System
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Media
+    name: Media
+    href: https://learn.microsoft.com/dotnet/api/system.windows.media
 - uid: H.Extensions.Common.FileExtension.GetAllVedios*
   commentId: Overload:H.Extensions.Common.FileExtension.GetAllVedios
   href: H.Extensions.Common.FileExtension.html#H_Extensions_Common_FileExtension_GetAllVedios_System_String_

@@ -16,7 +16,7 @@ items:
   source:
     id: LayoutableExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\ILayoutable.cs
-    startLine: 21
+    startLine: 83
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
@@ -48,17 +48,21 @@ items:
   source:
     id: CopyTo
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\ILayoutable.cs
-    startLine: 23
+    startLine: 90
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
+  summary: 将布局属性从一个对象复制到另一个对象。
+  example: []
   syntax:
     content: public static void CopyTo(this ILayoutable from, ILayoutable to)
     parameters:
     - id: from
       type: H.Services.Common.ILayoutable
+      description: 要复制属性的源对象。
     - id: to
       type: H.Services.Common.ILayoutable
+      description: 要复制属性的目标对象。
     content.vb: Public Shared Sub CopyTo(from As ILayoutable, [to] As ILayoutable)
   overload: H.Services.Common.LayoutableExtension.CopyTo*
 references:

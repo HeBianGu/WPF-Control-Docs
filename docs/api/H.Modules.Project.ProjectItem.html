@@ -111,8 +111,10 @@ Class ProjectItem
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Mvvm.BindableBase.html">BindableBase</a></div>
-      <div><a class="xref" href="H.Modules.Project.ProjectItemBase.html">ProjectItemBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html">BindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html">Bindable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html">CommandsBindableBase</a></div>
+      <div><a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html">ProjectItemBase</a></div>
       <div><span class="xref">ProjectItem</span></div>
     </dd>
   </dl>
@@ -132,55 +134,88 @@ Class ProjectItem
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_Title">ProjectItemBase.Title</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_Title">ProjectItemBase.Title</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_Path">ProjectItemBase.Path</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_Path">ProjectItemBase.Path</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_IsFixed">ProjectItemBase.IsFixed</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_IsFixed">ProjectItemBase.IsFixed</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_CreateTime">ProjectItemBase.CreateTime</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_CreateTime">ProjectItemBase.CreateTime</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_UpdateTime">ProjectItemBase.UpdateTime</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_UpdateTime">ProjectItemBase.UpdateTime</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_Name">ProjectItemBase.Name</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_Name">ProjectItemBase.Name</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_Save_System_String__">ProjectItemBase.Save(out string)</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_Save_System_String__">ProjectItemBase.Save(out string)</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_Load_System_String__">ProjectItemBase.Load(out string)</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_SaveToFile_System_Object_">ProjectItemBase.SaveToFile(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_Close_System_String__">ProjectItemBase.Close(out string)</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_Load_System_String__">ProjectItemBase.Load(out string)</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_GetFilePath">ProjectItemBase.GetFilePath()</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_GetSerializer">ProjectItemBase.GetSerializer()</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_Dispose">ProjectItemBase.Dispose()</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_LoadFile__1___0__">ProjectItemBase.LoadFile&lt;T&gt;(out T)</a>
     </div>
     <div>
-      <a class="xref" href="H.Modules.Project.ProjectItemBase.html#H_Modules_Project_ProjectItemBase_Delete_System_String__">ProjectItemBase.Delete(out string)</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_GetSaveFileData">ProjectItemBase.GetSaveFileData()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init">BindableBase.Init()</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_Close_System_String__">ProjectItemBase.Close(out string)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_GetFilePath">ProjectItemBase.GetFilePath()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_Dispose">ProjectItemBase.Dispose()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_">BindableBase.DispatcherRaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Modules.Project.Base.ProjectItemBase.html#H_Modules_Project_Base_ProjectItemBase_Delete_System_String__">ProjectItemBase.Delete(out string)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged">BindableBase.OnDispatcherPropertyChanged()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_Commands">CommandsBindableBase.Commands</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_CreateCommands">CommandsBindableBase.CreateCommands()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayCommand">Bindable.RelayCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_LoadedCommand">Bindable.LoadedCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethodCommand">Bindable.CallMethodCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayMethod_System_Object_">Bindable.RelayMethod(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_GetTargetElement__1">Bindable.GetTargetElement&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_Loaded_System_Object_">Bindable.Loaded(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethod_System_Object_">Bindable.CallMethod(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init">BindableBase.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -209,6 +244,9 @@ Class ProjectItem
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -219,6 +257,15 @@ Class ProjectItem
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -237,6 +284,9 @@ Class ProjectItem
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>

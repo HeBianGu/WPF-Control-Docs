@@ -14,59 +14,11 @@ items:
   name: H.Controls.Adorner
   type: Namespace
   items:
-  - uid: H.Controls.Adorner.ActiveBehavior`2
-    name: ActiveBehavior<B, T>
-    type: Class
-  - uid: H.Controls.Adorner.AdornerBase
-    name: AdornerBase
-    type: Class
   - uid: H.Controls.Adorner.AdornerSetting
     name: AdornerSetting
     type: Class
   - uid: H.Controls.Adorner.BorderAdorner
     name: BorderAdorner
-    type: Class
-  - uid: H.Controls.Adorner.ControlTemplateAdorner
-    name: ControlTemplateAdorner
-    type: Class
-  - uid: H.Controls.Adorner.DataTemplateAdorner
-    name: DataTemplateAdorner
-    type: Class
-  - uid: H.Controls.Adorner.DragAdorner
-    name: DragAdorner
-    type: Class
-  - uid: H.Controls.Adorner.DragAdornerBehavior
-    name: DragAdornerBehavior
-    type: Class
-  - uid: H.Controls.Adorner.DragControlTempalteAdornerBehaviour
-    name: DragControlTempalteAdornerBehaviour
-    type: Class
-  - uid: H.Controls.Adorner.DragControlTemplateAdorner
-    name: DragControlTemplateAdorner
-    type: Class
-  - uid: H.Controls.Adorner.DragDataTempalteAdornerBehaviour
-    name: DragDataTempalteAdornerBehaviour
-    type: Class
-  - uid: H.Controls.Adorner.DragDataTemplateAdorner
-    name: DragDataTemplateAdorner
-    type: Class
-  - uid: H.Controls.Adorner.DragGridAdorner
-    name: DragGridAdorner
-    type: Class
-  - uid: H.Controls.Adorner.DrapAdornerMode
-    name: DrapAdornerMode
-    type: Enum
-  - uid: H.Controls.Adorner.DropAdornerBehavior`1
-    name: DropAdornerBehavior<T>
-    type: Class
-  - uid: H.Controls.Adorner.DropAdornerCanvasBehavior
-    name: DropAdornerCanvasBehavior
-    type: Class
-  - uid: H.Controls.Adorner.DynimacDataTempateAdorner
-    name: DynimacDataTempateAdorner
-    type: Class
-  - uid: H.Controls.Adorner.ElementAllowDragBehavior
-    name: ElementAllowDragBehavior
     type: Class
   - uid: H.Controls.Adorner.ErrorAdorner
     name: ErrorAdorner
@@ -74,17 +26,8 @@ items:
   - uid: H.Controls.Adorner.GridLineAdorner
     name: GridLineAdorner
     type: Class
-  - uid: H.Controls.Adorner.IDoDragDrop
-    name: IDoDragDrop
-    type: Interface
-  - uid: H.Controls.Adorner.IDragAdorner
-    name: IDragAdorner
-    type: Interface
   - uid: H.Controls.Adorner.IDynimacAdorner
     name: IDynimacAdorner
-    type: Interface
-  - uid: H.Controls.Adorner.IService
-    name: IService
     type: Interface
   - uid: H.Controls.Adorner.LineAdorner
     name: LineAdorner
@@ -101,14 +44,88 @@ items:
   - uid: H.Controls.Adorner.SelectedAdorner
     name: SelectedAdorner
     type: Class
-  - uid: H.Controls.Adorner.SelectedControlTemplateAdorner
+- uid: H.Controls.Adorner.Adorner.Base
+  name: H.Controls.Adorner.Adorner.Base
+  type: Namespace
+  items:
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase
+    name: AdornerBase
+    type: Class
+  - uid: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase
+    name: VisualCollectionAdornerBase
+    type: Class
+- uid: H.Controls.Adorner.Adorner.ControlTemplateAdorners
+  name: H.Controls.Adorner.Adorner.ControlTemplateAdorners
+  type: Namespace
+  items:
+  - uid: H.Controls.Adorner.Adorner.ControlTemplateAdorners.ControlTemplateAdorner
+    name: ControlTemplateAdorner
+    type: Class
+  - uid: H.Controls.Adorner.Adorner.ControlTemplateAdorners.SelectedControlTemplateAdorner
     name: SelectedControlTemplateAdorner
     type: Class
-  - uid: H.Controls.Adorner.Service
-    name: Service
+- uid: H.Controls.Adorner.Adorner.DataTemplateAdorners
+  name: H.Controls.Adorner.Adorner.DataTemplateAdorners
+  type: Namespace
+  items:
+  - uid: H.Controls.Adorner.Adorner.DataTemplateAdorners.DataTemplateAdorner
+    name: DataTemplateAdorner
     type: Class
-  - uid: H.Controls.Adorner.VisualCollectionAdornerBase
-    name: VisualCollectionAdornerBase
+  - uid: H.Controls.Adorner.Adorner.DataTemplateAdorners.DynimacDataTempateAdorner
+    name: DynimacDataTempateAdorner
+    type: Class
+- uid: H.Controls.Adorner.Draggable
+  name: H.Controls.Adorner.Draggable
+  type: Namespace
+  items:
+  - uid: H.Controls.Adorner.Draggable.DragControlTemplateAdorner
+    name: DragControlTemplateAdorner
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.DragableDataTemplateAdorner
+    name: DragableDataTemplateAdorner
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.DraggableAdorner
+    name: DraggableAdorner
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.DraggableAdornerMode
+    name: DraggableAdornerMode
+    type: Enum
+  - uid: H.Controls.Adorner.Draggable.IDoDragDrop
+    name: IDoDragDrop
+    type: Interface
+  - uid: H.Controls.Adorner.Draggable.IDraggableAdorner
+    name: IDraggableAdorner
+    type: Interface
+- uid: H.Controls.Adorner.Draggable.Bevhavior
+  name: H.Controls.Adorner.Draggable.Bevhavior
+  type: Namespace
+  items:
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.ActiveBehavior`2
+    name: ActiveBehavior<B, T>
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.DraggableAdornerBehavior
+    name: DraggableAdornerBehavior
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.DraggableAdornerBehaviorBase
+    name: DraggableAdornerBehaviorBase
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.DraggableControlTempalteAdornerBehavior
+    name: DraggableControlTempalteAdornerBehavior
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.DraggableDataTemplateAdornerBehavior
+    name: DraggableDataTemplateAdornerBehavior
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.DraggableGridAdorner
+    name: DraggableGridAdorner
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.DropableAdornerBehavior`1
+    name: DropableAdornerBehavior<T>
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.DroppableAdornerCanvasBehavior
+    name: DroppableAdornerCanvasBehavior
+    type: Class
+  - uid: H.Controls.Adorner.Draggable.Bevhavior.ElementAllowDraggableBehavior
+    name: ElementAllowDraggableBehavior
     type: Class
 - uid: H.Controls.Chart2D
   name: H.Controls.Chart2D
@@ -506,26 +523,8 @@ items:
   name: H.Controls.Diagram
   type: Namespace
   items:
-  - uid: H.Controls.Diagram.ArcLinkDrawer
-    name: ArcLinkDrawer
-    type: Class
-  - uid: H.Controls.Diagram.BezierLinkDrawer
-    name: BezierLinkDrawer
-    type: Class
-  - uid: H.Controls.Diagram.BrokenLinkDrawer
-    name: BrokenLinkDrawer
-    type: Class
-  - uid: H.Controls.Diagram.Circle
-    name: Circle
-    type: Class
-  - uid: H.Controls.Diagram.CircularLayout
-    name: CircularLayout
-    type: Class
-  - uid: H.Controls.Diagram.DefaultLinkData
-    name: DefaultLinkData
-    type: Class
-  - uid: H.Controls.Diagram.DefaultPortData
-    name: DefaultPortData
+  - uid: H.Controls.Diagram.DataConverterExtension
+    name: DataConverterExtension
     type: Class
   - uid: H.Controls.Diagram.Diagram
     name: Diagram
@@ -533,607 +532,1257 @@ items:
   - uid: H.Controls.Diagram.DiagramCommands
     name: DiagramCommands
     type: Class
-  - uid: H.Controls.Diagram.DiagramDropBehaviorBase
-    name: DiagramDropBehaviorBase
-    type: Class
   - uid: H.Controls.Diagram.DiagramEffectKey
     name: DiagramEffectKey
     type: Class
-  - uid: H.Controls.Diagram.DiagramFlowableMode
-    name: DiagramFlowableMode
-    type: Enum
-  - uid: H.Controls.Diagram.DiagramFlowableState
-    name: DiagramFlowableState
-    type: Enum
-  - uid: H.Controls.Diagram.DiagramFlowableZoomMode
-    name: DiagramFlowableZoomMode
-    type: Enum
-  - uid: H.Controls.Diagram.Diamond
-    name: Diamond
+  - uid: H.Controls.Diagram.DiagramExtension
+    name: DiagramExtension
     type: Class
   - uid: H.Controls.Diagram.DisplayPortMode
     name: DisplayPortMode
     type: Enum
-  - uid: H.Controls.Diagram.DynamicLinkData
-    name: DynamicLinkData
+  - uid: H.Controls.Diagram.DockExtension
+    name: DockExtension
     type: Class
-  - uid: H.Controls.Diagram.DynimacLinkBehaviorBase`1
-    name: DynimacLinkBehaviorBase<T>
-    type: Class
-  - uid: H.Controls.Diagram.DynimacLinkNodeBehavior
-    name: DynimacLinkNodeBehavior
-    type: Class
-  - uid: H.Controls.Diagram.DynimacLinkPortBehavior
-    name: DynimacLinkPortBehavior
-    type: Class
-  - uid: H.Controls.Diagram.FigureBase
-    name: FigureBase
-    type: Class
-  - uid: H.Controls.Diagram.FlowableExtension
-    name: FlowableExtension
-    type: Class
-  - uid: H.Controls.Diagram.FlowableResult
-    name: FlowableResult
-    type: Class
-  - uid: H.Controls.Diagram.FlowableResultState
-    name: FlowableResultState
-    type: Enum
-  - uid: H.Controls.Diagram.FlowableResult`1
-    name: FlowableResult<T>
-    type: Class
-  - uid: H.Controls.Diagram.FlowableState
-    name: FlowableState
-    type: Enum
-  - uid: H.Controls.Diagram.ForceDirectedLayout
-    name: ForceDirectedLayout
-    type: Class
-  - uid: H.Controls.Diagram.GraphSource`2
-    name: GraphSource<NodeDataType, LinkDataType>
-    type: Class
-  - uid: H.Controls.Diagram.GridLayout
-    name: GridLayout
-    type: Class
-  - uid: H.Controls.Diagram.IData
-    name: IData
+  - uid: H.Controls.Diagram.IDiagram
+    name: IDiagram
     type: Interface
-  - uid: H.Controls.Diagram.IDataSource`2
-    name: IDataSource<NodeDataType, LinkDataType>
+  - uid: H.Controls.Diagram.IDiagramDataSource
+    name: IDiagramDataSource
     type: Interface
-  - uid: H.Controls.Diagram.IDropable
-    name: IDropable
-    type: Interface
-  - uid: H.Controls.Diagram.IFlowable
-    name: IFlowable
-    type: Interface
-  - uid: H.Controls.Diagram.IFlowableLink
-    name: IFlowableLink
-    type: Interface
-  - uid: H.Controls.Diagram.IFlowableNode
-    name: IFlowableNode
-    type: Interface
-  - uid: H.Controls.Diagram.IFlowablePort
-    name: IFlowablePort
-    type: Interface
-  - uid: H.Controls.Diagram.IFlowableResult
-    name: IFlowableResult
-    type: Interface
-  - uid: H.Controls.Diagram.IGraphSource
-    name: IGraphSource
-    type: Interface
-  - uid: H.Controls.Diagram.ILayout
-    name: ILayout
-    type: Interface
-  - uid: H.Controls.Diagram.ILink
-    name: ILink
-    type: Interface
-  - uid: H.Controls.Diagram.ILinkData
-    name: ILinkData
-    type: Interface
-  - uid: H.Controls.Diagram.ILinkDataCreator
-    name: ILinkDataCreator
-    type: Interface
-  - uid: H.Controls.Diagram.ILinkDrawer
-    name: ILinkDrawer
-    type: Interface
-  - uid: H.Controls.Diagram.ILinkInitializer
-    name: ILinkInitializer
-    type: Interface
-  - uid: H.Controls.Diagram.INode
-    name: INode
-    type: Interface
-  - uid: H.Controls.Diagram.INodeData
-    name: INodeData
-    type: Interface
-  - uid: H.Controls.Diagram.IPortData
-    name: IPortData
-    type: Interface
-  - uid: H.Controls.Diagram.IPortDataCreator
-    name: IPortDataCreator
-    type: Interface
-  - uid: H.Controls.Diagram.IService
-    name: IService
-    type: Interface
-  - uid: H.Controls.Diagram.ITemplate
-    name: ITemplate
-    type: Interface
-  - uid: H.Controls.Diagram.ITreeNode
-    name: ITreeNode
-    type: Interface
-  - uid: H.Controls.Diagram.Layer
-    name: Layer
-    type: Class
-  - uid: H.Controls.Diagram.Layout
-    name: Layout
-    type: Class
-  - uid: H.Controls.Diagram.LineLinkDrawer
-    name: LineLinkDrawer
-    type: Class
-  - uid: H.Controls.Diagram.Link
-    name: Link
-    type: Class
-  - uid: H.Controls.Diagram.LinkDrawer
-    name: LinkDrawer
-    type: Class
-  - uid: H.Controls.Diagram.LinkLayer
-    name: LinkLayer
-    type: Class
   - uid: H.Controls.Diagram.LinkMode
     name: LinkMode
     type: Enum
-  - uid: H.Controls.Diagram.LocationLayout
-    name: LocationLayout
-    type: Class
-  - uid: H.Controls.Diagram.Node
-    name: Node
-    type: Class
-  - uid: H.Controls.Diagram.NodeLayer
-    name: NodeLayer
-    type: Class
-  - uid: H.Controls.Diagram.NodeMouseDragBehavior
-    name: NodeMouseDragBehavior
-    type: Class
-  - uid: H.Controls.Diagram.NodeMouseOverBehavior
-    name: NodeMouseOverBehavior
-    type: Class
-  - uid: H.Controls.Diagram.NodeSelectionBehavior
-    name: NodeSelectionBehavior
+  - uid: H.Controls.Diagram.NodeExtension
+    name: NodeExtension
     type: Class
   - uid: H.Controls.Diagram.NoteResizeAdorner
     name: NoteResizeAdorner
     type: Class
-  - uid: H.Controls.Diagram.Part
-    name: Part
-    type: Class
-  - uid: H.Controls.Diagram.Port
-    name: Port
-    type: Class
-  - uid: H.Controls.Diagram.PortLinkBehavior
-    name: PortLinkBehavior
-    type: Class
-  - uid: H.Controls.Diagram.PortType
-    name: PortType
-    type: Enum
   - uid: H.Controls.Diagram.RemoveNodeCommand
     name: RemoveNodeCommand
     type: Class
-  - uid: H.Controls.Diagram.Service
-    name: Service
-    type: Class
-  - uid: H.Controls.Diagram.Socket
-    name: Socket
-    type: Class
-  - uid: H.Controls.Diagram.SpaceTreeNode
-    name: SpaceTreeNode
-    type: Class
-  - uid: H.Controls.Diagram.Square
-    name: Square
-    type: Class
-  - uid: H.Controls.Diagram.Trangle
-    name: Trangle
-    type: Class
-  - uid: H.Controls.Diagram.TreeGraphSource`1
-    name: TreeGraphSource<NodeType>
-    type: Class
-  - uid: H.Controls.Diagram.TreeLayout
-    name: TreeLayout
-    type: Class
-  - uid: H.Controls.Diagram.TreeNode
-    name: TreeNode
-    type: Class
-  - uid: H.Controls.Diagram.TypeTreeGraphSource
-    name: TypeTreeGraphSource
-    type: Class
-  - uid: H.Controls.Diagram.Unit
-    name: Unit
-    type: Class
-  - uid: H.Controls.Diagram.UnitGraphSource
-    name: UnitGraphSource
-    type: Class
-  - uid: H.Controls.Diagram.Wire
-    name: Wire
-    type: Class
-- uid: H.Controls.Diagram.Extension
-  name: H.Controls.Diagram.Extension
+- uid: H.Controls.Diagram.Bevaviors
+  name: H.Controls.Diagram.Bevaviors
   type: Namespace
   items:
-  - uid: H.Controls.Diagram.Extension.AddNodeCommand
-    name: AddNodeCommand
+  - uid: H.Controls.Diagram.Bevaviors.NodeMouseDragBehavior
+    name: NodeMouseDragBehavior
     type: Class
-  - uid: H.Controls.Diagram.Extension.AddNodeCommandBase
-    name: AddNodeCommandBase
+  - uid: H.Controls.Diagram.Bevaviors.NodeMouseOverBehavior
+    name: NodeMouseOverBehavior
     type: Class
-  - uid: H.Controls.Diagram.Extension.AddNodeFromDataTypeCommand
-    name: AddNodeFromDataTypeCommand
+  - uid: H.Controls.Diagram.Bevaviors.NodeSelectionBehavior
+    name: NodeSelectionBehavior
     type: Class
-  - uid: H.Controls.Diagram.Extension.AppSetting
-    name: AppSetting
+- uid: H.Controls.Diagram.Bevaviors.DiagramDropBehavior
+  name: H.Controls.Diagram.Bevaviors.DiagramDropBehavior
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Bevaviors.DiagramDropBehavior.DiagramDropBehaviorBase
+    name: DiagramDropBehaviorBase
     type: Class
-  - uid: H.Controls.Diagram.Extension.ApplayStyleCommand
-    name: ApplayStyleCommand
+- uid: H.Controls.Diagram.Bevaviors.DynimacLinkBehavior
+  name: H.Controls.Diagram.Bevaviors.DynimacLinkBehavior
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Bevaviors.DynimacLinkBehavior.DynimacLinkBehaviorBase`1
+    name: DynimacLinkBehaviorBase<T>
     type: Class
-  - uid: H.Controls.Diagram.Extension.AutoTestReportViewPresenter
+  - uid: H.Controls.Diagram.Bevaviors.DynimacLinkBehavior.DynimacLinkNodeBehavior
+    name: DynimacLinkNodeBehavior
+    type: Class
+  - uid: H.Controls.Diagram.Bevaviors.DynimacLinkBehavior.DynimacLinkPortBehavior
+    name: DynimacLinkPortBehavior
+    type: Class
+  - uid: H.Controls.Diagram.Bevaviors.DynimacLinkBehavior.PortLinkBehavior
+    name: PortLinkBehavior
+    type: Class
+- uid: H.Controls.Diagram.Datas
+  name: H.Controls.Diagram.Datas
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Datas.DefaultLinkData
+    name: DefaultLinkData
+    type: Class
+  - uid: H.Controls.Diagram.Datas.DefaultPortData
+    name: DefaultPortData
+    type: Class
+  - uid: H.Controls.Diagram.Datas.DynamicLinkData
+    name: DynamicLinkData
+    type: Class
+  - uid: H.Controls.Diagram.Datas.IData
+    name: IData
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.IDropable
+    name: IDropable
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.ILinkData
+    name: ILinkData
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.ILinkDataCreator
+    name: ILinkDataCreator
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.ILinkInitializer
+    name: ILinkInitializer
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.INodeData
+    name: INodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.IPartData
+    name: IPartData
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.IPortData
+    name: IPortData
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.IPortDataCreator
+    name: IPortDataCreator
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.IPortableNodeData
+    name: IPortableNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.ITemplate
+    name: ITemplate
+    type: Interface
+  - uid: H.Controls.Diagram.Datas.PortType
+    name: PortType
+    type: Enum
+- uid: H.Controls.Diagram.Extension.AutoTest
+  name: H.Controls.Diagram.Extension.AutoTest
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Extension.AutoTest.AutoTestReportViewPresenter
     name: AutoTestReportViewPresenter
     type: Class
-  - uid: H.Controls.Diagram.Extension.AutoTestResult
+  - uid: H.Controls.Diagram.Extension.AutoTest.AutoTestResult
     name: AutoTestResult
     type: Class
-  - uid: H.Controls.Diagram.Extension.BoolResult
-    name: BoolResult
-    type: Enum
-  - uid: H.Controls.Diagram.Extension.BottleNodeData
-    name: BottleNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.CardNodeData
-    name: CardNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.CheckCardNodeData
-    name: CheckCardNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.CheckNodeData
-    name: CheckNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.CloudNodeData
-    name: CloudNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramBase
-    name: DiagramBase
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramDataSourceConverter
-    name: DiagramDataSourceConverter
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramDropTextNodeBehavior
-    name: DiagramDropTextNodeBehavior
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramFlowableDataSourceConverter
-    name: DiagramFlowableDataSourceConverter
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramKeys
-    name: DiagramKeys
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramService
-    name: DiagramService
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramSetting
-    name: DiagramSetting
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramTemplate
-    name: DiagramTemplate
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramTemplateGroup
-    name: DiagramTemplateGroup
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramTemplateGroups
-    name: DiagramTemplateGroups
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramTheme
-    name: DiagramTheme
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DiagramThemeGroup
-    name: DiagramThemeGroup
-    type: Class
-  - uid: H.Controls.Diagram.Extension.DisplayGraphSource
-    name: DisplayGraphSource
-    type: Class
-  - uid: H.Controls.Diagram.Extension.EndCardNodeData
-    name: EndCardNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.ErrorNodeData
-    name: ErrorNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.FlowableDiagramBase
-    name: FlowableDiagramBase
-    type: Class
-  - uid: H.Controls.Diagram.Extension.FlowableDiagramTemplateNodeData
-    name: FlowableDiagramTemplateNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.FlowableLinkData
-    name: FlowableLinkData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.FlowableLinkData`1
-    name: FlowableLinkData<T>
-    type: Class
-  - uid: H.Controls.Diagram.Extension.FlowableNodeData
-    name: FlowableNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.FlowablePortData
-    name: FlowablePortData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.FlowablePortData`1
-    name: FlowablePortData<T>
-    type: Class
-  - uid: H.Controls.Diagram.Extension.FolderNodeData
-    name: FolderNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.GeometryNodeData
-    name: GeometryNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.GeometryNodeDataBase
-    name: GeometryNodeDataBase
-    type: Class
-  - uid: H.Controls.Diagram.Extension.HappyNodeData
-    name: HappyNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.HeartNodeData
-    name: HeartNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.IDiagram
-    name: IDiagram
-    type: Interface
-  - uid: H.Controls.Diagram.Extension.IDiagramService
-    name: IDiagramService
-    type: Interface
-  - uid: H.Controls.Diagram.Extension.IDiagramTemplate
-    name: IDiagramTemplate
-    type: Interface
-  - uid: H.Controls.Diagram.Extension.IFlowableDiagram
-    name: IFlowableDiagram
-    type: Interface
-  - uid: H.Controls.Diagram.Extension.ISystemNodeData
-    name: ISystemNodeData
-    type: Interface
-  - uid: H.Controls.Diagram.Extension.ImageNodeData
-    name: ImageNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.ImageNodeDataBase
-    name: ImageNodeDataBase
-    type: Class
-  - uid: H.Controls.Diagram.Extension.InfoNodeData
-    name: InfoNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.LineCardNodeData
-    name: LineCardNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.LinkData
-    name: LinkData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.LinkDataBase
-    name: LinkDataBase
-    type: Class
-  - uid: H.Controls.Diagram.Extension.LinkTreeNode
-    name: LinkTreeNode
-    type: Class
-  - uid: H.Controls.Diagram.Extension.MessageCardNodeData
-    name: MessageCardNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.MessageCircleNodeData
-    name: MessageCircleNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.MessageRectNodeData
-    name: MessageRectNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.NodeData
-    name: NodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.NodeDataBase
-    name: NodeDataBase
-    type: Class
-  - uid: H.Controls.Diagram.Extension.NodeFactory
-    name: NodeFactory
-    type: Class
-  - uid: H.Controls.Diagram.Extension.NodeGroup
-    name: NodeGroup
-    type: Class
-  - uid: H.Controls.Diagram.Extension.NodeTreeNode
-    name: NodeTreeNode
-    type: Class
-  - uid: H.Controls.Diagram.Extension.NodeTypeAttribute
-    name: NodeTypeAttribute
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PaintNodeData
-    name: PaintNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PartTreeNodeBase
-    name: PartTreeNodeBase
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PenNodeData
-    name: PenNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PentagonNodeData
-    name: PentagonNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PointCardNodeData
-    name: PointCardNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PortData
-    name: PortData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PortDataBase
-    name: PortDataBase
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PortTreeNode
-    name: PortTreeNode
-    type: Class
-  - uid: H.Controls.Diagram.Extension.PropertyNodeData
-    name: PropertyNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.SettingNodeData
-    name: SettingNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.ShieldNodeData
-    name: ShieldNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.StartCardNodeData
-    name: StartCardNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.StartFlowableNodeData
-    name: StartFlowableNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.SystemNodeData
-    name: SystemNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.TextLinkData
-    name: TextLinkData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.TextNodeData
-    name: TextNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.TextPortData
-    name: TextPortData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.TitleCardNodeData
-    name: TitleCardNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.TriangleNodeData
-    name: TriangleNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.UnhappyNodeData
-    name: UnhappyNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.WarnNodeData
-    name: WarnNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.WrongNodeData
-    name: WrongNodeData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.XmlDiagramData
-    name: XmlDiagramData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.XmlStringData
-    name: XmlStringData
-    type: Class
-  - uid: H.Controls.Diagram.Extension.ats_dd_result
+  - uid: H.Controls.Diagram.Extension.AutoTest.ats_dd_result
     name: ats_dd_result
     type: Class
-- uid: H.Controls.Diagram.Extensions.Workflow
-  name: H.Controls.Diagram.Extensions.Workflow
+- uid: H.Controls.Diagram.Flowables
+  name: H.Controls.Diagram.Flowables
   type: Namespace
   items:
-  - uid: H.Controls.Diagram.Extensions.Workflow.AddWorkflowNodeCommand
-    name: AddWorkflowNodeCommand
+  - uid: H.Controls.Diagram.Flowables.IFlowable
+    name: IFlowable
+    type: Interface
+- uid: H.Controls.Diagram.GraphSource
+  name: H.Controls.Diagram.GraphSource
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.GraphSource.DiagramDataSource
+    name: DiagramDataSource
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.AddWorkflowNodeFromTemplateCommand
-    name: AddWorkflowNodeFromTemplateCommand
+  - uid: H.Controls.Diagram.GraphSource.GraphSource`2
+    name: GraphSource<NodeDataType, LinkDataType>
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.AuditWorkflow
-    name: AuditWorkflow
+  - uid: H.Controls.Diagram.GraphSource.IDataSource`2
+    name: IDataSource<NodeDataType, LinkDataType>
+    type: Interface
+  - uid: H.Controls.Diagram.GraphSource.IGraphSource
+    name: IGraphSource
+    type: Interface
+  - uid: H.Controls.Diagram.GraphSource.TreeGraphSource`1
+    name: TreeGraphSource<NodeType>
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.BusinessMarkWorkflow
-    name: BusinessMarkWorkflow
+  - uid: H.Controls.Diagram.GraphSource.TypeTreeGraphSource
+    name: TypeTreeGraphSource
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.CardNodeData
+- uid: H.Controls.Diagram.Layers
+  name: H.Controls.Diagram.Layers
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Layers.LinkLayer
+    name: LinkLayer
+    type: Class
+  - uid: H.Controls.Diagram.Layers.NodeLayer
+    name: NodeLayer
+    type: Class
+- uid: H.Controls.Diagram.Layers.Base
+  name: H.Controls.Diagram.Layers.Base
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Layers.Base.Layer
+    name: Layer
+    type: Class
+- uid: H.Controls.Diagram.Layouts
+  name: H.Controls.Diagram.Layouts
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Layouts.CircularLayout
+    name: CircularLayout
+    type: Class
+  - uid: H.Controls.Diagram.Layouts.ForceDirectedLayout
+    name: ForceDirectedLayout
+    type: Class
+  - uid: H.Controls.Diagram.Layouts.GridLayout
+    name: GridLayout
+    type: Class
+  - uid: H.Controls.Diagram.Layouts.LocationLayout
+    name: LocationLayout
+    type: Class
+  - uid: H.Controls.Diagram.Layouts.TreeLayout
+    name: TreeLayout
+    type: Class
+- uid: H.Controls.Diagram.Layouts.Base
+  name: H.Controls.Diagram.Layouts.Base
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Layouts.Base.ILayout
+    name: ILayout
+    type: Interface
+  - uid: H.Controls.Diagram.Layouts.Base.Layout
+    name: Layout
+    type: Class
+- uid: H.Controls.Diagram.LinkDrawers
+  name: H.Controls.Diagram.LinkDrawers
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.LinkDrawers.ArcLinkDrawer
+    name: ArcLinkDrawer
+    type: Class
+  - uid: H.Controls.Diagram.LinkDrawers.BezierLinkDrawer
+    name: BezierLinkDrawer
+    type: Class
+  - uid: H.Controls.Diagram.LinkDrawers.BrokenLinkDrawer
+    name: BrokenLinkDrawer
+    type: Class
+  - uid: H.Controls.Diagram.LinkDrawers.ILinkDrawer
+    name: ILinkDrawer
+    type: Interface
+  - uid: H.Controls.Diagram.LinkDrawers.LineLinkDrawer
+    name: LineLinkDrawer
+    type: Class
+  - uid: H.Controls.Diagram.LinkDrawers.LinkDrawer
+    name: LinkDrawer
+    type: Class
+- uid: H.Controls.Diagram.Parts
+  name: H.Controls.Diagram.Parts
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Parts.ILink
+    name: ILink
+    type: Interface
+  - uid: H.Controls.Diagram.Parts.INode
+    name: INode
+    type: Interface
+  - uid: H.Controls.Diagram.Parts.ITreeNode
+    name: ITreeNode
+    type: Interface
+  - uid: H.Controls.Diagram.Parts.Link
+    name: Link
+    type: Class
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    type: Class
+  - uid: H.Controls.Diagram.Parts.Port
+    name: Port
+    type: Class
+  - uid: H.Controls.Diagram.Parts.SpaceTreeNode
+    name: SpaceTreeNode
+    type: Class
+  - uid: H.Controls.Diagram.Parts.TreeNode
+    name: TreeNode
+    type: Class
+- uid: H.Controls.Diagram.Parts.Base
+  name: H.Controls.Diagram.Parts.Base
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Parts.Base.FlowablePart
+    name: FlowablePart
+    type: Class
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    type: Class
+- uid: H.Controls.Diagram.Presenter
+  name: H.Controls.Diagram.Presenter
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.DiagramKeys
+    name: DiagramKeys
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramSetting
+    name: DiagramSetting
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.FlowableDiagramDataSetting
+    name: FlowableDiagramDataSetting
+    type: Class
+- uid: H.Controls.Diagram.Presenter.Behaviors
+  name: H.Controls.Diagram.Presenter.Behaviors
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.Behaviors.DiagramDropTextNodeBehavior
+    name: DiagramDropTextNodeBehavior
+    type: Class
+- uid: H.Controls.Diagram.Presenter.Commands
+  name: H.Controls.Diagram.Presenter.Commands
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.Commands.AddNodeCommand
+    name: AddNodeCommand
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.Commands.AddNodeCommandBase
+    name: AddNodeCommandBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.Commands.AddNodeFromDataTypeCommand
+    name: AddNodeFromDataTypeCommand
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.Commands.ApplayStyleCommand
+    name: ApplayStyleCommand
+    type: Class
+- uid: H.Controls.Diagram.Presenter.DiagramDatas
+  name: H.Controls.Diagram.Presenter.DiagramDatas
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.GetNodeDataGroupsContextMenuPresenter
+    name: GetNodeDataGroupsContextMenuPresenter
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.GetNodeDataGroupsItemsControlPresenter
+    name: GetNodeDataGroupsItemsControlPresenter
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.GetNodeDataGroupsTreeViewPresenter
+    name: GetNodeDataGroupsTreeViewPresenter
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.INodeDataGroup
+    name: INodeDataGroup
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.NodeDataGroupsContextMenuPresenter
+    name: NodeDataGroupsContextMenuPresenter
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.NodeDataGroupsItemsControlPresenter
+    name: NodeDataGroupsItemsControlPresenter
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.NodeDataGroupsTreeViewPresenter
+    name: NodeDataGroupsTreeViewPresenter
+    type: Class
+- uid: H.Controls.Diagram.Presenter.DiagramDatas.Base
+  name: H.Controls.Diagram.Presenter.DiagramDatas.Base
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.Datas
+    name: Datas
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.DiagramDataBase
+    name: DiagramDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.DiagramDataExtension
+    name: DiagramDataExtension
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.FlowableDiagramDataBase
+    name: FlowableDiagramDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.FlowableDiagramDataExtension
+    name: FlowableDiagramDataExtension
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.IDiagramData
+    name: IDiagramData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.IFlowableDiagramData
+    name: IFlowableDiagramData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.INodeDataGroupsDiagramData
+    name: INodeDataGroupsDiagramData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.IPartDataInvokeable
+    name: IPartDataInvokeable
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.IReferenceTemplateDiagramData
+    name: IReferenceTemplateDiagramData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.IThemeDigramDataBase
+    name: IThemeDigramDataBase
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.ITreeDigramData
+    name: ITreeDigramData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.IZoomableDiagramData
+    name: IZoomableDiagramData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.NodeDataGroupBase
+    name: NodeDataGroupBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.NodeDataGroupsDiagramDataBase
+    name: NodeDataGroupsDiagramDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.ReferenceTemplateDiagramDataBase
+    name: ReferenceTemplateDiagramDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.ThemeDigramDataBase
+    name: ThemeDigramDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.TreeDigramDataBase
+    name: TreeDigramDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramDatas.Base.ZoomableDiagramDataBase
+    name: ZoomableDiagramDataBase
+    type: Class
+- uid: H.Controls.Diagram.Presenter.DiagramTemplates
+  name: H.Controls.Diagram.Presenter.DiagramTemplates
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.DiagramTemplates.DiagramTemplate
+    name: DiagramTemplate
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramTemplates.DiagramTemplateExtension
+    name: DiagramTemplateExtension
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramTemplates.DiagramTemplateGroup
+    name: DiagramTemplateGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramTemplates.DiagramTemplateGroups
+    name: DiagramTemplateGroups
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramTemplates.DiagramTemplates
+    name: DiagramTemplates
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.DiagramTemplates.IDiagramTempaltes
+    name: IDiagramTempaltes
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.DiagramTemplates.IDiagramTemplate
+    name: IDiagramTemplate
+    type: Interface
+- uid: H.Controls.Diagram.Presenter.Flowables
+  name: H.Controls.Diagram.Presenter.Flowables
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.Flowables.DiagramFlowableMode
+    name: DiagramFlowableMode
+    type: Enum
+  - uid: H.Controls.Diagram.Presenter.Flowables.DiagramFlowableState
+    name: DiagramFlowableState
+    type: Enum
+  - uid: H.Controls.Diagram.Presenter.Flowables.DiagramFlowableZoomMode
+    name: DiagramFlowableZoomMode
+    type: Enum
+  - uid: H.Controls.Diagram.Presenter.Flowables.FlowableExtension
+    name: FlowableExtension
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.Flowables.FlowableResult
+    name: FlowableResult
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.Flowables.FlowableResultState
+    name: FlowableResultState
+    type: Enum
+  - uid: H.Controls.Diagram.Presenter.Flowables.FlowableResult`1
+    name: FlowableResult<T>
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.Flowables.FlowableState
+    name: FlowableState
+    type: Enum
+  - uid: H.Controls.Diagram.Presenter.Flowables.IFlowableDiagram
+    name: IFlowableDiagram
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.Flowables.IFlowableLinkData
+    name: IFlowableLinkData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.Flowables.IFlowableNodeData
+    name: IFlowableNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.Flowables.IFlowablePartData
+    name: IFlowablePartData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.Flowables.IFlowablePortData
+    name: IFlowablePortData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.Flowables.IFlowableResult
+    name: IFlowableResult
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.Flowables.PartDataInvokable
+    name: PartDataInvokable
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.Flowables.PartInvokable
+    name: PartInvokable
+    type: Class
+- uid: H.Controls.Diagram.Presenter.LinkDatas
+  name: H.Controls.Diagram.Presenter.LinkDatas
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.LinkDatas.BoolResult
+    name: BoolResult
+    type: Enum
+  - uid: H.Controls.Diagram.Presenter.LinkDatas.FlowableLinkData
+    name: FlowableLinkData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.LinkDatas.FlowableLinkData`1
+    name: FlowableLinkData<T>
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.LinkDatas.ITextLinkData
+    name: ITextLinkData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.LinkDatas.LinkData
+    name: LinkData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.LinkDatas.LinkDataBase
+    name: LinkDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.LinkDatas.TextLinkData
+    name: TextLinkData
+    type: Class
+- uid: H.Controls.Diagram.Presenter.NodeDatas
+  name: H.Controls.Diagram.Presenter.NodeDatas
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.BottleNodeData
+    name: BottleNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.CheckNodeData
+    name: CheckNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.CloudNodeData
+    name: CloudNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.ErrorNodeData
+    name: ErrorNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.FlowableNodeData
+    name: FlowableNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.FolderNodeData
+    name: FolderNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.GeometryNodeData
+    name: GeometryNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.GeometryNodeDataBase
+    name: GeometryNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.HappyNodeData
+    name: HappyNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.HeartNodeData
+    name: HeartNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.IFilePathable
+    name: IFilePathable
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.IGeometryNodeData
+    name: IGeometryNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.IImageNodeData
+    name: IImageNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.ITextNodeData
+    name: ITextNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.ImageNodeData
+    name: ImageNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.ImageNodeDataBase
+    name: ImageNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.InfoNodeData
+    name: InfoNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.MessageCircleNodeData
+    name: MessageCircleNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.MessageRectNodeData
+    name: MessageRectNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.NodeFactory
+    name: NodeFactory
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.PaintNodeData
+    name: PaintNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.PenNodeData
+    name: PenNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.PentagonNodeData
+    name: PentagonNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.PropertyNodeData
+    name: PropertyNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.SettingNodeData
+    name: SettingNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.ShieldNodeData
+    name: ShieldNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.StartFlowableNodeData
+    name: StartFlowableNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.TextNodeData
+    name: TextNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.TriangleNodeData
+    name: TriangleNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.UnhappyNodeData
+    name: UnhappyNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.WarnNodeData
+    name: WarnNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.WrongNodeData
+    name: WrongNodeData
+    type: Class
+- uid: H.Controls.Diagram.Presenter.NodeDatas.Base
+  name: H.Controls.Diagram.Presenter.NodeDatas.Base
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Base.NodeData
+    name: NodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Base.NodeDataBase
+    name: NodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Base.PortableNodeData
+    name: PortableNodeData
+    type: Class
+- uid: H.Controls.Diagram.Presenter.NodeDatas.Card
+  name: H.Controls.Diagram.Presenter.NodeDatas.Card
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.CardNodeData
     name: CardNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.CircleNodeData
-    name: CircleNodeData
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.CheckCardNodeData
+    name: CheckCardNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.ContentNodeData
-    name: ContentNodeData
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.EndCardNodeData
+    name: EndCardNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.CornerRadiusNodeData
-    name: CornerRadiusNodeData
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.FlowableDiagramTemplateNodeData
+    name: FlowableDiagramTemplateNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.DataWorkflow
-    name: DataWorkflow
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.LineCardNodeData
+    name: LineCardNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.DelayNodeData
-    name: DelayNodeData
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.MessageCardNodeData
+    name: MessageCardNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.DiamondNodeData
-    name: DiamondNodeData
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.PointCardNodeData
+    name: PointCardNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.EventWorkflow
-    name: EventWorkflow
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.StartCardNodeData
+    name: StartCardNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.FileNodeData
-    name: FileNodeData
+  - uid: H.Controls.Diagram.Presenter.NodeDatas.Card.TitleCardNodeData
+    name: TitleCardNodeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.HexagonNodeData
-    name: HexagonNodeData
+- uid: H.Controls.Diagram.Presenter.PortDatas
+  name: H.Controls.Diagram.Presenter.PortDatas
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.PortDatas.FlowablePortData
+    name: FlowablePortData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.HorizontalLaneNodeData
-    name: HorizontalLaneNodeData
+  - uid: H.Controls.Diagram.Presenter.PortDatas.FlowablePortData`1
+    name: FlowablePortData<T>
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.IDEFWorkflow
-    name: IDEFWorkflow
-    type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.IWorkflowNode
-    name: IWorkflowNode
+  - uid: H.Controls.Diagram.Presenter.PortDatas.ITextPortData
+    name: ITextPortData
     type: Interface
-  - uid: H.Controls.Diagram.Extensions.Workflow.InputNodeData
-    name: InputNodeData
+  - uid: H.Controls.Diagram.Presenter.PortDatas.PortData
+    name: PortData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.LaneLayout
-    name: LaneLayout
+  - uid: H.Controls.Diagram.Presenter.PortDatas.PortDataBase
+    name: PortDataBase
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.LaneNodeDataBase
-    name: LaneNodeDataBase
+  - uid: H.Controls.Diagram.Presenter.PortDatas.TextPortData
+    name: TextPortData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.LaneWorkflow
-    name: LaneWorkflow
+  - uid: H.Controls.Diagram.Presenter.PortDatas.TextPortDataExtension
+    name: TextPortDataExtension
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.LineRectNodeData
-    name: LineRectNodeData
+- uid: H.Controls.Diagram.Presenter.Provider
+  name: H.Controls.Diagram.Presenter.Provider
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.Provider.DiagramTheme
+    name: DiagramTheme
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.OperationNodeData
-    name: OperationNodeData
+  - uid: H.Controls.Diagram.Presenter.Provider.DiagramThemeGroup
+    name: DiagramThemeGroup
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.ParallelogramNodeData
-    name: ParallelogramNodeData
+  - uid: H.Controls.Diagram.Presenter.Provider.DisplayGraphSource
+    name: DisplayGraphSource
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.PillarNodeData
-    name: PillarNodeData
+  - uid: H.Controls.Diagram.Presenter.Provider.FlowableDiagramDataSource
+    name: FlowableDiagramDataSource
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.PredefineNodeData
-    name: PredefineNodeData
+  - uid: H.Controls.Diagram.Presenter.Provider.NodeDataGroup
+    name: NodeDataGroup
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.RectNodeData
-    name: RectNodeData
+- uid: H.Controls.Diagram.Presenter.Provider.Tree
+  name: H.Controls.Diagram.Presenter.Provider.Tree
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenter.Provider.Tree.LinkTreeNode
+    name: LinkTreeNode
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.ReferenceNodeData
-    name: ReferenceNodeData
+  - uid: H.Controls.Diagram.Presenter.Provider.Tree.NodeTreeNode
+    name: NodeTreeNode
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.RunwayNodeData
-    name: RunwayNodeData
+  - uid: H.Controls.Diagram.Presenter.Provider.Tree.PartTreeNodeBase
+    name: PartTreeNodeBase
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.SDLWorkflow
-    name: SDLWorkflow
+  - uid: H.Controls.Diagram.Presenter.Provider.Tree.PortTreeNode
+    name: PortTreeNode
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.StoreInNodeData
-    name: StoreInNodeData
+- uid: H.Controls.Diagram.Presenters.OpenCV
+  name: H.Controls.Diagram.Presenters.OpenCV
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.CascadeData
+    name: CascadeData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.VerticalLaneNodeData
-    name: VerticalLaneNodeData
+  - uid: H.Controls.Diagram.Presenters.OpenCV.GetOpenCVImagesExtension
+    name: GetOpenCVImagesExtension
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.WaveNodeData
-    name: WaveNodeData
+  - uid: H.Controls.Diagram.Presenters.OpenCV.ImagePath
+    name: ImagePath
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.WhileNodeData
-    name: WhileNodeData
+  - uid: H.Controls.Diagram.Presenters.OpenCV.MoviePath
+    name: MoviePath
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.WorkWorkflow
-    name: WorkWorkflow
+  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVDetector
+    name: OpenCVDetector
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.Workflow
-    name: Workflow
+  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVDiagramData
+    name: OpenCVDiagramData
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.WorkflowBase
-    name: WorkflowBase
+  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVImages
+    name: OpenCVImages
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.WorkflowNodeAdorner
+  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVVideo
+    name: OpenCVVideo
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenvCVExtension
+    name: OpenvCVExtension
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.TextPath
+    name: TextPath
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.Base
+  name: H.Controls.Diagram.Presenters.OpenCV.Base
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.BasicOpenCVNodeDataBase
+    name: BasicOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.CascadeClassifierOpenCVNodeDataBase
+    name: CascadeClassifierOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.DetectorOpenCVNodeDataBase
+    name: DetectorOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.FeatureOpenCVNodeDataBase
+    name: FeatureOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.FilterOpenCVNodeDataBase
+    name: FilterOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.ICascadeClassifierOpenCVNodeData
+    name: ICascadeClassifierOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IDetectorOpenCVNodeData
+    name: IDetectorOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IFeatureDetectorOpenCVNodeData
+    name: IFeatureDetectorOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IIfConditionNodeData
+    name: IIfConditionNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IMLOpenCVNodeData
+    name: IMLOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IMorphologyOpenCVNodeData
+    name: IMorphologyOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IOpenCVImageNodeData
+    name: IOpenCVImageNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IOpenCVNodeData
+    name: IOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IOtherOpenCVNodeData
+    name: IOtherOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcImageNodeData
+    name: ISrcImageNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoCaptureImageImportNodeData
+    name: IVideoCaptureImageImportNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IYolovOpenCVNodeData
+    name: IYolovOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IfConditionNodeDataBase
+    name: IfConditionNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.MLOpenCVNodeDataBase
+    name: MLOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.MatExtension
+    name: MatExtension
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.MatchDetectorOpenCVNodeDataBase
+    name: MatchDetectorOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.MorphologyOpenCVNodeDataBase
+    name: MorphologyOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.OpenCVImageNodeDataBase
+    name: OpenCVImageNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.OpenCVNodeDataBase
+    name: OpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.OpenCVStyleNodeDataBase
+    name: OpenCVStyleNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.OtherOpenCVNodeDataBase
+    name: OtherOpenCVNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.PreviewType
+    name: PreviewType
+    type: Enum
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.SrcImageNodeDataBase
+    name: SrcImageNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureImageImportNodeDataBase
+    name: VideoCaptureImageImportNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.YolovOpenCVNodeDataBase
+    name: YolovOpenCVNodeDataBase
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.BasicDataGroup
+    name: BasicDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.BasicDataGroupBase
+    name: BasicDataGroupBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.CascadeClassifierDataGroup
+    name: CascadeClassifierDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.DetectorDataGroup
+    name: DetectorDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.FeatureDetectorDataGroup
+    name: FeatureDetectorDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.FilterDataGroup
+    name: FilterDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IBasicDataGroup
+    name: IBasicDataGroup
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IfConditionDataGroup
+    name: IfConditionDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.ImageDataGroup
+    name: ImageDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.MLDataGroup
+    name: MLDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.MorphologyDataGroup
+    name: MorphologyDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.OtherDataGroup
+    name: OtherDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoCaptureDataGroup
+    name: VideoCaptureDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.YolovCaptureDataGroup
+    name: YolovCaptureDataGroup
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.AddSutract
+    name: AddSutract
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.BitwiseNot
+    name: BitwiseNot
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.Canny
+    name: Canny
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.CvtColor
+    name: CvtColor
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.DrawContourType
+    name: DrawContourType
+    type: Enum
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.FindContours
+    name: FindContours
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.MultiplayDivide
+    name: MultiplayDivide
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.SeamlessClone
+    name: SeamlessClone
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.SplitBGR
+    name: SplitBGR
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.SplitSelectType
+    name: SplitSelectType
+    type: Enum
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.Stitching
+    name: Stitching
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.Subdiv2D
+    name: Subdiv2D
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.Subdiv2DOutType
+    name: Subdiv2DOutType
+    type: Enum
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Basic.Threshold
+    name: Threshold
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Cascade
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Cascade
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Cascade.HaarCascade
+    name: HaarCascade
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Cascade.HaarType
+    name: HaarType
+    type: Enum
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Cascade.LbpCascade
+    name: LbpCascade
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector.BestMatch
+    name: BestMatch
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector.BlobDetector
+    name: BlobDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector.BlobType
+    name: BlobType
+    type: Enum
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector.Hog
+    name: Hog
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector.HoughLines
+    name: HoughLines
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector.HoughLinesP
+    name: HoughLinesP
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector.MatchTemplate
+    name: MatchTemplate
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Detector.RenderBlobs
+    name: RenderBlobs
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.AKazeFeatureDetector
+    name: AKazeFeatureDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.BriskFeatureDetector
+    name: BriskFeatureDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.FastFeatureDetector
+    name: FastFeatureDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.FreakFeatureDetector
+    name: FreakFeatureDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.KazeFeatureDetector
+    name: KazeFeatureDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.MatcherType
+    name: MatcherType
+    type: Enum
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.MserFeatureDetector
+    name: MserFeatureDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.SiftFeatureDetector
+    name: SiftFeatureDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.StarFeatureDetector
+    name: StarFeatureDetector
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Feature.SurfFeatureDetector
+    name: SurfFeatureDetector
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter.Blur
+    name: Blur
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter.DetailEnhance
+    name: DetailEnhance
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter.EdgePreservingFilter
+    name: EdgePreservingFilter
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter.GaussianBlur
+    name: GaussianBlur
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter.IFilterOpenCVNodeData
+    name: IFilterOpenCVNodeData
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter.PencilOutType
+    name: PencilOutType
+    type: Enum
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter.PencilSketch
+    name: PencilSketch
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Filter.Stylization
+    name: Stylization
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Asahiyama
+    name: Asahiyama
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Cvmorph
+    name: Cvmorph
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Distortion
+    name: Distortion
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Goryokaku
+    name: Goryokaku
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Lenna
+    name: Lenna
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Mandrill
+    name: Mandrill
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Match
+    name: Match
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.OpenCVImageNodeData
+    name: OpenCVImageNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.PixelThresholdIfCondition
+    name: PixelThresholdIfCondition
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Shape
+    name: Shape
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Yalta
+    name: Yalta
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.ML
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.ML
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.ML.DnnSuperres
+    name: DnnSuperres
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.ML.SVM
+    name: SVM
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology.BlackHat
+    name: BlackHat
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology.Close
+    name: Close
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology.Dilate
+    name: Dilate
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology.Erode
+    name: Erode
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology.Gradient
+    name: Gradient
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology.Open
+    name: Open
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Morphology.TopHat
+    name: TopHat
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Other
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Other
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Other.Hist
+    name: Hist
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Video
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Video
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Video.CameraCapture
+    name: CameraCapture
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Video.IVideoFlowable
+    name: IVideoFlowable
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Video.MOG
+    name: MOG
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Video.VideoCapture
+    name: VideoCapture
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Video.VideoWriter
+    name: VideoWriter
+    type: Class
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Yolovs
+  name: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Yolovs
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Yolovs.Yolov3
+    name: Yolov3
+    type: Class
+- uid: H.Controls.Diagram.Presenters.Workflow
+  name: H.Controls.Diagram.Presenters.Workflow
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.Workflow.WorkflowNodeAdorner
     name: WorkflowNodeAdorner
     type: Class
-  - uid: H.Controls.Diagram.Extensions.Workflow.WorkflowNodeBase
+- uid: H.Controls.Diagram.Presenters.Workflow.Commands
+  name: H.Controls.Diagram.Presenters.Workflow.Commands
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.Workflow.Commands.AddWorkflowNodeCommand
+    name: AddWorkflowNodeCommand
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Commands.AddWorkflowNodeFromTemplateCommand
+    name: AddWorkflowNodeFromTemplateCommand
+    type: Class
+- uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas
+  name: H.Controls.Diagram.Presenters.Workflow.NodeDatas
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.BusinessMarkWorkflow
+    name: BusinessMarkWorkflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.CardNodeData
+    name: CardNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.CircleNodeData
+    name: CircleNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.ContentNodeData
+    name: ContentNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.CornerRadiusNodeData
+    name: CornerRadiusNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.DelayNodeData
+    name: DelayNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.DiamondNodeData
+    name: DiamondNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.FileNodeData
+    name: FileNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.HexagonNodeData
+    name: HexagonNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.HorizontalLaneNodeData
+    name: HorizontalLaneNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.IWorkflowNode
+    name: IWorkflowNode
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.InputNodeData
+    name: InputNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.LaneNodeDataBase
+    name: LaneNodeDataBase
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.LineRectNodeData
+    name: LineRectNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.OperationNodeData
+    name: OperationNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.ParallelogramNodeData
+    name: ParallelogramNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.PillarNodeData
+    name: PillarNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.PredefineNodeData
+    name: PredefineNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.RectNodeData
+    name: RectNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.ReferenceNodeData
+    name: ReferenceNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.RunwayNodeData
+    name: RunwayNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.StoreInNodeData
+    name: StoreInNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.VerticalLaneNodeData
+    name: VerticalLaneNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.WaveNodeData
+    name: WaveNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.WhileNodeData
+    name: WhileNodeData
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.NodeDatas.WorkflowNodeBase
     name: WorkflowNodeBase
+    type: Class
+- uid: H.Controls.Diagram.Presenters.Workflow.Workflows
+  name: H.Controls.Diagram.Presenters.Workflow.Workflows
+  type: Namespace
+  items:
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.AuditWorkflow
+    name: AuditWorkflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.DataWorkflow
+    name: DataWorkflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.EventWorkflow
+    name: EventWorkflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.IDEFWorkflow
+    name: IDEFWorkflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.LaneLayout
+    name: LaneLayout
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.LaneWorkflow
+    name: LaneWorkflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.SDLWorkflow
+    name: SDLWorkflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.WorkWorkflow
+    name: WorkWorkflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.Workflow
+    name: Workflow
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.Workflow.Workflows.WorkflowBase
+    name: WorkflowBase
     type: Class
 - uid: H.Controls.Dock
   name: H.Controls.Dock
@@ -1809,6 +2458,9 @@ items:
     type: Class
   - uid: H.Controls.Form.StringHost
     name: StringHost
+    type: Class
+  - uid: H.Controls.Form.TabFormPresenter
+    name: TabFormPresenter
     type: Class
   - uid: H.Controls.Form.TestType
     name: TestType
@@ -3134,6 +3786,31 @@ items:
   - uid: H.Controls.ZoomBox.ZoomboxZoomOn
     name: ZoomboxZoomOn
     type: Enum
+- uid: H.Controls.ZoomBox.Extension
+  name: H.Controls.ZoomBox.Extension
+  type: Namespace
+  items:
+  - uid: H.Controls.ZoomBox.Extension.DialogServiceExtension
+    name: DialogServiceExtension
+    type: Class
+  - uid: H.Controls.ZoomBox.Extension.IImageZoomViewPresenter
+    name: IImageZoomViewPresenter
+    type: Interface
+  - uid: H.Controls.ZoomBox.Extension.ImageZoomViewPresenter
+    name: ImageZoomViewPresenter
+    type: Class
+  - uid: H.Controls.ZoomBox.Extension.ShowZoomViewImageCommand
+    name: ShowZoomViewImageCommand
+    type: Class
+  - uid: H.Controls.ZoomBox.Extension.ShowZoomViewImageFileCommand
+    name: ShowZoomViewImageFileCommand
+    type: Class
+  - uid: H.Controls.ZoomBox.Extension.ZoomBoxFitOnLoadedBehavior
+    name: ZoomBoxFitOnLoadedBehavior
+    type: Class
+  - uid: H.Controls.ZoomBox.Extension.ZoomBoxFitOnSizeChangedBehavior
+    name: ZoomBoxFitOnSizeChangedBehavior
+    type: Class
 - uid: H.Data.Test
   name: H.Data.Test
   type: Namespace
@@ -3144,8 +3821,8 @@ items:
   - uid: H.Data.Test.GetStudentsExtension
     name: GetStudentsExtension
     type: Class
-  - uid: H.Data.Test.GetTestViewModelsExtension
-    name: GetTestViewModelsExtension
+  - uid: H.Data.Test.GetTestBindablesExtension
+    name: GetTestBindablesExtension
     type: Class
   - uid: H.Data.Test.Student
     name: Student
@@ -3352,6 +4029,9 @@ items:
   - uid: H.Extensions.Behvaiors.ItemsControlFilterBehavior
     name: ItemsControlFilterBehavior
     type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControlSearchTextBehavior
+    name: ItemsControlSearchTextBehavior
+    type: Class
   - uid: H.Extensions.Behvaiors.ListBoxBindingSelectedItemsBehavior
     name: ListBoxBindingSelectedItemsBehavior
     type: Class
@@ -3390,6 +4070,12 @@ items:
     type: Class
   - uid: H.Extensions.Behvaiors.TextBlockCountBehavior
     name: TextBlockCountBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.TextBlockIndexOfBebavior
+    name: TextBlockIndexOfBebavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.TextBoxEditOnDoubleClickBebavior
+    name: TextBoxEditOnDoubleClickBebavior
     type: Class
   - uid: H.Extensions.Behvaiors.TextBoxUpdateSourceOnKeyDownBebavior
     name: TextBoxUpdateSourceOnKeyDownBebavior
@@ -3468,6 +4154,12 @@ items:
   - uid: H.Extensions.Command.ClipBoardPasteTextCommand
     name: ClipBoardPasteTextCommand
     type: Class
+  - uid: H.Extensions.Command.DeleteCommand
+    name: DeleteCommand
+    type: Class
+  - uid: H.Extensions.Command.DeleteSelectorCommand
+    name: DeleteSelectorCommand
+    type: Class
   - uid: H.Extensions.Command.MessageCommand
     name: MessageCommand
     type: Class
@@ -3507,6 +4199,9 @@ items:
   - uid: H.Extensions.Command.ScrollViewerScrollToBottomCommand
     name: ScrollViewerScrollToBottomCommand
     type: Class
+  - uid: H.Extensions.Command.ScrollViewerScrollToCommandBase
+    name: ScrollViewerScrollToCommandBase
+    type: Class
   - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand
     name: ScrollViewerScrollToEndCommand
     type: Class
@@ -3526,6 +4221,9 @@ items:
   - uid: H.Extensions.Common.ApplicationProvider
     name: ApplicationProvider
     type: Class
+  - uid: H.Extensions.Common.AssemblyExtension
+    name: AssemblyExtension
+    type: Class
   - uid: H.Extensions.Common.DirectoryEx
     name: DirectoryEx
     type: Class
@@ -3534,6 +4232,12 @@ items:
     type: Class
   - uid: H.Extensions.Common.FileExtension
     name: FileExtension
+    type: Class
+  - uid: H.Extensions.Common.IODialogExtension
+    name: IODialogExtension
+    type: Class
+  - uid: H.Extensions.Common.PathExtension
+    name: PathExtension
     type: Class
 - uid: H.Extensions.DataBase
   name: H.Extensions.DataBase
@@ -3620,6 +4324,28 @@ items:
   - uid: H.Extensions.FFMpeg.IocFFMpeg
     name: IocFFMpeg
     type: Class
+- uid: H.Extensions.FontIcon
+  name: H.Extensions.FontIcon
+  type: Namespace
+  items:
+  - uid: H.Extensions.FontIcon.FontIcons
+    name: FontIcons
+    type: Class
+  - uid: H.Extensions.FontIcon.GetFontIconsExtension
+    name: GetFontIconsExtension
+    type: Class
+  - uid: H.Extensions.FontIcon.GetIconSegoesExtension
+    name: GetIconSegoesExtension
+    type: Class
+  - uid: H.Extensions.FontIcon.IconSegoe
+    name: IconSegoe
+    type: Class
+  - uid: H.Extensions.FontIcon.IconSegoeProvider
+    name: IconSegoeProvider
+    type: Class
+  - uid: H.Extensions.FontIcon.IconSegoes
+    name: IconSegoes
+    type: Class
 - uid: H.Extensions.Geometry
   name: H.Extensions.Geometry
   type: Namespace
@@ -3653,8 +4379,8 @@ items:
   - uid: H.Extensions.Mail.MailService
     name: MailService
     type: Class
-  - uid: H.Extensions.Mail.SendMainCommand
-    name: SendMainCommand
+  - uid: H.Extensions.Mail.SendMailCommand
+    name: SendMailCommand
     type: Class
   - uid: H.Extensions.Mail.SmtpSendOptions
     name: SmtpSendOptions
@@ -3748,6 +4474,12 @@ items:
   - uid: H.Extensions.NewtonsoftJson.CustomContractResolver
     name: CustomContractResolver
     type: Class
+  - uid: H.Extensions.NewtonsoftJson.DateTimeConverter
+    name: DateTimeConverter
+    type: Class
+  - uid: H.Extensions.NewtonsoftJson.EnumConverter
+    name: EnumConverter
+    type: Class
   - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonMetaSettingService
     name: NewtonsoftJsonMetaSettingService
     type: Class
@@ -3757,8 +4489,40 @@ items:
   - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerService
     name: NewtonsoftJsonSerializerService
     type: Class
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+    name: NewtonsoftJsonSerializerServiceExtension
+    type: Class
+  - uid: H.Extensions.NewtonsoftJson.TypeConverterJsonConverter
+    name: TypeConverterJsonConverter
+    type: Class
   - uid: H.Extensions.NewtonsoftJson.TypeConverterJsonConverter`1
     name: TypeConverterJsonConverter<T>
+    type: Class
+- uid: H.Extensions.NewtonsoftJson.Jsonable
+  name: H.Extensions.NewtonsoftJson.Jsonable
+  type: Namespace
+  items:
+  - uid: H.Extensions.NewtonsoftJson.Jsonable.IJsonable
+    name: IJsonable
+    type: Interface
+  - uid: H.Extensions.NewtonsoftJson.Jsonable.JsonableJsonConverter
+    name: JsonableJsonConverter
+    type: Class
+  - uid: H.Extensions.NewtonsoftJson.Jsonable.MyJsonable
+    name: MyJsonable
+    type: Class
+  - uid: H.Extensions.NewtonsoftJson.Jsonable.NewtonsoftJsonBindableBase
+    name: NewtonsoftJsonBindableBase
+    type: Class
+  - uid: H.Extensions.NewtonsoftJson.Jsonable.NewtonsoftJsonableBase
+    name: NewtonsoftJsonableBase
+    type: Class
+- uid: H.Extensions.OpenFolderDialog
+  name: H.Extensions.OpenFolderDialog
+  type: Namespace
+  items:
+  - uid: H.Extensions.OpenFolderDialog.IOFolderDialogService
+    name: IOFolderDialogService
     type: Class
 - uid: H.Extensions.Process
   name: H.Extensions.Process
@@ -3862,6 +4626,40 @@ items:
     type: Class
   - uid: H.Extensions.StoryBoard.StoryboardSetting
     name: StoryboardSetting
+    type: Class
+- uid: H.Extensions.TextJsonable
+  name: H.Extensions.TextJsonable
+  type: Namespace
+  items:
+  - uid: H.Extensions.TextJsonable.ITextJsonable
+    name: ITextJsonable
+    type: Interface
+  - uid: H.Extensions.TextJsonable.ITextJsonableReader
+    name: ITextJsonableReader
+    type: Interface
+  - uid: H.Extensions.TextJsonable.ITextJsonableWriter
+    name: ITextJsonableWriter
+    type: Interface
+  - uid: H.Extensions.TextJsonable.JsonBindableBase
+    name: JsonBindableBase
+    type: Class
+  - uid: H.Extensions.TextJsonable.MyDisposable
+    name: MyDisposable
+    type: Class
+  - uid: H.Extensions.TextJsonable.MyJsonBindable
+    name: MyJsonBindable
+    type: Class
+  - uid: H.Extensions.TextJsonable.TextJsonableBase
+    name: TextJsonableBase
+    type: Class
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions
+    name: TextJsonableExtensions
+    type: Class
+  - uid: H.Extensions.TextJsonable.TextJsonableJsonConverter
+    name: TextJsonableJsonConverter
+    type: Class
+  - uid: H.Extensions.TextJsonable.TypeJsonWriterJsonable
+    name: TypeJsonWriterJsonable
     type: Class
 - uid: H.Extensions.Torrent
   name: H.Extensions.Torrent
@@ -4582,6 +5380,12 @@ items:
   - uid: H.Extensions.ValueConverter.GetIconToImageSourceConverter
     name: GetIconToImageSourceConverter
     type: Class
+  - uid: H.Extensions.ValueConverter.GetImageSourceFromBase64Converter
+    name: GetImageSourceFromBase64Converter
+    type: Class
+  - uid: H.Extensions.ValueConverter.GetImageSourceFromFilePathConverter
+    name: GetImageSourceFromFilePathConverter
+    type: Class
   - uid: H.Extensions.ValueConverter.GetIntToValueConverter
     name: GetIntToValueConverter
     type: Class
@@ -4760,17 +5564,11 @@ items:
   - uid: H.Iocable.Ioc
     name: Ioc
     type: Class
-  - uid: H.Iocable.IocAsyncMarkupCommandBase
-    name: IocAsyncMarkupCommandBase
-    type: Class
   - uid: H.Iocable.IocBindable`2
     name: IocBindable<T, Interface>
     type: Class
   - uid: H.Iocable.IocExtension
     name: IocExtension
-    type: Class
-  - uid: H.Iocable.IocMarkupCommandBase
-    name: IocMarkupCommandBase
     type: Class
   - uid: H.Iocable.IocThrowIfNone`1
     name: IocThrowIfNone<Interface>
@@ -4785,9 +5583,6 @@ items:
   name: H.Modules.About
   type: Namespace
   items:
-  - uid: H.Modules.About.AboutButtonPresenter
-    name: AboutButtonPresenter
-    type: Class
   - uid: H.Modules.About.AboutViewPresenter
     name: AboutViewPresenter
     type: Class
@@ -4811,11 +5606,20 @@ items:
   name: H.Modules.Guide
   type: Namespace
   items:
+  - uid: H.Modules.Guide.GetIsNewAssemblyVersionConverter
+    name: GetIsNewAssemblyVersionConverter
+    type: Class
   - uid: H.Modules.Guide.GuideBox
     name: GuideBox
     type: Class
   - uid: H.Modules.Guide.GuideBoxAdorner
     name: GuideBoxAdorner
+    type: Class
+  - uid: H.Modules.Guide.GuideData
+    name: GuideData
+    type: Class
+  - uid: H.Modules.Guide.GuideExtension
+    name: GuideExtension
     type: Class
   - uid: H.Modules.Guide.GuideOptions
     name: GuideOptions
@@ -4828,6 +5632,30 @@ items:
     type: Class
   - uid: H.Modules.Guide.GuideTreeNode
     name: GuideTreeNode
+    type: Class
+  - uid: H.Modules.Guide.GuideTreePresenter
+    name: GuideTreePresenter
+    type: Class
+  - uid: H.Modules.Guide.IGuideOptions
+    name: IGuideOptions
+    type: Interface
+  - uid: H.Modules.Guide.ShowGuideCommandBase
+    name: ShowGuideCommandBase
+    type: Class
+  - uid: H.Modules.Guide.ShowGuideTreeCommand
+    name: ShowGuideTreeCommand
+    type: Class
+  - uid: H.Modules.Guide.ShowGuideTreeCommandBase
+    name: ShowGuideTreeCommandBase
+    type: Class
+  - uid: H.Modules.Guide.ShowNewGuideCommand
+    name: ShowNewGuideCommand
+    type: Class
+  - uid: H.Modules.Guide.ShowNewGuideTreeCommand
+    name: ShowNewGuideTreeCommand
+    type: Class
+  - uid: H.Modules.Guide.ShowVersionGuideCommand
+    name: ShowVersionGuideCommand
     type: Class
 - uid: H.Modules.Identity
   name: H.Modules.Identity
@@ -4985,9 +5813,6 @@ items:
     type: Class
   - uid: H.Modules.Login.MailVerify
     name: MailVerify
-    type: Class
-  - uid: H.Modules.Login.ProjectOptions
-    name: ProjectOptions
     type: Class
   - uid: H.Modules.Login.Registor
     name: Registor
@@ -5158,26 +5983,20 @@ items:
   - uid: H.Modules.Project.GetIsCurrentProjectConverter
     name: GetIsCurrentProjectConverter
     type: Class
-  - uid: H.Modules.Project.IProjectTemplate
-    name: IProjectTemplate
-    type: Interface
   - uid: H.Modules.Project.ProjectBox
     name: ProjectBox
     type: Class
-  - uid: H.Modules.Project.ProjectHistroyData`1
-    name: ProjectHistroyData<T>
+  - uid: H.Modules.Project.ProjectExtension
+    name: ProjectExtension
     type: Class
   - uid: H.Modules.Project.ProjectItem
     name: ProjectItem
     type: Class
-  - uid: H.Modules.Project.ProjectItemBase
-    name: ProjectItemBase
-    type: Class
-  - uid: H.Modules.Project.ProjectItemViewModel
-    name: ProjectItemViewModel
-    type: Class
   - uid: H.Modules.Project.ProjectListViewPresenter
     name: ProjectListViewPresenter
+    type: Class
+  - uid: H.Modules.Project.ProjectOptions
+    name: ProjectOptions
     type: Class
   - uid: H.Modules.Project.ProjectService
     name: ProjectService
@@ -5185,11 +6004,40 @@ items:
   - uid: H.Modules.Project.ProjectServiceBase`1
     name: ProjectServiceBase<T>
     type: Class
-  - uid: H.Modules.Project.ProjectTemplate
-    name: ProjectTemplate
-    type: Class
   - uid: H.Modules.Project.ProjectViewPresenter
     name: ProjectViewPresenter
+    type: Class
+  - uid: H.Modules.Project.Projects`1
+    name: Projects<T>
+    type: Class
+- uid: H.Modules.Project.Base
+  name: H.Modules.Project.Base
+  type: Namespace
+  items:
+  - uid: H.Modules.Project.Base.IProjectTemplate
+    name: IProjectTemplate
+    type: Interface
+  - uid: H.Modules.Project.Base.ProjectItemBase
+    name: ProjectItemBase
+    type: Class
+  - uid: H.Modules.Project.Base.ProjectItemViewModel
+    name: ProjectItemViewModel
+    type: Class
+  - uid: H.Modules.Project.Base.ProjectTemplate
+    name: ProjectTemplate
+    type: Class
+- uid: H.Modules.Project.Commands
+  name: H.Modules.Project.Commands
+  type: Namespace
+  items:
+  - uid: H.Modules.Project.Commands.ShowCurrentProjectFileCommand
+    name: ShowCurrentProjectFileCommand
+    type: Class
+  - uid: H.Modules.Project.Commands.ShowProjectsCommand
+    name: ShowProjectsCommand
+    type: Class
+  - uid: H.Modules.Project.Commands.ShowProjectsOrNewCommand
+    name: ShowProjectsOrNewCommand
     type: Class
 - uid: H.Modules.Setting
   name: H.Modules.Setting
@@ -5289,12 +6137,6 @@ items:
   - uid: H.Mvvm.AsyncMarkupCommandBase
     name: AsyncMarkupCommandBase
     type: Class
-  - uid: H.Mvvm.Bindable
-    name: Bindable
-    type: Class
-  - uid: H.Mvvm.BindableBase
-    name: BindableBase
-    type: Class
   - uid: H.Mvvm.BindingProxy
     name: BindingProxy
     type: Class
@@ -5303,12 +6145,6 @@ items:
     type: Class
   - uid: H.Mvvm.Commands
     name: Commands
-    type: Class
-  - uid: H.Mvvm.DesignPresenterBase
-    name: DesignPresenterBase
-    type: Class
-  - uid: H.Mvvm.DisplayBindableBase
-    name: DisplayBindableBase
     type: Class
   - uid: H.Mvvm.DisplayBindable`1
     name: DisplayBindable<T>
@@ -5319,17 +6155,26 @@ items:
   - uid: H.Mvvm.DisplayCommand`1
     name: DisplayCommand<T>
     type: Class
-  - uid: H.Mvvm.IDAttribute
-    name: IDAttribute
+  - uid: H.Mvvm.DisplayMarkupCommandBase
+    name: DisplayMarkupCommandBase
     type: Class
-  - uid: H.Mvvm.IDable
-    name: IDable
+  - uid: H.Mvvm.IDescriptionable
+    name: IDescriptionable
     type: Interface
   - uid: H.Mvvm.IDesignPresenterBase
     name: IDesignPresenterBase
     type: Interface
+  - uid: H.Mvvm.IDisplayBindable
+    name: IDisplayBindable
+    type: Interface
   - uid: H.Mvvm.IDisplayCommand
     name: IDisplayCommand
+    type: Interface
+  - uid: H.Mvvm.IIconable
+    name: IIconable
+    type: Interface
+  - uid: H.Mvvm.IInvokeCommand
+    name: IInvokeCommand
     type: Interface
   - uid: H.Mvvm.IModelBindable
     name: IModelBindable
@@ -5337,17 +6182,8 @@ items:
   - uid: H.Mvvm.IModelBindable`1
     name: IModelBindable<T>
     type: Interface
-  - uid: H.Mvvm.IRelayCommand
-    name: IRelayCommand
-    type: Interface
-  - uid: H.Mvvm.ISearchable
-    name: ISearchable
-    type: Interface
-  - uid: H.Mvvm.ISelectBindable
-    name: ISelectBindable
-    type: Interface
-  - uid: H.Mvvm.ITransactionCommand
-    name: ITransactionCommand
+  - uid: H.Mvvm.IOrderable
+    name: IOrderable
     type: Interface
   - uid: H.Mvvm.ITreeNode
     name: ITreeNode
@@ -5373,16 +6209,117 @@ items:
   - uid: H.Mvvm.SelectBindable`1
     name: SelectBindable<T>
     type: Class
-  - uid: H.Mvvm.TransactionCommand
-    name: TransactionCommand
-    type: Class
   - uid: H.Mvvm.TreeNodeBase`1
     name: TreeNodeBase<T>
+    type: Class
+- uid: H.Mvvm.Attributes
+  name: H.Mvvm.Attributes
+  type: Namespace
+  items:
+  - uid: H.Mvvm.Attributes.IDAttribute
+    name: IDAttribute
+    type: Class
+  - uid: H.Mvvm.Attributes.IconAttribute
+    name: IconAttribute
+    type: Class
+- uid: H.Mvvm.ViewModels.Base
+  name: H.Mvvm.ViewModels.Base
+  type: Namespace
+  items:
+  - uid: H.Mvvm.ViewModels.Base.Bindable
+    name: Bindable
+    type: Class
+  - uid: H.Mvvm.ViewModels.Base.BindableBase
+    name: BindableBase
+    type: Class
+  - uid: H.Mvvm.ViewModels.Base.CommandsBindableBase
+    name: CommandsBindableBase
+    type: Class
+  - uid: H.Mvvm.ViewModels.Base.DesignPresenterBase
+    name: DesignPresenterBase
+    type: Class
+  - uid: H.Mvvm.ViewModels.Base.DisplayBindableBase
+    name: DisplayBindableBase
+    type: Class
+  - uid: H.Mvvm.ViewModels.Base.GroupDisplayBindableBase`1
+    name: GroupDisplayBindableBase<T>
+    type: Class
+  - uid: H.Mvvm.ViewModels.Base.IDable
+    name: IDable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.Base.IGroupable
+    name: IGroupable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.Base.IMessageable
+    name: IMessageable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.Base.INameable
+    name: INameable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.Base.ISearchable
+    name: ISearchable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.Base.ISelectBindable
+    name: ISelectBindable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.Base.IStopwatchable
+    name: IStopwatchable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.Base.Stopwatchable
+    name: Stopwatchable
     type: Class
 - uid: H.Presenters.Common
   name: H.Presenters.Common
   type: Namespace
   items:
+  - uid: H.Presenters.Common.DataGridPresenter
+    name: DataGridPresenter
+    type: Class
+  - uid: H.Presenters.Common.DialogServiceExtension
+    name: DialogServiceExtension
+    type: Class
+  - uid: H.Presenters.Common.FilePathTextBoxPresenter
+    name: FilePathTextBoxPresenter
+    type: Class
+  - uid: H.Presenters.Common.IFilePathTextBoxPresenter
+    name: IFilePathTextBoxPresenter
+    type: Interface
+  - uid: H.Presenters.Common.IImageFilePathPresenter
+    name: IImageFilePathPresenter
+    type: Interface
+  - uid: H.Presenters.Common.IImageViewPresenter
+    name: IImageViewPresenter
+    type: Interface
+  - uid: H.Presenters.Common.IItemsSourcePresenter
+    name: IItemsSourcePresenter
+    type: Interface
+  - uid: H.Presenters.Common.IListBoxPresenter
+    name: IListBoxPresenter
+    type: Interface
+  - uid: H.Presenters.Common.IPasswordBoxPresenter
+    name: IPasswordBoxPresenter
+    type: Interface
+  - uid: H.Presenters.Common.ITextBoxPresenter
+    name: ITextBoxPresenter
+    type: Interface
+  - uid: H.Presenters.Common.ITreeViewPresenter
+    name: ITreeViewPresenter
+    type: Interface
+  - uid: H.Presenters.Common.ImageFilePathPresenter
+    name: ImageFilePathPresenter
+    type: Class
+  - uid: H.Presenters.Common.ImageViewPresenter
+    name: ImageViewPresenter
+    type: Class
+  - uid: H.Presenters.Common.ItemsControlPresenter
+    name: ItemsControlPresenter
+    type: Class
+  - uid: H.Presenters.Common.ItemsSourcePresenterBase
+    name: ItemsSourcePresenterBase
+    type: Class
+  - uid: H.Presenters.Common.ListBoxPresenter
+    name: ListBoxPresenter
+    type: Class
   - uid: H.Presenters.Common.MessagePresenter
     name: MessagePresenter
     type: Class
@@ -5392,14 +6329,38 @@ items:
   - uid: H.Presenters.Common.PercentPresenter
     name: PercentPresenter
     type: Class
-  - uid: H.Presenters.Common.SelectItemPresenter
-    name: SelectItemPresenter
+  - uid: H.Presenters.Common.ShowDataGridCommand
+    name: ShowDataGridCommand
+    type: Class
+  - uid: H.Presenters.Common.ShowImageFileCommand
+    name: ShowImageFileCommand
+    type: Class
+  - uid: H.Presenters.Common.ShowImageSourceCommand
+    name: ShowImageSourceCommand
+    type: Class
+  - uid: H.Presenters.Common.ShowItemsControlCommand
+    name: ShowItemsControlCommand
+    type: Class
+  - uid: H.Presenters.Common.ShowListBoxCommand
+    name: ShowListBoxCommand
+    type: Class
+  - uid: H.Presenters.Common.ShowPropertyTextBoxCommand
+    name: ShowPropertyTextBoxCommand
+    type: Class
+  - uid: H.Presenters.Common.ShowSourceCommandBase
+    name: ShowSourceCommandBase
+    type: Class
+  - uid: H.Presenters.Common.ShowTreeViewCommand
+    name: ShowTreeViewCommand
     type: Class
   - uid: H.Presenters.Common.StringPresenter
     name: StringPresenter
     type: Class
   - uid: H.Presenters.Common.TextBoxPresenter
     name: TextBoxPresenter
+    type: Class
+  - uid: H.Presenters.Common.TreeViewPresenter
+    name: TreeViewPresenter
     type: Class
   - uid: H.Presenters.Common.WaitPresenter
     name: WaitPresenter
@@ -5530,9 +6491,6 @@ items:
   - uid: H.Services.Common.DbIoc
     name: DbIoc
     type: Class
-  - uid: H.Services.Common.DeleteCommand
-    name: DeleteCommand
-    type: Class
   - uid: H.Services.Common.DialogButton
     name: DialogButton
     type: Enum
@@ -5542,9 +6500,12 @@ items:
   - uid: H.Services.Common.DialogExtension
     name: DialogExtension
     type: Class
-  - uid: H.Services.Common.IAboutButtonPresenter
-    name: IAboutButtonPresenter
-    type: Interface
+  - uid: H.Services.Common.DialogMessageExtension
+    name: DialogMessageExtension
+    type: Class
+  - uid: H.Services.Common.FormMessageExtension
+    name: FormMessageExtension
+    type: Class
   - uid: H.Services.Common.IAboutViewPresenter
     name: IAboutViewPresenter
     type: Interface
@@ -5620,6 +6581,18 @@ items:
   - uid: H.Services.Common.IGuideService
     name: IGuideService
     type: Interface
+  - uid: H.Services.Common.IIOFileDialogOption
+    name: IIOFileDialogOption
+    type: Interface
+  - uid: H.Services.Common.IIOFileDialogService
+    name: IIOFileDialogService
+    type: Interface
+  - uid: H.Services.Common.IIOFolderDialogService
+    name: IIOFolderDialogService
+    type: Interface
+  - uid: H.Services.Common.IIOSaveFileDialogOption
+    name: IIOSaveFileDialogOption
+    type: Interface
   - uid: H.Services.Common.ILayoutable
     name: ILayoutable
     type: Interface
@@ -5656,8 +6629,29 @@ items:
   - uid: H.Services.Common.INoticeMessageService
     name: INoticeMessageService
     type: Interface
-  - uid: H.Services.Common.IOrderable
-    name: IOrderable
+  - uid: H.Services.Common.IOFileDialogExtension
+    name: IOFileDialogExtension
+    type: Class
+  - uid: H.Services.Common.IOFileDialogOption
+    name: IOFileDialogOption
+    type: Class
+  - uid: H.Services.Common.IOFileDialogOptionActions
+    name: IOFileDialogOptionActions
+    type: Class
+  - uid: H.Services.Common.IOFileDialogService
+    name: IOFileDialogService
+    type: Class
+  - uid: H.Services.Common.IOFolderDialogServiceExtension
+    name: IOFolderDialogServiceExtension
+    type: Class
+  - uid: H.Services.Common.IOSaveFileDialogOption
+    name: IOSaveFileDialogOption
+    type: Class
+  - uid: H.Services.Common.IOpenFilePathable
+    name: IOpenFilePathable
+    type: Interface
+  - uid: H.Services.Common.IOrderWhereable
+    name: IOrderWhereable
     type: Interface
   - uid: H.Services.Common.IPercentNoticeItem
     name: IPercentNoticeItem
@@ -5740,6 +6734,9 @@ items:
   - uid: H.Services.Common.ITaskBarMessage
     name: ITaskBarMessage
     type: Interface
+  - uid: H.Services.Common.ITextable
+    name: ITextable
+    type: Interface
   - uid: H.Services.Common.IThemeViewPresenter
     name: IThemeViewPresenter
     type: Interface
@@ -5809,17 +6806,8 @@ items:
   - uid: H.Services.Common.NotifyBalloonIcon
     name: NotifyBalloonIcon
     type: Enum
-  - uid: H.Services.Common.ProjectDeleteCommand
-    name: ProjectDeleteCommand
-    type: Class
-  - uid: H.Services.Common.ProjectNewCommand
-    name: ProjectNewCommand
-    type: Class
-  - uid: H.Services.Common.ProjectOpenCommand
-    name: ProjectOpenCommand
-    type: Class
-  - uid: H.Services.Common.ProjectSaveCommand
-    name: ProjectSaveCommand
+  - uid: H.Services.Common.ProjectExtension
+    name: ProjectExtension
     type: Class
   - uid: H.Services.Common.ProjectSaveMode
     name: ProjectSaveMode
@@ -5836,8 +6824,17 @@ items:
   - uid: H.Services.Common.SettingGroupNames
     name: SettingGroupNames
     type: Class
+  - uid: H.Services.Common.ShowAboutCommand
+    name: ShowAboutCommand
+    type: Class
   - uid: H.Services.Common.ShowCommand
     name: ShowCommand
+    type: Class
+  - uid: H.Services.Common.ShowDeleteProjectCommand
+    name: ShowDeleteProjectCommand
+    type: Class
+  - uid: H.Services.Common.ShowDialogCommandBase
+    name: ShowDialogCommandBase
     type: Class
   - uid: H.Services.Common.ShowDialogNoticeMessageCommand
     name: ShowDialogNoticeMessageCommand
@@ -5847,6 +6844,9 @@ items:
     type: Class
   - uid: H.Services.Common.ShowEditCommand
     name: ShowEditCommand
+    type: Class
+  - uid: H.Services.Common.ShowEditProjectCommand
+    name: ShowEditProjectCommand
     type: Class
   - uid: H.Services.Common.ShowErrorNoticeMessageCommand
     name: ShowErrorNoticeMessageCommand
@@ -5872,11 +6872,26 @@ items:
   - uid: H.Services.Common.ShowIocCommand
     name: ShowIocCommand
     type: Class
+  - uid: H.Services.Common.ShowIocCommandBase`1
+    name: ShowIocCommandBase<T>
+    type: Class
   - uid: H.Services.Common.ShowMessageCommand
     name: ShowMessageCommand
     type: Class
+  - uid: H.Services.Common.ShowNewProjectCommand
+    name: ShowNewProjectCommand
+    type: Class
+  - uid: H.Services.Common.ShowNotImplementedCommand
+    name: ShowNotImplementedCommand
+    type: Class
   - uid: H.Services.Common.ShowNoticeMessageCommandBase
     name: ShowNoticeMessageCommandBase
+    type: Class
+  - uid: H.Services.Common.ShowOpenFilePathableDialog
+    name: ShowOpenFilePathableDialog
+    type: Class
+  - uid: H.Services.Common.ShowOpenProjectCommand
+    name: ShowOpenProjectCommand
     type: Class
   - uid: H.Services.Common.ShowPercentCommand
     name: ShowPercentCommand
@@ -5886,6 +6901,15 @@ items:
     type: Class
   - uid: H.Services.Common.ShowProgressSnackMessageCommand
     name: ShowProgressSnackMessageCommand
+    type: Class
+  - uid: H.Services.Common.ShowProjectCommandBase
+    name: ShowProjectCommandBase
+    type: Class
+  - uid: H.Services.Common.ShowSaveProjectCommand
+    name: ShowSaveProjectCommand
+    type: Class
+  - uid: H.Services.Common.ShowSaveProjectsCommand
+    name: ShowSaveProjectsCommand
     type: Class
   - uid: H.Services.Common.ShowSnackMessageCommandBase
     name: ShowSnackMessageCommandBase
@@ -5904,6 +6928,9 @@ items:
     type: Class
   - uid: H.Services.Common.ShowSuccessSnackMessageCommand
     name: ShowSuccessSnackMessageCommand
+    type: Class
+  - uid: H.Services.Common.ShowTabEditCommand
+    name: ShowTabEditCommand
     type: Class
   - uid: H.Services.Common.ShowViewCommand
     name: ShowViewCommand
@@ -6036,8 +7063,14 @@ items:
   - uid: H.Services.Serializable.JsonCloneService
     name: JsonCloneService
     type: Class
-  - uid: H.Services.Serializable.JsonSerializerService
-    name: JsonSerializerService
+  - uid: H.Services.Serializable.SerializerServiceExtensions
+    name: SerializerServiceExtensions
+    type: Class
+  - uid: H.Services.Serializable.TextJsonOptions
+    name: TextJsonOptions
+    type: Class
+  - uid: H.Services.Serializable.TextJsonSerializerService
+    name: TextJsonSerializerService
     type: Class
   - uid: H.Services.Serializable.TypeConverterJsonConverter
     name: TypeConverterJsonConverter
@@ -6109,6 +7142,21 @@ items:
   - uid: H.Styles.Default.Extension
     name: Extension
     type: Class
+  - uid: H.Styles.Default.FontIconButton
+    name: FontIconButton
+    type: Class
+  - uid: H.Styles.Default.FontIconButtonKeys
+    name: FontIconButtonKeys
+    type: Class
+  - uid: H.Styles.Default.FontIconTextBlock
+    name: FontIconTextBlock
+    type: Class
+  - uid: H.Styles.Default.FontIconToggleButton
+    name: FontIconToggleButton
+    type: Class
+  - uid: H.Styles.Default.FontIconToggleButtonKeys
+    name: FontIconToggleButtonKeys
+    type: Class
   - uid: H.Styles.Default.FrameKeys
     name: FrameKeys
     type: Class
@@ -6120,6 +7168,9 @@ items:
     type: Class
   - uid: H.Styles.Default.GroupBoxKeys
     name: GroupBoxKeys
+    type: Class
+  - uid: H.Styles.Default.GroupItemKeys
+    name: GroupItemKeys
     type: Class
   - uid: H.Styles.Default.LabelKeys
     name: LabelKeys
@@ -6166,6 +7217,9 @@ items:
   - uid: H.Styles.Default.PasswordBoxKeys
     name: PasswordBoxKeys
     type: Class
+  - uid: H.Styles.Default.PathKeys
+    name: PathKeys
+    type: Class
   - uid: H.Styles.Default.ProgressBarKeys
     name: ProgressBarKeys
     type: Class
@@ -6187,6 +7241,9 @@ items:
   - uid: H.Styles.Default.ScrollViewerKeys
     name: ScrollViewerKeys
     type: Class
+  - uid: H.Styles.Default.ScrollViewerSetting
+    name: ScrollViewerSetting
+    type: Class
   - uid: H.Styles.Default.SeparatorKeys
     name: SeparatorKeys
     type: Class
@@ -6207,6 +7264,9 @@ items:
     type: Class
   - uid: H.Styles.Default.TabItemKeys
     name: TabItemKeys
+    type: Class
+  - uid: H.Styles.Default.TextBlockIconKeys
+    name: TextBlockIconKeys
     type: Class
   - uid: H.Styles.Default.TextBoxKeys
     name: TextBoxKeys
@@ -6370,8 +7430,8 @@ items:
   - uid: H.Windows.Dialog.DialogWindow
     name: DialogWindow
     type: Class
-  - uid: H.Windows.Dialog.ShowIocDialogCommand
-    name: ShowIocDialogCommand
+  - uid: H.Windows.Dialog.ShowIocDialogWindowCommand
+    name: ShowIocDialogWindowCommand
     type: Class
 - uid: H.Windows.Dock
   name: H.Windows.Dock

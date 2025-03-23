@@ -5,17 +5,15 @@ items:
   id: H.Modules.Project
   children:
   - H.Modules.Project.GetIsCurrentProjectConverter
-  - H.Modules.Project.IProjectTemplate
   - H.Modules.Project.ProjectBox
-  - H.Modules.Project.ProjectHistroyData`1
+  - H.Modules.Project.ProjectExtension
   - H.Modules.Project.ProjectItem
-  - H.Modules.Project.ProjectItemBase
-  - H.Modules.Project.ProjectItemViewModel
   - H.Modules.Project.ProjectListViewPresenter
+  - H.Modules.Project.ProjectOptions
   - H.Modules.Project.ProjectService
   - H.Modules.Project.ProjectServiceBase`1
-  - H.Modules.Project.ProjectTemplate
   - H.Modules.Project.ProjectViewPresenter
+  - H.Modules.Project.Projects`1
   langs:
   - csharp
   - vb
@@ -26,32 +24,6 @@ items:
   assemblies:
   - H.Modules.Project
 references:
-- uid: H.Modules.Project.IProjectTemplate
-  commentId: T:H.Modules.Project.IProjectTemplate
-  parent: H.Modules.Project
-  href: H.Modules.Project.IProjectTemplate.html
-  name: IProjectTemplate
-  nameWithType: IProjectTemplate
-  fullName: H.Modules.Project.IProjectTemplate
-- uid: H.Modules.Project.ProjectItemBase
-  commentId: T:H.Modules.Project.ProjectItemBase
-  parent: H.Modules.Project
-  href: H.Modules.Project.ProjectItemBase.html
-  name: ProjectItemBase
-  nameWithType: ProjectItemBase
-  fullName: H.Modules.Project.ProjectItemBase
-- uid: H.Modules.Project.ProjectItemViewModel
-  commentId: T:H.Modules.Project.ProjectItemViewModel
-  href: H.Modules.Project.ProjectItemViewModel.html
-  name: ProjectItemViewModel
-  nameWithType: ProjectItemViewModel
-  fullName: H.Modules.Project.ProjectItemViewModel
-- uid: H.Modules.Project.ProjectTemplate
-  commentId: T:H.Modules.Project.ProjectTemplate
-  href: H.Modules.Project.ProjectTemplate.html
-  name: ProjectTemplate
-  nameWithType: ProjectTemplate
-  fullName: H.Modules.Project.ProjectTemplate
 - uid: H.Modules.Project.GetIsCurrentProjectConverter
   commentId: T:H.Modules.Project.GetIsCurrentProjectConverter
   href: H.Modules.Project.GetIsCurrentProjectConverter.html
@@ -64,6 +36,13 @@ references:
   name: ProjectBox
   nameWithType: ProjectBox
   fullName: H.Modules.Project.ProjectBox
+- uid: H.Modules.Project.ProjectExtension
+  commentId: T:H.Modules.Project.ProjectExtension
+  parent: H.Modules.Project
+  href: H.Modules.Project.ProjectExtension.html
+  name: ProjectExtension
+  nameWithType: ProjectExtension
+  fullName: H.Modules.Project.ProjectExtension
 - uid: H.Modules.Project.ProjectItem
   commentId: T:H.Modules.Project.ProjectItem
   parent: H.Modules.Project
@@ -77,6 +56,12 @@ references:
   name: ProjectListViewPresenter
   nameWithType: ProjectListViewPresenter
   fullName: H.Modules.Project.ProjectListViewPresenter
+- uid: H.Modules.Project.ProjectOptions
+  commentId: T:H.Modules.Project.ProjectOptions
+  href: H.Modules.Project.ProjectOptions.html
+  name: ProjectOptions
+  nameWithType: ProjectOptions
+  fullName: H.Modules.Project.ProjectOptions
 - uid: H.Modules.Project.ProjectService
   commentId: T:H.Modules.Project.ProjectService
   href: H.Modules.Project.ProjectService.html
@@ -108,26 +93,26 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: H.Modules.Project.ProjectHistroyData`1
-  commentId: T:H.Modules.Project.ProjectHistroyData`1
-  href: H.Modules.Project.ProjectHistroyData-1.html
-  name: ProjectHistroyData<T>
-  nameWithType: ProjectHistroyData<T>
-  fullName: H.Modules.Project.ProjectHistroyData<T>
-  nameWithType.vb: ProjectHistroyData(Of T)
-  fullName.vb: H.Modules.Project.ProjectHistroyData(Of T)
-  name.vb: ProjectHistroyData(Of T)
+- uid: H.Modules.Project.Projects`1
+  commentId: T:H.Modules.Project.Projects`1
+  href: H.Modules.Project.Projects-1.html
+  name: Projects<T>
+  nameWithType: Projects<T>
+  fullName: H.Modules.Project.Projects<T>
+  nameWithType.vb: Projects(Of T)
+  fullName.vb: H.Modules.Project.Projects(Of T)
+  name.vb: Projects(Of T)
   spec.csharp:
-  - uid: H.Modules.Project.ProjectHistroyData`1
-    name: ProjectHistroyData
-    href: H.Modules.Project.ProjectHistroyData-1.html
+  - uid: H.Modules.Project.Projects`1
+    name: Projects
+    href: H.Modules.Project.Projects-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: H.Modules.Project.ProjectHistroyData`1
-    name: ProjectHistroyData
-    href: H.Modules.Project.ProjectHistroyData-1.html
+  - uid: H.Modules.Project.Projects`1
+    name: Projects
+    href: H.Modules.Project.Projects-1.html
   - name: (
   - name: Of
   - name: " "

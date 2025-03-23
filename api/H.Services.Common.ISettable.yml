@@ -4,10 +4,7 @@ items:
   commentId: T:H.Services.Common.ISettable
   id: ISettable
   parent: H.Services.Common
-  children:
-  - H.Services.Common.ISettable.GroupName
-  - H.Services.Common.ISettable.Name
-  - H.Services.Common.ISettable.Order
+  children: []
   langs:
   - csharp
   - vb
@@ -18,24 +15,33 @@ items:
   source:
     id: ISettable
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Setting\ISettable.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
   syntax:
-    content: public interface ISettable
-    content.vb: Public Interface ISettable
+    content: 'public interface ISettable : INameable, IOrderable, IGroupable'
+    content.vb: Public Interface ISettable Inherits INameable, IOrderable, IGroupable
+  inheritedMembers:
+  - H.Mvvm.ViewModels.Base.INameable.Name
+  - H.Mvvm.IOrderable.Order
+  - H.Mvvm.ViewModels.Base.IGroupable.GroupName
   extensionMethods:
+  - H.Services.Common.ISettable.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
   - H.Services.Common.ISettable.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -43,81 +49,6 @@ items:
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
-- uid: H.Services.Common.ISettable.Order
-  commentId: P:H.Services.Common.ISettable.Order
-  id: Order
-  parent: H.Services.Common.ISettable
-  langs:
-  - csharp
-  - vb
-  name: Order
-  nameWithType: ISettable.Order
-  fullName: H.Services.Common.ISettable.Order
-  type: Property
-  source:
-    id: Order
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Setting\ISettable.cs
-    startLine: 4
-  assemblies:
-  - H.Services.Common
-  namespace: H.Services.Common
-  syntax:
-    content: int Order { get; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: ReadOnly Property Order As Integer
-  overload: H.Services.Common.ISettable.Order*
-- uid: H.Services.Common.ISettable.Name
-  commentId: P:H.Services.Common.ISettable.Name
-  id: Name
-  parent: H.Services.Common.ISettable
-  langs:
-  - csharp
-  - vb
-  name: Name
-  nameWithType: ISettable.Name
-  fullName: H.Services.Common.ISettable.Name
-  type: Property
-  source:
-    id: Name
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Setting\ISettable.cs
-    startLine: 5
-  assemblies:
-  - H.Services.Common
-  namespace: H.Services.Common
-  syntax:
-    content: string Name { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: ReadOnly Property Name As String
-  overload: H.Services.Common.ISettable.Name*
-- uid: H.Services.Common.ISettable.GroupName
-  commentId: P:H.Services.Common.ISettable.GroupName
-  id: GroupName
-  parent: H.Services.Common.ISettable
-  langs:
-  - csharp
-  - vb
-  name: GroupName
-  nameWithType: ISettable.GroupName
-  fullName: H.Services.Common.ISettable.GroupName
-  type: Property
-  source:
-    id: GroupName
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Setting\ISettable.cs
-    startLine: 6
-  assemblies:
-  - H.Services.Common
-  namespace: H.Services.Common
-  syntax:
-    content: string GroupName { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: ReadOnly Property GroupName As String
-  overload: H.Services.Common.ISettable.GroupName*
 references:
 - uid: H.Services.Common
   commentId: N:H.Services.Common
@@ -149,6 +80,68 @@ references:
   - uid: H.Services.Common
     name: Common
     href: H.Services.Common.html
+- uid: H.Mvvm.ViewModels.Base.INameable.Name
+  commentId: P:H.Mvvm.ViewModels.Base.INameable.Name
+  parent: H.Mvvm.ViewModels.Base.INameable
+  href: H.Mvvm.ViewModels.Base.INameable.html#H_Mvvm_ViewModels_Base_INameable_Name
+  name: Name
+  nameWithType: INameable.Name
+  fullName: H.Mvvm.ViewModels.Base.INameable.Name
+- uid: H.Mvvm.IOrderable.Order
+  commentId: P:H.Mvvm.IOrderable.Order
+  parent: H.Mvvm.IOrderable
+  href: H.Mvvm.IOrderable.html#H_Mvvm_IOrderable_Order
+  name: Order
+  nameWithType: IOrderable.Order
+  fullName: H.Mvvm.IOrderable.Order
+- uid: H.Mvvm.ViewModels.Base.IGroupable.GroupName
+  commentId: P:H.Mvvm.ViewModels.Base.IGroupable.GroupName
+  parent: H.Mvvm.ViewModels.Base.IGroupable
+  href: H.Mvvm.ViewModels.Base.IGroupable.html#H_Mvvm_ViewModels_Base_IGroupable_GroupName
+  name: GroupName
+  nameWithType: IGroupable.GroupName
+  fullName: H.Mvvm.ViewModels.Base.IGroupable.GroupName
+- uid: H.Services.Common.ISettable.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<ISettable>(ISettable)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<ISettable>(ISettable)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Services.Common.ISettable>(H.Services.Common.ISettable)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of ISettable)(ISettable)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Services.Common.ISettable)(H.Services.Common.ISettable)
+  name.vb: CloneByNewtonsoftJson(Of ISettable)(ISettable)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Services.Common.ISettable)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Services.Common.ISettable
+    name: ISettable
+    href: H.Services.Common.ISettable.html
+  - name: '>'
+  - name: (
+  - uid: H.Services.Common.ISettable
+    name: ISettable
+    href: H.Services.Common.ISettable.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Services.Common.ISettable)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.ISettable
+    name: ISettable
+    href: H.Services.Common.ISettable.html
+  - name: )
+  - name: (
+  - uid: H.Services.Common.ISettable
+    name: ISettable
+    href: H.Services.Common.ISettable.html
+  - name: )
 - uid: H.Services.Common.ISettable.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -348,6 +341,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -753,6 +887,63 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
   parent: System.ObjectExtension
@@ -1156,6 +1347,65 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Mvvm.ViewModels.Base.INameable
+  commentId: T:H.Mvvm.ViewModels.Base.INameable
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.INameable.html
+  name: INameable
+  nameWithType: INameable
+  fullName: H.Mvvm.ViewModels.Base.INameable
+- uid: H.Mvvm.IOrderable
+  commentId: T:H.Mvvm.IOrderable
+  parent: H.Mvvm
+  href: H.Mvvm.IOrderable.html
+  name: IOrderable
+  nameWithType: IOrderable
+  fullName: H.Mvvm.IOrderable
+- uid: H.Mvvm.ViewModels.Base.IGroupable
+  commentId: T:H.Mvvm.ViewModels.Base.IGroupable
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.IGroupable.html
+  name: IGroupable
+  nameWithType: IGroupable
+  fullName: H.Mvvm.ViewModels.Base.IGroupable
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1365,6 +1615,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1762,6 +2157,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -2166,6 +2617,96 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Mvvm.ViewModels.Base
+  commentId: N:H.Mvvm.ViewModels.Base
+  href: H.html
+  name: H.Mvvm.ViewModels.Base
+  nameWithType: H.Mvvm.ViewModels.Base
+  fullName: H.Mvvm.ViewModels.Base
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  - name: .
+  - uid: H.Mvvm.ViewModels
+    name: ViewModels
+    href: H.Mvvm.ViewModels.html
+  - name: .
+  - uid: H.Mvvm.ViewModels.Base
+    name: Base
+    href: H.Mvvm.ViewModels.Base.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  - name: .
+  - uid: H.Mvvm.ViewModels
+    name: ViewModels
+    href: H.Mvvm.ViewModels.html
+  - name: .
+  - uid: H.Mvvm.ViewModels.Base
+    name: Base
+    href: H.Mvvm.ViewModels.Base.html
+- uid: H.Mvvm
+  commentId: N:H.Mvvm
+  href: H.html
+  name: H.Mvvm
+  nameWithType: H.Mvvm
+  fullName: H.Mvvm
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: System
   commentId: N:System
   href: https://learn.microsoft.com/dotnet/api/system
@@ -2232,6 +2773,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: System.Windows.Threading
   commentId: N:System.Windows.Threading
   href: https://learn.microsoft.com/dotnet/api/system
@@ -2262,43 +2833,3 @@ references:
   - uid: System.Windows.Threading
     name: Threading
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading
-- uid: H.Services.Common.ISettable.Order*
-  commentId: Overload:H.Services.Common.ISettable.Order
-  href: H.Services.Common.ISettable.html#H_Services_Common_ISettable_Order
-  name: Order
-  nameWithType: ISettable.Order
-  fullName: H.Services.Common.ISettable.Order
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: H.Services.Common.ISettable.Name*
-  commentId: Overload:H.Services.Common.ISettable.Name
-  href: H.Services.Common.ISettable.html#H_Services_Common_ISettable_Name
-  name: Name
-  nameWithType: ISettable.Name
-  fullName: H.Services.Common.ISettable.Name
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: H.Services.Common.ISettable.GroupName*
-  commentId: Overload:H.Services.Common.ISettable.GroupName
-  href: H.Services.Common.ISettable.html#H_Services_Common_ISettable_GroupName
-  name: GroupName
-  nameWithType: ISettable.GroupName
-  fullName: H.Services.Common.ISettable.GroupName

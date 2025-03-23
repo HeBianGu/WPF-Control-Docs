@@ -22,37 +22,48 @@ items:
   - H.Mvvm
   namespace: H.Mvvm
   syntax:
-    content: 'public class DisplayBindable<T> : DisplayBindableBase, INotifyPropertyChanged, IDable'
+    content: 'public class DisplayBindable<T> : DisplayBindableBase, INotifyPropertyChanged, IDisplayBindable, IIconable, INameable, IOrderable, IGroupable, IDable, IDescriptionable'
     typeParameters:
     - id: T
-    content.vb: Public Class DisplayBindable(Of T) Inherits DisplayBindableBase Implements INotifyPropertyChanged, IDable
+    content.vb: Public Class DisplayBindable(Of T) Inherits DisplayBindableBase Implements INotifyPropertyChanged, IDisplayBindable, IIconable, INameable, IOrderable, IGroupable, IDable, IDescriptionable
   inheritance:
   - System.Object
-  - H.Mvvm.BindableBase
-  - H.Mvvm.DisplayBindableBase
+  - H.Mvvm.ViewModels.Base.BindableBase
+  - H.Mvvm.ViewModels.Base.Bindable
+  - H.Mvvm.ViewModels.Base.CommandsBindableBase
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase
   implements:
   - System.ComponentModel.INotifyPropertyChanged
-  - H.Mvvm.IDable
+  - H.Mvvm.IDisplayBindable
+  - H.Mvvm.IIconable
+  - H.Mvvm.ViewModels.Base.INameable
+  - H.Mvvm.IOrderable
+  - H.Mvvm.ViewModels.Base.IGroupable
+  - H.Mvvm.ViewModels.Base.IDable
+  - H.Mvvm.IDescriptionable
   inheritedMembers:
-  - H.Mvvm.DisplayBindableBase.Commands
-  - H.Mvvm.DisplayBindableBase.CreateCommands
-  - H.Mvvm.DisplayBindableBase.LoadedCommand
-  - H.Mvvm.DisplayBindableBase.IsLoaded
-  - H.Mvvm.DisplayBindableBase.Loaded(System.Object)
-  - H.Mvvm.DisplayBindableBase.ID
-  - H.Mvvm.DisplayBindableBase.Name
-  - H.Mvvm.DisplayBindableBase.Icon
-  - H.Mvvm.DisplayBindableBase.ShortName
-  - H.Mvvm.DisplayBindableBase.GroupName
-  - H.Mvvm.DisplayBindableBase.Description
-  - H.Mvvm.DisplayBindableBase.Order
-  - H.Mvvm.DisplayBindableBase.LoadDefaultCommand
-  - H.Mvvm.DisplayBindableBase.LoadDefault
-  - H.Mvvm.BindableBase.Init
-  - H.Mvvm.BindableBase.PropertyChanged
-  - H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
-  - H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
-  - H.Mvvm.BindableBase.OnDispatcherPropertyChanged
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.IsLoaded
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.Loaded(System.Object)
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.ID
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.Name
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.Icon
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.ShortName
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.GroupName
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.Description
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.Order
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefaultCommand
+  - H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefault
+  - H.Mvvm.ViewModels.Base.CommandsBindableBase.Commands
+  - H.Mvvm.ViewModels.Base.CommandsBindableBase.CreateCommands
+  - H.Mvvm.ViewModels.Base.Bindable.RelayCommand
+  - H.Mvvm.ViewModels.Base.Bindable.LoadedCommand
+  - H.Mvvm.ViewModels.Base.Bindable.CallMethodCommand
+  - H.Mvvm.ViewModels.Base.Bindable.RelayMethod(System.Object)
+  - H.Mvvm.ViewModels.Base.Bindable.GetTargetElement``1
+  - H.Mvvm.ViewModels.Base.Bindable.CallMethod(System.Object)
+  - H.Mvvm.ViewModels.Base.BindableBase.Init
+  - H.Mvvm.ViewModels.Base.BindableBase.PropertyChanged
+  - H.Mvvm.ViewModels.Base.BindableBase.RaisePropertyChanged(System.String)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -61,16 +72,21 @@ items:
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
+  - H.Mvvm.DisplayBindable`1.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
   - H.Mvvm.DisplayBindable`1.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -182,20 +198,34 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: H.Mvvm.BindableBase
-  commentId: T:H.Mvvm.BindableBase
-  parent: H.Mvvm
-  href: H.Mvvm.BindableBase.html
+- uid: H.Mvvm.ViewModels.Base.BindableBase
+  commentId: T:H.Mvvm.ViewModels.Base.BindableBase
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.BindableBase.html
   name: BindableBase
   nameWithType: BindableBase
-  fullName: H.Mvvm.BindableBase
-- uid: H.Mvvm.DisplayBindableBase
-  commentId: T:H.Mvvm.DisplayBindableBase
-  parent: H.Mvvm
-  href: H.Mvvm.DisplayBindableBase.html
+  fullName: H.Mvvm.ViewModels.Base.BindableBase
+- uid: H.Mvvm.ViewModels.Base.Bindable
+  commentId: T:H.Mvvm.ViewModels.Base.Bindable
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.Bindable.html
+  name: Bindable
+  nameWithType: Bindable
+  fullName: H.Mvvm.ViewModels.Base.Bindable
+- uid: H.Mvvm.ViewModels.Base.CommandsBindableBase
+  commentId: T:H.Mvvm.ViewModels.Base.CommandsBindableBase
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.CommandsBindableBase.html
+  name: CommandsBindableBase
+  nameWithType: CommandsBindableBase
+  fullName: H.Mvvm.ViewModels.Base.CommandsBindableBase
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  commentId: T:H.Mvvm.ViewModels.Base.DisplayBindableBase
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html
   name: DisplayBindableBase
   nameWithType: DisplayBindableBase
-  fullName: H.Mvvm.DisplayBindableBase
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase
 - uid: System.ComponentModel.INotifyPropertyChanged
   commentId: T:System.ComponentModel.INotifyPropertyChanged
   parent: System.ComponentModel
@@ -204,68 +234,77 @@ references:
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
-- uid: H.Mvvm.IDable
-  commentId: T:H.Mvvm.IDable
+- uid: H.Mvvm.IDisplayBindable
+  commentId: T:H.Mvvm.IDisplayBindable
   parent: H.Mvvm
-  href: H.Mvvm.IDable.html
+  href: H.Mvvm.IDisplayBindable.html
+  name: IDisplayBindable
+  nameWithType: IDisplayBindable
+  fullName: H.Mvvm.IDisplayBindable
+- uid: H.Mvvm.IIconable
+  commentId: T:H.Mvvm.IIconable
+  parent: H.Mvvm
+  href: H.Mvvm.IIconable.html
+  name: IIconable
+  nameWithType: IIconable
+  fullName: H.Mvvm.IIconable
+- uid: H.Mvvm.ViewModels.Base.INameable
+  commentId: T:H.Mvvm.ViewModels.Base.INameable
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.INameable.html
+  name: INameable
+  nameWithType: INameable
+  fullName: H.Mvvm.ViewModels.Base.INameable
+- uid: H.Mvvm.IOrderable
+  commentId: T:H.Mvvm.IOrderable
+  parent: H.Mvvm
+  href: H.Mvvm.IOrderable.html
+  name: IOrderable
+  nameWithType: IOrderable
+  fullName: H.Mvvm.IOrderable
+- uid: H.Mvvm.ViewModels.Base.IGroupable
+  commentId: T:H.Mvvm.ViewModels.Base.IGroupable
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.IGroupable.html
+  name: IGroupable
+  nameWithType: IGroupable
+  fullName: H.Mvvm.ViewModels.Base.IGroupable
+- uid: H.Mvvm.ViewModels.Base.IDable
+  commentId: T:H.Mvvm.ViewModels.Base.IDable
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.IDable.html
   name: IDable
   nameWithType: IDable
-  fullName: H.Mvvm.IDable
-- uid: H.Mvvm.DisplayBindableBase.Commands
-  commentId: P:H.Mvvm.DisplayBindableBase.Commands
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands
-  name: Commands
-  nameWithType: DisplayBindableBase.Commands
-  fullName: H.Mvvm.DisplayBindableBase.Commands
-- uid: H.Mvvm.DisplayBindableBase.CreateCommands
-  commentId: M:H.Mvvm.DisplayBindableBase.CreateCommands
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
-  name: CreateCommands()
-  nameWithType: DisplayBindableBase.CreateCommands()
-  fullName: H.Mvvm.DisplayBindableBase.CreateCommands()
-  spec.csharp:
-  - uid: H.Mvvm.DisplayBindableBase.CreateCommands
-    name: CreateCommands
-    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: H.Mvvm.DisplayBindableBase.CreateCommands
-    name: CreateCommands
-    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands
-  - name: (
-  - name: )
-- uid: H.Mvvm.DisplayBindableBase.LoadedCommand
-  commentId: P:H.Mvvm.DisplayBindableBase.LoadedCommand
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand
-  name: LoadedCommand
-  nameWithType: DisplayBindableBase.LoadedCommand
-  fullName: H.Mvvm.DisplayBindableBase.LoadedCommand
-- uid: H.Mvvm.DisplayBindableBase.IsLoaded
-  commentId: P:H.Mvvm.DisplayBindableBase.IsLoaded
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded
+  fullName: H.Mvvm.ViewModels.Base.IDable
+- uid: H.Mvvm.IDescriptionable
+  commentId: T:H.Mvvm.IDescriptionable
+  parent: H.Mvvm
+  href: H.Mvvm.IDescriptionable.html
+  name: IDescriptionable
+  nameWithType: IDescriptionable
+  fullName: H.Mvvm.IDescriptionable
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.IsLoaded
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.IsLoaded
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_IsLoaded
   name: IsLoaded
   nameWithType: DisplayBindableBase.IsLoaded
-  fullName: H.Mvvm.DisplayBindableBase.IsLoaded
-- uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
-  commentId: M:H.Mvvm.DisplayBindableBase.Loaded(System.Object)
-  parent: H.Mvvm.DisplayBindableBase
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.IsLoaded
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.Loaded(System.Object)
+  commentId: M:H.Mvvm.ViewModels.Base.DisplayBindableBase.Loaded(System.Object)
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
   isExternal: true
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Loaded_System_Object_
   name: Loaded(object)
   nameWithType: DisplayBindableBase.Loaded(object)
-  fullName: H.Mvvm.DisplayBindableBase.Loaded(object)
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.Loaded(object)
   nameWithType.vb: DisplayBindableBase.Loaded(Object)
-  fullName.vb: H.Mvvm.DisplayBindableBase.Loaded(Object)
+  fullName.vb: H.Mvvm.ViewModels.Base.DisplayBindableBase.Loaded(Object)
   name.vb: Loaded(Object)
   spec.csharp:
-  - uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  - uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.Loaded(System.Object)
     name: Loaded
-    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+    href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Loaded_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -273,131 +312,270 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: H.Mvvm.DisplayBindableBase.Loaded(System.Object)
+  - uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.Loaded(System.Object)
     name: Loaded
-    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_
+    href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Loaded_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: H.Mvvm.DisplayBindableBase.ID
-  commentId: P:H.Mvvm.DisplayBindableBase.ID
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.ID
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.ID
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ID
   name: ID
   nameWithType: DisplayBindableBase.ID
-  fullName: H.Mvvm.DisplayBindableBase.ID
-- uid: H.Mvvm.DisplayBindableBase.Name
-  commentId: P:H.Mvvm.DisplayBindableBase.Name
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.ID
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.Name
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.Name
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Name
   name: Name
   nameWithType: DisplayBindableBase.Name
-  fullName: H.Mvvm.DisplayBindableBase.Name
-- uid: H.Mvvm.DisplayBindableBase.Icon
-  commentId: P:H.Mvvm.DisplayBindableBase.Icon
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.Name
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.Icon
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.Icon
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Icon
   name: Icon
   nameWithType: DisplayBindableBase.Icon
-  fullName: H.Mvvm.DisplayBindableBase.Icon
-- uid: H.Mvvm.DisplayBindableBase.ShortName
-  commentId: P:H.Mvvm.DisplayBindableBase.ShortName
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.Icon
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.ShortName
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.ShortName
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ShortName
   name: ShortName
   nameWithType: DisplayBindableBase.ShortName
-  fullName: H.Mvvm.DisplayBindableBase.ShortName
-- uid: H.Mvvm.DisplayBindableBase.GroupName
-  commentId: P:H.Mvvm.DisplayBindableBase.GroupName
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.ShortName
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.GroupName
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.GroupName
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_GroupName
   name: GroupName
   nameWithType: DisplayBindableBase.GroupName
-  fullName: H.Mvvm.DisplayBindableBase.GroupName
-- uid: H.Mvvm.DisplayBindableBase.Description
-  commentId: P:H.Mvvm.DisplayBindableBase.Description
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.GroupName
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.Description
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.Description
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Description
   name: Description
   nameWithType: DisplayBindableBase.Description
-  fullName: H.Mvvm.DisplayBindableBase.Description
-- uid: H.Mvvm.DisplayBindableBase.Order
-  commentId: P:H.Mvvm.DisplayBindableBase.Order
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.Description
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.Order
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.Order
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Order
   name: Order
   nameWithType: DisplayBindableBase.Order
-  fullName: H.Mvvm.DisplayBindableBase.Order
-- uid: H.Mvvm.DisplayBindableBase.LoadDefaultCommand
-  commentId: P:H.Mvvm.DisplayBindableBase.LoadDefaultCommand
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefaultCommand
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.Order
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefaultCommand
+  commentId: P:H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefaultCommand
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefaultCommand
   name: LoadDefaultCommand
   nameWithType: DisplayBindableBase.LoadDefaultCommand
-  fullName: H.Mvvm.DisplayBindableBase.LoadDefaultCommand
-- uid: H.Mvvm.DisplayBindableBase.LoadDefault
-  commentId: M:H.Mvvm.DisplayBindableBase.LoadDefault
-  parent: H.Mvvm.DisplayBindableBase
-  href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefaultCommand
+- uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefault
+  commentId: M:H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefault
+  parent: H.Mvvm.ViewModels.Base.DisplayBindableBase
+  href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefault
   name: LoadDefault()
   nameWithType: DisplayBindableBase.LoadDefault()
-  fullName: H.Mvvm.DisplayBindableBase.LoadDefault()
+  fullName: H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefault()
   spec.csharp:
-  - uid: H.Mvvm.DisplayBindableBase.LoadDefault
+  - uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefault
     name: LoadDefault
-    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault
+    href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefault
   - name: (
   - name: )
   spec.vb:
-  - uid: H.Mvvm.DisplayBindableBase.LoadDefault
+  - uid: H.Mvvm.ViewModels.Base.DisplayBindableBase.LoadDefault
     name: LoadDefault
-    href: H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault
+    href: H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefault
   - name: (
   - name: )
-- uid: H.Mvvm.BindableBase.Init
-  commentId: M:H.Mvvm.BindableBase.Init
-  parent: H.Mvvm.BindableBase
-  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+- uid: H.Mvvm.ViewModels.Base.CommandsBindableBase.Commands
+  commentId: P:H.Mvvm.ViewModels.Base.CommandsBindableBase.Commands
+  parent: H.Mvvm.ViewModels.Base.CommandsBindableBase
+  href: H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_Commands
+  name: Commands
+  nameWithType: CommandsBindableBase.Commands
+  fullName: H.Mvvm.ViewModels.Base.CommandsBindableBase.Commands
+- uid: H.Mvvm.ViewModels.Base.CommandsBindableBase.CreateCommands
+  commentId: M:H.Mvvm.ViewModels.Base.CommandsBindableBase.CreateCommands
+  parent: H.Mvvm.ViewModels.Base.CommandsBindableBase
+  href: H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_CreateCommands
+  name: CreateCommands()
+  nameWithType: CommandsBindableBase.CreateCommands()
+  fullName: H.Mvvm.ViewModels.Base.CommandsBindableBase.CreateCommands()
+  spec.csharp:
+  - uid: H.Mvvm.ViewModels.Base.CommandsBindableBase.CreateCommands
+    name: CreateCommands
+    href: H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_CreateCommands
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ViewModels.Base.CommandsBindableBase.CreateCommands
+    name: CreateCommands
+    href: H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_CreateCommands
+  - name: (
+  - name: )
+- uid: H.Mvvm.ViewModels.Base.Bindable.RelayCommand
+  commentId: P:H.Mvvm.ViewModels.Base.Bindable.RelayCommand
+  parent: H.Mvvm.ViewModels.Base.Bindable
+  href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayCommand
+  name: RelayCommand
+  nameWithType: Bindable.RelayCommand
+  fullName: H.Mvvm.ViewModels.Base.Bindable.RelayCommand
+- uid: H.Mvvm.ViewModels.Base.Bindable.LoadedCommand
+  commentId: P:H.Mvvm.ViewModels.Base.Bindable.LoadedCommand
+  parent: H.Mvvm.ViewModels.Base.Bindable
+  href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_LoadedCommand
+  name: LoadedCommand
+  nameWithType: Bindable.LoadedCommand
+  fullName: H.Mvvm.ViewModels.Base.Bindable.LoadedCommand
+- uid: H.Mvvm.ViewModels.Base.Bindable.CallMethodCommand
+  commentId: P:H.Mvvm.ViewModels.Base.Bindable.CallMethodCommand
+  parent: H.Mvvm.ViewModels.Base.Bindable
+  href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethodCommand
+  name: CallMethodCommand
+  nameWithType: Bindable.CallMethodCommand
+  fullName: H.Mvvm.ViewModels.Base.Bindable.CallMethodCommand
+- uid: H.Mvvm.ViewModels.Base.Bindable.RelayMethod(System.Object)
+  commentId: M:H.Mvvm.ViewModels.Base.Bindable.RelayMethod(System.Object)
+  parent: H.Mvvm.ViewModels.Base.Bindable
+  isExternal: true
+  href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayMethod_System_Object_
+  name: RelayMethod(object)
+  nameWithType: Bindable.RelayMethod(object)
+  fullName: H.Mvvm.ViewModels.Base.Bindable.RelayMethod(object)
+  nameWithType.vb: Bindable.RelayMethod(Object)
+  fullName.vb: H.Mvvm.ViewModels.Base.Bindable.RelayMethod(Object)
+  name.vb: RelayMethod(Object)
+  spec.csharp:
+  - uid: H.Mvvm.ViewModels.Base.Bindable.RelayMethod(System.Object)
+    name: RelayMethod
+    href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayMethod_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ViewModels.Base.Bindable.RelayMethod(System.Object)
+    name: RelayMethod
+    href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayMethod_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Mvvm.ViewModels.Base.Bindable.GetTargetElement``1
+  commentId: M:H.Mvvm.ViewModels.Base.Bindable.GetTargetElement``1
+  parent: H.Mvvm.ViewModels.Base.Bindable
+  href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_GetTargetElement__1
+  name: GetTargetElement<T>()
+  nameWithType: Bindable.GetTargetElement<T>()
+  fullName: H.Mvvm.ViewModels.Base.Bindable.GetTargetElement<T>()
+  nameWithType.vb: Bindable.GetTargetElement(Of T)()
+  fullName.vb: H.Mvvm.ViewModels.Base.Bindable.GetTargetElement(Of T)()
+  name.vb: GetTargetElement(Of T)()
+  spec.csharp:
+  - uid: H.Mvvm.ViewModels.Base.Bindable.GetTargetElement``1
+    name: GetTargetElement
+    href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_GetTargetElement__1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ViewModels.Base.Bindable.GetTargetElement``1
+    name: GetTargetElement
+    href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_GetTargetElement__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: H.Mvvm.ViewModels.Base.Bindable.CallMethod(System.Object)
+  commentId: M:H.Mvvm.ViewModels.Base.Bindable.CallMethod(System.Object)
+  parent: H.Mvvm.ViewModels.Base.Bindable
+  isExternal: true
+  href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethod_System_Object_
+  name: CallMethod(object)
+  nameWithType: Bindable.CallMethod(object)
+  fullName: H.Mvvm.ViewModels.Base.Bindable.CallMethod(object)
+  nameWithType.vb: Bindable.CallMethod(Object)
+  fullName.vb: H.Mvvm.ViewModels.Base.Bindable.CallMethod(Object)
+  name.vb: CallMethod(Object)
+  spec.csharp:
+  - uid: H.Mvvm.ViewModels.Base.Bindable.CallMethod(System.Object)
+    name: CallMethod
+    href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethod_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.ViewModels.Base.Bindable.CallMethod(System.Object)
+    name: CallMethod
+    href: H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethod_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Mvvm.ViewModels.Base.BindableBase.Init
+  commentId: M:H.Mvvm.ViewModels.Base.BindableBase.Init
+  parent: H.Mvvm.ViewModels.Base.BindableBase
+  href: H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init
   name: Init()
   nameWithType: BindableBase.Init()
-  fullName: H.Mvvm.BindableBase.Init()
+  fullName: H.Mvvm.ViewModels.Base.BindableBase.Init()
   spec.csharp:
-  - uid: H.Mvvm.BindableBase.Init
+  - uid: H.Mvvm.ViewModels.Base.BindableBase.Init
     name: Init
-    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+    href: H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init
   - name: (
   - name: )
   spec.vb:
-  - uid: H.Mvvm.BindableBase.Init
+  - uid: H.Mvvm.ViewModels.Base.BindableBase.Init
     name: Init
-    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init
+    href: H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init
   - name: (
   - name: )
-- uid: H.Mvvm.BindableBase.PropertyChanged
-  commentId: E:H.Mvvm.BindableBase.PropertyChanged
-  parent: H.Mvvm.BindableBase
-  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged
+- uid: H.Mvvm.ViewModels.Base.BindableBase.PropertyChanged
+  commentId: E:H.Mvvm.ViewModels.Base.BindableBase.PropertyChanged
+  parent: H.Mvvm.ViewModels.Base.BindableBase
+  href: H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_PropertyChanged
   name: PropertyChanged
   nameWithType: BindableBase.PropertyChanged
-  fullName: H.Mvvm.BindableBase.PropertyChanged
-- uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
-  commentId: M:H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
-  parent: H.Mvvm.BindableBase
+  fullName: H.Mvvm.ViewModels.Base.BindableBase.PropertyChanged
+- uid: H.Mvvm.ViewModels.Base.BindableBase.RaisePropertyChanged(System.String)
+  commentId: M:H.Mvvm.ViewModels.Base.BindableBase.RaisePropertyChanged(System.String)
+  parent: H.Mvvm.ViewModels.Base.BindableBase
   isExternal: true
-  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+  href: H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_
   name: RaisePropertyChanged(string)
   nameWithType: BindableBase.RaisePropertyChanged(string)
-  fullName: H.Mvvm.BindableBase.RaisePropertyChanged(string)
+  fullName: H.Mvvm.ViewModels.Base.BindableBase.RaisePropertyChanged(string)
   nameWithType.vb: BindableBase.RaisePropertyChanged(String)
-  fullName.vb: H.Mvvm.BindableBase.RaisePropertyChanged(String)
+  fullName.vb: H.Mvvm.ViewModels.Base.BindableBase.RaisePropertyChanged(String)
   name.vb: RaisePropertyChanged(String)
   spec.csharp:
-  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  - uid: H.Mvvm.ViewModels.Base.BindableBase.RaisePropertyChanged(System.String)
     name: RaisePropertyChanged
-    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+    href: H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_
   - name: (
   - uid: System.String
     name: string
@@ -405,64 +583,14 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
   spec.vb:
-  - uid: H.Mvvm.BindableBase.RaisePropertyChanged(System.String)
+  - uid: H.Mvvm.ViewModels.Base.BindableBase.RaisePropertyChanged(System.String)
     name: RaisePropertyChanged
-    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_
+    href: H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_
   - name: (
   - uid: System.String
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-- uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
-  commentId: M:H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
-  parent: H.Mvvm.BindableBase
-  isExternal: true
-  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
-  name: DispatcherRaisePropertyChanged(string)
-  nameWithType: BindableBase.DispatcherRaisePropertyChanged(string)
-  fullName: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(string)
-  nameWithType.vb: BindableBase.DispatcherRaisePropertyChanged(String)
-  fullName.vb: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(String)
-  name.vb: DispatcherRaisePropertyChanged(String)
-  spec.csharp:
-  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
-    name: DispatcherRaisePropertyChanged
-    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-  spec.vb:
-  - uid: H.Mvvm.BindableBase.DispatcherRaisePropertyChanged(System.String)
-    name: DispatcherRaisePropertyChanged
-    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-- uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
-  commentId: M:H.Mvvm.BindableBase.OnDispatcherPropertyChanged
-  parent: H.Mvvm.BindableBase
-  href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
-  name: OnDispatcherPropertyChanged()
-  nameWithType: BindableBase.OnDispatcherPropertyChanged()
-  fullName: H.Mvvm.BindableBase.OnDispatcherPropertyChanged()
-  spec.csharp:
-  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
-    name: OnDispatcherPropertyChanged
-    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: H.Mvvm.BindableBase.OnDispatcherPropertyChanged
-    name: OnDispatcherPropertyChanged
-    href: H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged
-  - name: (
   - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
@@ -683,6 +811,63 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: H.Mvvm.DisplayBindable`1.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<DisplayBindable<T>>(DisplayBindable<T>)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<DisplayBindable<T>>(DisplayBindable<T>)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Mvvm.DisplayBindable<T>>(H.Mvvm.DisplayBindable<T>)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of DisplayBindable(Of T))(DisplayBindable(Of T))
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Mvvm.DisplayBindable(Of T))(H.Mvvm.DisplayBindable(Of T))
+  name.vb: CloneByNewtonsoftJson(Of DisplayBindable(Of T))(DisplayBindable(Of T))
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Mvvm.DisplayBindable{`0})
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Mvvm.DisplayBindable`1
+    name: DisplayBindable
+    href: H.Mvvm.DisplayBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: H.Mvvm.DisplayBindable`1
+    name: DisplayBindable
+    href: H.Mvvm.DisplayBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Mvvm.DisplayBindable{`0})
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Mvvm.DisplayBindable`1
+    name: DisplayBindable
+    href: H.Mvvm.DisplayBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: H.Mvvm.DisplayBindable`1
+    name: DisplayBindable
+    href: H.Mvvm.DisplayBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
 - uid: H.Mvvm.DisplayBindable`1.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -898,6 +1083,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -1302,6 +1628,63 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -1712,6 +2095,44 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: H.Mvvm.ViewModels.Base
+  commentId: N:H.Mvvm.ViewModels.Base
+  href: H.html
+  name: H.Mvvm.ViewModels.Base
+  nameWithType: H.Mvvm.ViewModels.Base
+  fullName: H.Mvvm.ViewModels.Base
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  - name: .
+  - uid: H.Mvvm.ViewModels
+    name: ViewModels
+    href: H.Mvvm.ViewModels.html
+  - name: .
+  - uid: H.Mvvm.ViewModels.Base
+    name: Base
+    href: H.Mvvm.ViewModels.Base.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  - name: .
+  - uid: H.Mvvm.ViewModels
+    name: ViewModels
+    href: H.Mvvm.ViewModels.html
+  - name: .
+  - uid: H.Mvvm.ViewModels.Base
+    name: Base
+    href: H.Mvvm.ViewModels.Base.html
 - uid: System.ComponentModel
   commentId: N:System.ComponentModel
   isExternal: true
@@ -1739,6 +2160,44 @@ references:
     name: ComponentModel
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1948,6 +2407,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -2345,6 +2949,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -2749,6 +3409,36 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: H.Controls.FilterColumnDataGrid
   commentId: N:H.Controls.FilterColumnDataGrid
   href: H.html
@@ -2809,6 +3499,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: System.Windows.Threading
   commentId: N:System.Windows.Threading
   href: https://learn.microsoft.com/dotnet/api/system

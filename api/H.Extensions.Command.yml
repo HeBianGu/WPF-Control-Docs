@@ -10,6 +10,8 @@ items:
   - H.Extensions.Command.BuzyCommand`1
   - H.Extensions.Command.ClipBoardCopyTextCommand
   - H.Extensions.Command.ClipBoardPasteTextCommand
+  - H.Extensions.Command.DeleteCommand
+  - H.Extensions.Command.DeleteSelectorCommand
   - H.Extensions.Command.MessageCommand
   - H.Extensions.Command.NotifyCommandBase
   - H.Extensions.Command.PercentCommand
@@ -23,6 +25,7 @@ items:
   - H.Extensions.Command.ScrollViewerPageRightCommand
   - H.Extensions.Command.ScrollViewerPageUpCommand
   - H.Extensions.Command.ScrollViewerScrollToBottomCommand
+  - H.Extensions.Command.ScrollViewerScrollToCommandBase
   - H.Extensions.Command.ScrollViewerScrollToEndCommand
   - H.Extensions.Command.ScrollViewerScrollToHomeCommand
   - H.Extensions.Command.ScrollViewerScrollToTopCommand
@@ -118,6 +121,18 @@ references:
   name: ProcessCommand
   nameWithType: ProcessCommand
   fullName: H.Extensions.Command.ProcessCommand
+- uid: H.Extensions.Command.DeleteCommand
+  commentId: T:H.Extensions.Command.DeleteCommand
+  href: H.Extensions.Command.DeleteCommand.html
+  name: DeleteCommand
+  nameWithType: DeleteCommand
+  fullName: H.Extensions.Command.DeleteCommand
+- uid: H.Extensions.Command.DeleteSelectorCommand
+  commentId: T:H.Extensions.Command.DeleteSelectorCommand
+  href: H.Extensions.Command.DeleteSelectorCommand.html
+  name: DeleteSelectorCommand
+  nameWithType: DeleteSelectorCommand
+  fullName: H.Extensions.Command.DeleteSelectorCommand
 - uid: H.Extensions.Command.ScrollViewerLineDownCommand
   commentId: T:H.Extensions.Command.ScrollViewerLineDownCommand
   href: H.Extensions.Command.ScrollViewerLineDownCommand.html
@@ -173,6 +188,13 @@ references:
   name: ScrollViewerScrollToBottomCommand
   nameWithType: ScrollViewerScrollToBottomCommand
   fullName: H.Extensions.Command.ScrollViewerScrollToBottomCommand
+- uid: H.Extensions.Command.ScrollViewerScrollToCommandBase
+  commentId: T:H.Extensions.Command.ScrollViewerScrollToCommandBase
+  parent: H.Extensions.Command
+  href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html
+  name: ScrollViewerScrollToCommandBase
+  nameWithType: ScrollViewerScrollToCommandBase
+  fullName: H.Extensions.Command.ScrollViewerScrollToCommandBase
 - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand
   commentId: T:H.Extensions.Command.ScrollViewerScrollToEndCommand
   parent: H.Extensions.Command

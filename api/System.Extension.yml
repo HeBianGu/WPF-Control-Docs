@@ -13,6 +13,7 @@ items:
   - System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.RevertibleOptions})
   - System.Extension.AddSchedule(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   - System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
+  - System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
   - System.Extension.AddSwitchThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.SwitchThemeOptions})
   - System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
   - System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
@@ -287,6 +288,41 @@ items:
   nameWithType.vb: Extension.AddSplashScreen(IServiceCollection, Action(Of SplashScreenOption))
   fullName.vb: System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.SplashScreen.SplashScreenOption))
   name.vb: AddSplashScreen(IServiceCollection, Action(Of SplashScreenOption))
+- uid: System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
+  commentId: M:System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
+  id: AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
+  isExtensionMethod: true
+  parent: System.Extension
+  langs:
+  - csharp
+  - vb
+  name: AddSplashScreen<T>(IServiceCollection, Action<SplashScreenOption>)
+  nameWithType: Extension.AddSplashScreen<T>(IServiceCollection, Action<SplashScreenOption>)
+  fullName: System.Extension.AddSplashScreen<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.SplashScreen.SplashScreenOption>)
+  type: Method
+  source:
+    id: AddSplashScreen
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.SplashScreen\Extension.cs
+    startLine: 14
+  assemblies:
+  - H.Modules.SplashScreen
+  namespace: System
+  syntax:
+    content: 'public static IServiceCollection AddSplashScreen<T>(this IServiceCollection services, Action<SplashScreenOption> setupAction = null) where T : ISplashScreenViewPresenter'
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: setupAction
+      type: System.Action{H.Modules.SplashScreen.SplashScreenOption}
+    typeParameters:
+    - id: T
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddSplashScreen(Of T As ISplashScreenViewPresenter)(services As IServiceCollection, setupAction As Action(Of SplashScreenOption) = Nothing) As IServiceCollection
+  overload: System.Extension.AddSplashScreen*
+  nameWithType.vb: Extension.AddSplashScreen(Of T)(IServiceCollection, Action(Of SplashScreenOption))
+  fullName.vb: System.Extension.AddSplashScreen(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.SplashScreen.SplashScreenOption))
+  name.vb: AddSplashScreen(Of T)(IServiceCollection, Action(Of SplashScreenOption))
 - uid: System.Extension.UseSplashScreen(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.SplashScreenOption})
   commentId: M:System.Extension.UseSplashScreen(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.SplashScreenOption})
   id: UseSplashScreen(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.SplashScreenOption})
@@ -302,7 +338,7 @@ items:
   source:
     id: UseSplashScreen
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.SplashScreen\Extension.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - H.Modules.SplashScreen
   namespace: System

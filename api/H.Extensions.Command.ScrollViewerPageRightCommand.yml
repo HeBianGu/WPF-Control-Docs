@@ -5,7 +5,7 @@ items:
   id: ScrollViewerPageRightCommand
   parent: H.Extensions.Command
   children:
-  - H.Extensions.Command.ScrollViewerPageRightCommand.Execute(System.Object)
+  - H.Extensions.Command.ScrollViewerPageRightCommand.Invoke(System.Windows.Controls.ScrollViewer)
   langs:
   - csharp
   - vb
@@ -21,19 +21,34 @@ items:
   - H.Extensions.Command
   namespace: H.Extensions.Command
   syntax:
-    content: 'public class ScrollViewerPageRightCommand : ScrollViewerScrollToEndCommand, ICommand, INotifyPropertyChanged'
-    content.vb: Public Class ScrollViewerPageRightCommand Inherits ScrollViewerScrollToEndCommand Implements ICommand, INotifyPropertyChanged
+    content: 'public class ScrollViewerPageRightCommand : ScrollViewerScrollToEndCommand, ICommand, INotifyPropertyChanged, IIconable, INameable, IDescriptionable'
+    content.vb: Public Class ScrollViewerPageRightCommand Inherits ScrollViewerScrollToEndCommand Implements ICommand, INotifyPropertyChanged, IIconable, INameable, IDescriptionable
   inheritance:
   - System.Object
   - System.Windows.Markup.MarkupExtension
   - H.Mvvm.MarkupCommandBase
+  - H.Mvvm.AsyncMarkupCommandBase
+  - H.Mvvm.DisplayMarkupCommandBase
+  - H.Extensions.Command.ScrollViewerScrollToCommandBase
   - H.Extensions.Command.ScrollViewerScrollToEndCommand
   implements:
   - System.Windows.Input.ICommand
   - System.ComponentModel.INotifyPropertyChanged
+  - H.Mvvm.IIconable
+  - H.Mvvm.ViewModels.Base.INameable
+  - H.Mvvm.IDescriptionable
   inheritedMembers:
-  - H.Extensions.Command.ScrollViewerScrollToEndCommand.CanExecute(System.Object)
+  - H.Extensions.Command.ScrollViewerScrollToEndCommand.CanInvoke(System.Windows.Controls.ScrollViewer)
+  - H.Extensions.Command.ScrollViewerScrollToCommandBase.CanExecute(System.Object)
+  - H.Extensions.Command.ScrollViewerScrollToCommandBase.Execute(System.Object)
+  - H.Extensions.Command.ScrollViewerScrollToCommandBase.GetScrollViewer(System.Object)
+  - H.Mvvm.DisplayMarkupCommandBase.Name
+  - H.Mvvm.DisplayMarkupCommandBase.Icon
+  - H.Mvvm.DisplayMarkupCommandBase.Description
+  - H.Mvvm.AsyncMarkupCommandBase.ExecuteAsync(System.Object)
   - H.Mvvm.MarkupCommandBase.CanExecuteChanged
+  - H.Mvvm.MarkupCommandBase.GetTargetElement(System.Object)
+  - H.Mvvm.MarkupCommandBase.Target
   - H.Mvvm.MarkupCommandBase.ProvideValue(System.IServiceProvider)
   - H.Mvvm.MarkupCommandBase.PropertyChanged
   - H.Mvvm.MarkupCommandBase.RaisePropertyChanged(System.String)
@@ -45,16 +60,21 @@ items:
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
+  - H.Extensions.Command.ScrollViewerPageRightCommand.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
   - H.Extensions.Command.ScrollViewerPageRightCommand.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -62,38 +82,33 @@ items:
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
-- uid: H.Extensions.Command.ScrollViewerPageRightCommand.Execute(System.Object)
-  commentId: M:H.Extensions.Command.ScrollViewerPageRightCommand.Execute(System.Object)
-  id: Execute(System.Object)
+- uid: H.Extensions.Command.ScrollViewerPageRightCommand.Invoke(System.Windows.Controls.ScrollViewer)
+  commentId: M:H.Extensions.Command.ScrollViewerPageRightCommand.Invoke(System.Windows.Controls.ScrollViewer)
+  id: Invoke(System.Windows.Controls.ScrollViewer)
   parent: H.Extensions.Command.ScrollViewerPageRightCommand
   langs:
   - csharp
   - vb
-  name: Execute(object)
-  nameWithType: ScrollViewerPageRightCommand.Execute(object)
-  fullName: H.Extensions.Command.ScrollViewerPageRightCommand.Execute(object)
+  name: Invoke(ScrollViewer)
+  nameWithType: ScrollViewerPageRightCommand.Invoke(ScrollViewer)
+  fullName: H.Extensions.Command.ScrollViewerPageRightCommand.Invoke(System.Windows.Controls.ScrollViewer)
   type: Method
   source:
-    id: Execute
+    id: Invoke
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Command\ScrollViewer\ScrollViewerPageRightCommand.cs
     startLine: 9
   assemblies:
   - H.Extensions.Command
   namespace: H.Extensions.Command
-  summary: Defines the method to be called when the command is invoked.
   example: []
   syntax:
-    content: public override void Execute(object parameter)
+    content: protected override void Invoke(ScrollViewer scrollViewer)
     parameters:
-    - id: parameter
-      type: System.Object
-      description: Data used by the command.  If the command does not require data to be passed, this object can be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
-    content.vb: Public Overrides Sub Execute(parameter As Object)
-  overridden: H.Extensions.Command.ScrollViewerScrollToEndCommand.Execute(System.Object)
-  overload: H.Extensions.Command.ScrollViewerPageRightCommand.Execute*
-  nameWithType.vb: ScrollViewerPageRightCommand.Execute(Object)
-  fullName.vb: H.Extensions.Command.ScrollViewerPageRightCommand.Execute(Object)
-  name.vb: Execute(Object)
+    - id: scrollViewer
+      type: System.Windows.Controls.ScrollViewer
+    content.vb: Protected Overrides Sub Invoke(scrollViewer As ScrollViewer)
+  overridden: H.Extensions.Command.ScrollViewerScrollToEndCommand.Invoke(System.Windows.Controls.ScrollViewer)
+  overload: H.Extensions.Command.ScrollViewerPageRightCommand.Invoke*
 references:
 - uid: H.Extensions.Command
   commentId: N:H.Extensions.Command
@@ -151,6 +166,27 @@ references:
   name: MarkupCommandBase
   nameWithType: MarkupCommandBase
   fullName: H.Mvvm.MarkupCommandBase
+- uid: H.Mvvm.AsyncMarkupCommandBase
+  commentId: T:H.Mvvm.AsyncMarkupCommandBase
+  parent: H.Mvvm
+  href: H.Mvvm.AsyncMarkupCommandBase.html
+  name: AsyncMarkupCommandBase
+  nameWithType: AsyncMarkupCommandBase
+  fullName: H.Mvvm.AsyncMarkupCommandBase
+- uid: H.Mvvm.DisplayMarkupCommandBase
+  commentId: T:H.Mvvm.DisplayMarkupCommandBase
+  parent: H.Mvvm
+  href: H.Mvvm.DisplayMarkupCommandBase.html
+  name: DisplayMarkupCommandBase
+  nameWithType: DisplayMarkupCommandBase
+  fullName: H.Mvvm.DisplayMarkupCommandBase
+- uid: H.Extensions.Command.ScrollViewerScrollToCommandBase
+  commentId: T:H.Extensions.Command.ScrollViewerScrollToCommandBase
+  parent: H.Extensions.Command
+  href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html
+  name: ScrollViewerScrollToCommandBase
+  nameWithType: ScrollViewerScrollToCommandBase
+  fullName: H.Extensions.Command.ScrollViewerScrollToCommandBase
 - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand
   commentId: T:H.Extensions.Command.ScrollViewerScrollToEndCommand
   parent: H.Extensions.Command
@@ -174,21 +210,70 @@ references:
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
-- uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanExecute(System.Object)
-  commentId: M:H.Extensions.Command.ScrollViewerScrollToEndCommand.CanExecute(System.Object)
+- uid: H.Mvvm.IIconable
+  commentId: T:H.Mvvm.IIconable
+  parent: H.Mvvm
+  href: H.Mvvm.IIconable.html
+  name: IIconable
+  nameWithType: IIconable
+  fullName: H.Mvvm.IIconable
+- uid: H.Mvvm.ViewModels.Base.INameable
+  commentId: T:H.Mvvm.ViewModels.Base.INameable
+  parent: H.Mvvm.ViewModels.Base
+  href: H.Mvvm.ViewModels.Base.INameable.html
+  name: INameable
+  nameWithType: INameable
+  fullName: H.Mvvm.ViewModels.Base.INameable
+- uid: H.Mvvm.IDescriptionable
+  commentId: T:H.Mvvm.IDescriptionable
+  parent: H.Mvvm
+  href: H.Mvvm.IDescriptionable.html
+  name: IDescriptionable
+  nameWithType: IDescriptionable
+  fullName: H.Mvvm.IDescriptionable
+- uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanInvoke(System.Windows.Controls.ScrollViewer)
+  commentId: M:H.Extensions.Command.ScrollViewerScrollToEndCommand.CanInvoke(System.Windows.Controls.ScrollViewer)
   parent: H.Extensions.Command.ScrollViewerScrollToEndCommand
   isExternal: true
-  href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_CanExecute_System_Object_
+  href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_CanInvoke_System_Windows_Controls_ScrollViewer_
+  name: CanInvoke(ScrollViewer)
+  nameWithType: ScrollViewerScrollToEndCommand.CanInvoke(ScrollViewer)
+  fullName: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanInvoke(System.Windows.Controls.ScrollViewer)
+  spec.csharp:
+  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanInvoke(System.Windows.Controls.ScrollViewer)
+    name: CanInvoke
+    href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_CanInvoke_System_Windows_Controls_ScrollViewer_
+  - name: (
+  - uid: System.Windows.Controls.ScrollViewer
+    name: ScrollViewer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls.scrollviewer
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanInvoke(System.Windows.Controls.ScrollViewer)
+    name: CanInvoke
+    href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_CanInvoke_System_Windows_Controls_ScrollViewer_
+  - name: (
+  - uid: System.Windows.Controls.ScrollViewer
+    name: ScrollViewer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls.scrollviewer
+  - name: )
+- uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.CanExecute(System.Object)
+  commentId: M:H.Extensions.Command.ScrollViewerScrollToCommandBase.CanExecute(System.Object)
+  parent: H.Extensions.Command.ScrollViewerScrollToCommandBase
+  isExternal: true
+  href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_CanExecute_System_Object_
   name: CanExecute(object)
-  nameWithType: ScrollViewerScrollToEndCommand.CanExecute(object)
-  fullName: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanExecute(object)
-  nameWithType.vb: ScrollViewerScrollToEndCommand.CanExecute(Object)
-  fullName.vb: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanExecute(Object)
+  nameWithType: ScrollViewerScrollToCommandBase.CanExecute(object)
+  fullName: H.Extensions.Command.ScrollViewerScrollToCommandBase.CanExecute(object)
+  nameWithType.vb: ScrollViewerScrollToCommandBase.CanExecute(Object)
+  fullName.vb: H.Extensions.Command.ScrollViewerScrollToCommandBase.CanExecute(Object)
   name.vb: CanExecute(Object)
   spec.csharp:
-  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanExecute(System.Object)
+  - uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.CanExecute(System.Object)
     name: CanExecute
-    href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_CanExecute_System_Object_
+    href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_CanExecute_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -196,9 +281,123 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.CanExecute(System.Object)
+  - uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.CanExecute(System.Object)
     name: CanExecute
-    href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_CanExecute_System_Object_
+    href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_CanExecute_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.Execute(System.Object)
+  commentId: M:H.Extensions.Command.ScrollViewerScrollToCommandBase.Execute(System.Object)
+  parent: H.Extensions.Command.ScrollViewerScrollToCommandBase
+  isExternal: true
+  href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_Execute_System_Object_
+  name: Execute(object)
+  nameWithType: ScrollViewerScrollToCommandBase.Execute(object)
+  fullName: H.Extensions.Command.ScrollViewerScrollToCommandBase.Execute(object)
+  nameWithType.vb: ScrollViewerScrollToCommandBase.Execute(Object)
+  fullName.vb: H.Extensions.Command.ScrollViewerScrollToCommandBase.Execute(Object)
+  name.vb: Execute(Object)
+  spec.csharp:
+  - uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.Execute(System.Object)
+    name: Execute
+    href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_Execute_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.Execute(System.Object)
+    name: Execute
+    href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_Execute_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.GetScrollViewer(System.Object)
+  commentId: M:H.Extensions.Command.ScrollViewerScrollToCommandBase.GetScrollViewer(System.Object)
+  parent: H.Extensions.Command.ScrollViewerScrollToCommandBase
+  isExternal: true
+  href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_GetScrollViewer_System_Object_
+  name: GetScrollViewer(object)
+  nameWithType: ScrollViewerScrollToCommandBase.GetScrollViewer(object)
+  fullName: H.Extensions.Command.ScrollViewerScrollToCommandBase.GetScrollViewer(object)
+  nameWithType.vb: ScrollViewerScrollToCommandBase.GetScrollViewer(Object)
+  fullName.vb: H.Extensions.Command.ScrollViewerScrollToCommandBase.GetScrollViewer(Object)
+  name.vb: GetScrollViewer(Object)
+  spec.csharp:
+  - uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.GetScrollViewer(System.Object)
+    name: GetScrollViewer
+    href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_GetScrollViewer_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.Command.ScrollViewerScrollToCommandBase.GetScrollViewer(System.Object)
+    name: GetScrollViewer
+    href: H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_GetScrollViewer_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Mvvm.DisplayMarkupCommandBase.Name
+  commentId: P:H.Mvvm.DisplayMarkupCommandBase.Name
+  parent: H.Mvvm.DisplayMarkupCommandBase
+  href: H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Name
+  name: Name
+  nameWithType: DisplayMarkupCommandBase.Name
+  fullName: H.Mvvm.DisplayMarkupCommandBase.Name
+- uid: H.Mvvm.DisplayMarkupCommandBase.Icon
+  commentId: P:H.Mvvm.DisplayMarkupCommandBase.Icon
+  parent: H.Mvvm.DisplayMarkupCommandBase
+  href: H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Icon
+  name: Icon
+  nameWithType: DisplayMarkupCommandBase.Icon
+  fullName: H.Mvvm.DisplayMarkupCommandBase.Icon
+- uid: H.Mvvm.DisplayMarkupCommandBase.Description
+  commentId: P:H.Mvvm.DisplayMarkupCommandBase.Description
+  parent: H.Mvvm.DisplayMarkupCommandBase
+  href: H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Description
+  name: Description
+  nameWithType: DisplayMarkupCommandBase.Description
+  fullName: H.Mvvm.DisplayMarkupCommandBase.Description
+- uid: H.Mvvm.AsyncMarkupCommandBase.ExecuteAsync(System.Object)
+  commentId: M:H.Mvvm.AsyncMarkupCommandBase.ExecuteAsync(System.Object)
+  parent: H.Mvvm.AsyncMarkupCommandBase
+  isExternal: true
+  href: H.Mvvm.AsyncMarkupCommandBase.html#H_Mvvm_AsyncMarkupCommandBase_ExecuteAsync_System_Object_
+  name: ExecuteAsync(object)
+  nameWithType: AsyncMarkupCommandBase.ExecuteAsync(object)
+  fullName: H.Mvvm.AsyncMarkupCommandBase.ExecuteAsync(object)
+  nameWithType.vb: AsyncMarkupCommandBase.ExecuteAsync(Object)
+  fullName.vb: H.Mvvm.AsyncMarkupCommandBase.ExecuteAsync(Object)
+  name.vb: ExecuteAsync(Object)
+  spec.csharp:
+  - uid: H.Mvvm.AsyncMarkupCommandBase.ExecuteAsync(System.Object)
+    name: ExecuteAsync
+    href: H.Mvvm.AsyncMarkupCommandBase.html#H_Mvvm_AsyncMarkupCommandBase_ExecuteAsync_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.AsyncMarkupCommandBase.ExecuteAsync(System.Object)
+    name: ExecuteAsync
+    href: H.Mvvm.AsyncMarkupCommandBase.html#H_Mvvm_AsyncMarkupCommandBase_ExecuteAsync_System_Object_
   - name: (
   - uid: System.Object
     name: Object
@@ -212,6 +411,44 @@ references:
   name: CanExecuteChanged
   nameWithType: MarkupCommandBase.CanExecuteChanged
   fullName: H.Mvvm.MarkupCommandBase.CanExecuteChanged
+- uid: H.Mvvm.MarkupCommandBase.GetTargetElement(System.Object)
+  commentId: M:H.Mvvm.MarkupCommandBase.GetTargetElement(System.Object)
+  parent: H.Mvvm.MarkupCommandBase
+  isExternal: true
+  href: H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_GetTargetElement_System_Object_
+  name: GetTargetElement(object)
+  nameWithType: MarkupCommandBase.GetTargetElement(object)
+  fullName: H.Mvvm.MarkupCommandBase.GetTargetElement(object)
+  nameWithType.vb: MarkupCommandBase.GetTargetElement(Object)
+  fullName.vb: H.Mvvm.MarkupCommandBase.GetTargetElement(Object)
+  name.vb: GetTargetElement(Object)
+  spec.csharp:
+  - uid: H.Mvvm.MarkupCommandBase.GetTargetElement(System.Object)
+    name: GetTargetElement
+    href: H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_GetTargetElement_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Mvvm.MarkupCommandBase.GetTargetElement(System.Object)
+    name: GetTargetElement
+    href: H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_GetTargetElement_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Mvvm.MarkupCommandBase.Target
+  commentId: P:H.Mvvm.MarkupCommandBase.Target
+  parent: H.Mvvm.MarkupCommandBase
+  href: H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_Target
+  name: Target
+  nameWithType: MarkupCommandBase.Target
+  fullName: H.Mvvm.MarkupCommandBase.Target
 - uid: H.Mvvm.MarkupCommandBase.ProvideValue(System.IServiceProvider)
   commentId: M:H.Mvvm.MarkupCommandBase.ProvideValue(System.IServiceProvider)
   parent: H.Mvvm.MarkupCommandBase
@@ -497,6 +734,47 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: H.Extensions.Command.ScrollViewerPageRightCommand.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<ScrollViewerPageRightCommand>(ScrollViewerPageRightCommand)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<ScrollViewerPageRightCommand>(ScrollViewerPageRightCommand)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Extensions.Command.ScrollViewerPageRightCommand>(H.Extensions.Command.ScrollViewerPageRightCommand)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of ScrollViewerPageRightCommand)(ScrollViewerPageRightCommand)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Extensions.Command.ScrollViewerPageRightCommand)(H.Extensions.Command.ScrollViewerPageRightCommand)
+  name.vb: CloneByNewtonsoftJson(Of ScrollViewerPageRightCommand)(ScrollViewerPageRightCommand)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Extensions.Command.ScrollViewerPageRightCommand)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Extensions.Command.ScrollViewerPageRightCommand
+    name: ScrollViewerPageRightCommand
+    href: H.Extensions.Command.ScrollViewerPageRightCommand.html
+  - name: '>'
+  - name: (
+  - uid: H.Extensions.Command.ScrollViewerPageRightCommand
+    name: ScrollViewerPageRightCommand
+    href: H.Extensions.Command.ScrollViewerPageRightCommand.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Extensions.Command.ScrollViewerPageRightCommand)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Extensions.Command.ScrollViewerPageRightCommand
+    name: ScrollViewerPageRightCommand
+    href: H.Extensions.Command.ScrollViewerPageRightCommand.html
+  - name: )
+  - name: (
+  - uid: H.Extensions.Command.ScrollViewerPageRightCommand
+    name: ScrollViewerPageRightCommand
+    href: H.Extensions.Command.ScrollViewerPageRightCommand.html
+  - name: )
 - uid: H.Extensions.Command.ScrollViewerPageRightCommand.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -696,6 +974,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -1100,6 +1519,63 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -1633,6 +2109,82 @@ references:
     name: ComponentModel
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: H.Mvvm.ViewModels.Base
+  commentId: N:H.Mvvm.ViewModels.Base
+  href: H.html
+  name: H.Mvvm.ViewModels.Base
+  nameWithType: H.Mvvm.ViewModels.Base
+  fullName: H.Mvvm.ViewModels.Base
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  - name: .
+  - uid: H.Mvvm.ViewModels
+    name: ViewModels
+    href: H.Mvvm.ViewModels.html
+  - name: .
+  - uid: H.Mvvm.ViewModels.Base
+    name: Base
+    href: H.Mvvm.ViewModels.Base.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Mvvm
+    name: Mvvm
+    href: H.Mvvm.html
+  - name: .
+  - uid: H.Mvvm.ViewModels
+    name: ViewModels
+    href: H.Mvvm.ViewModels.html
+  - name: .
+  - uid: H.Mvvm.ViewModels.Base
+    name: Base
+    href: H.Mvvm.ViewModels.Base.html
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1842,6 +2394,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -2239,6 +2936,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -2643,6 +3396,36 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: H.Controls.FilterColumnDataGrid
   commentId: N:H.Controls.FilterColumnDataGrid
   href: H.html
@@ -2703,6 +3486,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: System.Windows.Threading
   commentId: N:System.Windows.Threading
   href: https://learn.microsoft.com/dotnet/api/system
@@ -2733,40 +3546,82 @@ references:
   - uid: System.Windows.Threading
     name: Threading
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading
-- uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.Execute(System.Object)
-  commentId: M:H.Extensions.Command.ScrollViewerScrollToEndCommand.Execute(System.Object)
+- uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.Invoke(System.Windows.Controls.ScrollViewer)
+  commentId: M:H.Extensions.Command.ScrollViewerScrollToEndCommand.Invoke(System.Windows.Controls.ScrollViewer)
   parent: H.Extensions.Command.ScrollViewerScrollToEndCommand
   isExternal: true
-  href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_Execute_System_Object_
-  name: Execute(object)
-  nameWithType: ScrollViewerScrollToEndCommand.Execute(object)
-  fullName: H.Extensions.Command.ScrollViewerScrollToEndCommand.Execute(object)
-  nameWithType.vb: ScrollViewerScrollToEndCommand.Execute(Object)
-  fullName.vb: H.Extensions.Command.ScrollViewerScrollToEndCommand.Execute(Object)
-  name.vb: Execute(Object)
+  href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_Invoke_System_Windows_Controls_ScrollViewer_
+  name: Invoke(ScrollViewer)
+  nameWithType: ScrollViewerScrollToEndCommand.Invoke(ScrollViewer)
+  fullName: H.Extensions.Command.ScrollViewerScrollToEndCommand.Invoke(System.Windows.Controls.ScrollViewer)
   spec.csharp:
-  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.Execute(System.Object)
-    name: Execute
-    href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_Execute_System_Object_
+  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.Invoke(System.Windows.Controls.ScrollViewer)
+    name: Invoke
+    href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_Invoke_System_Windows_Controls_ScrollViewer_
   - name: (
-  - uid: System.Object
-    name: object
+  - uid: System.Windows.Controls.ScrollViewer
+    name: ScrollViewer
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls.scrollviewer
   - name: )
   spec.vb:
-  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.Execute(System.Object)
-    name: Execute
-    href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_Execute_System_Object_
+  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand.Invoke(System.Windows.Controls.ScrollViewer)
+    name: Invoke
+    href: H.Extensions.Command.ScrollViewerScrollToEndCommand.html#H_Extensions_Command_ScrollViewerScrollToEndCommand_Invoke_System_Windows_Controls_ScrollViewer_
   - name: (
-  - uid: System.Object
-    name: Object
+  - uid: System.Windows.Controls.ScrollViewer
+    name: ScrollViewer
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls.scrollviewer
   - name: )
-- uid: H.Extensions.Command.ScrollViewerPageRightCommand.Execute*
-  commentId: Overload:H.Extensions.Command.ScrollViewerPageRightCommand.Execute
-  href: H.Extensions.Command.ScrollViewerPageRightCommand.html#H_Extensions_Command_ScrollViewerPageRightCommand_Execute_System_Object_
-  name: Execute
-  nameWithType: ScrollViewerPageRightCommand.Execute
-  fullName: H.Extensions.Command.ScrollViewerPageRightCommand.Execute
+- uid: H.Extensions.Command.ScrollViewerPageRightCommand.Invoke*
+  commentId: Overload:H.Extensions.Command.ScrollViewerPageRightCommand.Invoke
+  href: H.Extensions.Command.ScrollViewerPageRightCommand.html#H_Extensions_Command_ScrollViewerPageRightCommand_Invoke_System_Windows_Controls_ScrollViewer_
+  name: Invoke
+  nameWithType: ScrollViewerPageRightCommand.Invoke
+  fullName: H.Extensions.Command.ScrollViewerPageRightCommand.Invoke
+- uid: System.Windows.Controls.ScrollViewer
+  commentId: T:System.Windows.Controls.ScrollViewer
+  parent: System.Windows.Controls
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.controls.scrollviewer
+  name: ScrollViewer
+  nameWithType: ScrollViewer
+  fullName: System.Windows.Controls.ScrollViewer
+- uid: System.Windows.Controls
+  commentId: N:System.Windows.Controls
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Controls
+  nameWithType: System.Windows.Controls
+  fullName: System.Windows.Controls
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Controls
+    name: Controls
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Controls
+    name: Controls
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls

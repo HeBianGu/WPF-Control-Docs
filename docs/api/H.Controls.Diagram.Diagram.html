@@ -104,7 +104,7 @@ Class Diagram
     <pre><code class="lang-csharp hljs">[TemplatePart(Name = &quot;NodeLayer&quot;, Type = typeof(NodeLayer))]
 [TemplatePart(Name = &quot;LinkLayer&quot;, Type = typeof(LinkLayer))]
 [TemplatePart(Name = &quot;DynamicLayer&quot;, Type = typeof(LinkLayer))]
-public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild</code></pre>
+public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild, IDiagram</code></pre>
   </div>
 
 
@@ -134,6 +134,7 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.iinputelement">IInputElement</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.iqueryambient">IQueryAmbient</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.iaddchild">IAddChild</a></div>
+      <div><a class="xref" href="H.Controls.Diagram.IDiagram.html">IDiagram</a></div>
     </dd>
   </dl>
 
@@ -2001,6 +2002,15 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_AligmentNodes_H_Controls_Diagram_Diagram_">DiagramExtension.AligmentNodes(Diagram)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_LinkNodes_H_Controls_Diagram_Diagram_H_Controls_Diagram_Parts_Node_H_Controls_Diagram_Parts_Node_System_Windows_Controls_Dock_">DiagramExtension.LinkNodes(Diagram, Node, Node, Dock)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -2011,6 +2021,15 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -2029,6 +2048,9 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -2080,6 +2102,9 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
   </div>
   <div>
       <a class="xref" href="H.Controls.OutlookBar.PopupHelper.html#H_Controls_OutlookBar_PopupHelper_IsLogicalAncestorOf_System_Windows_UIElement_System_Windows_UIElement_">PopupHelper.IsLogicalAncestorOf(UIElement, UIElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__">GuideExtension.GetGuideTree(UIElement, Predicate&lt;UIElement&gt;)</a>
   </div>
   </dd></dl>
 
@@ -2152,8 +2177,8 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
 
 
 
-  <h3 id="H_Controls_Diagram_Diagram_DurationProperty" data-uid="H.Controls.Diagram.Diagram.DurationProperty">
-  DurationProperty
+  <h3 id="H_Controls_Diagram_Diagram_AddNodedRoutedEvent" data-uid="H.Controls.Diagram.Diagram.AddNodedRoutedEvent">
+  AddNodedRoutedEvent
   
   </h3>
 
@@ -2161,7 +2186,37 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty DurationProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly RoutedEvent AddNodedRoutedEvent</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.routedevent">RoutedEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="H_Controls_Diagram_Diagram_DataSourceProperty" data-uid="H.Controls.Diagram.Diagram.DataSourceProperty">
+  DataSourceProperty
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty DataSourceProperty</code></pre>
   </div>
 
 
@@ -2192,66 +2247,6 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly DependencyProperty DynamicLinkStyleProperty</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="H_Controls_Diagram_Diagram_FlowableModeProperty" data-uid="H.Controls.Diagram.Diagram.FlowableModeProperty">
-  FlowableModeProperty
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty FlowableModeProperty</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="H_Controls_Diagram_Diagram_FlowableZoomModeProperty" data-uid="H.Controls.Diagram.Diagram.FlowableZoomModeProperty">
-  FlowableZoomModeProperty
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty FlowableZoomModeProperty</code></pre>
   </div>
 
 
@@ -2452,66 +2447,6 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
 
 
 
-  <h3 id="H_Controls_Diagram_Diagram_NodesSourceProperty" data-uid="H.Controls.Diagram.Diagram.NodesSourceProperty">
-  NodesSourceProperty
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty NodesSourceProperty</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="H_Controls_Diagram_Diagram_RunningPartChangedRoutedEvent" data-uid="H.Controls.Diagram.Diagram.RunningPartChangedRoutedEvent">
-  RunningPartChangedRoutedEvent
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly RoutedEvent RunningPartChangedRoutedEvent</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.routedevent">RoutedEvent</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
   <h3 id="H_Controls_Diagram_Diagram_SelectedNodeProperty" data-uid="H.Controls.Diagram.Diagram.SelectedNodeProperty">
   SelectedNodeProperty
   
@@ -2602,8 +2537,8 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
 
 
 
-  <h3 id="H_Controls_Diagram_Diagram_StateProperty" data-uid="H.Controls.Diagram.Diagram.StateProperty">
-  StateProperty
+  <h3 id="H_Controls_Diagram_Diagram_UseAutoAddLinkOnEndProperty" data-uid="H.Controls.Diagram.Diagram.UseAutoAddLinkOnEndProperty">
+  UseAutoAddLinkOnEndProperty
   
   </h3>
 
@@ -2611,67 +2546,7 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty StateProperty</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="H_Controls_Diagram_Diagram_UseFlowableSelectToRunningProperty" data-uid="H.Controls.Diagram.Diagram.UseFlowableSelectToRunningProperty">
-  UseFlowableSelectToRunningProperty
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty UseFlowableSelectToRunningProperty</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="H_Controls_Diagram_Diagram_UseStartNodeOnlyProperty" data-uid="H.Controls.Diagram.Diagram.UseStartNodeOnlyProperty">
-  UseStartNodeOnlyProperty
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty UseStartNodeOnlyProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty UseAutoAddLinkOnEndProperty</code></pre>
   </div>
 
 
@@ -2693,6 +2568,37 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
 
   <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="H_Controls_Diagram_Diagram_DataSource_" data-uid="H.Controls.Diagram.Diagram.DataSource*"></a>
+
+  <h3 id="H_Controls_Diagram_Diagram_DataSource" data-uid="H.Controls.Diagram.Diagram.DataSource">
+  DataSource
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDiagramDataSource DataSource { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Controls.Diagram.IDiagramDataSource.html">IDiagramDataSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="H_Controls_Diagram_Diagram_DefaultKey_" data-uid="H.Controls.Diagram.Diagram.DefaultKey*"></a>
@@ -2726,38 +2632,6 @@ public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFramewo
 
 
 
-  <a id="H_Controls_Diagram_Diagram_Duration_" data-uid="H.Controls.Diagram.Diagram.Duration*"></a>
-
-  <h3 id="H_Controls_Diagram_Diagram_Duration" data-uid="H.Controls.Diagram.Diagram.Duration">
-  Duration
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;切换布局动画间隔&quot;, GroupName = &quot;显示设置&quot;)]
-public TimeSpan Duration { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="H_Controls_Diagram_Diagram_DynamicLayer_" data-uid="H.Controls.Diagram.Diagram.DynamicLayer*"></a>
 
   <h3 id="H_Controls_Diagram_Diagram_DynamicLayer" data-uid="H.Controls.Diagram.Diagram.DynamicLayer">
@@ -2779,7 +2653,7 @@ public LinkLayer DynamicLayer { get; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.LinkLayer.html">LinkLayer</a></dt>
+    <dt><a class="xref" href="H.Controls.Diagram.Layers.LinkLayer.html">LinkLayer</a></dt>
     <dd></dd>
   </dl>
 
@@ -2822,70 +2696,6 @@ public Style DynamicLinkStyle { get; set; }</code></pre>
 
 
 
-  <a id="H_Controls_Diagram_Diagram_FlowableMode_" data-uid="H.Controls.Diagram.Diagram.FlowableMode*"></a>
-
-  <h3 id="H_Controls_Diagram_Diagram_FlowableMode" data-uid="H.Controls.Diagram.Diagram.FlowableMode">
-  FlowableMode
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;执行方式&quot;, GroupName = &quot;流程控制&quot;)]
-public DiagramFlowableMode FlowableMode { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.DiagramFlowableMode.html">DiagramFlowableMode</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Controls_Diagram_Diagram_FlowableZoomMode_" data-uid="H.Controls.Diagram.Diagram.FlowableZoomMode*"></a>
-
-  <h3 id="H_Controls_Diagram_Diagram_FlowableZoomMode" data-uid="H.Controls.Diagram.Diagram.FlowableZoomMode">
-  FlowableZoomMode
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;执行时节点自动缩放&quot;, GroupName = &quot;流程控制&quot;)]
-public DiagramFlowableZoomMode FlowableZoomMode { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.DiagramFlowableZoomMode.html">DiagramFlowableZoomMode</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="H_Controls_Diagram_Diagram_Layout_" data-uid="H.Controls.Diagram.Diagram.Layout*"></a>
 
   <h3 id="H_Controls_Diagram_Diagram_Layout" data-uid="H.Controls.Diagram.Diagram.Layout">
@@ -2907,7 +2717,7 @@ public ILayout Layout { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.ILayout.html">ILayout</a></dt>
+    <dt><a class="xref" href="H.Controls.Diagram.Layouts.Base.ILayout.html">ILayout</a></dt>
     <dd></dd>
   </dl>
 
@@ -2939,7 +2749,7 @@ public ILinkDrawer LinkDrawer { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.ILinkDrawer.html">ILinkDrawer</a></dt>
+    <dt><a class="xref" href="H.Controls.Diagram.LinkDrawers.ILinkDrawer.html">ILinkDrawer</a></dt>
     <dd></dd>
   </dl>
 
@@ -2971,7 +2781,7 @@ public LinkLayer LinkLayer { get; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.LinkLayer.html">LinkLayer</a></dt>
+    <dt><a class="xref" href="H.Controls.Diagram.Layers.LinkLayer.html">LinkLayer</a></dt>
     <dd></dd>
   </dl>
 
@@ -3067,7 +2877,7 @@ public List&lt;Link&gt; Links { get; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="H.Controls.Diagram.Link.html">Link</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Link.html">Link</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -3131,7 +2941,7 @@ public NodeLayer NodeLayer { get; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.NodeLayer.html">NodeLayer</a></dt>
+    <dt><a class="xref" href="H.Controls.Diagram.Layers.NodeLayer.html">NodeLayer</a></dt>
     <dd></dd>
   </dl>
 
@@ -3195,39 +3005,7 @@ public List&lt;Node&gt; Nodes { get; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="H.Controls.Diagram.Node.html">Node</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Controls_Diagram_Diagram_NodesSource_" data-uid="H.Controls.Diagram.Diagram.NodesSource*"></a>
-
-  <h3 id="H_Controls_Diagram_Diagram_NodesSource" data-uid="H.Controls.Diagram.Diagram.NodesSource">
-  NodesSource
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Browsable(false)]
-public IList NodesSource { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Node.html">Node</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -3259,7 +3037,7 @@ public Node SelectedNode { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.Node.html">Node</a></dt>
+    <dt><a class="xref" href="H.Controls.Diagram.Parts.Node.html">Node</a></dt>
     <dd></dd>
   </dl>
 
@@ -3291,39 +3069,7 @@ public Part SelectedPart { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.Part.html">Part</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Controls_Diagram_Diagram_State_" data-uid="H.Controls.Diagram.Diagram.State*"></a>
-
-  <h3 id="H_Controls_Diagram_Diagram_State" data-uid="H.Controls.Diagram.Diagram.State">
-  State
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;执行状态&quot;, GroupName = &quot;流程控制&quot;)]
-public DiagramFlowableState State { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.DiagramFlowableState.html">DiagramFlowableState</a></dt>
+    <dt><a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a></dt>
     <dd></dd>
   </dl>
 
@@ -3366,10 +3112,10 @@ public bool UseAnimation { get; set; }</code></pre>
 
 
 
-  <a id="H_Controls_Diagram_Diagram_UseFlowableSelectToRunning_" data-uid="H.Controls.Diagram.Diagram.UseFlowableSelectToRunning*"></a>
+  <a id="H_Controls_Diagram_Diagram_UseAutoAddLinkOnEnd_" data-uid="H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd*"></a>
 
-  <h3 id="H_Controls_Diagram_Diagram_UseFlowableSelectToRunning" data-uid="H.Controls.Diagram.Diagram.UseFlowableSelectToRunning">
-  UseFlowableSelectToRunning
+  <h3 id="H_Controls_Diagram_Diagram_UseAutoAddLinkOnEnd" data-uid="H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd">
+  UseAutoAddLinkOnEnd
   
   </h3>
 
@@ -3377,40 +3123,7 @@ public bool UseAnimation { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;执行时节点自动选中&quot;, GroupName = &quot;流程控制&quot;)]
-public bool UseFlowableSelectToRunning { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Controls_Diagram_Diagram_UseStartNodeOnly_" data-uid="H.Controls.Diagram.Diagram.UseStartNodeOnly*"></a>
-
-  <h3 id="H_Controls_Diagram_Diagram_UseStartNodeOnly" data-uid="H.Controls.Diagram.Diagram.UseStartNodeOnly">
-  UseStartNodeOnly
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;启用开始点接口检查&quot;, GroupName = &quot;流程控制&quot;)]
-public bool UseStartNodeOnly { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool UseAutoAddLinkOnEnd { get; set; }</code></pre>
   </div>
 
 
@@ -3434,9 +3147,40 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 </h2>
 
 
+  <a id="H_Controls_Diagram_Diagram_AddLink_" data-uid="H.Controls.Diagram.Diagram.AddLink*"></a>
+
+  <h3 id="H_Controls_Diagram_Diagram_AddLink_H_Controls_Diagram_Parts_Link_" data-uid="H.Controls.Diagram.Diagram.AddLink(H.Controls.Diagram.Parts.Link)">
+  AddLink(Link)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddLink(Link link)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>link</code> <a class="xref" href="H.Controls.Diagram.Parts.Link.html">Link</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="H_Controls_Diagram_Diagram_AddNode_" data-uid="H.Controls.Diagram.Diagram.AddNode*"></a>
 
-  <h3 id="H_Controls_Diagram_Diagram_AddNode_H_Controls_Diagram_Node___" data-uid="H.Controls.Diagram.Diagram.AddNode(H.Controls.Diagram.Node[])">
+  <h3 id="H_Controls_Diagram_Diagram_AddNode_H_Controls_Diagram_Parts_Node___" data-uid="H.Controls.Diagram.Diagram.AddNode(H.Controls.Diagram.Parts.Node[])">
   AddNode(params Node[])
   
   </h3>
@@ -3450,9 +3194,35 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>nodes</code> <a class="xref" href="H.Controls.Diagram.Node.html">Node</a>[]</dt>
+    <dt><code>nodes</code> <a class="xref" href="H.Controls.Diagram.Parts.Node.html">Node</a>[]</dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Diagram_Clear_" data-uid="H.Controls.Diagram.Diagram.Clear*"></a>
+
+  <h3 id="H_Controls_Diagram_Diagram_Clear" data-uid="H.Controls.Diagram.Diagram.Clear">
+  Clear()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Clear()</code></pre>
+  </div>
+
 
 
 
@@ -3467,7 +3237,7 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
   <a id="H_Controls_Diagram_Diagram_GetAllParts_" data-uid="H.Controls.Diagram.Diagram.GetAllParts*"></a>
 
-  <h3 id="H_Controls_Diagram_Diagram_GetAllParts_System_Func_H_Controls_Diagram_Part_System_Boolean__" data-uid="H.Controls.Diagram.Diagram.GetAllParts(System.Func{H.Controls.Diagram.Part,System.Boolean})">
+  <h3 id="H_Controls_Diagram_Diagram_GetAllParts_System_Func_H_Controls_Diagram_Parts_Base_Part_System_Boolean__" data-uid="H.Controls.Diagram.Diagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})">
   GetAllParts(Func&lt;Part, bool&gt;)
   
   </h3>
@@ -3481,13 +3251,13 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Controls.Diagram.Part.html">Part</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.Part.html">Part</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -3501,10 +3271,10 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
 
 
-  <a id="H_Controls_Diagram_Diagram_GetStartNode_" data-uid="H.Controls.Diagram.Diagram.GetStartNode*"></a>
+  <a id="H_Controls_Diagram_Diagram_InvokeMessage_" data-uid="H.Controls.Diagram.Diagram.InvokeMessage*"></a>
 
-  <h3 id="H_Controls_Diagram_Diagram_GetStartNode_System_String__" data-uid="H.Controls.Diagram.Diagram.GetStartNode(System.String@)">
-  GetStartNode(out string)
+  <h3 id="H_Controls_Diagram_Diagram_InvokeMessage_System_String_" data-uid="H.Controls.Diagram.Diagram.InvokeMessage(System.String)">
+  InvokeMessage(string)
   
   </h3>
 
@@ -3512,7 +3282,7 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Node GetStartNode(out string message)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void InvokeMessage(string message)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3521,11 +3291,37 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
     <dd></dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Diagram_OnAddNoded_" data-uid="H.Controls.Diagram.Diagram.OnAddNoded*"></a>
+
+  <h3 id="H_Controls_Diagram_Diagram_OnAddNoded_System_Collections_Generic_IEnumerable_H_Controls_Diagram_Parts_Node__" data-uid="H.Controls.Diagram.Diagram.OnAddNoded(System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Node})">
+  OnAddNoded(IEnumerable&lt;Node&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnAddNoded(IEnumerable&lt;Node&gt; nodes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Controls.Diagram.Node.html">Node</a></dt>
+    <dt><code>nodes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Node.html">Node</a>&gt;</dt>
     <dd></dd>
   </dl>
+
 
 
 
@@ -3703,7 +3499,7 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
   <a id="H_Controls_Diagram_Diagram_RemoveNode_" data-uid="H.Controls.Diagram.Diagram.RemoveNode*"></a>
 
-  <h3 id="H_Controls_Diagram_Diagram_RemoveNode_H_Controls_Diagram_Node___" data-uid="H.Controls.Diagram.Diagram.RemoveNode(H.Controls.Diagram.Node[])">
+  <h3 id="H_Controls_Diagram_Diagram_RemoveNode_H_Controls_Diagram_Parts_Node___" data-uid="H.Controls.Diagram.Diagram.RemoveNode(H.Controls.Diagram.Parts.Node[])">
   RemoveNode(params Node[])
   
   </h3>
@@ -3717,7 +3513,7 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>nodes</code> <a class="xref" href="H.Controls.Diagram.Node.html">Node</a>[]</dt>
+    <dt><code>nodes</code> <a class="xref" href="H.Controls.Diagram.Parts.Node.html">Node</a>[]</dt>
     <dd></dd>
   </dl>
 
@@ -3732,10 +3528,10 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
 
 
-  <a id="H_Controls_Diagram_Diagram_Start_" data-uid="H.Controls.Diagram.Diagram.Start*"></a>
+  <a id="H_Controls_Diagram_Diagram_UpdateNodesToDataSource_" data-uid="H.Controls.Diagram.Diagram.UpdateNodesToDataSource*"></a>
 
-  <h3 id="H_Controls_Diagram_Diagram_Start_H_Controls_Diagram_Node_" data-uid="H.Controls.Diagram.Diagram.Start(H.Controls.Diagram.Node)">
-  Start(Node)
+  <h3 id="H_Controls_Diagram_Diagram_UpdateNodesToDataSource" data-uid="H.Controls.Diagram.Diagram.UpdateNodesToDataSource">
+  UpdateNodesToDataSource()
   
   </h3>
 
@@ -3743,20 +3539,74 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;bool?&gt; Start(Node startNode)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void UpdateNodesToDataSource()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Diagram_ZoomTo_" data-uid="H.Controls.Diagram.Diagram.ZoomTo*"></a>
+
+  <h3 id="H_Controls_Diagram_Diagram_ZoomTo_H_Controls_Diagram_Parts_Base_Part_System_Double_" data-uid="H.Controls.Diagram.Diagram.ZoomTo(H.Controls.Diagram.Parts.Base.Part,System.Double)">
+  ZoomTo(Part, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ZoomTo(Part part, double scale = 1.8)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>startNode</code> <a class="xref" href="H.Controls.Diagram.Node.html">Node</a></dt>
+    <dt><code>part</code> <a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd></dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Diagram_ZoomTo_" data-uid="H.Controls.Diagram.Diagram.ZoomTo*"></a>
+
+  <h3 id="H_Controls_Diagram_Diagram_ZoomTo_System_Windows_Point_" data-uid="H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Point)">
+  ZoomTo(Point)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ZoomTo(Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?&gt;</dt>
+    <dt><code>point</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.point">Point</a></dt>
     <dd></dd>
   </dl>
+
 
 
 
@@ -3825,6 +3675,63 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
 
 
+  <a id="H_Controls_Diagram_Diagram_ZoomToFit_" data-uid="H.Controls.Diagram.Diagram.ZoomToFit*"></a>
+
+  <h3 id="H_Controls_Diagram_Diagram_ZoomToFit_H_Controls_Diagram_Parts_Base_Part___" data-uid="H.Controls.Diagram.Diagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])">
+  ZoomToFit(params Part[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ZoomToFit(params Part[] parts)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parts</code> <a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Diagram_Diagram_ZoomToSelectPart_" data-uid="H.Controls.Diagram.Diagram.ZoomToSelectPart*"></a>
+
+  <h3 id="H_Controls_Diagram_Diagram_ZoomToSelectPart" data-uid="H.Controls.Diagram.Diagram.ZoomToSelectPart">
+  ZoomToSelectPart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ZoomToSelectPart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="events">Events
 </h2>
 
@@ -3849,7 +3756,7 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="H.Mvvm.RoutedEventArgs-1.html">RoutedEventArgs</a>&lt;<a class="xref" href="H.Controls.Diagram.Link.html">Link</a>&gt;&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="H.Mvvm.RoutedEventArgs-1.html">RoutedEventArgs</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Link.html">Link</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -3860,8 +3767,8 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
 
 
-  <h3 id="H_Controls_Diagram_Diagram_ItemsChanged" data-uid="H.Controls.Diagram.Diagram.ItemsChanged">
-  ItemsChanged
+  <h3 id="H_Controls_Diagram_Diagram_AddNoded" data-uid="H.Controls.Diagram.Diagram.AddNoded">
+  AddNoded
   
   </h3>
 
@@ -3869,7 +3776,7 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event RoutedEventHandler ItemsChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public event RoutedEventHandler AddNoded</code></pre>
   </div>
 
 
@@ -3890,8 +3797,8 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
 
 
 
-  <h3 id="H_Controls_Diagram_Diagram_RunningPartChanged" data-uid="H.Controls.Diagram.Diagram.RunningPartChanged">
-  RunningPartChanged
+  <h3 id="H_Controls_Diagram_Diagram_ItemsChanged" data-uid="H.Controls.Diagram.Diagram.ItemsChanged">
+  ItemsChanged
   
   </h3>
 
@@ -3899,7 +3806,7 @@ public bool UseStartNodeOnly { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event RoutedEventHandler RunningPartChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public event RoutedEventHandler ItemsChanged</code></pre>
   </div>
 
 

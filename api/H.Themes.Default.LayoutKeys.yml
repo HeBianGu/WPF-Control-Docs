@@ -6,6 +6,7 @@ items:
   parent: H.Themes.Default
   children:
   - H.Themes.Default.LayoutKeys.CornerRadius
+  - H.Themes.Default.LayoutKeys.IconHeight1
   - H.Themes.Default.LayoutKeys.ItemHeight
   - H.Themes.Default.LayoutKeys.Margin
   - H.Themes.Default.LayoutKeys.Padding
@@ -188,6 +189,31 @@ items:
       type: System.Windows.ComponentResourceKey
     content.vb: Public Shared ReadOnly Property Margin As ComponentResourceKey
   overload: H.Themes.Default.LayoutKeys.Margin*
+- uid: H.Themes.Default.LayoutKeys.IconHeight1
+  commentId: P:H.Themes.Default.LayoutKeys.IconHeight1
+  id: IconHeight1
+  parent: H.Themes.Default.LayoutKeys
+  langs:
+  - csharp
+  - vb
+  name: IconHeight1
+  nameWithType: LayoutKeys.IconHeight1
+  fullName: H.Themes.Default.LayoutKeys.IconHeight1
+  type: Property
+  source:
+    id: IconHeight1
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\Layouts\Default.xaml.cs
+    startLine: 17
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static ComponentResourceKey IconHeight1 { get; }
+    parameters: []
+    return:
+      type: System.Windows.ComponentResourceKey
+    content.vb: Public Shared ReadOnly Property IconHeight1 As ComponentResourceKey
+  overload: H.Themes.Default.LayoutKeys.IconHeight1*
 references:
 - uid: H.Themes.Default
   commentId: N:H.Themes.Default
@@ -521,3 +547,9 @@ references:
   name: Margin
   nameWithType: LayoutKeys.Margin
   fullName: H.Themes.Default.LayoutKeys.Margin
+- uid: H.Themes.Default.LayoutKeys.IconHeight1*
+  commentId: Overload:H.Themes.Default.LayoutKeys.IconHeight1
+  href: H.Themes.Default.LayoutKeys.html#H_Themes_Default_LayoutKeys_IconHeight1
+  name: IconHeight1
+  nameWithType: LayoutKeys.IconHeight1
+  fullName: H.Themes.Default.LayoutKeys.IconHeight1

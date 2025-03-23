@@ -120,6 +120,9 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -130,6 +133,15 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -148,6 +160,9 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -191,7 +206,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand AddCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand AddCommand { get; }</code></pre>
   </div>
 
 
@@ -200,7 +215,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -253,7 +268,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand CheckedAllCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand CheckedAllCommand { get; }</code></pre>
   </div>
 
 
@@ -262,7 +277,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -284,7 +299,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand ClearCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand ClearCommand { get; }</code></pre>
   </div>
 
 
@@ -293,7 +308,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -315,7 +330,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand DeleteCheckedCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand DeleteCheckedCommand { get; }</code></pre>
   </div>
 
 
@@ -324,7 +339,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -346,7 +361,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand DeleteCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand DeleteCommand { get; }</code></pre>
   </div>
 
 
@@ -355,7 +370,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -377,7 +392,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand EditCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand EditCommand { get; }</code></pre>
   </div>
 
 
@@ -386,38 +401,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Extensions_ViewModel_IRepositoryBindableBase_1_EditTransactionCommand_" data-uid="H.Extensions.ViewModel.IRepositoryBindableBase`1.EditTransactionCommand*"></a>
-
-  <h3 id="H_Extensions_ViewModel_IRepositoryBindableBase_1_EditTransactionCommand" data-uid="H.Extensions.ViewModel.IRepositoryBindableBase`1.EditTransactionCommand">
-  EditTransactionCommand
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TransactionCommand EditTransactionCommand { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.TransactionCommand.html">TransactionCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -439,7 +423,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand ExportCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand ExportCommand { get; }</code></pre>
   </div>
 
 
@@ -448,7 +432,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -470,7 +454,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand GridSetCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand GridSetCommand { get; }</code></pre>
   </div>
 
 
@@ -479,7 +463,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -594,7 +578,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand NextCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand NextCommand { get; }</code></pre>
   </div>
 
 
@@ -603,7 +587,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -625,7 +609,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand PreviousCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand PreviousCommand { get; }</code></pre>
   </div>
 
 
@@ -634,7 +618,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -687,7 +671,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand SaveCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand SaveCommand { get; }</code></pre>
   </div>
 
 
@@ -696,7 +680,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -780,7 +764,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RelayCommand ViewCommand { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IDisplayCommand ViewCommand { get; }</code></pre>
   </div>
 
 
@@ -789,7 +773,7 @@ Interface IRepositoryBindableBase&lt;TEntity&gt;
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></dt>
     <dd></dd>
   </dl>
 

@@ -114,13 +114,10 @@ Interface IJsonSerializerService
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_Load_System_String_System_Type_">ISerializerService.Load(string, Type)</a>
+      <a class="xref" href="H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_SerializeObject__1___0_">ISerializerService.SerializeObject&lt;T&gt;(T)</a>
     </div>
     <div>
-      <a class="xref" href="H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_Load__1_System_String_">ISerializerService.Load&lt;T&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_Save_System_String_System_Object_System_String_">ISerializerService.Save(string, object, string)</a>
+      <a class="xref" href="H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_DeserializeObject_System_String_System_Type_">ISerializerService.DeserializeObject(string, Type)</a>
     </div>
   </dd></dl>
 
@@ -128,7 +125,25 @@ Interface IJsonSerializerService
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Clone__1_H_Services_Serializable_ISerializerService___0_">SerializerServiceExtensions.Clone&lt;T&gt;(ISerializerService, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_DeserializeObject__1_H_Services_Serializable_ISerializerService_System_String_">SerializerServiceExtensions.DeserializeObject&lt;T&gt;(ISerializerService, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load_H_Services_Serializable_ISerializerService_System_String_System_Type_">SerializerServiceExtensions.Load(ISerializerService, string, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load__1_H_Services_Serializable_ISerializerService_System_String_">SerializerServiceExtensions.Load&lt;T&gt;(ISerializerService, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Save_H_Services_Serializable_ISerializerService_System_String_System_Object_System_String_">SerializerServiceExtensions.Save(ISerializerService, string, object, string)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -138,6 +153,15 @@ Interface IJsonSerializerService
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -156,6 +180,9 @@ Interface IJsonSerializerService
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>

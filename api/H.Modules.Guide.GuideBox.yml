@@ -5,7 +5,7 @@ items:
   id: GuideBox
   parent: H.Modules.Guide
   children:
-  - H.Modules.Guide.GuideBox.#ctor(System.Windows.UIElement)
+  - H.Modules.Guide.GuideBox.#ctor(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
   - H.Modules.Guide.GuideBox.ArrangeOverride(System.Windows.Size)
   - H.Modules.Guide.GuideBox.Background
   - H.Modules.Guide.GuideBox.BackgroundProperty
@@ -619,16 +619,21 @@ items:
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
+  - H.Modules.Guide.GuideBox.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
   - H.Modules.Guide.GuideBox.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -646,6 +651,7 @@ items:
   - System.Windows.DependencyObject.H.Controls.FilterColumnDataGrid.VisualTreeHelpers.TryFindParent``1
   - System.Windows.DependencyObject.H.Windows.Ribbon.VisualTreeExtention.GetParent``1
   - System.Windows.UIElement.H.Controls.OutlookBar.PopupHelper.IsLogicalAncestorOf(System.Windows.UIElement)
+  - System.Windows.UIElement.H.Modules.Guide.GuideExtension.GetGuideTree(System.Predicate{System.Windows.UIElement})
 - uid: H.Modules.Guide.GuideBox.NextCommand
   commentId: F:H.Modules.Guide.GuideBox.NextCommand
   id: NextCommand
@@ -692,34 +698,36 @@ items:
     return:
       type: System.Windows.Input.RoutedCommand
     content.vb: Public Shared SkipCommand As RoutedCommand
-- uid: H.Modules.Guide.GuideBox.#ctor(System.Windows.UIElement)
-  commentId: M:H.Modules.Guide.GuideBox.#ctor(System.Windows.UIElement)
-  id: '#ctor(System.Windows.UIElement)'
+- uid: H.Modules.Guide.GuideBox.#ctor(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideBox.#ctor(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  id: '#ctor(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})'
   parent: H.Modules.Guide.GuideBox
   langs:
   - csharp
   - vb
-  name: GuideBox(UIElement)
-  nameWithType: GuideBox.GuideBox(UIElement)
-  fullName: H.Modules.Guide.GuideBox.GuideBox(System.Windows.UIElement)
+  name: GuideBox(UIElement, Predicate<UIElement>)
+  nameWithType: GuideBox.GuideBox(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideBox.GuideBox(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
   type: Constructor
   source:
     id: .ctor
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
   syntax:
-    content: public GuideBox(UIElement element)
+    content: public GuideBox(UIElement element, Predicate<UIElement> predicate = null)
     parameters:
     - id: element
       type: System.Windows.UIElement
-    content.vb: Public Sub New(element As UIElement)
+    - id: predicate
+      type: System.Predicate{System.Windows.UIElement}
+    content.vb: Public Sub New(element As UIElement, predicate As Predicate(Of UIElement) = Nothing)
   overload: H.Modules.Guide.GuideBox.#ctor*
-  nameWithType.vb: GuideBox.New(UIElement)
-  fullName.vb: H.Modules.Guide.GuideBox.New(System.Windows.UIElement)
-  name.vb: New(UIElement)
+  nameWithType.vb: GuideBox.New(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideBox.New(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: New(UIElement, Predicate(Of UIElement))
 - uid: H.Modules.Guide.GuideBox.ControlTemplate
   commentId: P:H.Modules.Guide.GuideBox.ControlTemplate
   id: ControlTemplate
@@ -734,7 +742,7 @@ items:
   source:
     id: ControlTemplate
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 93
+    startLine: 94
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -759,7 +767,7 @@ items:
   source:
     id: ControlTemplateProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 99
+    startLine: 100
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -782,7 +790,7 @@ items:
   source:
     id: PathStyle
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 120
+    startLine: 121
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -807,7 +815,7 @@ items:
   source:
     id: PathStyleProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 126
+    startLine: 127
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -830,7 +838,7 @@ items:
   source:
     id: CurrentIndex
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 145
+    startLine: 146
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -855,7 +863,7 @@ items:
   source:
     id: CurrentIndexProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 151
+    startLine: 152
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -878,7 +886,7 @@ items:
   source:
     id: Total
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 169
+    startLine: 170
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -903,7 +911,7 @@ items:
   source:
     id: TotalProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 175
+    startLine: 176
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -926,7 +934,7 @@ items:
   source:
     id: Background
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 194
+    startLine: 195
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -951,7 +959,7 @@ items:
   source:
     id: BackgroundProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 201
+    startLine: 202
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -974,7 +982,7 @@ items:
   source:
     id: ClosedRoutedEvent
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 221
+    startLine: 222
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -997,7 +1005,7 @@ items:
   source:
     id: Closed
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 224
+    startLine: 225
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -1020,7 +1028,7 @@ items:
   source:
     id: OnClosed
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 229
+    startLine: 230
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -1042,7 +1050,7 @@ items:
   source:
     id: ArrangeOverride
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 239
+    startLine: 240
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -1074,7 +1082,7 @@ items:
   source:
     id: MeasureOverride
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 246
+    startLine: 247
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -1106,7 +1114,7 @@ items:
   source:
     id: GetVisualChild
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 253
+    startLine: 254
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -1141,7 +1149,7 @@ items:
   source:
     id: VisualChildrenCount
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Guide\GuideBox.xaml.cs
-    startLine: 264
+    startLine: 265
   assemblies:
   - H.Modules.Guide
   namespace: H.Modules.Guide
@@ -10254,6 +10262,47 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: H.Modules.Guide.GuideBox.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<GuideBox>(GuideBox)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<GuideBox>(GuideBox)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Modules.Guide.GuideBox>(H.Modules.Guide.GuideBox)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of GuideBox)(GuideBox)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Modules.Guide.GuideBox)(H.Modules.Guide.GuideBox)
+  name.vb: CloneByNewtonsoftJson(Of GuideBox)(GuideBox)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Modules.Guide.GuideBox)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Modules.Guide.GuideBox
+    name: GuideBox
+    href: H.Modules.Guide.GuideBox.html
+  - name: '>'
+  - name: (
+  - uid: H.Modules.Guide.GuideBox
+    name: GuideBox
+    href: H.Modules.Guide.GuideBox.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Modules.Guide.GuideBox)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Modules.Guide.GuideBox
+    name: GuideBox
+    href: H.Modules.Guide.GuideBox.html
+  - name: )
+  - name: (
+  - uid: H.Modules.Guide.GuideBox
+    name: GuideBox
+    href: H.Modules.Guide.GuideBox.html
+  - name: )
 - uid: H.Modules.Guide.GuideBox.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -10453,6 +10502,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -10857,6 +11047,63 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -11653,6 +11900,63 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
   - name: )
+- uid: System.Windows.UIElement.H.Modules.Guide.GuideExtension.GetGuideTree(System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  parent: H.Modules.Guide.GuideExtension
+  definition: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  name: GetGuideTree(UIElement, Predicate<UIElement>)
+  nameWithType: GuideExtension.GetGuideTree(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
+  nameWithType.vb: GuideExtension.GetGuideTree(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: GetGuideTree(UIElement, Predicate(Of UIElement))
+  spec.csharp:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+  - name: )
 - uid: System
   commentId: N:System
   href: https://learn.microsoft.com/dotnet/api/system
@@ -11852,6 +12156,44 @@ references:
     name: Markup
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.markup
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -12061,6 +12403,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -12458,6 +12945,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -13272,6 +13815,99 @@ references:
   name: PopupHelper
   nameWithType: PopupHelper
   fullName: H.Controls.OutlookBar.PopupHelper
+- uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  isExternal: true
+  href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  name: GetGuideTree(UIElement, Predicate<UIElement>)
+  nameWithType: GuideExtension.GetGuideTree(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
+  nameWithType.vb: GuideExtension.GetGuideTree(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: GetGuideTree(UIElement, Predicate(Of UIElement))
+  spec.csharp:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+  - name: )
+- uid: H.Modules.Guide.GuideExtension
+  commentId: T:H.Modules.Guide.GuideExtension
+  parent: H.Modules.Guide
+  href: H.Modules.Guide.GuideExtension.html
+  name: GuideExtension
+  nameWithType: GuideExtension
+  fullName: H.Modules.Guide.GuideExtension
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: H.Controls.FilterColumnDataGrid
   commentId: N:H.Controls.FilterColumnDataGrid
   href: H.html
@@ -13332,6 +13968,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: H.Controls.Dock.Controls
   commentId: N:H.Controls.Dock.Controls
   href: H.html
@@ -13477,13 +14143,76 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.input
 - uid: H.Modules.Guide.GuideBox.#ctor*
   commentId: Overload:H.Modules.Guide.GuideBox.#ctor
-  href: H.Modules.Guide.GuideBox.html#H_Modules_Guide_GuideBox__ctor_System_Windows_UIElement_
+  href: H.Modules.Guide.GuideBox.html#H_Modules_Guide_GuideBox__ctor_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
   name: GuideBox
   nameWithType: GuideBox.GuideBox
   fullName: H.Modules.Guide.GuideBox.GuideBox
   nameWithType.vb: GuideBox.New
   fullName.vb: H.Modules.Guide.GuideBox.New
   name.vb: New
+- uid: System.Predicate{System.Windows.UIElement}
+  commentId: T:System.Predicate{System.Windows.UIElement}
+  parent: System
+  definition: System.Predicate`1
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<UIElement>
+  nameWithType: Predicate<UIElement>
+  fullName: System.Predicate<System.Windows.UIElement>
+  nameWithType.vb: Predicate(Of UIElement)
+  fullName.vb: System.Predicate(Of System.Windows.UIElement)
+  name.vb: Predicate(Of UIElement)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: H.Modules.Guide.GuideBox.ControlTemplate*
   commentId: Overload:H.Modules.Guide.GuideBox.ControlTemplate
   href: H.Modules.Guide.GuideBox.html#H_Modules_Guide_GuideBox_ControlTemplate

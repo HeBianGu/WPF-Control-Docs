@@ -102,7 +102,7 @@ Class DataTimeTrigger
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Display(Name = &quot;定时触发器&quot;, GroupName = &quot;Default&quot;)]
-public class DataTimeTrigger : TriggerBase, INotifyPropertyChanged, IDable, IScheduleTrigger</code></pre>
+public class DataTimeTrigger : TriggerBase, INotifyPropertyChanged, IDisplayBindable, IIconable, INameable, IOrderable, IGroupable, IDable, IDescriptionable, IScheduleTrigger</code></pre>
   </div>
 
 
@@ -112,8 +112,10 @@ public class DataTimeTrigger : TriggerBase, INotifyPropertyChanged, IDable, ISch
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Mvvm.BindableBase.html">BindableBase</a></div>
-      <div><a class="xref" href="H.Mvvm.DisplayBindableBase.html">DisplayBindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html">BindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html">Bindable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html">CommandsBindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html">DisplayBindableBase</a></div>
       <div><a class="xref" href="H.Controls.ScheduleBox.TriggerBase.html">TriggerBase</a></div>
       <div><span class="xref">DataTimeTrigger</span></div>
     </dd>
@@ -123,7 +125,13 @@ public class DataTimeTrigger : TriggerBase, INotifyPropertyChanged, IDable, ISch
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDisplayBindable.html">IDisplayBindable</a></div>
+      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Mvvm.IOrderable.html">IOrderable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IGroupable.html">IGroupable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
       <div><a class="xref" href="H.Controls.ScheduleBox.IScheduleTrigger.html">IScheduleTrigger</a></div>
     </dd>
   </dl>
@@ -139,61 +147,70 @@ public class DataTimeTrigger : TriggerBase, INotifyPropertyChanged, IDable, ISch
       <a class="xref" href="H.Controls.ScheduleBox.TriggerBase.html#H_Controls_ScheduleBox_TriggerBase_StartAt">TriggerBase.StartAt</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands">DisplayBindableBase.Commands</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands">DisplayBindableBase.CreateCommands()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand">DisplayBindableBase.LoadedCommand</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefaultCommand">DisplayBindableBase.LoadDefaultCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_Commands">CommandsBindableBase.Commands</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefaultCommand">DisplayBindableBase.LoadDefaultCommand</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_CreateCommands">CommandsBindableBase.CreateCommands()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayCommand">Bindable.RelayCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init">BindableBase.Init()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_LoadedCommand">Bindable.LoadedCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethodCommand">Bindable.CallMethodCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayMethod_System_Object_">Bindable.RelayMethod(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_">BindableBase.DispatcherRaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_GetTargetElement__1">Bindable.GetTargetElement&lt;T&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged">BindableBase.OnDispatcherPropertyChanged()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethod_System_Object_">Bindable.CallMethod(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init">BindableBase.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -222,6 +239,9 @@ public class DataTimeTrigger : TriggerBase, INotifyPropertyChanged, IDable, ISch
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -232,6 +252,15 @@ public class DataTimeTrigger : TriggerBase, INotifyPropertyChanged, IDable, ISch
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -250,6 +279,9 @@ public class DataTimeTrigger : TriggerBase, INotifyPropertyChanged, IDable, ISch
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>

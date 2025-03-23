@@ -12,6 +12,7 @@ items:
   - System.Windows.Threading.DispatcherExtension.DelayInvokeItem``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Windows.Threading.DispatcherExtension.GetDispatcherValue``2(``0,System.Func{``0,``1})
   - System.Windows.Threading.DispatcherExtension.InvokeDispatcher``1(``0,System.Action{``0})
+  - System.Windows.Threading.DispatcherExtension.InvokeDispatcher``2(``0,System.Func{``0,``1})
   langs:
   - csharp
   - vb
@@ -22,7 +23,7 @@ items:
   source:
     id: DispatcherExtension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Dispatcher.cs
-    startLine: 50
+    startLine: 62
   assemblies:
   - H.Extensions.Common
   namespace: System.Windows.Threading
@@ -148,6 +149,42 @@ items:
   nameWithType.vb: DispatcherExtension.InvokeDispatcher(Of T)(T, Action(Of T))
   fullName.vb: System.Windows.Threading.DispatcherExtension.InvokeDispatcher(Of T)(T, System.Action(Of T))
   name.vb: InvokeDispatcher(Of T)(T, Action(Of T))
+- uid: System.Windows.Threading.DispatcherExtension.InvokeDispatcher``2(``0,System.Func{``0,``1})
+  commentId: M:System.Windows.Threading.DispatcherExtension.InvokeDispatcher``2(``0,System.Func{``0,``1})
+  id: InvokeDispatcher``2(``0,System.Func{``0,``1})
+  isExtensionMethod: true
+  parent: System.Windows.Threading.DispatcherExtension
+  langs:
+  - csharp
+  - vb
+  name: InvokeDispatcher<T, R>(T, Func<T, R>)
+  nameWithType: DispatcherExtension.InvokeDispatcher<T, R>(T, Func<T, R>)
+  fullName: System.Windows.Threading.DispatcherExtension.InvokeDispatcher<T, R>(T, System.Func<T, R>)
+  type: Method
+  source:
+    id: InvokeDispatcher
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Dispatcher.cs
+    startLine: 49
+  assemblies:
+  - H.Extensions.Common
+  namespace: System.Windows.Threading
+  syntax:
+    content: 'public static R InvokeDispatcher<T, R>(this T dispatcher, Func<T, R> func) where T : DispatcherObject'
+    parameters:
+    - id: dispatcher
+      type: '{T}'
+    - id: func
+      type: System.Func{{T},{R}}
+    typeParameters:
+    - id: T
+    - id: R
+    return:
+      type: '{R}'
+    content.vb: Public Shared Function InvokeDispatcher(Of T As DispatcherObject, R)(dispatcher As T, func As Func(Of T, R)) As R
+  overload: System.Windows.Threading.DispatcherExtension.InvokeDispatcher*
+  nameWithType.vb: DispatcherExtension.InvokeDispatcher(Of T, R)(T, Func(Of T, R))
+  fullName.vb: System.Windows.Threading.DispatcherExtension.InvokeDispatcher(Of T, R)(T, System.Func(Of T, R))
+  name.vb: InvokeDispatcher(Of T, R)(T, Func(Of T, R))
 - uid: System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
   commentId: M:System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
   id: DelayInvoke(System.Object,System.Action,System.Windows.Threading.DispatcherPriority)
@@ -163,7 +200,7 @@ items:
   source:
     id: DelayInvoke
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Dispatcher.cs
-    startLine: 54
+    startLine: 66
   assemblies:
   - H.Extensions.Common
   namespace: System.Windows.Threading
@@ -196,7 +233,7 @@ items:
   source:
     id: DelayInvoke
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Dispatcher.cs
-    startLine: 73
+    startLine: 85
   assemblies:
   - H.Extensions.Common
   namespace: System.Windows.Threading
@@ -233,7 +270,7 @@ items:
   source:
     id: DelayInvoke
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Dispatcher.cs
-    startLine: 107
+    startLine: 119
   assemblies:
   - H.Extensions.Common
   namespace: System.Windows.Threading
@@ -282,7 +319,7 @@ items:
   source:
     id: DelayInvokeItem
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Common\Extension.Dispatcher.cs
-    startLine: 142
+    startLine: 154
   assemblies:
   - H.Extensions.Common
   namespace: System.Windows.Threading

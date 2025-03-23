@@ -4,38 +4,16 @@ items:
   commentId: N:H.Controls.Adorner
   id: H.Controls.Adorner
   children:
-  - H.Controls.Adorner.ActiveBehavior`2
-  - H.Controls.Adorner.AdornerBase
   - H.Controls.Adorner.AdornerSetting
   - H.Controls.Adorner.BorderAdorner
-  - H.Controls.Adorner.ControlTemplateAdorner
-  - H.Controls.Adorner.DataTemplateAdorner
-  - H.Controls.Adorner.DragAdorner
-  - H.Controls.Adorner.DragAdornerBehavior
-  - H.Controls.Adorner.DragControlTempalteAdornerBehaviour
-  - H.Controls.Adorner.DragControlTemplateAdorner
-  - H.Controls.Adorner.DragDataTempalteAdornerBehaviour
-  - H.Controls.Adorner.DragDataTemplateAdorner
-  - H.Controls.Adorner.DragGridAdorner
-  - H.Controls.Adorner.DrapAdornerMode
-  - H.Controls.Adorner.DropAdornerBehavior`1
-  - H.Controls.Adorner.DropAdornerCanvasBehavior
-  - H.Controls.Adorner.DynimacDataTempateAdorner
-  - H.Controls.Adorner.ElementAllowDragBehavior
   - H.Controls.Adorner.ErrorAdorner
   - H.Controls.Adorner.GridLineAdorner
-  - H.Controls.Adorner.IDoDragDrop
-  - H.Controls.Adorner.IDragAdorner
   - H.Controls.Adorner.IDynimacAdorner
-  - H.Controls.Adorner.IService
   - H.Controls.Adorner.LineAdorner
   - H.Controls.Adorner.OverAdorner
   - H.Controls.Adorner.PresenterAdorner
   - H.Controls.Adorner.ResizeAdorner
   - H.Controls.Adorner.SelectedAdorner
-  - H.Controls.Adorner.SelectedControlTemplateAdorner
-  - H.Controls.Adorner.Service
-  - H.Controls.Adorner.VisualCollectionAdornerBase
   langs:
   - csharp
   - vb
@@ -46,13 +24,12 @@ items:
   assemblies:
   - H.Controls.Adorner
 references:
-- uid: H.Controls.Adorner.AdornerBase
-  commentId: T:H.Controls.Adorner.AdornerBase
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.AdornerBase.html
-  name: AdornerBase
-  nameWithType: AdornerBase
-  fullName: H.Controls.Adorner.AdornerBase
+- uid: H.Controls.Adorner.AdornerSetting
+  commentId: T:H.Controls.Adorner.AdornerSetting
+  href: H.Controls.Adorner.AdornerSetting.html
+  name: AdornerSetting
+  nameWithType: AdornerSetting
+  fullName: H.Controls.Adorner.AdornerSetting
 - uid: H.Controls.Adorner.BorderAdorner
   commentId: T:H.Controls.Adorner.BorderAdorner
   parent: H.Controls.Adorner
@@ -60,58 +37,13 @@ references:
   name: BorderAdorner
   nameWithType: BorderAdorner
   fullName: H.Controls.Adorner.BorderAdorner
-- uid: H.Controls.Adorner.ControlTemplateAdorner
-  commentId: T:H.Controls.Adorner.ControlTemplateAdorner
+- uid: H.Controls.Adorner.ResizeAdorner
+  commentId: T:H.Controls.Adorner.ResizeAdorner
   parent: H.Controls.Adorner
-  href: H.Controls.Adorner.ControlTemplateAdorner.html
-  name: ControlTemplateAdorner
-  nameWithType: ControlTemplateAdorner
-  fullName: H.Controls.Adorner.ControlTemplateAdorner
-- uid: H.Controls.Adorner.IDynimacAdorner
-  commentId: T:H.Controls.Adorner.IDynimacAdorner
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.IDynimacAdorner.html
-  name: IDynimacAdorner
-  nameWithType: IDynimacAdorner
-  fullName: H.Controls.Adorner.IDynimacAdorner
-- uid: H.Controls.Adorner.DataTemplateAdorner
-  commentId: T:H.Controls.Adorner.DataTemplateAdorner
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.DataTemplateAdorner.html
-  name: DataTemplateAdorner
-  nameWithType: DataTemplateAdorner
-  fullName: H.Controls.Adorner.DataTemplateAdorner
-- uid: H.Controls.Adorner.DynimacDataTempateAdorner
-  commentId: T:H.Controls.Adorner.DynimacDataTempateAdorner
-  href: H.Controls.Adorner.DynimacDataTempateAdorner.html
-  name: DynimacDataTempateAdorner
-  nameWithType: DynimacDataTempateAdorner
-  fullName: H.Controls.Adorner.DynimacDataTempateAdorner
-- uid: H.Controls.Adorner.DragAdorner
-  commentId: T:H.Controls.Adorner.DragAdorner
-  href: H.Controls.Adorner.DragAdorner.html
-  name: DragAdorner
-  nameWithType: DragAdorner
-  fullName: H.Controls.Adorner.DragAdorner
-- uid: H.Controls.Adorner.DrapAdornerMode
-  commentId: T:H.Controls.Adorner.DrapAdornerMode
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.DrapAdornerMode.html
-  name: DrapAdornerMode
-  nameWithType: DrapAdornerMode
-  fullName: H.Controls.Adorner.DrapAdornerMode
-- uid: H.Controls.Adorner.DragDataTemplateAdorner
-  commentId: T:H.Controls.Adorner.DragDataTemplateAdorner
-  href: H.Controls.Adorner.DragDataTemplateAdorner.html
-  name: DragDataTemplateAdorner
-  nameWithType: DragDataTemplateAdorner
-  fullName: H.Controls.Adorner.DragDataTemplateAdorner
-- uid: H.Controls.Adorner.DragControlTemplateAdorner
-  commentId: T:H.Controls.Adorner.DragControlTemplateAdorner
-  href: H.Controls.Adorner.DragControlTemplateAdorner.html
-  name: DragControlTemplateAdorner
-  nameWithType: DragControlTemplateAdorner
-  fullName: H.Controls.Adorner.DragControlTemplateAdorner
+  href: H.Controls.Adorner.ResizeAdorner.html
+  name: ResizeAdorner
+  nameWithType: ResizeAdorner
+  fullName: H.Controls.Adorner.ResizeAdorner
 - uid: H.Controls.Adorner.ErrorAdorner
   commentId: T:H.Controls.Adorner.ErrorAdorner
   href: H.Controls.Adorner.ErrorAdorner.html
@@ -124,6 +56,13 @@ references:
   name: GridLineAdorner
   nameWithType: GridLineAdorner
   fullName: H.Controls.Adorner.GridLineAdorner
+- uid: H.Controls.Adorner.IDynimacAdorner
+  commentId: T:H.Controls.Adorner.IDynimacAdorner
+  parent: H.Controls.Adorner
+  href: H.Controls.Adorner.IDynimacAdorner.html
+  name: IDynimacAdorner
+  nameWithType: IDynimacAdorner
+  fullName: H.Controls.Adorner.IDynimacAdorner
 - uid: H.Controls.Adorner.LineAdorner
   commentId: T:H.Controls.Adorner.LineAdorner
   href: H.Controls.Adorner.LineAdorner.html
@@ -143,157 +82,12 @@ references:
   name: PresenterAdorner
   nameWithType: PresenterAdorner
   fullName: H.Controls.Adorner.PresenterAdorner
-- uid: H.Controls.Adorner.ResizeAdorner
-  commentId: T:H.Controls.Adorner.ResizeAdorner
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.ResizeAdorner.html
-  name: ResizeAdorner
-  nameWithType: ResizeAdorner
-  fullName: H.Controls.Adorner.ResizeAdorner
 - uid: H.Controls.Adorner.SelectedAdorner
   commentId: T:H.Controls.Adorner.SelectedAdorner
   href: H.Controls.Adorner.SelectedAdorner.html
   name: SelectedAdorner
   nameWithType: SelectedAdorner
   fullName: H.Controls.Adorner.SelectedAdorner
-- uid: H.Controls.Adorner.SelectedControlTemplateAdorner
-  commentId: T:H.Controls.Adorner.SelectedControlTemplateAdorner
-  href: H.Controls.Adorner.SelectedControlTemplateAdorner.html
-  name: SelectedControlTemplateAdorner
-  nameWithType: SelectedControlTemplateAdorner
-  fullName: H.Controls.Adorner.SelectedControlTemplateAdorner
-- uid: H.Controls.Adorner.VisualCollectionAdornerBase
-  commentId: T:H.Controls.Adorner.VisualCollectionAdornerBase
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.VisualCollectionAdornerBase.html
-  name: VisualCollectionAdornerBase
-  nameWithType: VisualCollectionAdornerBase
-  fullName: H.Controls.Adorner.VisualCollectionAdornerBase
-- uid: H.Controls.Adorner.Service
-  commentId: T:H.Controls.Adorner.Service
-  href: H.Controls.Adorner.Service.html
-  name: Service
-  nameWithType: Service
-  fullName: H.Controls.Adorner.Service
-- uid: H.Controls.Adorner.IService
-  commentId: T:H.Controls.Adorner.IService
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.IService.html
-  name: IService
-  nameWithType: IService
-  fullName: H.Controls.Adorner.IService
-- uid: H.Controls.Adorner.AdornerSetting
-  commentId: T:H.Controls.Adorner.AdornerSetting
-  href: H.Controls.Adorner.AdornerSetting.html
-  name: AdornerSetting
-  nameWithType: AdornerSetting
-  fullName: H.Controls.Adorner.AdornerSetting
-- uid: H.Controls.Adorner.DragAdornerBehavior
-  commentId: T:H.Controls.Adorner.DragAdornerBehavior
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.DragAdornerBehavior.html
-  name: DragAdornerBehavior
-  nameWithType: DragAdornerBehavior
-  fullName: H.Controls.Adorner.DragAdornerBehavior
-- uid: H.Controls.Adorner.DragDataTempalteAdornerBehaviour
-  commentId: T:H.Controls.Adorner.DragDataTempalteAdornerBehaviour
-  href: H.Controls.Adorner.DragDataTempalteAdornerBehaviour.html
-  name: DragDataTempalteAdornerBehaviour
-  nameWithType: DragDataTempalteAdornerBehaviour
-  fullName: H.Controls.Adorner.DragDataTempalteAdornerBehaviour
-- uid: H.Controls.Adorner.DragControlTempalteAdornerBehaviour
-  commentId: T:H.Controls.Adorner.DragControlTempalteAdornerBehaviour
-  href: H.Controls.Adorner.DragControlTempalteAdornerBehaviour.html
-  name: DragControlTempalteAdornerBehaviour
-  nameWithType: DragControlTempalteAdornerBehaviour
-  fullName: H.Controls.Adorner.DragControlTempalteAdornerBehaviour
-- uid: H.Controls.Adorner.DragGridAdorner
-  commentId: T:H.Controls.Adorner.DragGridAdorner
-  href: H.Controls.Adorner.DragGridAdorner.html
-  name: DragGridAdorner
-  nameWithType: DragGridAdorner
-  fullName: H.Controls.Adorner.DragGridAdorner
-- uid: H.Controls.Adorner.IDoDragDrop
-  commentId: T:H.Controls.Adorner.IDoDragDrop
-  href: H.Controls.Adorner.IDoDragDrop.html
-  name: IDoDragDrop
-  nameWithType: IDoDragDrop
-  fullName: H.Controls.Adorner.IDoDragDrop
-- uid: H.Controls.Adorner.DropAdornerBehavior`1
-  commentId: T:H.Controls.Adorner.DropAdornerBehavior`1
-  href: H.Controls.Adorner.DropAdornerBehavior-1.html
-  name: DropAdornerBehavior<T>
-  nameWithType: DropAdornerBehavior<T>
-  fullName: H.Controls.Adorner.DropAdornerBehavior<T>
-  nameWithType.vb: DropAdornerBehavior(Of T)
-  fullName.vb: H.Controls.Adorner.DropAdornerBehavior(Of T)
-  name.vb: DropAdornerBehavior(Of T)
-  spec.csharp:
-  - uid: H.Controls.Adorner.DropAdornerBehavior`1
-    name: DropAdornerBehavior
-    href: H.Controls.Adorner.DropAdornerBehavior-1.html
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: H.Controls.Adorner.DropAdornerBehavior`1
-    name: DropAdornerBehavior
-    href: H.Controls.Adorner.DropAdornerBehavior-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: H.Controls.Adorner.DropAdornerCanvasBehavior
-  commentId: T:H.Controls.Adorner.DropAdornerCanvasBehavior
-  href: H.Controls.Adorner.DropAdornerCanvasBehavior.html
-  name: DropAdornerCanvasBehavior
-  nameWithType: DropAdornerCanvasBehavior
-  fullName: H.Controls.Adorner.DropAdornerCanvasBehavior
-- uid: H.Controls.Adorner.ElementAllowDragBehavior
-  commentId: T:H.Controls.Adorner.ElementAllowDragBehavior
-  href: H.Controls.Adorner.ElementAllowDragBehavior.html
-  name: ElementAllowDragBehavior
-  nameWithType: ElementAllowDragBehavior
-  fullName: H.Controls.Adorner.ElementAllowDragBehavior
-- uid: H.Controls.Adorner.ActiveBehavior`2
-  commentId: T:H.Controls.Adorner.ActiveBehavior`2
-  href: H.Controls.Adorner.ActiveBehavior-2.html
-  name: ActiveBehavior<B, T>
-  nameWithType: ActiveBehavior<B, T>
-  fullName: H.Controls.Adorner.ActiveBehavior<B, T>
-  nameWithType.vb: ActiveBehavior(Of B, T)
-  fullName.vb: H.Controls.Adorner.ActiveBehavior(Of B, T)
-  name.vb: ActiveBehavior(Of B, T)
-  spec.csharp:
-  - uid: H.Controls.Adorner.ActiveBehavior`2
-    name: ActiveBehavior
-    href: H.Controls.Adorner.ActiveBehavior-2.html
-  - name: <
-  - name: B
-  - name: ','
-  - name: " "
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: H.Controls.Adorner.ActiveBehavior`2
-    name: ActiveBehavior
-    href: H.Controls.Adorner.ActiveBehavior-2.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: B
-  - name: ','
-  - name: " "
-  - name: T
-  - name: )
-- uid: H.Controls.Adorner.IDragAdorner
-  commentId: T:H.Controls.Adorner.IDragAdorner
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.IDragAdorner.html
-  name: IDragAdorner
-  nameWithType: IDragAdorner
-  fullName: H.Controls.Adorner.IDragAdorner
 - uid: H.Controls.Adorner
   commentId: N:H.Controls.Adorner
   href: H.html

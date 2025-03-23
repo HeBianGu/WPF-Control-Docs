@@ -101,7 +101,9 @@ Class ScrollViewerScrollToBottomCommand
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ScrollViewerScrollToBottomCommand : MarkupCommandBase, ICommand, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">[Icon(&quot;&quot;)]
+[Display(Name = &quot;滚动底部&quot;, Description = &quot;将当前进度条滚动到最底部&quot;)]
+public class ScrollViewerScrollToBottomCommand : ScrollViewerScrollToCommandBase, ICommand, INotifyPropertyChanged, IIconable, INameable, IDescriptionable</code></pre>
   </div>
 
 
@@ -113,6 +115,9 @@ Class ScrollViewerScrollToBottomCommand
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.markupextension">MarkupExtension</a></div>
       <div><a class="xref" href="H.Mvvm.MarkupCommandBase.html">MarkupCommandBase</a></div>
+      <div><a class="xref" href="H.Mvvm.AsyncMarkupCommandBase.html">AsyncMarkupCommandBase</a></div>
+      <div><a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html">DisplayMarkupCommandBase</a></div>
+      <div><a class="xref" href="H.Extensions.Command.ScrollViewerScrollToCommandBase.html">ScrollViewerScrollToCommandBase</a></div>
       <div><span class="xref">ScrollViewerScrollToBottomCommand</span></div>
     </dd>
   </dl>
@@ -122,6 +127,9 @@ Class ScrollViewerScrollToBottomCommand
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand">ICommand</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
     </dd>
   </dl>
 
@@ -137,7 +145,34 @@ Class ScrollViewerScrollToBottomCommand
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_CanExecute_System_Object_">ScrollViewerScrollToCommandBase.CanExecute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_Execute_System_Object_">ScrollViewerScrollToCommandBase.Execute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Command.ScrollViewerScrollToCommandBase.html#H_Extensions_Command_ScrollViewerScrollToCommandBase_GetScrollViewer_System_Object_">ScrollViewerScrollToCommandBase.GetScrollViewer(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Name">DisplayMarkupCommandBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Icon">DisplayMarkupCommandBase.Icon</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Description">DisplayMarkupCommandBase.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.AsyncMarkupCommandBase.html#H_Mvvm_AsyncMarkupCommandBase_ExecuteAsync_System_Object_">AsyncMarkupCommandBase.ExecuteAsync(object)</a>
+    </div>
+    <div>
       <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_CanExecuteChanged">MarkupCommandBase.CanExecuteChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_GetTargetElement_System_Object_">MarkupCommandBase.GetTargetElement(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_Target">MarkupCommandBase.Target</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_ProvideValue_System_IServiceProvider_">MarkupCommandBase.ProvideValue(IServiceProvider)</a>
@@ -175,6 +210,9 @@ Class ScrollViewerScrollToBottomCommand
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -185,6 +223,15 @@ Class ScrollViewerScrollToBottomCommand
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -203,6 +250,9 @@ Class ScrollViewerScrollToBottomCommand
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -235,33 +285,30 @@ Class ScrollViewerScrollToBottomCommand
 </h2>
 
 
-  <a id="H_Extensions_Command_ScrollViewerScrollToBottomCommand_CanExecute_" data-uid="H.Extensions.Command.ScrollViewerScrollToBottomCommand.CanExecute*"></a>
+  <a id="H_Extensions_Command_ScrollViewerScrollToBottomCommand_CanInvoke_" data-uid="H.Extensions.Command.ScrollViewerScrollToBottomCommand.CanInvoke*"></a>
 
-  <h3 id="H_Extensions_Command_ScrollViewerScrollToBottomCommand_CanExecute_System_Object_" data-uid="H.Extensions.Command.ScrollViewerScrollToBottomCommand.CanExecute(System.Object)">
-  CanExecute(object)
+  <h3 id="H_Extensions_Command_ScrollViewerScrollToBottomCommand_CanInvoke_System_Windows_Controls_ScrollViewer_" data-uid="H.Extensions.Command.ScrollViewerScrollToBottomCommand.CanInvoke(System.Windows.Controls.ScrollViewer)">
+  CanInvoke(ScrollViewer)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Defines the method that determines whether the command can execute in its current state.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool CanExecute(object parameter)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override bool CanInvoke(ScrollViewer scrollViewer)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>parameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd><p>Data used by the command.  If the command does not require data to be passed, this object can be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
+    <dt><code>scrollViewer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.scrollviewer">ScrollViewer</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if this command can be executed; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -274,26 +321,24 @@ Class ScrollViewerScrollToBottomCommand
 
 
 
-  <a id="H_Extensions_Command_ScrollViewerScrollToBottomCommand_Execute_" data-uid="H.Extensions.Command.ScrollViewerScrollToBottomCommand.Execute*"></a>
+  <a id="H_Extensions_Command_ScrollViewerScrollToBottomCommand_Invoke_" data-uid="H.Extensions.Command.ScrollViewerScrollToBottomCommand.Invoke*"></a>
 
-  <h3 id="H_Extensions_Command_ScrollViewerScrollToBottomCommand_Execute_System_Object_" data-uid="H.Extensions.Command.ScrollViewerScrollToBottomCommand.Execute(System.Object)">
-  Execute(object)
+  <h3 id="H_Extensions_Command_ScrollViewerScrollToBottomCommand_Invoke_System_Windows_Controls_ScrollViewer_" data-uid="H.Extensions.Command.ScrollViewerScrollToBottomCommand.Invoke(System.Windows.Controls.ScrollViewer)">
+  Invoke(ScrollViewer)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Defines the method to be called when the command is invoked.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Execute(object parameter)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void Invoke(ScrollViewer scrollViewer)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>parameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd><p>Data used by the command.  If the command does not require data to be passed, this object can be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
+    <dt><code>scrollViewer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.scrollviewer">ScrollViewer</a></dt>
+    <dd></dd>
   </dl>
 
 

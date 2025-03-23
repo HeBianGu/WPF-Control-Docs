@@ -5,9 +5,8 @@ items:
   id: ISerializerService
   parent: H.Services.Serializable
   children:
-  - H.Services.Serializable.ISerializerService.Load(System.String,System.Type)
-  - H.Services.Serializable.ISerializerService.Load``1(System.String)
-  - H.Services.Serializable.ISerializerService.Save(System.String,System.Object,System.String)
+  - H.Services.Serializable.ISerializerService.DeserializeObject(System.String,System.Type)
+  - H.Services.Serializable.ISerializerService.SerializeObject``1(``0)
   langs:
   - csharp
   - vb
@@ -18,7 +17,7 @@ items:
   source:
     id: ISerializerService
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Serializable\Serialize\ISerializerService.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - H.Services.Serializable
   namespace: H.Services.Serializable
@@ -26,16 +25,26 @@ items:
     content: public interface ISerializerService
     content.vb: Public Interface ISerializerService
   extensionMethods:
+  - H.Services.Serializable.ISerializerService.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  - H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.Clone``1({T})
+  - H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(System.String)
+  - H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.Load(System.String,System.Type)
+  - H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.Load``1(System.String)
+  - H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.Save(System.String,System.Object,System.String)
   - H.Services.Serializable.ISerializerService.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -43,102 +52,70 @@ items:
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
-- uid: H.Services.Serializable.ISerializerService.Load(System.String,System.Type)
-  commentId: M:H.Services.Serializable.ISerializerService.Load(System.String,System.Type)
-  id: Load(System.String,System.Type)
+- uid: H.Services.Serializable.ISerializerService.SerializeObject``1(``0)
+  commentId: M:H.Services.Serializable.ISerializerService.SerializeObject``1(``0)
+  id: SerializeObject``1(``0)
   parent: H.Services.Serializable.ISerializerService
   langs:
   - csharp
   - vb
-  name: Load(string, Type)
-  nameWithType: ISerializerService.Load(string, Type)
-  fullName: H.Services.Serializable.ISerializerService.Load(string, System.Type)
+  name: SerializeObject<T>(T)
+  nameWithType: ISerializerService.SerializeObject<T>(T)
+  fullName: H.Services.Serializable.ISerializerService.SerializeObject<T>(T)
   type: Method
   source:
-    id: Load
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Serializable\Serialize\ISerializerService.cs
-    startLine: 6
-  assemblies:
-  - H.Services.Serializable
-  namespace: H.Services.Serializable
-  syntax:
-    content: object Load(string filePath, Type type)
-    parameters:
-    - id: filePath
-      type: System.String
-    - id: type
-      type: System.Type
-    return:
-      type: System.Object
-    content.vb: Function Load(filePath As String, type As Type) As Object
-  overload: H.Services.Serializable.ISerializerService.Load*
-  nameWithType.vb: ISerializerService.Load(String, Type)
-  fullName.vb: H.Services.Serializable.ISerializerService.Load(String, System.Type)
-  name.vb: Load(String, Type)
-- uid: H.Services.Serializable.ISerializerService.Load``1(System.String)
-  commentId: M:H.Services.Serializable.ISerializerService.Load``1(System.String)
-  id: Load``1(System.String)
-  parent: H.Services.Serializable.ISerializerService
-  langs:
-  - csharp
-  - vb
-  name: Load<T>(string)
-  nameWithType: ISerializerService.Load<T>(string)
-  fullName: H.Services.Serializable.ISerializerService.Load<T>(string)
-  type: Method
-  source:
-    id: Load
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Serializable\Serialize\ISerializerService.cs
-    startLine: 7
-  assemblies:
-  - H.Services.Serializable
-  namespace: H.Services.Serializable
-  syntax:
-    content: T Load<T>(string filePath)
-    parameters:
-    - id: filePath
-      type: System.String
-    typeParameters:
-    - id: T
-    return:
-      type: '{T}'
-    content.vb: Function Load(Of T)(filePath As String) As T
-  overload: H.Services.Serializable.ISerializerService.Load*
-  nameWithType.vb: ISerializerService.Load(Of T)(String)
-  fullName.vb: H.Services.Serializable.ISerializerService.Load(Of T)(String)
-  name.vb: Load(Of T)(String)
-- uid: H.Services.Serializable.ISerializerService.Save(System.String,System.Object,System.String)
-  commentId: M:H.Services.Serializable.ISerializerService.Save(System.String,System.Object,System.String)
-  id: Save(System.String,System.Object,System.String)
-  parent: H.Services.Serializable.ISerializerService
-  langs:
-  - csharp
-  - vb
-  name: Save(string, object, string)
-  nameWithType: ISerializerService.Save(string, object, string)
-  fullName: H.Services.Serializable.ISerializerService.Save(string, object, string)
-  type: Method
-  source:
-    id: Save
+    id: SerializeObject
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Serializable\Serialize\ISerializerService.cs
     startLine: 8
   assemblies:
   - H.Services.Serializable
   namespace: H.Services.Serializable
   syntax:
-    content: void Save(string filePath, object sourceObj, string xmlRootName = null)
+    content: string SerializeObject<T>(T t)
     parameters:
-    - id: filePath
+    - id: t
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
       type: System.String
-    - id: sourceObj
+    content.vb: Function SerializeObject(Of T)(t As T) As String
+  overload: H.Services.Serializable.ISerializerService.SerializeObject*
+  nameWithType.vb: ISerializerService.SerializeObject(Of T)(T)
+  fullName.vb: H.Services.Serializable.ISerializerService.SerializeObject(Of T)(T)
+  name.vb: SerializeObject(Of T)(T)
+- uid: H.Services.Serializable.ISerializerService.DeserializeObject(System.String,System.Type)
+  commentId: M:H.Services.Serializable.ISerializerService.DeserializeObject(System.String,System.Type)
+  id: DeserializeObject(System.String,System.Type)
+  parent: H.Services.Serializable.ISerializerService
+  langs:
+  - csharp
+  - vb
+  name: DeserializeObject(string, Type)
+  nameWithType: ISerializerService.DeserializeObject(string, Type)
+  fullName: H.Services.Serializable.ISerializerService.DeserializeObject(string, System.Type)
+  type: Method
+  source:
+    id: DeserializeObject
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Serializable\Serialize\ISerializerService.cs
+    startLine: 10
+  assemblies:
+  - H.Services.Serializable
+  namespace: H.Services.Serializable
+  syntax:
+    content: object DeserializeObject(string txt, Type type)
+    parameters:
+    - id: txt
+      type: System.String
+    - id: type
+      type: System.Type
+    return:
       type: System.Object
-    - id: xmlRootName
-      type: System.String
-    content.vb: Sub Save(filePath As String, sourceObj As Object, xmlRootName As String = Nothing)
-  overload: H.Services.Serializable.ISerializerService.Save*
-  nameWithType.vb: ISerializerService.Save(String, Object, String)
-  fullName.vb: H.Services.Serializable.ISerializerService.Save(String, Object, String)
-  name.vb: Save(String, Object, String)
+    content.vb: Function DeserializeObject(txt As String, type As Type) As Object
+  overload: H.Services.Serializable.ISerializerService.DeserializeObject*
+  nameWithType.vb: ISerializerService.DeserializeObject(String, Type)
+  fullName.vb: H.Services.Serializable.ISerializerService.DeserializeObject(String, System.Type)
+  name.vb: DeserializeObject(String, Type)
 references:
 - uid: H.Services.Serializable
   commentId: N:H.Services.Serializable
@@ -170,6 +147,306 @@ references:
   - uid: H.Services.Serializable
     name: Serializable
     href: H.Services.Serializable.html
+- uid: H.Services.Serializable.ISerializerService.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<ISerializerService>(ISerializerService)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<ISerializerService>(ISerializerService)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Services.Serializable.ISerializerService>(H.Services.Serializable.ISerializerService)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of ISerializerService)(ISerializerService)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Services.Serializable.ISerializerService)(H.Services.Serializable.ISerializerService)
+  name.vb: CloneByNewtonsoftJson(Of ISerializerService)(ISerializerService)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Services.Serializable.ISerializerService)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: '>'
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Services.Serializable.ISerializerService)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: )
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: )
+- uid: H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.Clone``1({T})
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.Clone``1(H.Services.Serializable.ISerializerService,``0)
+  parent: H.Services.Serializable.SerializerServiceExtensions
+  definition: H.Services.Serializable.SerializerServiceExtensions.Clone``1(H.Services.Serializable.ISerializerService,``0)
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Clone__1_H_Services_Serializable_ISerializerService___0_
+  name: Clone<T>(ISerializerService, T)
+  nameWithType: SerializerServiceExtensions.Clone<T>(ISerializerService, T)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.Clone<T>(H.Services.Serializable.ISerializerService, T)
+  nameWithType.vb: SerializerServiceExtensions.Clone(Of T)(ISerializerService, T)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.Clone(Of T)(H.Services.Serializable.ISerializerService, T)
+  name.vb: Clone(Of T)(ISerializerService, T)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Clone``1(H.Services.Serializable.ISerializerService,``0)
+    name: Clone
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Clone__1_H_Services_Serializable_ISerializerService___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Clone``1(H.Services.Serializable.ISerializerService,``0)
+    name: Clone
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Clone__1_H_Services_Serializable_ISerializerService___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(System.String)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(H.Services.Serializable.ISerializerService,System.String)
+  parent: H.Services.Serializable.SerializerServiceExtensions
+  definition: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(H.Services.Serializable.ISerializerService,System.String)
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_DeserializeObject__1_H_Services_Serializable_ISerializerService_System_String_
+  name: DeserializeObject<T>(ISerializerService, string)
+  nameWithType: SerializerServiceExtensions.DeserializeObject<T>(ISerializerService, string)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject<T>(H.Services.Serializable.ISerializerService, string)
+  nameWithType.vb: SerializerServiceExtensions.DeserializeObject(Of T)(ISerializerService, String)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject(Of T)(H.Services.Serializable.ISerializerService, String)
+  name.vb: DeserializeObject(Of T)(ISerializerService, String)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(H.Services.Serializable.ISerializerService,System.String)
+    name: DeserializeObject
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_DeserializeObject__1_H_Services_Serializable_ISerializerService_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(H.Services.Serializable.ISerializerService,System.String)
+    name: DeserializeObject
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_DeserializeObject__1_H_Services_Serializable_ISerializerService_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.Load(System.String,System.Type)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService,System.String,System.Type)
+  parent: H.Services.Serializable.SerializerServiceExtensions
+  definition: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService,System.String,System.Type)
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load_H_Services_Serializable_ISerializerService_System_String_System_Type_
+  name: Load(ISerializerService, string, Type)
+  nameWithType: SerializerServiceExtensions.Load(ISerializerService, string, Type)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService, string, System.Type)
+  nameWithType.vb: SerializerServiceExtensions.Load(ISerializerService, String, Type)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService, String, System.Type)
+  name.vb: Load(ISerializerService, String, Type)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService,System.String,System.Type)
+    name: Load
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load_H_Services_Serializable_ISerializerService_System_String_System_Type_
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService,System.String,System.Type)
+    name: Load
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load_H_Services_Serializable_ISerializerService_System_String_System_Type_
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.Load``1(System.String)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.Load``1(H.Services.Serializable.ISerializerService,System.String)
+  parent: H.Services.Serializable.SerializerServiceExtensions
+  definition: H.Services.Serializable.SerializerServiceExtensions.Load``1(H.Services.Serializable.ISerializerService,System.String)
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load__1_H_Services_Serializable_ISerializerService_System_String_
+  name: Load<T>(ISerializerService, string)
+  nameWithType: SerializerServiceExtensions.Load<T>(ISerializerService, string)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.Load<T>(H.Services.Serializable.ISerializerService, string)
+  nameWithType.vb: SerializerServiceExtensions.Load(Of T)(ISerializerService, String)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.Load(Of T)(H.Services.Serializable.ISerializerService, String)
+  name.vb: Load(Of T)(ISerializerService, String)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Load``1(H.Services.Serializable.ISerializerService,System.String)
+    name: Load
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load__1_H_Services_Serializable_ISerializerService_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Load``1(H.Services.Serializable.ISerializerService,System.String)
+    name: Load
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load__1_H_Services_Serializable_ISerializerService_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Services.Serializable.ISerializerService.H.Services.Serializable.SerializerServiceExtensions.Save(System.String,System.Object,System.String)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService,System.String,System.Object,System.String)
+  parent: H.Services.Serializable.SerializerServiceExtensions
+  definition: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService,System.String,System.Object,System.String)
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Save_H_Services_Serializable_ISerializerService_System_String_System_Object_System_String_
+  name: Save(ISerializerService, string, object, string)
+  nameWithType: SerializerServiceExtensions.Save(ISerializerService, string, object, string)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService, string, object, string)
+  nameWithType.vb: SerializerServiceExtensions.Save(ISerializerService, String, Object, String)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService, String, Object, String)
+  name.vb: Save(ISerializerService, String, Object, String)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService,System.String,System.Object,System.String)
+    name: Save
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Save_H_Services_Serializable_ISerializerService_System_String_System_Object_System_String_
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService,System.String,System.Object,System.String)
+    name: Save
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Save_H_Services_Serializable_ISerializerService_System_String_System_Object_System_String_
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: H.Services.Serializable.ISerializerService.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -369,6 +646,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -774,6 +1192,63 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
   parent: System.ObjectExtension
@@ -1177,6 +1652,304 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+- uid: H.Services.Serializable.SerializerServiceExtensions.Clone``1(H.Services.Serializable.ISerializerService,``0)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.Clone``1(H.Services.Serializable.ISerializerService,``0)
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Clone__1_H_Services_Serializable_ISerializerService___0_
+  name: Clone<T>(ISerializerService, T)
+  nameWithType: SerializerServiceExtensions.Clone<T>(ISerializerService, T)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.Clone<T>(H.Services.Serializable.ISerializerService, T)
+  nameWithType.vb: SerializerServiceExtensions.Clone(Of T)(ISerializerService, T)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.Clone(Of T)(H.Services.Serializable.ISerializerService, T)
+  name.vb: Clone(Of T)(ISerializerService, T)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Clone``1(H.Services.Serializable.ISerializerService,``0)
+    name: Clone
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Clone__1_H_Services_Serializable_ISerializerService___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Clone``1(H.Services.Serializable.ISerializerService,``0)
+    name: Clone
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Clone__1_H_Services_Serializable_ISerializerService___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: H.Services.Serializable.SerializerServiceExtensions
+  commentId: T:H.Services.Serializable.SerializerServiceExtensions
+  parent: H.Services.Serializable
+  href: H.Services.Serializable.SerializerServiceExtensions.html
+  name: SerializerServiceExtensions
+  nameWithType: SerializerServiceExtensions
+  fullName: H.Services.Serializable.SerializerServiceExtensions
+- uid: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(H.Services.Serializable.ISerializerService,System.String)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(H.Services.Serializable.ISerializerService,System.String)
+  isExternal: true
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_DeserializeObject__1_H_Services_Serializable_ISerializerService_System_String_
+  name: DeserializeObject<T>(ISerializerService, string)
+  nameWithType: SerializerServiceExtensions.DeserializeObject<T>(ISerializerService, string)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject<T>(H.Services.Serializable.ISerializerService, string)
+  nameWithType.vb: SerializerServiceExtensions.DeserializeObject(Of T)(ISerializerService, String)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject(Of T)(H.Services.Serializable.ISerializerService, String)
+  name.vb: DeserializeObject(Of T)(ISerializerService, String)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(H.Services.Serializable.ISerializerService,System.String)
+    name: DeserializeObject
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_DeserializeObject__1_H_Services_Serializable_ISerializerService_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.DeserializeObject``1(H.Services.Serializable.ISerializerService,System.String)
+    name: DeserializeObject
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_DeserializeObject__1_H_Services_Serializable_ISerializerService_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService,System.String,System.Type)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService,System.String,System.Type)
+  isExternal: true
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load_H_Services_Serializable_ISerializerService_System_String_System_Type_
+  name: Load(ISerializerService, string, Type)
+  nameWithType: SerializerServiceExtensions.Load(ISerializerService, string, Type)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService, string, System.Type)
+  nameWithType.vb: SerializerServiceExtensions.Load(ISerializerService, String, Type)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService, String, System.Type)
+  name.vb: Load(ISerializerService, String, Type)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService,System.String,System.Type)
+    name: Load
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load_H_Services_Serializable_ISerializerService_System_String_System_Type_
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Load(H.Services.Serializable.ISerializerService,System.String,System.Type)
+    name: Load
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load_H_Services_Serializable_ISerializerService_System_String_System_Type_
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: H.Services.Serializable.SerializerServiceExtensions.Load``1(H.Services.Serializable.ISerializerService,System.String)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.Load``1(H.Services.Serializable.ISerializerService,System.String)
+  isExternal: true
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load__1_H_Services_Serializable_ISerializerService_System_String_
+  name: Load<T>(ISerializerService, string)
+  nameWithType: SerializerServiceExtensions.Load<T>(ISerializerService, string)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.Load<T>(H.Services.Serializable.ISerializerService, string)
+  nameWithType.vb: SerializerServiceExtensions.Load(Of T)(ISerializerService, String)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.Load(Of T)(H.Services.Serializable.ISerializerService, String)
+  name.vb: Load(Of T)(ISerializerService, String)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Load``1(H.Services.Serializable.ISerializerService,System.String)
+    name: Load
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load__1_H_Services_Serializable_ISerializerService_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Load``1(H.Services.Serializable.ISerializerService,System.String)
+    name: Load
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Load__1_H_Services_Serializable_ISerializerService_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService,System.String,System.Object,System.String)
+  commentId: M:H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService,System.String,System.Object,System.String)
+  isExternal: true
+  href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Save_H_Services_Serializable_ISerializerService_System_String_System_Object_System_String_
+  name: Save(ISerializerService, string, object, string)
+  nameWithType: SerializerServiceExtensions.Save(ISerializerService, string, object, string)
+  fullName: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService, string, object, string)
+  nameWithType.vb: SerializerServiceExtensions.Save(ISerializerService, String, Object, String)
+  fullName.vb: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService, String, Object, String)
+  name.vb: Save(ISerializerService, String, Object, String)
+  spec.csharp:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService,System.String,System.Object,System.String)
+    name: Save
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Save_H_Services_Serializable_ISerializerService_System_String_System_Object_System_String_
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: H.Services.Serializable.SerializerServiceExtensions.Save(H.Services.Serializable.ISerializerService,System.String,System.Object,System.String)
+    name: Save
+    href: H.Services.Serializable.SerializerServiceExtensions.html#H_Services_Serializable_SerializerServiceExtensions_Save_H_Services_Serializable_ISerializerService_System_String_System_Object_System_String_
+  - name: (
+  - uid: H.Services.Serializable.ISerializerService
+    name: ISerializerService
+    href: H.Services.Serializable.ISerializerService.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1386,6 +2159,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1783,6 +2701,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -2187,6 +3161,36 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: System
   commentId: N:System
   href: https://learn.microsoft.com/dotnet/api/system
@@ -2253,6 +3257,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: System.Windows.Threading
   commentId: N:System.Windows.Threading
   href: https://learn.microsoft.com/dotnet/api/system
@@ -2283,12 +3317,18 @@ references:
   - uid: System.Windows.Threading
     name: Threading
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading
-- uid: H.Services.Serializable.ISerializerService.Load*
-  commentId: Overload:H.Services.Serializable.ISerializerService.Load
-  href: H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_Load_System_String_System_Type_
-  name: Load
-  nameWithType: ISerializerService.Load
-  fullName: H.Services.Serializable.ISerializerService.Load
+- uid: H.Services.Serializable.ISerializerService.SerializeObject*
+  commentId: Overload:H.Services.Serializable.ISerializerService.SerializeObject
+  href: H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_SerializeObject__1___0_
+  name: SerializeObject
+  nameWithType: ISerializerService.SerializeObject
+  fullName: H.Services.Serializable.ISerializerService.SerializeObject
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -2300,6 +3340,16 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: H.Services.Serializable.ISerializerService.DeserializeObject*
+  commentId: Overload:H.Services.Serializable.ISerializerService.DeserializeObject
+  href: H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_DeserializeObject_System_String_System_Type_
+  name: DeserializeObject
+  nameWithType: ISerializerService.DeserializeObject
+  fullName: H.Services.Serializable.ISerializerService.DeserializeObject
 - uid: System.Type
   commentId: T:System.Type
   parent: System
@@ -2319,19 +3369,3 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: '{T}'
-  commentId: '!:T'
-  definition: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: H.Services.Serializable.ISerializerService.Save*
-  commentId: Overload:H.Services.Serializable.ISerializerService.Save
-  href: H.Services.Serializable.ISerializerService.html#H_Services_Serializable_ISerializerService_Save_System_String_System_Object_System_String_
-  name: Save
-  nameWithType: ISerializerService.Save
-  fullName: H.Services.Serializable.ISerializerService.Save

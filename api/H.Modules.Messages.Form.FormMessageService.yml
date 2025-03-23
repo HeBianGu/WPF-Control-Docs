@@ -5,8 +5,9 @@ items:
   id: FormMessageService
   parent: H.Modules.Messages.Form
   children:
-  - H.Modules.Messages.Form.FormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  - H.Modules.Messages.Form.FormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - H.Modules.Messages.Form.FormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  - H.Modules.Messages.Form.FormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  - H.Modules.Messages.Form.FormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
   langs:
   - csharp
   - vb
@@ -17,7 +18,7 @@ items:
   source:
     id: FormMessageService
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Form\FormMessageService.cs
-    startLine: 10
+    startLine: 15
   assemblies:
   - H.Modules.Messages.Form
   namespace: H.Modules.Messages.Form
@@ -37,16 +38,21 @@ items:
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
+  - H.Modules.Messages.Form.FormMessageService.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
   - H.Modules.Messages.Form.FormMessageService.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -54,96 +60,133 @@ items:
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Action{System.Object},System.Action,System.Windows.Threading.DispatcherPriority)
   - System.Object.System.Windows.Threading.DispatcherExtension.DelayInvoke(System.Collections.IList,System.Func{System.Collections.IList},System.Action,System.Windows.Threading.DispatcherPriority)
-- uid: H.Modules.Messages.Form.FormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  commentId: M:H.Modules.Messages.Form.FormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  id: ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+- uid: H.Modules.Messages.Form.FormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Modules.Messages.Form.FormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  id: ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
   parent: H.Modules.Messages.Form.FormMessageService
   langs:
   - csharp
   - vb
-  name: ShowEdit<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  nameWithType: FormMessageService.ShowEdit<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  fullName: H.Modules.Messages.Form.FormMessageService.ShowEdit<T>(T, System.Predicate<T>, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, string, System.Windows.Window)
+  name: ShowEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  nameWithType: FormMessageService.ShowEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  fullName: H.Modules.Messages.Form.FormMessageService.ShowEdit<T>(T, System.Action<H.Services.Common.IDialog>, System.Predicate<T>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
   type: Method
   source:
     id: ShowEdit
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Form\FormMessageService.cs
-    startLine: 12
+    startLine: 17
   assemblies:
   - H.Modules.Messages.Form
   namespace: H.Modules.Messages.Form
   example: []
   syntax:
-    content: public Task<bool?> ShowEdit<T>(T value, Predicate<T> match = null, Action<IDialog> action = null, Action<IFormOption> option = null, string title = null, Window owner = null)
+    content: public Task<bool?> ShowEdit<T>(T value, Action<IDialog> action = null, Predicate<T> match = null, Action<IFormOption> option = null, Window owner = null)
     parameters:
     - id: value
       type: '{T}'
-    - id: match
-      type: System.Predicate{{T}}
     - id: action
       type: System.Action{H.Services.Common.IDialog}
+    - id: match
+      type: System.Predicate{{T}}
     - id: option
       type: System.Action{H.Services.Common.IFormOption}
-    - id: title
-      type: System.String
     - id: owner
       type: System.Windows.Window
     typeParameters:
     - id: T
     return:
       type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
-    content.vb: Public Function ShowEdit(Of T)(value As T, match As Predicate(Of T) = Nothing, action As Action(Of IDialog) = Nothing, [option] As Action(Of IFormOption) = Nothing, title As String = Nothing, owner As Window = Nothing) As Task(Of Boolean?)
+    content.vb: Public Function ShowEdit(Of T)(value As T, action As Action(Of IDialog) = Nothing, match As Predicate(Of T) = Nothing, [option] As Action(Of IFormOption) = Nothing, owner As Window = Nothing) As Task(Of Boolean?)
   overload: H.Modules.Messages.Form.FormMessageService.ShowEdit*
   implements:
-  - H.Services.Common.IFormMessageService.ShowEdit``1({T},System.Predicate{{T}},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  nameWithType.vb: FormMessageService.ShowEdit(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
-  fullName.vb: H.Modules.Messages.Form.FormMessageService.ShowEdit(Of T)(T, System.Predicate(Of T), System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), String, System.Windows.Window)
-  name.vb: ShowEdit(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
-- uid: H.Modules.Messages.Form.FormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  commentId: M:H.Modules.Messages.Form.FormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  id: ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - H.Services.Common.IFormMessageService.ShowEdit``1({T},System.Action{H.Services.Common.IDialog},System.Predicate{{T}},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  nameWithType.vb: FormMessageService.ShowEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+  fullName.vb: H.Modules.Messages.Form.FormMessageService.ShowEdit(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Predicate(Of T), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+- uid: H.Modules.Messages.Form.FormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Modules.Messages.Form.FormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  id: ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
   parent: H.Modules.Messages.Form.FormMessageService
   langs:
   - csharp
   - vb
-  name: ShowView<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  nameWithType: FormMessageService.ShowView<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  fullName: H.Modules.Messages.Form.FormMessageService.ShowView<T>(T, System.Predicate<T>, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, string, System.Windows.Window)
+  name: ShowTabEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  nameWithType: FormMessageService.ShowTabEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  fullName: H.Modules.Messages.Form.FormMessageService.ShowTabEdit<T>(T, System.Action<H.Services.Common.IDialog>, System.Predicate<T>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
   type: Method
   source:
-    id: ShowView
+    id: ShowTabEdit
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Form\FormMessageService.cs
-    startLine: 37
+    startLine: 22
   assemblies:
   - H.Modules.Messages.Form
   namespace: H.Modules.Messages.Form
   example: []
   syntax:
-    content: public Task<bool?> ShowView<T>(T value, Predicate<T> match = null, Action<IDialog> action = null, Action<IFormOption> option = null, string title = null, Window owner = null)
+    content: public Task<bool?> ShowTabEdit<T>(T value, Action<IDialog> action = null, Predicate<T> match = null, Action<IFormOption> option = null, Window owner = null)
     parameters:
     - id: value
       type: '{T}'
-    - id: match
-      type: System.Predicate{{T}}
     - id: action
       type: System.Action{H.Services.Common.IDialog}
+    - id: match
+      type: System.Predicate{{T}}
     - id: option
       type: System.Action{H.Services.Common.IFormOption}
-    - id: title
-      type: System.String
     - id: owner
       type: System.Windows.Window
     typeParameters:
     - id: T
     return:
       type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
-    content.vb: Public Function ShowView(Of T)(value As T, match As Predicate(Of T) = Nothing, action As Action(Of IDialog) = Nothing, [option] As Action(Of IFormOption) = Nothing, title As String = Nothing, owner As Window = Nothing) As Task(Of Boolean?)
+    content.vb: Public Function ShowTabEdit(Of T)(value As T, action As Action(Of IDialog) = Nothing, match As Predicate(Of T) = Nothing, [option] As Action(Of IFormOption) = Nothing, owner As Window = Nothing) As Task(Of Boolean?)
+  overload: H.Modules.Messages.Form.FormMessageService.ShowTabEdit*
+  implements:
+  - H.Services.Common.IFormMessageService.ShowTabEdit``1({T},System.Action{H.Services.Common.IDialog},System.Predicate{{T}},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  nameWithType.vb: FormMessageService.ShowTabEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+  fullName.vb: H.Modules.Messages.Form.FormMessageService.ShowTabEdit(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Predicate(Of T), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowTabEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+- uid: H.Modules.Messages.Form.FormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Modules.Messages.Form.FormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  id: ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  parent: H.Modules.Messages.Form.FormMessageService
+  langs:
+  - csharp
+  - vb
+  name: ShowView<T>(T, Action<IDialog>, Action<IFormOption>, Window)
+  nameWithType: FormMessageService.ShowView<T>(T, Action<IDialog>, Action<IFormOption>, Window)
+  fullName: H.Modules.Messages.Form.FormMessageService.ShowView<T>(T, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
+  type: Method
+  source:
+    id: ShowView
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Form\FormMessageService.cs
+    startLine: 63
+  assemblies:
+  - H.Modules.Messages.Form
+  namespace: H.Modules.Messages.Form
+  example: []
+  syntax:
+    content: public Task<bool?> ShowView<T>(T value, Action<IDialog> action = null, Action<IFormOption> option = null, Window owner = null)
+    parameters:
+    - id: value
+      type: '{T}'
+    - id: action
+      type: System.Action{H.Services.Common.IDialog}
+    - id: option
+      type: System.Action{H.Services.Common.IFormOption}
+    - id: owner
+      type: System.Windows.Window
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Function ShowView(Of T)(value As T, action As Action(Of IDialog) = Nothing, [option] As Action(Of IFormOption) = Nothing, owner As Window = Nothing) As Task(Of Boolean?)
   overload: H.Modules.Messages.Form.FormMessageService.ShowView*
   implements:
-  - H.Services.Common.IFormMessageService.ShowView``1({T},System.Predicate{{T}},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  nameWithType.vb: FormMessageService.ShowView(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
-  fullName.vb: H.Modules.Messages.Form.FormMessageService.ShowView(Of T)(T, System.Predicate(Of T), System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), String, System.Windows.Window)
-  name.vb: ShowView(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
+  - H.Services.Common.IFormMessageService.ShowView``1({T},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  nameWithType.vb: FormMessageService.ShowView(Of T)(T, Action(Of IDialog), Action(Of IFormOption), Window)
+  fullName.vb: H.Modules.Messages.Form.FormMessageService.ShowView(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowView(Of T)(T, Action(Of IDialog), Action(Of IFormOption), Window)
 references:
 - uid: H.Modules.Messages.Form
   commentId: N:H.Modules.Messages.Form
@@ -420,6 +463,47 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: H.Modules.Messages.Form.FormMessageService.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<FormMessageService>(FormMessageService)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<FormMessageService>(FormMessageService)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Modules.Messages.Form.FormMessageService>(H.Modules.Messages.Form.FormMessageService)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of FormMessageService)(FormMessageService)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Modules.Messages.Form.FormMessageService)(H.Modules.Messages.Form.FormMessageService)
+  name.vb: CloneByNewtonsoftJson(Of FormMessageService)(FormMessageService)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Modules.Messages.Form.FormMessageService)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Modules.Messages.Form.FormMessageService
+    name: FormMessageService
+    href: H.Modules.Messages.Form.FormMessageService.html
+  - name: '>'
+  - name: (
+  - uid: H.Modules.Messages.Form.FormMessageService
+    name: FormMessageService
+    href: H.Modules.Messages.Form.FormMessageService.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Modules.Messages.Form.FormMessageService)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Modules.Messages.Form.FormMessageService
+    name: FormMessageService
+    href: H.Modules.Messages.Form.FormMessageService.html
+  - name: )
+  - name: (
+  - uid: H.Modules.Messages.Form.FormMessageService
+    name: FormMessageService
+    href: H.Modules.Messages.Form.FormMessageService.html
+  - name: )
 - uid: H.Modules.Messages.Form.FormMessageService.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -619,6 +703,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -1023,6 +1248,63 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -1463,6 +1745,44 @@ references:
   - uid: H.Services.Common
     name: Common
     href: H.Services.Common.html
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -1672,6 +1992,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -2069,6 +2534,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -2473,6 +2994,36 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority
   - name: )
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: H.Controls.FilterColumnDataGrid
   commentId: N:H.Controls.FilterColumnDataGrid
   href: H.html
@@ -2533,6 +3084,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: System.Windows.Threading
   commentId: N:System.Windows.Threading
   href: https://learn.microsoft.com/dotnet/api/system
@@ -2565,29 +3146,39 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.threading
 - uid: H.Modules.Messages.Form.FormMessageService.ShowEdit*
   commentId: Overload:H.Modules.Messages.Form.FormMessageService.ShowEdit
-  href: H.Modules.Messages.Form.FormMessageService.html#H_Modules_Messages_Form_FormMessageService_ShowEdit__1___0_System_Predicate___0__System_Action_H_Services_Common_IDialog__System_Action_H_Services_Common_IFormOption__System_String_System_Windows_Window_
+  href: H.Modules.Messages.Form.FormMessageService.html#H_Modules_Messages_Form_FormMessageService_ShowEdit__1___0_System_Action_H_Services_Common_IDialog__System_Predicate___0__System_Action_H_Services_Common_IFormOption__System_Windows_Window_
   name: ShowEdit
   nameWithType: FormMessageService.ShowEdit
   fullName: H.Modules.Messages.Form.FormMessageService.ShowEdit
-- uid: H.Services.Common.IFormMessageService.ShowEdit``1({T},System.Predicate{{T}},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  commentId: M:H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+- uid: H.Services.Common.IFormMessageService.ShowEdit``1({T},System.Action{H.Services.Common.IDialog},System.Predicate{{T}},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
   parent: H.Services.Common.IFormMessageService
-  definition: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  name: ShowEdit<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  nameWithType: IFormMessageService.ShowEdit<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  fullName: H.Services.Common.IFormMessageService.ShowEdit<T>(T, System.Predicate<T>, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, string, System.Windows.Window)
-  nameWithType.vb: IFormMessageService.ShowEdit(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
-  fullName.vb: H.Services.Common.IFormMessageService.ShowEdit(Of T)(T, System.Predicate(Of T), System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), String, System.Windows.Window)
-  name.vb: ShowEdit(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
+  definition: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: ShowEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  nameWithType: IFormMessageService.ShowEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  fullName: H.Services.Common.IFormMessageService.ShowEdit<T>(T, System.Action<H.Services.Common.IDialog>, System.Predicate<T>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
+  nameWithType.vb: IFormMessageService.ShowEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+  fullName.vb: H.Services.Common.IFormMessageService.ShowEdit(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Predicate(Of T), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
   spec.csharp:
-  - uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
     name: ShowEdit
   - name: <
   - name: T
   - name: '>'
   - name: (
   - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+  - name: '>'
   - name: ','
   - name: " "
   - uid: System.Predicate`1
@@ -2604,25 +3195,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Services.Common.IDialog
-    name: IDialog
-  - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.Action`1
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: <
   - uid: H.Services.Common.IFormOption
     name: IFormOption
   - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
   - uid: System.Windows.Window
@@ -2631,7 +3206,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.window
   - name: )
   spec.vb:
-  - uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
     name: ShowEdit
   - name: (
   - name: Of
@@ -2640,6 +3215,18 @@ references:
   - name: )
   - name: (
   - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+  - name: )
   - name: ','
   - name: " "
   - uid: System.Predicate`1
@@ -2660,27 +3247,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.IDialog
-    name: IDialog
-  - name: )
-  - name: ','
-  - name: " "
-  - uid: System.Action`1
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: (
-  - name: Of
-  - name: " "
   - uid: H.Services.Common.IFormOption
     name: IFormOption
   - name: )
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
   - uid: System.Windows.Window
@@ -2694,35 +3263,6 @@ references:
   name: T
   nameWithType: T
   fullName: T
-- uid: System.Predicate{{T}}
-  commentId: T:System.Predicate{``0}
-  parent: System
-  definition: System.Predicate`1
-  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  name: Predicate<T>
-  nameWithType: Predicate<T>
-  fullName: System.Predicate<T>
-  nameWithType.vb: Predicate(Of T)
-  fullName.vb: System.Predicate(Of T)
-  name.vb: Predicate(Of T)
-  spec.csharp:
-  - uid: System.Predicate`1
-    name: Predicate
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Predicate`1
-    name: Predicate
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: System.Action{H.Services.Common.IDialog}
   commentId: T:System.Action{H.Services.Common.IDialog}
   parent: System
@@ -2755,6 +3295,35 @@ references:
   - uid: H.Services.Common.IDialog
     name: IDialog
     href: H.Services.Common.IDialog.html
+  - name: )
+- uid: System.Predicate{{T}}
+  commentId: T:System.Predicate{``0}
+  parent: System
+  definition: System.Predicate`1
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
   - name: )
 - uid: System.Action{H.Services.Common.IFormOption}
   commentId: T:System.Action{H.Services.Common.IFormOption}
@@ -2789,17 +3358,6 @@ references:
     name: IFormOption
     href: H.Services.Common.IFormOption.html
   - name: )
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: System.Windows.Window
   commentId: T:System.Windows.Window
   parent: System.Windows
@@ -2845,24 +3403,34 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: '?'
   - name: )
-- uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  commentId: M:H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+- uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  name: ShowEdit<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  nameWithType: IFormMessageService.ShowEdit<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  fullName: H.Services.Common.IFormMessageService.ShowEdit<T>(T, System.Predicate<T>, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, string, System.Windows.Window)
-  nameWithType.vb: IFormMessageService.ShowEdit(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
-  fullName.vb: H.Services.Common.IFormMessageService.ShowEdit(Of T)(T, System.Predicate(Of T), System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), String, System.Windows.Window)
-  name.vb: ShowEdit(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: ShowEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  nameWithType: IFormMessageService.ShowEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  fullName: H.Services.Common.IFormMessageService.ShowEdit<T>(T, System.Action<H.Services.Common.IDialog>, System.Predicate<T>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
+  nameWithType.vb: IFormMessageService.ShowEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+  fullName.vb: H.Services.Common.IFormMessageService.ShowEdit(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Predicate(Of T), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
   spec.csharp:
-  - uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
     name: ShowEdit
   - name: <
   - name: T
   - name: '>'
   - name: (
   - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+  - name: '>'
   - name: ','
   - name: " "
   - uid: System.Predicate`1
@@ -2879,25 +3447,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Services.Common.IDialog
-    name: IDialog
-  - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.Action`1
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: <
   - uid: H.Services.Common.IFormOption
     name: IFormOption
   - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
   - uid: System.Windows.Window
@@ -2906,7 +3458,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.window
   - name: )
   spec.vb:
-  - uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - uid: H.Services.Common.IFormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
     name: ShowEdit
   - name: (
   - name: Of
@@ -2915,6 +3467,18 @@ references:
   - name: )
   - name: (
   - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+  - name: )
   - name: ','
   - name: " "
   - uid: System.Predicate`1
@@ -2935,27 +3499,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.IDialog
-    name: IDialog
-  - name: )
-  - name: ','
-  - name: " "
-  - uid: System.Action`1
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: (
-  - name: Of
-  - name: " "
   - uid: H.Services.Common.IFormOption
     name: IFormOption
   - name: )
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
   - uid: System.Windows.Window
@@ -2967,34 +3513,6 @@ references:
   name: T
   nameWithType: T
   fullName: T
-- uid: System.Predicate`1
-  commentId: T:System.Predicate`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  name: Predicate<T>
-  nameWithType: Predicate<T>
-  fullName: System.Predicate<T>
-  nameWithType.vb: Predicate(Of T)
-  fullName.vb: System.Predicate(Of T)
-  name.vb: Predicate(Of T)
-  spec.csharp:
-  - uid: System.Predicate`1
-    name: Predicate
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Predicate`1
-    name: Predicate
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true
@@ -3018,6 +3536,34 @@ references:
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
   - name: (
   - name: Of
   - name: " "
@@ -3110,40 +3656,250 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: H.Modules.Messages.Form.FormMessageService.ShowTabEdit*
+  commentId: Overload:H.Modules.Messages.Form.FormMessageService.ShowTabEdit
+  href: H.Modules.Messages.Form.FormMessageService.html#H_Modules_Messages_Form_FormMessageService_ShowTabEdit__1___0_System_Action_H_Services_Common_IDialog__System_Predicate___0__System_Action_H_Services_Common_IFormOption__System_Windows_Window_
+  name: ShowTabEdit
+  nameWithType: FormMessageService.ShowTabEdit
+  fullName: H.Modules.Messages.Form.FormMessageService.ShowTabEdit
+- uid: H.Services.Common.IFormMessageService.ShowTabEdit``1({T},System.Action{H.Services.Common.IDialog},System.Predicate{{T}},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Services.Common.IFormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  parent: H.Services.Common.IFormMessageService
+  definition: H.Services.Common.IFormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: ShowTabEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  nameWithType: IFormMessageService.ShowTabEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  fullName: H.Services.Common.IFormMessageService.ShowTabEdit<T>(T, System.Action<H.Services.Common.IDialog>, System.Predicate<T>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
+  nameWithType.vb: IFormMessageService.ShowTabEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+  fullName.vb: H.Services.Common.IFormMessageService.ShowTabEdit(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Predicate(Of T), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowTabEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+  spec.csharp:
+  - uid: H.Services.Common.IFormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+    name: ShowTabEdit
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IFormOption
+    name: IFormOption
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Window
+    name: Window
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.window
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.IFormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+    name: ShowTabEdit
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IFormOption
+    name: IFormOption
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Window
+    name: Window
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.window
+  - name: )
+- uid: H.Services.Common.IFormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Services.Common.IFormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: ShowTabEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  nameWithType: IFormMessageService.ShowTabEdit<T>(T, Action<IDialog>, Predicate<T>, Action<IFormOption>, Window)
+  fullName: H.Services.Common.IFormMessageService.ShowTabEdit<T>(T, System.Action<H.Services.Common.IDialog>, System.Predicate<T>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
+  nameWithType.vb: IFormMessageService.ShowTabEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+  fullName.vb: H.Services.Common.IFormMessageService.ShowTabEdit(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Predicate(Of T), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowTabEdit(Of T)(T, Action(Of IDialog), Predicate(Of T), Action(Of IFormOption), Window)
+  spec.csharp:
+  - uid: H.Services.Common.IFormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+    name: ShowTabEdit
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IFormOption
+    name: IFormOption
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Window
+    name: Window
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.window
+  - name: )
+  spec.vb:
+  - uid: H.Services.Common.IFormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+    name: ShowTabEdit
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IFormOption
+    name: IFormOption
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Window
+    name: Window
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.window
+  - name: )
 - uid: H.Modules.Messages.Form.FormMessageService.ShowView*
   commentId: Overload:H.Modules.Messages.Form.FormMessageService.ShowView
-  href: H.Modules.Messages.Form.FormMessageService.html#H_Modules_Messages_Form_FormMessageService_ShowView__1___0_System_Predicate___0__System_Action_H_Services_Common_IDialog__System_Action_H_Services_Common_IFormOption__System_String_System_Windows_Window_
+  href: H.Modules.Messages.Form.FormMessageService.html#H_Modules_Messages_Form_FormMessageService_ShowView__1___0_System_Action_H_Services_Common_IDialog__System_Action_H_Services_Common_IFormOption__System_Windows_Window_
   name: ShowView
   nameWithType: FormMessageService.ShowView
   fullName: H.Modules.Messages.Form.FormMessageService.ShowView
-- uid: H.Services.Common.IFormMessageService.ShowView``1({T},System.Predicate{{T}},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  commentId: M:H.Services.Common.IFormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+- uid: H.Services.Common.IFormMessageService.ShowView``1({T},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Services.Common.IFormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
   parent: H.Services.Common.IFormMessageService
-  definition: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  name: ShowView<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  nameWithType: IFormMessageService.ShowView<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  fullName: H.Services.Common.IFormMessageService.ShowView<T>(T, System.Predicate<T>, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, string, System.Windows.Window)
-  nameWithType.vb: IFormMessageService.ShowView(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
-  fullName.vb: H.Services.Common.IFormMessageService.ShowView(Of T)(T, System.Predicate(Of T), System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), String, System.Windows.Window)
-  name.vb: ShowView(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
+  definition: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: ShowView<T>(T, Action<IDialog>, Action<IFormOption>, Window)
+  nameWithType: IFormMessageService.ShowView<T>(T, Action<IDialog>, Action<IFormOption>, Window)
+  fullName: H.Services.Common.IFormMessageService.ShowView<T>(T, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
+  nameWithType.vb: IFormMessageService.ShowView(Of T)(T, Action(Of IDialog), Action(Of IFormOption), Window)
+  fullName.vb: H.Services.Common.IFormMessageService.ShowView(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowView(Of T)(T, Action(Of IDialog), Action(Of IFormOption), Window)
   spec.csharp:
-  - uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
     name: ShowView
   - name: <
   - name: T
   - name: '>'
   - name: (
   - name: T
-  - name: ','
-  - name: " "
-  - uid: System.Predicate`1
-    name: Predicate
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  - name: <
-  - name: T
-  - name: '>'
   - name: ','
   - name: " "
   - uid: System.Action`1
@@ -3164,12 +3920,6 @@ references:
   - uid: H.Services.Common.IFormOption
     name: IFormOption
   - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
   - uid: System.Windows.Window
@@ -3178,7 +3928,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.window
   - name: )
   spec.vb:
-  - uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
     name: ShowView
   - name: (
   - name: Of
@@ -3187,17 +3937,6 @@ references:
   - name: )
   - name: (
   - name: T
-  - name: ','
-  - name: " "
-  - uid: System.Predicate`1
-    name: Predicate
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
   - name: ','
   - name: " "
   - uid: System.Action`1
@@ -3224,44 +3963,29 @@ references:
   - name: )
   - name: ','
   - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
   - uid: System.Windows.Window
     name: Window
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.window
   - name: )
-- uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
-  commentId: M:H.Services.Common.IFormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+- uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
+  commentId: M:H.Services.Common.IFormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  name: ShowView<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  nameWithType: IFormMessageService.ShowView<T>(T, Predicate<T>, Action<IDialog>, Action<IFormOption>, string, Window)
-  fullName: H.Services.Common.IFormMessageService.ShowView<T>(T, System.Predicate<T>, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, string, System.Windows.Window)
-  nameWithType.vb: IFormMessageService.ShowView(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
-  fullName.vb: H.Services.Common.IFormMessageService.ShowView(Of T)(T, System.Predicate(Of T), System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), String, System.Windows.Window)
-  name.vb: ShowView(Of T)(T, Predicate(Of T), Action(Of IDialog), Action(Of IFormOption), String, Window)
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: ShowView<T>(T, Action<IDialog>, Action<IFormOption>, Window)
+  nameWithType: IFormMessageService.ShowView<T>(T, Action<IDialog>, Action<IFormOption>, Window)
+  fullName: H.Services.Common.IFormMessageService.ShowView<T>(T, System.Action<H.Services.Common.IDialog>, System.Action<H.Services.Common.IFormOption>, System.Windows.Window)
+  nameWithType.vb: IFormMessageService.ShowView(Of T)(T, Action(Of IDialog), Action(Of IFormOption), Window)
+  fullName.vb: H.Services.Common.IFormMessageService.ShowView(Of T)(T, System.Action(Of H.Services.Common.IDialog), System.Action(Of H.Services.Common.IFormOption), System.Windows.Window)
+  name.vb: ShowView(Of T)(T, Action(Of IDialog), Action(Of IFormOption), Window)
   spec.csharp:
-  - uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
     name: ShowView
   - name: <
   - name: T
   - name: '>'
   - name: (
   - name: T
-  - name: ','
-  - name: " "
-  - uid: System.Predicate`1
-    name: Predicate
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  - name: <
-  - name: T
-  - name: '>'
   - name: ','
   - name: " "
   - uid: System.Action`1
@@ -3282,12 +4006,6 @@ references:
   - uid: H.Services.Common.IFormOption
     name: IFormOption
   - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
   - uid: System.Windows.Window
@@ -3296,7 +4014,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.window
   - name: )
   spec.vb:
-  - uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Predicate{``0},System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.String,System.Windows.Window)
+  - uid: H.Services.Common.IFormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)
     name: ShowView
   - name: (
   - name: Of
@@ -3305,17 +4023,6 @@ references:
   - name: )
   - name: (
   - name: T
-  - name: ','
-  - name: " "
-  - uid: System.Predicate`1
-    name: Predicate
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
   - name: ','
   - name: " "
   - uid: System.Action`1
@@ -3340,12 +4047,6 @@ references:
   - uid: H.Services.Common.IFormOption
     name: IFormOption
   - name: )
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
   - uid: System.Windows.Window

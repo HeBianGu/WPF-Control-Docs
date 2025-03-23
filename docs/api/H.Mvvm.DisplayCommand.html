@@ -101,7 +101,7 @@ Class DisplayCommand
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DisplayCommand : RelayCommand, INotifyPropertyChanged, IRelayCommand, ICommand, IDisplayCommand</code></pre>
+    <pre><code class="lang-csharp hljs">public class DisplayCommand : RelayCommand, ICommand, IDisplayCommand, INotifyPropertyChanged</code></pre>
   </div>
 
 
@@ -111,6 +111,7 @@ Class DisplayCommand
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="H.Mvvm.CommandBase.html">CommandBase</a></div>
       <div><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></div>
       <div><span class="xref">DisplayCommand</span></div>
     </dd>
@@ -119,10 +120,9 @@ Class DisplayCommand
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IRelayCommand.html">IRelayCommand</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand">ICommand</a></div>
       <div><a class="xref" href="H.Mvvm.IDisplayCommand.html">IDisplayCommand</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
     </dd>
   </dl>
 
@@ -137,52 +137,13 @@ Class DisplayCommand
       <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand__canExecute">RelayCommand._canExecute</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand__actionCommand">RelayCommand._actionCommand</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand__canExecuteCommand">RelayCommand._canExecuteCommand</a>
+      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_Execute_System_Object_">RelayCommand.Execute(object)</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_CanExecute_System_Object_">RelayCommand.CanExecute(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_CanExecuteChanged">RelayCommand.CanExecuteChanged</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_Execute_System_Object_">RelayCommand.Execute(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_Name">RelayCommand.Name</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_IsEnabled">RelayCommand.IsEnabled</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_IsVisible">RelayCommand.IsVisible</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_IsIndeterminate">RelayCommand.IsIndeterminate</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_IsBusy">RelayCommand.IsBusy</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_Percent">RelayCommand.Percent</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_Message">RelayCommand.Message</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_GroupName">RelayCommand.GroupName</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_PropertyChanged">RelayCommand.PropertyChanged</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_RaisePropertyChanged_System_String_">RelayCommand.RaisePropertyChanged(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.RelayCommand.html#H_Mvvm_RelayCommand_Refresh">RelayCommand.Refresh()</a>
+      <a class="xref" href="H.Mvvm.CommandBase.html#H_Mvvm_CommandBase_CanExecuteChanged">CommandBase.CanExecuteChanged</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -211,6 +172,9 @@ Class DisplayCommand
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -221,6 +185,15 @@ Class DisplayCommand
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -239,6 +212,9 @@ Class DisplayCommand
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -269,70 +245,6 @@ Class DisplayCommand
 
   <h2 class="section" id="constructors">Constructors
 </h2>
-
-
-  <a id="H_Mvvm_DisplayCommand__ctor_" data-uid="H.Mvvm.DisplayCommand.#ctor*"></a>
-
-  <h3 id="H_Mvvm_DisplayCommand__ctor_System_Action_H_Mvvm_IRelayCommand_System_Object__" data-uid="H.Mvvm.DisplayCommand.#ctor(System.Action{H.Mvvm.IRelayCommand,System.Object})">
-  DisplayCommand(Action&lt;IRelayCommand, object&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DisplayCommand(Action&lt;IRelayCommand, object&gt; action)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="H.Mvvm.IRelayCommand.html">IRelayCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="H_Mvvm_DisplayCommand__ctor_" data-uid="H.Mvvm.DisplayCommand.#ctor*"></a>
-
-  <h3 id="H_Mvvm_DisplayCommand__ctor_System_Action_H_Mvvm_IRelayCommand_System_Object__System_Func_H_Mvvm_IRelayCommand_System_Object_System_Boolean__" data-uid="H.Mvvm.DisplayCommand.#ctor(System.Action{H.Mvvm.IRelayCommand,System.Object},System.Func{H.Mvvm.IRelayCommand,System.Object,System.Boolean})">
-  DisplayCommand(Action&lt;IRelayCommand, object&gt;, Func&lt;IRelayCommand, object, bool&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DisplayCommand(Action&lt;IRelayCommand, object&gt; execute, Func&lt;IRelayCommand, object, bool&gt; canExecute)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>execute</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="H.Mvvm.IRelayCommand.html">IRelayCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd></dd>
-    <dt><code>canExecute</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="H.Mvvm.IRelayCommand.html">IRelayCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
 
 
   <a id="H_Mvvm_DisplayCommand__ctor_" data-uid="H.Mvvm.DisplayCommand.#ctor*"></a>
@@ -436,6 +348,103 @@ public virtual string Description { get; set; }</code></pre>
 
 
 
+  <a id="H_Mvvm_DisplayCommand_GroupName_" data-uid="H.Mvvm.DisplayCommand.GroupName*"></a>
+
+  <h3 id="H_Mvvm_DisplayCommand_GroupName" data-uid="H.Mvvm.DisplayCommand.GroupName">
+  GroupName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Browsable(false)]
+public string GroupName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_DisplayCommand_Icon_" data-uid="H.Mvvm.DisplayCommand.Icon*"></a>
+
+  <h3 id="H_Mvvm_DisplayCommand_Icon" data-uid="H.Mvvm.DisplayCommand.Icon">
+  Icon
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Browsable(false)]
+public string Icon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_DisplayCommand_Name_" data-uid="H.Mvvm.DisplayCommand.Name*"></a>
+
+  <h3 id="H_Mvvm_DisplayCommand_Name" data-uid="H.Mvvm.DisplayCommand.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="H_Mvvm_DisplayCommand_Order_" data-uid="H.Mvvm.DisplayCommand.Order*"></a>
 
   <h3 id="H_Mvvm_DisplayCommand_Order" data-uid="H.Mvvm.DisplayCommand.Order">
@@ -462,6 +471,76 @@ public virtual int Order { get; set; }</code></pre>
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="H_Mvvm_DisplayCommand_RaisePropertyChanged_" data-uid="H.Mvvm.DisplayCommand.RaisePropertyChanged*"></a>
+
+  <h3 id="H_Mvvm_DisplayCommand_RaisePropertyChanged_System_String_" data-uid="H.Mvvm.DisplayCommand.RaisePropertyChanged(System.String)">
+  RaisePropertyChanged(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RaisePropertyChanged(string propertyName = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="H_Mvvm_DisplayCommand_PropertyChanged" data-uid="H.Mvvm.DisplayCommand.PropertyChanged">
+  PropertyChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a property value changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler PropertyChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></dt>
+    <dd></dd>
+  </dl>
 
 
 

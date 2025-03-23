@@ -301,6 +301,9 @@ Class ItemsControlFilterBehavior
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -310,6 +313,9 @@ Class ItemsControlFilterBehavior
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_InvokeDispatcher__1___0_System_Action___0__">DispatcherExtension.InvokeDispatcher&lt;T&gt;(T, Action&lt;T&gt;)</a>
   </div>
   <div>
+      <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_InvokeDispatcher__2___0_System_Func___0___1__">DispatcherExtension.InvokeDispatcher&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
   </div>
   <div>
@@ -317,6 +323,15 @@ Class ItemsControlFilterBehavior
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -335,6 +350,9 @@ Class ItemsControlFilterBehavior
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -1284,7 +1302,7 @@ Class ItemsControlFilterBehavior
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IOrderable Order { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IOrderWhereable Order { get; set; }</code></pre>
   </div>
 
 
@@ -1293,7 +1311,7 @@ Class ItemsControlFilterBehavior
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Services.Common.IOrderable.html">IOrderable</a></dt>
+    <dt><a class="xref" href="H.Services.Common.IOrderWhereable.html">IOrderWhereable</a></dt>
     <dd></dd>
   </dl>
 
@@ -1315,7 +1333,7 @@ Class ItemsControlFilterBehavior
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IOrderable Order1 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IOrderWhereable Order1 { get; set; }</code></pre>
   </div>
 
 
@@ -1324,7 +1342,7 @@ Class ItemsControlFilterBehavior
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Services.Common.IOrderable.html">IOrderable</a></dt>
+    <dt><a class="xref" href="H.Services.Common.IOrderWhereable.html">IOrderWhereable</a></dt>
     <dd></dd>
   </dl>
 
@@ -1346,7 +1364,7 @@ Class ItemsControlFilterBehavior
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IOrderable Order2 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IOrderWhereable Order2 { get; set; }</code></pre>
   </div>
 
 
@@ -1355,7 +1373,7 @@ Class ItemsControlFilterBehavior
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Services.Common.IOrderable.html">IOrderable</a></dt>
+    <dt><a class="xref" href="H.Services.Common.IOrderWhereable.html">IOrderWhereable</a></dt>
     <dd></dd>
   </dl>
 
@@ -1377,7 +1395,7 @@ Class ItemsControlFilterBehavior
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IOrderable Order3 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IOrderWhereable Order3 { get; set; }</code></pre>
   </div>
 
 
@@ -1386,7 +1404,7 @@ Class ItemsControlFilterBehavior
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Services.Common.IOrderable.html">IOrderable</a></dt>
+    <dt><a class="xref" href="H.Services.Common.IOrderWhereable.html">IOrderWhereable</a></dt>
     <dd></dd>
   </dl>
 
@@ -1408,7 +1426,7 @@ Class ItemsControlFilterBehavior
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IOrderable Order4 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IOrderWhereable Order4 { get; set; }</code></pre>
   </div>
 
 
@@ -1417,7 +1435,7 @@ Class ItemsControlFilterBehavior
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Services.Common.IOrderable.html">IOrderable</a></dt>
+    <dt><a class="xref" href="H.Services.Common.IOrderWhereable.html">IOrderWhereable</a></dt>
     <dd></dd>
   </dl>
 
@@ -1439,7 +1457,7 @@ Class ItemsControlFilterBehavior
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IOrderable Order5 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IOrderWhereable Order5 { get; set; }</code></pre>
   </div>
 
 
@@ -1448,7 +1466,7 @@ Class ItemsControlFilterBehavior
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Services.Common.IOrderable.html">IOrderable</a></dt>
+    <dt><a class="xref" href="H.Services.Common.IOrderWhereable.html">IOrderWhereable</a></dt>
     <dd></dd>
   </dl>
 

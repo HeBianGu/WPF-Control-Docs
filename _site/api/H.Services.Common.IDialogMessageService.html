@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IDialogMessageService | WPF-Control ">
       
-      
+      <meta name="description" content="对话框消息服务接口">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,8 @@ Interface IDialogMessageService
   <dl><dt>Assembly</dt><dd>H.Services.Common.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>对话框消息服务接口</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -115,6 +116,24 @@ Interface IDialogMessageService
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteAllDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___">DialogMessageExtension.ShowDeleteAllDialog(IDialogMessageService, Action&lt;bool?&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDeleteDialog_H_Services_Common_IDialogMessageService_System_Action_System_Nullable_System_Boolean___">DialogMessageExtension.ShowDeleteDialog(IDialogMessageService, Action&lt;bool?&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog_H_Services_Common_IDialogMessageService_System_Object_System_Action_System_Nullable_System_Boolean___System_Action_H_Services_Common_IDialog__System_Func_System_Boolean__">DialogMessageExtension.ShowDialog(IDialogMessageService, object, Action&lt;bool?&gt;, Action&lt;IDialog&gt;, Func&lt;bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowDialog__1_H_Services_Common_IDialogMessageService_System_Action___0__System_Action___0__System_Action_H_Services_Common_IDialog__System_Func___0_System_Boolean__">DialogMessageExtension.ShowDialog&lt;T&gt;(IDialogMessageService, Action&lt;T&gt;, Action&lt;T&gt;, Action&lt;IDialog&gt;, Func&lt;T, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Services.Common.DialogMessageExtension.html#H_Services_Common_DialogMessageExtension_ShowNotImplementedDialog_H_Services_Common_IDialogMessageService_">DialogMessageExtension.ShowNotImplementedDialog(IDialogMessageService)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -125,6 +144,15 @@ Interface IDialogMessageService
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -143,6 +171,9 @@ Interface IDialogMessageService
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -182,7 +213,8 @@ Interface IDialogMessageService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>显示对话框</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -192,17 +224,21 @@ Interface IDialogMessageService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>presenter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
+    <dd><p>对话框的呈现者</p>
+</dd>
     <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框构建器</p>
+</dd>
     <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>确定按钮是否可用的条件</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框的结果</p>
+</dd>
   </dl>
 
 
@@ -222,7 +258,8 @@ Interface IDialogMessageService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>显示带操作的对话框</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -232,25 +269,31 @@ Interface IDialogMessageService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>presenter</code> <span class="xref">P</span></dt>
-    <dd></dd>
+    <dd><p>对话框的呈现者</p>
+</dd>
     <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框构建器</p>
+</dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>, P, T&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框操作的委托</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框的操作结果</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>P</code></dt>
-    <dd></dd>
+    <dd><p>呈现者的类型</p>
+</dd>
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>操作结果的类型</p>
+</dd>
   </dl>
 
 
@@ -269,7 +312,8 @@ Interface IDialogMessageService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>显示循环对话框</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -279,23 +323,28 @@ Interface IDialogMessageService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>getList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>获取列表的委托</p>
+</dd>
     <dt><code>itemAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>列表项操作的委托</p>
+</dd>
     <dt><code>build</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框构建器</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框的操作结果</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>列表项的类型</p>
+</dd>
   </dl>
 
 
@@ -314,7 +363,8 @@ Interface IDialogMessageService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>显示百分比对话框</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -324,21 +374,25 @@ Interface IDialogMessageService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>, <a class="xref" href="H.Services.Common.IPercentPresenter.html">IPercentPresenter</a>, T&gt;</dt>
-    <dd></dd>
+    <dd><p>百分比对话框操作的委托</p>
+</dd>
     <dt><code>build</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框构建器</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框的操作结果</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>操作结果的类型</p>
+</dd>
   </dl>
 
 
@@ -357,7 +411,8 @@ Interface IDialogMessageService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>显示字符串对话框</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -367,21 +422,25 @@ Interface IDialogMessageService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>, <a class="xref" href="H.Services.Common.IStringPresenter.html">IStringPresenter</a>, T&gt;</dt>
-    <dd></dd>
+    <dd><p>字符串对话框操作的委托</p>
+</dd>
     <dt><code>build</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框构建器</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框的操作结果</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>操作结果的类型</p>
+</dd>
   </dl>
 
 
@@ -400,7 +459,8 @@ Interface IDialogMessageService
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>显示等待对话框</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -410,21 +470,25 @@ Interface IDialogMessageService
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>, T&gt;</dt>
-    <dd></dd>
+    <dd><p>等待对话框操作的委托</p>
+</dd>
     <dt><code>build</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框构建器</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>对话框的操作结果</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>操作结果的类型</p>
+</dd>
   </dl>
 
 

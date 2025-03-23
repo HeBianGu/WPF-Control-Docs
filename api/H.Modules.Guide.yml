@@ -4,12 +4,23 @@ items:
   commentId: N:H.Modules.Guide
   id: H.Modules.Guide
   children:
+  - H.Modules.Guide.GetIsNewAssemblyVersionConverter
   - H.Modules.Guide.GuideBox
   - H.Modules.Guide.GuideBoxAdorner
+  - H.Modules.Guide.GuideData
+  - H.Modules.Guide.GuideExtension
   - H.Modules.Guide.GuideOptions
   - H.Modules.Guide.GuideService
   - H.Modules.Guide.GuideTree
   - H.Modules.Guide.GuideTreeNode
+  - H.Modules.Guide.GuideTreePresenter
+  - H.Modules.Guide.IGuideOptions
+  - H.Modules.Guide.ShowGuideCommandBase
+  - H.Modules.Guide.ShowGuideTreeCommand
+  - H.Modules.Guide.ShowGuideTreeCommandBase
+  - H.Modules.Guide.ShowNewGuideCommand
+  - H.Modules.Guide.ShowNewGuideTreeCommand
+  - H.Modules.Guide.ShowVersionGuideCommand
   langs:
   - csharp
   - vb
@@ -20,6 +31,12 @@ items:
   assemblies:
   - H.Modules.Guide
 references:
+- uid: H.Modules.Guide.GetIsNewAssemblyVersionConverter
+  commentId: T:H.Modules.Guide.GetIsNewAssemblyVersionConverter
+  href: H.Modules.Guide.GetIsNewAssemblyVersionConverter.html
+  name: GetIsNewAssemblyVersionConverter
+  nameWithType: GetIsNewAssemblyVersionConverter
+  fullName: H.Modules.Guide.GetIsNewAssemblyVersionConverter
 - uid: H.Modules.Guide.GuideBox
   commentId: T:H.Modules.Guide.GuideBox
   href: H.Modules.Guide.GuideBox.html
@@ -32,6 +49,20 @@ references:
   name: GuideBoxAdorner
   nameWithType: GuideBoxAdorner
   fullName: H.Modules.Guide.GuideBoxAdorner
+- uid: H.Modules.Guide.GuideExtension
+  commentId: T:H.Modules.Guide.GuideExtension
+  parent: H.Modules.Guide
+  href: H.Modules.Guide.GuideExtension.html
+  name: GuideExtension
+  nameWithType: GuideExtension
+  fullName: H.Modules.Guide.GuideExtension
+- uid: H.Modules.Guide.IGuideOptions
+  commentId: T:H.Modules.Guide.IGuideOptions
+  parent: H.Modules.Guide
+  href: H.Modules.Guide.IGuideOptions.html
+  name: IGuideOptions
+  nameWithType: IGuideOptions
+  fullName: H.Modules.Guide.IGuideOptions
 - uid: H.Modules.Guide.GuideOptions
   commentId: T:H.Modules.Guide.GuideOptions
   href: H.Modules.Guide.GuideOptions.html
@@ -46,6 +77,7 @@ references:
   fullName: H.Modules.Guide.GuideService
 - uid: H.Modules.Guide.GuideTree
   commentId: T:H.Modules.Guide.GuideTree
+  parent: H.Modules.Guide
   href: H.Modules.Guide.GuideTree.html
   name: GuideTree
   nameWithType: GuideTree
@@ -57,6 +89,56 @@ references:
   name: GuideTreeNode
   nameWithType: GuideTreeNode
   fullName: H.Modules.Guide.GuideTreeNode
+- uid: H.Modules.Guide.GuideTreePresenter
+  commentId: T:H.Modules.Guide.GuideTreePresenter
+  href: H.Modules.Guide.GuideTreePresenter.html
+  name: GuideTreePresenter
+  nameWithType: GuideTreePresenter
+  fullName: H.Modules.Guide.GuideTreePresenter
+- uid: H.Modules.Guide.GuideData
+  commentId: T:H.Modules.Guide.GuideData
+  href: H.Modules.Guide.GuideData.html
+  name: GuideData
+  nameWithType: GuideData
+  fullName: H.Modules.Guide.GuideData
+- uid: H.Modules.Guide.ShowGuideCommandBase
+  commentId: T:H.Modules.Guide.ShowGuideCommandBase
+  parent: H.Modules.Guide
+  href: H.Modules.Guide.ShowGuideCommandBase.html
+  name: ShowGuideCommandBase
+  nameWithType: ShowGuideCommandBase
+  fullName: H.Modules.Guide.ShowGuideCommandBase
+- uid: H.Modules.Guide.ShowGuideTreeCommand
+  commentId: T:H.Modules.Guide.ShowGuideTreeCommand
+  href: H.Modules.Guide.ShowGuideTreeCommand.html
+  name: ShowGuideTreeCommand
+  nameWithType: ShowGuideTreeCommand
+  fullName: H.Modules.Guide.ShowGuideTreeCommand
+- uid: H.Modules.Guide.ShowGuideTreeCommandBase
+  commentId: T:H.Modules.Guide.ShowGuideTreeCommandBase
+  parent: H.Modules.Guide
+  href: H.Modules.Guide.ShowGuideTreeCommandBase.html
+  name: ShowGuideTreeCommandBase
+  nameWithType: ShowGuideTreeCommandBase
+  fullName: H.Modules.Guide.ShowGuideTreeCommandBase
+- uid: H.Modules.Guide.ShowNewGuideCommand
+  commentId: T:H.Modules.Guide.ShowNewGuideCommand
+  href: H.Modules.Guide.ShowNewGuideCommand.html
+  name: ShowNewGuideCommand
+  nameWithType: ShowNewGuideCommand
+  fullName: H.Modules.Guide.ShowNewGuideCommand
+- uid: H.Modules.Guide.ShowNewGuideTreeCommand
+  commentId: T:H.Modules.Guide.ShowNewGuideTreeCommand
+  href: H.Modules.Guide.ShowNewGuideTreeCommand.html
+  name: ShowNewGuideTreeCommand
+  nameWithType: ShowNewGuideTreeCommand
+  fullName: H.Modules.Guide.ShowNewGuideTreeCommand
+- uid: H.Modules.Guide.ShowVersionGuideCommand
+  commentId: T:H.Modules.Guide.ShowVersionGuideCommand
+  href: H.Modules.Guide.ShowVersionGuideCommand.html
+  name: ShowVersionGuideCommand
+  nameWithType: ShowVersionGuideCommand
+  fullName: H.Modules.Guide.ShowVersionGuideCommand
 - uid: H.Modules.Guide
   commentId: N:H.Modules.Guide
   href: H.html

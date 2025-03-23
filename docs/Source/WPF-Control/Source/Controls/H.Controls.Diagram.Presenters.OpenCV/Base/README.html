@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | WPF-Control </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | WPF-Control ">
+      
+      
+      <link rel="icon" href="../../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../../logo.svg" alt="WPF-Control">
+            WPF-Control
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>OpenCvSharp 是一个基于 OpenCV 的 .NET 封装库，允许 C# 开发者使用 OpenCV 的强大功能进行图像处理和计算机视觉任务。以下是 OpenCvSharp 的一些详细功能：</p>
+<hr>
+<h3 id="1-图像处理">1. <strong>图像处理</strong></h3>
+<ul>
+<li><strong>图像读取与保存</strong>：
+<pre><code class="lang-csharp">Mat img = Cv2.ImRead(&quot;image.jpg&quot;, ImreadModes.Color);
+Cv2.ImWrite(&quot;output.jpg&quot;, img);
+</code></pre>
+</li>
+<li><strong>图像显示</strong>：
+<pre><code class="lang-csharp">Cv2.ImShow(&quot;Window Name&quot;, img);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+</li>
+<li><strong>图像转换</strong>：
+<ul>
+<li>灰度化：<code>Cv2.CvtColor(img, grayImg, ColorConversionCodes.BGR2GRAY);</code></li>
+<li>颜色空间转换：<code>Cv2.CvtColor(img, hsvImg, ColorConversionCodes.BGR2HSV);</code></li>
+</ul>
+</li>
+<li><strong>图像裁剪与缩放</strong>：
+<pre><code class="lang-csharp">Mat cropped = new Mat(img, new Rect(x, y, width, height));
+Mat resized = new Mat();
+Cv2.Resize(img, resized, new Size(newWidth, newHeight));
+</code></pre>
+</li>
+<li><strong>图像旋转与翻转</strong>：
+<pre><code class="lang-csharp">Mat rotated = new Mat();
+Cv2.Rotate(img, rotated, RotateFlags.Rotate90Clockwise);
+Cv2.Flip(img, flipped, FlipMode.Y);
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="2-图像滤波与增强">2. <strong>图像滤波与增强</strong></h3>
+<ul>
+<li><strong>高斯模糊</strong>：
+<pre><code class="lang-csharp">Mat blurred = new Mat();
+Cv2.GaussianBlur(img, blurred, new Size(5, 5), 0);
+</code></pre>
+</li>
+<li><strong>中值滤波</strong>：
+<pre><code class="lang-csharp">Cv2.MedianBlur(img, blurred, 5);
+</code></pre>
+</li>
+<li><strong>边缘检测</strong>：
+<pre><code class="lang-csharp">Mat edges = new Mat();
+Cv2.Canny(img, edges, threshold1, threshold2);
+</code></pre>
+</li>
+<li><strong>直方图均衡化</strong>：
+<pre><code class="lang-csharp">Mat equalized = new Mat();
+Cv2.EqualizeHist(img, equalized);
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="3-特征检测与描述">3. <strong>特征检测与描述</strong></h3>
+<ul>
+<li><strong>关键点检测</strong>：
+<pre><code class="lang-csharp">var detector = ORB.Create();
+KeyPoint[] keypoints = detector.Detect(img);
+</code></pre>
+</li>
+<li><strong>特征匹配</strong>：
+<pre><code class="lang-csharp">var matcher = new BFMatcher();
+DMatch[] matches = matcher.Match(descriptors1, descriptors2);
+</code></pre>
+</li>
+<li><strong>角点检测</strong>：
+<pre><code class="lang-csharp">Mat gray = new Mat();
+Cv2.CvtColor(img, gray, ColorConversionCodes.BGR2GRAY);
+Mat corners = new Mat();
+Cv2.CornerHarris(gray, corners, blockSize, ksize, k);
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="4-视频处理">4. <strong>视频处理</strong></h3>
+<ul>
+<li><strong>视频读取与播放</strong>：
+<pre><code class="lang-csharp">VideoCapture capture = new VideoCapture(&quot;video.mp4&quot;);
+while (capture.IsOpened())
+{
+    Mat frame = new Mat();
+    capture.Read(frame);
+    Cv2.ImShow(&quot;Video&quot;, frame);
+    if (Cv2.WaitKey(30) &gt;= 0) break;
+}
+capture.Release();
+</code></pre>
+</li>
+<li><strong>视频保存</strong>：
+<pre><code class="lang-csharp">VideoWriter writer = new VideoWriter(&quot;output.avi&quot;, FourCC.XVID, fps, new Size(width, height));
+writer.Write(frame);
+writer.Release();
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="5-对象检测与跟踪">5. <strong>对象检测与跟踪</strong></h3>
+<ul>
+<li><strong>Haar 级联分类器</strong>：
+<pre><code class="lang-csharp">CascadeClassifier faceCascade = new CascadeClassifier(&quot;haarcascade_frontalface_default.xml&quot;);
+Rect[] faces = faceCascade.DetectMultiScale(img, scaleFactor, minNeighbors);
+</code></pre>
+</li>
+<li><strong>模板匹配</strong>：
+<pre><code class="lang-csharp">Mat result = new Mat();
+Cv2.MatchTemplate(img, template, result, TemplateMatchModes.CCoeffNormed);
+Cv2.MinMaxLoc(result, out _, out _, out _, out maxLoc);
+</code></pre>
+</li>
+<li><strong>光流法跟踪</strong>：
+<pre><code class="lang-csharp">Mat prevGray = new Mat(), nextGray = new Mat();
+Cv2.CvtColor(prevFrame, prevGray, ColorConversionCodes.BGR2GRAY);
+Cv2.CvtColor(nextFrame, nextGray, ColorConversionCodes.BGR2GRAY);
+Cv2.CalcOpticalFlowPyrLK(prevGray, nextGray, prevPts, nextPts, out status, out err);
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="6-几何变换">6. <strong>几何变换</strong></h3>
+<ul>
+<li><strong>仿射变换</strong>：
+<pre><code class="lang-csharp">Mat warpMat = Cv2.GetAffineTransform(srcTri, dstTri);
+Cv2.WarpAffine(img, warped, warpMat, img.Size());
+</code></pre>
+</li>
+<li><strong>透视变换</strong>：
+<pre><code class="lang-csharp">Mat perspectiveMat = Cv2.GetPerspectiveTransform(srcQuad, dstQuad);
+Cv2.WarpPerspective(img, warped, perspectiveMat, img.Size());
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="7-机器学习">7. <strong>机器学习</strong></h3>
+<ul>
+<li><strong>K-Means 聚类</strong>：
+<pre><code class="lang-csharp">Mat data = new Mat();
+Mat labels = new Mat();
+Mat centers = new Mat();
+Cv2.KMeans(data, k, labels, TermCriteria.MaxIter, 10, KMeansFlags.PpCenters, centers);
+</code></pre>
+</li>
+<li><strong>SVM 分类器</strong>：
+<pre><code class="lang-csharp">var svm = SVM.Create();
+svm.Train(trainData, SampleTypes.RowSample, labels);
+float response = svm.Predict(sample);
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="8-绘图与标注">8. <strong>绘图与标注</strong></h3>
+<ul>
+<li><strong>绘制矩形</strong>：
+<pre><code class="lang-csharp">Cv2.Rectangle(img, new Point(x1, y1), new Point(x2, y2), Scalar.Red, thickness);
+</code></pre>
+</li>
+<li><strong>绘制圆形</strong>：
+<pre><code class="lang-csharp">Cv2.Circle(img, new Point(x, y), radius, Scalar.Blue, thickness);
+</code></pre>
+</li>
+<li><strong>绘制文本</strong>：
+<pre><code class="lang-csharp">Cv2.PutText(img, &quot;Hello&quot;, new Point(x, y), HersheyFonts.HersheySimplex, 1, Scalar.Green, 2);
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="9-矩阵操作">9. <strong>矩阵操作</strong></h3>
+<ul>
+<li><strong>矩阵创建与操作</strong>：
+<pre><code class="lang-csharp">Mat mat = new Mat(rows, cols, MatType.CV_8UC3, Scalar.Black);
+Mat subMat = mat.SubMat(new Rect(x, y, width, height));
+</code></pre>
+</li>
+<li><strong>矩阵运算</strong>：
+<pre><code class="lang-csharp">Mat result = mat1 + mat2;
+Mat result = mat1 * mat2;
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="10-实用工具">10. <strong>实用工具</strong></h3>
+<ul>
+<li><strong>图像拼接</strong>：
+<pre><code class="lang-csharp">Mat[] images = { img1, img2 };
+Mat stitched = new Mat();
+Stitcher stitcher = Stitcher.Create();
+stitcher.Stitch(images, stitched);
+</code></pre>
+</li>
+<li><strong>相机标定</strong>：
+<pre><code class="lang-csharp">Mat cameraMatrix = new Mat();
+Mat distCoeffs = new Mat();
+Cv2.CalibrateCamera(objectPoints, imagePoints, imageSize, cameraMatrix, distCoeffs, out rvecs, out tvecs);
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="11-深度学习模块dnn">11. <strong>深度学习模块（DNN）</strong></h3>
+<ul>
+<li><strong>加载预训练模型</strong>：
+<pre><code class="lang-csharp">Net net = CvDnn.ReadNetFromTensorflow(&quot;model.pb&quot;, &quot;config.pbtxt&quot;);
+</code></pre>
+</li>
+<li><strong>推理</strong>：
+<pre><code class="lang-csharp">Mat blob = CvDnn.BlobFromImage(img, scale, size, mean);
+net.SetInput(blob);
+Mat output = net.Forward();
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="12-性能优化">12. <strong>性能优化</strong></h3>
+<ul>
+<li><strong>并行处理</strong>：
+OpenCvSharp 支持多线程处理，可以通过 <code>Parallel.For</code> 或 <code>Task</code> 实现并行化。</li>
+<li><strong>GPU 加速</strong>：
+使用 <code>Cuda</code> 模块可以将部分计算任务转移到 GPU 上执行。</li>
+</ul>
+<hr>
+<h3 id="13-与其他库集成">13. <strong>与其他库集成</strong></h3>
+<ul>
+<li><strong>与 WPF 集成</strong>：
+可以将 OpenCvSharp 的 <code>Mat</code> 转换为 <code>BitmapSource</code> 并在 WPF 中显示。</li>
+<li><strong>与 EmguCV 对比</strong>：
+OpenCvSharp 更轻量级，适合需要直接调用 OpenCV 的场景。</li>
+</ul>
+<hr>
+<h3 id="14-跨平台支持">14. <strong>跨平台支持</strong></h3>
+<ul>
+<li>OpenCvSharp 支持 Windows、Linux 和 macOS，可以通过 .NET Core 或 .NET 5+ 实现跨平台开发。</li>
+</ul>
+<hr>
+<h3 id="15-扩展功能">15. <strong>扩展功能</strong></h3>
+<ul>
+<li>通过 NuGet 安装扩展包（如 <code>OpenCvSharp.Extended</code>）以支持更多功能。</li>
+</ul>
+<hr>
+<p>以上是 OpenCvSharp 的主要功能概述。具体使用时，可以参考 <a href="https://github.com/shimat/opencvsharp">OpenCvSharp 官方文档</a> 和 OpenCV 的官方文档。</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -101,7 +101,9 @@ Class DeleteTextTextBoxCommand
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DeleteTextTextBoxCommand : IocMarkupCommandBase, ICommand, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">[Icon(&quot;&quot;)]
+[Display(Name = &quot;删除&quot;, Description = &quot;清空文本框文本&quot;)]
+public class DeleteTextTextBoxCommand : DisplayMarkupCommandBase, ICommand, INotifyPropertyChanged, IIconable, INameable, IDescriptionable</code></pre>
   </div>
 
 
@@ -112,7 +114,9 @@ Class DeleteTextTextBoxCommand
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.markupextension">MarkupExtension</a></div>
-      <div><a class="xref" href="H.Iocable.IocMarkupCommandBase.html">IocMarkupCommandBase</a></div>
+      <div><a class="xref" href="H.Mvvm.MarkupCommandBase.html">MarkupCommandBase</a></div>
+      <div><a class="xref" href="H.Mvvm.AsyncMarkupCommandBase.html">AsyncMarkupCommandBase</a></div>
+      <div><a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html">DisplayMarkupCommandBase</a></div>
       <div><span class="xref">DeleteTextTextBoxCommand</span></div>
     </dd>
   </dl>
@@ -122,6 +126,9 @@ Class DeleteTextTextBoxCommand
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand">ICommand</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
     </dd>
   </dl>
 
@@ -130,16 +137,34 @@ Class DeleteTextTextBoxCommand
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_CanExecuteChanged">IocMarkupCommandBase.CanExecuteChanged</a>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Name">DisplayMarkupCommandBase.Name</a>
     </div>
     <div>
-      <a class="xref" href="H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_ProvideValue_System_IServiceProvider_">IocMarkupCommandBase.ProvideValue(IServiceProvider)</a>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Icon">DisplayMarkupCommandBase.Icon</a>
     </div>
     <div>
-      <a class="xref" href="H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_PropertyChanged">IocMarkupCommandBase.PropertyChanged</a>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Description">DisplayMarkupCommandBase.Description</a>
     </div>
     <div>
-      <a class="xref" href="H.Iocable.IocMarkupCommandBase.html#H_Iocable_IocMarkupCommandBase_RaisePropertyChanged_System_String_">IocMarkupCommandBase.RaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Mvvm.AsyncMarkupCommandBase.html#H_Mvvm_AsyncMarkupCommandBase_ExecuteAsync_System_Object_">AsyncMarkupCommandBase.ExecuteAsync(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_CanExecuteChanged">MarkupCommandBase.CanExecuteChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_GetTargetElement_System_Object_">MarkupCommandBase.GetTargetElement(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_Target">MarkupCommandBase.Target</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_ProvideValue_System_IServiceProvider_">MarkupCommandBase.ProvideValue(IServiceProvider)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_PropertyChanged">MarkupCommandBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_RaisePropertyChanged_System_String_">MarkupCommandBase.RaisePropertyChanged(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -168,6 +193,9 @@ Class DeleteTextTextBoxCommand
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -178,6 +206,15 @@ Class DeleteTextTextBoxCommand
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -196,6 +233,9 @@ Class DeleteTextTextBoxCommand
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -219,6 +259,40 @@ Class DeleteTextTextBoxCommand
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, IList, Func&lt;IList&gt;, Action, DispatcherPriority)</a>
   </div>
   </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="H_Styles_Default_DeleteTextTextBoxCommand_TextProperty" data-uid="H.Styles.Default.DeleteTextTextBoxCommand.TextProperty">
+  TextProperty
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty TextProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
 
 
 
@@ -287,6 +361,108 @@ Class DeleteTextTextBoxCommand
     <dt><code>parameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd><p>Data used by the command.  If the command does not require data to be passed, this object can be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
 </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Styles_Default_DeleteTextTextBoxCommand_GetText_" data-uid="H.Styles.Default.DeleteTextTextBoxCommand.GetText*"></a>
+
+  <h3 id="H_Styles_Default_DeleteTextTextBoxCommand_GetText_System_Windows_DependencyObject_" data-uid="H.Styles.Default.DeleteTextTextBoxCommand.GetText(System.Windows.DependencyObject)">
+  GetText(DependencyObject)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetText(DependencyObject obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject">DependencyObject</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Styles_Default_DeleteTextTextBoxCommand_OnTextChanged_" data-uid="H.Styles.Default.DeleteTextTextBoxCommand.OnTextChanged*"></a>
+
+  <h3 id="H_Styles_Default_DeleteTextTextBoxCommand_OnTextChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_" data-uid="H.Styles.Default.DeleteTextTextBoxCommand.OnTextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+  OnTextChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OnTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>d</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject">DependencyObject</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencypropertychangedeventargs">DependencyPropertyChangedEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Styles_Default_DeleteTextTextBoxCommand_SetText_" data-uid="H.Styles.Default.DeleteTextTextBoxCommand.SetText*"></a>
+
+  <h3 id="H_Styles_Default_DeleteTextTextBoxCommand_SetText_System_Windows_DependencyObject_System_String_" data-uid="H.Styles.Default.DeleteTextTextBoxCommand.SetText(System.Windows.DependencyObject,System.String)">
+  SetText(DependencyObject, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetText(DependencyObject obj, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject">DependencyObject</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
   </dl>
 
 

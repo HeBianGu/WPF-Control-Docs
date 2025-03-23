@@ -101,7 +101,7 @@ Class StaticFormPresenter
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StaticFormPresenter : FormPresenter, INotifyPropertyChanged, IDable</code></pre>
+    <pre><code class="lang-csharp hljs">public class StaticFormPresenter : FormPresenter, INotifyPropertyChanged, IDisplayBindable, IIconable, INameable, IOrderable, IGroupable, IDable, IDescriptionable, IFormOption</code></pre>
   </div>
 
 
@@ -111,8 +111,10 @@ Class StaticFormPresenter
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Mvvm.BindableBase.html">BindableBase</a></div>
-      <div><a class="xref" href="H.Mvvm.DisplayBindableBase.html">DisplayBindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html">BindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html">Bindable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html">CommandsBindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html">DisplayBindableBase</a></div>
       <div><a class="xref" href="H.Controls.Form.FormPresenter.html">FormPresenter</a></div>
       <div><span class="xref">StaticFormPresenter</span></div>
     </dd>
@@ -122,7 +124,14 @@ Class StaticFormPresenter
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDisplayBindable.html">IDisplayBindable</a></div>
+      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Mvvm.IOrderable.html">IOrderable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IGroupable.html">IGroupable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
+      <div><a class="xref" href="H.Services.Common.IFormOption.html">IFormOption</a></div>
     </dd>
   </dl>
 
@@ -131,67 +140,181 @@ Class StaticFormPresenter
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_Value">FormPresenter.Value</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_SelectObject">FormPresenter.SelectObject</a>
     </div>
     <div>
       <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UsePropertyView">FormPresenter.UsePropertyView</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands">DisplayBindableBase.Commands</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_ExceptPropertyNames">FormPresenter.ExceptPropertyNames</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands">DisplayBindableBase.CreateCommands()</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_MessageWidth">FormPresenter.MessageWidth</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand">DisplayBindableBase.LoadedCommand</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_Title">FormPresenter.Title</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_TitleWidth">FormPresenter.TitleWidth</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseArray">FormPresenter.UseArray</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseAsync">FormPresenter.UseAsync</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseBoolen">FormPresenter.UseBoolen</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseClass">FormPresenter.UseClass</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseCommand">FormPresenter.UseCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseCommandOnly">FormPresenter.UseCommandOnly</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseDateTime">FormPresenter.UseDateTime</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseDeclaredOnly">FormPresenter.UseDeclaredOnly</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefaultCommand">DisplayBindableBase.LoadDefaultCommand</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseDisplayOnly">FormPresenter.UseDisplayOnly</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseEnum">FormPresenter.UseEnum</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init">BindableBase.Init()</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseEnumerator">FormPresenter.UseEnumerator</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseGroup">FormPresenter.UseGroup</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseGroupNames">FormPresenter.UseGroupNames</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_">BindableBase.DispatcherRaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_GroupOrderComparer">FormPresenter.GroupOrderComparer</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged">BindableBase.OnDispatcherPropertyChanged()</a>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseInterface">FormPresenter.UseInterface</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseNull">FormPresenter.UseNull</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseOrder">FormPresenter.UseOrder</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseOrderByName">FormPresenter.UseOrderByName</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseOrderByType">FormPresenter.UseOrderByType</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UsePresenter">FormPresenter.UsePresenter</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UsePrimitive">FormPresenter.UsePrimitive</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UsePropertyNames">FormPresenter.UsePropertyNames</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseString">FormPresenter.UseString</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseTypeConverter">FormPresenter.UseTypeConverter</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_UseTypeConverterOnly">FormPresenter.UseTypeConverterOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_MinWidth">FormPresenter.MinWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_Width">FormPresenter.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_Margin">FormPresenter.Margin</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_Padding">FormPresenter.Padding</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_HorizontalAlignment">FormPresenter.HorizontalAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Controls.Form.FormPresenter.html#H_Controls_Form_FormPresenter_VerticalAlignment">FormPresenter.VerticalAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefaultCommand">DisplayBindableBase.LoadDefaultCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_Commands">CommandsBindableBase.Commands</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_CreateCommands">CommandsBindableBase.CreateCommands()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayCommand">Bindable.RelayCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_LoadedCommand">Bindable.LoadedCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethodCommand">Bindable.CallMethodCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayMethod_System_Object_">Bindable.RelayMethod(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_GetTargetElement__1">Bindable.GetTargetElement&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethod_System_Object_">Bindable.CallMethod(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init">BindableBase.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -220,6 +343,9 @@ Class StaticFormPresenter
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -230,6 +356,15 @@ Class StaticFormPresenter
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -248,6 +383,9 @@ Class StaticFormPresenter
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -278,6 +416,32 @@ Class StaticFormPresenter
 
   <h2 class="section" id="constructors">Constructors
 </h2>
+
+
+  <a id="H_Controls_Form_StaticFormPresenter__ctor_" data-uid="H.Controls.Form.StaticFormPresenter.#ctor*"></a>
+
+  <h3 id="H_Controls_Form_StaticFormPresenter__ctor" data-uid="H.Controls.Form.StaticFormPresenter.#ctor">
+  StaticFormPresenter()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StaticFormPresenter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
   <a id="H_Controls_Form_StaticFormPresenter__ctor_" data-uid="H.Controls.Form.StaticFormPresenter.#ctor*"></a>

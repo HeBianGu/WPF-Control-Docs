@@ -1,0 +1,765 @@
+### YamlMime:ManagedReference
+items:
+- uid: H.Services.Common.ProjectExtension
+  commentId: T:H.Services.Common.ProjectExtension
+  id: ProjectExtension
+  parent: H.Services.Common
+  children:
+  - H.Services.Common.ProjectExtension.Contain(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  - H.Services.Common.ProjectExtension.ShowDeleteProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  - H.Services.Common.ProjectExtension.ShowEidtProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem,System.Action{H.Services.Common.IDialog})
+  - H.Services.Common.ProjectExtension.ShowNewProject(H.Services.Common.IProjectService,System.Action{H.Services.Common.IDialog},System.String)
+  - H.Services.Common.ProjectExtension.ShowOpenProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  - H.Services.Common.ProjectExtension.ShowSaveProject(H.Services.Common.IProjectService)
+  - H.Services.Common.ProjectExtension.ShowSaveProjects(H.Services.Common.IProjectService)
+  langs:
+  - csharp
+  - vb
+  name: ProjectExtension
+  nameWithType: ProjectExtension
+  fullName: H.Services.Common.ProjectExtension
+  type: Class
+  source:
+    id: ProjectExtension
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Project\ProjectExtension.cs
+    startLine: 4
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static class ProjectExtension
+    content.vb: Public Module ProjectExtension
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: H.Services.Common.ProjectExtension.ShowNewProject(H.Services.Common.IProjectService,System.Action{H.Services.Common.IDialog},System.String)
+  commentId: M:H.Services.Common.ProjectExtension.ShowNewProject(H.Services.Common.IProjectService,System.Action{H.Services.Common.IDialog},System.String)
+  id: ShowNewProject(H.Services.Common.IProjectService,System.Action{H.Services.Common.IDialog},System.String)
+  isExtensionMethod: true
+  parent: H.Services.Common.ProjectExtension
+  langs:
+  - csharp
+  - vb
+  name: ShowNewProject(IProjectService, Action<IDialog>, string)
+  nameWithType: ProjectExtension.ShowNewProject(IProjectService, Action<IDialog>, string)
+  fullName: H.Services.Common.ProjectExtension.ShowNewProject(H.Services.Common.IProjectService, System.Action<H.Services.Common.IDialog>, string)
+  type: Method
+  source:
+    id: ShowNewProject
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Project\ProjectExtension.cs
+    startLine: 6
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowNewProject(this IProjectService projectService, Action<IDialog> action = null, string defalultName = "项目")
+    parameters:
+    - id: projectService
+      type: H.Services.Common.IProjectService
+    - id: action
+      type: System.Action{H.Services.Common.IDialog}
+    - id: defalultName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowNewProject(projectService As IProjectService, action As Action(Of IDialog) = Nothing, defalultName As String = "项目") As Task(Of Boolean?)
+  overload: H.Services.Common.ProjectExtension.ShowNewProject*
+  nameWithType.vb: ProjectExtension.ShowNewProject(IProjectService, Action(Of IDialog), String)
+  fullName.vb: H.Services.Common.ProjectExtension.ShowNewProject(H.Services.Common.IProjectService, System.Action(Of H.Services.Common.IDialog), String)
+  name.vb: ShowNewProject(IProjectService, Action(Of IDialog), String)
+- uid: H.Services.Common.ProjectExtension.ShowEidtProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem,System.Action{H.Services.Common.IDialog})
+  commentId: M:H.Services.Common.ProjectExtension.ShowEidtProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem,System.Action{H.Services.Common.IDialog})
+  id: ShowEidtProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem,System.Action{H.Services.Common.IDialog})
+  isExtensionMethod: true
+  parent: H.Services.Common.ProjectExtension
+  langs:
+  - csharp
+  - vb
+  name: ShowEidtProject(IProjectService, IProjectItem, Action<IDialog>)
+  nameWithType: ProjectExtension.ShowEidtProject(IProjectService, IProjectItem, Action<IDialog>)
+  fullName: H.Services.Common.ProjectExtension.ShowEidtProject(H.Services.Common.IProjectService, H.Services.Common.IProjectItem, System.Action<H.Services.Common.IDialog>)
+  type: Method
+  source:
+    id: ShowEidtProject
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Project\ProjectExtension.cs
+    startLine: 27
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowEidtProject(this IProjectService projectService, IProjectItem project, Action<IDialog> action = null)
+    parameters:
+    - id: projectService
+      type: H.Services.Common.IProjectService
+    - id: project
+      type: H.Services.Common.IProjectItem
+    - id: action
+      type: System.Action{H.Services.Common.IDialog}
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowEidtProject(projectService As IProjectService, project As IProjectItem, action As Action(Of IDialog) = Nothing) As Task(Of Boolean?)
+  overload: H.Services.Common.ProjectExtension.ShowEidtProject*
+  nameWithType.vb: ProjectExtension.ShowEidtProject(IProjectService, IProjectItem, Action(Of IDialog))
+  fullName.vb: H.Services.Common.ProjectExtension.ShowEidtProject(H.Services.Common.IProjectService, H.Services.Common.IProjectItem, System.Action(Of H.Services.Common.IDialog))
+  name.vb: ShowEidtProject(IProjectService, IProjectItem, Action(Of IDialog))
+- uid: H.Services.Common.ProjectExtension.ShowDeleteProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  commentId: M:H.Services.Common.ProjectExtension.ShowDeleteProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  id: ShowDeleteProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  isExtensionMethod: true
+  parent: H.Services.Common.ProjectExtension
+  langs:
+  - csharp
+  - vb
+  name: ShowDeleteProject(IProjectService, IProjectItem)
+  nameWithType: ProjectExtension.ShowDeleteProject(IProjectService, IProjectItem)
+  fullName: H.Services.Common.ProjectExtension.ShowDeleteProject(H.Services.Common.IProjectService, H.Services.Common.IProjectItem)
+  type: Method
+  source:
+    id: ShowDeleteProject
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Project\ProjectExtension.cs
+    startLine: 59
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowDeleteProject(this IProjectService projectService, IProjectItem project)
+    parameters:
+    - id: projectService
+      type: H.Services.Common.IProjectService
+    - id: project
+      type: H.Services.Common.IProjectItem
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowDeleteProject(projectService As IProjectService, project As IProjectItem) As Task(Of Boolean?)
+  overload: H.Services.Common.ProjectExtension.ShowDeleteProject*
+- uid: H.Services.Common.ProjectExtension.ShowOpenProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  commentId: M:H.Services.Common.ProjectExtension.ShowOpenProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  id: ShowOpenProject(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  isExtensionMethod: true
+  parent: H.Services.Common.ProjectExtension
+  langs:
+  - csharp
+  - vb
+  name: ShowOpenProject(IProjectService, IProjectItem)
+  nameWithType: ProjectExtension.ShowOpenProject(IProjectService, IProjectItem)
+  fullName: H.Services.Common.ProjectExtension.ShowOpenProject(H.Services.Common.IProjectService, H.Services.Common.IProjectItem)
+  type: Method
+  source:
+    id: ShowOpenProject
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Project\ProjectExtension.cs
+    startLine: 68
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowOpenProject(this IProjectService projectService, IProjectItem project)
+    parameters:
+    - id: projectService
+      type: H.Services.Common.IProjectService
+    - id: project
+      type: H.Services.Common.IProjectItem
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowOpenProject(projectService As IProjectService, project As IProjectItem) As Task(Of Boolean?)
+  overload: H.Services.Common.ProjectExtension.ShowOpenProject*
+- uid: H.Services.Common.ProjectExtension.ShowSaveProjects(H.Services.Common.IProjectService)
+  commentId: M:H.Services.Common.ProjectExtension.ShowSaveProjects(H.Services.Common.IProjectService)
+  id: ShowSaveProjects(H.Services.Common.IProjectService)
+  isExtensionMethod: true
+  parent: H.Services.Common.ProjectExtension
+  langs:
+  - csharp
+  - vb
+  name: ShowSaveProjects(IProjectService)
+  nameWithType: ProjectExtension.ShowSaveProjects(IProjectService)
+  fullName: H.Services.Common.ProjectExtension.ShowSaveProjects(H.Services.Common.IProjectService)
+  type: Method
+  source:
+    id: ShowSaveProjects
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Project\ProjectExtension.cs
+    startLine: 83
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowSaveProjects(this IProjectService projectService)
+    parameters:
+    - id: projectService
+      type: H.Services.Common.IProjectService
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowSaveProjects(projectService As IProjectService) As Task(Of Boolean?)
+  overload: H.Services.Common.ProjectExtension.ShowSaveProjects*
+- uid: H.Services.Common.ProjectExtension.ShowSaveProject(H.Services.Common.IProjectService)
+  commentId: M:H.Services.Common.ProjectExtension.ShowSaveProject(H.Services.Common.IProjectService)
+  id: ShowSaveProject(H.Services.Common.IProjectService)
+  isExtensionMethod: true
+  parent: H.Services.Common.ProjectExtension
+  langs:
+  - csharp
+  - vb
+  name: ShowSaveProject(IProjectService)
+  nameWithType: ProjectExtension.ShowSaveProject(IProjectService)
+  fullName: H.Services.Common.ProjectExtension.ShowSaveProject(H.Services.Common.IProjectService)
+  type: Method
+  source:
+    id: ShowSaveProject
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Project\ProjectExtension.cs
+    startLine: 96
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static Task<bool?> ShowSaveProject(this IProjectService projectService)
+    parameters:
+    - id: projectService
+      type: H.Services.Common.IProjectService
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Public Shared Function ShowSaveProject(projectService As IProjectService) As Task(Of Boolean?)
+  overload: H.Services.Common.ProjectExtension.ShowSaveProject*
+- uid: H.Services.Common.ProjectExtension.Contain(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  commentId: M:H.Services.Common.ProjectExtension.Contain(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  id: Contain(H.Services.Common.IProjectService,H.Services.Common.IProjectItem)
+  isExtensionMethod: true
+  parent: H.Services.Common.ProjectExtension
+  langs:
+  - csharp
+  - vb
+  name: Contain(IProjectService, IProjectItem)
+  nameWithType: ProjectExtension.Contain(IProjectService, IProjectItem)
+  fullName: H.Services.Common.ProjectExtension.Contain(H.Services.Common.IProjectService, H.Services.Common.IProjectItem)
+  type: Method
+  source:
+    id: Contain
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Project\ProjectExtension.cs
+    startLine: 115
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static bool Contain(this IProjectService projectService, IProjectItem projectItem)
+    parameters:
+    - id: projectService
+      type: H.Services.Common.IProjectService
+    - id: projectItem
+      type: H.Services.Common.IProjectItem
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Contain(projectService As IProjectService, projectItem As IProjectItem) As Boolean
+  overload: H.Services.Common.ProjectExtension.Contain*
+references:
+- uid: H.Services.Common
+  commentId: N:H.Services.Common
+  href: H.html
+  name: H.Services.Common
+  nameWithType: H.Services.Common
+  fullName: H.Services.Common
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Services
+    name: Services
+    href: H.Services.html
+  - name: .
+  - uid: H.Services.Common
+    name: Common
+    href: H.Services.Common.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Services
+    name: Services
+    href: H.Services.html
+  - name: .
+  - uid: H.Services.Common
+    name: Common
+    href: H.Services.Common.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: H.Services.Common.ProjectExtension.ShowNewProject*
+  commentId: Overload:H.Services.Common.ProjectExtension.ShowNewProject
+  href: H.Services.Common.ProjectExtension.html#H_Services_Common_ProjectExtension_ShowNewProject_H_Services_Common_IProjectService_System_Action_H_Services_Common_IDialog__System_String_
+  name: ShowNewProject
+  nameWithType: ProjectExtension.ShowNewProject
+  fullName: H.Services.Common.ProjectExtension.ShowNewProject
+- uid: H.Services.Common.IProjectService
+  commentId: T:H.Services.Common.IProjectService
+  parent: H.Services.Common
+  href: H.Services.Common.IProjectService.html
+  name: IProjectService
+  nameWithType: IProjectService
+  fullName: H.Services.Common.IProjectService
+- uid: System.Action{H.Services.Common.IDialog}
+  commentId: T:System.Action{H.Services.Common.IDialog}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<IDialog>
+  nameWithType: Action<IDialog>
+  fullName: System.Action<H.Services.Common.IDialog>
+  nameWithType.vb: Action(Of IDialog)
+  fullName.vb: System.Action(Of H.Services.Common.IDialog)
+  name.vb: Action(Of IDialog)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Services.Common.IDialog
+    name: IDialog
+    href: H.Services.Common.IDialog.html
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+  commentId: T:System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool?>
+  nameWithType: Task<bool?>
+  fullName: System.Threading.Tasks.Task<bool?>
+  nameWithType.vb: Task(Of Boolean?)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean?)
+  name.vb: Task(Of Boolean?)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: H.Services.Common.ProjectExtension.ShowEidtProject*
+  commentId: Overload:H.Services.Common.ProjectExtension.ShowEidtProject
+  href: H.Services.Common.ProjectExtension.html#H_Services_Common_ProjectExtension_ShowEidtProject_H_Services_Common_IProjectService_H_Services_Common_IProjectItem_System_Action_H_Services_Common_IDialog__
+  name: ShowEidtProject
+  nameWithType: ProjectExtension.ShowEidtProject
+  fullName: H.Services.Common.ProjectExtension.ShowEidtProject
+- uid: H.Services.Common.IProjectItem
+  commentId: T:H.Services.Common.IProjectItem
+  parent: H.Services.Common
+  href: H.Services.Common.IProjectItem.html
+  name: IProjectItem
+  nameWithType: IProjectItem
+  fullName: H.Services.Common.IProjectItem
+- uid: H.Services.Common.ProjectExtension.ShowDeleteProject*
+  commentId: Overload:H.Services.Common.ProjectExtension.ShowDeleteProject
+  href: H.Services.Common.ProjectExtension.html#H_Services_Common_ProjectExtension_ShowDeleteProject_H_Services_Common_IProjectService_H_Services_Common_IProjectItem_
+  name: ShowDeleteProject
+  nameWithType: ProjectExtension.ShowDeleteProject
+  fullName: H.Services.Common.ProjectExtension.ShowDeleteProject
+- uid: H.Services.Common.ProjectExtension.ShowOpenProject*
+  commentId: Overload:H.Services.Common.ProjectExtension.ShowOpenProject
+  href: H.Services.Common.ProjectExtension.html#H_Services_Common_ProjectExtension_ShowOpenProject_H_Services_Common_IProjectService_H_Services_Common_IProjectItem_
+  name: ShowOpenProject
+  nameWithType: ProjectExtension.ShowOpenProject
+  fullName: H.Services.Common.ProjectExtension.ShowOpenProject
+- uid: H.Services.Common.ProjectExtension.ShowSaveProjects*
+  commentId: Overload:H.Services.Common.ProjectExtension.ShowSaveProjects
+  href: H.Services.Common.ProjectExtension.html#H_Services_Common_ProjectExtension_ShowSaveProjects_H_Services_Common_IProjectService_
+  name: ShowSaveProjects
+  nameWithType: ProjectExtension.ShowSaveProjects
+  fullName: H.Services.Common.ProjectExtension.ShowSaveProjects
+- uid: H.Services.Common.ProjectExtension.ShowSaveProject*
+  commentId: Overload:H.Services.Common.ProjectExtension.ShowSaveProject
+  href: H.Services.Common.ProjectExtension.html#H_Services_Common_ProjectExtension_ShowSaveProject_H_Services_Common_IProjectService_
+  name: ShowSaveProject
+  nameWithType: ProjectExtension.ShowSaveProject
+  fullName: H.Services.Common.ProjectExtension.ShowSaveProject
+- uid: H.Services.Common.ProjectExtension.Contain*
+  commentId: Overload:H.Services.Common.ProjectExtension.Contain
+  href: H.Services.Common.ProjectExtension.html#H_Services_Common_ProjectExtension_Contain_H_Services_Common_IProjectService_H_Services_Common_IProjectItem_
+  name: Contain
+  nameWithType: ProjectExtension.Contain
+  fullName: H.Services.Common.ProjectExtension.Contain
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

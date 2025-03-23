@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | WPF-Control </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | WPF-Control ">
+      
+      
+      <link rel="icon" href="../../../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../../../logo.svg" alt="WPF-Control">
+            WPF-Control
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>在图像处理中，<strong>加减运算</strong> 是基本的像素级操作，用于对两幅图像进行逐像素的加法或减法运算。这些操作常用于图像增强、背景去除、图像融合等任务。以下是加减运算的详细总结：</p>
+<hr>
+<h3 id="1-加法运算"><strong>1. 加法运算</strong></h3>
+<h4 id="定义"><strong>定义</strong></h4>
+<p>加法运算将两幅图像的对应像素值相加，生成一幅新的图像。公式为：</p>
+<pre><code>结果图像 = 图像1 + 图像2
+</code></pre>
+<h4 id="作用"><strong>作用</strong></h4>
+<ol>
+<li><strong>图像融合</strong>：
+<ul>
+<li>将两幅图像叠加，生成混合效果。</li>
+</ul>
+</li>
+<li><strong>亮度增强</strong>：
+<ul>
+<li>通过将图像与一个常数相加，可以增加图像的亮度。</li>
+</ul>
+</li>
+<li><strong>多帧图像叠加</strong>：
+<ul>
+<li>在长曝光摄影或降噪中，将多帧图像相加可以增强信号。</li>
+</ul>
+</li>
+</ol>
+<h4 id="注意事项"><strong>注意事项</strong></h4>
+<ul>
+<li>如果像素值超过最大值（如 255 对于 8 位图像），需要进行 <strong>饱和处理</strong>（即取最大值）。</li>
+<li>OpenCV 中的加法函数（如 <code>Cv2.Add()</code>）会自动处理溢出问题。</li>
+</ul>
+<h4 id="代码示例opencvsharp"><strong>代码示例（OpenCvSharp）</strong></h4>
+<pre><code class="lang-csharp">Mat img1 = Cv2.ImRead(&quot;image1.jpg&quot;, ImreadModes.Color);
+Mat img2 = Cv2.ImRead(&quot;image2.jpg&quot;, ImreadModes.Color);
+Mat result = new Mat();
+
+// 加法运算
+Cv2.Add(img1, img2, result);
+
+// 显示结果
+Cv2.ImShow(&quot;Addition Result&quot;, result);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+<hr>
+<h3 id="2-减法运算"><strong>2. 减法运算</strong></h3>
+<h4 id="定义-1"><strong>定义</strong></h4>
+<p>减法运算将两幅图像的对应像素值相减，生成一幅新的图像。公式为：</p>
+<pre><code>结果图像 = 图像1 - 图像2
+</code></pre>
+<h4 id="作用-1"><strong>作用</strong></h4>
+<ol>
+<li><strong>背景去除</strong>：
+<ul>
+<li>通过从图像中减去背景，可以提取前景目标。</li>
+</ul>
+</li>
+<li><strong>运动检测</strong>：
+<ul>
+<li>在视频中，通过将当前帧与背景帧相减，可以检测运动物体。</li>
+</ul>
+</li>
+<li><strong>图像差异分析</strong>：
+<ul>
+<li>比较两幅图像的差异，用于变化检测或缺陷检测。</li>
+</ul>
+</li>
+</ol>
+<h4 id="注意事项-1"><strong>注意事项</strong></h4>
+<ul>
+<li>如果像素值小于最小值（如 0 对于 8 位图像），需要进行 <strong>截断处理</strong>（即取最小值）。</li>
+<li>OpenCV 中的减法函数（如 <code>Cv2.Subtract()</code>）会自动处理负值问题。</li>
+</ul>
+<h4 id="代码示例opencvsharp-1"><strong>代码示例（OpenCvSharp）</strong></h4>
+<pre><code class="lang-csharp">Mat img1 = Cv2.ImRead(&quot;image1.jpg&quot;, ImreadModes.Color);
+Mat img2 = Cv2.ImRead(&quot;image2.jpg&quot;, ImreadModes.Color);
+Mat result = new Mat();
+
+// 减法运算
+Cv2.Subtract(img1, img2, result);
+
+// 显示结果
+Cv2.ImShow(&quot;Subtraction Result&quot;, result);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+<hr>
+<h3 id="3-加权加法线性混合"><strong>3. 加权加法（线性混合）</strong></h3>
+<h4 id="定义-2"><strong>定义</strong></h4>
+<p>加权加法是加法运算的扩展，允许为每幅图像分配一个权重。公式为：</p>
+<pre><code>结果图像 = α * 图像1 + β * 图像2 + γ
+</code></pre>
+<p>其中，<code>α</code> 和 <code>β</code> 是权重，<code>γ</code> 是常数偏移量。</p>
+<h4 id="作用-2"><strong>作用</strong></h4>
+<ol>
+<li><strong>图像融合</strong>：
+<ul>
+<li>通过调整权重，可以控制两幅图像在结果中的比例。</li>
+</ul>
+</li>
+<li><strong>透明度效果</strong>：
+<ul>
+<li>实现图像的渐变过渡效果。</li>
+</ul>
+</li>
+</ol>
+<h4 id="代码示例opencvsharp-2"><strong>代码示例（OpenCvSharp）</strong></h4>
+<pre><code class="lang-csharp">Mat img1 = Cv2.ImRead(&quot;image1.jpg&quot;, ImreadModes.Color);
+Mat img2 = Cv2.ImRead(&quot;image2.jpg&quot;, ImreadModes.Color);
+Mat result = new Mat();
+
+// 加权加法（线性混合）
+double alpha = 0.7; // 图像1的权重
+double beta = 0.3;  // 图像2的权重
+double gamma = 0.0; // 常数偏移量
+Cv2.AddWeighted(img1, alpha, img2, beta, gamma, result);
+
+// 显示结果
+Cv2.ImShow(&quot;Weighted Addition Result&quot;, result);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+<hr>
+<h3 id="4-绝对值减法"><strong>4. 绝对值减法</strong></h3>
+<h4 id="定义-3"><strong>定义</strong></h4>
+<p>绝对值减法计算两幅图像对应像素值之差的绝对值。公式为：</p>
+<pre><code>结果图像 = |图像1 - 图像2|
+</code></pre>
+<h4 id="作用-3"><strong>作用</strong></h4>
+<ol>
+<li><strong>差异检测</strong>：
+<ul>
+<li>突出两幅图像的差异区域。</li>
+</ul>
+</li>
+<li><strong>运动检测</strong>：
+<ul>
+<li>在视频中检测运动物体。</li>
+</ul>
+</li>
+</ol>
+<h4 id="代码示例opencvsharp-3"><strong>代码示例（OpenCvSharp）</strong></h4>
+<pre><code class="lang-csharp">Mat img1 = Cv2.ImRead(&quot;image1.jpg&quot;, ImreadModes.Color);
+Mat img2 = Cv2.ImRead(&quot;image2.jpg&quot;, ImreadModes.Color);
+Mat result = new Mat();
+
+// 绝对值减法
+Cv2.Absdiff(img1, img2, result);
+
+// 显示结果
+Cv2.ImShow(&quot;Absolute Difference&quot;, result);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+<hr>
+<h3 id="5-总结"><strong>5. 总结</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>运算类型</strong></th>
+<th><strong>公式</strong></th>
+<th><strong>主要作用</strong></th>
+<th><strong>注意事项</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>加法</strong></td>
+<td><code>图像1 + 图像2</code></td>
+<td>图像融合、亮度增强</td>
+<td>注意像素值溢出</td>
+</tr>
+<tr>
+<td><strong>减法</strong></td>
+<td><code>图像1 - 图像2</code></td>
+<td>背景去除、运动检测</td>
+<td>注意像素值负值</td>
+</tr>
+<tr>
+<td><strong>加权加法</strong></td>
+<td><code>α * 图像1 + β * 图像2 + γ</code></td>
+<td>图像融合、透明度效果</td>
+<td>权重和常数的选择</td>
+</tr>
+<tr>
+<td><strong>绝对值减法</strong></td>
+<td><code>|图像1 - 图像2|</code></td>
+<td>差异检测、运动检测</td>
+<td>结果始终为非负值</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="6-应用场景"><strong>6. 应用场景</strong></h3>
+<ol>
+<li><strong>图像增强</strong>：
+<ul>
+<li>通过加法或加权加法增强图像的亮度或对比度。</li>
+</ul>
+</li>
+<li><strong>背景去除</strong>：
+<ul>
+<li>通过减法或绝对值减法提取前景目标。</li>
+</ul>
+</li>
+<li><strong>图像融合</strong>：
+<ul>
+<li>将多幅图像融合成一幅图像。</li>
+</ul>
+</li>
+<li><strong>运动检测</strong>：
+<ul>
+<li>在视频中检测运动物体。</li>
+</ul>
+</li>
+<li><strong>差异分析</strong>：
+<ul>
+<li>比较两幅图像的差异，用于变化检测或缺陷检测。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>通过合理使用加减运算，可以实现许多图像处理任务，是图像处理中的基础操作之一。</p>
+<p>在图像处理中，<strong>乘除运算</strong> 是基本的像素级操作，用于对图像的像素值进行逐像素的乘法或除法运算。这些操作常用于图像增强、图像融合、颜色校正等任务。以下是乘除运算的详细总结：</p>
+<hr>
+<h3 id="1-乘法运算"><strong>1. 乘法运算</strong></h3>
+<h4 id="定义-4"><strong>定义</strong></h4>
+<p>乘法运算将两幅图像的对应像素值相乘，生成一幅新的图像。公式为：</p>
+<pre><code>结果图像 = 图像1 * 图像2
+</code></pre>
+<h4 id="作用-4"><strong>作用</strong></h4>
+<ol>
+<li><strong>图像融合</strong>：
+<ul>
+<li>通过乘法运算可以实现图像的混合效果。</li>
+</ul>
+</li>
+<li><strong>掩膜操作</strong>：
+<ul>
+<li>使用掩膜图像对目标图像进行局部增强或抑制。</li>
+</ul>
+</li>
+<li><strong>亮度调整</strong>：
+<ul>
+<li>通过将图像与一个常数相乘，可以调整图像的亮度。</li>
+</ul>
+</li>
+</ol>
+<h4 id="注意事项-2"><strong>注意事项</strong></h4>
+<ul>
+<li>如果像素值超过最大值（如 255 对于 8 位图像），需要进行 <strong>饱和处理</strong>（即取最大值）。</li>
+<li>OpenCV 中的乘法函数（如 <code>Cv2.Multiply()</code>）会自动处理溢出问题。</li>
+</ul>
+<h4 id="代码示例opencvsharp-4"><strong>代码示例（OpenCvSharp）</strong></h4>
+<pre><code class="lang-csharp">Mat img1 = Cv2.ImRead(&quot;image1.jpg&quot;, ImreadModes.Color);
+Mat img2 = Cv2.ImRead(&quot;image2.jpg&quot;, ImreadModes.Color);
+Mat result = new Mat();
+
+// 乘法运算
+Cv2.Multiply(img1, img2, result);
+
+// 显示结果
+Cv2.ImShow(&quot;Multiplication Result&quot;, result);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+<hr>
+<h3 id="2-除法运算"><strong>2. 除法运算</strong></h3>
+<h4 id="定义-5"><strong>定义</strong></h4>
+<p>除法运算将两幅图像的对应像素值相除，生成一幅新的图像。公式为：</p>
+<pre><code>结果图像 = 图像1 / 图像2
+</code></pre>
+<h4 id="作用-5"><strong>作用</strong></h4>
+<ol>
+<li><strong>图像归一化</strong>：
+<ul>
+<li>通过除法运算可以将图像归一化到特定范围。</li>
+</ul>
+</li>
+<li><strong>颜色校正</strong>：
+<ul>
+<li>在图像融合或颜色校正中，除法运算可以调整图像的亮度和对比度。</li>
+</ul>
+</li>
+<li><strong>图像恢复</strong>：
+<ul>
+<li>在去噪或图像恢复中，除法运算可以用于去除不均匀光照。</li>
+</ul>
+</li>
+</ol>
+<h4 id="注意事项-3"><strong>注意事项</strong></h4>
+<ul>
+<li>如果除数为 0，需要进行特殊处理（如将结果设置为 0 或最大值）。</li>
+<li>OpenCV 中的除法函数（如 <code>Cv2.Divide()</code>）会自动处理除零问题。</li>
+</ul>
+<h4 id="代码示例opencvsharp-5"><strong>代码示例（OpenCvSharp）</strong></h4>
+<pre><code class="lang-csharp">Mat img1 = Cv2.ImRead(&quot;image1.jpg&quot;, ImreadModes.Color);
+Mat img2 = Cv2.ImRead(&quot;image2.jpg&quot;, ImreadModes.Color);
+Mat result = new Mat();
+
+// 除法运算
+Cv2.Divide(img1, img2, result);
+
+// 显示结果
+Cv2.ImShow(&quot;Division Result&quot;, result);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+<hr>
+<h3 id="3-加权乘法"><strong>3. 加权乘法</strong></h3>
+<h4 id="定义-6"><strong>定义</strong></h4>
+<p>加权乘法是乘法运算的扩展，允许为每幅图像分配一个权重。公式为：</p>
+<pre><code>结果图像 = α * 图像1 * 图像2 + γ
+</code></pre>
+<p>其中，<code>α</code> 是权重，<code>γ</code> 是常数偏移量。</p>
+<h4 id="作用-6"><strong>作用</strong></h4>
+<ol>
+<li><strong>图像融合</strong>：
+<ul>
+<li>通过调整权重，可以控制两幅图像在结果中的比例。</li>
+</ul>
+</li>
+<li><strong>亮度调整</strong>：
+<ul>
+<li>实现图像的亮度调整效果。</li>
+</ul>
+</li>
+</ol>
+<h4 id="代码示例opencvsharp-6"><strong>代码示例（OpenCvSharp）</strong></h4>
+<pre><code class="lang-csharp">Mat img1 = Cv2.ImRead(&quot;image1.jpg&quot;, ImreadModes.Color);
+Mat img2 = Cv2.ImRead(&quot;image2.jpg&quot;, ImreadModes.Color);
+Mat result = new Mat();
+
+// 加权乘法
+double alpha = 0.5; // 权重
+double gamma = 0.0; // 常数偏移量
+Cv2.Multiply(img1, img2, result, alpha, gamma);
+
+// 显示结果
+Cv2.ImShow(&quot;Weighted Multiplication Result&quot;, result);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+<hr>
+<h3 id="4-加权除法"><strong>4. 加权除法</strong></h3>
+<h4 id="定义-7"><strong>定义</strong></h4>
+<p>加权除法是除法运算的扩展，允许为每幅图像分配一个权重。公式为：</p>
+<pre><code>结果图像 = α * 图像1 / 图像2 + γ
+</code></pre>
+<p>其中，<code>α</code> 是权重，<code>γ</code> 是常数偏移量。</p>
+<h4 id="作用-7"><strong>作用</strong></h4>
+<ol>
+<li><strong>图像归一化</strong>：
+<ul>
+<li>通过调整权重，可以将图像归一化到特定范围。</li>
+</ul>
+</li>
+<li><strong>颜色校正</strong>：
+<ul>
+<li>实现图像的亮度调整效果。</li>
+</ul>
+</li>
+</ol>
+<h4 id="代码示例opencvsharp-7"><strong>代码示例（OpenCvSharp）</strong></h4>
+<pre><code class="lang-csharp">Mat img1 = Cv2.ImRead(&quot;image1.jpg&quot;, ImreadModes.Color);
+Mat img2 = Cv2.ImRead(&quot;image2.jpg&quot;, ImreadModes.Color);
+Mat result = new Mat();
+
+// 加权除法
+double alpha = 0.5; // 权重
+double gamma = 0.0; // 常数偏移量
+Cv2.Divide(img1, img2, result, alpha, gamma);
+
+// 显示结果
+Cv2.ImShow(&quot;Weighted Division Result&quot;, result);
+Cv2.WaitKey(0);
+Cv2.DestroyAllWindows();
+</code></pre>
+<hr>
+<h3 id="5-总结-1"><strong>5. 总结</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>运算类型</strong></th>
+<th><strong>公式</strong></th>
+<th><strong>主要作用</strong></th>
+<th><strong>注意事项</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>乘法</strong></td>
+<td><code>图像1 * 图像2</code></td>
+<td>图像融合、亮度调整</td>
+<td>注意像素值溢出</td>
+</tr>
+<tr>
+<td><strong>除法</strong></td>
+<td><code>图像1 / 图像2</code></td>
+<td>图像归一化、颜色校正</td>
+<td>注意除零问题</td>
+</tr>
+<tr>
+<td><strong>加权乘法</strong></td>
+<td><code>α * 图像1 * 图像2 + γ</code></td>
+<td>图像融合、亮度调整</td>
+<td>权重和常数的选择</td>
+</tr>
+<tr>
+<td><strong>加权除法</strong></td>
+<td><code>α * 图像1 / 图像2 + γ</code></td>
+<td>图像归一化、颜色校正</td>
+<td>权重和常数的选择</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="6-应用场景-1"><strong>6. 应用场景</strong></h3>
+<ol>
+<li><strong>图像增强</strong>：
+<ul>
+<li>通过乘法或加权乘法增强图像的亮度或对比度。</li>
+</ul>
+</li>
+<li><strong>图像融合</strong>：
+<ul>
+<li>将多幅图像融合成一幅图像。</li>
+</ul>
+</li>
+<li><strong>颜色校正</strong>：
+<ul>
+<li>通过除法或加权除法调整图像的亮度和对比度。</li>
+</ul>
+</li>
+<li><strong>图像恢复</strong>：
+<ul>
+<li>在去噪或图像恢复中，除法运算可以用于去除不均匀光照。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>通过合理使用乘除运算，可以实现许多图像处理任务，是图像处理中的基础操作之一。</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

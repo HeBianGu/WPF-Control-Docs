@@ -111,7 +111,7 @@ Class ProjectService
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Mvvm.BindableBase.html">BindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html">BindableBase</a></div>
       <div><a class="xref" href="H.Modules.Project.ProjectServiceBase-1.html">ProjectServiceBase</a>&lt;<a class="xref" href="H.Modules.Project.ProjectItem.html">ProjectItem</a>&gt;</div>
       <div><span class="xref">ProjectService</span></div>
     </dd>
@@ -177,22 +177,19 @@ Class ProjectService
       <a class="xref" href="H.Modules.Project.ProjectServiceBase-1.html#H_Modules_Project_ProjectServiceBase_1_Load_System_String__">ProjectServiceBase&lt;ProjectItem&gt;.Load(out string)</a>
     </div>
     <div>
+      <a class="xref" href="H.Modules.Project.ProjectServiceBase-1.html#H_Modules_Project_ProjectServiceBase_1_LoadDefaultProjects">ProjectServiceBase&lt;ProjectItem&gt;.LoadDefaultProjects()</a>
+    </div>
+    <div>
       <a class="xref" href="H.Modules.Project.ProjectServiceBase-1.html#H_Modules_Project_ProjectServiceBase_1_Clear">ProjectServiceBase&lt;ProjectItem&gt;.Clear()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init">BindableBase.Init()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init">BindableBase.Init()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_">BindableBase.DispatcherRaisePropertyChanged(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged">BindableBase.OnDispatcherPropertyChanged()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -221,7 +218,16 @@ Class ProjectService
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Modules.Project.ProjectExtension.html#H_Modules_Project_ProjectExtension_ShowProjectsDialog_H_Services_Common_IProjectService_System_Action_H_Services_Common_IDialog__">ProjectExtension.ShowProjectsDialog(IProjectService, Action&lt;IDialog&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Modules.Project.ProjectExtension.html#H_Modules_Project_ProjectExtension_ShowProjectsOrNewDialog_H_Services_Common_IProjectService_">ProjectExtension.ShowProjectsOrNewDialog(IProjectService)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -231,6 +237,15 @@ Class ProjectService
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -249,6 +264,9 @@ Class ProjectService
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -283,7 +301,7 @@ Class ProjectService
 
   <a id="H_Modules_Project_ProjectService__ctor_" data-uid="H.Modules.Project.ProjectService.#ctor*"></a>
 
-  <h3 id="H_Modules_Project_ProjectService__ctor_Microsoft_Extensions_Options_IOptions_H_Modules_Login_ProjectOptions__" data-uid="H.Modules.Project.ProjectService.#ctor(Microsoft.Extensions.Options.IOptions{H.Modules.Login.ProjectOptions})">
+  <h3 id="H_Modules_Project_ProjectService__ctor_Microsoft_Extensions_Options_IOptions_H_Modules_Project_ProjectOptions__" data-uid="H.Modules.Project.ProjectService.#ctor(Microsoft.Extensions.Options.IOptions{H.Modules.Project.ProjectOptions})">
   ProjectService(IOptions&lt;ProjectOptions&gt;)
   
   </h3>
@@ -297,7 +315,7 @@ Class ProjectService
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;<a class="xref" href="H.Modules.Login.ProjectOptions.html">ProjectOptions</a>&gt;</dt>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;<a class="xref" href="H.Modules.Project.ProjectOptions.html">ProjectOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 

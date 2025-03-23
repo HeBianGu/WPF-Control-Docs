@@ -101,7 +101,8 @@ Class FormPresenter
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FormPresenter : DisplayBindableBase, INotifyPropertyChanged, IDable</code></pre>
+    <pre><code class="lang-csharp hljs">[Icon(&quot;&quot;)]
+public class FormPresenter : DisplayBindableBase, INotifyPropertyChanged, IDisplayBindable, IIconable, INameable, IOrderable, IGroupable, IDable, IDescriptionable, IFormOption</code></pre>
   </div>
 
 
@@ -111,8 +112,10 @@ Class FormPresenter
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Mvvm.BindableBase.html">BindableBase</a></div>
-      <div><a class="xref" href="H.Mvvm.DisplayBindableBase.html">DisplayBindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html">BindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html">Bindable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html">CommandsBindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html">DisplayBindableBase</a></div>
       <div><span class="xref">FormPresenter</span></div>
     </dd>
   </dl>
@@ -121,7 +124,14 @@ Class FormPresenter
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDisplayBindable.html">IDisplayBindable</a></div>
+      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Mvvm.IOrderable.html">IOrderable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IGroupable.html">IGroupable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
+      <div><a class="xref" href="H.Services.Common.IFormOption.html">IFormOption</a></div>
     </dd>
   </dl>
 
@@ -129,6 +139,7 @@ Class FormPresenter
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="H.Controls.Form.StaticFormPresenter.html">StaticFormPresenter</a></div>
+      <div><a class="xref" href="H.Controls.Form.TabFormPresenter.html">TabFormPresenter</a></div>
     </dd>
   </dl>
 
@@ -136,61 +147,70 @@ Class FormPresenter
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands">DisplayBindableBase.Commands</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands">DisplayBindableBase.CreateCommands()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand">DisplayBindableBase.LoadedCommand</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefaultCommand">DisplayBindableBase.LoadDefaultCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_Commands">CommandsBindableBase.Commands</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefaultCommand">DisplayBindableBase.LoadDefaultCommand</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_CreateCommands">CommandsBindableBase.CreateCommands()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayCommand">Bindable.RelayCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init">BindableBase.Init()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_LoadedCommand">Bindable.LoadedCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethodCommand">Bindable.CallMethodCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayMethod_System_Object_">Bindable.RelayMethod(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_">BindableBase.DispatcherRaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_GetTargetElement__1">Bindable.GetTargetElement&lt;T&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged">BindableBase.OnDispatcherPropertyChanged()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethod_System_Object_">Bindable.CallMethod(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init">BindableBase.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -219,6 +239,9 @@ Class FormPresenter
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -229,6 +252,15 @@ Class FormPresenter
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -247,6 +279,9 @@ Class FormPresenter
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -277,6 +312,32 @@ Class FormPresenter
 
   <h2 class="section" id="constructors">Constructors
 </h2>
+
+
+  <a id="H_Controls_Form_FormPresenter__ctor_" data-uid="H.Controls.Form.FormPresenter.#ctor*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter__ctor" data-uid="H.Controls.Form.FormPresenter.#ctor">
+  FormPresenter()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FormPresenter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
   <a id="H_Controls_Form_FormPresenter__ctor_" data-uid="H.Controls.Form.FormPresenter.#ctor*"></a>
@@ -314,6 +375,967 @@ Class FormPresenter
 </h2>
 
 
+  <a id="H_Controls_Form_FormPresenter_ExceptPropertyNames_" data-uid="H.Controls.Form.FormPresenter.ExceptPropertyNames*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_ExceptPropertyNames" data-uid="H.Controls.Form.FormPresenter.ExceptPropertyNames">
+  ExceptPropertyNames
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExceptPropertyNames { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_GroupOrderComparer_" data-uid="H.Controls.Form.FormPresenter.GroupOrderComparer*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_GroupOrderComparer" data-uid="H.Controls.Form.FormPresenter.GroupOrderComparer">
+  GroupOrderComparer
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IComparer&lt;string&gt; GroupOrderComparer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_HorizontalAlignment_" data-uid="H.Controls.Form.FormPresenter.HorizontalAlignment*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_HorizontalAlignment" data-uid="H.Controls.Form.FormPresenter.HorizontalAlignment">
+  HorizontalAlignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HorizontalAlignment HorizontalAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.horizontalalignment">HorizontalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_Margin_" data-uid="H.Controls.Form.FormPresenter.Margin*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_Margin" data-uid="H.Controls.Form.FormPresenter.Margin">
+  Margin
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Thickness Margin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_MessageWidth_" data-uid="H.Controls.Form.FormPresenter.MessageWidth*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_MessageWidth" data-uid="H.Controls.Form.FormPresenter.MessageWidth">
+  MessageWidth
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MessageWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_MinWidth_" data-uid="H.Controls.Form.FormPresenter.MinWidth*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_MinWidth" data-uid="H.Controls.Form.FormPresenter.MinWidth">
+  MinWidth
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MinWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_Padding_" data-uid="H.Controls.Form.FormPresenter.Padding*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_Padding" data-uid="H.Controls.Form.FormPresenter.Padding">
+  Padding
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Thickness Padding { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_SelectObject_" data-uid="H.Controls.Form.FormPresenter.SelectObject*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_SelectObject" data-uid="H.Controls.Form.FormPresenter.SelectObject">
+  SelectObject
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object SelectObject { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_Title_" data-uid="H.Controls.Form.FormPresenter.Title*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_Title" data-uid="H.Controls.Form.FormPresenter.Title">
+  Title
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_TitleWidth_" data-uid="H.Controls.Form.FormPresenter.TitleWidth*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_TitleWidth" data-uid="H.Controls.Form.FormPresenter.TitleWidth">
+  TitleWidth
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TitleWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseArray_" data-uid="H.Controls.Form.FormPresenter.UseArray*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseArray" data-uid="H.Controls.Form.FormPresenter.UseArray">
+  UseArray
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseArray { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseAsync_" data-uid="H.Controls.Form.FormPresenter.UseAsync*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseAsync" data-uid="H.Controls.Form.FormPresenter.UseAsync">
+  UseAsync
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseAsync { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseBoolen_" data-uid="H.Controls.Form.FormPresenter.UseBoolen*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseBoolen" data-uid="H.Controls.Form.FormPresenter.UseBoolen">
+  UseBoolen
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseBoolen { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseClass_" data-uid="H.Controls.Form.FormPresenter.UseClass*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseClass" data-uid="H.Controls.Form.FormPresenter.UseClass">
+  UseClass
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseCommand_" data-uid="H.Controls.Form.FormPresenter.UseCommand*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseCommand" data-uid="H.Controls.Form.FormPresenter.UseCommand">
+  UseCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseCommand { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseCommandOnly_" data-uid="H.Controls.Form.FormPresenter.UseCommandOnly*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseCommandOnly" data-uid="H.Controls.Form.FormPresenter.UseCommandOnly">
+  UseCommandOnly
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseCommandOnly { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseDateTime_" data-uid="H.Controls.Form.FormPresenter.UseDateTime*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseDateTime" data-uid="H.Controls.Form.FormPresenter.UseDateTime">
+  UseDateTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseDateTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseDeclaredOnly_" data-uid="H.Controls.Form.FormPresenter.UseDeclaredOnly*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseDeclaredOnly" data-uid="H.Controls.Form.FormPresenter.UseDeclaredOnly">
+  UseDeclaredOnly
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseDeclaredOnly { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseDisplayOnly_" data-uid="H.Controls.Form.FormPresenter.UseDisplayOnly*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseDisplayOnly" data-uid="H.Controls.Form.FormPresenter.UseDisplayOnly">
+  UseDisplayOnly
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseDisplayOnly { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseEnum_" data-uid="H.Controls.Form.FormPresenter.UseEnum*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseEnum" data-uid="H.Controls.Form.FormPresenter.UseEnum">
+  UseEnum
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseEnum { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseEnumerator_" data-uid="H.Controls.Form.FormPresenter.UseEnumerator*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseEnumerator" data-uid="H.Controls.Form.FormPresenter.UseEnumerator">
+  UseEnumerator
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseEnumerator { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseGroup_" data-uid="H.Controls.Form.FormPresenter.UseGroup*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseGroup" data-uid="H.Controls.Form.FormPresenter.UseGroup">
+  UseGroup
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseGroup { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseGroupNames_" data-uid="H.Controls.Form.FormPresenter.UseGroupNames*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseGroupNames" data-uid="H.Controls.Form.FormPresenter.UseGroupNames">
+  UseGroupNames
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UseGroupNames { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseInterface_" data-uid="H.Controls.Form.FormPresenter.UseInterface*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseInterface" data-uid="H.Controls.Form.FormPresenter.UseInterface">
+  UseInterface
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseInterface { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseNull_" data-uid="H.Controls.Form.FormPresenter.UseNull*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseNull" data-uid="H.Controls.Form.FormPresenter.UseNull">
+  UseNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseNull { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseOrder_" data-uid="H.Controls.Form.FormPresenter.UseOrder*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseOrder" data-uid="H.Controls.Form.FormPresenter.UseOrder">
+  UseOrder
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseOrder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseOrderByName_" data-uid="H.Controls.Form.FormPresenter.UseOrderByName*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseOrderByName" data-uid="H.Controls.Form.FormPresenter.UseOrderByName">
+  UseOrderByName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseOrderByName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseOrderByType_" data-uid="H.Controls.Form.FormPresenter.UseOrderByType*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseOrderByType" data-uid="H.Controls.Form.FormPresenter.UseOrderByType">
+  UseOrderByType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseOrderByType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UsePresenter_" data-uid="H.Controls.Form.FormPresenter.UsePresenter*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UsePresenter" data-uid="H.Controls.Form.FormPresenter.UsePresenter">
+  UsePresenter
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UsePresenter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UsePrimitive_" data-uid="H.Controls.Form.FormPresenter.UsePrimitive*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UsePrimitive" data-uid="H.Controls.Form.FormPresenter.UsePrimitive">
+  UsePrimitive
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UsePrimitive { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UsePropertyNames_" data-uid="H.Controls.Form.FormPresenter.UsePropertyNames*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UsePropertyNames" data-uid="H.Controls.Form.FormPresenter.UsePropertyNames">
+  UsePropertyNames
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UsePropertyNames { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="H_Controls_Form_FormPresenter_UsePropertyView_" data-uid="H.Controls.Form.FormPresenter.UsePropertyView*"></a>
 
   <h3 id="H_Controls_Form_FormPresenter_UsePropertyView" data-uid="H.Controls.Form.FormPresenter.UsePropertyView">
@@ -345,10 +1367,10 @@ Class FormPresenter
 
 
 
-  <a id="H_Controls_Form_FormPresenter_Value_" data-uid="H.Controls.Form.FormPresenter.Value*"></a>
+  <a id="H_Controls_Form_FormPresenter_UseString_" data-uid="H.Controls.Form.FormPresenter.UseString*"></a>
 
-  <h3 id="H_Controls_Form_FormPresenter_Value" data-uid="H.Controls.Form.FormPresenter.Value">
-  Value
+  <h3 id="H_Controls_Form_FormPresenter_UseString" data-uid="H.Controls.Form.FormPresenter.UseString">
+  UseString
   
   </h3>
 
@@ -356,7 +1378,7 @@ Class FormPresenter
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object Value { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool UseString { get; set; }</code></pre>
   </div>
 
 
@@ -365,7 +1387,131 @@ Class FormPresenter
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseTypeConverter_" data-uid="H.Controls.Form.FormPresenter.UseTypeConverter*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseTypeConverter" data-uid="H.Controls.Form.FormPresenter.UseTypeConverter">
+  UseTypeConverter
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseTypeConverter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_UseTypeConverterOnly_" data-uid="H.Controls.Form.FormPresenter.UseTypeConverterOnly*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_UseTypeConverterOnly" data-uid="H.Controls.Form.FormPresenter.UseTypeConverterOnly">
+  UseTypeConverterOnly
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseTypeConverterOnly { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_VerticalAlignment_" data-uid="H.Controls.Form.FormPresenter.VerticalAlignment*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_VerticalAlignment" data-uid="H.Controls.Form.FormPresenter.VerticalAlignment">
+  VerticalAlignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VerticalAlignment VerticalAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.verticalalignment">VerticalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Controls_Form_FormPresenter_Width_" data-uid="H.Controls.Form.FormPresenter.Width*"></a>
+
+  <h3 id="H_Controls_Form_FormPresenter_Width" data-uid="H.Controls.Form.FormPresenter.Width">
+  Width
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Width { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd></dd>
   </dl>
 

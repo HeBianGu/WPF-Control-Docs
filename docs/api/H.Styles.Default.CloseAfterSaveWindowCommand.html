@@ -101,7 +101,9 @@ Class CloseAfterSaveWindowCommand
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CloseAfterSaveWindowCommand : CloseWindowCommand, INotifyPropertyChanged, ICommand</code></pre>
+    <pre><code class="lang-csharp hljs">[Icon(&quot;&quot;)]
+[Display(Name = &quot;关闭并保存&quot;, Description = &quot;关闭应用程序并保存应用数据&quot;)]
+public class CloseAfterSaveWindowCommand : CloseWindowCommand, INotifyPropertyChanged, IIconable, INameable, IDescriptionable, ICommand</code></pre>
   </div>
 
 
@@ -114,6 +116,7 @@ Class CloseAfterSaveWindowCommand
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.markupextension">MarkupExtension</a></div>
       <div><a class="xref" href="H.Mvvm.MarkupCommandBase.html">MarkupCommandBase</a></div>
       <div><a class="xref" href="H.Mvvm.AsyncMarkupCommandBase.html">AsyncMarkupCommandBase</a></div>
+      <div><a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html">DisplayMarkupCommandBase</a></div>
       <div><a class="xref" href="H.Styles.Default.WindowCommandBase.html">WindowCommandBase</a></div>
       <div><a class="xref" href="H.Styles.Default.CloseWindowCommand.html">CloseWindowCommand</a></div>
       <div><span class="xref">CloseAfterSaveWindowCommand</span></div>
@@ -124,6 +127,9 @@ Class CloseAfterSaveWindowCommand
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand">ICommand</a></div>
     </dd>
   </dl>
@@ -145,13 +151,25 @@ Class CloseAfterSaveWindowCommand
       <a class="xref" href="H.Styles.Default.WindowCommandBase.html#H_Styles_Default_WindowCommandBase_CanExecute_System_Object_">WindowCommandBase.CanExecute(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.AsyncMarkupCommandBase.html#H_Mvvm_AsyncMarkupCommandBase_IsExecuting">AsyncMarkupCommandBase.IsExecuting</a>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Name">DisplayMarkupCommandBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Icon">DisplayMarkupCommandBase.Icon</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.DisplayMarkupCommandBase.html#H_Mvvm_DisplayMarkupCommandBase_Description">DisplayMarkupCommandBase.Description</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.AsyncMarkupCommandBase.html#H_Mvvm_AsyncMarkupCommandBase_Execute_System_Object_">AsyncMarkupCommandBase.Execute(object)</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_CanExecuteChanged">MarkupCommandBase.CanExecuteChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_GetTargetElement_System_Object_">MarkupCommandBase.GetTargetElement(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_Target">MarkupCommandBase.Target</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.MarkupCommandBase.html#H_Mvvm_MarkupCommandBase_ProvideValue_System_IServiceProvider_">MarkupCommandBase.ProvideValue(IServiceProvider)</a>
@@ -189,6 +207,9 @@ Class CloseAfterSaveWindowCommand
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -199,6 +220,15 @@ Class CloseAfterSaveWindowCommand
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -217,6 +247,9 @@ Class CloseAfterSaveWindowCommand
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>

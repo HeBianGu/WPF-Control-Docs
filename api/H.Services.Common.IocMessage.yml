@@ -8,6 +8,8 @@ items:
   - H.Services.Common.IocMessage.Adorner
   - H.Services.Common.IocMessage.Dialog
   - H.Services.Common.IocMessage.Form
+  - H.Services.Common.IocMessage.IOFileDialog
+  - H.Services.Common.IocMessage.IOFolderDialog
   - H.Services.Common.IocMessage.Notify
   - H.Services.Common.IocMessage.ShowDialog(System.Object,System.Action{H.Services.Common.IDialog})
   - H.Services.Common.IocMessage.ShowDialogMessage(System.String,System.String,H.Services.Common.DialogButton)
@@ -244,6 +246,56 @@ items:
       type: H.Services.Common.IFormMessageService
     content.vb: Public Shared ReadOnly Property Form As IFormMessageService
   overload: H.Services.Common.IocMessage.Form*
+- uid: H.Services.Common.IocMessage.IOFileDialog
+  commentId: P:H.Services.Common.IocMessage.IOFileDialog
+  id: IOFileDialog
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: IOFileDialog
+  nameWithType: IocMessage.IOFileDialog
+  fullName: H.Services.Common.IocMessage.IOFileDialog
+  type: Property
+  source:
+    id: IOFileDialog
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 15
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static IIOFileDialogService IOFileDialog { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.IIOFileDialogService
+    content.vb: Public Shared ReadOnly Property IOFileDialog As IIOFileDialogService
+  overload: H.Services.Common.IocMessage.IOFileDialog*
+- uid: H.Services.Common.IocMessage.IOFolderDialog
+  commentId: P:H.Services.Common.IocMessage.IOFolderDialog
+  id: IOFolderDialog
+  parent: H.Services.Common.IocMessage
+  langs:
+  - csharp
+  - vb
+  name: IOFolderDialog
+  nameWithType: IocMessage.IOFolderDialog
+  fullName: H.Services.Common.IocMessage.IOFolderDialog
+  type: Property
+  source:
+    id: IOFolderDialog
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
+    startLine: 17
+  assemblies:
+  - H.Services.Common
+  namespace: H.Services.Common
+  syntax:
+    content: public static IIOFolderDialogService IOFolderDialog { get; }
+    parameters: []
+    return:
+      type: H.Services.Common.IIOFolderDialogService
+    content.vb: Public Shared ReadOnly Property IOFolderDialog As IIOFolderDialogService
+  overload: H.Services.Common.IocMessage.IOFolderDialog*
 - uid: H.Services.Common.IocMessage.ShowDialogMessage(System.String,System.String,H.Services.Common.DialogButton)
   commentId: M:H.Services.Common.IocMessage.ShowDialogMessage(System.String,System.String,H.Services.Common.DialogButton)
   id: ShowDialogMessage(System.String,System.String,H.Services.Common.DialogButton)
@@ -258,7 +310,7 @@ items:
   source:
     id: ShowDialogMessage
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
@@ -292,7 +344,7 @@ items:
   source:
     id: ShowDialog
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
-    startLine: 52
+    startLine: 56
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
@@ -324,7 +376,7 @@ items:
   source:
     id: ShowWindowMessage
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
-    startLine: 71
+    startLine: 83
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
@@ -358,7 +410,7 @@ items:
   source:
     id: ShowSnackMessage
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Services\H.Services.Common\Message\IocMessage.cs
-    startLine: 96
+    startLine: 108
   assemblies:
   - H.Services.Common
   namespace: H.Services.Common
@@ -743,6 +795,32 @@ references:
   name: IFormMessageService
   nameWithType: IFormMessageService
   fullName: H.Services.Common.IFormMessageService
+- uid: H.Services.Common.IocMessage.IOFileDialog*
+  commentId: Overload:H.Services.Common.IocMessage.IOFileDialog
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_IOFileDialog
+  name: IOFileDialog
+  nameWithType: IocMessage.IOFileDialog
+  fullName: H.Services.Common.IocMessage.IOFileDialog
+- uid: H.Services.Common.IIOFileDialogService
+  commentId: T:H.Services.Common.IIOFileDialogService
+  parent: H.Services.Common
+  href: H.Services.Common.IIOFileDialogService.html
+  name: IIOFileDialogService
+  nameWithType: IIOFileDialogService
+  fullName: H.Services.Common.IIOFileDialogService
+- uid: H.Services.Common.IocMessage.IOFolderDialog*
+  commentId: Overload:H.Services.Common.IocMessage.IOFolderDialog
+  href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_IOFolderDialog
+  name: IOFolderDialog
+  nameWithType: IocMessage.IOFolderDialog
+  fullName: H.Services.Common.IocMessage.IOFolderDialog
+- uid: H.Services.Common.IIOFolderDialogService
+  commentId: T:H.Services.Common.IIOFolderDialogService
+  parent: H.Services.Common
+  href: H.Services.Common.IIOFolderDialogService.html
+  name: IIOFolderDialogService
+  nameWithType: IIOFolderDialogService
+  fullName: H.Services.Common.IIOFolderDialogService
 - uid: H.Services.Common.IocMessage.ShowDialogMessage*
   commentId: Overload:H.Services.Common.IocMessage.ShowDialogMessage
   href: H.Services.Common.IocMessage.html#H_Services_Common_IocMessage_ShowDialogMessage_System_String_System_String_H_Services_Common_DialogButton_

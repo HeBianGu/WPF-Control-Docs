@@ -14,7 +14,9 @@ items:
   - H.Services.Serializable.IocSerializer
   - H.Services.Serializable.IocXmlWebSerializer
   - H.Services.Serializable.JsonCloneService
-  - H.Services.Serializable.JsonSerializerService
+  - H.Services.Serializable.SerializerServiceExtensions
+  - H.Services.Serializable.TextJsonOptions
+  - H.Services.Serializable.TextJsonSerializerService
   - H.Services.Serializable.TypeConverterJsonConverter
   - H.Services.Serializable.XmlWebSerializerService
   langs:
@@ -54,6 +56,13 @@ references:
   name: ISerializerService
   nameWithType: ISerializerService
   fullName: H.Services.Serializable.ISerializerService
+- uid: H.Services.Serializable.SerializerServiceExtensions
+  commentId: T:H.Services.Serializable.SerializerServiceExtensions
+  parent: H.Services.Serializable
+  href: H.Services.Serializable.SerializerServiceExtensions.html
+  name: SerializerServiceExtensions
+  nameWithType: SerializerServiceExtensions
+  fullName: H.Services.Serializable.SerializerServiceExtensions
 - uid: H.Services.Serializable.IXmlable
   commentId: T:H.Services.Serializable.IXmlable
   parent: H.Services.Serializable
@@ -73,12 +82,18 @@ references:
   name: JsonCloneService
   nameWithType: JsonCloneService
   fullName: H.Services.Serializable.JsonCloneService
-- uid: H.Services.Serializable.JsonSerializerService
-  commentId: T:H.Services.Serializable.JsonSerializerService
-  href: H.Services.Serializable.JsonSerializerService.html
-  name: JsonSerializerService
-  nameWithType: JsonSerializerService
-  fullName: H.Services.Serializable.JsonSerializerService
+- uid: H.Services.Serializable.TextJsonOptions
+  commentId: T:H.Services.Serializable.TextJsonOptions
+  href: H.Services.Serializable.TextJsonOptions.html
+  name: TextJsonOptions
+  nameWithType: TextJsonOptions
+  fullName: H.Services.Serializable.TextJsonOptions
+- uid: H.Services.Serializable.TextJsonSerializerService
+  commentId: T:H.Services.Serializable.TextJsonSerializerService
+  href: H.Services.Serializable.TextJsonSerializerService.html
+  name: TextJsonSerializerService
+  nameWithType: TextJsonSerializerService
+  fullName: H.Services.Serializable.TextJsonSerializerService
 - uid: H.Services.Serializable.TypeConverterJsonConverter
   commentId: T:H.Services.Serializable.TypeConverterJsonConverter
   href: H.Services.Serializable.TypeConverterJsonConverter.html

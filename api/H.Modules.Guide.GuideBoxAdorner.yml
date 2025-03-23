@@ -5,7 +5,7 @@ items:
   id: GuideBoxAdorner
   parent: H.Modules.Guide
   children:
-  - H.Modules.Guide.GuideBoxAdorner.#ctor(System.Windows.UIElement,System.Action)
+  - H.Modules.Guide.GuideBoxAdorner.#ctor(System.Windows.UIElement,System.Action,System.Predicate{System.Windows.UIElement})
   - H.Modules.Guide.GuideBoxAdorner.ArrangeOverride(System.Windows.Size)
   - H.Modules.Guide.GuideBoxAdorner.MeasureOverride(System.Windows.Size)
   langs:
@@ -33,8 +33,8 @@ items:
   - System.Windows.UIElement
   - System.Windows.FrameworkElement
   - System.Windows.Documents.Adorner
-  - H.Controls.Adorner.AdornerBase
-  - H.Controls.Adorner.VisualCollectionAdornerBase
+  - H.Controls.Adorner.Adorner.Base.AdornerBase
+  - H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase
   implements:
   - System.Windows.Media.Animation.IAnimatable
   - System.ComponentModel.ISupportInitialize
@@ -42,17 +42,17 @@ items:
   - System.Windows.IInputElement
   - System.Windows.Markup.IQueryAmbient
   inheritedMembers:
-  - H.Controls.Adorner.VisualCollectionAdornerBase._visualCollection
-  - H.Controls.Adorner.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
-  - H.Controls.Adorner.VisualCollectionAdornerBase.VisualChildrenCount
-  - H.Controls.Adorner.AdornerBase.GetPen(System.Windows.DependencyObject)
-  - H.Controls.Adorner.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
-  - H.Controls.Adorner.AdornerBase.PenProperty
-  - H.Controls.Adorner.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  - H.Controls.Adorner.AdornerBase.GetFill(System.Windows.DependencyObject)
-  - H.Controls.Adorner.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
-  - H.Controls.Adorner.AdornerBase.FillProperty
-  - H.Controls.Adorner.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase._visualCollection
+  - H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
+  - H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.VisualChildrenCount
+  - H.Controls.Adorner.Adorner.Base.AdornerBase.GetPen(System.Windows.DependencyObject)
+  - H.Controls.Adorner.Adorner.Base.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
+  - H.Controls.Adorner.Adorner.Base.AdornerBase.PenProperty
+  - H.Controls.Adorner.Adorner.Base.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - H.Controls.Adorner.Adorner.Base.AdornerBase.GetFill(System.Windows.DependencyObject)
+  - H.Controls.Adorner.Adorner.Base.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
+  - H.Controls.Adorner.Adorner.Base.AdornerBase.FillProperty
+  - H.Controls.Adorner.Adorner.Base.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - System.Windows.Documents.Adorner.GetDesiredTransform(System.Windows.Media.GeneralTransform)
   - System.Windows.Documents.Adorner.GetLayoutClip(System.Windows.Size)
   - System.Windows.Documents.Adorner.AdornedElement
@@ -619,16 +619,21 @@ items:
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
+  - H.Modules.Guide.GuideBoxAdorner.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
   - H.Modules.Guide.GuideBoxAdorner.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -646,16 +651,17 @@ items:
   - System.Windows.DependencyObject.H.Controls.FilterColumnDataGrid.VisualTreeHelpers.TryFindParent``1
   - System.Windows.DependencyObject.H.Windows.Ribbon.VisualTreeExtention.GetParent``1
   - System.Windows.UIElement.H.Controls.OutlookBar.PopupHelper.IsLogicalAncestorOf(System.Windows.UIElement)
-- uid: H.Modules.Guide.GuideBoxAdorner.#ctor(System.Windows.UIElement,System.Action)
-  commentId: M:H.Modules.Guide.GuideBoxAdorner.#ctor(System.Windows.UIElement,System.Action)
-  id: '#ctor(System.Windows.UIElement,System.Action)'
+  - System.Windows.UIElement.H.Modules.Guide.GuideExtension.GetGuideTree(System.Predicate{System.Windows.UIElement})
+- uid: H.Modules.Guide.GuideBoxAdorner.#ctor(System.Windows.UIElement,System.Action,System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideBoxAdorner.#ctor(System.Windows.UIElement,System.Action,System.Predicate{System.Windows.UIElement})
+  id: '#ctor(System.Windows.UIElement,System.Action,System.Predicate{System.Windows.UIElement})'
   parent: H.Modules.Guide.GuideBoxAdorner
   langs:
   - csharp
   - vb
-  name: GuideBoxAdorner(UIElement, Action)
-  nameWithType: GuideBoxAdorner.GuideBoxAdorner(UIElement, Action)
-  fullName: H.Modules.Guide.GuideBoxAdorner.GuideBoxAdorner(System.Windows.UIElement, System.Action)
+  name: GuideBoxAdorner(UIElement, Action, Predicate<UIElement>)
+  nameWithType: GuideBoxAdorner.GuideBoxAdorner(UIElement, Action, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideBoxAdorner.GuideBoxAdorner(System.Windows.UIElement, System.Action, System.Predicate<System.Windows.UIElement>)
   type: Constructor
   source:
     id: .ctor
@@ -665,17 +671,19 @@ items:
   - H.Modules.Guide
   namespace: H.Modules.Guide
   syntax:
-    content: public GuideBoxAdorner(UIElement adornedElement, Action close)
+    content: public GuideBoxAdorner(UIElement adornedElement, Action close, Predicate<UIElement> predicate = null)
     parameters:
     - id: adornedElement
       type: System.Windows.UIElement
     - id: close
       type: System.Action
-    content.vb: Public Sub New(adornedElement As UIElement, close As Action)
+    - id: predicate
+      type: System.Predicate{System.Windows.UIElement}
+    content.vb: Public Sub New(adornedElement As UIElement, close As Action, predicate As Predicate(Of UIElement) = Nothing)
   overload: H.Modules.Guide.GuideBoxAdorner.#ctor*
-  nameWithType.vb: GuideBoxAdorner.New(UIElement, Action)
-  fullName.vb: H.Modules.Guide.GuideBoxAdorner.New(System.Windows.UIElement, System.Action)
-  name.vb: New(UIElement, Action)
+  nameWithType.vb: GuideBoxAdorner.New(UIElement, Action, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideBoxAdorner.New(System.Windows.UIElement, System.Action, System.Predicate(Of System.Windows.UIElement))
+  name.vb: New(UIElement, Action, Predicate(Of UIElement))
 - uid: H.Modules.Guide.GuideBoxAdorner.MeasureOverride(System.Windows.Size)
   commentId: M:H.Modules.Guide.GuideBoxAdorner.MeasureOverride(System.Windows.Size)
   id: MeasureOverride(System.Windows.Size)
@@ -830,20 +838,20 @@ references:
   name: Adorner
   nameWithType: Adorner
   fullName: System.Windows.Documents.Adorner
-- uid: H.Controls.Adorner.AdornerBase
-  commentId: T:H.Controls.Adorner.AdornerBase
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.AdornerBase.html
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase
+  commentId: T:H.Controls.Adorner.Adorner.Base.AdornerBase
+  parent: H.Controls.Adorner.Adorner.Base
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html
   name: AdornerBase
   nameWithType: AdornerBase
-  fullName: H.Controls.Adorner.AdornerBase
-- uid: H.Controls.Adorner.VisualCollectionAdornerBase
-  commentId: T:H.Controls.Adorner.VisualCollectionAdornerBase
-  parent: H.Controls.Adorner
-  href: H.Controls.Adorner.VisualCollectionAdornerBase.html
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase
+- uid: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase
+  commentId: T:H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase
+  parent: H.Controls.Adorner.Adorner.Base
+  href: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.html
   name: VisualCollectionAdornerBase
   nameWithType: VisualCollectionAdornerBase
-  fullName: H.Controls.Adorner.VisualCollectionAdornerBase
+  fullName: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase
 - uid: System.Windows.Media.Animation.IAnimatable
   commentId: T:System.Windows.Media.Animation.IAnimatable
   parent: System.Windows.Media.Animation
@@ -884,28 +892,28 @@ references:
   name: IQueryAmbient
   nameWithType: IQueryAmbient
   fullName: System.Windows.Markup.IQueryAmbient
-- uid: H.Controls.Adorner.VisualCollectionAdornerBase._visualCollection
-  commentId: F:H.Controls.Adorner.VisualCollectionAdornerBase._visualCollection
-  parent: H.Controls.Adorner.VisualCollectionAdornerBase
-  href: H.Controls.Adorner.VisualCollectionAdornerBase.html#H_Controls_Adorner_VisualCollectionAdornerBase__visualCollection
+- uid: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase._visualCollection
+  commentId: F:H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase._visualCollection
+  parent: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase
+  href: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.html#H_Controls_Adorner_Adorner_Base_VisualCollectionAdornerBase__visualCollection
   name: _visualCollection
   nameWithType: VisualCollectionAdornerBase._visualCollection
-  fullName: H.Controls.Adorner.VisualCollectionAdornerBase._visualCollection
-- uid: H.Controls.Adorner.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
-  commentId: M:H.Controls.Adorner.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
-  parent: H.Controls.Adorner.VisualCollectionAdornerBase
+  fullName: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase._visualCollection
+- uid: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
+  commentId: M:H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
+  parent: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase
   isExternal: true
-  href: H.Controls.Adorner.VisualCollectionAdornerBase.html#H_Controls_Adorner_VisualCollectionAdornerBase_GetVisualChild_System_Int32_
+  href: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.html#H_Controls_Adorner_Adorner_Base_VisualCollectionAdornerBase_GetVisualChild_System_Int32_
   name: GetVisualChild(int)
   nameWithType: VisualCollectionAdornerBase.GetVisualChild(int)
-  fullName: H.Controls.Adorner.VisualCollectionAdornerBase.GetVisualChild(int)
+  fullName: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.GetVisualChild(int)
   nameWithType.vb: VisualCollectionAdornerBase.GetVisualChild(Integer)
-  fullName.vb: H.Controls.Adorner.VisualCollectionAdornerBase.GetVisualChild(Integer)
+  fullName.vb: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.GetVisualChild(Integer)
   name.vb: GetVisualChild(Integer)
   spec.csharp:
-  - uid: H.Controls.Adorner.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
+  - uid: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
     name: GetVisualChild
-    href: H.Controls.Adorner.VisualCollectionAdornerBase.html#H_Controls_Adorner_VisualCollectionAdornerBase_GetVisualChild_System_Int32_
+    href: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.html#H_Controls_Adorner_Adorner_Base_VisualCollectionAdornerBase_GetVisualChild_System_Int32_
   - name: (
   - uid: System.Int32
     name: int
@@ -913,34 +921,34 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
-  - uid: H.Controls.Adorner.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
+  - uid: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.GetVisualChild(System.Int32)
     name: GetVisualChild
-    href: H.Controls.Adorner.VisualCollectionAdornerBase.html#H_Controls_Adorner_VisualCollectionAdornerBase_GetVisualChild_System_Int32_
+    href: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.html#H_Controls_Adorner_Adorner_Base_VisualCollectionAdornerBase_GetVisualChild_System_Int32_
   - name: (
   - uid: System.Int32
     name: Integer
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: H.Controls.Adorner.VisualCollectionAdornerBase.VisualChildrenCount
-  commentId: P:H.Controls.Adorner.VisualCollectionAdornerBase.VisualChildrenCount
-  parent: H.Controls.Adorner.VisualCollectionAdornerBase
-  href: H.Controls.Adorner.VisualCollectionAdornerBase.html#H_Controls_Adorner_VisualCollectionAdornerBase_VisualChildrenCount
+- uid: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.VisualChildrenCount
+  commentId: P:H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.VisualChildrenCount
+  parent: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase
+  href: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.html#H_Controls_Adorner_Adorner_Base_VisualCollectionAdornerBase_VisualChildrenCount
   name: VisualChildrenCount
   nameWithType: VisualCollectionAdornerBase.VisualChildrenCount
-  fullName: H.Controls.Adorner.VisualCollectionAdornerBase.VisualChildrenCount
-- uid: H.Controls.Adorner.AdornerBase.GetPen(System.Windows.DependencyObject)
-  commentId: M:H.Controls.Adorner.AdornerBase.GetPen(System.Windows.DependencyObject)
-  parent: H.Controls.Adorner.AdornerBase
+  fullName: H.Controls.Adorner.Adorner.Base.VisualCollectionAdornerBase.VisualChildrenCount
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase.GetPen(System.Windows.DependencyObject)
+  commentId: M:H.Controls.Adorner.Adorner.Base.AdornerBase.GetPen(System.Windows.DependencyObject)
+  parent: H.Controls.Adorner.Adorner.Base.AdornerBase
   isExternal: true
-  href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_GetPen_System_Windows_DependencyObject_
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_GetPen_System_Windows_DependencyObject_
   name: GetPen(DependencyObject)
   nameWithType: AdornerBase.GetPen(DependencyObject)
-  fullName: H.Controls.Adorner.AdornerBase.GetPen(System.Windows.DependencyObject)
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase.GetPen(System.Windows.DependencyObject)
   spec.csharp:
-  - uid: H.Controls.Adorner.AdornerBase.GetPen(System.Windows.DependencyObject)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.GetPen(System.Windows.DependencyObject)
     name: GetPen
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_GetPen_System_Windows_DependencyObject_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_GetPen_System_Windows_DependencyObject_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -948,27 +956,27 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject
   - name: )
   spec.vb:
-  - uid: H.Controls.Adorner.AdornerBase.GetPen(System.Windows.DependencyObject)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.GetPen(System.Windows.DependencyObject)
     name: GetPen
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_GetPen_System_Windows_DependencyObject_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_GetPen_System_Windows_DependencyObject_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject
   - name: )
-- uid: H.Controls.Adorner.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
-  commentId: M:H.Controls.Adorner.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
-  parent: H.Controls.Adorner.AdornerBase
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
+  commentId: M:H.Controls.Adorner.Adorner.Base.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
+  parent: H.Controls.Adorner.Adorner.Base.AdornerBase
   isExternal: true
-  href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_SetPen_System_Windows_DependencyObject_System_Windows_Media_Pen_
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_SetPen_System_Windows_DependencyObject_System_Windows_Media_Pen_
   name: SetPen(DependencyObject, Pen)
   nameWithType: AdornerBase.SetPen(DependencyObject, Pen)
-  fullName: H.Controls.Adorner.AdornerBase.SetPen(System.Windows.DependencyObject, System.Windows.Media.Pen)
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase.SetPen(System.Windows.DependencyObject, System.Windows.Media.Pen)
   spec.csharp:
-  - uid: H.Controls.Adorner.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
     name: SetPen
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_SetPen_System_Windows_DependencyObject_System_Windows_Media_Pen_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_SetPen_System_Windows_DependencyObject_System_Windows_Media_Pen_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -982,9 +990,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.media.pen
   - name: )
   spec.vb:
-  - uid: H.Controls.Adorner.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.SetPen(System.Windows.DependencyObject,System.Windows.Media.Pen)
     name: SetPen
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_SetPen_System_Windows_DependencyObject_System_Windows_Media_Pen_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_SetPen_System_Windows_DependencyObject_System_Windows_Media_Pen_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -997,25 +1005,25 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.media.pen
   - name: )
-- uid: H.Controls.Adorner.AdornerBase.PenProperty
-  commentId: F:H.Controls.Adorner.AdornerBase.PenProperty
-  parent: H.Controls.Adorner.AdornerBase
-  href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_PenProperty
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase.PenProperty
+  commentId: F:H.Controls.Adorner.Adorner.Base.AdornerBase.PenProperty
+  parent: H.Controls.Adorner.Adorner.Base.AdornerBase
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_PenProperty
   name: PenProperty
   nameWithType: AdornerBase.PenProperty
-  fullName: H.Controls.Adorner.AdornerBase.PenProperty
-- uid: H.Controls.Adorner.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  commentId: M:H.Controls.Adorner.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  parent: H.Controls.Adorner.AdornerBase
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase.PenProperty
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  commentId: M:H.Controls.Adorner.Adorner.Base.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  parent: H.Controls.Adorner.Adorner.Base.AdornerBase
   isExternal: true
-  href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_OnPenChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_OnPenChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
   name: OnPenChanged(DependencyObject, DependencyPropertyChangedEventArgs)
   nameWithType: AdornerBase.OnPenChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  fullName: H.Controls.Adorner.AdornerBase.OnPenChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase.OnPenChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
   spec.csharp:
-  - uid: H.Controls.Adorner.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
     name: OnPenChanged
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_OnPenChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_OnPenChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -1029,9 +1037,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.dependencypropertychangedeventargs
   - name: )
   spec.vb:
-  - uid: H.Controls.Adorner.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.OnPenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
     name: OnPenChanged
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_OnPenChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_OnPenChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -1044,18 +1052,18 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.dependencypropertychangedeventargs
   - name: )
-- uid: H.Controls.Adorner.AdornerBase.GetFill(System.Windows.DependencyObject)
-  commentId: M:H.Controls.Adorner.AdornerBase.GetFill(System.Windows.DependencyObject)
-  parent: H.Controls.Adorner.AdornerBase
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase.GetFill(System.Windows.DependencyObject)
+  commentId: M:H.Controls.Adorner.Adorner.Base.AdornerBase.GetFill(System.Windows.DependencyObject)
+  parent: H.Controls.Adorner.Adorner.Base.AdornerBase
   isExternal: true
-  href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_GetFill_System_Windows_DependencyObject_
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_GetFill_System_Windows_DependencyObject_
   name: GetFill(DependencyObject)
   nameWithType: AdornerBase.GetFill(DependencyObject)
-  fullName: H.Controls.Adorner.AdornerBase.GetFill(System.Windows.DependencyObject)
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase.GetFill(System.Windows.DependencyObject)
   spec.csharp:
-  - uid: H.Controls.Adorner.AdornerBase.GetFill(System.Windows.DependencyObject)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.GetFill(System.Windows.DependencyObject)
     name: GetFill
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_GetFill_System_Windows_DependencyObject_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_GetFill_System_Windows_DependencyObject_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -1063,27 +1071,27 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject
   - name: )
   spec.vb:
-  - uid: H.Controls.Adorner.AdornerBase.GetFill(System.Windows.DependencyObject)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.GetFill(System.Windows.DependencyObject)
     name: GetFill
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_GetFill_System_Windows_DependencyObject_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_GetFill_System_Windows_DependencyObject_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject
   - name: )
-- uid: H.Controls.Adorner.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
-  commentId: M:H.Controls.Adorner.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
-  parent: H.Controls.Adorner.AdornerBase
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
+  commentId: M:H.Controls.Adorner.Adorner.Base.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
+  parent: H.Controls.Adorner.Adorner.Base.AdornerBase
   isExternal: true
-  href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_SetFill_System_Windows_DependencyObject_System_Windows_Media_Brush_
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_SetFill_System_Windows_DependencyObject_System_Windows_Media_Brush_
   name: SetFill(DependencyObject, Brush)
   nameWithType: AdornerBase.SetFill(DependencyObject, Brush)
-  fullName: H.Controls.Adorner.AdornerBase.SetFill(System.Windows.DependencyObject, System.Windows.Media.Brush)
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase.SetFill(System.Windows.DependencyObject, System.Windows.Media.Brush)
   spec.csharp:
-  - uid: H.Controls.Adorner.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
     name: SetFill
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_SetFill_System_Windows_DependencyObject_System_Windows_Media_Brush_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_SetFill_System_Windows_DependencyObject_System_Windows_Media_Brush_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -1097,9 +1105,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.media.brush
   - name: )
   spec.vb:
-  - uid: H.Controls.Adorner.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.SetFill(System.Windows.DependencyObject,System.Windows.Media.Brush)
     name: SetFill
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_SetFill_System_Windows_DependencyObject_System_Windows_Media_Brush_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_SetFill_System_Windows_DependencyObject_System_Windows_Media_Brush_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -1112,25 +1120,25 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.media.brush
   - name: )
-- uid: H.Controls.Adorner.AdornerBase.FillProperty
-  commentId: F:H.Controls.Adorner.AdornerBase.FillProperty
-  parent: H.Controls.Adorner.AdornerBase
-  href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_FillProperty
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase.FillProperty
+  commentId: F:H.Controls.Adorner.Adorner.Base.AdornerBase.FillProperty
+  parent: H.Controls.Adorner.Adorner.Base.AdornerBase
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_FillProperty
   name: FillProperty
   nameWithType: AdornerBase.FillProperty
-  fullName: H.Controls.Adorner.AdornerBase.FillProperty
-- uid: H.Controls.Adorner.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  commentId: M:H.Controls.Adorner.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  parent: H.Controls.Adorner.AdornerBase
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase.FillProperty
+- uid: H.Controls.Adorner.Adorner.Base.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  commentId: M:H.Controls.Adorner.Adorner.Base.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  parent: H.Controls.Adorner.Adorner.Base.AdornerBase
   isExternal: true
-  href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_OnFillChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+  href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_OnFillChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
   name: OnFillChanged(DependencyObject, DependencyPropertyChangedEventArgs)
   nameWithType: AdornerBase.OnFillChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  fullName: H.Controls.Adorner.AdornerBase.OnFillChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
+  fullName: H.Controls.Adorner.Adorner.Base.AdornerBase.OnFillChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
   spec.csharp:
-  - uid: H.Controls.Adorner.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
     name: OnFillChanged
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_OnFillChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_OnFillChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -1144,9 +1152,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.dependencypropertychangedeventargs
   - name: )
   spec.vb:
-  - uid: H.Controls.Adorner.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - uid: H.Controls.Adorner.Adorner.Base.AdornerBase.OnFillChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
     name: OnFillChanged
-    href: H.Controls.Adorner.AdornerBase.html#H_Controls_Adorner_AdornerBase_OnFillChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+    href: H.Controls.Adorner.Adorner.Base.AdornerBase.html#H_Controls_Adorner_Adorner_Base_AdornerBase_OnFillChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
   - name: (
   - uid: System.Windows.DependencyObject
     name: DependencyObject
@@ -10181,6 +10189,47 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: H.Modules.Guide.GuideBoxAdorner.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<GuideBoxAdorner>(GuideBoxAdorner)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<GuideBoxAdorner>(GuideBoxAdorner)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Modules.Guide.GuideBoxAdorner>(H.Modules.Guide.GuideBoxAdorner)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of GuideBoxAdorner)(GuideBoxAdorner)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Modules.Guide.GuideBoxAdorner)(H.Modules.Guide.GuideBoxAdorner)
+  name.vb: CloneByNewtonsoftJson(Of GuideBoxAdorner)(GuideBoxAdorner)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Modules.Guide.GuideBoxAdorner)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Modules.Guide.GuideBoxAdorner
+    name: GuideBoxAdorner
+    href: H.Modules.Guide.GuideBoxAdorner.html
+  - name: '>'
+  - name: (
+  - uid: H.Modules.Guide.GuideBoxAdorner
+    name: GuideBoxAdorner
+    href: H.Modules.Guide.GuideBoxAdorner.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Modules.Guide.GuideBoxAdorner)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Modules.Guide.GuideBoxAdorner
+    name: GuideBoxAdorner
+    href: H.Modules.Guide.GuideBoxAdorner.html
+  - name: )
+  - name: (
+  - uid: H.Modules.Guide.GuideBoxAdorner
+    name: GuideBoxAdorner
+    href: H.Modules.Guide.GuideBoxAdorner.html
+  - name: )
 - uid: H.Modules.Guide.GuideBoxAdorner.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -10380,6 +10429,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -10784,6 +10974,63 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -11580,6 +11827,63 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
   - name: )
+- uid: System.Windows.UIElement.H.Modules.Guide.GuideExtension.GetGuideTree(System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  parent: H.Modules.Guide.GuideExtension
+  definition: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  name: GetGuideTree(UIElement, Predicate<UIElement>)
+  nameWithType: GuideExtension.GetGuideTree(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
+  nameWithType.vb: GuideExtension.GetGuideTree(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: GetGuideTree(UIElement, Predicate(Of UIElement))
+  spec.csharp:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+  - name: )
 - uid: System
   commentId: N:System
   href: https://learn.microsoft.com/dotnet/api/system
@@ -11705,12 +12009,12 @@ references:
     name: Documents
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.documents
-- uid: H.Controls.Adorner
-  commentId: N:H.Controls.Adorner
+- uid: H.Controls.Adorner.Adorner.Base
+  commentId: N:H.Controls.Adorner.Adorner.Base
   href: H.html
-  name: H.Controls.Adorner
-  nameWithType: H.Controls.Adorner
-  fullName: H.Controls.Adorner
+  name: H.Controls.Adorner.Adorner.Base
+  nameWithType: H.Controls.Adorner.Adorner.Base
+  fullName: H.Controls.Adorner.Adorner.Base
   spec.csharp:
   - uid: H
     name: H
@@ -11723,6 +12027,14 @@ references:
   - uid: H.Controls.Adorner
     name: Adorner
     href: H.Controls.Adorner.html
+  - name: .
+  - uid: H.Controls.Adorner.Adorner
+    name: Adorner
+    href: H.Controls.Adorner.Adorner.html
+  - name: .
+  - uid: H.Controls.Adorner.Adorner.Base
+    name: Base
+    href: H.Controls.Adorner.Adorner.Base.html
   spec.vb:
   - uid: H
     name: H
@@ -11735,6 +12047,14 @@ references:
   - uid: H.Controls.Adorner
     name: Adorner
     href: H.Controls.Adorner.html
+  - name: .
+  - uid: H.Controls.Adorner.Adorner
+    name: Adorner
+    href: H.Controls.Adorner.Adorner.html
+  - name: .
+  - uid: H.Controls.Adorner.Adorner.Base
+    name: Base
+    href: H.Controls.Adorner.Adorner.Base.html
 - uid: System.Windows.Media.Animation
   commentId: N:System.Windows.Media.Animation
   isExternal: true
@@ -11846,6 +12166,44 @@ references:
     name: Markup
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.markup
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -12055,6 +12413,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -12452,6 +12955,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -13266,6 +13825,99 @@ references:
   name: PopupHelper
   nameWithType: PopupHelper
   fullName: H.Controls.OutlookBar.PopupHelper
+- uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  isExternal: true
+  href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  name: GetGuideTree(UIElement, Predicate<UIElement>)
+  nameWithType: GuideExtension.GetGuideTree(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
+  nameWithType.vb: GuideExtension.GetGuideTree(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: GetGuideTree(UIElement, Predicate(Of UIElement))
+  spec.csharp:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+  - name: )
+- uid: H.Modules.Guide.GuideExtension
+  commentId: T:H.Modules.Guide.GuideExtension
+  parent: H.Modules.Guide
+  href: H.Modules.Guide.GuideExtension.html
+  name: GuideExtension
+  nameWithType: GuideExtension
+  fullName: H.Modules.Guide.GuideExtension
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: H.Controls.FilterColumnDataGrid
   commentId: N:H.Controls.FilterColumnDataGrid
   href: H.html
@@ -13326,6 +13978,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: H.Controls.Dock.Controls
   commentId: N:H.Controls.Dock.Controls
   href: H.html
@@ -13426,7 +14108,7 @@ references:
     href: H.Controls.OutlookBar.html
 - uid: H.Modules.Guide.GuideBoxAdorner.#ctor*
   commentId: Overload:H.Modules.Guide.GuideBoxAdorner.#ctor
-  href: H.Modules.Guide.GuideBoxAdorner.html#H_Modules_Guide_GuideBoxAdorner__ctor_System_Windows_UIElement_System_Action_
+  href: H.Modules.Guide.GuideBoxAdorner.html#H_Modules_Guide_GuideBoxAdorner__ctor_System_Windows_UIElement_System_Action_System_Predicate_System_Windows_UIElement__
   name: GuideBoxAdorner
   nameWithType: GuideBoxAdorner.GuideBoxAdorner
   fullName: H.Modules.Guide.GuideBoxAdorner.GuideBoxAdorner
@@ -13441,6 +14123,69 @@ references:
   name: Action
   nameWithType: Action
   fullName: System.Action
+- uid: System.Predicate{System.Windows.UIElement}
+  commentId: T:System.Predicate{System.Windows.UIElement}
+  parent: System
+  definition: System.Predicate`1
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<UIElement>
+  nameWithType: Predicate<UIElement>
+  fullName: System.Predicate<System.Windows.UIElement>
+  nameWithType.vb: Predicate(Of UIElement)
+  fullName.vb: System.Predicate(Of System.Windows.UIElement)
+  name.vb: Predicate(Of UIElement)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: System.Windows.Size
   commentId: T:System.Windows.Size
   parent: System.Windows

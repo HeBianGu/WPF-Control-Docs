@@ -101,7 +101,8 @@ Class InvokeCommand
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InvokeCommand : CommandBase, ICommand</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public class InvokeCommand : INotifyPropertyChanged, IInvokeCommand, ICommand</code></pre>
   </div>
 
 
@@ -111,7 +112,6 @@ Class InvokeCommand
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Mvvm.CommandBase.html">CommandBase</a></div>
       <div><span class="xref">InvokeCommand</span></div>
     </dd>
   </dl>
@@ -119,6 +119,8 @@ Class InvokeCommand
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="H.Mvvm.IInvokeCommand.html">IInvokeCommand</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand">ICommand</a></div>
     </dd>
   </dl>
@@ -127,9 +129,6 @@ Class InvokeCommand
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="H.Mvvm.CommandBase.html#H_Mvvm_CommandBase_CanExecuteChanged">CommandBase.CanExecuteChanged</a>
-    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -157,6 +156,9 @@ Class InvokeCommand
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -167,6 +169,15 @@ Class InvokeCommand
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -185,6 +196,9 @@ Class InvokeCommand
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -215,6 +229,70 @@ Class InvokeCommand
 
   <h2 class="section" id="constructors">Constructors
 </h2>
+
+
+  <a id="H_Mvvm_InvokeCommand__ctor_" data-uid="H.Mvvm.InvokeCommand.#ctor*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand__ctor_System_Action_H_Mvvm_IInvokeCommand_System_Object__" data-uid="H.Mvvm.InvokeCommand.#ctor(System.Action{H.Mvvm.IInvokeCommand,System.Object})">
+  InvokeCommand(Action&lt;IInvokeCommand, object&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InvokeCommand(Action&lt;IInvokeCommand, object&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="H.Mvvm.IInvokeCommand.html">IInvokeCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand__ctor_" data-uid="H.Mvvm.InvokeCommand.#ctor*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand__ctor_System_Action_H_Mvvm_IInvokeCommand_System_Object__System_Func_H_Mvvm_IInvokeCommand_System_Object_System_Boolean__" data-uid="H.Mvvm.InvokeCommand.#ctor(System.Action{H.Mvvm.IInvokeCommand,System.Object},System.Func{H.Mvvm.IInvokeCommand,System.Object,System.Boolean})">
+  InvokeCommand(Action&lt;IInvokeCommand, object&gt;, Func&lt;IInvokeCommand, object, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InvokeCommand(Action&lt;IInvokeCommand, object&gt; execute, Func&lt;IInvokeCommand, object, bool&gt; canExecute)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>execute</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="H.Mvvm.IInvokeCommand.html">IInvokeCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>canExecute</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="H.Mvvm.IInvokeCommand.html">IInvokeCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 
   <a id="H_Mvvm_InvokeCommand__ctor_" data-uid="H.Mvvm.InvokeCommand.#ctor*"></a>
@@ -316,6 +394,36 @@ Class InvokeCommand
 
 
 
+  <h3 id="H_Mvvm_InvokeCommand__actionCommand" data-uid="H.Mvvm.InvokeCommand._actionCommand">
+  _actionCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Action&lt;IInvokeCommand, object&gt; _actionCommand</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="H.Mvvm.IInvokeCommand.html">IInvokeCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="H_Mvvm_InvokeCommand__canExecute" data-uid="H.Mvvm.InvokeCommand._canExecute">
   _canExecute
   
@@ -345,6 +453,290 @@ Class InvokeCommand
 
 
 
+
+  <h3 id="H_Mvvm_InvokeCommand__canExecuteCommand" data-uid="H.Mvvm.InvokeCommand._canExecuteCommand">
+  _canExecuteCommand
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly Func&lt;IInvokeCommand, object, bool&gt; _canExecuteCommand</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="H.Mvvm.IInvokeCommand.html">IInvokeCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="H_Mvvm_InvokeCommand_GroupName_" data-uid="H.Mvvm.InvokeCommand.GroupName*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_GroupName" data-uid="H.Mvvm.InvokeCommand.GroupName">
+  GroupName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Browsable(false)]
+public string GroupName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_IsBusy_" data-uid="H.Mvvm.InvokeCommand.IsBusy*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_IsBusy" data-uid="H.Mvvm.InvokeCommand.IsBusy">
+  IsBusy
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBusy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_IsEnabled_" data-uid="H.Mvvm.InvokeCommand.IsEnabled*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_IsEnabled" data-uid="H.Mvvm.InvokeCommand.IsEnabled">
+  IsEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_IsIndeterminate_" data-uid="H.Mvvm.InvokeCommand.IsIndeterminate*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_IsIndeterminate" data-uid="H.Mvvm.InvokeCommand.IsIndeterminate">
+  IsIndeterminate
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsIndeterminate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_IsVisible_" data-uid="H.Mvvm.InvokeCommand.IsVisible*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_IsVisible" data-uid="H.Mvvm.InvokeCommand.IsVisible">
+  IsVisible
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsVisible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_Message_" data-uid="H.Mvvm.InvokeCommand.Message*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_Message" data-uid="H.Mvvm.InvokeCommand.Message">
+  Message
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Message { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_Name_" data-uid="H.Mvvm.InvokeCommand.Name*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_Name" data-uid="H.Mvvm.InvokeCommand.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_Percent_" data-uid="H.Mvvm.InvokeCommand.Percent*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_Percent" data-uid="H.Mvvm.InvokeCommand.Percent">
+  Percent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Percent { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -361,7 +753,7 @@ Class InvokeCommand
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool CanExecute(object parameter)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool CanExecute(object parameter)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -395,21 +787,220 @@ Class InvokeCommand
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Defines the method to be called when the command is invoked.</p>
+  <div class="markdown level1 summary"><p>执行命令</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Execute(object parameter)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Execute(object parameter)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>parameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd><p>Data used by the command.  If the command does not require data to be passed, this object can be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_RaisePropertyChanged_" data-uid="H.Mvvm.InvokeCommand.RaisePropertyChanged*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_RaisePropertyChanged_System_String_" data-uid="H.Mvvm.InvokeCommand.RaisePropertyChanged(System.String)">
+  RaisePropertyChanged(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RaisePropertyChanged(string propertyName = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_Refresh_" data-uid="H.Mvvm.InvokeCommand.Refresh*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_Refresh" data-uid="H.Mvvm.InvokeCommand.Refresh">
+  Refresh()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>刷新命令可执行状态 (会调用CanExecute方法)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Refresh()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="H_Mvvm_InvokeCommand_CanExecuteChanged" data-uid="H.Mvvm.InvokeCommand.CanExecuteChanged">
+  CanExecuteChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when changes occur that affect whether or not the command should execute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler CanExecuteChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="H_Mvvm_InvokeCommand_PropertyChanged" data-uid="H.Mvvm.InvokeCommand.PropertyChanged">
+  PropertyChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a property value changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler PropertyChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="H_Mvvm_InvokeCommand_op_Implicit_" data-uid="H.Mvvm.InvokeCommand.op_Implicit*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_op_Implicit_System_Action_H_Mvvm_IInvokeCommand_System_Object___H_Mvvm_InvokeCommand" data-uid="H.Mvvm.InvokeCommand.op_Implicit(System.Action{H.Mvvm.IInvokeCommand,System.Object})~H.Mvvm.InvokeCommand">
+  implicit operator InvokeCommand(Action&lt;IInvokeCommand, object&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InvokeCommand(Action&lt;IInvokeCommand, object&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="H.Mvvm.IInvokeCommand.html">IInvokeCommand</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.InvokeCommand.html">InvokeCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_InvokeCommand_op_Implicit_" data-uid="H.Mvvm.InvokeCommand.op_Implicit*"></a>
+
+  <h3 id="H_Mvvm_InvokeCommand_op_Implicit_System_Action_System_Object___H_Mvvm_InvokeCommand" data-uid="H.Mvvm.InvokeCommand.op_Implicit(System.Action{System.Object})~H.Mvvm.InvokeCommand">
+  implicit operator InvokeCommand(Action&lt;object&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InvokeCommand(Action&lt;object&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Mvvm.InvokeCommand.html">InvokeCommand</a></dt>
+    <dd></dd>
+  </dl>
 
 
 

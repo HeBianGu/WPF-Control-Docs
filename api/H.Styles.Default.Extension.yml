@@ -7,6 +7,7 @@ items:
   children:
   - H.Styles.Default.Extension.AddMainWindowSavableService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Styles.Default.MainWindowOption})
   - H.Styles.Default.Extension.UseMainWindowSetting(System.IApplicationBuilder,System.Action{H.Styles.Default.MainWindowOption})
+  - H.Styles.Default.Extension.UseScrollViewerSetting(System.IApplicationBuilder,System.Action{H.Styles.Default.ScrollViewerSetting})
   - H.Styles.Default.Extension.UseWindowSetting(System.IApplicationBuilder,System.Action{H.Styles.Default.WindowSetting})
   langs:
   - csharp
@@ -18,7 +19,7 @@ items:
   source:
     id: Extension
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Styles\H.Styles.Default\Controls\Window.xaml.cs
-    startLine: 192
+    startLine: 195
   assemblies:
   - H.Styles.Default
   namespace: H.Styles.Default
@@ -35,6 +36,39 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: H.Styles.Default.Extension.UseScrollViewerSetting(System.IApplicationBuilder,System.Action{H.Styles.Default.ScrollViewerSetting})
+  commentId: M:H.Styles.Default.Extension.UseScrollViewerSetting(System.IApplicationBuilder,System.Action{H.Styles.Default.ScrollViewerSetting})
+  id: UseScrollViewerSetting(System.IApplicationBuilder,System.Action{H.Styles.Default.ScrollViewerSetting})
+  isExtensionMethod: true
+  parent: H.Styles.Default.Extension
+  langs:
+  - csharp
+  - vb
+  name: UseScrollViewerSetting(IApplicationBuilder, Action<ScrollViewerSetting>)
+  nameWithType: Extension.UseScrollViewerSetting(IApplicationBuilder, Action<ScrollViewerSetting>)
+  fullName: H.Styles.Default.Extension.UseScrollViewerSetting(System.IApplicationBuilder, System.Action<H.Styles.Default.ScrollViewerSetting>)
+  type: Method
+  source:
+    id: UseScrollViewerSetting
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Styles\H.Styles.Default\Controls\ScrollViewer.xaml.cs
+    startLine: 34
+  assemblies:
+  - H.Styles.Default
+  namespace: H.Styles.Default
+  syntax:
+    content: public static IApplicationBuilder UseScrollViewerSetting(this IApplicationBuilder builder, Action<ScrollViewerSetting> option = null)
+    parameters:
+    - id: builder
+      type: System.IApplicationBuilder
+    - id: option
+      type: System.Action{H.Styles.Default.ScrollViewerSetting}
+    return:
+      type: System.IApplicationBuilder
+    content.vb: Public Shared Function UseScrollViewerSetting(builder As IApplicationBuilder, [option] As Action(Of ScrollViewerSetting) = Nothing) As IApplicationBuilder
+  overload: H.Styles.Default.Extension.UseScrollViewerSetting*
+  nameWithType.vb: Extension.UseScrollViewerSetting(IApplicationBuilder, Action(Of ScrollViewerSetting))
+  fullName.vb: H.Styles.Default.Extension.UseScrollViewerSetting(System.IApplicationBuilder, System.Action(Of H.Styles.Default.ScrollViewerSetting))
+  name.vb: UseScrollViewerSetting(IApplicationBuilder, Action(Of ScrollViewerSetting))
 - uid: H.Styles.Default.Extension.AddMainWindowSavableService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Styles.Default.MainWindowOption})
   commentId: M:H.Styles.Default.Extension.AddMainWindowSavableService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Styles.Default.MainWindowOption})
   id: AddMainWindowSavableService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Styles.Default.MainWindowOption})
@@ -50,7 +84,7 @@ items:
   source:
     id: AddMainWindowSavableService
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Styles\H.Styles.Default\Controls\Window.xaml.cs
-    startLine: 194
+    startLine: 197
   assemblies:
   - H.Styles.Default
   namespace: H.Styles.Default
@@ -83,7 +117,7 @@ items:
   source:
     id: UseMainWindowSetting
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Styles\H.Styles.Default\Controls\Window.xaml.cs
-    startLine: 203
+    startLine: 206
   assemblies:
   - H.Styles.Default
   namespace: H.Styles.Default
@@ -116,7 +150,7 @@ items:
   source:
     id: UseWindowSetting
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Styles\H.Styles.Default\Controls\Window.xaml.cs
-    startLine: 210
+    startLine: 213
   assemblies:
   - H.Styles.Default
   namespace: H.Styles.Default
@@ -401,6 +435,80 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: H.Styles.Default.Extension.UseScrollViewerSetting*
+  commentId: Overload:H.Styles.Default.Extension.UseScrollViewerSetting
+  href: H.Styles.Default.Extension.html#H_Styles_Default_Extension_UseScrollViewerSetting_System_IApplicationBuilder_System_Action_H_Styles_Default_ScrollViewerSetting__
+  name: UseScrollViewerSetting
+  nameWithType: Extension.UseScrollViewerSetting
+  fullName: H.Styles.Default.Extension.UseScrollViewerSetting
+- uid: System.IApplicationBuilder
+  commentId: T:System.IApplicationBuilder
+  parent: System
+  href: System.IApplicationBuilder.html
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: System.IApplicationBuilder
+- uid: System.Action{H.Styles.Default.ScrollViewerSetting}
+  commentId: T:System.Action{H.Styles.Default.ScrollViewerSetting}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<ScrollViewerSetting>
+  nameWithType: Action<ScrollViewerSetting>
+  fullName: System.Action<H.Styles.Default.ScrollViewerSetting>
+  nameWithType.vb: Action(Of ScrollViewerSetting)
+  fullName.vb: System.Action(Of H.Styles.Default.ScrollViewerSetting)
+  name.vb: Action(Of ScrollViewerSetting)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Styles.Default.ScrollViewerSetting
+    name: ScrollViewerSetting
+    href: H.Styles.Default.ScrollViewerSetting.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Styles.Default.ScrollViewerSetting
+    name: ScrollViewerSetting
+    href: H.Styles.Default.ScrollViewerSetting.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: H.Styles.Default.Extension.AddMainWindowSavableService*
   commentId: Overload:H.Styles.Default.Extension.AddMainWindowSavableService
   href: H.Styles.Default.Extension.html#H_Styles_Default_Extension_AddMainWindowSavableService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Styles_Default_MainWindowOption__
@@ -485,47 +593,12 @@ references:
     name: DependencyInjection
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
-- uid: System.Action`1
-  commentId: T:System.Action`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<T>
-  nameWithType: Action<T>
-  fullName: System.Action<T>
-  nameWithType.vb: Action(Of T)
-  fullName.vb: System.Action(Of T)
-  name.vb: Action(Of T)
-  spec.csharp:
-  - uid: System.Action`1
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Action`1
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: H.Styles.Default.Extension.UseMainWindowSetting*
   commentId: Overload:H.Styles.Default.Extension.UseMainWindowSetting
   href: H.Styles.Default.Extension.html#H_Styles_Default_Extension_UseMainWindowSetting_System_IApplicationBuilder_System_Action_H_Styles_Default_MainWindowOption__
   name: UseMainWindowSetting
   nameWithType: Extension.UseMainWindowSetting
   fullName: H.Styles.Default.Extension.UseMainWindowSetting
-- uid: System.IApplicationBuilder
-  commentId: T:System.IApplicationBuilder
-  parent: System
-  href: System.IApplicationBuilder.html
-  name: IApplicationBuilder
-  nameWithType: IApplicationBuilder
-  fullName: System.IApplicationBuilder
 - uid: H.Styles.Default.Extension.UseWindowSetting*
   commentId: Overload:H.Styles.Default.Extension.UseWindowSetting
   href: H.Styles.Default.Extension.html#H_Styles_Default_Extension_UseWindowSetting_System_IApplicationBuilder_System_Action_H_Styles_Default_WindowSetting__

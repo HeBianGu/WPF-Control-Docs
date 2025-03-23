@@ -6,21 +6,21 @@ items:
   parent: H.Controls.Diagram
   children:
   - H.Controls.Diagram.Diagram.#ctor
+  - H.Controls.Diagram.Diagram.AddLink(H.Controls.Diagram.Parts.Link)
   - H.Controls.Diagram.Diagram.AddLinked
   - H.Controls.Diagram.Diagram.AddLinkedRoutedEvent
-  - H.Controls.Diagram.Diagram.AddNode(H.Controls.Diagram.Node[])
+  - H.Controls.Diagram.Diagram.AddNode(H.Controls.Diagram.Parts.Node[])
+  - H.Controls.Diagram.Diagram.AddNoded
+  - H.Controls.Diagram.Diagram.AddNodedRoutedEvent
+  - H.Controls.Diagram.Diagram.Clear
+  - H.Controls.Diagram.Diagram.DataSource
+  - H.Controls.Diagram.Diagram.DataSourceProperty
   - H.Controls.Diagram.Diagram.DefaultKey
-  - H.Controls.Diagram.Diagram.Duration
-  - H.Controls.Diagram.Diagram.DurationProperty
   - H.Controls.Diagram.Diagram.DynamicLayer
   - H.Controls.Diagram.Diagram.DynamicLinkStyle
   - H.Controls.Diagram.Diagram.DynamicLinkStyleProperty
-  - H.Controls.Diagram.Diagram.FlowableMode
-  - H.Controls.Diagram.Diagram.FlowableModeProperty
-  - H.Controls.Diagram.Diagram.FlowableZoomMode
-  - H.Controls.Diagram.Diagram.FlowableZoomModeProperty
-  - H.Controls.Diagram.Diagram.GetAllParts(System.Func{H.Controls.Diagram.Part,System.Boolean})
-  - H.Controls.Diagram.Diagram.GetStartNode(System.String@)
+  - H.Controls.Diagram.Diagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+  - H.Controls.Diagram.Diagram.InvokeMessage(System.String)
   - H.Controls.Diagram.Diagram.ItemsChanged
   - H.Controls.Diagram.Diagram.ItemsChangedRoutedEvent
   - H.Controls.Diagram.Diagram.Layout
@@ -38,33 +38,30 @@ items:
   - H.Controls.Diagram.Diagram.NodeStyle
   - H.Controls.Diagram.Diagram.NodeStyleProperty
   - H.Controls.Diagram.Diagram.Nodes
-  - H.Controls.Diagram.Diagram.NodesSource
-  - H.Controls.Diagram.Diagram.NodesSourceProperty
+  - H.Controls.Diagram.Diagram.OnAddNoded(System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Node})
   - H.Controls.Diagram.Diagram.OnApplyTemplate
   - H.Controls.Diagram.Diagram.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
   - H.Controls.Diagram.Diagram.OnSelectedPartChanged
   - H.Controls.Diagram.Diagram.RefreshData
   - H.Controls.Diagram.Diagram.RefreshLayout
   - H.Controls.Diagram.Diagram.RefreshLinkDrawer
-  - H.Controls.Diagram.Diagram.RemoveNode(H.Controls.Diagram.Node[])
-  - H.Controls.Diagram.Diagram.RunningPartChanged
-  - H.Controls.Diagram.Diagram.RunningPartChangedRoutedEvent
+  - H.Controls.Diagram.Diagram.RemoveNode(H.Controls.Diagram.Parts.Node[])
   - H.Controls.Diagram.Diagram.SelectedNode
   - H.Controls.Diagram.Diagram.SelectedNodeProperty
   - H.Controls.Diagram.Diagram.SelectedPart
   - H.Controls.Diagram.Diagram.SelectedPartChanged
   - H.Controls.Diagram.Diagram.SelectedPartChangedRoutedEvent
   - H.Controls.Diagram.Diagram.SelectedPartProperty
-  - H.Controls.Diagram.Diagram.Start(H.Controls.Diagram.Node)
-  - H.Controls.Diagram.Diagram.State
-  - H.Controls.Diagram.Diagram.StateProperty
+  - H.Controls.Diagram.Diagram.UpdateNodesToDataSource
   - H.Controls.Diagram.Diagram.UseAnimation
-  - H.Controls.Diagram.Diagram.UseFlowableSelectToRunning
-  - H.Controls.Diagram.Diagram.UseFlowableSelectToRunningProperty
-  - H.Controls.Diagram.Diagram.UseStartNodeOnly
-  - H.Controls.Diagram.Diagram.UseStartNodeOnlyProperty
+  - H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd
+  - H.Controls.Diagram.Diagram.UseAutoAddLinkOnEndProperty
+  - H.Controls.Diagram.Diagram.ZoomTo(H.Controls.Diagram.Parts.Base.Part,System.Double)
+  - H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Point)
   - H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Rect)
   - H.Controls.Diagram.Diagram.ZoomToFit
+  - H.Controls.Diagram.Diagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+  - H.Controls.Diagram.Diagram.ZoomToSelectPart
   langs:
   - csharp
   - vb
@@ -75,7 +72,7 @@ items:
   source:
     id: Diagram
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 986
+    startLine: 712
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -87,7 +84,7 @@ items:
 
       [TemplatePart(Name = "DynamicLayer", Type = typeof(LinkLayer))]
 
-      public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild
+      public class Diagram : ContentControl, IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild, IDiagram
     content.vb: >-
       <TemplatePart(Name:="NodeLayer", Type:=GetType(NodeLayer))>
 
@@ -95,7 +92,7 @@ items:
 
       <TemplatePart(Name:="DynamicLayer", Type:=GetType(LinkLayer))>
 
-      Public Class Diagram Inherits ContentControl Implements IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild
+      Public Class Diagram Inherits ContentControl Implements IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild, IDiagram
   inheritance:
   - System.Object
   - System.Windows.Threading.DispatcherObject
@@ -112,6 +109,7 @@ items:
   - System.Windows.IInputElement
   - System.Windows.Markup.IQueryAmbient
   - System.Windows.Markup.IAddChild
+  - H.Controls.Diagram.IDiagram
   inheritedMembers:
   - System.Windows.Controls.ContentControl.ContentProperty
   - System.Windows.Controls.ContentControl.ContentStringFormatProperty
@@ -732,16 +730,23 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   extensionMethods:
+  - H.Controls.Diagram.Diagram.H.Controls.Diagram.DiagramExtension.AligmentNodes
+  - H.Controls.Diagram.Diagram.H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+  - H.Controls.Diagram.Diagram.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
   - H.Controls.Diagram.Diagram.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -759,6 +764,7 @@ items:
   - System.Windows.DependencyObject.H.Controls.FilterColumnDataGrid.VisualTreeHelpers.TryFindParent``1
   - System.Windows.DependencyObject.H.Windows.Ribbon.VisualTreeExtention.GetParent``1
   - System.Windows.UIElement.H.Controls.OutlookBar.PopupHelper.IsLogicalAncestorOf(System.Windows.UIElement)
+  - System.Windows.UIElement.H.Modules.Guide.GuideExtension.GetGuideTree(System.Predicate{System.Windows.UIElement})
   attributes:
   - type: System.Windows.TemplatePartAttribute
     ctor: System.Windows.TemplatePartAttribute.#ctor
@@ -769,7 +775,7 @@ items:
       value: NodeLayer
     - name: Type
       type: System.Type
-      value: H.Controls.Diagram.NodeLayer
+      value: H.Controls.Diagram.Layers.NodeLayer
   - type: System.Windows.TemplatePartAttribute
     ctor: System.Windows.TemplatePartAttribute.#ctor
     arguments: []
@@ -779,7 +785,7 @@ items:
       value: LinkLayer
     - name: Type
       type: System.Type
-      value: H.Controls.Diagram.LinkLayer
+      value: H.Controls.Diagram.Layers.LinkLayer
   - type: System.Windows.TemplatePartAttribute
     ctor: System.Windows.TemplatePartAttribute.#ctor
     arguments: []
@@ -789,7 +795,7 @@ items:
       value: DynamicLayer
     - name: Type
       type: System.Type
-      value: H.Controls.Diagram.LinkLayer
+      value: H.Controls.Diagram.Layers.LinkLayer
 - uid: H.Controls.Diagram.Diagram.DefaultKey
   commentId: P:H.Controls.Diagram.Diagram.DefaultKey
   id: DefaultKey
@@ -804,7 +810,7 @@ items:
   source:
     id: DefaultKey
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 25
+    startLine: 40
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -829,7 +835,7 @@ items:
   source:
     id: NodeLayer
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 35
+    startLine: 50
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -840,7 +846,7 @@ items:
       public NodeLayer NodeLayer { get; }
     parameters: []
     return:
-      type: H.Controls.Diagram.NodeLayer
+      type: H.Controls.Diagram.Layers.NodeLayer
     content.vb: >-
       <Browsable(False)>
 
@@ -866,7 +872,7 @@ items:
   source:
     id: LinkLayer
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 37
+    startLine: 52
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -877,7 +883,7 @@ items:
       public LinkLayer LinkLayer { get; }
     parameters: []
     return:
-      type: H.Controls.Diagram.LinkLayer
+      type: H.Controls.Diagram.Layers.LinkLayer
     content.vb: >-
       <Browsable(False)>
 
@@ -903,7 +909,7 @@ items:
   source:
     id: DynamicLayer
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 39
+    startLine: 54
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -914,7 +920,7 @@ items:
       public LinkLayer DynamicLayer { get; }
     parameters: []
     return:
-      type: H.Controls.Diagram.LinkLayer
+      type: H.Controls.Diagram.Layers.LinkLayer
     content.vb: >-
       <Browsable(False)>
 
@@ -940,7 +946,7 @@ items:
   source:
     id: .ctor
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 42
+    startLine: 57
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -965,7 +971,7 @@ items:
   source:
     id: OnApplyTemplate
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 375
+    startLine: 288
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -990,7 +996,7 @@ items:
   source:
     id: NodeStyle
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 392
+    startLine: 305
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -1027,7 +1033,7 @@ items:
   source:
     id: NodeStyleProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 399
+    startLine: 312
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -1050,7 +1056,7 @@ items:
   source:
     id: LinkStyle
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 409
+    startLine: 322
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -1087,7 +1093,7 @@ items:
   source:
     id: DynamicLinkStyle
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 416
+    startLine: 329
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -1124,7 +1130,7 @@ items:
   source:
     id: DynamicLinkStyleProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 423
+    startLine: 336
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -1147,7 +1153,7 @@ items:
   source:
     id: LinkStyleProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 432
+    startLine: 345
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -1156,201 +1162,1038 @@ items:
     return:
       type: System.Windows.DependencyProperty
     content.vb: Public Shared ReadOnly LinkStyleProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.UseStartNodeOnly
-  commentId: P:H.Controls.Diagram.Diagram.UseStartNodeOnly
-  id: UseStartNodeOnly
+- uid: H.Controls.Diagram.Diagram.Layout
+  commentId: P:H.Controls.Diagram.Diagram.Layout
+  id: Layout
   parent: H.Controls.Diagram.Diagram
   langs:
   - csharp
   - vb
-  name: UseStartNodeOnly
-  nameWithType: Diagram.UseStartNodeOnly
-  fullName: H.Controls.Diagram.Diagram.UseStartNodeOnly
+  name: Layout
+  nameWithType: Diagram.Layout
+  fullName: H.Controls.Diagram.Diagram.Layout
   type: Property
   source:
-    id: UseStartNodeOnly
+    id: Layout
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 354
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: >-
+      [Display(Name = "布局方式", GroupName = "显示设置")]
+
+      public ILayout Layout { get; set; }
+    parameters: []
+    return:
+      type: H.Controls.Diagram.Layouts.Base.ILayout
+    content.vb: >-
+      <Display(Name:="布局方式", GroupName:="显示设置")>
+
+      Public Property Layout As ILayout
+  overload: H.Controls.Diagram.Diagram.Layout*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 布局方式
+    - name: GroupName
+      type: System.String
+      value: 显示设置
+- uid: H.Controls.Diagram.Diagram.LayoutProperty
+  commentId: F:H.Controls.Diagram.Diagram.LayoutProperty
+  id: LayoutProperty
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: LayoutProperty
+  nameWithType: Diagram.LayoutProperty
+  fullName: H.Controls.Diagram.Diagram.LayoutProperty
+  type: Field
+  source:
+    id: LayoutProperty
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 362
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public static readonly DependencyProperty LayoutProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly LayoutProperty As DependencyProperty
+- uid: H.Controls.Diagram.Diagram.Links
+  commentId: P:H.Controls.Diagram.Diagram.Links
+  id: Links
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: Links
+  nameWithType: Diagram.Links
+  fullName: H.Controls.Diagram.Diagram.Links
+  type: Property
+  source:
+    id: Links
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 381
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      public List<Link> Links { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{H.Controls.Diagram.Parts.Link}
+    content.vb: >-
+      <Browsable(False)>
+
+      Public Property Links As List(Of Link)
+  overload: H.Controls.Diagram.Diagram.Links*
+  implements:
+  - H.Controls.Diagram.IDiagram.Links
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Controls.Diagram.Diagram.Nodes
+  commentId: P:H.Controls.Diagram.Diagram.Nodes
+  id: Nodes
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: Nodes
+  nameWithType: Diagram.Nodes
+  fullName: H.Controls.Diagram.Diagram.Nodes
+  type: Property
+  source:
+    id: Nodes
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 383
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      public List<Node> Nodes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{H.Controls.Diagram.Parts.Node}
+    content.vb: >-
+      <Browsable(False)>
+
+      Public Property Nodes As List(Of Node)
+  overload: H.Controls.Diagram.Diagram.Nodes*
+  implements:
+  - H.Controls.Diagram.IDiagram.Nodes
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Controls.Diagram.Diagram.SelectedPart
+  commentId: P:H.Controls.Diagram.Diagram.SelectedPart
+  id: SelectedPart
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: SelectedPart
+  nameWithType: Diagram.SelectedPart
+  fullName: H.Controls.Diagram.Diagram.SelectedPart
+  type: Property
+  source:
+    id: SelectedPart
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 386
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "选中部位", GroupName = "显示设置")]
+
+      public Part SelectedPart { get; set; }
+    parameters: []
+    return:
+      type: H.Controls.Diagram.Parts.Base.Part
+    content.vb: >-
+      <Display(Name:="选中部位", GroupName:="显示设置")>
+
+      Public Property SelectedPart As Part
+  overload: H.Controls.Diagram.Diagram.SelectedPart*
+  implements:
+  - H.Controls.Diagram.IDiagram.SelectedPart
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 选中部位
+    - name: GroupName
+      type: System.String
+      value: 显示设置
+- uid: H.Controls.Diagram.Diagram.SelectedPartProperty
+  commentId: F:H.Controls.Diagram.Diagram.SelectedPartProperty
+  id: SelectedPartProperty
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: SelectedPartProperty
+  nameWithType: Diagram.SelectedPartProperty
+  fullName: H.Controls.Diagram.Diagram.SelectedPartProperty
+  type: Field
+  source:
+    id: SelectedPartProperty
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 394
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public static readonly DependencyProperty SelectedPartProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly SelectedPartProperty As DependencyProperty
+- uid: H.Controls.Diagram.Diagram.SelectedNode
+  commentId: P:H.Controls.Diagram.Diagram.SelectedNode
+  id: SelectedNode
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: SelectedNode
+  nameWithType: Diagram.SelectedNode
+  fullName: H.Controls.Diagram.Diagram.SelectedNode
+  type: Property
+  source:
+    id: SelectedNode
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 411
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "选中节点", GroupName = "显示设置")]
+
+      public Node SelectedNode { get; set; }
+    parameters: []
+    return:
+      type: H.Controls.Diagram.Parts.Node
+    content.vb: >-
+      <Display(Name:="选中节点", GroupName:="显示设置")>
+
+      Public Property SelectedNode As Node
+  overload: H.Controls.Diagram.Diagram.SelectedNode*
+  implements:
+  - H.Controls.Diagram.IDiagram.SelectedNode
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: 选中节点
+    - name: GroupName
+      type: System.String
+      value: 显示设置
+- uid: H.Controls.Diagram.Diagram.SelectedNodeProperty
+  commentId: F:H.Controls.Diagram.Diagram.SelectedNodeProperty
+  id: SelectedNodeProperty
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: SelectedNodeProperty
+  nameWithType: Diagram.SelectedNodeProperty
+  fullName: H.Controls.Diagram.Diagram.SelectedNodeProperty
+  type: Field
+  source:
+    id: SelectedNodeProperty
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 419
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public static readonly DependencyProperty SelectedNodeProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly SelectedNodeProperty As DependencyProperty
+- uid: H.Controls.Diagram.Diagram.LinkTemplate
+  commentId: P:H.Controls.Diagram.Diagram.LinkTemplate
+  id: LinkTemplate
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: LinkTemplate
+  nameWithType: Diagram.LinkTemplate
+  fullName: H.Controls.Diagram.Diagram.LinkTemplate
+  type: Property
+  source:
+    id: LinkTemplate
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 433
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: >-
+      [Browsable(false)]
+
+      public DataTemplate LinkTemplate { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.DataTemplate
+    content.vb: >-
+      <Browsable(False)>
+
+      Public Property LinkTemplate As DataTemplate
+  overload: H.Controls.Diagram.Diagram.LinkTemplate*
+  attributes:
+  - type: System.ComponentModel.BrowsableAttribute
+    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+- uid: H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd
+  commentId: P:H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd
+  id: UseAutoAddLinkOnEnd
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: UseAutoAddLinkOnEnd
+  nameWithType: Diagram.UseAutoAddLinkOnEnd
+  fullName: H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd
+  type: Property
+  source:
+    id: UseAutoAddLinkOnEnd
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 436
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public bool UseAutoAddLinkOnEnd { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseAutoAddLinkOnEnd As Boolean
+  overload: H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd*
+- uid: H.Controls.Diagram.Diagram.UseAutoAddLinkOnEndProperty
+  commentId: F:H.Controls.Diagram.Diagram.UseAutoAddLinkOnEndProperty
+  id: UseAutoAddLinkOnEndProperty
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: UseAutoAddLinkOnEndProperty
+  nameWithType: Diagram.UseAutoAddLinkOnEndProperty
+  fullName: H.Controls.Diagram.Diagram.UseAutoAddLinkOnEndProperty
+  type: Field
+  source:
+    id: UseAutoAddLinkOnEndProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
     startLine: 442
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
   syntax:
-    content: >-
-      [Display(Name = "启用开始点接口检查", GroupName = "流程控制")]
-
-      public bool UseStartNodeOnly { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <Display(Name:="启用开始点接口检查", GroupName:="流程控制")>
-
-      Public Property UseStartNodeOnly As Boolean
-  overload: H.Controls.Diagram.Diagram.UseStartNodeOnly*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 启用开始点接口检查
-    - name: GroupName
-      type: System.String
-      value: 流程控制
-- uid: H.Controls.Diagram.Diagram.UseStartNodeOnlyProperty
-  commentId: F:H.Controls.Diagram.Diagram.UseStartNodeOnlyProperty
-  id: UseStartNodeOnlyProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: UseStartNodeOnlyProperty
-  nameWithType: Diagram.UseStartNodeOnlyProperty
-  fullName: H.Controls.Diagram.Diagram.UseStartNodeOnlyProperty
-  type: Field
-  source:
-    id: UseStartNodeOnlyProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 450
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly DependencyProperty UseStartNodeOnlyProperty
+    content: public static readonly DependencyProperty UseAutoAddLinkOnEndProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly UseStartNodeOnlyProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.FlowableMode
-  commentId: P:H.Controls.Diagram.Diagram.FlowableMode
-  id: FlowableMode
+    content.vb: Public Shared ReadOnly UseAutoAddLinkOnEndProperty As DependencyProperty
+- uid: H.Controls.Diagram.Diagram.AddLinkedRoutedEvent
+  commentId: F:H.Controls.Diagram.Diagram.AddLinkedRoutedEvent
+  id: AddLinkedRoutedEvent
   parent: H.Controls.Diagram.Diagram
   langs:
   - csharp
   - vb
-  name: FlowableMode
-  nameWithType: Diagram.FlowableMode
-  fullName: H.Controls.Diagram.Diagram.FlowableMode
-  type: Property
-  source:
-    id: FlowableMode
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 469
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Display(Name = "执行方式", GroupName = "流程控制")]
-
-      public DiagramFlowableMode FlowableMode { get; set; }
-    parameters: []
-    return:
-      type: H.Controls.Diagram.DiagramFlowableMode
-    content.vb: >-
-      <Display(Name:="执行方式", GroupName:="流程控制")>
-
-      Public Property FlowableMode As DiagramFlowableMode
-  overload: H.Controls.Diagram.Diagram.FlowableMode*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 执行方式
-    - name: GroupName
-      type: System.String
-      value: 流程控制
-- uid: H.Controls.Diagram.Diagram.FlowableModeProperty
-  commentId: F:H.Controls.Diagram.Diagram.FlowableModeProperty
-  id: FlowableModeProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: FlowableModeProperty
-  nameWithType: Diagram.FlowableModeProperty
-  fullName: H.Controls.Diagram.Diagram.FlowableModeProperty
+  name: AddLinkedRoutedEvent
+  nameWithType: Diagram.AddLinkedRoutedEvent
+  fullName: H.Controls.Diagram.Diagram.AddLinkedRoutedEvent
   type: Field
   source:
-    id: FlowableModeProperty
+    id: AddLinkedRoutedEvent
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 477
+    startLine: 448
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
   syntax:
-    content: public static readonly DependencyProperty FlowableModeProperty
+    content: public static readonly RoutedEvent AddLinkedRoutedEvent
     return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly FlowableModeProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.State
-  commentId: P:H.Controls.Diagram.Diagram.State
-  id: State
+      type: System.Windows.RoutedEvent
+    content.vb: Public Shared ReadOnly AddLinkedRoutedEvent As RoutedEvent
+- uid: H.Controls.Diagram.Diagram.AddLinked
+  commentId: E:H.Controls.Diagram.Diagram.AddLinked
+  id: AddLinked
   parent: H.Controls.Diagram.Diagram
   langs:
   - csharp
   - vb
-  name: State
-  nameWithType: Diagram.State
-  fullName: H.Controls.Diagram.Diagram.State
-  type: Property
+  name: AddLinked
+  nameWithType: Diagram.AddLinked
+  fullName: H.Controls.Diagram.Diagram.AddLinked
+  type: Event
   source:
-    id: State
+    id: AddLinked
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 496
+    startLine: 451
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
   syntax:
-    content: >-
-      [Display(Name = "执行状态", GroupName = "流程控制")]
-
-      public DiagramFlowableState State { get; }
-    parameters: []
+    content: public event EventHandler<RoutedEventArgs<Link>> AddLinked
     return:
-      type: H.Controls.Diagram.DiagramFlowableState
-    content.vb: >-
-      <Display(Name:="执行状态", GroupName:="流程控制")>
-
-      Public Property State As DiagramFlowableState
-  overload: H.Controls.Diagram.Diagram.State*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 执行状态
-    - name: GroupName
-      type: System.String
-      value: 流程控制
-- uid: H.Controls.Diagram.Diagram.StateProperty
-  commentId: F:H.Controls.Diagram.Diagram.StateProperty
-  id: StateProperty
+      type: System.EventHandler{H.Mvvm.RoutedEventArgs{H.Controls.Diagram.Parts.Link}}
+    content.vb: Public Event AddLinked As EventHandler(Of RoutedEventArgs(Of Link))
+- uid: H.Controls.Diagram.Diagram.AddLink(H.Controls.Diagram.Parts.Link)
+  commentId: M:H.Controls.Diagram.Diagram.AddLink(H.Controls.Diagram.Parts.Link)
+  id: AddLink(H.Controls.Diagram.Parts.Link)
   parent: H.Controls.Diagram.Diagram
   langs:
   - csharp
   - vb
-  name: StateProperty
-  nameWithType: Diagram.StateProperty
-  fullName: H.Controls.Diagram.Diagram.StateProperty
+  name: AddLink(Link)
+  nameWithType: Diagram.AddLink(Link)
+  fullName: H.Controls.Diagram.Diagram.AddLink(H.Controls.Diagram.Parts.Link)
+  type: Method
+  source:
+    id: AddLink
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 457
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public void AddLink(Link link)
+    parameters:
+    - id: link
+      type: H.Controls.Diagram.Parts.Link
+    content.vb: Public Sub AddLink(link As Link)
+  overload: H.Controls.Diagram.Diagram.AddLink*
+  implements:
+  - H.Controls.Diagram.IDiagram.AddLink(H.Controls.Diagram.Parts.Link)
+- uid: H.Controls.Diagram.Diagram.ItemsChangedRoutedEvent
+  commentId: F:H.Controls.Diagram.Diagram.ItemsChangedRoutedEvent
+  id: ItemsChangedRoutedEvent
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: ItemsChangedRoutedEvent
+  nameWithType: Diagram.ItemsChangedRoutedEvent
+  fullName: H.Controls.Diagram.Diagram.ItemsChangedRoutedEvent
   type: Field
   source:
-    id: StateProperty
+    id: ItemsChangedRoutedEvent
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 504
+    startLine: 473
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
   syntax:
-    content: public static readonly DependencyProperty StateProperty
+    content: public static readonly RoutedEvent ItemsChangedRoutedEvent
     return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly StateProperty As DependencyProperty
+      type: System.Windows.RoutedEvent
+    content.vb: Public Shared ReadOnly ItemsChangedRoutedEvent As RoutedEvent
+- uid: H.Controls.Diagram.Diagram.ItemsChanged
+  commentId: E:H.Controls.Diagram.Diagram.ItemsChanged
+  id: ItemsChanged
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: ItemsChanged
+  nameWithType: Diagram.ItemsChanged
+  fullName: H.Controls.Diagram.Diagram.ItemsChanged
+  type: Event
+  source:
+    id: ItemsChanged
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 476
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public event RoutedEventHandler ItemsChanged
+    return:
+      type: System.Windows.RoutedEventHandler
+    content.vb: Public Event ItemsChanged As RoutedEventHandler
+- uid: H.Controls.Diagram.Diagram.SelectedPartChangedRoutedEvent
+  commentId: F:H.Controls.Diagram.Diagram.SelectedPartChangedRoutedEvent
+  id: SelectedPartChangedRoutedEvent
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: SelectedPartChangedRoutedEvent
+  nameWithType: Diagram.SelectedPartChangedRoutedEvent
+  fullName: H.Controls.Diagram.Diagram.SelectedPartChangedRoutedEvent
+  type: Field
+  source:
+    id: SelectedPartChangedRoutedEvent
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 490
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public static readonly RoutedEvent SelectedPartChangedRoutedEvent
+    return:
+      type: System.Windows.RoutedEvent
+    content.vb: Public Shared ReadOnly SelectedPartChangedRoutedEvent As RoutedEvent
+- uid: H.Controls.Diagram.Diagram.SelectedPartChanged
+  commentId: E:H.Controls.Diagram.Diagram.SelectedPartChanged
+  id: SelectedPartChanged
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: SelectedPartChanged
+  nameWithType: Diagram.SelectedPartChanged
+  fullName: H.Controls.Diagram.Diagram.SelectedPartChanged
+  type: Event
+  source:
+    id: SelectedPartChanged
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 493
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public event RoutedEventHandler SelectedPartChanged
+    return:
+      type: System.Windows.RoutedEventHandler
+    content.vb: Public Event SelectedPartChanged As RoutedEventHandler
+- uid: H.Controls.Diagram.Diagram.OnSelectedPartChanged
+  commentId: M:H.Controls.Diagram.Diagram.OnSelectedPartChanged
+  id: OnSelectedPartChanged
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: OnSelectedPartChanged()
+  nameWithType: Diagram.OnSelectedPartChanged()
+  fullName: H.Controls.Diagram.Diagram.OnSelectedPartChanged()
+  type: Method
+  source:
+    id: OnSelectedPartChanged
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 499
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: protected void OnSelectedPartChanged()
+    content.vb: Protected Sub OnSelectedPartChanged()
+  overload: H.Controls.Diagram.Diagram.OnSelectedPartChanged*
+- uid: H.Controls.Diagram.Diagram.AddNodedRoutedEvent
+  commentId: F:H.Controls.Diagram.Diagram.AddNodedRoutedEvent
+  id: AddNodedRoutedEvent
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: AddNodedRoutedEvent
+  nameWithType: Diagram.AddNodedRoutedEvent
+  fullName: H.Controls.Diagram.Diagram.AddNodedRoutedEvent
+  type: Field
+  source:
+    id: AddNodedRoutedEvent
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 505
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public static readonly RoutedEvent AddNodedRoutedEvent
+    return:
+      type: System.Windows.RoutedEvent
+    content.vb: Public Shared ReadOnly AddNodedRoutedEvent As RoutedEvent
+- uid: H.Controls.Diagram.Diagram.AddNoded
+  commentId: E:H.Controls.Diagram.Diagram.AddNoded
+  id: AddNoded
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: AddNoded
+  nameWithType: Diagram.AddNoded
+  fullName: H.Controls.Diagram.Diagram.AddNoded
+  type: Event
+  source:
+    id: AddNoded
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 507
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public event RoutedEventHandler AddNoded
+    return:
+      type: System.Windows.RoutedEventHandler
+    content.vb: Public Event AddNoded As RoutedEventHandler
+- uid: H.Controls.Diagram.Diagram.OnAddNoded(System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Node})
+  commentId: M:H.Controls.Diagram.Diagram.OnAddNoded(System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Node})
+  id: OnAddNoded(System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Node})
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: OnAddNoded(IEnumerable<Node>)
+  nameWithType: Diagram.OnAddNoded(IEnumerable<Node>)
+  fullName: H.Controls.Diagram.Diagram.OnAddNoded(System.Collections.Generic.IEnumerable<H.Controls.Diagram.Parts.Node>)
+  type: Method
+  source:
+    id: OnAddNoded
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 513
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: protected void OnAddNoded(IEnumerable<Node> nodes)
+    parameters:
+    - id: nodes
+      type: System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Node}
+    content.vb: Protected Sub OnAddNoded(nodes As IEnumerable(Of Node))
+  overload: H.Controls.Diagram.Diagram.OnAddNoded*
+  nameWithType.vb: Diagram.OnAddNoded(IEnumerable(Of Node))
+  fullName.vb: H.Controls.Diagram.Diagram.OnAddNoded(System.Collections.Generic.IEnumerable(Of H.Controls.Diagram.Parts.Node))
+  name.vb: OnAddNoded(IEnumerable(Of Node))
+- uid: H.Controls.Diagram.Diagram.ZoomToFit
+  commentId: M:H.Controls.Diagram.Diagram.ZoomToFit
+  id: ZoomToFit
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: ZoomToFit()
+  nameWithType: Diagram.ZoomToFit()
+  fullName: H.Controls.Diagram.Diagram.ZoomToFit()
+  type: Method
+  source:
+    id: ZoomToFit
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 519
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public void ZoomToFit()
+    content.vb: Public Sub ZoomToFit()
+  overload: H.Controls.Diagram.Diagram.ZoomToFit*
+  implements:
+  - H.Controls.Diagram.IDiagram.ZoomToFit
+- uid: H.Controls.Diagram.Diagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+  commentId: M:H.Controls.Diagram.Diagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+  id: ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: ZoomToFit(params Part[])
+  nameWithType: Diagram.ZoomToFit(params Part[])
+  fullName: H.Controls.Diagram.Diagram.ZoomToFit(params H.Controls.Diagram.Parts.Base.Part[])
+  type: Method
+  source:
+    id: ZoomToFit
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 524
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public void ZoomToFit(params Part[] parts)
+    parameters:
+    - id: parts
+      type: H.Controls.Diagram.Parts.Base.Part[]
+    content.vb: Public Sub ZoomToFit(ParamArray parts As Part())
+  overload: H.Controls.Diagram.Diagram.ZoomToFit*
+  implements:
+  - H.Controls.Diagram.IDiagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+  nameWithType.vb: Diagram.ZoomToFit(ParamArray Part())
+  fullName.vb: H.Controls.Diagram.Diagram.ZoomToFit(ParamArray H.Controls.Diagram.Parts.Base.Part())
+  name.vb: ZoomToFit(ParamArray Part())
+- uid: H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Rect)
+  commentId: M:H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Rect)
+  id: ZoomTo(System.Windows.Rect)
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: ZoomTo(Rect)
+  nameWithType: Diagram.ZoomTo(Rect)
+  fullName: H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Rect)
+  type: Method
+  source:
+    id: ZoomTo
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 539
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public void ZoomTo(Rect rect)
+    parameters:
+    - id: rect
+      type: System.Windows.Rect
+    content.vb: Public Sub ZoomTo(rect As Rect)
+  overload: H.Controls.Diagram.Diagram.ZoomTo*
+  implements:
+  - H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Rect)
+- uid: H.Controls.Diagram.Diagram.ZoomTo(H.Controls.Diagram.Parts.Base.Part,System.Double)
+  commentId: M:H.Controls.Diagram.Diagram.ZoomTo(H.Controls.Diagram.Parts.Base.Part,System.Double)
+  id: ZoomTo(H.Controls.Diagram.Parts.Base.Part,System.Double)
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: ZoomTo(Part, double)
+  nameWithType: Diagram.ZoomTo(Part, double)
+  fullName: H.Controls.Diagram.Diagram.ZoomTo(H.Controls.Diagram.Parts.Base.Part, double)
+  type: Method
+  source:
+    id: ZoomTo
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 545
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public void ZoomTo(Part part, double scale = 1.8)
+    parameters:
+    - id: part
+      type: H.Controls.Diagram.Parts.Base.Part
+    - id: scale
+      type: System.Double
+    content.vb: Public Sub ZoomTo(part As Part, scale As Double = 1.8)
+  overload: H.Controls.Diagram.Diagram.ZoomTo*
+  nameWithType.vb: Diagram.ZoomTo(Part, Double)
+  fullName.vb: H.Controls.Diagram.Diagram.ZoomTo(H.Controls.Diagram.Parts.Base.Part, Double)
+  name.vb: ZoomTo(Part, Double)
+- uid: H.Controls.Diagram.Diagram.ZoomToSelectPart
+  commentId: M:H.Controls.Diagram.Diagram.ZoomToSelectPart
+  id: ZoomToSelectPart
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: ZoomToSelectPart()
+  nameWithType: Diagram.ZoomToSelectPart()
+  fullName: H.Controls.Diagram.Diagram.ZoomToSelectPart()
+  type: Method
+  source:
+    id: ZoomToSelectPart
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 555
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public void ZoomToSelectPart()
+    content.vb: Public Sub ZoomToSelectPart()
+  overload: H.Controls.Diagram.Diagram.ZoomToSelectPart*
+- uid: H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Point)
+  commentId: M:H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Point)
+  id: ZoomTo(System.Windows.Point)
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: ZoomTo(Point)
+  nameWithType: Diagram.ZoomTo(Point)
+  fullName: H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Point)
+  type: Method
+  source:
+    id: ZoomTo
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 563
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public void ZoomTo(Point point)
+    parameters:
+    - id: point
+      type: System.Windows.Point
+    content.vb: Public Sub ZoomTo(point As Point)
+  overload: H.Controls.Diagram.Diagram.ZoomTo*
+  implements:
+  - H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Point)
+- uid: H.Controls.Diagram.Diagram.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
+  commentId: M:H.Controls.Diagram.Diagram.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
+  id: OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: OnMouseLeftButtonDown(MouseButtonEventArgs)
+  nameWithType: Diagram.OnMouseLeftButtonDown(MouseButtonEventArgs)
+  fullName: H.Controls.Diagram.Diagram.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
+  type: Method
+  source:
+    id: OnMouseLeftButtonDown
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 571
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  summary: Invoked when an unhandled <xref href="System.Windows.UIElement.MouseLeftButtonDown" data-throw-if-not-resolved="false"></xref> routed event is raised on this element. Implement this method to add class handling for this event.
+  example: []
+  syntax:
+    content: protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+    parameters:
+    - id: e
+      type: System.Windows.Input.MouseButtonEventArgs
+      description: The <xref href="System.Windows.Input.MouseButtonEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data. The event data reports that the left mouse button was pressed.
+    content.vb: Protected Overrides Sub OnMouseLeftButtonDown(e As MouseButtonEventArgs)
+  overridden: System.Windows.UIElement.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
+  overload: H.Controls.Diagram.Diagram.OnMouseLeftButtonDown*
+- uid: H.Controls.Diagram.Diagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+  commentId: M:H.Controls.Diagram.Diagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+  id: GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: GetAllParts(Func<Part, bool>)
+  nameWithType: Diagram.GetAllParts(Func<Part, bool>)
+  fullName: H.Controls.Diagram.Diagram.GetAllParts(System.Func<H.Controls.Diagram.Parts.Base.Part, bool>)
+  type: Method
+  source:
+    id: GetAllParts
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 584
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public IEnumerable<Part> GetAllParts(Func<Part, bool> predicate = null)
+    parameters:
+    - id: predicate
+      type: System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean}
+    return:
+      type: System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Base.Part}
+    content.vb: Public Function GetAllParts(predicate As Func(Of Part, Boolean) = Nothing) As IEnumerable(Of Part)
+  overload: H.Controls.Diagram.Diagram.GetAllParts*
+  implements:
+  - H.Controls.Diagram.IDiagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+  nameWithType.vb: Diagram.GetAllParts(Func(Of Part, Boolean))
+  fullName.vb: H.Controls.Diagram.Diagram.GetAllParts(System.Func(Of H.Controls.Diagram.Parts.Base.Part, Boolean))
+  name.vb: GetAllParts(Func(Of Part, Boolean))
+- uid: H.Controls.Diagram.Diagram.RefreshData
+  commentId: M:H.Controls.Diagram.Diagram.RefreshData
+  id: RefreshData
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: RefreshData()
+  nameWithType: Diagram.RefreshData()
+  fullName: H.Controls.Diagram.Diagram.RefreshData()
+  type: Method
+  source:
+    id: RefreshData
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 591
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public void RefreshData()
+    content.vb: Public Sub RefreshData()
+  overload: H.Controls.Diagram.Diagram.RefreshData*
+- uid: H.Controls.Diagram.Diagram.RefreshLayout
+  commentId: M:H.Controls.Diagram.Diagram.RefreshLayout
+  id: RefreshLayout
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: RefreshLayout()
+  nameWithType: Diagram.RefreshLayout()
+  fullName: H.Controls.Diagram.Diagram.RefreshLayout()
+  type: Method
+  source:
+    id: RefreshLayout
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 631
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public void RefreshLayout()
+    content.vb: Public Sub RefreshLayout()
+  overload: H.Controls.Diagram.Diagram.RefreshLayout*
+- uid: H.Controls.Diagram.Diagram.RefreshLinkDrawer
+  commentId: M:H.Controls.Diagram.Diagram.RefreshLinkDrawer
+  id: RefreshLinkDrawer
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: RefreshLinkDrawer()
+  nameWithType: Diagram.RefreshLinkDrawer()
+  fullName: H.Controls.Diagram.Diagram.RefreshLinkDrawer()
+  type: Method
+  source:
+    id: RefreshLinkDrawer
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 657
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public void RefreshLinkDrawer()
+    content.vb: Public Sub RefreshLinkDrawer()
+  overload: H.Controls.Diagram.Diagram.RefreshLinkDrawer*
+- uid: H.Controls.Diagram.Diagram.AddNode(H.Controls.Diagram.Parts.Node[])
+  commentId: M:H.Controls.Diagram.Diagram.AddNode(H.Controls.Diagram.Parts.Node[])
+  id: AddNode(H.Controls.Diagram.Parts.Node[])
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: AddNode(params Node[])
+  nameWithType: Diagram.AddNode(params Node[])
+  fullName: H.Controls.Diagram.Diagram.AddNode(params H.Controls.Diagram.Parts.Node[])
+  type: Method
+  source:
+    id: AddNode
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 666
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public void AddNode(params Node[] nodes)
+    parameters:
+    - id: nodes
+      type: H.Controls.Diagram.Parts.Node[]
+    content.vb: Public Sub AddNode(ParamArray nodes As Node())
+  overload: H.Controls.Diagram.Diagram.AddNode*
+  implements:
+  - H.Controls.Diagram.IDiagram.AddNode(H.Controls.Diagram.Parts.Node[])
+  nameWithType.vb: Diagram.AddNode(ParamArray Node())
+  fullName.vb: H.Controls.Diagram.Diagram.AddNode(ParamArray H.Controls.Diagram.Parts.Node())
+  name.vb: AddNode(ParamArray Node())
+- uid: H.Controls.Diagram.Diagram.RemoveNode(H.Controls.Diagram.Parts.Node[])
+  commentId: M:H.Controls.Diagram.Diagram.RemoveNode(H.Controls.Diagram.Parts.Node[])
+  id: RemoveNode(H.Controls.Diagram.Parts.Node[])
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: RemoveNode(params Node[])
+  nameWithType: Diagram.RemoveNode(params Node[])
+  fullName: H.Controls.Diagram.Diagram.RemoveNode(params H.Controls.Diagram.Parts.Node[])
+  type: Method
+  source:
+    id: RemoveNode
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 690
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public void RemoveNode(params Node[] nodes)
+    parameters:
+    - id: nodes
+      type: H.Controls.Diagram.Parts.Node[]
+    content.vb: Public Sub RemoveNode(ParamArray nodes As Node())
+  overload: H.Controls.Diagram.Diagram.RemoveNode*
+  implements:
+  - H.Controls.Diagram.IDiagram.RemoveNode(H.Controls.Diagram.Parts.Node[])
+  nameWithType.vb: Diagram.RemoveNode(ParamArray Node())
+  fullName.vb: H.Controls.Diagram.Diagram.RemoveNode(ParamArray H.Controls.Diagram.Parts.Node())
+  name.vb: RemoveNode(ParamArray Node())
+- uid: H.Controls.Diagram.Diagram.Clear
+  commentId: M:H.Controls.Diagram.Diagram.Clear
+  id: Clear
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: Diagram.Clear()
+  fullName: H.Controls.Diagram.Diagram.Clear()
+  type: Method
+  source:
+    id: Clear
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 703
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: protected void Clear()
+    content.vb: Protected Sub Clear()
+  overload: H.Controls.Diagram.Diagram.Clear*
+- uid: H.Controls.Diagram.Diagram.InvokeMessage(System.String)
+  commentId: M:H.Controls.Diagram.Diagram.InvokeMessage(System.String)
+  id: InvokeMessage(System.String)
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: InvokeMessage(string)
+  nameWithType: Diagram.InvokeMessage(string)
+  fullName: H.Controls.Diagram.Diagram.InvokeMessage(string)
+  type: Method
+  source:
+    id: InvokeMessage
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 714
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public virtual void InvokeMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Overridable Sub InvokeMessage(message As String)
+  overload: H.Controls.Diagram.Diagram.InvokeMessage*
+  nameWithType.vb: Diagram.InvokeMessage(String)
+  fullName.vb: H.Controls.Diagram.Diagram.InvokeMessage(String)
+  name.vb: InvokeMessage(String)
 - uid: H.Controls.Diagram.Diagram.Message
   commentId: P:H.Controls.Diagram.Diagram.Message
   id: Message
@@ -1365,7 +2208,7 @@ items:
   source:
     id: Message
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 522
+    startLine: 719
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -1402,7 +2245,7 @@ items:
   source:
     id: MessageProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 530
+    startLine: 727
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -1411,1058 +2254,6 @@ items:
     return:
       type: System.Windows.DependencyProperty
     content.vb: Public Shared ReadOnly MessageProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.Layout
-  commentId: P:H.Controls.Diagram.Diagram.Layout
-  id: Layout
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: Layout
-  nameWithType: Diagram.Layout
-  fullName: H.Controls.Diagram.Diagram.Layout
-  type: Property
-  source:
-    id: Layout
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 549
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Display(Name = "布局方式", GroupName = "显示设置")]
-
-      public ILayout Layout { get; set; }
-    parameters: []
-    return:
-      type: H.Controls.Diagram.ILayout
-    content.vb: >-
-      <Display(Name:="布局方式", GroupName:="显示设置")>
-
-      Public Property Layout As ILayout
-  overload: H.Controls.Diagram.Diagram.Layout*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 布局方式
-    - name: GroupName
-      type: System.String
-      value: 显示设置
-- uid: H.Controls.Diagram.Diagram.LayoutProperty
-  commentId: F:H.Controls.Diagram.Diagram.LayoutProperty
-  id: LayoutProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: LayoutProperty
-  nameWithType: Diagram.LayoutProperty
-  fullName: H.Controls.Diagram.Diagram.LayoutProperty
-  type: Field
-  source:
-    id: LayoutProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 557
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly DependencyProperty LayoutProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly LayoutProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.Links
-  commentId: P:H.Controls.Diagram.Diagram.Links
-  id: Links
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: Links
-  nameWithType: Diagram.Links
-  fullName: H.Controls.Diagram.Diagram.Links
-  type: Property
-  source:
-    id: Links
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 583
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Browsable(false)]
-
-      public List<Link> Links { get; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.List{H.Controls.Diagram.Link}
-    content.vb: >-
-      <Browsable(False)>
-
-      Public Property Links As List(Of Link)
-  overload: H.Controls.Diagram.Diagram.Links*
-  attributes:
-  - type: System.ComponentModel.BrowsableAttribute
-    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
-    arguments:
-    - type: System.Boolean
-      value: false
-- uid: H.Controls.Diagram.Diagram.Nodes
-  commentId: P:H.Controls.Diagram.Diagram.Nodes
-  id: Nodes
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: Nodes
-  nameWithType: Diagram.Nodes
-  fullName: H.Controls.Diagram.Diagram.Nodes
-  type: Property
-  source:
-    id: Nodes
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 585
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Browsable(false)]
-
-      public List<Node> Nodes { get; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.List{H.Controls.Diagram.Node}
-    content.vb: >-
-      <Browsable(False)>
-
-      Public Property Nodes As List(Of Node)
-  overload: H.Controls.Diagram.Diagram.Nodes*
-  attributes:
-  - type: System.ComponentModel.BrowsableAttribute
-    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
-    arguments:
-    - type: System.Boolean
-      value: false
-- uid: H.Controls.Diagram.Diagram.SelectedPart
-  commentId: P:H.Controls.Diagram.Diagram.SelectedPart
-  id: SelectedPart
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: SelectedPart
-  nameWithType: Diagram.SelectedPart
-  fullName: H.Controls.Diagram.Diagram.SelectedPart
-  type: Property
-  source:
-    id: SelectedPart
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 588
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Display(Name = "选中部位", GroupName = "显示设置")]
-
-      public Part SelectedPart { get; set; }
-    parameters: []
-    return:
-      type: H.Controls.Diagram.Part
-    content.vb: >-
-      <Display(Name:="选中部位", GroupName:="显示设置")>
-
-      Public Property SelectedPart As Part
-  overload: H.Controls.Diagram.Diagram.SelectedPart*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 选中部位
-    - name: GroupName
-      type: System.String
-      value: 显示设置
-- uid: H.Controls.Diagram.Diagram.SelectedPartProperty
-  commentId: F:H.Controls.Diagram.Diagram.SelectedPartProperty
-  id: SelectedPartProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: SelectedPartProperty
-  nameWithType: Diagram.SelectedPartProperty
-  fullName: H.Controls.Diagram.Diagram.SelectedPartProperty
-  type: Field
-  source:
-    id: SelectedPartProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 596
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly DependencyProperty SelectedPartProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly SelectedPartProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.SelectedNode
-  commentId: P:H.Controls.Diagram.Diagram.SelectedNode
-  id: SelectedNode
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: SelectedNode
-  nameWithType: Diagram.SelectedNode
-  fullName: H.Controls.Diagram.Diagram.SelectedNode
-  type: Property
-  source:
-    id: SelectedNode
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 609
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Display(Name = "选中节点", GroupName = "显示设置")]
-
-      public Node SelectedNode { get; set; }
-    parameters: []
-    return:
-      type: H.Controls.Diagram.Node
-    content.vb: >-
-      <Display(Name:="选中节点", GroupName:="显示设置")>
-
-      Public Property SelectedNode As Node
-  overload: H.Controls.Diagram.Diagram.SelectedNode*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 选中节点
-    - name: GroupName
-      type: System.String
-      value: 显示设置
-- uid: H.Controls.Diagram.Diagram.SelectedNodeProperty
-  commentId: F:H.Controls.Diagram.Diagram.SelectedNodeProperty
-  id: SelectedNodeProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: SelectedNodeProperty
-  nameWithType: Diagram.SelectedNodeProperty
-  fullName: H.Controls.Diagram.Diagram.SelectedNodeProperty
-  type: Field
-  source:
-    id: SelectedNodeProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 617
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly DependencyProperty SelectedNodeProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly SelectedNodeProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.LinkTemplate
-  commentId: P:H.Controls.Diagram.Diagram.LinkTemplate
-  id: LinkTemplate
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: LinkTemplate
-  nameWithType: Diagram.LinkTemplate
-  fullName: H.Controls.Diagram.Diagram.LinkTemplate
-  type: Property
-  source:
-    id: LinkTemplate
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 629
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Browsable(false)]
-
-      public DataTemplate LinkTemplate { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.DataTemplate
-    content.vb: >-
-      <Browsable(False)>
-
-      Public Property LinkTemplate As DataTemplate
-  overload: H.Controls.Diagram.Diagram.LinkTemplate*
-  attributes:
-  - type: System.ComponentModel.BrowsableAttribute
-    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
-    arguments:
-    - type: System.Boolean
-      value: false
-- uid: H.Controls.Diagram.Diagram.NodesSource
-  commentId: P:H.Controls.Diagram.Diagram.NodesSource
-  id: NodesSource
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: NodesSource
-  nameWithType: Diagram.NodesSource
-  fullName: H.Controls.Diagram.Diagram.NodesSource
-  type: Property
-  source:
-    id: NodesSource
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 632
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Browsable(false)]
-
-      public IList NodesSource { get; set; }
-    parameters: []
-    return:
-      type: System.Collections.IList
-    content.vb: >-
-      <Browsable(False)>
-
-      Public Property NodesSource As IList
-  overload: H.Controls.Diagram.Diagram.NodesSource*
-  attributes:
-  - type: System.ComponentModel.BrowsableAttribute
-    ctor: System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)
-    arguments:
-    - type: System.Boolean
-      value: false
-- uid: H.Controls.Diagram.Diagram.NodesSourceProperty
-  commentId: F:H.Controls.Diagram.Diagram.NodesSourceProperty
-  id: NodesSourceProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: NodesSourceProperty
-  nameWithType: Diagram.NodesSourceProperty
-  fullName: H.Controls.Diagram.Diagram.NodesSourceProperty
-  type: Field
-  source:
-    id: NodesSourceProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 640
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly DependencyProperty NodesSourceProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly NodesSourceProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.UseFlowableSelectToRunning
-  commentId: P:H.Controls.Diagram.Diagram.UseFlowableSelectToRunning
-  id: UseFlowableSelectToRunning
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: UseFlowableSelectToRunning
-  nameWithType: Diagram.UseFlowableSelectToRunning
-  fullName: H.Controls.Diagram.Diagram.UseFlowableSelectToRunning
-  type: Property
-  source:
-    id: UseFlowableSelectToRunning
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 663
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Display(Name = "执行时节点自动选中", GroupName = "流程控制")]
-
-      public bool UseFlowableSelectToRunning { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <Display(Name:="执行时节点自动选中", GroupName:="流程控制")>
-
-      Public Property UseFlowableSelectToRunning As Boolean
-  overload: H.Controls.Diagram.Diagram.UseFlowableSelectToRunning*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 执行时节点自动选中
-    - name: GroupName
-      type: System.String
-      value: 流程控制
-- uid: H.Controls.Diagram.Diagram.UseFlowableSelectToRunningProperty
-  commentId: F:H.Controls.Diagram.Diagram.UseFlowableSelectToRunningProperty
-  id: UseFlowableSelectToRunningProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: UseFlowableSelectToRunningProperty
-  nameWithType: Diagram.UseFlowableSelectToRunningProperty
-  fullName: H.Controls.Diagram.Diagram.UseFlowableSelectToRunningProperty
-  type: Field
-  source:
-    id: UseFlowableSelectToRunningProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 671
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly DependencyProperty UseFlowableSelectToRunningProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly UseFlowableSelectToRunningProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.FlowableZoomMode
-  commentId: P:H.Controls.Diagram.Diagram.FlowableZoomMode
-  id: FlowableZoomMode
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: FlowableZoomMode
-  nameWithType: Diagram.FlowableZoomMode
-  fullName: H.Controls.Diagram.Diagram.FlowableZoomMode
-  type: Property
-  source:
-    id: FlowableZoomMode
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 690
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Display(Name = "执行时节点自动缩放", GroupName = "流程控制")]
-
-      public DiagramFlowableZoomMode FlowableZoomMode { get; set; }
-    parameters: []
-    return:
-      type: H.Controls.Diagram.DiagramFlowableZoomMode
-    content.vb: >-
-      <Display(Name:="执行时节点自动缩放", GroupName:="流程控制")>
-
-      Public Property FlowableZoomMode As DiagramFlowableZoomMode
-  overload: H.Controls.Diagram.Diagram.FlowableZoomMode*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 执行时节点自动缩放
-    - name: GroupName
-      type: System.String
-      value: 流程控制
-- uid: H.Controls.Diagram.Diagram.FlowableZoomModeProperty
-  commentId: F:H.Controls.Diagram.Diagram.FlowableZoomModeProperty
-  id: FlowableZoomModeProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: FlowableZoomModeProperty
-  nameWithType: Diagram.FlowableZoomModeProperty
-  fullName: H.Controls.Diagram.Diagram.FlowableZoomModeProperty
-  type: Field
-  source:
-    id: FlowableZoomModeProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 698
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly DependencyProperty FlowableZoomModeProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly FlowableZoomModeProperty As DependencyProperty
-- uid: H.Controls.Diagram.Diagram.AddLinkedRoutedEvent
-  commentId: F:H.Controls.Diagram.Diagram.AddLinkedRoutedEvent
-  id: AddLinkedRoutedEvent
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: AddLinkedRoutedEvent
-  nameWithType: Diagram.AddLinkedRoutedEvent
-  fullName: H.Controls.Diagram.Diagram.AddLinkedRoutedEvent
-  type: Field
-  source:
-    id: AddLinkedRoutedEvent
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 721
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly RoutedEvent AddLinkedRoutedEvent
-    return:
-      type: System.Windows.RoutedEvent
-    content.vb: Public Shared ReadOnly AddLinkedRoutedEvent As RoutedEvent
-- uid: H.Controls.Diagram.Diagram.AddLinked
-  commentId: E:H.Controls.Diagram.Diagram.AddLinked
-  id: AddLinked
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: AddLinked
-  nameWithType: Diagram.AddLinked
-  fullName: H.Controls.Diagram.Diagram.AddLinked
-  type: Event
-  source:
-    id: AddLinked
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 724
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public event EventHandler<RoutedEventArgs<Link>> AddLinked
-    return:
-      type: System.EventHandler{H.Mvvm.RoutedEventArgs{H.Controls.Diagram.Link}}
-    content.vb: Public Event AddLinked As EventHandler(Of RoutedEventArgs(Of Link))
-- uid: H.Controls.Diagram.Diagram.ItemsChangedRoutedEvent
-  commentId: F:H.Controls.Diagram.Diagram.ItemsChangedRoutedEvent
-  id: ItemsChangedRoutedEvent
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: ItemsChangedRoutedEvent
-  nameWithType: Diagram.ItemsChangedRoutedEvent
-  fullName: H.Controls.Diagram.Diagram.ItemsChangedRoutedEvent
-  type: Field
-  source:
-    id: ItemsChangedRoutedEvent
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 736
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly RoutedEvent ItemsChangedRoutedEvent
-    return:
-      type: System.Windows.RoutedEvent
-    content.vb: Public Shared ReadOnly ItemsChangedRoutedEvent As RoutedEvent
-- uid: H.Controls.Diagram.Diagram.ItemsChanged
-  commentId: E:H.Controls.Diagram.Diagram.ItemsChanged
-  id: ItemsChanged
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: ItemsChanged
-  nameWithType: Diagram.ItemsChanged
-  fullName: H.Controls.Diagram.Diagram.ItemsChanged
-  type: Event
-  source:
-    id: ItemsChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 739
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public event RoutedEventHandler ItemsChanged
-    return:
-      type: System.Windows.RoutedEventHandler
-    content.vb: Public Event ItemsChanged As RoutedEventHandler
-- uid: H.Controls.Diagram.Diagram.SelectedPartChangedRoutedEvent
-  commentId: F:H.Controls.Diagram.Diagram.SelectedPartChangedRoutedEvent
-  id: SelectedPartChangedRoutedEvent
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: SelectedPartChangedRoutedEvent
-  nameWithType: Diagram.SelectedPartChangedRoutedEvent
-  fullName: H.Controls.Diagram.Diagram.SelectedPartChangedRoutedEvent
-  type: Field
-  source:
-    id: SelectedPartChangedRoutedEvent
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 751
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly RoutedEvent SelectedPartChangedRoutedEvent
-    return:
-      type: System.Windows.RoutedEvent
-    content.vb: Public Shared ReadOnly SelectedPartChangedRoutedEvent As RoutedEvent
-- uid: H.Controls.Diagram.Diagram.SelectedPartChanged
-  commentId: E:H.Controls.Diagram.Diagram.SelectedPartChanged
-  id: SelectedPartChanged
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: SelectedPartChanged
-  nameWithType: Diagram.SelectedPartChanged
-  fullName: H.Controls.Diagram.Diagram.SelectedPartChanged
-  type: Event
-  source:
-    id: SelectedPartChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 754
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public event RoutedEventHandler SelectedPartChanged
-    return:
-      type: System.Windows.RoutedEventHandler
-    content.vb: Public Event SelectedPartChanged As RoutedEventHandler
-- uid: H.Controls.Diagram.Diagram.OnSelectedPartChanged
-  commentId: M:H.Controls.Diagram.Diagram.OnSelectedPartChanged
-  id: OnSelectedPartChanged
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: OnSelectedPartChanged()
-  nameWithType: Diagram.OnSelectedPartChanged()
-  fullName: H.Controls.Diagram.Diagram.OnSelectedPartChanged()
-  type: Method
-  source:
-    id: OnSelectedPartChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 760
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: protected void OnSelectedPartChanged()
-    content.vb: Protected Sub OnSelectedPartChanged()
-  overload: H.Controls.Diagram.Diagram.OnSelectedPartChanged*
-- uid: H.Controls.Diagram.Diagram.RunningPartChangedRoutedEvent
-  commentId: F:H.Controls.Diagram.Diagram.RunningPartChangedRoutedEvent
-  id: RunningPartChangedRoutedEvent
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: RunningPartChangedRoutedEvent
-  nameWithType: Diagram.RunningPartChangedRoutedEvent
-  fullName: H.Controls.Diagram.Diagram.RunningPartChangedRoutedEvent
-  type: Field
-  source:
-    id: RunningPartChangedRoutedEvent
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 768
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly RoutedEvent RunningPartChangedRoutedEvent
-    return:
-      type: System.Windows.RoutedEvent
-    content.vb: Public Shared ReadOnly RunningPartChangedRoutedEvent As RoutedEvent
-- uid: H.Controls.Diagram.Diagram.RunningPartChanged
-  commentId: E:H.Controls.Diagram.Diagram.RunningPartChanged
-  id: RunningPartChanged
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: RunningPartChanged
-  nameWithType: Diagram.RunningPartChanged
-  fullName: H.Controls.Diagram.Diagram.RunningPartChanged
-  type: Event
-  source:
-    id: RunningPartChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 771
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public event RoutedEventHandler RunningPartChanged
-    return:
-      type: System.Windows.RoutedEventHandler
-    content.vb: Public Event RunningPartChanged As RoutedEventHandler
-- uid: H.Controls.Diagram.Diagram.ZoomToFit
-  commentId: M:H.Controls.Diagram.Diagram.ZoomToFit
-  id: ZoomToFit
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: ZoomToFit()
-  nameWithType: Diagram.ZoomToFit()
-  fullName: H.Controls.Diagram.Diagram.ZoomToFit()
-  type: Method
-  source:
-    id: ZoomToFit
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 794
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public void ZoomToFit()
-    content.vb: Public Sub ZoomToFit()
-  overload: H.Controls.Diagram.Diagram.ZoomToFit*
-- uid: H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Rect)
-  commentId: M:H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Rect)
-  id: ZoomTo(System.Windows.Rect)
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: ZoomTo(Rect)
-  nameWithType: Diagram.ZoomTo(Rect)
-  fullName: H.Controls.Diagram.Diagram.ZoomTo(System.Windows.Rect)
-  type: Method
-  source:
-    id: ZoomTo
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 809
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public void ZoomTo(Rect rect)
-    parameters:
-    - id: rect
-      type: System.Windows.Rect
-    content.vb: Public Sub ZoomTo(rect As Rect)
-  overload: H.Controls.Diagram.Diagram.ZoomTo*
-- uid: H.Controls.Diagram.Diagram.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
-  commentId: M:H.Controls.Diagram.Diagram.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
-  id: OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: OnMouseLeftButtonDown(MouseButtonEventArgs)
-  nameWithType: Diagram.OnMouseLeftButtonDown(MouseButtonEventArgs)
-  fullName: H.Controls.Diagram.Diagram.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
-  type: Method
-  source:
-    id: OnMouseLeftButtonDown
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 817
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  summary: Invoked when an unhandled <xref href="System.Windows.UIElement.MouseLeftButtonDown" data-throw-if-not-resolved="false"></xref> routed event is raised on this element. Implement this method to add class handling for this event.
-  example: []
-  syntax:
-    content: protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
-    parameters:
-    - id: e
-      type: System.Windows.Input.MouseButtonEventArgs
-      description: The <xref href="System.Windows.Input.MouseButtonEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data. The event data reports that the left mouse button was pressed.
-    content.vb: Protected Overrides Sub OnMouseLeftButtonDown(e As MouseButtonEventArgs)
-  overridden: System.Windows.UIElement.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)
-  overload: H.Controls.Diagram.Diagram.OnMouseLeftButtonDown*
-- uid: H.Controls.Diagram.Diagram.GetAllParts(System.Func{H.Controls.Diagram.Part,System.Boolean})
-  commentId: M:H.Controls.Diagram.Diagram.GetAllParts(System.Func{H.Controls.Diagram.Part,System.Boolean})
-  id: GetAllParts(System.Func{H.Controls.Diagram.Part,System.Boolean})
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: GetAllParts(Func<Part, bool>)
-  nameWithType: Diagram.GetAllParts(Func<Part, bool>)
-  fullName: H.Controls.Diagram.Diagram.GetAllParts(System.Func<H.Controls.Diagram.Part, bool>)
-  type: Method
-  source:
-    id: GetAllParts
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 830
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public IEnumerable<Part> GetAllParts(Func<Part, bool> predicate = null)
-    parameters:
-    - id: predicate
-      type: System.Func{H.Controls.Diagram.Part,System.Boolean}
-    return:
-      type: System.Collections.Generic.IEnumerable{H.Controls.Diagram.Part}
-    content.vb: Public Function GetAllParts(predicate As Func(Of Part, Boolean) = Nothing) As IEnumerable(Of Part)
-  overload: H.Controls.Diagram.Diagram.GetAllParts*
-  nameWithType.vb: Diagram.GetAllParts(Func(Of Part, Boolean))
-  fullName.vb: H.Controls.Diagram.Diagram.GetAllParts(System.Func(Of H.Controls.Diagram.Part, Boolean))
-  name.vb: GetAllParts(Func(Of Part, Boolean))
-- uid: H.Controls.Diagram.Diagram.Start(H.Controls.Diagram.Node)
-  commentId: M:H.Controls.Diagram.Diagram.Start(H.Controls.Diagram.Node)
-  id: Start(H.Controls.Diagram.Node)
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: Start(Node)
-  nameWithType: Diagram.Start(Node)
-  fullName: H.Controls.Diagram.Diagram.Start(H.Controls.Diagram.Node)
-  type: Method
-  source:
-    id: Start
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 836
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public virtual Task<bool?> Start(Node startNode)
-    parameters:
-    - id: startNode
-      type: H.Controls.Diagram.Node
-    return:
-      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
-    content.vb: Public Overridable Function Start(startNode As Node) As Task(Of Boolean?)
-  overload: H.Controls.Diagram.Diagram.Start*
-- uid: H.Controls.Diagram.Diagram.GetStartNode(System.String@)
-  commentId: M:H.Controls.Diagram.Diagram.GetStartNode(System.String@)
-  id: GetStartNode(System.String@)
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: GetStartNode(out string)
-  nameWithType: Diagram.GetStartNode(out string)
-  fullName: H.Controls.Diagram.Diagram.GetStartNode(out string)
-  type: Method
-  source:
-    id: GetStartNode
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 849
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: protected virtual Node GetStartNode(out string message)
-    parameters:
-    - id: message
-      type: System.String
-    return:
-      type: H.Controls.Diagram.Node
-    content.vb: Protected Overridable Function GetStartNode(message As String) As Node
-  overload: H.Controls.Diagram.Diagram.GetStartNode*
-  nameWithType.vb: Diagram.GetStartNode(String)
-  fullName.vb: H.Controls.Diagram.Diagram.GetStartNode(String)
-  name.vb: GetStartNode(String)
-- uid: H.Controls.Diagram.Diagram.RefreshData
-  commentId: M:H.Controls.Diagram.Diagram.RefreshData
-  id: RefreshData
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: RefreshData()
-  nameWithType: Diagram.RefreshData()
-  fullName: H.Controls.Diagram.Diagram.RefreshData()
-  type: Method
-  source:
-    id: RefreshData
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 876
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public void RefreshData()
-    content.vb: Public Sub RefreshData()
-  overload: H.Controls.Diagram.Diagram.RefreshData*
-- uid: H.Controls.Diagram.Diagram.RefreshLayout
-  commentId: M:H.Controls.Diagram.Diagram.RefreshLayout
-  id: RefreshLayout
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: RefreshLayout()
-  nameWithType: Diagram.RefreshLayout()
-  fullName: H.Controls.Diagram.Diagram.RefreshLayout()
-  type: Method
-  source:
-    id: RefreshLayout
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 916
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public void RefreshLayout()
-    content.vb: Public Sub RefreshLayout()
-  overload: H.Controls.Diagram.Diagram.RefreshLayout*
-- uid: H.Controls.Diagram.Diagram.RefreshLinkDrawer
-  commentId: M:H.Controls.Diagram.Diagram.RefreshLinkDrawer
-  id: RefreshLinkDrawer
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: RefreshLinkDrawer()
-  nameWithType: Diagram.RefreshLinkDrawer()
-  fullName: H.Controls.Diagram.Diagram.RefreshLinkDrawer()
-  type: Method
-  source:
-    id: RefreshLinkDrawer
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 942
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public void RefreshLinkDrawer()
-    content.vb: Public Sub RefreshLinkDrawer()
-  overload: H.Controls.Diagram.Diagram.RefreshLinkDrawer*
-- uid: H.Controls.Diagram.Diagram.AddNode(H.Controls.Diagram.Node[])
-  commentId: M:H.Controls.Diagram.Diagram.AddNode(H.Controls.Diagram.Node[])
-  id: AddNode(H.Controls.Diagram.Node[])
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: AddNode(params Node[])
-  nameWithType: Diagram.AddNode(params Node[])
-  fullName: H.Controls.Diagram.Diagram.AddNode(params H.Controls.Diagram.Node[])
-  type: Method
-  source:
-    id: AddNode
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 951
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public void AddNode(params Node[] nodes)
-    parameters:
-    - id: nodes
-      type: H.Controls.Diagram.Node[]
-    content.vb: Public Sub AddNode(ParamArray nodes As Node())
-  overload: H.Controls.Diagram.Diagram.AddNode*
-  nameWithType.vb: Diagram.AddNode(ParamArray Node())
-  fullName.vb: H.Controls.Diagram.Diagram.AddNode(ParamArray H.Controls.Diagram.Node())
-  name.vb: AddNode(ParamArray Node())
-- uid: H.Controls.Diagram.Diagram.RemoveNode(H.Controls.Diagram.Node[])
-  commentId: M:H.Controls.Diagram.Diagram.RemoveNode(H.Controls.Diagram.Node[])
-  id: RemoveNode(H.Controls.Diagram.Node[])
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: RemoveNode(params Node[])
-  nameWithType: Diagram.RemoveNode(params Node[])
-  fullName: H.Controls.Diagram.Diagram.RemoveNode(params H.Controls.Diagram.Node[])
-  type: Method
-  source:
-    id: RemoveNode
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 964
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public void RemoveNode(params Node[] nodes)
-    parameters:
-    - id: nodes
-      type: H.Controls.Diagram.Node[]
-    content.vb: Public Sub RemoveNode(ParamArray nodes As Node())
-  overload: H.Controls.Diagram.Diagram.RemoveNode*
-  nameWithType.vb: Diagram.RemoveNode(ParamArray Node())
-  fullName.vb: H.Controls.Diagram.Diagram.RemoveNode(ParamArray H.Controls.Diagram.Node())
-  name.vb: RemoveNode(ParamArray Node())
-- uid: H.Controls.Diagram.Diagram.Duration
-  commentId: P:H.Controls.Diagram.Diagram.Duration
-  id: Duration
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: Duration
-  nameWithType: Diagram.Duration
-  fullName: H.Controls.Diagram.Diagram.Duration
-  type: Property
-  source:
-    id: Duration
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 988
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: >-
-      [Display(Name = "切换布局动画间隔", GroupName = "显示设置")]
-
-      public TimeSpan Duration { get; set; }
-    parameters: []
-    return:
-      type: System.TimeSpan
-    content.vb: >-
-      <Display(Name:="切换布局动画间隔", GroupName:="显示设置")>
-
-      Public Property Duration As TimeSpan
-  overload: H.Controls.Diagram.Diagram.Duration*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
-    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: 切换布局动画间隔
-    - name: GroupName
-      type: System.String
-      value: 显示设置
-- uid: H.Controls.Diagram.Diagram.DurationProperty
-  commentId: F:H.Controls.Diagram.Diagram.DurationProperty
-  id: DurationProperty
-  parent: H.Controls.Diagram.Diagram
-  langs:
-  - csharp
-  - vb
-  name: DurationProperty
-  nameWithType: Diagram.DurationProperty
-  fullName: H.Controls.Diagram.Diagram.DurationProperty
-  type: Field
-  source:
-    id: DurationProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 996
-  assemblies:
-  - H.Controls.Diagram
-  namespace: H.Controls.Diagram
-  syntax:
-    content: public static readonly DependencyProperty DurationProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly DurationProperty As DependencyProperty
 - uid: H.Controls.Diagram.Diagram.UseAnimation
   commentId: P:H.Controls.Diagram.Diagram.UseAnimation
   id: UseAnimation
@@ -2477,7 +2268,7 @@ items:
   source:
     id: UseAnimation
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 1026
+    startLine: 730
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -2519,7 +2310,7 @@ items:
   source:
     id: LinkDrawer
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 1029
+    startLine: 733
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -2530,7 +2321,7 @@ items:
       public ILinkDrawer LinkDrawer { get; set; }
     parameters: []
     return:
-      type: H.Controls.Diagram.ILinkDrawer
+      type: H.Controls.Diagram.LinkDrawers.ILinkDrawer
     content.vb: >-
       <Browsable(False)>
 
@@ -2556,7 +2347,7 @@ items:
   source:
     id: LinkDrawerProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
-    startLine: 1037
+    startLine: 741
   assemblies:
   - H.Controls.Diagram
   namespace: H.Controls.Diagram
@@ -2565,6 +2356,79 @@ items:
     return:
       type: System.Windows.DependencyProperty
     content.vb: Public Shared ReadOnly LinkDrawerProperty As DependencyProperty
+- uid: H.Controls.Diagram.Diagram.DataSource
+  commentId: P:H.Controls.Diagram.Diagram.DataSource
+  id: DataSource
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: DataSource
+  nameWithType: Diagram.DataSource
+  fullName: H.Controls.Diagram.Diagram.DataSource
+  type: Property
+  source:
+    id: DataSource
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 754
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  example: []
+  syntax:
+    content: public IDiagramDataSource DataSource { get; set; }
+    parameters: []
+    return:
+      type: H.Controls.Diagram.IDiagramDataSource
+    content.vb: Public Property DataSource As IDiagramDataSource
+  overload: H.Controls.Diagram.Diagram.DataSource*
+  implements:
+  - H.Controls.Diagram.IDiagram.DataSource
+- uid: H.Controls.Diagram.Diagram.DataSourceProperty
+  commentId: F:H.Controls.Diagram.Diagram.DataSourceProperty
+  id: DataSourceProperty
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: DataSourceProperty
+  nameWithType: Diagram.DataSourceProperty
+  fullName: H.Controls.Diagram.Diagram.DataSourceProperty
+  type: Field
+  source:
+    id: DataSourceProperty
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 760
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public static readonly DependencyProperty DataSourceProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly DataSourceProperty As DependencyProperty
+- uid: H.Controls.Diagram.Diagram.UpdateNodesToDataSource
+  commentId: M:H.Controls.Diagram.Diagram.UpdateNodesToDataSource
+  id: UpdateNodesToDataSource
+  parent: H.Controls.Diagram.Diagram
+  langs:
+  - csharp
+  - vb
+  name: UpdateNodesToDataSource()
+  nameWithType: Diagram.UpdateNodesToDataSource()
+  fullName: H.Controls.Diagram.Diagram.UpdateNodesToDataSource()
+  type: Method
+  source:
+    id: UpdateNodesToDataSource
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\Diagram.xaml.cs
+    startLine: 779
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: protected void UpdateNodesToDataSource()
+    content.vb: Protected Sub UpdateNodesToDataSource()
+  overload: H.Controls.Diagram.Diagram.UpdateNodesToDataSource*
 references:
 - uid: H.Controls.Diagram
   commentId: N:H.Controls.Diagram
@@ -2711,6 +2575,13 @@ references:
   name: IAddChild
   nameWithType: IAddChild
   fullName: System.Windows.Markup.IAddChild
+- uid: H.Controls.Diagram.IDiagram
+  commentId: T:H.Controls.Diagram.IDiagram
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.IDiagram.html
+  name: IDiagram
+  nameWithType: IDiagram
+  fullName: H.Controls.Diagram.IDiagram
 - uid: System.Windows.Controls.ContentControl.ContentProperty
   commentId: F:System.Windows.Controls.ContentControl.ContentProperty
   parent: System.Windows.Controls.ContentControl
@@ -12436,6 +12307,131 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+- uid: H.Controls.Diagram.Diagram.H.Controls.Diagram.DiagramExtension.AligmentNodes
+  commentId: M:H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+  parent: H.Controls.Diagram.DiagramExtension
+  definition: H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+  href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_AligmentNodes_H_Controls_Diagram_Diagram_
+  name: AligmentNodes(Diagram)
+  nameWithType: DiagramExtension.AligmentNodes(Diagram)
+  fullName: H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+  spec.csharp:
+  - uid: H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+    name: AligmentNodes
+    href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_AligmentNodes_H_Controls_Diagram_Diagram_
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+    name: AligmentNodes
+    href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_AligmentNodes_H_Controls_Diagram_Diagram_
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: )
+- uid: H.Controls.Diagram.Diagram.H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+  commentId: M:H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+  parent: H.Controls.Diagram.DiagramExtension
+  definition: H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+  href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_LinkNodes_H_Controls_Diagram_Diagram_H_Controls_Diagram_Parts_Node_H_Controls_Diagram_Parts_Node_System_Windows_Controls_Dock_
+  name: LinkNodes(Diagram, Node, Node, Dock)
+  nameWithType: DiagramExtension.LinkNodes(Diagram, Node, Node, Dock)
+  fullName: H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram, H.Controls.Diagram.Parts.Node, H.Controls.Diagram.Parts.Node, System.Windows.Controls.Dock)
+  spec.csharp:
+  - uid: H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+    name: LinkNodes
+    href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_LinkNodes_H_Controls_Diagram_Diagram_H_Controls_Diagram_Parts_Node_H_Controls_Diagram_Parts_Node_System_Windows_Controls_Dock_
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Controls.Dock
+    name: Dock
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls.dock
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+    name: LinkNodes
+    href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_LinkNodes_H_Controls_Diagram_Diagram_H_Controls_Diagram_Parts_Node_H_Controls_Diagram_Parts_Node_System_Windows_Controls_Dock_
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Controls.Dock
+    name: Dock
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls.dock
+  - name: )
+- uid: H.Controls.Diagram.Diagram.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<Diagram>(Diagram)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<Diagram>(Diagram)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Controls.Diagram.Diagram>(H.Controls.Diagram.Diagram)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of Diagram)(Diagram)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Controls.Diagram.Diagram)(H.Controls.Diagram.Diagram)
+  name.vb: CloneByNewtonsoftJson(Of Diagram)(Diagram)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Controls.Diagram.Diagram)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: '>'
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Controls.Diagram.Diagram)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: )
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: )
 - uid: H.Controls.Diagram.Diagram.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -12635,6 +12631,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -13039,6 +13176,63 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -13835,6 +14029,63 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
   - name: )
+- uid: System.Windows.UIElement.H.Modules.Guide.GuideExtension.GetGuideTree(System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  parent: H.Modules.Guide.GuideExtension
+  definition: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  name: GetGuideTree(UIElement, Predicate<UIElement>)
+  nameWithType: GuideExtension.GetGuideTree(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
+  nameWithType.vb: GuideExtension.GetGuideTree(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: GetGuideTree(UIElement, Predicate(Of UIElement))
+  spec.csharp:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+  - name: )
 - uid: System
   commentId: N:System
   href: https://learn.microsoft.com/dotnet/api/system
@@ -14071,6 +14322,132 @@ references:
     name: Markup
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.markup
+- uid: H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+  commentId: M:H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+  href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_AligmentNodes_H_Controls_Diagram_Diagram_
+  name: AligmentNodes(Diagram)
+  nameWithType: DiagramExtension.AligmentNodes(Diagram)
+  fullName: H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+  spec.csharp:
+  - uid: H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+    name: AligmentNodes
+    href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_AligmentNodes_H_Controls_Diagram_Diagram_
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
+    name: AligmentNodes
+    href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_AligmentNodes_H_Controls_Diagram_Diagram_
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: )
+- uid: H.Controls.Diagram.DiagramExtension
+  commentId: T:H.Controls.Diagram.DiagramExtension
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.DiagramExtension.html
+  name: DiagramExtension
+  nameWithType: DiagramExtension
+  fullName: H.Controls.Diagram.DiagramExtension
+- uid: H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+  commentId: M:H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+  isExternal: true
+  href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_LinkNodes_H_Controls_Diagram_Diagram_H_Controls_Diagram_Parts_Node_H_Controls_Diagram_Parts_Node_System_Windows_Controls_Dock_
+  name: LinkNodes(Diagram, Node, Node, Dock)
+  nameWithType: DiagramExtension.LinkNodes(Diagram, Node, Node, Dock)
+  fullName: H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram, H.Controls.Diagram.Parts.Node, H.Controls.Diagram.Parts.Node, System.Windows.Controls.Dock)
+  spec.csharp:
+  - uid: H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+    name: LinkNodes
+    href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_LinkNodes_H_Controls_Diagram_Diagram_H_Controls_Diagram_Parts_Node_H_Controls_Diagram_Parts_Node_System_Windows_Controls_Dock_
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Controls.Dock
+    name: Dock
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls.dock
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+    name: LinkNodes
+    href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_LinkNodes_H_Controls_Diagram_Diagram_H_Controls_Diagram_Parts_Node_H_Controls_Diagram_Parts_Node_System_Windows_Controls_Dock_
+  - name: (
+  - uid: H.Controls.Diagram.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.Diagram.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: ','
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: ','
+  - name: " "
+  - uid: System.Windows.Controls.Dock
+    name: Dock
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.controls.dock
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -14280,6 +14657,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -14677,6 +15199,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -15491,6 +16069,99 @@ references:
   name: PopupHelper
   nameWithType: PopupHelper
   fullName: H.Controls.OutlookBar.PopupHelper
+- uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  isExternal: true
+  href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  name: GetGuideTree(UIElement, Predicate<UIElement>)
+  nameWithType: GuideExtension.GetGuideTree(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
+  nameWithType.vb: GuideExtension.GetGuideTree(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: GetGuideTree(UIElement, Predicate(Of UIElement))
+  spec.csharp:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+  - name: )
+- uid: H.Modules.Guide.GuideExtension
+  commentId: T:H.Modules.Guide.GuideExtension
+  parent: H.Modules.Guide
+  href: H.Modules.Guide.GuideExtension.html
+  name: GuideExtension
+  nameWithType: GuideExtension
+  fullName: H.Modules.Guide.GuideExtension
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: H.Controls.FilterColumnDataGrid
   commentId: N:H.Controls.FilterColumnDataGrid
   href: H.html
@@ -15551,6 +16222,36 @@ references:
   - uid: H.Controls.Form
     name: Form
     href: H.Controls.Form.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: H.Controls.Dock.Controls
   commentId: N:H.Controls.Dock.Controls
   href: H.html
@@ -15649,6 +16350,36 @@ references:
   - uid: H.Controls.OutlookBar
     name: OutlookBar
     href: H.Controls.OutlookBar.html
+- uid: H.Modules.Guide
+  commentId: N:H.Modules.Guide
+  href: H.html
+  name: H.Modules.Guide
+  nameWithType: H.Modules.Guide
+  fullName: H.Modules.Guide
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Modules
+    name: Modules
+    href: H.Modules.html
+  - name: .
+  - uid: H.Modules.Guide
+    name: Guide
+    href: H.Modules.Guide.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Modules
+    name: Modules
+    href: H.Modules.html
+  - name: .
+  - uid: H.Modules.Guide
+    name: Guide
+    href: H.Modules.Guide.html
 - uid: H.Controls.Diagram.Diagram.DefaultKey*
   commentId: Overload:H.Controls.Diagram.Diagram.DefaultKey
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_DefaultKey
@@ -15669,26 +16400,64 @@ references:
   name: NodeLayer
   nameWithType: Diagram.NodeLayer
   fullName: H.Controls.Diagram.Diagram.NodeLayer
-- uid: H.Controls.Diagram.NodeLayer
-  commentId: T:H.Controls.Diagram.NodeLayer
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.NodeLayer.html
+- uid: H.Controls.Diagram.Layers.NodeLayer
+  commentId: T:H.Controls.Diagram.Layers.NodeLayer
+  parent: H.Controls.Diagram.Layers
+  href: H.Controls.Diagram.Layers.NodeLayer.html
   name: NodeLayer
   nameWithType: NodeLayer
-  fullName: H.Controls.Diagram.NodeLayer
+  fullName: H.Controls.Diagram.Layers.NodeLayer
+- uid: H.Controls.Diagram.Layers
+  commentId: N:H.Controls.Diagram.Layers
+  href: H.html
+  name: H.Controls.Diagram.Layers
+  nameWithType: H.Controls.Diagram.Layers
+  fullName: H.Controls.Diagram.Layers
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Layers
+    name: Layers
+    href: H.Controls.Diagram.Layers.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Layers
+    name: Layers
+    href: H.Controls.Diagram.Layers.html
 - uid: H.Controls.Diagram.Diagram.LinkLayer*
   commentId: Overload:H.Controls.Diagram.Diagram.LinkLayer
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_LinkLayer
   name: LinkLayer
   nameWithType: Diagram.LinkLayer
   fullName: H.Controls.Diagram.Diagram.LinkLayer
-- uid: H.Controls.Diagram.LinkLayer
-  commentId: T:H.Controls.Diagram.LinkLayer
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.LinkLayer.html
+- uid: H.Controls.Diagram.Layers.LinkLayer
+  commentId: T:H.Controls.Diagram.Layers.LinkLayer
+  parent: H.Controls.Diagram.Layers
+  href: H.Controls.Diagram.Layers.LinkLayer.html
   name: LinkLayer
   nameWithType: LinkLayer
-  fullName: H.Controls.Diagram.LinkLayer
+  fullName: H.Controls.Diagram.Layers.LinkLayer
 - uid: H.Controls.Diagram.Diagram.DynamicLayer*
   commentId: Overload:H.Controls.Diagram.Diagram.DynamicLayer
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_DynamicLayer
@@ -15766,95 +16535,88 @@ references:
   name: DynamicLinkStyle
   nameWithType: Diagram.DynamicLinkStyle
   fullName: H.Controls.Diagram.Diagram.DynamicLinkStyle
-- uid: H.Controls.Diagram.Diagram.UseStartNodeOnly*
-  commentId: Overload:H.Controls.Diagram.Diagram.UseStartNodeOnly
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_UseStartNodeOnly
-  name: UseStartNodeOnly
-  nameWithType: Diagram.UseStartNodeOnly
-  fullName: H.Controls.Diagram.Diagram.UseStartNodeOnly
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: H.Controls.Diagram.Diagram.FlowableMode*
-  commentId: Overload:H.Controls.Diagram.Diagram.FlowableMode
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_FlowableMode
-  name: FlowableMode
-  nameWithType: Diagram.FlowableMode
-  fullName: H.Controls.Diagram.Diagram.FlowableMode
-- uid: H.Controls.Diagram.DiagramFlowableMode
-  commentId: T:H.Controls.Diagram.DiagramFlowableMode
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.DiagramFlowableMode.html
-  name: DiagramFlowableMode
-  nameWithType: DiagramFlowableMode
-  fullName: H.Controls.Diagram.DiagramFlowableMode
-- uid: H.Controls.Diagram.Diagram.State*
-  commentId: Overload:H.Controls.Diagram.Diagram.State
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_State
-  name: State
-  nameWithType: Diagram.State
-  fullName: H.Controls.Diagram.Diagram.State
-- uid: H.Controls.Diagram.DiagramFlowableState
-  commentId: T:H.Controls.Diagram.DiagramFlowableState
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.DiagramFlowableState.html
-  name: DiagramFlowableState
-  nameWithType: DiagramFlowableState
-  fullName: H.Controls.Diagram.DiagramFlowableState
-- uid: H.Controls.Diagram.Diagram.Message*
-  commentId: Overload:H.Controls.Diagram.Diagram.Message
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_Message
-  name: Message
-  nameWithType: Diagram.Message
-  fullName: H.Controls.Diagram.Diagram.Message
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: H.Controls.Diagram.Diagram.Layout*
   commentId: Overload:H.Controls.Diagram.Diagram.Layout
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_Layout
   name: Layout
   nameWithType: Diagram.Layout
   fullName: H.Controls.Diagram.Diagram.Layout
-- uid: H.Controls.Diagram.ILayout
-  commentId: T:H.Controls.Diagram.ILayout
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.ILayout.html
+- uid: H.Controls.Diagram.Layouts.Base.ILayout
+  commentId: T:H.Controls.Diagram.Layouts.Base.ILayout
+  parent: H.Controls.Diagram.Layouts.Base
+  href: H.Controls.Diagram.Layouts.Base.ILayout.html
   name: ILayout
   nameWithType: ILayout
-  fullName: H.Controls.Diagram.ILayout
+  fullName: H.Controls.Diagram.Layouts.Base.ILayout
+- uid: H.Controls.Diagram.Layouts.Base
+  commentId: N:H.Controls.Diagram.Layouts.Base
+  href: H.html
+  name: H.Controls.Diagram.Layouts.Base
+  nameWithType: H.Controls.Diagram.Layouts.Base
+  fullName: H.Controls.Diagram.Layouts.Base
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Layouts
+    name: Layouts
+    href: H.Controls.Diagram.Layouts.html
+  - name: .
+  - uid: H.Controls.Diagram.Layouts.Base
+    name: Base
+    href: H.Controls.Diagram.Layouts.Base.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Layouts
+    name: Layouts
+    href: H.Controls.Diagram.Layouts.html
+  - name: .
+  - uid: H.Controls.Diagram.Layouts.Base
+    name: Base
+    href: H.Controls.Diagram.Layouts.Base.html
 - uid: H.Controls.Diagram.Diagram.Links*
   commentId: Overload:H.Controls.Diagram.Diagram.Links
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_Links
   name: Links
   nameWithType: Diagram.Links
   fullName: H.Controls.Diagram.Diagram.Links
-- uid: System.Collections.Generic.List{H.Controls.Diagram.Link}
-  commentId: T:System.Collections.Generic.List{H.Controls.Diagram.Link}
+- uid: H.Controls.Diagram.IDiagram.Links
+  commentId: P:H.Controls.Diagram.IDiagram.Links
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_Links
+  name: Links
+  nameWithType: IDiagram.Links
+  fullName: H.Controls.Diagram.IDiagram.Links
+- uid: System.Collections.Generic.List{H.Controls.Diagram.Parts.Link}
+  commentId: T:System.Collections.Generic.List{H.Controls.Diagram.Parts.Link}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   name: List<Link>
   nameWithType: List<Link>
-  fullName: System.Collections.Generic.List<H.Controls.Diagram.Link>
+  fullName: System.Collections.Generic.List<H.Controls.Diagram.Parts.Link>
   nameWithType.vb: List(Of Link)
-  fullName.vb: System.Collections.Generic.List(Of H.Controls.Diagram.Link)
+  fullName.vb: System.Collections.Generic.List(Of H.Controls.Diagram.Parts.Link)
   name.vb: List(Of Link)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
@@ -15862,9 +16624,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - uid: H.Controls.Diagram.Link
+  - uid: H.Controls.Diagram.Parts.Link
     name: Link
-    href: H.Controls.Diagram.Link.html
+    href: H.Controls.Diagram.Parts.Link.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
@@ -15874,9 +16636,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Controls.Diagram.Link
+  - uid: H.Controls.Diagram.Parts.Link
     name: Link
-    href: H.Controls.Diagram.Link.html
+    href: H.Controls.Diagram.Parts.Link.html
   - name: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
@@ -15949,16 +16711,23 @@ references:
   name: Nodes
   nameWithType: Diagram.Nodes
   fullName: H.Controls.Diagram.Diagram.Nodes
-- uid: System.Collections.Generic.List{H.Controls.Diagram.Node}
-  commentId: T:System.Collections.Generic.List{H.Controls.Diagram.Node}
+- uid: H.Controls.Diagram.IDiagram.Nodes
+  commentId: P:H.Controls.Diagram.IDiagram.Nodes
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_Nodes
+  name: Nodes
+  nameWithType: IDiagram.Nodes
+  fullName: H.Controls.Diagram.IDiagram.Nodes
+- uid: System.Collections.Generic.List{H.Controls.Diagram.Parts.Node}
+  commentId: T:System.Collections.Generic.List{H.Controls.Diagram.Parts.Node}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   name: List<Node>
   nameWithType: List<Node>
-  fullName: System.Collections.Generic.List<H.Controls.Diagram.Node>
+  fullName: System.Collections.Generic.List<H.Controls.Diagram.Parts.Node>
   nameWithType.vb: List(Of Node)
-  fullName.vb: System.Collections.Generic.List(Of H.Controls.Diagram.Node)
+  fullName.vb: System.Collections.Generic.List(Of H.Controls.Diagram.Parts.Node)
   name.vb: List(Of Node)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
@@ -15966,9 +16735,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - uid: H.Controls.Diagram.Node
+  - uid: H.Controls.Diagram.Parts.Node
     name: Node
-    href: H.Controls.Diagram.Node.html
+    href: H.Controls.Diagram.Parts.Node.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
@@ -15978,9 +16747,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Controls.Diagram.Node
+  - uid: H.Controls.Diagram.Parts.Node
     name: Node
-    href: H.Controls.Diagram.Node.html
+    href: H.Controls.Diagram.Parts.Node.html
   - name: )
 - uid: H.Controls.Diagram.Diagram.SelectedPart*
   commentId: Overload:H.Controls.Diagram.Diagram.SelectedPart
@@ -15988,26 +16757,124 @@ references:
   name: SelectedPart
   nameWithType: Diagram.SelectedPart
   fullName: H.Controls.Diagram.Diagram.SelectedPart
-- uid: H.Controls.Diagram.Part
-  commentId: T:H.Controls.Diagram.Part
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.Part.html
+- uid: H.Controls.Diagram.IDiagram.SelectedPart
+  commentId: P:H.Controls.Diagram.IDiagram.SelectedPart
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_SelectedPart
+  name: SelectedPart
+  nameWithType: IDiagram.SelectedPart
+  fullName: H.Controls.Diagram.IDiagram.SelectedPart
+- uid: H.Controls.Diagram.Parts.Base.Part
+  commentId: T:H.Controls.Diagram.Parts.Base.Part
+  parent: H.Controls.Diagram.Parts.Base
+  href: H.Controls.Diagram.Parts.Base.Part.html
   name: Part
   nameWithType: Part
-  fullName: H.Controls.Diagram.Part
+  fullName: H.Controls.Diagram.Parts.Base.Part
+- uid: H.Controls.Diagram.Parts.Base
+  commentId: N:H.Controls.Diagram.Parts.Base
+  href: H.html
+  name: H.Controls.Diagram.Parts.Base
+  nameWithType: H.Controls.Diagram.Parts.Base
+  fullName: H.Controls.Diagram.Parts.Base
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Parts
+    name: Parts
+    href: H.Controls.Diagram.Parts.html
+  - name: .
+  - uid: H.Controls.Diagram.Parts.Base
+    name: Base
+    href: H.Controls.Diagram.Parts.Base.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Parts
+    name: Parts
+    href: H.Controls.Diagram.Parts.html
+  - name: .
+  - uid: H.Controls.Diagram.Parts.Base
+    name: Base
+    href: H.Controls.Diagram.Parts.Base.html
 - uid: H.Controls.Diagram.Diagram.SelectedNode*
   commentId: Overload:H.Controls.Diagram.Diagram.SelectedNode
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_SelectedNode
   name: SelectedNode
   nameWithType: Diagram.SelectedNode
   fullName: H.Controls.Diagram.Diagram.SelectedNode
-- uid: H.Controls.Diagram.Node
-  commentId: T:H.Controls.Diagram.Node
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.Node.html
+- uid: H.Controls.Diagram.IDiagram.SelectedNode
+  commentId: P:H.Controls.Diagram.IDiagram.SelectedNode
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_SelectedNode
+  name: SelectedNode
+  nameWithType: IDiagram.SelectedNode
+  fullName: H.Controls.Diagram.IDiagram.SelectedNode
+- uid: H.Controls.Diagram.Parts.Node
+  commentId: T:H.Controls.Diagram.Parts.Node
+  parent: H.Controls.Diagram.Parts
+  href: H.Controls.Diagram.Parts.Node.html
   name: Node
   nameWithType: Node
-  fullName: H.Controls.Diagram.Node
+  fullName: H.Controls.Diagram.Parts.Node
+- uid: H.Controls.Diagram.Parts
+  commentId: N:H.Controls.Diagram.Parts
+  href: H.html
+  name: H.Controls.Diagram.Parts
+  nameWithType: H.Controls.Diagram.Parts
+  fullName: H.Controls.Diagram.Parts
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Parts
+    name: Parts
+    href: H.Controls.Diagram.Parts.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.Parts
+    name: Parts
+    href: H.Controls.Diagram.Parts.html
 - uid: H.Controls.Diagram.Diagram.LinkTemplate*
   commentId: Overload:H.Controls.Diagram.Diagram.LinkTemplate
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_LinkTemplate
@@ -16022,66 +16889,23 @@ references:
   name: DataTemplate
   nameWithType: DataTemplate
   fullName: System.Windows.DataTemplate
-- uid: H.Controls.Diagram.Diagram.NodesSource*
-  commentId: Overload:H.Controls.Diagram.Diagram.NodesSource
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_NodesSource
-  name: NodesSource
-  nameWithType: Diagram.NodesSource
-  fullName: H.Controls.Diagram.Diagram.NodesSource
-- uid: System.Collections.IList
-  commentId: T:System.Collections.IList
-  parent: System.Collections
+- uid: H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd*
+  commentId: Overload:H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_UseAutoAddLinkOnEnd
+  name: UseAutoAddLinkOnEnd
+  nameWithType: Diagram.UseAutoAddLinkOnEnd
+  fullName: H.Controls.Diagram.Diagram.UseAutoAddLinkOnEnd
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
-  name: IList
-  nameWithType: IList
-  fullName: System.Collections.IList
-- uid: System.Collections
-  commentId: N:System.Collections
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections
-  nameWithType: System.Collections
-  fullName: System.Collections
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-- uid: H.Controls.Diagram.Diagram.UseFlowableSelectToRunning*
-  commentId: Overload:H.Controls.Diagram.Diagram.UseFlowableSelectToRunning
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_UseFlowableSelectToRunning
-  name: UseFlowableSelectToRunning
-  nameWithType: Diagram.UseFlowableSelectToRunning
-  fullName: H.Controls.Diagram.Diagram.UseFlowableSelectToRunning
-- uid: H.Controls.Diagram.Diagram.FlowableZoomMode*
-  commentId: Overload:H.Controls.Diagram.Diagram.FlowableZoomMode
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_FlowableZoomMode
-  name: FlowableZoomMode
-  nameWithType: Diagram.FlowableZoomMode
-  fullName: H.Controls.Diagram.Diagram.FlowableZoomMode
-- uid: H.Controls.Diagram.DiagramFlowableZoomMode
-  commentId: T:H.Controls.Diagram.DiagramFlowableZoomMode
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.DiagramFlowableZoomMode.html
-  name: DiagramFlowableZoomMode
-  nameWithType: DiagramFlowableZoomMode
-  fullName: H.Controls.Diagram.DiagramFlowableZoomMode
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: System.Windows.RoutedEvent
   commentId: T:System.Windows.RoutedEvent
   parent: System.Windows
@@ -16090,16 +16914,16 @@ references:
   name: RoutedEvent
   nameWithType: RoutedEvent
   fullName: System.Windows.RoutedEvent
-- uid: System.EventHandler{H.Mvvm.RoutedEventArgs{H.Controls.Diagram.Link}}
-  commentId: T:System.EventHandler{H.Mvvm.RoutedEventArgs{H.Controls.Diagram.Link}}
+- uid: System.EventHandler{H.Mvvm.RoutedEventArgs{H.Controls.Diagram.Parts.Link}}
+  commentId: T:System.EventHandler{H.Mvvm.RoutedEventArgs{H.Controls.Diagram.Parts.Link}}
   parent: System
   definition: System.EventHandler`1
   href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<RoutedEventArgs<Link>>
   nameWithType: EventHandler<RoutedEventArgs<Link>>
-  fullName: System.EventHandler<H.Mvvm.RoutedEventArgs<H.Controls.Diagram.Link>>
+  fullName: System.EventHandler<H.Mvvm.RoutedEventArgs<H.Controls.Diagram.Parts.Link>>
   nameWithType.vb: EventHandler(Of RoutedEventArgs(Of Link))
-  fullName.vb: System.EventHandler(Of H.Mvvm.RoutedEventArgs(Of H.Controls.Diagram.Link))
+  fullName.vb: System.EventHandler(Of H.Mvvm.RoutedEventArgs(Of H.Controls.Diagram.Parts.Link))
   name.vb: EventHandler(Of RoutedEventArgs(Of Link))
   spec.csharp:
   - uid: System.EventHandler`1
@@ -16110,9 +16934,9 @@ references:
   - uid: H.Mvvm.RoutedEventArgs`1
     name: RoutedEventArgs
   - name: <
-  - uid: H.Controls.Diagram.Link
+  - uid: H.Controls.Diagram.Parts.Link
     name: Link
-    href: H.Controls.Diagram.Link.html
+    href: H.Controls.Diagram.Parts.Link.html
   - name: '>'
   - name: '>'
   spec.vb:
@@ -16128,9 +16952,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Controls.Diagram.Link
+  - uid: H.Controls.Diagram.Parts.Link
     name: Link
-    href: H.Controls.Diagram.Link.html
+    href: H.Controls.Diagram.Parts.Link.html
   - name: )
   - name: )
 - uid: System.EventHandler`1
@@ -16161,6 +16985,44 @@ references:
   - name: " "
   - name: TEventArgs
   - name: )
+- uid: H.Controls.Diagram.Diagram.AddLink*
+  commentId: Overload:H.Controls.Diagram.Diagram.AddLink
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_AddLink_H_Controls_Diagram_Parts_Link_
+  name: AddLink
+  nameWithType: Diagram.AddLink
+  fullName: H.Controls.Diagram.Diagram.AddLink
+- uid: H.Controls.Diagram.IDiagram.AddLink(H.Controls.Diagram.Parts.Link)
+  commentId: M:H.Controls.Diagram.IDiagram.AddLink(H.Controls.Diagram.Parts.Link)
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_AddLink_H_Controls_Diagram_Parts_Link_
+  name: AddLink(Link)
+  nameWithType: IDiagram.AddLink(Link)
+  fullName: H.Controls.Diagram.IDiagram.AddLink(H.Controls.Diagram.Parts.Link)
+  spec.csharp:
+  - uid: H.Controls.Diagram.IDiagram.AddLink(H.Controls.Diagram.Parts.Link)
+    name: AddLink
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_AddLink_H_Controls_Diagram_Parts_Link_
+  - name: (
+  - uid: H.Controls.Diagram.Parts.Link
+    name: Link
+    href: H.Controls.Diagram.Parts.Link.html
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.IDiagram.AddLink(H.Controls.Diagram.Parts.Link)
+    name: AddLink
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_AddLink_H_Controls_Diagram_Parts_Link_
+  - name: (
+  - uid: H.Controls.Diagram.Parts.Link
+    name: Link
+    href: H.Controls.Diagram.Parts.Link.html
+  - name: )
+- uid: H.Controls.Diagram.Parts.Link
+  commentId: T:H.Controls.Diagram.Parts.Link
+  parent: H.Controls.Diagram.Parts
+  href: H.Controls.Diagram.Parts.Link.html
+  name: Link
+  nameWithType: Link
+  fullName: H.Controls.Diagram.Parts.Link
 - uid: System.Windows.RoutedEventHandler
   commentId: T:System.Windows.RoutedEventHandler
   parent: System.Windows
@@ -16175,18 +17037,189 @@ references:
   name: OnSelectedPartChanged
   nameWithType: Diagram.OnSelectedPartChanged
   fullName: H.Controls.Diagram.Diagram.OnSelectedPartChanged
+- uid: H.Controls.Diagram.Diagram.OnAddNoded*
+  commentId: Overload:H.Controls.Diagram.Diagram.OnAddNoded
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_OnAddNoded_System_Collections_Generic_IEnumerable_H_Controls_Diagram_Parts_Node__
+  name: OnAddNoded
+  nameWithType: Diagram.OnAddNoded
+  fullName: H.Controls.Diagram.Diagram.OnAddNoded
+- uid: System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Node}
+  commentId: T:System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Node}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Node>
+  nameWithType: IEnumerable<Node>
+  fullName: System.Collections.Generic.IEnumerable<H.Controls.Diagram.Parts.Node>
+  nameWithType.vb: IEnumerable(Of Node)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of H.Controls.Diagram.Parts.Node)
+  name.vb: IEnumerable(Of Node)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: H.Controls.Diagram.Diagram.ZoomToFit*
   commentId: Overload:H.Controls.Diagram.Diagram.ZoomToFit
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_ZoomToFit
   name: ZoomToFit
   nameWithType: Diagram.ZoomToFit
   fullName: H.Controls.Diagram.Diagram.ZoomToFit
+- uid: H.Controls.Diagram.IDiagram.ZoomToFit
+  commentId: M:H.Controls.Diagram.IDiagram.ZoomToFit
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomToFit
+  name: ZoomToFit()
+  nameWithType: IDiagram.ZoomToFit()
+  fullName: H.Controls.Diagram.IDiagram.ZoomToFit()
+  spec.csharp:
+  - uid: H.Controls.Diagram.IDiagram.ZoomToFit
+    name: ZoomToFit
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomToFit
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.IDiagram.ZoomToFit
+    name: ZoomToFit
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomToFit
+  - name: (
+  - name: )
+- uid: H.Controls.Diagram.IDiagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+  commentId: M:H.Controls.Diagram.IDiagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomToFit_H_Controls_Diagram_Parts_Base_Part___
+  name: ZoomToFit(params Part[])
+  nameWithType: IDiagram.ZoomToFit(params Part[])
+  fullName: H.Controls.Diagram.IDiagram.ZoomToFit(params H.Controls.Diagram.Parts.Base.Part[])
+  nameWithType.vb: IDiagram.ZoomToFit(ParamArray Part())
+  fullName.vb: H.Controls.Diagram.IDiagram.ZoomToFit(ParamArray H.Controls.Diagram.Parts.Base.Part())
+  name.vb: ZoomToFit(ParamArray Part())
+  spec.csharp:
+  - uid: H.Controls.Diagram.IDiagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+    name: ZoomToFit
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomToFit_H_Controls_Diagram_Parts_Base_Part___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    href: H.Controls.Diagram.Parts.Base.Part.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.IDiagram.ZoomToFit(H.Controls.Diagram.Parts.Base.Part[])
+    name: ZoomToFit
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomToFit_H_Controls_Diagram_Parts_Base_Part___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    href: H.Controls.Diagram.Parts.Base.Part.html
+  - name: (
+  - name: )
+  - name: )
+- uid: H.Controls.Diagram.Parts.Base.Part[]
+  isExternal: true
+  href: H.Controls.Diagram.Parts.Base.Part.html
+  name: Part[]
+  nameWithType: Part[]
+  fullName: H.Controls.Diagram.Parts.Base.Part[]
+  nameWithType.vb: Part()
+  fullName.vb: H.Controls.Diagram.Parts.Base.Part()
+  name.vb: Part()
+  spec.csharp:
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    href: H.Controls.Diagram.Parts.Base.Part.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    href: H.Controls.Diagram.Parts.Base.Part.html
+  - name: (
+  - name: )
 - uid: H.Controls.Diagram.Diagram.ZoomTo*
   commentId: Overload:H.Controls.Diagram.Diagram.ZoomTo
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_ZoomTo_System_Windows_Rect_
   name: ZoomTo
   nameWithType: Diagram.ZoomTo
   fullName: H.Controls.Diagram.Diagram.ZoomTo
+- uid: H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Rect)
+  commentId: M:H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Rect)
+  parent: H.Controls.Diagram.IDiagram
+  isExternal: true
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomTo_System_Windows_Rect_
+  name: ZoomTo(Rect)
+  nameWithType: IDiagram.ZoomTo(Rect)
+  fullName: H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Rect)
+  spec.csharp:
+  - uid: H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Rect)
+    name: ZoomTo
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomTo_System_Windows_Rect_
+  - name: (
+  - uid: System.Windows.Rect
+    name: Rect
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.rect
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Rect)
+    name: ZoomTo
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomTo_System_Windows_Rect_
+  - name: (
+  - uid: System.Windows.Rect
+    name: Rect
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.rect
+  - name: )
 - uid: System.Windows.Rect
   commentId: T:System.Windows.Rect
   parent: System.Windows
@@ -16195,6 +17228,59 @@ references:
   name: Rect
   nameWithType: Rect
   fullName: System.Windows.Rect
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: H.Controls.Diagram.Diagram.ZoomToSelectPart*
+  commentId: Overload:H.Controls.Diagram.Diagram.ZoomToSelectPart
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_ZoomToSelectPart
+  name: ZoomToSelectPart
+  nameWithType: Diagram.ZoomToSelectPart
+  fullName: H.Controls.Diagram.Diagram.ZoomToSelectPart
+- uid: H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Point)
+  commentId: M:H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Point)
+  parent: H.Controls.Diagram.IDiagram
+  isExternal: true
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomTo_System_Windows_Point_
+  name: ZoomTo(Point)
+  nameWithType: IDiagram.ZoomTo(Point)
+  fullName: H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Point)
+  spec.csharp:
+  - uid: H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Point)
+    name: ZoomTo
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomTo_System_Windows_Point_
+  - name: (
+  - uid: System.Windows.Point
+    name: Point
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.point
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.IDiagram.ZoomTo(System.Windows.Point)
+    name: ZoomTo
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_ZoomTo_System_Windows_Point_
+  - name: (
+  - uid: System.Windows.Point
+    name: Point
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.point
+  - name: )
+- uid: System.Windows.Point
+  commentId: T:System.Windows.Point
+  parent: System.Windows
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.point
+  name: Point
+  nameWithType: Point
+  fullName: System.Windows.Point
 - uid: System.Windows.Input.MouseButtonEventArgs
   commentId: T:System.Windows.Input.MouseButtonEventArgs
   parent: System.Windows.Input
@@ -16278,20 +17364,75 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.windows.input
 - uid: H.Controls.Diagram.Diagram.GetAllParts*
   commentId: Overload:H.Controls.Diagram.Diagram.GetAllParts
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_GetAllParts_System_Func_H_Controls_Diagram_Part_System_Boolean__
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_GetAllParts_System_Func_H_Controls_Diagram_Parts_Base_Part_System_Boolean__
   name: GetAllParts
   nameWithType: Diagram.GetAllParts
   fullName: H.Controls.Diagram.Diagram.GetAllParts
-- uid: System.Func{H.Controls.Diagram.Part,System.Boolean}
-  commentId: T:System.Func{H.Controls.Diagram.Part,System.Boolean}
+- uid: H.Controls.Diagram.IDiagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+  commentId: M:H.Controls.Diagram.IDiagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+  parent: H.Controls.Diagram.IDiagram
+  isExternal: true
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_GetAllParts_System_Func_H_Controls_Diagram_Parts_Base_Part_System_Boolean__
+  name: GetAllParts(Func<Part, bool>)
+  nameWithType: IDiagram.GetAllParts(Func<Part, bool>)
+  fullName: H.Controls.Diagram.IDiagram.GetAllParts(System.Func<H.Controls.Diagram.Parts.Base.Part, bool>)
+  nameWithType.vb: IDiagram.GetAllParts(Func(Of Part, Boolean))
+  fullName.vb: H.Controls.Diagram.IDiagram.GetAllParts(System.Func(Of H.Controls.Diagram.Parts.Base.Part, Boolean))
+  name.vb: GetAllParts(Func(Of Part, Boolean))
+  spec.csharp:
+  - uid: H.Controls.Diagram.IDiagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+    name: GetAllParts
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_GetAllParts_System_Func_H_Controls_Diagram_Parts_Base_Part_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    href: H.Controls.Diagram.Parts.Base.Part.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.IDiagram.GetAllParts(System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean})
+    name: GetAllParts
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_GetAllParts_System_Func_H_Controls_Diagram_Parts_Base_Part_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    href: H.Controls.Diagram.Parts.Base.Part.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean}
+  commentId: T:System.Func{H.Controls.Diagram.Parts.Base.Part,System.Boolean}
   parent: System
   definition: System.Func`2
   href: https://learn.microsoft.com/dotnet/api/system.func-2
   name: Func<Part, bool>
   nameWithType: Func<Part, bool>
-  fullName: System.Func<H.Controls.Diagram.Part, bool>
+  fullName: System.Func<H.Controls.Diagram.Parts.Base.Part, bool>
   nameWithType.vb: Func(Of Part, Boolean)
-  fullName.vb: System.Func(Of H.Controls.Diagram.Part, Boolean)
+  fullName.vb: System.Func(Of H.Controls.Diagram.Parts.Base.Part, Boolean)
   name.vb: Func(Of Part, Boolean)
   spec.csharp:
   - uid: System.Func`2
@@ -16299,9 +17440,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.func-2
   - name: <
-  - uid: H.Controls.Diagram.Part
+  - uid: H.Controls.Diagram.Parts.Base.Part
     name: Part
-    href: H.Controls.Diagram.Part.html
+    href: H.Controls.Diagram.Parts.Base.Part.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -16317,9 +17458,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Controls.Diagram.Part
+  - uid: H.Controls.Diagram.Parts.Base.Part
     name: Part
-    href: H.Controls.Diagram.Part.html
+    href: H.Controls.Diagram.Parts.Base.Part.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -16327,16 +17468,16 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: System.Collections.Generic.IEnumerable{H.Controls.Diagram.Part}
-  commentId: T:System.Collections.Generic.IEnumerable{H.Controls.Diagram.Part}
+- uid: System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Base.Part}
+  commentId: T:System.Collections.Generic.IEnumerable{H.Controls.Diagram.Parts.Base.Part}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<Part>
   nameWithType: IEnumerable<Part>
-  fullName: System.Collections.Generic.IEnumerable<H.Controls.Diagram.Part>
+  fullName: System.Collections.Generic.IEnumerable<H.Controls.Diagram.Parts.Base.Part>
   nameWithType.vb: IEnumerable(Of Part)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of H.Controls.Diagram.Part)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of H.Controls.Diagram.Parts.Base.Part)
   name.vb: IEnumerable(Of Part)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -16344,9 +17485,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
-  - uid: H.Controls.Diagram.Part
+  - uid: H.Controls.Diagram.Parts.Base.Part
     name: Part
-    href: H.Controls.Diagram.Part.html
+    href: H.Controls.Diagram.Parts.Base.Part.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -16356,9 +17497,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Controls.Diagram.Part
+  - uid: H.Controls.Diagram.Parts.Base.Part
     name: Part
-    href: H.Controls.Diagram.Part.html
+    href: H.Controls.Diagram.Parts.Base.Part.html
   - name: )
 - uid: System.Func`2
   commentId: T:System.Func`2
@@ -16394,148 +17535,6 @@ references:
   - name: " "
   - name: TResult
   - name: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: H.Controls.Diagram.Diagram.Start*
-  commentId: Overload:H.Controls.Diagram.Diagram.Start
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_Start_H_Controls_Diagram_Node_
-  name: Start
-  nameWithType: Diagram.Start
-  fullName: H.Controls.Diagram.Diagram.Start
-- uid: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
-  commentId: T:System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<bool?>
-  nameWithType: Task<bool?>
-  fullName: System.Threading.Tasks.Task<bool?>
-  nameWithType.vb: Task(Of Boolean?)
-  fullName.vb: System.Threading.Tasks.Task(Of Boolean?)
-  name.vb: Task(Of Boolean?)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '?'
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '?'
-  - name: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
-  - name: TResult
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TResult
-  - name: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: H.Controls.Diagram.Diagram.GetStartNode*
-  commentId: Overload:H.Controls.Diagram.Diagram.GetStartNode
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_GetStartNode_System_String__
-  name: GetStartNode
-  nameWithType: Diagram.GetStartNode
-  fullName: H.Controls.Diagram.Diagram.GetStartNode
 - uid: H.Controls.Diagram.Diagram.RefreshData*
   commentId: Overload:H.Controls.Diagram.Diagram.RefreshData
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_RefreshData
@@ -16556,51 +17555,138 @@ references:
   fullName: H.Controls.Diagram.Diagram.RefreshLinkDrawer
 - uid: H.Controls.Diagram.Diagram.AddNode*
   commentId: Overload:H.Controls.Diagram.Diagram.AddNode
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_AddNode_H_Controls_Diagram_Node___
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_AddNode_H_Controls_Diagram_Parts_Node___
   name: AddNode
   nameWithType: Diagram.AddNode
   fullName: H.Controls.Diagram.Diagram.AddNode
-- uid: H.Controls.Diagram.Node[]
+- uid: H.Controls.Diagram.IDiagram.AddNode(H.Controls.Diagram.Parts.Node[])
+  commentId: M:H.Controls.Diagram.IDiagram.AddNode(H.Controls.Diagram.Parts.Node[])
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_AddNode_H_Controls_Diagram_Parts_Node___
+  name: AddNode(params Node[])
+  nameWithType: IDiagram.AddNode(params Node[])
+  fullName: H.Controls.Diagram.IDiagram.AddNode(params H.Controls.Diagram.Parts.Node[])
+  nameWithType.vb: IDiagram.AddNode(ParamArray Node())
+  fullName.vb: H.Controls.Diagram.IDiagram.AddNode(ParamArray H.Controls.Diagram.Parts.Node())
+  name.vb: AddNode(ParamArray Node())
+  spec.csharp:
+  - uid: H.Controls.Diagram.IDiagram.AddNode(H.Controls.Diagram.Parts.Node[])
+    name: AddNode
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_AddNode_H_Controls_Diagram_Parts_Node___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.IDiagram.AddNode(H.Controls.Diagram.Parts.Node[])
+    name: AddNode
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_AddNode_H_Controls_Diagram_Parts_Node___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: (
+  - name: )
+  - name: )
+- uid: H.Controls.Diagram.Parts.Node[]
   isExternal: true
-  href: H.Controls.Diagram.Node.html
+  href: H.Controls.Diagram.Parts.Node.html
   name: Node[]
   nameWithType: Node[]
-  fullName: H.Controls.Diagram.Node[]
+  fullName: H.Controls.Diagram.Parts.Node[]
   nameWithType.vb: Node()
-  fullName.vb: H.Controls.Diagram.Node()
+  fullName.vb: H.Controls.Diagram.Parts.Node()
   name.vb: Node()
   spec.csharp:
-  - uid: H.Controls.Diagram.Node
+  - uid: H.Controls.Diagram.Parts.Node
     name: Node
-    href: H.Controls.Diagram.Node.html
+    href: H.Controls.Diagram.Parts.Node.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: H.Controls.Diagram.Node
+  - uid: H.Controls.Diagram.Parts.Node
     name: Node
-    href: H.Controls.Diagram.Node.html
+    href: H.Controls.Diagram.Parts.Node.html
   - name: (
   - name: )
 - uid: H.Controls.Diagram.Diagram.RemoveNode*
   commentId: Overload:H.Controls.Diagram.Diagram.RemoveNode
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_RemoveNode_H_Controls_Diagram_Node___
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_RemoveNode_H_Controls_Diagram_Parts_Node___
   name: RemoveNode
   nameWithType: Diagram.RemoveNode
   fullName: H.Controls.Diagram.Diagram.RemoveNode
-- uid: H.Controls.Diagram.Diagram.Duration*
-  commentId: Overload:H.Controls.Diagram.Diagram.Duration
-  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_Duration
-  name: Duration
-  nameWithType: Diagram.Duration
-  fullName: H.Controls.Diagram.Diagram.Duration
-- uid: System.TimeSpan
-  commentId: T:System.TimeSpan
+- uid: H.Controls.Diagram.IDiagram.RemoveNode(H.Controls.Diagram.Parts.Node[])
+  commentId: M:H.Controls.Diagram.IDiagram.RemoveNode(H.Controls.Diagram.Parts.Node[])
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_RemoveNode_H_Controls_Diagram_Parts_Node___
+  name: RemoveNode(params Node[])
+  nameWithType: IDiagram.RemoveNode(params Node[])
+  fullName: H.Controls.Diagram.IDiagram.RemoveNode(params H.Controls.Diagram.Parts.Node[])
+  nameWithType.vb: IDiagram.RemoveNode(ParamArray Node())
+  fullName.vb: H.Controls.Diagram.IDiagram.RemoveNode(ParamArray H.Controls.Diagram.Parts.Node())
+  name.vb: RemoveNode(ParamArray Node())
+  spec.csharp:
+  - uid: H.Controls.Diagram.IDiagram.RemoveNode(H.Controls.Diagram.Parts.Node[])
+    name: RemoveNode
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_RemoveNode_H_Controls_Diagram_Parts_Node___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: H.Controls.Diagram.IDiagram.RemoveNode(H.Controls.Diagram.Parts.Node[])
+    name: RemoveNode
+    href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_RemoveNode_H_Controls_Diagram_Parts_Node___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: H.Controls.Diagram.Parts.Node
+    name: Node
+    href: H.Controls.Diagram.Parts.Node.html
+  - name: (
+  - name: )
+  - name: )
+- uid: H.Controls.Diagram.Diagram.Clear*
+  commentId: Overload:H.Controls.Diagram.Diagram.Clear
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_Clear
+  name: Clear
+  nameWithType: Diagram.Clear
+  fullName: H.Controls.Diagram.Diagram.Clear
+- uid: H.Controls.Diagram.Diagram.InvokeMessage*
+  commentId: Overload:H.Controls.Diagram.Diagram.InvokeMessage
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_InvokeMessage_System_String_
+  name: InvokeMessage
+  nameWithType: Diagram.InvokeMessage
+  fullName: H.Controls.Diagram.Diagram.InvokeMessage
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.timespan
-  name: TimeSpan
-  nameWithType: TimeSpan
-  fullName: System.TimeSpan
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: H.Controls.Diagram.Diagram.Message*
+  commentId: Overload:H.Controls.Diagram.Diagram.Message
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_Message
+  name: Message
+  nameWithType: Diagram.Message
+  fullName: H.Controls.Diagram.Diagram.Message
 - uid: H.Controls.Diagram.Diagram.UseAnimation*
   commentId: Overload:H.Controls.Diagram.Diagram.UseAnimation
   href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_UseAnimation
@@ -16613,10 +17699,74 @@ references:
   name: LinkDrawer
   nameWithType: Diagram.LinkDrawer
   fullName: H.Controls.Diagram.Diagram.LinkDrawer
-- uid: H.Controls.Diagram.ILinkDrawer
-  commentId: T:H.Controls.Diagram.ILinkDrawer
-  parent: H.Controls.Diagram
-  href: H.Controls.Diagram.ILinkDrawer.html
+- uid: H.Controls.Diagram.LinkDrawers.ILinkDrawer
+  commentId: T:H.Controls.Diagram.LinkDrawers.ILinkDrawer
+  parent: H.Controls.Diagram.LinkDrawers
+  href: H.Controls.Diagram.LinkDrawers.ILinkDrawer.html
   name: ILinkDrawer
   nameWithType: ILinkDrawer
-  fullName: H.Controls.Diagram.ILinkDrawer
+  fullName: H.Controls.Diagram.LinkDrawers.ILinkDrawer
+- uid: H.Controls.Diagram.LinkDrawers
+  commentId: N:H.Controls.Diagram.LinkDrawers
+  href: H.html
+  name: H.Controls.Diagram.LinkDrawers
+  nameWithType: H.Controls.Diagram.LinkDrawers
+  fullName: H.Controls.Diagram.LinkDrawers
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.LinkDrawers
+    name: LinkDrawers
+    href: H.Controls.Diagram.LinkDrawers.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Controls
+    name: Controls
+    href: H.Controls.html
+  - name: .
+  - uid: H.Controls.Diagram
+    name: Diagram
+    href: H.Controls.Diagram.html
+  - name: .
+  - uid: H.Controls.Diagram.LinkDrawers
+    name: LinkDrawers
+    href: H.Controls.Diagram.LinkDrawers.html
+- uid: H.Controls.Diagram.Diagram.DataSource*
+  commentId: Overload:H.Controls.Diagram.Diagram.DataSource
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_DataSource
+  name: DataSource
+  nameWithType: Diagram.DataSource
+  fullName: H.Controls.Diagram.Diagram.DataSource
+- uid: H.Controls.Diagram.IDiagram.DataSource
+  commentId: P:H.Controls.Diagram.IDiagram.DataSource
+  parent: H.Controls.Diagram.IDiagram
+  href: H.Controls.Diagram.IDiagram.html#H_Controls_Diagram_IDiagram_DataSource
+  name: DataSource
+  nameWithType: IDiagram.DataSource
+  fullName: H.Controls.Diagram.IDiagram.DataSource
+- uid: H.Controls.Diagram.IDiagramDataSource
+  commentId: T:H.Controls.Diagram.IDiagramDataSource
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.IDiagramDataSource.html
+  name: IDiagramDataSource
+  nameWithType: IDiagramDataSource
+  fullName: H.Controls.Diagram.IDiagramDataSource
+- uid: H.Controls.Diagram.Diagram.UpdateNodesToDataSource*
+  commentId: Overload:H.Controls.Diagram.Diagram.UpdateNodesToDataSource
+  href: H.Controls.Diagram.Diagram.html#H_Controls_Diagram_Diagram_UpdateNodesToDataSource
+  name: UpdateNodesToDataSource
+  nameWithType: Diagram.UpdateNodesToDataSource
+  fullName: H.Controls.Diagram.Diagram.UpdateNodesToDataSource

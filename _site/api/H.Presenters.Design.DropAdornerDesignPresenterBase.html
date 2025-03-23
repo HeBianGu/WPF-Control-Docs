@@ -101,7 +101,7 @@ Class DropAdornerDesignPresenterBase
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class DropAdornerDesignPresenterBase : CommandsDesignPresenterBase, INotifyPropertyChanged, IDable, IDesignPresenter, IDesignPresenterBase, ICloneable, IHitTestElementDrag, IGetDragAdorner, IHitTestElementDrop, IGetDropAdorner</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class DropAdornerDesignPresenterBase : CommandsDesignPresenterBase, INotifyPropertyChanged, IDisplayBindable, IIconable, INameable, IOrderable, IGroupable, IDable, IDescriptionable, IDesignPresenter, IDesignPresenterBase, ICloneable, IHitTestElementDrag, IGetDragAdorner, IHitTestElementDrop, IGetDropAdorner</code></pre>
   </div>
 
 
@@ -111,9 +111,11 @@ Class DropAdornerDesignPresenterBase
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Mvvm.BindableBase.html">BindableBase</a></div>
-      <div><a class="xref" href="H.Mvvm.DisplayBindableBase.html">DisplayBindableBase</a></div>
-      <div><a class="xref" href="H.Mvvm.DesignPresenterBase.html">DesignPresenterBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html">BindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html">Bindable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html">CommandsBindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html">DisplayBindableBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html">DesignPresenterBase</a></div>
       <div><a class="xref" href="H.Presenters.Design.DesignPresenter.html">DesignPresenter</a></div>
       <div><a class="xref" href="H.Presenters.Design.CommandsDesignPresenterBase.html">CommandsDesignPresenterBase</a></div>
       <div><span class="xref">DropAdornerDesignPresenterBase</span></div>
@@ -124,7 +126,13 @@ Class DropAdornerDesignPresenterBase
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDisplayBindable.html">IDisplayBindable</a></div>
+      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Mvvm.IOrderable.html">IOrderable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IGroupable.html">IGroupable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
       <div><a class="xref" href="H.Presenters.Design.IDesignPresenter.html">IDesignPresenter</a></div>
       <div><a class="xref" href="H.Mvvm.IDesignPresenterBase.html">IDesignPresenterBase</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
@@ -155,133 +163,142 @@ Class DropAdornerDesignPresenterBase
       <a class="xref" href="H.Presenters.Design.DesignPresenter.html#H_Presenters_Design_DesignPresenter_Clone">DesignPresenter.Clone()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_IsSelected">DesignPresenterBase.IsSelected</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_IsSelected">DesignPresenterBase.IsSelected</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_IsMouseOver">DesignPresenterBase.IsMouseOver</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_IsMouseOver">DesignPresenterBase.IsMouseOver</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Height">DesignPresenterBase.Height</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Height">DesignPresenterBase.Height</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Width">DesignPresenterBase.Width</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Width">DesignPresenterBase.Width</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_MinHeight">DesignPresenterBase.MinHeight</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_MinHeight">DesignPresenterBase.MinHeight</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_MinWidth">DesignPresenterBase.MinWidth</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_MinWidth">DesignPresenterBase.MinWidth</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Margin">DesignPresenterBase.Margin</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Margin">DesignPresenterBase.Margin</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Padding">DesignPresenterBase.Padding</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Padding">DesignPresenterBase.Padding</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_HorizontalAlignment">DesignPresenterBase.HorizontalAlignment</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_HorizontalAlignment">DesignPresenterBase.HorizontalAlignment</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_HorizontalContentAlignment">DesignPresenterBase.HorizontalContentAlignment</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_HorizontalContentAlignment">DesignPresenterBase.HorizontalContentAlignment</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_VerticalAlignment">DesignPresenterBase.VerticalAlignment</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_VerticalAlignment">DesignPresenterBase.VerticalAlignment</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_VerticalContentAlignment">DesignPresenterBase.VerticalContentAlignment</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_VerticalContentAlignment">DesignPresenterBase.VerticalContentAlignment</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Background">DesignPresenterBase.Background</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Background">DesignPresenterBase.Background</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_BorderBrush">DesignPresenterBase.BorderBrush</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_BorderBrush">DesignPresenterBase.BorderBrush</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_BorderThickness">DesignPresenterBase.BorderThickness</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_BorderThickness">DesignPresenterBase.BorderThickness</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Opacity">DesignPresenterBase.Opacity</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Opacity">DesignPresenterBase.Opacity</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_IsVisible">DesignPresenterBase.IsVisible</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_IsVisible">DesignPresenterBase.IsVisible</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_IsEnabled">DesignPresenterBase.IsEnabled</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_IsEnabled">DesignPresenterBase.IsEnabled</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Row">DesignPresenterBase.Row</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Row">DesignPresenterBase.Row</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Column">DesignPresenterBase.Column</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Column">DesignPresenterBase.Column</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_RowSpan">DesignPresenterBase.RowSpan</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_RowSpan">DesignPresenterBase.RowSpan</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_ColumnSpan">DesignPresenterBase.ColumnSpan</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_ColumnSpan">DesignPresenterBase.ColumnSpan</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_DeleteCommand">DesignPresenterBase.DeleteCommand</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_DeleteCommand">DesignPresenterBase.DeleteCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DesignPresenterBase.html#H_Mvvm_DesignPresenterBase_Delete_System_Object_">DesignPresenterBase.Delete(object)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Delete_System_Object_">DesignPresenterBase.Delete(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Commands">DisplayBindableBase.Commands</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_CreateCommands">DisplayBindableBase.CreateCommands()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadedCommand">DisplayBindableBase.LoadedCommand</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Loaded_System_Object_">DisplayBindableBase.Loaded(object)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ID">DisplayBindableBase.ID</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Name">DisplayBindableBase.Name</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Icon">DisplayBindableBase.Icon</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_ShortName">DisplayBindableBase.ShortName</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_GroupName">DisplayBindableBase.GroupName</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefaultCommand">DisplayBindableBase.LoadDefaultCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Description">DisplayBindableBase.Description</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_Order">DisplayBindableBase.Order</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_Commands">CommandsBindableBase.Commands</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefaultCommand">DisplayBindableBase.LoadDefaultCommand</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.CommandsBindableBase.html#H_Mvvm_ViewModels_Base_CommandsBindableBase_CreateCommands">CommandsBindableBase.CreateCommands()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.DisplayBindableBase.html#H_Mvvm_DisplayBindableBase_LoadDefault">DisplayBindableBase.LoadDefault()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayCommand">Bindable.RelayCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_Init">BindableBase.Init()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_LoadedCommand">Bindable.LoadedCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethodCommand">Bindable.CallMethodCommand</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_RelayMethod_System_Object_">Bindable.RelayMethod(object)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_DispatcherRaisePropertyChanged_System_String_">BindableBase.DispatcherRaisePropertyChanged(string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_GetTargetElement__1">Bindable.GetTargetElement&lt;T&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.BindableBase.html#H_Mvvm_BindableBase_OnDispatcherPropertyChanged">BindableBase.OnDispatcherPropertyChanged()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.Bindable.html#H_Mvvm_ViewModels_Base_Bindable_CallMethod_System_Object_">Bindable.CallMethod(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init">BindableBase.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_PropertyChanged">BindableBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_RaisePropertyChanged_System_String_">BindableBase.RaisePropertyChanged(string)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -310,6 +327,9 @@ Class DropAdornerDesignPresenterBase
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -320,6 +340,15 @@ Class DropAdornerDesignPresenterBase
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -338,6 +367,9 @@ Class DropAdornerDesignPresenterBase
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>

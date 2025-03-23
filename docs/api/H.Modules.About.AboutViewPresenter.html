@@ -101,8 +101,9 @@ Class AboutViewPresenter
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;关于&quot;, GroupName = &quot;系统设置&quot;, Description = &quot;这是一个关于页面的信息&quot;)]
-public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter&gt;, IAboutViewPresenter, ITitleable, IAboutViewPresenterOption</code></pre>
+    <pre><code class="lang-csharp hljs">[Icon(&quot;&quot;)]
+[Display(Name = &quot;关于&quot;, GroupName = &quot;系统设置&quot;, Description = &quot;这是一个关于页面的信息&quot;)]
+public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter&gt;, IAboutViewPresenter, ITitleable, IAboutViewPresenterOption, IIconable</code></pre>
   </div>
 
 
@@ -123,6 +124,7 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
       <div><a class="xref" href="H.Services.Common.IAboutViewPresenter.html">IAboutViewPresenter</a></div>
       <div><a class="xref" href="H.Services.Common.ITitleable.html">ITitleable</a></div>
       <div><a class="xref" href="H.Modules.About.IAboutViewPresenterOption.html">IAboutViewPresenterOption</a></div>
+      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
     </dd>
   </dl>
 
@@ -160,6 +162,9 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
@@ -170,6 +175,15 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
   </div>
   <div>
       <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_">TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
@@ -188,6 +202,9 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
   </div>
   <div>
       <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
@@ -264,6 +281,39 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
     <pre><code class="lang-csharp hljs">[JsonIgnore]
 [Display(Name = &quot;服务协议&quot;)]
 public string Agreement { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Modules_About_AboutViewPresenter_AssemblyVersion_" data-uid="H.Modules.About.AboutViewPresenter.AssemblyVersion*"></a>
+
+  <h3 id="H_Modules_About_AboutViewPresenter_AssemblyVersion" data-uid="H.Modules.About.AboutViewPresenter.AssemblyVersion">
+  AssemblyVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+[Display(Name = &quot;程序集版本&quot;, Description = &quot;程序集的版本号，用于标识程序集的唯一性和兼容性&quot;)]
+public string AssemblyVersion { get; set; }</code></pre>
   </div>
 
 
@@ -481,6 +531,37 @@ public string FileVersion { get; set; }</code></pre>
 
 
 
+  <a id="H_Modules_About_AboutViewPresenter_Icon_" data-uid="H.Modules.About.AboutViewPresenter.Icon*"></a>
+
+  <h3 id="H_Modules_About_AboutViewPresenter_Icon" data-uid="H.Modules.About.AboutViewPresenter.Icon">
+  Icon
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Icon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="H_Modules_About_AboutViewPresenter_Privacy_" data-uid="H.Modules.About.AboutViewPresenter.Privacy*"></a>
 
   <h3 id="H_Modules_About_AboutViewPresenter_Privacy" data-uid="H.Modules.About.AboutViewPresenter.Privacy">
@@ -587,7 +668,8 @@ public string ProductName { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>获取或设置标题。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -656,7 +738,7 @@ public string Trademark { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;产品版本&quot;)]
+[Display(Name = &quot;版本号&quot;, Description = &quot;文件的版本号，通常用于标识文件的发布版本&quot;)]
 public string Version { get; set; }</code></pre>
   </div>
 

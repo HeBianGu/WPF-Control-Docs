@@ -109,8 +109,10 @@ items:
   - H.Extensions.Attach.Cattach.GetFocusBorderThickness(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetFocusForeground(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetFromDouble(System.Windows.DependencyObject)
+  - H.Extensions.Attach.Cattach.GetGuideAssemblyVersion(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetGuideData(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetGuideDataTemplate(System.Windows.DependencyObject)
+  - H.Extensions.Attach.Cattach.GetGuideIcon(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetGuideParentTitle(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetGuideTitle(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetGuideUseClick(System.Windows.DependencyObject)
@@ -128,8 +130,8 @@ items:
   - H.Extensions.Attach.Cattach.GetIsExcepChildren(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetIsExceptSelf(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetIsGuide(System.Windows.DependencyObject)
+  - H.Extensions.Attach.Cattach.GetIsGuideAdonerElement(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetIsIndeterminate(System.Windows.DependencyObject)
-  - H.Extensions.Attach.Cattach.GetIsNewGuide(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetIsOpen(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetIsOpenFileButtonBehaviorEnabled(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetIsOpenFolderButtonBehaviorEnabled(System.Windows.DependencyObject)
@@ -156,10 +158,6 @@ items:
   - H.Extensions.Attach.Cattach.GetMouseOverBorderBrush(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetMouseOverBorderThickness(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetMouseOverEffect(System.Windows.DependencyObject)
-  - H.Extensions.Attach.Cattach.GetNewGuideData(System.Windows.DependencyObject)
-  - H.Extensions.Attach.Cattach.GetNewGuideDataTemplate(System.Windows.DependencyObject)
-  - H.Extensions.Attach.Cattach.GetNewGuideParentTitle(System.Windows.DependencyObject)
-  - H.Extensions.Attach.Cattach.GetNewGuideTitle(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetOrientation(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetPassword(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetPath(System.Windows.DependencyObject)
@@ -208,12 +206,13 @@ items:
   - H.Extensions.Attach.Cattach.GetUncheckedText(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetUseClose(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetUseGuide(System.Windows.DependencyObject)
-  - H.Extensions.Attach.Cattach.GetUseNewGuide(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetUseSearch(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetValue(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.GetWatermark(System.Windows.DependencyObject)
+  - H.Extensions.Attach.Cattach.GuideAssemblyVersionProperty
   - H.Extensions.Attach.Cattach.GuideDataProperty
   - H.Extensions.Attach.Cattach.GuideDataTemplateProperty
+  - H.Extensions.Attach.Cattach.GuideIconProperty
   - H.Extensions.Attach.Cattach.GuideParentTitleProperty
   - H.Extensions.Attach.Cattach.GuideTitleProperty
   - H.Extensions.Attach.Cattach.GuideUseClickProperty
@@ -230,9 +229,9 @@ items:
   - H.Extensions.Attach.Cattach.IsDragEnterProperty
   - H.Extensions.Attach.Cattach.IsExcepChildrenProperty
   - H.Extensions.Attach.Cattach.IsExceptSelfProperty
+  - H.Extensions.Attach.Cattach.IsGuideAdonerElementProperty
   - H.Extensions.Attach.Cattach.IsGuideProperty
   - H.Extensions.Attach.Cattach.IsIndeterminateProperty
-  - H.Extensions.Attach.Cattach.IsNewGuideProperty
   - H.Extensions.Attach.Cattach.IsOpenFileButtonBehaviorEnabledProperty
   - H.Extensions.Attach.Cattach.IsOpenFolderButtonBehaviorEnabledProperty
   - H.Extensions.Attach.Cattach.IsOpenProperty
@@ -263,10 +262,6 @@ items:
   - H.Extensions.Attach.Cattach.MouseOverEffectProperty
   - H.Extensions.Attach.Cattach.MouseOverForeground(System.Windows.DependencyObject)
   - H.Extensions.Attach.Cattach.MouseOverForegroundProperty
-  - H.Extensions.Attach.Cattach.NewGuideDataProperty
-  - H.Extensions.Attach.Cattach.NewGuideDataTemplateProperty
-  - H.Extensions.Attach.Cattach.NewGuideParentTitleProperty
-  - H.Extensions.Attach.Cattach.NewGuideTitleProperty
   - H.Extensions.Attach.Cattach.OnAttachBackgroundChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnAttachBorderBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnAttachBorderThicknessChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
@@ -306,8 +301,10 @@ items:
   - H.Extensions.Attach.Cattach.OnDockChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnFocusBorderThicknessChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnFromDoubleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - H.Extensions.Attach.Cattach.OnGuideAssemblyVersionChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnGuideDataChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnGuideDataTemplateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - H.Extensions.Attach.Cattach.OnGuideIconChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnGuideParentTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnGuideTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnGuideUseClickChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
@@ -316,8 +313,8 @@ items:
   - H.Extensions.Attach.Cattach.OnIsCheckedChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnIsExcepChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnIsExceptSelfChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  - H.Extensions.Attach.Cattach.OnIsGuideAdonerElementChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnIsGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  - H.Extensions.Attach.Cattach.OnIsNewGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnIsOpenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnItemBackgroundChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnItemBorderBrushChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
@@ -338,10 +335,6 @@ items:
   - H.Extensions.Attach.Cattach.OnLeftTemplateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnMouseOverBorderThicknessChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnMouseOverEffectChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  - H.Extensions.Attach.Cattach.OnNewGuideDataChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  - H.Extensions.Attach.Cattach.OnNewGuideDataTemplateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  - H.Extensions.Attach.Cattach.OnNewGuideParentTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  - H.Extensions.Attach.Cattach.OnNewGuideTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnPressBorderThicknessChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnRightTemplateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnSearchDockChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
@@ -372,7 +365,6 @@ items:
   - H.Extensions.Attach.Cattach.OnUncheckedOpacityChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnUncheckedTextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnUseGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  - H.Extensions.Attach.Cattach.OnUseNewGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OnUseSearchChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   - H.Extensions.Attach.Cattach.OpenFileCommand
   - H.Extensions.Attach.Cattach.OpenFolderCommand
@@ -458,8 +450,10 @@ items:
   - H.Extensions.Attach.Cattach.SetFocusBorderThickness(System.Windows.DependencyObject,System.Windows.Thickness)
   - H.Extensions.Attach.Cattach.SetFocusForeground(System.Windows.DependencyObject,System.Windows.Media.Brush)
   - H.Extensions.Attach.Cattach.SetFromDouble(System.Windows.DependencyObject,System.Double)
+  - H.Extensions.Attach.Cattach.SetGuideAssemblyVersion(System.Windows.DependencyObject,System.String)
   - H.Extensions.Attach.Cattach.SetGuideData(System.Windows.DependencyObject,System.Object)
   - H.Extensions.Attach.Cattach.SetGuideDataTemplate(System.Windows.DependencyObject,System.Windows.DataTemplate)
+  - H.Extensions.Attach.Cattach.SetGuideIcon(System.Windows.DependencyObject,System.String)
   - H.Extensions.Attach.Cattach.SetGuideParentTitle(System.Windows.DependencyObject,System.String)
   - H.Extensions.Attach.Cattach.SetGuideTitle(System.Windows.DependencyObject,System.Object)
   - H.Extensions.Attach.Cattach.SetGuideUseClick(System.Windows.DependencyObject,System.Boolean)
@@ -477,8 +471,8 @@ items:
   - H.Extensions.Attach.Cattach.SetIsExcepChildren(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetIsExceptSelf(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetIsGuide(System.Windows.DependencyObject,System.Boolean)
+  - H.Extensions.Attach.Cattach.SetIsGuideAdonerElement(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetIsIndeterminate(System.Windows.DependencyObject,System.Boolean)
-  - H.Extensions.Attach.Cattach.SetIsNewGuide(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetIsOpen(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetIsOpenFileButtonBehaviorEnabled(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetIsOpenFolderButtonBehaviorEnabled(System.Windows.DependencyObject,System.Boolean)
@@ -507,10 +501,6 @@ items:
   - H.Extensions.Attach.Cattach.SetMouseOverBorderThickness(System.Windows.DependencyObject,System.Windows.Thickness)
   - H.Extensions.Attach.Cattach.SetMouseOverEffect(System.Windows.DependencyObject,System.Windows.Media.Effects.Effect)
   - H.Extensions.Attach.Cattach.SetMouseOverForeground(System.Windows.DependencyObject,System.Windows.Media.Brush)
-  - H.Extensions.Attach.Cattach.SetNewGuideData(System.Windows.DependencyObject,System.Object)
-  - H.Extensions.Attach.Cattach.SetNewGuideDataTemplate(System.Windows.DependencyObject,System.Windows.DataTemplate)
-  - H.Extensions.Attach.Cattach.SetNewGuideParentTitle(System.Windows.DependencyObject,System.String)
-  - H.Extensions.Attach.Cattach.SetNewGuideTitle(System.Windows.DependencyObject,System.Object)
   - H.Extensions.Attach.Cattach.SetOrientation(System.Windows.DependencyObject,System.Windows.Controls.Orientation)
   - H.Extensions.Attach.Cattach.SetPassword(System.Windows.DependencyObject,System.String)
   - H.Extensions.Attach.Cattach.SetPath(System.Windows.DependencyObject,System.Windows.Media.Geometry)
@@ -563,7 +553,6 @@ items:
   - H.Extensions.Attach.Cattach.SetUncheckedText(System.Windows.DependencyObject,System.String)
   - H.Extensions.Attach.Cattach.SetUseClose(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetUseGuide(System.Windows.DependencyObject,System.Boolean)
-  - H.Extensions.Attach.Cattach.SetUseNewGuide(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetUseSearch(System.Windows.DependencyObject,System.Boolean)
   - H.Extensions.Attach.Cattach.SetValue(System.Windows.DependencyObject,System.Double)
   - H.Extensions.Attach.Cattach.SetWatermark(System.Windows.DependencyObject,System.String)
@@ -594,7 +583,6 @@ items:
   - H.Extensions.Attach.Cattach.UncheckedTextProperty
   - H.Extensions.Attach.Cattach.UseCloseProperty
   - H.Extensions.Attach.Cattach.UseGuideProperty
-  - H.Extensions.Attach.Cattach.UseNewGuideProperty
   - H.Extensions.Attach.Cattach.UseSearchProperty
   - H.Extensions.Attach.Cattach.ValueProperty
   - H.Extensions.Attach.Cattach.WatermarkProperty
@@ -5517,15 +5505,25 @@ items:
   source:
     id: AllowsAnimationProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty AllowsAnimationProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty AllowsAnimationProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly AllowsAnimationProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly AllowsAnimationProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetAllowsAnimation(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetAllowsAnimation(System.Windows.DependencyObject)
   id: GetAllowsAnimation(System.Windows.DependencyObject)
@@ -5545,14 +5543,24 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static bool GetAllowsAnimation(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static bool GetAllowsAnimation(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Boolean
-    content.vb: Public Shared Function GetAllowsAnimation(d As DependencyObject) As Boolean
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetAllowsAnimation(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetAllowsAnimation*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetAllowsAnimation(System.Windows.DependencyObject,System.Boolean)
   commentId: M:H.Extensions.Attach.Cattach.SetAllowsAnimation(System.Windows.DependencyObject,System.Boolean)
   id: SetAllowsAnimation(System.Windows.DependencyObject,System.Boolean)
@@ -5572,14 +5580,24 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetAllowsAnimation(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetAllowsAnimation(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetAllowsAnimation(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetAllowsAnimation(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetAllowsAnimation*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetAllowsAnimation(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetAllowsAnimation(System.Windows.DependencyObject, Boolean)
   name.vb: SetAllowsAnimation(DependencyObject, Boolean)
@@ -5679,10 +5697,20 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty DoubleAttachProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty DoubleAttachProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly DoubleAttachProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly DoubleAttachProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetDoubleAttach(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetDoubleAttach(System.Windows.DependencyObject)
   id: GetDoubleAttach(System.Windows.DependencyObject)
@@ -5697,19 +5725,29 @@ items:
   source:
     id: GetDoubleAttach
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 82
+    startLine: 81
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static double GetDoubleAttach(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static double GetDoubleAttach(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Double
-    content.vb: Public Shared Function GetDoubleAttach(d As DependencyObject) As Double
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetDoubleAttach(d As DependencyObject) As Double
   overload: H.Extensions.Attach.Cattach.GetDoubleAttach*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetDoubleAttach(System.Windows.DependencyObject,System.Double)
   commentId: M:H.Extensions.Attach.Cattach.SetDoubleAttach(System.Windows.DependencyObject,System.Double)
   id: SetDoubleAttach(System.Windows.DependencyObject,System.Double)
@@ -5724,19 +5762,29 @@ items:
   source:
     id: SetDoubleAttach
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 87
+    startLine: 86
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetDoubleAttach(DependencyObject obj, double value)
+    content: >-
+      [Obsolete]
+
+      public static void SetDoubleAttach(DependencyObject obj, double value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Double
-    content.vb: Public Shared Sub SetDoubleAttach(obj As DependencyObject, value As Double)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetDoubleAttach(obj As DependencyObject, value As Double)
   overload: H.Extensions.Attach.Cattach.SetDoubleAttach*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetDoubleAttach(DependencyObject, Double)
   fullName.vb: H.Extensions.Attach.Cattach.SetDoubleAttach(System.Windows.DependencyObject, Double)
   name.vb: SetDoubleAttach(DependencyObject, Double)
@@ -5759,10 +5807,20 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty IsClearTextButtonBehaviorEnabledProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty IsClearTextButtonBehaviorEnabledProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly IsClearTextButtonBehaviorEnabledProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly IsClearTextButtonBehaviorEnabledProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetIsClearTextButtonBehaviorEnabled(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetIsClearTextButtonBehaviorEnabled(System.Windows.DependencyObject)
   id: GetIsClearTextButtonBehaviorEnabled(System.Windows.DependencyObject)
@@ -5777,12 +5835,14 @@ items:
   source:
     id: GetIsClearTextButtonBehaviorEnabled
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 96
+    startLine: 95
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
     content: >-
+      [Obsolete]
+
       [AttachedPropertyBrowsableForType(typeof(TextBox))]
 
       public static bool GetIsClearTextButtonBehaviorEnabled(DependencyObject d)
@@ -5792,11 +5852,16 @@ items:
     return:
       type: System.Boolean
     content.vb: >-
+      <Obsolete>
+
       <AttachedPropertyBrowsableForType(GetType(TextBox))>
 
       Public Shared Function GetIsClearTextButtonBehaviorEnabled(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetIsClearTextButtonBehaviorEnabled*
   attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   - type: System.Windows.AttachedPropertyBrowsableForTypeAttribute
     ctor: System.Windows.AttachedPropertyBrowsableForTypeAttribute.#ctor(System.Type)
     arguments:
@@ -5816,19 +5881,29 @@ items:
   source:
     id: SetIsClearTextButtonBehaviorEnabled
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 102
+    startLine: 101
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetIsClearTextButtonBehaviorEnabled(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetIsClearTextButtonBehaviorEnabled(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetIsClearTextButtonBehaviorEnabled(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetIsClearTextButtonBehaviorEnabled(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetIsClearTextButtonBehaviorEnabled*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetIsClearTextButtonBehaviorEnabled(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetIsClearTextButtonBehaviorEnabled(System.Windows.DependencyObject, Boolean)
   name.vb: SetIsClearTextButtonBehaviorEnabled(DependencyObject, Boolean)
@@ -5851,10 +5926,20 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty DetailProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty DetailProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly DetailProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly DetailProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetDetail(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetDetail(System.Windows.DependencyObject)
   id: GetDetail(System.Windows.DependencyObject)
@@ -5869,19 +5954,29 @@ items:
   source:
     id: GetDetail
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 119
+    startLine: 118
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static string GetDetail(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static string GetDetail(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.String
-    content.vb: Public Shared Function GetDetail(d As DependencyObject) As String
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetDetail(d As DependencyObject) As String
   overload: H.Extensions.Attach.Cattach.GetDetail*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetDetail(System.Windows.DependencyObject,System.String)
   commentId: M:H.Extensions.Attach.Cattach.SetDetail(System.Windows.DependencyObject,System.String)
   id: SetDetail(System.Windows.DependencyObject,System.String)
@@ -5896,19 +5991,29 @@ items:
   source:
     id: SetDetail
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 124
+    startLine: 123
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetDetail(DependencyObject obj, string value)
+    content: >-
+      [Obsolete]
+
+      public static void SetDetail(DependencyObject obj, string value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.String
-    content.vb: Public Shared Sub SetDetail(obj As DependencyObject, value As String)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetDetail(obj As DependencyObject, value As String)
   overload: H.Extensions.Attach.Cattach.SetDetail*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetDetail(DependencyObject, String)
   fullName.vb: H.Extensions.Attach.Cattach.SetDetail(System.Windows.DependencyObject, String)
   name.vb: SetDetail(DependencyObject, String)
@@ -5926,15 +6031,25 @@ items:
   source:
     id: IsOpenFileButtonBehaviorEnabledProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 128
+    startLine: 129
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty IsOpenFileButtonBehaviorEnabledProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty IsOpenFileButtonBehaviorEnabledProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly IsOpenFileButtonBehaviorEnabledProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly IsOpenFileButtonBehaviorEnabledProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetIsOpenFileButtonBehaviorEnabled(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetIsOpenFileButtonBehaviorEnabled(System.Windows.DependencyObject)
   id: GetIsOpenFileButtonBehaviorEnabled(System.Windows.DependencyObject)
@@ -5955,6 +6070,8 @@ items:
   namespace: H.Extensions.Attach
   syntax:
     content: >-
+      [Obsolete]
+
       [AttachedPropertyBrowsableForType(typeof(TextBox))]
 
       public static bool GetIsOpenFileButtonBehaviorEnabled(DependencyObject d)
@@ -5964,11 +6081,16 @@ items:
     return:
       type: System.Boolean
     content.vb: >-
+      <Obsolete>
+
       <AttachedPropertyBrowsableForType(GetType(TextBox))>
 
       Public Shared Function GetIsOpenFileButtonBehaviorEnabled(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetIsOpenFileButtonBehaviorEnabled*
   attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   - type: System.Windows.AttachedPropertyBrowsableForTypeAttribute
     ctor: System.Windows.AttachedPropertyBrowsableForTypeAttribute.#ctor(System.Type)
     arguments:
@@ -5993,14 +6115,24 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetIsOpenFileButtonBehaviorEnabled(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetIsOpenFileButtonBehaviorEnabled(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetIsOpenFileButtonBehaviorEnabled(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetIsOpenFileButtonBehaviorEnabled(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetIsOpenFileButtonBehaviorEnabled*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetIsOpenFileButtonBehaviorEnabled(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetIsOpenFileButtonBehaviorEnabled(System.Windows.DependencyObject, Boolean)
   name.vb: SetIsOpenFileButtonBehaviorEnabled(DependencyObject, Boolean)
@@ -6018,15 +6150,25 @@ items:
   source:
     id: IsOpenFolderButtonBehaviorEnabledProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 151
+    startLine: 152
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty IsOpenFolderButtonBehaviorEnabledProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty IsOpenFolderButtonBehaviorEnabledProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly IsOpenFolderButtonBehaviorEnabledProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly IsOpenFolderButtonBehaviorEnabledProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetIsOpenFolderButtonBehaviorEnabled(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetIsOpenFolderButtonBehaviorEnabled(System.Windows.DependencyObject)
   id: GetIsOpenFolderButtonBehaviorEnabled(System.Windows.DependencyObject)
@@ -6047,6 +6189,8 @@ items:
   namespace: H.Extensions.Attach
   syntax:
     content: >-
+      [Obsolete]
+
       [AttachedPropertyBrowsableForType(typeof(TextBox))]
 
       public static bool GetIsOpenFolderButtonBehaviorEnabled(DependencyObject d)
@@ -6056,11 +6200,16 @@ items:
     return:
       type: System.Boolean
     content.vb: >-
+      <Obsolete>
+
       <AttachedPropertyBrowsableForType(GetType(TextBox))>
 
       Public Shared Function GetIsOpenFolderButtonBehaviorEnabled(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetIsOpenFolderButtonBehaviorEnabled*
   attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   - type: System.Windows.AttachedPropertyBrowsableForTypeAttribute
     ctor: System.Windows.AttachedPropertyBrowsableForTypeAttribute.#ctor(System.Type)
     arguments:
@@ -6085,14 +6234,24 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetIsOpenFolderButtonBehaviorEnabled(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetIsOpenFolderButtonBehaviorEnabled(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetIsOpenFolderButtonBehaviorEnabled(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetIsOpenFolderButtonBehaviorEnabled(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetIsOpenFolderButtonBehaviorEnabled*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetIsOpenFolderButtonBehaviorEnabled(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetIsOpenFolderButtonBehaviorEnabled(System.Windows.DependencyObject, Boolean)
   name.vb: SetIsOpenFolderButtonBehaviorEnabled(DependencyObject, Boolean)
@@ -6110,15 +6269,25 @@ items:
   source:
     id: IsSaveFileButtonBehaviorEnabledProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 174
+    startLine: 175
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty IsSaveFileButtonBehaviorEnabledProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty IsSaveFileButtonBehaviorEnabledProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly IsSaveFileButtonBehaviorEnabledProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly IsSaveFileButtonBehaviorEnabledProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetIsSaveFileButtonBehaviorEnabled(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetIsSaveFileButtonBehaviorEnabled(System.Windows.DependencyObject)
   id: GetIsSaveFileButtonBehaviorEnabled(System.Windows.DependencyObject)
@@ -6139,6 +6308,8 @@ items:
   namespace: H.Extensions.Attach
   syntax:
     content: >-
+      [Obsolete]
+
       [AttachedPropertyBrowsableForType(typeof(TextBox))]
 
       public static bool GetIsSaveFileButtonBehaviorEnabled(DependencyObject d)
@@ -6148,11 +6319,16 @@ items:
     return:
       type: System.Boolean
     content.vb: >-
+      <Obsolete>
+
       <AttachedPropertyBrowsableForType(GetType(TextBox))>
 
       Public Shared Function GetIsSaveFileButtonBehaviorEnabled(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetIsSaveFileButtonBehaviorEnabled*
   attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   - type: System.Windows.AttachedPropertyBrowsableForTypeAttribute
     ctor: System.Windows.AttachedPropertyBrowsableForTypeAttribute.#ctor(System.Type)
     arguments:
@@ -6177,14 +6353,24 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetIsSaveFileButtonBehaviorEnabled(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetIsSaveFileButtonBehaviorEnabled(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetIsSaveFileButtonBehaviorEnabled(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetIsSaveFileButtonBehaviorEnabled(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetIsSaveFileButtonBehaviorEnabled*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetIsSaveFileButtonBehaviorEnabled(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetIsSaveFileButtonBehaviorEnabled(System.Windows.DependencyObject, Boolean)
   name.vb: SetIsSaveFileButtonBehaviorEnabled(DependencyObject, Boolean)
@@ -6207,12 +6393,22 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static RoutedUICommand ClearTextCommand { get; }
+    content: >-
+      [Obsolete]
+
+      public static RoutedUICommand ClearTextCommand { get; }
     parameters: []
     return:
       type: System.Windows.Input.RoutedUICommand
-    content.vb: Public Shared Property ClearTextCommand As RoutedUICommand
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Property ClearTextCommand As RoutedUICommand
   overload: H.Extensions.Attach.Cattach.ClearTextCommand*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.OpenFileCommand
   commentId: P:H.Extensions.Attach.Cattach.OpenFileCommand
   id: OpenFileCommand
@@ -6232,12 +6428,22 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static RoutedUICommand OpenFileCommand { get; }
+    content: >-
+      [Obsolete]
+
+      public static RoutedUICommand OpenFileCommand { get; }
     parameters: []
     return:
       type: System.Windows.Input.RoutedUICommand
-    content.vb: Public Shared Property OpenFileCommand As RoutedUICommand
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Property OpenFileCommand As RoutedUICommand
   overload: H.Extensions.Attach.Cattach.OpenFileCommand*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.OpenFolderCommand
   commentId: P:H.Extensions.Attach.Cattach.OpenFolderCommand
   id: OpenFolderCommand
@@ -6257,12 +6463,22 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static RoutedUICommand OpenFolderCommand { get; }
+    content: >-
+      [Obsolete]
+
+      public static RoutedUICommand OpenFolderCommand { get; }
     parameters: []
     return:
       type: System.Windows.Input.RoutedUICommand
-    content.vb: Public Shared Property OpenFolderCommand As RoutedUICommand
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Property OpenFolderCommand As RoutedUICommand
   overload: H.Extensions.Attach.Cattach.OpenFolderCommand*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SaveFileCommand
   commentId: P:H.Extensions.Attach.Cattach.SaveFileCommand
   id: SaveFileCommand
@@ -6282,12 +6498,22 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static RoutedUICommand SaveFileCommand { get; }
+    content: >-
+      [Obsolete]
+
+      public static RoutedUICommand SaveFileCommand { get; }
     parameters: []
     return:
       type: System.Windows.Input.RoutedUICommand
-    content.vb: Public Shared Property SaveFileCommand As RoutedUICommand
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Property SaveFileCommand As RoutedUICommand
   overload: H.Extensions.Attach.Cattach.SaveFileCommand*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.PasswordProperty
   commentId: F:H.Extensions.Attach.Cattach.PasswordProperty
   id: PasswordProperty
@@ -6302,7 +6528,7 @@ items:
   source:
     id: PasswordProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 304
+    startLine: 305
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6325,7 +6551,7 @@ items:
   source:
     id: GetPassword
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 309
+    startLine: 311
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6352,7 +6578,7 @@ items:
   source:
     id: SetPassword
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 313
+    startLine: 315
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6382,7 +6608,7 @@ items:
   source:
     id: GetSelectedItems
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 359
+    startLine: 361
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6409,7 +6635,7 @@ items:
   source:
     id: SetSelectedItems
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 364
+    startLine: 366
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6436,7 +6662,7 @@ items:
   source:
     id: SelectedItemsProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 371
+    startLine: 373
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6459,7 +6685,7 @@ items:
   source:
     id: OnSelectedItemsChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 375
+    startLine: 377
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6486,15 +6712,25 @@ items:
   source:
     id: BoolProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 418
+    startLine: 420
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty BoolProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty BoolProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly BoolProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly BoolProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetBool(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetBool(System.Windows.DependencyObject)
   id: GetBool(System.Windows.DependencyObject)
@@ -6509,19 +6745,29 @@ items:
   source:
     id: GetBool
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 421
+    startLine: 422
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static bool GetBool(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static bool GetBool(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Boolean
-    content.vb: Public Shared Function GetBool(d As DependencyObject) As Boolean
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetBool(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetBool*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetBool(System.Windows.DependencyObject,System.Boolean)
   commentId: M:H.Extensions.Attach.Cattach.SetBool(System.Windows.DependencyObject,System.Boolean)
   id: SetBool(System.Windows.DependencyObject,System.Boolean)
@@ -6536,19 +6782,29 @@ items:
   source:
     id: SetBool
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 426
+    startLine: 427
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetBool(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetBool(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetBool(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetBool(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetBool*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetBool(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetBool(System.Windows.DependencyObject, Boolean)
   name.vb: SetBool(DependencyObject, Boolean)
@@ -6566,19 +6822,29 @@ items:
   source:
     id: GetIsOpen
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 432
+    startLine: 433
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static bool GetIsOpen(DependencyObject obj)
+    content: >-
+      [Obsolete]
+
+      public static bool GetIsOpen(DependencyObject obj)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     return:
       type: System.Boolean
-    content.vb: Public Shared Function GetIsOpen(obj As DependencyObject) As Boolean
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetIsOpen(obj As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetIsOpen*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetIsOpen(System.Windows.DependencyObject,System.Boolean)
   commentId: M:H.Extensions.Attach.Cattach.SetIsOpen(System.Windows.DependencyObject,System.Boolean)
   id: SetIsOpen(System.Windows.DependencyObject,System.Boolean)
@@ -6593,19 +6859,29 @@ items:
   source:
     id: SetIsOpen
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 437
+    startLine: 438
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetIsOpen(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetIsOpen(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetIsOpen(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetIsOpen(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetIsOpen*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetIsOpen(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetIsOpen(System.Windows.DependencyObject, Boolean)
   name.vb: SetIsOpen(DependencyObject, Boolean)
@@ -6623,7 +6899,7 @@ items:
   source:
     id: IsOpenProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 442
+    startLine: 444
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6646,19 +6922,29 @@ items:
   source:
     id: OnIsOpenChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 445
+    startLine: 446
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void OnIsOpenChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    content: >-
+      [Obsolete]
+
+      public static void OnIsOpenChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     - id: e
       type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnIsOpenChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub OnIsOpenChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
   overload: H.Extensions.Attach.Cattach.OnIsOpenChanged*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetIsBuzy(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetIsBuzy(System.Windows.DependencyObject)
   id: GetIsBuzy(System.Windows.DependencyObject)
@@ -6673,7 +6959,7 @@ items:
   source:
     id: GetIsBuzy
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 475
+    startLine: 477
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6700,7 +6986,7 @@ items:
   source:
     id: SetIsBuzy
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 480
+    startLine: 482
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6730,7 +7016,7 @@ items:
   source:
     id: IsBuzyProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 486
+    startLine: 488
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6755,7 +7041,7 @@ items:
   source:
     id: GetBuzyText
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 489
+    startLine: 491
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6782,7 +7068,7 @@ items:
   source:
     id: SetBuzyText
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 494
+    startLine: 496
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6812,7 +7098,7 @@ items:
   source:
     id: BuzyTextProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 500
+    startLine: 502
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6835,7 +7121,7 @@ items:
   source:
     id: GetPath
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 504
+    startLine: 506
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6862,7 +7148,7 @@ items:
   source:
     id: SetPath
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 509
+    startLine: 511
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -6889,12 +7175,10 @@ items:
   source:
     id: PathProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 515
+    startLine: 516
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
-  summary: 是否等待
-  example: []
   syntax:
     content: public static readonly DependencyProperty PathProperty
     return:
@@ -6914,15 +7198,25 @@ items:
   source:
     id: UseCloseProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 523
+    startLine: 525
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty UseCloseProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty UseCloseProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly UseCloseProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly UseCloseProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetUseClose(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetUseClose(System.Windows.DependencyObject)
   id: GetUseClose(System.Windows.DependencyObject)
@@ -6937,19 +7231,29 @@ items:
   source:
     id: GetUseClose
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 526
+    startLine: 527
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static bool GetUseClose(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static bool GetUseClose(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Boolean
-    content.vb: Public Shared Function GetUseClose(d As DependencyObject) As Boolean
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetUseClose(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetUseClose*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetUseClose(System.Windows.DependencyObject,System.Boolean)
   commentId: M:H.Extensions.Attach.Cattach.SetUseClose(System.Windows.DependencyObject,System.Boolean)
   id: SetUseClose(System.Windows.DependencyObject,System.Boolean)
@@ -6964,19 +7268,29 @@ items:
   source:
     id: SetUseClose
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 531
+    startLine: 532
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetUseClose(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetUseClose(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetUseClose(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetUseClose(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetUseClose*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetUseClose(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetUseClose(System.Windows.DependencyObject, Boolean)
   name.vb: SetUseClose(DependencyObject, Boolean)
@@ -6994,15 +7308,25 @@ items:
   source:
     id: IsDragEnterProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 541
+    startLine: 543
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty IsDragEnterProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty IsDragEnterProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly IsDragEnterProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly IsDragEnterProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetIsDragEnter(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetIsDragEnter(System.Windows.DependencyObject)
   id: GetIsDragEnter(System.Windows.DependencyObject)
@@ -7017,19 +7341,29 @@ items:
   source:
     id: GetIsDragEnter
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 544
+    startLine: 545
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static bool GetIsDragEnter(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static bool GetIsDragEnter(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Boolean
-    content.vb: Public Shared Function GetIsDragEnter(d As DependencyObject) As Boolean
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetIsDragEnter(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetIsDragEnter*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetIsDragEnter(System.Windows.DependencyObject,System.Boolean)
   commentId: M:H.Extensions.Attach.Cattach.SetIsDragEnter(System.Windows.DependencyObject,System.Boolean)
   id: SetIsDragEnter(System.Windows.DependencyObject,System.Boolean)
@@ -7044,19 +7378,29 @@ items:
   source:
     id: SetIsDragEnter
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 549
+    startLine: 550
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetIsDragEnter(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetIsDragEnter(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetIsDragEnter(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetIsDragEnter(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetIsDragEnter*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetIsDragEnter(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetIsDragEnter(System.Windows.DependencyObject, Boolean)
   name.vb: SetIsDragEnter(DependencyObject, Boolean)
@@ -7074,15 +7418,25 @@ items:
   source:
     id: OrientationProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 581
+    startLine: 583
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty OrientationProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty OrientationProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly OrientationProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly OrientationProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetOrientation(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetOrientation(System.Windows.DependencyObject)
   id: GetOrientation(System.Windows.DependencyObject)
@@ -7097,19 +7451,29 @@ items:
   source:
     id: GetOrientation
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 584
+    startLine: 585
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static Orientation GetOrientation(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static Orientation GetOrientation(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Windows.Controls.Orientation
-    content.vb: Public Shared Function GetOrientation(d As DependencyObject) As Orientation
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetOrientation(d As DependencyObject) As Orientation
   overload: H.Extensions.Attach.Cattach.GetOrientation*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetOrientation(System.Windows.DependencyObject,System.Windows.Controls.Orientation)
   commentId: M:H.Extensions.Attach.Cattach.SetOrientation(System.Windows.DependencyObject,System.Windows.Controls.Orientation)
   id: SetOrientation(System.Windows.DependencyObject,System.Windows.Controls.Orientation)
@@ -7124,19 +7488,29 @@ items:
   source:
     id: SetOrientation
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 589
+    startLine: 590
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetOrientation(DependencyObject obj, Orientation value)
+    content: >-
+      [Obsolete]
+
+      public static void SetOrientation(DependencyObject obj, Orientation value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Windows.Controls.Orientation
-    content.vb: Public Shared Sub SetOrientation(obj As DependencyObject, value As Orientation)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetOrientation(obj As DependencyObject, value As Orientation)
   overload: H.Extensions.Attach.Cattach.SetOrientation*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.ValueProperty
   commentId: F:H.Extensions.Attach.Cattach.ValueProperty
   id: ValueProperty
@@ -7151,15 +7525,25 @@ items:
   source:
     id: ValueProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 599
+    startLine: 601
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty ValueProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty ValueProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly ValueProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly ValueProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetValue(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetValue(System.Windows.DependencyObject)
   id: GetValue(System.Windows.DependencyObject)
@@ -7174,19 +7558,29 @@ items:
   source:
     id: GetValue
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 602
+    startLine: 603
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static double GetValue(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static double GetValue(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Double
-    content.vb: Public Shared Function GetValue(d As DependencyObject) As Double
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetValue(d As DependencyObject) As Double
   overload: H.Extensions.Attach.Cattach.GetValue*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetValue(System.Windows.DependencyObject,System.Double)
   commentId: M:H.Extensions.Attach.Cattach.SetValue(System.Windows.DependencyObject,System.Double)
   id: SetValue(System.Windows.DependencyObject,System.Double)
@@ -7201,19 +7595,29 @@ items:
   source:
     id: SetValue
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 607
+    startLine: 608
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetValue(DependencyObject obj, double value)
+    content: >-
+      [Obsolete]
+
+      public static void SetValue(DependencyObject obj, double value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Double
-    content.vb: Public Shared Sub SetValue(obj As DependencyObject, value As Double)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetValue(obj As DependencyObject, value As Double)
   overload: H.Extensions.Attach.Cattach.SetValue*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetValue(DependencyObject, Double)
   fullName.vb: H.Extensions.Attach.Cattach.SetValue(System.Windows.DependencyObject, Double)
   name.vb: SetValue(DependencyObject, Double)
@@ -7231,15 +7635,25 @@ items:
   source:
     id: TextProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 618
+    startLine: 620
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty TextProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty TextProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly TextProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly TextProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetText(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetText(System.Windows.DependencyObject)
   id: GetText(System.Windows.DependencyObject)
@@ -7254,19 +7668,29 @@ items:
   source:
     id: GetText
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 621
+    startLine: 622
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static string GetText(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static string GetText(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.String
-    content.vb: Public Shared Function GetText(d As DependencyObject) As String
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetText(d As DependencyObject) As String
   overload: H.Extensions.Attach.Cattach.GetText*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetText(System.Windows.DependencyObject,System.String)
   commentId: M:H.Extensions.Attach.Cattach.SetText(System.Windows.DependencyObject,System.String)
   id: SetText(System.Windows.DependencyObject,System.String)
@@ -7281,19 +7705,29 @@ items:
   source:
     id: SetText
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 626
+    startLine: 627
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetText(DependencyObject obj, string value)
+    content: >-
+      [Obsolete]
+
+      public static void SetText(DependencyObject obj, string value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.String
-    content.vb: Public Shared Sub SetText(obj As DependencyObject, value As String)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetText(obj As DependencyObject, value As String)
   overload: H.Extensions.Attach.Cattach.SetText*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetText(DependencyObject, String)
   fullName.vb: H.Extensions.Attach.Cattach.SetText(System.Windows.DependencyObject, String)
   name.vb: SetText(DependencyObject, String)
@@ -7311,15 +7745,25 @@ items:
   source:
     id: IsIndeterminateProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 636
+    startLine: 638
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty IsIndeterminateProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty IsIndeterminateProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly IsIndeterminateProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly IsIndeterminateProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetIsIndeterminate(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetIsIndeterminate(System.Windows.DependencyObject)
   id: GetIsIndeterminate(System.Windows.DependencyObject)
@@ -7334,19 +7778,29 @@ items:
   source:
     id: GetIsIndeterminate
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 639
+    startLine: 640
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static bool GetIsIndeterminate(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static bool GetIsIndeterminate(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Boolean
-    content.vb: Public Shared Function GetIsIndeterminate(d As DependencyObject) As Boolean
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetIsIndeterminate(d As DependencyObject) As Boolean
   overload: H.Extensions.Attach.Cattach.GetIsIndeterminate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetIsIndeterminate(System.Windows.DependencyObject,System.Boolean)
   commentId: M:H.Extensions.Attach.Cattach.SetIsIndeterminate(System.Windows.DependencyObject,System.Boolean)
   id: SetIsIndeterminate(System.Windows.DependencyObject,System.Boolean)
@@ -7361,19 +7815,29 @@ items:
   source:
     id: SetIsIndeterminate
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 644
+    startLine: 645
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetIsIndeterminate(DependencyObject obj, bool value)
+    content: >-
+      [Obsolete]
+
+      public static void SetIsIndeterminate(DependencyObject obj, bool value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Boolean
-    content.vb: Public Shared Sub SetIsIndeterminate(obj As DependencyObject, value As Boolean)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetIsIndeterminate(obj As DependencyObject, value As Boolean)
   overload: H.Extensions.Attach.Cattach.SetIsIndeterminate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetIsIndeterminate(DependencyObject, Boolean)
   fullName.vb: H.Extensions.Attach.Cattach.SetIsIndeterminate(System.Windows.DependencyObject, Boolean)
   name.vb: SetIsIndeterminate(DependencyObject, Boolean)
@@ -7391,15 +7855,25 @@ items:
   source:
     id: IsStayOpenProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 654
+    startLine: 656
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty IsStayOpenProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty IsStayOpenProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly IsStayOpenProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly IsStayOpenProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetIsStayOpen(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetIsStayOpen(System.Windows.DependencyObject)
   id: GetIsStayOpen(System.Windows.DependencyObject)
@@ -7414,19 +7888,29 @@ items:
   source:
     id: GetIsStayOpen
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 657
+    startLine: 658
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static string GetIsStayOpen(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static string GetIsStayOpen(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.String
-    content.vb: Public Shared Function GetIsStayOpen(d As DependencyObject) As String
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetIsStayOpen(d As DependencyObject) As String
   overload: H.Extensions.Attach.Cattach.GetIsStayOpen*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetIsStayOpen(System.Windows.DependencyObject,System.String)
   commentId: M:H.Extensions.Attach.Cattach.SetIsStayOpen(System.Windows.DependencyObject,System.String)
   id: SetIsStayOpen(System.Windows.DependencyObject,System.String)
@@ -7441,19 +7925,29 @@ items:
   source:
     id: SetIsStayOpen
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 662
+    startLine: 663
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetIsStayOpen(DependencyObject obj, string value)
+    content: >-
+      [Obsolete]
+
+      public static void SetIsStayOpen(DependencyObject obj, string value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.String
-    content.vb: Public Shared Sub SetIsStayOpen(obj As DependencyObject, value As String)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetIsStayOpen(obj As DependencyObject, value As String)
   overload: H.Extensions.Attach.Cattach.SetIsStayOpen*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetIsStayOpen(DependencyObject, String)
   fullName.vb: H.Extensions.Attach.Cattach.SetIsStayOpen(System.Windows.DependencyObject, String)
   name.vb: SetIsStayOpen(DependencyObject, String)
@@ -7471,19 +7965,29 @@ items:
   source:
     id: GetDateTimeFormat
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 852
+    startLine: 853
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static string GetDateTimeFormat(DependencyObject obj)
+    content: >-
+      [Obsolete]
+
+      public static string GetDateTimeFormat(DependencyObject obj)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     return:
       type: System.String
-    content.vb: Public Shared Function GetDateTimeFormat(obj As DependencyObject) As String
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetDateTimeFormat(obj As DependencyObject) As String
   overload: H.Extensions.Attach.Cattach.GetDateTimeFormat*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetDateTimeFormat(System.Windows.DependencyObject,System.String)
   commentId: M:H.Extensions.Attach.Cattach.SetDateTimeFormat(System.Windows.DependencyObject,System.String)
   id: SetDateTimeFormat(System.Windows.DependencyObject,System.String)
@@ -7498,19 +8002,29 @@ items:
   source:
     id: SetDateTimeFormat
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 857
+    startLine: 858
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetDateTimeFormat(DependencyObject obj, string value)
+    content: >-
+      [Obsolete]
+
+      public static void SetDateTimeFormat(DependencyObject obj, string value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.String
-    content.vb: Public Shared Sub SetDateTimeFormat(obj As DependencyObject, value As String)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetDateTimeFormat(obj As DependencyObject, value As String)
   overload: H.Extensions.Attach.Cattach.SetDateTimeFormat*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: Cattach.SetDateTimeFormat(DependencyObject, String)
   fullName.vb: H.Extensions.Attach.Cattach.SetDateTimeFormat(System.Windows.DependencyObject, String)
   name.vb: SetDateTimeFormat(DependencyObject, String)
@@ -7528,15 +8042,25 @@ items:
   source:
     id: DateTimeFormatProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 863
+    startLine: 865
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty DateTimeFormatProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty DateTimeFormatProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly DateTimeFormatProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly DateTimeFormatProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.OnDateTimeFormatChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   commentId: M:H.Extensions.Attach.Cattach.OnDateTimeFormatChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   id: OnDateTimeFormatChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
@@ -7551,19 +8075,29 @@ items:
   source:
     id: OnDateTimeFormatChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 866
+    startLine: 867
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void OnDateTimeFormatChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    content: >-
+      [Obsolete]
+
+      public static void OnDateTimeFormatChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     - id: e
       type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnDateTimeFormatChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub OnDateTimeFormatChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
   overload: H.Extensions.Attach.Cattach.OnDateTimeFormatChanged*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.EnumTypeSourceProperty
   commentId: F:H.Extensions.Attach.Cattach.EnumTypeSourceProperty
   id: EnumTypeSourceProperty
@@ -7582,13 +8116,21 @@ items:
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
-  summary: 枚举类型数据源
-  example: []
   syntax:
-    content: public static readonly DependencyProperty EnumTypeSourceProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty EnumTypeSourceProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly EnumTypeSourceProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly EnumTypeSourceProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetEnumTypeSource(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetEnumTypeSource(System.Windows.DependencyObject)
   id: GetEnumTypeSource(System.Windows.DependencyObject)
@@ -7603,19 +8145,29 @@ items:
   source:
     id: GetEnumTypeSource
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 882
+    startLine: 881
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static Type GetEnumTypeSource(DependencyObject d)
+    content: >-
+      [Obsolete]
+
+      public static Type GetEnumTypeSource(DependencyObject d)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     return:
       type: System.Type
-    content.vb: Public Shared Function GetEnumTypeSource(d As DependencyObject) As Type
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetEnumTypeSource(d As DependencyObject) As Type
   overload: H.Extensions.Attach.Cattach.GetEnumTypeSource*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetEnumTypeSource(System.Windows.DependencyObject,System.Type)
   commentId: M:H.Extensions.Attach.Cattach.SetEnumTypeSource(System.Windows.DependencyObject,System.Type)
   id: SetEnumTypeSource(System.Windows.DependencyObject,System.Type)
@@ -7630,19 +8182,29 @@ items:
   source:
     id: SetEnumTypeSource
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 887
+    startLine: 886
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetEnumTypeSource(DependencyObject obj, Type value)
+    content: >-
+      [Obsolete]
+
+      public static void SetEnumTypeSource(DependencyObject obj, Type value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Type
-    content.vb: Public Shared Sub SetEnumTypeSource(obj As DependencyObject, value As Type)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetEnumTypeSource(obj As DependencyObject, value As Type)
   overload: H.Extensions.Attach.Cattach.SetEnumTypeSource*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetDock(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetDock(System.Windows.DependencyObject)
   id: GetDock(System.Windows.DependencyObject)
@@ -7657,19 +8219,29 @@ items:
   source:
     id: GetDock
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 919
+    startLine: 918
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static Dock GetDock(DependencyObject obj)
+    content: >-
+      [Obsolete]
+
+      public static Dock GetDock(DependencyObject obj)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     return:
       type: System.Windows.Controls.Dock
-    content.vb: Public Shared Function GetDock(obj As DependencyObject) As Dock
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Function GetDock(obj As DependencyObject) As Dock
   overload: H.Extensions.Attach.Cattach.GetDock*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.SetDock(System.Windows.DependencyObject,System.Windows.Controls.Dock)
   commentId: M:H.Extensions.Attach.Cattach.SetDock(System.Windows.DependencyObject,System.Windows.Controls.Dock)
   id: SetDock(System.Windows.DependencyObject,System.Windows.Controls.Dock)
@@ -7684,19 +8256,29 @@ items:
   source:
     id: SetDock
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 924
+    startLine: 923
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void SetDock(DependencyObject obj, Dock value)
+    content: >-
+      [Obsolete]
+
+      public static void SetDock(DependencyObject obj, Dock value)
     parameters:
     - id: obj
       type: System.Windows.DependencyObject
     - id: value
       type: System.Windows.Controls.Dock
-    content.vb: Public Shared Sub SetDock(obj As DependencyObject, value As Dock)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub SetDock(obj As DependencyObject, value As Dock)
   overload: H.Extensions.Attach.Cattach.SetDock*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.DockProperty
   commentId: F:H.Extensions.Attach.Cattach.DockProperty
   id: DockProperty
@@ -7716,10 +8298,20 @@ items:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static readonly DependencyProperty DockProperty
+    content: >-
+      [Obsolete]
+
+      public static readonly DependencyProperty DockProperty
     return:
       type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly DockProperty As DependencyProperty
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared ReadOnly DockProperty As DependencyProperty
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.OnDockChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   commentId: M:H.Extensions.Attach.Cattach.OnDockChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
   id: OnDockChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
@@ -7734,19 +8326,29 @@ items:
   source:
     id: OnDockChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.cs
-    startLine: 933
+    startLine: 932
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
   syntax:
-    content: public static void OnDockChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    content: >-
+      [Obsolete]
+
+      public static void OnDockChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     parameters:
     - id: d
       type: System.Windows.DependencyObject
     - id: e
       type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnDockChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
+    content.vb: >-
+      <Obsolete>
+
+      Public Shared Sub OnDockChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
   overload: H.Extensions.Attach.Cattach.OnDockChanged*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 - uid: H.Extensions.Attach.Cattach.GetBottomTemplate(System.Windows.DependencyObject)
   commentId: M:H.Extensions.Attach.Cattach.GetBottomTemplate(System.Windows.DependencyObject)
   id: GetBottomTemplate(System.Windows.DependencyObject)
@@ -8830,7 +9432,7 @@ items:
   source:
     id: GetUseGuide
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -8857,7 +9459,7 @@ items:
   source:
     id: SetUseGuide
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -8887,7 +9489,7 @@ items:
   source:
     id: UseGuideProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -8910,7 +9512,7 @@ items:
   source:
     id: OnUseGuideChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -8937,7 +9539,7 @@ items:
   source:
     id: GetGuideTitle
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 32
+    startLine: 34
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -8964,7 +9566,7 @@ items:
   source:
     id: SetGuideTitle
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 37
+    startLine: 39
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -8994,7 +9596,7 @@ items:
   source:
     id: GuideTitleProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 43
+    startLine: 45
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9017,7 +9619,7 @@ items:
   source:
     id: OnGuideTitleChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 46
+    startLine: 48
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9044,7 +9646,7 @@ items:
   source:
     id: GetGuideParentTitle
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 56
+    startLine: 58
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9071,7 +9673,7 @@ items:
   source:
     id: SetGuideParentTitle
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 61
+    startLine: 63
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9101,7 +9703,7 @@ items:
   source:
     id: GuideParentTitleProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 67
+    startLine: 69
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9124,7 +9726,7 @@ items:
   source:
     id: OnGuideParentTitleChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 70
+    startLine: 72
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9151,7 +9753,7 @@ items:
   source:
     id: GetGuideData
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 80
+    startLine: 82
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9178,7 +9780,7 @@ items:
   source:
     id: SetGuideData
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 85
+    startLine: 87
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9208,7 +9810,7 @@ items:
   source:
     id: GuideDataProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 91
+    startLine: 93
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9231,7 +9833,7 @@ items:
   source:
     id: OnGuideDataChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 94
+    startLine: 96
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9258,7 +9860,7 @@ items:
   source:
     id: GetGuideDataTemplate
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 104
+    startLine: 103
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9285,7 +9887,7 @@ items:
   source:
     id: SetGuideDataTemplate
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 109
+    startLine: 108
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9312,7 +9914,7 @@ items:
   source:
     id: GuideDataTemplateProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 115
+    startLine: 113
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9335,7 +9937,7 @@ items:
   source:
     id: OnGuideDataTemplateChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 118
+    startLine: 116
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9362,7 +9964,7 @@ items:
   source:
     id: GetIsGuide
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 128
+    startLine: 126
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9389,7 +9991,7 @@ items:
   source:
     id: SetIsGuide
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 133
+    startLine: 131
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9419,7 +10021,7 @@ items:
   source:
     id: IsGuideProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 139
+    startLine: 137
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9442,7 +10044,7 @@ items:
   source:
     id: OnIsGuideChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 142
+    startLine: 140
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9469,7 +10071,7 @@ items:
   source:
     id: GetGuideUseClick
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 151
+    startLine: 149
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9496,7 +10098,7 @@ items:
   source:
     id: SetGuideUseClick
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 156
+    startLine: 154
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9526,7 +10128,7 @@ items:
   source:
     id: GuideUseClickProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 162
+    startLine: 160
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9549,7 +10151,7 @@ items:
   source:
     id: OnGuideUseClickChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
-    startLine: 165
+    startLine: 163
   assemblies:
   - H.Extensions.Attach
   namespace: H.Extensions.Attach
@@ -9562,6 +10164,327 @@ items:
       type: System.Windows.DependencyPropertyChangedEventArgs
     content.vb: Public Shared Sub OnGuideUseClickChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
   overload: H.Extensions.Attach.Cattach.OnGuideUseClickChanged*
+- uid: H.Extensions.Attach.Cattach.GetIsGuideAdonerElement(System.Windows.DependencyObject)
+  commentId: M:H.Extensions.Attach.Cattach.GetIsGuideAdonerElement(System.Windows.DependencyObject)
+  id: GetIsGuideAdonerElement(System.Windows.DependencyObject)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: GetIsGuideAdonerElement(DependencyObject)
+  nameWithType: Cattach.GetIsGuideAdonerElement(DependencyObject)
+  fullName: H.Extensions.Attach.Cattach.GetIsGuideAdonerElement(System.Windows.DependencyObject)
+  type: Method
+  source:
+    id: GetIsGuideAdonerElement
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 174
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static bool GetIsGuideAdonerElement(DependencyObject obj)
+    parameters:
+    - id: obj
+      type: System.Windows.DependencyObject
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function GetIsGuideAdonerElement(obj As DependencyObject) As Boolean
+  overload: H.Extensions.Attach.Cattach.GetIsGuideAdonerElement*
+- uid: H.Extensions.Attach.Cattach.SetIsGuideAdonerElement(System.Windows.DependencyObject,System.Boolean)
+  commentId: M:H.Extensions.Attach.Cattach.SetIsGuideAdonerElement(System.Windows.DependencyObject,System.Boolean)
+  id: SetIsGuideAdonerElement(System.Windows.DependencyObject,System.Boolean)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: SetIsGuideAdonerElement(DependencyObject, bool)
+  nameWithType: Cattach.SetIsGuideAdonerElement(DependencyObject, bool)
+  fullName: H.Extensions.Attach.Cattach.SetIsGuideAdonerElement(System.Windows.DependencyObject, bool)
+  type: Method
+  source:
+    id: SetIsGuideAdonerElement
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 179
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static void SetIsGuideAdonerElement(DependencyObject obj, bool value)
+    parameters:
+    - id: obj
+      type: System.Windows.DependencyObject
+    - id: value
+      type: System.Boolean
+    content.vb: Public Shared Sub SetIsGuideAdonerElement(obj As DependencyObject, value As Boolean)
+  overload: H.Extensions.Attach.Cattach.SetIsGuideAdonerElement*
+  nameWithType.vb: Cattach.SetIsGuideAdonerElement(DependencyObject, Boolean)
+  fullName.vb: H.Extensions.Attach.Cattach.SetIsGuideAdonerElement(System.Windows.DependencyObject, Boolean)
+  name.vb: SetIsGuideAdonerElement(DependencyObject, Boolean)
+- uid: H.Extensions.Attach.Cattach.IsGuideAdonerElementProperty
+  commentId: F:H.Extensions.Attach.Cattach.IsGuideAdonerElementProperty
+  id: IsGuideAdonerElementProperty
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: IsGuideAdonerElementProperty
+  nameWithType: Cattach.IsGuideAdonerElementProperty
+  fullName: H.Extensions.Attach.Cattach.IsGuideAdonerElementProperty
+  type: Field
+  source:
+    id: IsGuideAdonerElementProperty
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 184
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static readonly DependencyProperty IsGuideAdonerElementProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly IsGuideAdonerElementProperty As DependencyProperty
+- uid: H.Extensions.Attach.Cattach.OnIsGuideAdonerElementChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  commentId: M:H.Extensions.Attach.Cattach.OnIsGuideAdonerElementChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  id: OnIsGuideAdonerElementChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: OnIsGuideAdonerElementChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+  nameWithType: Cattach.OnIsGuideAdonerElementChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+  fullName: H.Extensions.Attach.Cattach.OnIsGuideAdonerElementChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
+  type: Method
+  source:
+    id: OnIsGuideAdonerElementChanged
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 187
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static void OnIsGuideAdonerElementChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    parameters:
+    - id: d
+      type: System.Windows.DependencyObject
+    - id: e
+      type: System.Windows.DependencyPropertyChangedEventArgs
+    content.vb: Public Shared Sub OnIsGuideAdonerElementChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
+  overload: H.Extensions.Attach.Cattach.OnIsGuideAdonerElementChanged*
+- uid: H.Extensions.Attach.Cattach.GetGuideIcon(System.Windows.DependencyObject)
+  commentId: M:H.Extensions.Attach.Cattach.GetGuideIcon(System.Windows.DependencyObject)
+  id: GetGuideIcon(System.Windows.DependencyObject)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: GetGuideIcon(DependencyObject)
+  nameWithType: Cattach.GetGuideIcon(DependencyObject)
+  fullName: H.Extensions.Attach.Cattach.GetGuideIcon(System.Windows.DependencyObject)
+  type: Method
+  source:
+    id: GetGuideIcon
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 197
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static string GetGuideIcon(DependencyObject obj)
+    parameters:
+    - id: obj
+      type: System.Windows.DependencyObject
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetGuideIcon(obj As DependencyObject) As String
+  overload: H.Extensions.Attach.Cattach.GetGuideIcon*
+- uid: H.Extensions.Attach.Cattach.SetGuideIcon(System.Windows.DependencyObject,System.String)
+  commentId: M:H.Extensions.Attach.Cattach.SetGuideIcon(System.Windows.DependencyObject,System.String)
+  id: SetGuideIcon(System.Windows.DependencyObject,System.String)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: SetGuideIcon(DependencyObject, string)
+  nameWithType: Cattach.SetGuideIcon(DependencyObject, string)
+  fullName: H.Extensions.Attach.Cattach.SetGuideIcon(System.Windows.DependencyObject, string)
+  type: Method
+  source:
+    id: SetGuideIcon
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 202
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static void SetGuideIcon(DependencyObject obj, string value)
+    parameters:
+    - id: obj
+      type: System.Windows.DependencyObject
+    - id: value
+      type: System.String
+    content.vb: Public Shared Sub SetGuideIcon(obj As DependencyObject, value As String)
+  overload: H.Extensions.Attach.Cattach.SetGuideIcon*
+  nameWithType.vb: Cattach.SetGuideIcon(DependencyObject, String)
+  fullName.vb: H.Extensions.Attach.Cattach.SetGuideIcon(System.Windows.DependencyObject, String)
+  name.vb: SetGuideIcon(DependencyObject, String)
+- uid: H.Extensions.Attach.Cattach.GuideIconProperty
+  commentId: F:H.Extensions.Attach.Cattach.GuideIconProperty
+  id: GuideIconProperty
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: GuideIconProperty
+  nameWithType: Cattach.GuideIconProperty
+  fullName: H.Extensions.Attach.Cattach.GuideIconProperty
+  type: Field
+  source:
+    id: GuideIconProperty
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 207
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static readonly DependencyProperty GuideIconProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly GuideIconProperty As DependencyProperty
+- uid: H.Extensions.Attach.Cattach.OnGuideIconChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  commentId: M:H.Extensions.Attach.Cattach.OnGuideIconChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  id: OnGuideIconChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: OnGuideIconChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+  nameWithType: Cattach.OnGuideIconChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+  fullName: H.Extensions.Attach.Cattach.OnGuideIconChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
+  type: Method
+  source:
+    id: OnGuideIconChanged
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 210
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static void OnGuideIconChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    parameters:
+    - id: d
+      type: System.Windows.DependencyObject
+    - id: e
+      type: System.Windows.DependencyPropertyChangedEventArgs
+    content.vb: Public Shared Sub OnGuideIconChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
+  overload: H.Extensions.Attach.Cattach.OnGuideIconChanged*
+- uid: H.Extensions.Attach.Cattach.GetGuideAssemblyVersion(System.Windows.DependencyObject)
+  commentId: M:H.Extensions.Attach.Cattach.GetGuideAssemblyVersion(System.Windows.DependencyObject)
+  id: GetGuideAssemblyVersion(System.Windows.DependencyObject)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: GetGuideAssemblyVersion(DependencyObject)
+  nameWithType: Cattach.GetGuideAssemblyVersion(DependencyObject)
+  fullName: H.Extensions.Attach.Cattach.GetGuideAssemblyVersion(System.Windows.DependencyObject)
+  type: Method
+  source:
+    id: GetGuideAssemblyVersion
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 220
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static string GetGuideAssemblyVersion(DependencyObject obj)
+    parameters:
+    - id: obj
+      type: System.Windows.DependencyObject
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetGuideAssemblyVersion(obj As DependencyObject) As String
+  overload: H.Extensions.Attach.Cattach.GetGuideAssemblyVersion*
+- uid: H.Extensions.Attach.Cattach.SetGuideAssemblyVersion(System.Windows.DependencyObject,System.String)
+  commentId: M:H.Extensions.Attach.Cattach.SetGuideAssemblyVersion(System.Windows.DependencyObject,System.String)
+  id: SetGuideAssemblyVersion(System.Windows.DependencyObject,System.String)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: SetGuideAssemblyVersion(DependencyObject, string)
+  nameWithType: Cattach.SetGuideAssemblyVersion(DependencyObject, string)
+  fullName: H.Extensions.Attach.Cattach.SetGuideAssemblyVersion(System.Windows.DependencyObject, string)
+  type: Method
+  source:
+    id: SetGuideAssemblyVersion
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 225
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static void SetGuideAssemblyVersion(DependencyObject obj, string value)
+    parameters:
+    - id: obj
+      type: System.Windows.DependencyObject
+    - id: value
+      type: System.String
+    content.vb: Public Shared Sub SetGuideAssemblyVersion(obj As DependencyObject, value As String)
+  overload: H.Extensions.Attach.Cattach.SetGuideAssemblyVersion*
+  nameWithType.vb: Cattach.SetGuideAssemblyVersion(DependencyObject, String)
+  fullName.vb: H.Extensions.Attach.Cattach.SetGuideAssemblyVersion(System.Windows.DependencyObject, String)
+  name.vb: SetGuideAssemblyVersion(DependencyObject, String)
+- uid: H.Extensions.Attach.Cattach.GuideAssemblyVersionProperty
+  commentId: F:H.Extensions.Attach.Cattach.GuideAssemblyVersionProperty
+  id: GuideAssemblyVersionProperty
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: GuideAssemblyVersionProperty
+  nameWithType: Cattach.GuideAssemblyVersionProperty
+  fullName: H.Extensions.Attach.Cattach.GuideAssemblyVersionProperty
+  type: Field
+  source:
+    id: GuideAssemblyVersionProperty
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 229
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static readonly DependencyProperty GuideAssemblyVersionProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly GuideAssemblyVersionProperty As DependencyProperty
+- uid: H.Extensions.Attach.Cattach.OnGuideAssemblyVersionChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  commentId: M:H.Extensions.Attach.Cattach.OnGuideAssemblyVersionChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  id: OnGuideAssemblyVersionChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+  parent: H.Extensions.Attach.Cattach
+  langs:
+  - csharp
+  - vb
+  name: OnGuideAssemblyVersionChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+  nameWithType: Cattach.OnGuideAssemblyVersionChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+  fullName: H.Extensions.Attach.Cattach.OnGuideAssemblyVersionChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
+  type: Method
+  source:
+    id: OnGuideAssemblyVersionChanged
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.Guide.cs
+    startLine: 232
+  assemblies:
+  - H.Extensions.Attach
+  namespace: H.Extensions.Attach
+  syntax:
+    content: public static void OnGuideAssemblyVersionChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    parameters:
+    - id: d
+      type: System.Windows.DependencyObject
+    - id: e
+      type: System.Windows.DependencyPropertyChangedEventArgs
+    content.vb: Public Shared Sub OnGuideAssemblyVersionChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
+  overload: H.Extensions.Attach.Cattach.OnGuideAssemblyVersionChanged*
 - uid: H.Extensions.Attach.Cattach.IconHorizontalAlignmentProperty
   commentId: F:H.Extensions.Attach.Cattach.IconHorizontalAlignmentProperty
   id: IconHorizontalAlignmentProperty
@@ -12556,645 +13479,6 @@ items:
       type: System.Windows.DependencyPropertyChangedEventArgs
     content.vb: Public Shared Sub OnMouseOverEffectChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
   overload: H.Extensions.Attach.Cattach.OnMouseOverEffectChanged*
-- uid: H.Extensions.Attach.Cattach.GetUseNewGuide(System.Windows.DependencyObject)
-  commentId: M:H.Extensions.Attach.Cattach.GetUseNewGuide(System.Windows.DependencyObject)
-  id: GetUseNewGuide(System.Windows.DependencyObject)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: GetUseNewGuide(DependencyObject)
-  nameWithType: Cattach.GetUseNewGuide(DependencyObject)
-  fullName: H.Extensions.Attach.Cattach.GetUseNewGuide(System.Windows.DependencyObject)
-  type: Method
-  source:
-    id: GetUseNewGuide
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 11
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static bool GetUseNewGuide(DependencyObject obj)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Function GetUseNewGuide(obj As DependencyObject) As Boolean
-  overload: H.Extensions.Attach.Cattach.GetUseNewGuide*
-- uid: H.Extensions.Attach.Cattach.SetUseNewGuide(System.Windows.DependencyObject,System.Boolean)
-  commentId: M:H.Extensions.Attach.Cattach.SetUseNewGuide(System.Windows.DependencyObject,System.Boolean)
-  id: SetUseNewGuide(System.Windows.DependencyObject,System.Boolean)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: SetUseNewGuide(DependencyObject, bool)
-  nameWithType: Cattach.SetUseNewGuide(DependencyObject, bool)
-  fullName: H.Extensions.Attach.Cattach.SetUseNewGuide(System.Windows.DependencyObject, bool)
-  type: Method
-  source:
-    id: SetUseNewGuide
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 16
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void SetUseNewGuide(DependencyObject obj, bool value)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    - id: value
-      type: System.Boolean
-    content.vb: Public Shared Sub SetUseNewGuide(obj As DependencyObject, value As Boolean)
-  overload: H.Extensions.Attach.Cattach.SetUseNewGuide*
-  nameWithType.vb: Cattach.SetUseNewGuide(DependencyObject, Boolean)
-  fullName.vb: H.Extensions.Attach.Cattach.SetUseNewGuide(System.Windows.DependencyObject, Boolean)
-  name.vb: SetUseNewGuide(DependencyObject, Boolean)
-- uid: H.Extensions.Attach.Cattach.UseNewGuideProperty
-  commentId: F:H.Extensions.Attach.Cattach.UseNewGuideProperty
-  id: UseNewGuideProperty
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: UseNewGuideProperty
-  nameWithType: Cattach.UseNewGuideProperty
-  fullName: H.Extensions.Attach.Cattach.UseNewGuideProperty
-  type: Field
-  source:
-    id: UseNewGuideProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 22
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static readonly DependencyProperty UseNewGuideProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly UseNewGuideProperty As DependencyProperty
-- uid: H.Extensions.Attach.Cattach.OnUseNewGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  commentId: M:H.Extensions.Attach.Cattach.OnUseNewGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  id: OnUseNewGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: OnUseNewGuideChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  nameWithType: Cattach.OnUseNewGuideChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  fullName: H.Extensions.Attach.Cattach.OnUseNewGuideChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
-  type: Method
-  source:
-    id: OnUseNewGuideChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 25
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void OnUseNewGuideChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    parameters:
-    - id: d
-      type: System.Windows.DependencyObject
-    - id: e
-      type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnUseNewGuideChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
-  overload: H.Extensions.Attach.Cattach.OnUseNewGuideChanged*
-- uid: H.Extensions.Attach.Cattach.GetNewGuideTitle(System.Windows.DependencyObject)
-  commentId: M:H.Extensions.Attach.Cattach.GetNewGuideTitle(System.Windows.DependencyObject)
-  id: GetNewGuideTitle(System.Windows.DependencyObject)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: GetNewGuideTitle(DependencyObject)
-  nameWithType: Cattach.GetNewGuideTitle(DependencyObject)
-  fullName: H.Extensions.Attach.Cattach.GetNewGuideTitle(System.Windows.DependencyObject)
-  type: Method
-  source:
-    id: GetNewGuideTitle
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 33
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static object GetNewGuideTitle(DependencyObject obj)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    return:
-      type: System.Object
-    content.vb: Public Shared Function GetNewGuideTitle(obj As DependencyObject) As Object
-  overload: H.Extensions.Attach.Cattach.GetNewGuideTitle*
-- uid: H.Extensions.Attach.Cattach.SetNewGuideTitle(System.Windows.DependencyObject,System.Object)
-  commentId: M:H.Extensions.Attach.Cattach.SetNewGuideTitle(System.Windows.DependencyObject,System.Object)
-  id: SetNewGuideTitle(System.Windows.DependencyObject,System.Object)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: SetNewGuideTitle(DependencyObject, object)
-  nameWithType: Cattach.SetNewGuideTitle(DependencyObject, object)
-  fullName: H.Extensions.Attach.Cattach.SetNewGuideTitle(System.Windows.DependencyObject, object)
-  type: Method
-  source:
-    id: SetNewGuideTitle
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 38
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void SetNewGuideTitle(DependencyObject obj, object value)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    - id: value
-      type: System.Object
-    content.vb: Public Shared Sub SetNewGuideTitle(obj As DependencyObject, value As Object)
-  overload: H.Extensions.Attach.Cattach.SetNewGuideTitle*
-  nameWithType.vb: Cattach.SetNewGuideTitle(DependencyObject, Object)
-  fullName.vb: H.Extensions.Attach.Cattach.SetNewGuideTitle(System.Windows.DependencyObject, Object)
-  name.vb: SetNewGuideTitle(DependencyObject, Object)
-- uid: H.Extensions.Attach.Cattach.NewGuideTitleProperty
-  commentId: F:H.Extensions.Attach.Cattach.NewGuideTitleProperty
-  id: NewGuideTitleProperty
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: NewGuideTitleProperty
-  nameWithType: Cattach.NewGuideTitleProperty
-  fullName: H.Extensions.Attach.Cattach.NewGuideTitleProperty
-  type: Field
-  source:
-    id: NewGuideTitleProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 44
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static readonly DependencyProperty NewGuideTitleProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly NewGuideTitleProperty As DependencyProperty
-- uid: H.Extensions.Attach.Cattach.OnNewGuideTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  commentId: M:H.Extensions.Attach.Cattach.OnNewGuideTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  id: OnNewGuideTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: OnNewGuideTitleChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  nameWithType: Cattach.OnNewGuideTitleChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  fullName: H.Extensions.Attach.Cattach.OnNewGuideTitleChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
-  type: Method
-  source:
-    id: OnNewGuideTitleChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 47
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void OnNewGuideTitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    parameters:
-    - id: d
-      type: System.Windows.DependencyObject
-    - id: e
-      type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnNewGuideTitleChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
-  overload: H.Extensions.Attach.Cattach.OnNewGuideTitleChanged*
-- uid: H.Extensions.Attach.Cattach.GetNewGuideParentTitle(System.Windows.DependencyObject)
-  commentId: M:H.Extensions.Attach.Cattach.GetNewGuideParentTitle(System.Windows.DependencyObject)
-  id: GetNewGuideParentTitle(System.Windows.DependencyObject)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: GetNewGuideParentTitle(DependencyObject)
-  nameWithType: Cattach.GetNewGuideParentTitle(DependencyObject)
-  fullName: H.Extensions.Attach.Cattach.GetNewGuideParentTitle(System.Windows.DependencyObject)
-  type: Method
-  source:
-    id: GetNewGuideParentTitle
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 57
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static string GetNewGuideParentTitle(DependencyObject obj)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    return:
-      type: System.String
-    content.vb: Public Shared Function GetNewGuideParentTitle(obj As DependencyObject) As String
-  overload: H.Extensions.Attach.Cattach.GetNewGuideParentTitle*
-- uid: H.Extensions.Attach.Cattach.SetNewGuideParentTitle(System.Windows.DependencyObject,System.String)
-  commentId: M:H.Extensions.Attach.Cattach.SetNewGuideParentTitle(System.Windows.DependencyObject,System.String)
-  id: SetNewGuideParentTitle(System.Windows.DependencyObject,System.String)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: SetNewGuideParentTitle(DependencyObject, string)
-  nameWithType: Cattach.SetNewGuideParentTitle(DependencyObject, string)
-  fullName: H.Extensions.Attach.Cattach.SetNewGuideParentTitle(System.Windows.DependencyObject, string)
-  type: Method
-  source:
-    id: SetNewGuideParentTitle
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 62
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void SetNewGuideParentTitle(DependencyObject obj, string value)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    - id: value
-      type: System.String
-    content.vb: Public Shared Sub SetNewGuideParentTitle(obj As DependencyObject, value As String)
-  overload: H.Extensions.Attach.Cattach.SetNewGuideParentTitle*
-  nameWithType.vb: Cattach.SetNewGuideParentTitle(DependencyObject, String)
-  fullName.vb: H.Extensions.Attach.Cattach.SetNewGuideParentTitle(System.Windows.DependencyObject, String)
-  name.vb: SetNewGuideParentTitle(DependencyObject, String)
-- uid: H.Extensions.Attach.Cattach.NewGuideParentTitleProperty
-  commentId: F:H.Extensions.Attach.Cattach.NewGuideParentTitleProperty
-  id: NewGuideParentTitleProperty
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: NewGuideParentTitleProperty
-  nameWithType: Cattach.NewGuideParentTitleProperty
-  fullName: H.Extensions.Attach.Cattach.NewGuideParentTitleProperty
-  type: Field
-  source:
-    id: NewGuideParentTitleProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 68
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static readonly DependencyProperty NewGuideParentTitleProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly NewGuideParentTitleProperty As DependencyProperty
-- uid: H.Extensions.Attach.Cattach.OnNewGuideParentTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  commentId: M:H.Extensions.Attach.Cattach.OnNewGuideParentTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  id: OnNewGuideParentTitleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: OnNewGuideParentTitleChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  nameWithType: Cattach.OnNewGuideParentTitleChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  fullName: H.Extensions.Attach.Cattach.OnNewGuideParentTitleChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
-  type: Method
-  source:
-    id: OnNewGuideParentTitleChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 71
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void OnNewGuideParentTitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    parameters:
-    - id: d
-      type: System.Windows.DependencyObject
-    - id: e
-      type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnNewGuideParentTitleChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
-  overload: H.Extensions.Attach.Cattach.OnNewGuideParentTitleChanged*
-- uid: H.Extensions.Attach.Cattach.GetNewGuideData(System.Windows.DependencyObject)
-  commentId: M:H.Extensions.Attach.Cattach.GetNewGuideData(System.Windows.DependencyObject)
-  id: GetNewGuideData(System.Windows.DependencyObject)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: GetNewGuideData(DependencyObject)
-  nameWithType: Cattach.GetNewGuideData(DependencyObject)
-  fullName: H.Extensions.Attach.Cattach.GetNewGuideData(System.Windows.DependencyObject)
-  type: Method
-  source:
-    id: GetNewGuideData
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 81
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static object GetNewGuideData(DependencyObject obj)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    return:
-      type: System.Object
-    content.vb: Public Shared Function GetNewGuideData(obj As DependencyObject) As Object
-  overload: H.Extensions.Attach.Cattach.GetNewGuideData*
-- uid: H.Extensions.Attach.Cattach.SetNewGuideData(System.Windows.DependencyObject,System.Object)
-  commentId: M:H.Extensions.Attach.Cattach.SetNewGuideData(System.Windows.DependencyObject,System.Object)
-  id: SetNewGuideData(System.Windows.DependencyObject,System.Object)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: SetNewGuideData(DependencyObject, object)
-  nameWithType: Cattach.SetNewGuideData(DependencyObject, object)
-  fullName: H.Extensions.Attach.Cattach.SetNewGuideData(System.Windows.DependencyObject, object)
-  type: Method
-  source:
-    id: SetNewGuideData
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 86
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void SetNewGuideData(DependencyObject obj, object value)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    - id: value
-      type: System.Object
-    content.vb: Public Shared Sub SetNewGuideData(obj As DependencyObject, value As Object)
-  overload: H.Extensions.Attach.Cattach.SetNewGuideData*
-  nameWithType.vb: Cattach.SetNewGuideData(DependencyObject, Object)
-  fullName.vb: H.Extensions.Attach.Cattach.SetNewGuideData(System.Windows.DependencyObject, Object)
-  name.vb: SetNewGuideData(DependencyObject, Object)
-- uid: H.Extensions.Attach.Cattach.NewGuideDataProperty
-  commentId: F:H.Extensions.Attach.Cattach.NewGuideDataProperty
-  id: NewGuideDataProperty
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: NewGuideDataProperty
-  nameWithType: Cattach.NewGuideDataProperty
-  fullName: H.Extensions.Attach.Cattach.NewGuideDataProperty
-  type: Field
-  source:
-    id: NewGuideDataProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 92
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static readonly DependencyProperty NewGuideDataProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly NewGuideDataProperty As DependencyProperty
-- uid: H.Extensions.Attach.Cattach.OnNewGuideDataChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  commentId: M:H.Extensions.Attach.Cattach.OnNewGuideDataChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  id: OnNewGuideDataChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: OnNewGuideDataChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  nameWithType: Cattach.OnNewGuideDataChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  fullName: H.Extensions.Attach.Cattach.OnNewGuideDataChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
-  type: Method
-  source:
-    id: OnNewGuideDataChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 95
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void OnNewGuideDataChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    parameters:
-    - id: d
-      type: System.Windows.DependencyObject
-    - id: e
-      type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnNewGuideDataChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
-  overload: H.Extensions.Attach.Cattach.OnNewGuideDataChanged*
-- uid: H.Extensions.Attach.Cattach.GetNewGuideDataTemplate(System.Windows.DependencyObject)
-  commentId: M:H.Extensions.Attach.Cattach.GetNewGuideDataTemplate(System.Windows.DependencyObject)
-  id: GetNewGuideDataTemplate(System.Windows.DependencyObject)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: GetNewGuideDataTemplate(DependencyObject)
-  nameWithType: Cattach.GetNewGuideDataTemplate(DependencyObject)
-  fullName: H.Extensions.Attach.Cattach.GetNewGuideDataTemplate(System.Windows.DependencyObject)
-  type: Method
-  source:
-    id: GetNewGuideDataTemplate
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 105
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static DataTemplate GetNewGuideDataTemplate(DependencyObject obj)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    return:
-      type: System.Windows.DataTemplate
-    content.vb: Public Shared Function GetNewGuideDataTemplate(obj As DependencyObject) As DataTemplate
-  overload: H.Extensions.Attach.Cattach.GetNewGuideDataTemplate*
-- uid: H.Extensions.Attach.Cattach.SetNewGuideDataTemplate(System.Windows.DependencyObject,System.Windows.DataTemplate)
-  commentId: M:H.Extensions.Attach.Cattach.SetNewGuideDataTemplate(System.Windows.DependencyObject,System.Windows.DataTemplate)
-  id: SetNewGuideDataTemplate(System.Windows.DependencyObject,System.Windows.DataTemplate)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: SetNewGuideDataTemplate(DependencyObject, DataTemplate)
-  nameWithType: Cattach.SetNewGuideDataTemplate(DependencyObject, DataTemplate)
-  fullName: H.Extensions.Attach.Cattach.SetNewGuideDataTemplate(System.Windows.DependencyObject, System.Windows.DataTemplate)
-  type: Method
-  source:
-    id: SetNewGuideDataTemplate
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 110
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void SetNewGuideDataTemplate(DependencyObject obj, DataTemplate value)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    - id: value
-      type: System.Windows.DataTemplate
-    content.vb: Public Shared Sub SetNewGuideDataTemplate(obj As DependencyObject, value As DataTemplate)
-  overload: H.Extensions.Attach.Cattach.SetNewGuideDataTemplate*
-- uid: H.Extensions.Attach.Cattach.NewGuideDataTemplateProperty
-  commentId: F:H.Extensions.Attach.Cattach.NewGuideDataTemplateProperty
-  id: NewGuideDataTemplateProperty
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: NewGuideDataTemplateProperty
-  nameWithType: Cattach.NewGuideDataTemplateProperty
-  fullName: H.Extensions.Attach.Cattach.NewGuideDataTemplateProperty
-  type: Field
-  source:
-    id: NewGuideDataTemplateProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 116
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static readonly DependencyProperty NewGuideDataTemplateProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly NewGuideDataTemplateProperty As DependencyProperty
-- uid: H.Extensions.Attach.Cattach.OnNewGuideDataTemplateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  commentId: M:H.Extensions.Attach.Cattach.OnNewGuideDataTemplateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  id: OnNewGuideDataTemplateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: OnNewGuideDataTemplateChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  nameWithType: Cattach.OnNewGuideDataTemplateChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  fullName: H.Extensions.Attach.Cattach.OnNewGuideDataTemplateChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
-  type: Method
-  source:
-    id: OnNewGuideDataTemplateChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 119
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void OnNewGuideDataTemplateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    parameters:
-    - id: d
-      type: System.Windows.DependencyObject
-    - id: e
-      type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnNewGuideDataTemplateChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
-  overload: H.Extensions.Attach.Cattach.OnNewGuideDataTemplateChanged*
-- uid: H.Extensions.Attach.Cattach.GetIsNewGuide(System.Windows.DependencyObject)
-  commentId: M:H.Extensions.Attach.Cattach.GetIsNewGuide(System.Windows.DependencyObject)
-  id: GetIsNewGuide(System.Windows.DependencyObject)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: GetIsNewGuide(DependencyObject)
-  nameWithType: Cattach.GetIsNewGuide(DependencyObject)
-  fullName: H.Extensions.Attach.Cattach.GetIsNewGuide(System.Windows.DependencyObject)
-  type: Method
-  source:
-    id: GetIsNewGuide
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 129
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static bool GetIsNewGuide(DependencyObject obj)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Function GetIsNewGuide(obj As DependencyObject) As Boolean
-  overload: H.Extensions.Attach.Cattach.GetIsNewGuide*
-- uid: H.Extensions.Attach.Cattach.SetIsNewGuide(System.Windows.DependencyObject,System.Boolean)
-  commentId: M:H.Extensions.Attach.Cattach.SetIsNewGuide(System.Windows.DependencyObject,System.Boolean)
-  id: SetIsNewGuide(System.Windows.DependencyObject,System.Boolean)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: SetIsNewGuide(DependencyObject, bool)
-  nameWithType: Cattach.SetIsNewGuide(DependencyObject, bool)
-  fullName: H.Extensions.Attach.Cattach.SetIsNewGuide(System.Windows.DependencyObject, bool)
-  type: Method
-  source:
-    id: SetIsNewGuide
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 134
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void SetIsNewGuide(DependencyObject obj, bool value)
-    parameters:
-    - id: obj
-      type: System.Windows.DependencyObject
-    - id: value
-      type: System.Boolean
-    content.vb: Public Shared Sub SetIsNewGuide(obj As DependencyObject, value As Boolean)
-  overload: H.Extensions.Attach.Cattach.SetIsNewGuide*
-  nameWithType.vb: Cattach.SetIsNewGuide(DependencyObject, Boolean)
-  fullName.vb: H.Extensions.Attach.Cattach.SetIsNewGuide(System.Windows.DependencyObject, Boolean)
-  name.vb: SetIsNewGuide(DependencyObject, Boolean)
-- uid: H.Extensions.Attach.Cattach.IsNewGuideProperty
-  commentId: F:H.Extensions.Attach.Cattach.IsNewGuideProperty
-  id: IsNewGuideProperty
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: IsNewGuideProperty
-  nameWithType: Cattach.IsNewGuideProperty
-  fullName: H.Extensions.Attach.Cattach.IsNewGuideProperty
-  type: Field
-  source:
-    id: IsNewGuideProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 139
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static readonly DependencyProperty IsNewGuideProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly IsNewGuideProperty As DependencyProperty
-- uid: H.Extensions.Attach.Cattach.OnIsNewGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  commentId: M:H.Extensions.Attach.Cattach.OnIsNewGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  id: OnIsNewGuideChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
-  parent: H.Extensions.Attach.Cattach
-  langs:
-  - csharp
-  - vb
-  name: OnIsNewGuideChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  nameWithType: Cattach.OnIsNewGuideChanged(DependencyObject, DependencyPropertyChangedEventArgs)
-  fullName: H.Extensions.Attach.Cattach.OnIsNewGuideChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)
-  type: Method
-  source:
-    id: OnIsNewGuideChanged
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Attach\Cattach.NewGuide.cs
-    startLine: 142
-  assemblies:
-  - H.Extensions.Attach
-  namespace: H.Extensions.Attach
-  syntax:
-    content: public static void OnIsNewGuideChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    parameters:
-    - id: d
-      type: System.Windows.DependencyObject
-    - id: e
-      type: System.Windows.DependencyPropertyChangedEventArgs
-    content.vb: Public Shared Sub OnIsNewGuideChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
-  overload: H.Extensions.Attach.Cattach.OnIsNewGuideChanged*
 - uid: H.Extensions.Attach.Cattach.PressBackgroundProperty
   commentId: F:H.Extensions.Attach.Cattach.PressBackgroundProperty
   id: PressBackgroundProperty
@@ -18616,6 +18900,60 @@ references:
   name: OnGuideUseClickChanged
   nameWithType: Cattach.OnGuideUseClickChanged
   fullName: H.Extensions.Attach.Cattach.OnGuideUseClickChanged
+- uid: H.Extensions.Attach.Cattach.GetIsGuideAdonerElement*
+  commentId: Overload:H.Extensions.Attach.Cattach.GetIsGuideAdonerElement
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetIsGuideAdonerElement_System_Windows_DependencyObject_
+  name: GetIsGuideAdonerElement
+  nameWithType: Cattach.GetIsGuideAdonerElement
+  fullName: H.Extensions.Attach.Cattach.GetIsGuideAdonerElement
+- uid: H.Extensions.Attach.Cattach.SetIsGuideAdonerElement*
+  commentId: Overload:H.Extensions.Attach.Cattach.SetIsGuideAdonerElement
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetIsGuideAdonerElement_System_Windows_DependencyObject_System_Boolean_
+  name: SetIsGuideAdonerElement
+  nameWithType: Cattach.SetIsGuideAdonerElement
+  fullName: H.Extensions.Attach.Cattach.SetIsGuideAdonerElement
+- uid: H.Extensions.Attach.Cattach.OnIsGuideAdonerElementChanged*
+  commentId: Overload:H.Extensions.Attach.Cattach.OnIsGuideAdonerElementChanged
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnIsGuideAdonerElementChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+  name: OnIsGuideAdonerElementChanged
+  nameWithType: Cattach.OnIsGuideAdonerElementChanged
+  fullName: H.Extensions.Attach.Cattach.OnIsGuideAdonerElementChanged
+- uid: H.Extensions.Attach.Cattach.GetGuideIcon*
+  commentId: Overload:H.Extensions.Attach.Cattach.GetGuideIcon
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetGuideIcon_System_Windows_DependencyObject_
+  name: GetGuideIcon
+  nameWithType: Cattach.GetGuideIcon
+  fullName: H.Extensions.Attach.Cattach.GetGuideIcon
+- uid: H.Extensions.Attach.Cattach.SetGuideIcon*
+  commentId: Overload:H.Extensions.Attach.Cattach.SetGuideIcon
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetGuideIcon_System_Windows_DependencyObject_System_String_
+  name: SetGuideIcon
+  nameWithType: Cattach.SetGuideIcon
+  fullName: H.Extensions.Attach.Cattach.SetGuideIcon
+- uid: H.Extensions.Attach.Cattach.OnGuideIconChanged*
+  commentId: Overload:H.Extensions.Attach.Cattach.OnGuideIconChanged
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnGuideIconChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+  name: OnGuideIconChanged
+  nameWithType: Cattach.OnGuideIconChanged
+  fullName: H.Extensions.Attach.Cattach.OnGuideIconChanged
+- uid: H.Extensions.Attach.Cattach.GetGuideAssemblyVersion*
+  commentId: Overload:H.Extensions.Attach.Cattach.GetGuideAssemblyVersion
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetGuideAssemblyVersion_System_Windows_DependencyObject_
+  name: GetGuideAssemblyVersion
+  nameWithType: Cattach.GetGuideAssemblyVersion
+  fullName: H.Extensions.Attach.Cattach.GetGuideAssemblyVersion
+- uid: H.Extensions.Attach.Cattach.SetGuideAssemblyVersion*
+  commentId: Overload:H.Extensions.Attach.Cattach.SetGuideAssemblyVersion
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetGuideAssemblyVersion_System_Windows_DependencyObject_System_String_
+  name: SetGuideAssemblyVersion
+  nameWithType: Cattach.SetGuideAssemblyVersion
+  fullName: H.Extensions.Attach.Cattach.SetGuideAssemblyVersion
+- uid: H.Extensions.Attach.Cattach.OnGuideAssemblyVersionChanged*
+  commentId: Overload:H.Extensions.Attach.Cattach.OnGuideAssemblyVersionChanged
+  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnGuideAssemblyVersionChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
+  name: OnGuideAssemblyVersionChanged
+  nameWithType: Cattach.OnGuideAssemblyVersionChanged
+  fullName: H.Extensions.Attach.Cattach.OnGuideAssemblyVersionChanged
 - uid: H.Extensions.Attach.Cattach.GetIconHorizontalAlignment*
   commentId: Overload:H.Extensions.Attach.Cattach.GetIconHorizontalAlignment
   href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetIconHorizontalAlignment_System_Windows_DependencyObject_
@@ -19157,114 +19495,6 @@ references:
   name: OnMouseOverEffectChanged
   nameWithType: Cattach.OnMouseOverEffectChanged
   fullName: H.Extensions.Attach.Cattach.OnMouseOverEffectChanged
-- uid: H.Extensions.Attach.Cattach.GetUseNewGuide*
-  commentId: Overload:H.Extensions.Attach.Cattach.GetUseNewGuide
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetUseNewGuide_System_Windows_DependencyObject_
-  name: GetUseNewGuide
-  nameWithType: Cattach.GetUseNewGuide
-  fullName: H.Extensions.Attach.Cattach.GetUseNewGuide
-- uid: H.Extensions.Attach.Cattach.SetUseNewGuide*
-  commentId: Overload:H.Extensions.Attach.Cattach.SetUseNewGuide
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetUseNewGuide_System_Windows_DependencyObject_System_Boolean_
-  name: SetUseNewGuide
-  nameWithType: Cattach.SetUseNewGuide
-  fullName: H.Extensions.Attach.Cattach.SetUseNewGuide
-- uid: H.Extensions.Attach.Cattach.OnUseNewGuideChanged*
-  commentId: Overload:H.Extensions.Attach.Cattach.OnUseNewGuideChanged
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnUseNewGuideChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
-  name: OnUseNewGuideChanged
-  nameWithType: Cattach.OnUseNewGuideChanged
-  fullName: H.Extensions.Attach.Cattach.OnUseNewGuideChanged
-- uid: H.Extensions.Attach.Cattach.GetNewGuideTitle*
-  commentId: Overload:H.Extensions.Attach.Cattach.GetNewGuideTitle
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetNewGuideTitle_System_Windows_DependencyObject_
-  name: GetNewGuideTitle
-  nameWithType: Cattach.GetNewGuideTitle
-  fullName: H.Extensions.Attach.Cattach.GetNewGuideTitle
-- uid: H.Extensions.Attach.Cattach.SetNewGuideTitle*
-  commentId: Overload:H.Extensions.Attach.Cattach.SetNewGuideTitle
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetNewGuideTitle_System_Windows_DependencyObject_System_Object_
-  name: SetNewGuideTitle
-  nameWithType: Cattach.SetNewGuideTitle
-  fullName: H.Extensions.Attach.Cattach.SetNewGuideTitle
-- uid: H.Extensions.Attach.Cattach.OnNewGuideTitleChanged*
-  commentId: Overload:H.Extensions.Attach.Cattach.OnNewGuideTitleChanged
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnNewGuideTitleChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
-  name: OnNewGuideTitleChanged
-  nameWithType: Cattach.OnNewGuideTitleChanged
-  fullName: H.Extensions.Attach.Cattach.OnNewGuideTitleChanged
-- uid: H.Extensions.Attach.Cattach.GetNewGuideParentTitle*
-  commentId: Overload:H.Extensions.Attach.Cattach.GetNewGuideParentTitle
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetNewGuideParentTitle_System_Windows_DependencyObject_
-  name: GetNewGuideParentTitle
-  nameWithType: Cattach.GetNewGuideParentTitle
-  fullName: H.Extensions.Attach.Cattach.GetNewGuideParentTitle
-- uid: H.Extensions.Attach.Cattach.SetNewGuideParentTitle*
-  commentId: Overload:H.Extensions.Attach.Cattach.SetNewGuideParentTitle
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetNewGuideParentTitle_System_Windows_DependencyObject_System_String_
-  name: SetNewGuideParentTitle
-  nameWithType: Cattach.SetNewGuideParentTitle
-  fullName: H.Extensions.Attach.Cattach.SetNewGuideParentTitle
-- uid: H.Extensions.Attach.Cattach.OnNewGuideParentTitleChanged*
-  commentId: Overload:H.Extensions.Attach.Cattach.OnNewGuideParentTitleChanged
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnNewGuideParentTitleChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
-  name: OnNewGuideParentTitleChanged
-  nameWithType: Cattach.OnNewGuideParentTitleChanged
-  fullName: H.Extensions.Attach.Cattach.OnNewGuideParentTitleChanged
-- uid: H.Extensions.Attach.Cattach.GetNewGuideData*
-  commentId: Overload:H.Extensions.Attach.Cattach.GetNewGuideData
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetNewGuideData_System_Windows_DependencyObject_
-  name: GetNewGuideData
-  nameWithType: Cattach.GetNewGuideData
-  fullName: H.Extensions.Attach.Cattach.GetNewGuideData
-- uid: H.Extensions.Attach.Cattach.SetNewGuideData*
-  commentId: Overload:H.Extensions.Attach.Cattach.SetNewGuideData
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetNewGuideData_System_Windows_DependencyObject_System_Object_
-  name: SetNewGuideData
-  nameWithType: Cattach.SetNewGuideData
-  fullName: H.Extensions.Attach.Cattach.SetNewGuideData
-- uid: H.Extensions.Attach.Cattach.OnNewGuideDataChanged*
-  commentId: Overload:H.Extensions.Attach.Cattach.OnNewGuideDataChanged
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnNewGuideDataChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
-  name: OnNewGuideDataChanged
-  nameWithType: Cattach.OnNewGuideDataChanged
-  fullName: H.Extensions.Attach.Cattach.OnNewGuideDataChanged
-- uid: H.Extensions.Attach.Cattach.GetNewGuideDataTemplate*
-  commentId: Overload:H.Extensions.Attach.Cattach.GetNewGuideDataTemplate
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetNewGuideDataTemplate_System_Windows_DependencyObject_
-  name: GetNewGuideDataTemplate
-  nameWithType: Cattach.GetNewGuideDataTemplate
-  fullName: H.Extensions.Attach.Cattach.GetNewGuideDataTemplate
-- uid: H.Extensions.Attach.Cattach.SetNewGuideDataTemplate*
-  commentId: Overload:H.Extensions.Attach.Cattach.SetNewGuideDataTemplate
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetNewGuideDataTemplate_System_Windows_DependencyObject_System_Windows_DataTemplate_
-  name: SetNewGuideDataTemplate
-  nameWithType: Cattach.SetNewGuideDataTemplate
-  fullName: H.Extensions.Attach.Cattach.SetNewGuideDataTemplate
-- uid: H.Extensions.Attach.Cattach.OnNewGuideDataTemplateChanged*
-  commentId: Overload:H.Extensions.Attach.Cattach.OnNewGuideDataTemplateChanged
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnNewGuideDataTemplateChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
-  name: OnNewGuideDataTemplateChanged
-  nameWithType: Cattach.OnNewGuideDataTemplateChanged
-  fullName: H.Extensions.Attach.Cattach.OnNewGuideDataTemplateChanged
-- uid: H.Extensions.Attach.Cattach.GetIsNewGuide*
-  commentId: Overload:H.Extensions.Attach.Cattach.GetIsNewGuide
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_GetIsNewGuide_System_Windows_DependencyObject_
-  name: GetIsNewGuide
-  nameWithType: Cattach.GetIsNewGuide
-  fullName: H.Extensions.Attach.Cattach.GetIsNewGuide
-- uid: H.Extensions.Attach.Cattach.SetIsNewGuide*
-  commentId: Overload:H.Extensions.Attach.Cattach.SetIsNewGuide
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetIsNewGuide_System_Windows_DependencyObject_System_Boolean_
-  name: SetIsNewGuide
-  nameWithType: Cattach.SetIsNewGuide
-  fullName: H.Extensions.Attach.Cattach.SetIsNewGuide
-- uid: H.Extensions.Attach.Cattach.OnIsNewGuideChanged*
-  commentId: Overload:H.Extensions.Attach.Cattach.OnIsNewGuideChanged
-  href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_OnIsNewGuideChanged_System_Windows_DependencyObject_System_Windows_DependencyPropertyChangedEventArgs_
-  name: OnIsNewGuideChanged
-  nameWithType: Cattach.OnIsNewGuideChanged
-  fullName: H.Extensions.Attach.Cattach.OnIsNewGuideChanged
 - uid: H.Extensions.Attach.Cattach.SetPressBackground*
   commentId: Overload:H.Extensions.Attach.Cattach.SetPressBackground
   href: H.Extensions.Attach.Cattach.html#H_Extensions_Attach_Cattach_SetPressBackground_System_Windows_DependencyObject_System_Windows_Media_Brush_

@@ -307,6 +307,51 @@ Class ObjectExtension
 
 
 
+  <a id="System_ObjectExtension_GetAttributeValue_" data-uid="System.ObjectExtension.GetAttributeValue*"></a>
+
+  <h3 id="System_ObjectExtension_GetAttributeValue__2_System_Type_System_Func___0___1__" data-uid="System.ObjectExtension.GetAttributeValue``2(System.Type,System.Func{``0,``1})">
+  GetAttributeValue&lt;T, R&gt;(Type, Func&lt;T, R&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static R GetAttributeValue&lt;T, R&gt;(this Type type, Func&lt;T, R&gt; func) where T : Attribute</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, R&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">R</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+    <dt><code>R</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="System_ObjectExtension_GetDisplayName_" data-uid="System.ObjectExtension.GetDisplayName*"></a>
 
   <h3 id="System_ObjectExtension_GetDisplayName_System_Type_" data-uid="System.ObjectExtension.GetDisplayName(System.Type)">
@@ -515,6 +560,87 @@ Class ObjectExtension
     <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd></dd>
     <dt><code>error</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_ObjectExtension_ToByTypeConverter_" data-uid="System.ObjectExtension.ToByTypeConverter*"></a>
+
+  <h3 id="System_ObjectExtension_ToByTypeConverter__1_System_String_" data-uid="System.ObjectExtension.ToByTypeConverter``1(System.String)">
+  ToByTypeConverter&lt;T&gt;(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ToByTypeConverter&lt;T&gt;(this string str)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="System_ObjectExtension_TryChangeType_" data-uid="System.ObjectExtension.TryChangeType*"></a>
+
+  <h3 id="System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__" data-uid="System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)">
+  TryChangeType(object, Type, out object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryChangeType(this object obj, Type rType, out object result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>rType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd></dd>
   </dl>
 

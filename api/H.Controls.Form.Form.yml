@@ -9,6 +9,8 @@ items:
   - H.Controls.Form.Form.ExceptPropertyNames
   - H.Controls.Form.Form.ExceptPropertyNamesProperty
   - H.Controls.Form.Form.FilterPropertyInfo(System.Reflection.PropertyInfo)
+  - H.Controls.Form.Form.GroupOrderComparer
+  - H.Controls.Form.Form.GroupOrderComparerProperty
   - H.Controls.Form.Form.ItemHeaderTemplate
   - H.Controls.Form.Form.ItemHeaderTemplateProperty
   - H.Controls.Form.Form.MessageWidth
@@ -21,8 +23,6 @@ items:
   - H.Controls.Form.Form.SearchTextProperty
   - H.Controls.Form.Form.SelectObject
   - H.Controls.Form.Form.SelectObjectProperty
-  - H.Controls.Form.Form.Title
-  - H.Controls.Form.Form.TitleProperty
   - H.Controls.Form.Form.TitleWidth
   - H.Controls.Form.Form.TitleWidthProperty
   - H.Controls.Form.Form.UseArray
@@ -87,7 +87,7 @@ items:
   source:
     id: Form
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 890
+    startLine: 871
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -779,16 +779,21 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   extensionMethods:
+  - H.Controls.Form.Form.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
   - H.Controls.Form.Form.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue(System.String)
   - System.Object.H.Controls.FilterColumnDataGrid.Extensions.GetPropertyValue``1(System.String)
   - System.Object.H.Controls.Form.PropertyInfoExtention.ChangeType``1
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  - System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
   - System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   - System.Object.System.ObjectExtension.CopyPropertyValueFrom(System.Object,System.Predicate{System.Reflection.PropertyInfo},System.Func{System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.Func{System.Reflection.PropertyInfo,System.Object,System.Boolean})
   - System.Object.System.ObjectExtension.IsMacth(System.String)
   - System.Object.System.ObjectExtension.ModelState(System.Collections.Generic.List{System.String}@)
   - System.Object.System.ObjectExtension.ModelStateDeep(System.String@)
+  - System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
   - System.Object.System.ObjectExtension.TryChangeType``1
   - System.Object.System.ObjectExtension.TryChangeType``1({T}@)
   - System.Object.System.ObjectExtension.TryConvertToString
@@ -806,6 +811,7 @@ items:
   - System.Windows.DependencyObject.H.Controls.FilterColumnDataGrid.VisualTreeHelpers.TryFindParent``1
   - System.Windows.DependencyObject.H.Windows.Ribbon.VisualTreeExtention.GetParent``1
   - System.Windows.UIElement.H.Controls.OutlookBar.PopupHelper.IsLogicalAncestorOf(System.Windows.UIElement)
+  - System.Windows.UIElement.H.Modules.Guide.GuideExtension.GetGuideTree(System.Predicate{System.Windows.UIElement})
 - uid: H.Controls.Form.Form.ItemHeaderTemplate
   commentId: P:H.Controls.Form.Form.ItemHeaderTemplate
   id: ItemHeaderTemplate
@@ -854,57 +860,6 @@ items:
     return:
       type: System.Windows.DependencyProperty
     content.vb: Public Shared ReadOnly ItemHeaderTemplateProperty As DependencyProperty
-- uid: H.Controls.Form.Form.Title
-  commentId: P:H.Controls.Form.Form.Title
-  id: Title
-  parent: H.Controls.Form.Form
-  langs:
-  - csharp
-  - vb
-  name: Title
-  nameWithType: Form.Title
-  fullName: H.Controls.Form.Form.Title
-  type: Property
-  source:
-    id: Title
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 53
-  assemblies:
-  - H.Controls.Form
-  namespace: H.Controls.Form
-  example: []
-  syntax:
-    content: public string Title { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property Title As String
-  overload: H.Controls.Form.Form.Title*
-  implements:
-  - H.Services.Common.IFormOption.Title
-- uid: H.Controls.Form.Form.TitleProperty
-  commentId: F:H.Controls.Form.Form.TitleProperty
-  id: TitleProperty
-  parent: H.Controls.Form.Form
-  langs:
-  - csharp
-  - vb
-  name: TitleProperty
-  nameWithType: Form.TitleProperty
-  fullName: H.Controls.Form.Form.TitleProperty
-  type: Field
-  source:
-    id: TitleProperty
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 59
-  assemblies:
-  - H.Controls.Form
-  namespace: H.Controls.Form
-  syntax:
-    content: public static readonly DependencyProperty TitleProperty
-    return:
-      type: System.Windows.DependencyProperty
-    content.vb: Public Shared ReadOnly TitleProperty As DependencyProperty
 - uid: H.Controls.Form.Form.SelectObject
   commentId: P:H.Controls.Form.Form.SelectObject
   id: SelectObject
@@ -919,7 +874,7 @@ items:
   source:
     id: SelectObject
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 62
+    startLine: 37
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -947,7 +902,7 @@ items:
   source:
     id: SelectObjectProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 68
+    startLine: 43
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -970,7 +925,7 @@ items:
   source:
     id: FilterPropertyInfo
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 77
+    startLine: 52
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -997,7 +952,7 @@ items:
   source:
     id: UseDisplayOnly
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 83
+    startLine: 58
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1025,7 +980,7 @@ items:
   source:
     id: UseDisplayOnlyProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 89
+    startLine: 64
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1048,7 +1003,7 @@ items:
   source:
     id: UseDeclaredOnly
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 110
+    startLine: 85
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1076,7 +1031,7 @@ items:
   source:
     id: UseDeclaredOnlyProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 117
+    startLine: 92
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1099,7 +1054,7 @@ items:
   source:
     id: ExceptPropertyNames
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 136
+    startLine: 111
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1127,7 +1082,7 @@ items:
   source:
     id: ExceptPropertyNamesProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 143
+    startLine: 118
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1150,7 +1105,7 @@ items:
   source:
     id: UsePropertyNames
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 164
+    startLine: 139
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1178,7 +1133,7 @@ items:
   source:
     id: UsePropertyNamesProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 171
+    startLine: 146
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1201,7 +1156,7 @@ items:
   source:
     id: UsePropertyView
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 190
+    startLine: 165
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1229,7 +1184,7 @@ items:
   source:
     id: UsePropertyViewProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 197
+    startLine: 172
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1252,7 +1207,7 @@ items:
   source:
     id: UsePresenter
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 217
+    startLine: 192
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1280,7 +1235,7 @@ items:
   source:
     id: UsePresenterProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 224
+    startLine: 199
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1303,7 +1258,7 @@ items:
   source:
     id: UseEnumerator
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 245
+    startLine: 220
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1331,7 +1286,7 @@ items:
   source:
     id: UseEnumeratorProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 251
+    startLine: 226
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1354,7 +1309,7 @@ items:
   source:
     id: UseTypeConverterOnly
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 271
+    startLine: 246
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1382,7 +1337,7 @@ items:
   source:
     id: UseTypeConverterOnlyProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 278
+    startLine: 253
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1405,7 +1360,7 @@ items:
   source:
     id: UseTypeConverter
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 297
+    startLine: 272
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1433,7 +1388,7 @@ items:
   source:
     id: UseTypeConverterProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 303
+    startLine: 278
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1456,7 +1411,7 @@ items:
   source:
     id: UseNull
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 322
+    startLine: 297
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1484,7 +1439,7 @@ items:
   source:
     id: UseNullProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 328
+    startLine: 303
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1507,7 +1462,7 @@ items:
   source:
     id: UseBoolen
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 349
+    startLine: 324
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1535,7 +1490,7 @@ items:
   source:
     id: UseBoolenProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 356
+    startLine: 331
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1558,7 +1513,7 @@ items:
   source:
     id: UseOrderByType
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 377
+    startLine: 352
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1586,7 +1541,7 @@ items:
   source:
     id: UseOrderByTypeProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 384
+    startLine: 359
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1609,7 +1564,7 @@ items:
   source:
     id: UseOrderByName
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 404
+    startLine: 379
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1637,7 +1592,7 @@ items:
   source:
     id: UseOrderByNameProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 411
+    startLine: 386
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1660,7 +1615,7 @@ items:
   source:
     id: UseOrder
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 432
+    startLine: 407
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1688,7 +1643,7 @@ items:
   source:
     id: UseOrderProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 439
+    startLine: 414
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1711,7 +1666,7 @@ items:
   source:
     id: UseEnum
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 458
+    startLine: 433
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1739,7 +1694,7 @@ items:
   source:
     id: UseEnumProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 465
+    startLine: 440
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1762,7 +1717,7 @@ items:
   source:
     id: UseString
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 484
+    startLine: 459
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1790,7 +1745,7 @@ items:
   source:
     id: UseStringProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 491
+    startLine: 466
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1813,7 +1768,7 @@ items:
   source:
     id: UseDateTime
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 510
+    startLine: 485
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1841,7 +1796,7 @@ items:
   source:
     id: UseDateTimeProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 517
+    startLine: 492
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1864,7 +1819,7 @@ items:
   source:
     id: UseCommandOnly
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 539
+    startLine: 514
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1892,7 +1847,7 @@ items:
   source:
     id: UseCommandOnlyProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 546
+    startLine: 521
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1915,7 +1870,7 @@ items:
   source:
     id: UseCommand
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 566
+    startLine: 541
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1943,7 +1898,7 @@ items:
   source:
     id: UseCommandProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 573
+    startLine: 548
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1966,7 +1921,7 @@ items:
   source:
     id: UseClass
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 593
+    startLine: 568
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -1994,7 +1949,7 @@ items:
   source:
     id: UseClassProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 600
+    startLine: 575
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2017,7 +1972,7 @@ items:
   source:
     id: UseArray
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 620
+    startLine: 595
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2045,7 +2000,7 @@ items:
   source:
     id: UseArrayProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 627
+    startLine: 602
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2068,7 +2023,7 @@ items:
   source:
     id: UseInterface
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 647
+    startLine: 622
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2096,7 +2051,7 @@ items:
   source:
     id: UseInterfaceProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 654
+    startLine: 629
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2119,7 +2074,7 @@ items:
   source:
     id: UsePrimitive
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 675
+    startLine: 650
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2147,7 +2102,7 @@ items:
   source:
     id: UsePrimitiveProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 682
+    startLine: 657
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2170,7 +2125,7 @@ items:
   source:
     id: UseGroup
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 701
+    startLine: 676
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2198,7 +2153,7 @@ items:
   source:
     id: UseGroupProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 708
+    startLine: 683
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2221,7 +2176,7 @@ items:
   source:
     id: UseGroupNames
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 730
+    startLine: 705
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2249,7 +2204,7 @@ items:
   source:
     id: UseGroupNamesProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 737
+    startLine: 712
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2258,6 +2213,57 @@ items:
     return:
       type: System.Windows.DependencyProperty
     content.vb: Public Shared ReadOnly UseGroupNamesProperty As DependencyProperty
+- uid: H.Controls.Form.Form.GroupOrderComparer
+  commentId: P:H.Controls.Form.Form.GroupOrderComparer
+  id: GroupOrderComparer
+  parent: H.Controls.Form.Form
+  langs:
+  - csharp
+  - vb
+  name: GroupOrderComparer
+  nameWithType: Form.GroupOrderComparer
+  fullName: H.Controls.Form.Form.GroupOrderComparer
+  type: Property
+  source:
+    id: GroupOrderComparer
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
+    startLine: 733
+  assemblies:
+  - H.Controls.Form
+  namespace: H.Controls.Form
+  example: []
+  syntax:
+    content: public IComparer<string> GroupOrderComparer { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IComparer{System.String}
+    content.vb: Public Property GroupOrderComparer As IComparer(Of String)
+  overload: H.Controls.Form.Form.GroupOrderComparer*
+  implements:
+  - H.Services.Common.IFormOption.GroupOrderComparer
+- uid: H.Controls.Form.Form.GroupOrderComparerProperty
+  commentId: F:H.Controls.Form.Form.GroupOrderComparerProperty
+  id: GroupOrderComparerProperty
+  parent: H.Controls.Form.Form
+  langs:
+  - csharp
+  - vb
+  name: GroupOrderComparerProperty
+  nameWithType: Form.GroupOrderComparerProperty
+  fullName: H.Controls.Form.Form.GroupOrderComparerProperty
+  type: Field
+  source:
+    id: GroupOrderComparerProperty
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
+    startLine: 739
+  assemblies:
+  - H.Controls.Form
+  namespace: H.Controls.Form
+  syntax:
+    content: public static readonly DependencyProperty GroupOrderComparerProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly GroupOrderComparerProperty As DependencyProperty
 - uid: H.Controls.Form.Form.ValueChangedRoutedEvent
   commentId: F:H.Controls.Form.Form.ValueChangedRoutedEvent
   id: ValueChangedRoutedEvent
@@ -2272,7 +2278,7 @@ items:
   source:
     id: ValueChangedRoutedEvent
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 758
+    startLine: 743
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2295,7 +2301,7 @@ items:
   source:
     id: ValueChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 761
+    startLine: 746
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2318,7 +2324,7 @@ items:
   source:
     id: OnValueChanged
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 769
+    startLine: 752
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2346,7 +2352,7 @@ items:
   source:
     id: MessageWidth
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 840
+    startLine: 823
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2386,7 +2392,7 @@ items:
   source:
     id: MessageWidthProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 848
+    startLine: 831
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2409,7 +2415,7 @@ items:
   source:
     id: TitleWidth
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 860
+    startLine: 843
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2446,7 +2452,7 @@ items:
   source:
     id: TitleWidthProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 868
+    startLine: 851
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2469,7 +2475,7 @@ items:
   source:
     id: RefreshObject
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 893
+    startLine: 874
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2491,7 +2497,7 @@ items:
   source:
     id: UseAsync
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 906
+    startLine: 887
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2519,7 +2525,7 @@ items:
   source:
     id: UseAsyncProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 913
+    startLine: 894
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2542,7 +2548,7 @@ items:
   source:
     id: RefreshObjectinternal
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 933
+    startLine: 914
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2564,7 +2570,7 @@ items:
   source:
     id: CreatePropertyItem
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 1131
+    startLine: 1112
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2596,7 +2602,7 @@ items:
   source:
     id: RefreshItemsFilter
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 1153
+    startLine: 1134
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2618,7 +2624,7 @@ items:
   source:
     id: SearchText
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 1162
+    startLine: 1143
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -2643,7 +2649,7 @@ items:
   source:
     id: SearchTextProperty
     path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Form\Form.xaml.cs
-    startLine: 1168
+    startLine: 1149
   assemblies:
   - H.Controls.Form
   namespace: H.Controls.Form
@@ -13494,6 +13500,47 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+- uid: H.Controls.Form.Form.H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  parent: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  definition: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<Form>(Form)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<Form>(Form)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<H.Controls.Form.Form>(H.Controls.Form.Form)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of Form)(Form)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of H.Controls.Form.Form)(H.Controls.Form.Form)
+  name.vb: CloneByNewtonsoftJson(Of Form)(Form)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Controls.Form.Form)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - uid: H.Controls.Form.Form
+    name: Form
+    href: H.Controls.Form.Form.html
+  - name: '>'
+  - name: (
+  - uid: H.Controls.Form.Form
+    name: Form
+    href: H.Controls.Form.Form.html
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(H.Controls.Form.Form)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Controls.Form.Form
+    name: Form
+    href: H.Controls.Form.Form.html
+  - name: )
+  - name: (
+  - uid: H.Controls.Form.Form
+    name: Form
+    href: H.Controls.Form.Form.html
+  - name: )
 - uid: H.Controls.Form.Form.System.ObjectExtension.CloneCast``1(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   parent: System.ObjectExtension
@@ -13693,6 +13740,147 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  parent: H.Extensions.TextJsonable.TextJsonableExtensions
+  definition: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
   - name: )
 - uid: System.Object.System.ObjectExtension.CloneBy(System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
@@ -14097,6 +14285,63 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.System.ObjectExtension.TryChangeType(System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  parent: System.ObjectExtension
+  definition: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.Object.System.ObjectExtension.TryChangeType``1
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -14893,6 +15138,63 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
   - name: )
+- uid: System.Windows.UIElement.H.Modules.Guide.GuideExtension.GetGuideTree(System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  parent: H.Modules.Guide.GuideExtension
+  definition: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  name: GetGuideTree(UIElement, Predicate<UIElement>)
+  nameWithType: GuideExtension.GetGuideTree(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
+  nameWithType.vb: GuideExtension.GetGuideTree(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: GetGuideTree(UIElement, Predicate(Of UIElement))
+  spec.csharp:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+  - name: )
 - uid: System
   commentId: N:System
   href: https://learn.microsoft.com/dotnet/api/system
@@ -15206,6 +15508,44 @@ references:
   - uid: H.Services.Common
     name: Common
     href: H.Services.Common.html
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  commentId: M:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  name: CloneByNewtonsoftJson<T>(T)
+  nameWithType: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson<T>(T)
+  nameWithType.vb: NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  fullName.vb: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson(Of T)(T)
+  name.vb: CloneByNewtonsoftJson(Of T)(T)
+  spec.csharp:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson``1(``0)
+    name: CloneByNewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  commentId: T:H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
+  parent: H.Extensions.NewtonsoftJson
+  href: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html
+  name: NewtonsoftJsonSerializerServiceExtension
+  nameWithType: NewtonsoftJsonSerializerServiceExtension
+  fullName: H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension
 - uid: System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneCast``1(``0,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -15415,6 +15755,151 @@ references:
   name: PropertyInfoExtention
   nameWithType: PropertyInfoExtention
   fullName: H.Controls.Form.PropertyInfoExtention
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  name: GetJsonPropertyInfos(object)
+  nameWithType: TextJsonableExtensions.GetJsonPropertyInfos(object)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(object)
+  nameWithType.vb: TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(Object)
+  name.vb: GetJsonPropertyInfos(Object)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.GetJsonPropertyInfos(System.Object)
+    name: GetJsonPropertyInfos
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions
+  commentId: T:H.Extensions.TextJsonable.TextJsonableExtensions
+  parent: H.Extensions.TextJsonable
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html
+  name: TextJsonableExtensions
+  nameWithType: TextJsonableExtensions
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  name: WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  nameWithType: TextJsonableExtensions.WriteJson(object, Utf8JsonWriter, JsonSerializerOptions, bool)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, bool)
+  nameWithType.vb: TextJsonableExtensions.WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(Object, System.Text.Json.Utf8JsonWriter, System.Text.Json.JsonSerializerOptions, Boolean)
+  name.vb: WriteJson(Object, Utf8JsonWriter, JsonSerializerOptions, Boolean)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteJson(System.Object,System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions,System.Boolean)
+    name: WriteJson
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteJson_System_Object_System_Text_Json_Utf8JsonWriter_System_Text_Json_JsonSerializerOptions_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonSerializerOptions
+    name: JsonSerializerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  commentId: M:H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+  isExternal: true
+  href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  name: WriteType(object, Utf8JsonWriter)
+  nameWithType: TextJsonableExtensions.WriteType(object, Utf8JsonWriter)
+  fullName: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(object, System.Text.Json.Utf8JsonWriter)
+  nameWithType.vb: TextJsonableExtensions.WriteType(Object, Utf8JsonWriter)
+  fullName.vb: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(Object, System.Text.Json.Utf8JsonWriter)
+  name.vb: WriteType(Object, Utf8JsonWriter)
+  spec.csharp:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
+  spec.vb:
+  - uid: H.Extensions.TextJsonable.TextJsonableExtensions.WriteType(System.Object,System.Text.Json.Utf8JsonWriter)
+    name: WriteType
+    href: H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Utf8JsonWriter
+    name: Utf8JsonWriter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter
+  - name: )
 - uid: System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   commentId: M:System.ObjectExtension.CloneBy(System.Object,System.Predicate{System.Reflection.PropertyInfo})
   isExternal: true
@@ -15812,6 +16297,62 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  commentId: M:System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+  isExternal: true
+  href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  name: TryChangeType(object, Type, out object)
+  nameWithType: ObjectExtension.TryChangeType(object, Type, out object)
+  fullName: System.ObjectExtension.TryChangeType(object, System.Type, out object)
+  nameWithType.vb: ObjectExtension.TryChangeType(Object, Type, Object)
+  fullName.vb: System.ObjectExtension.TryChangeType(Object, System.Type, Object)
+  name.vb: TryChangeType(Object, Type, Object)
+  spec.csharp:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ObjectExtension.TryChangeType(System.Object,System.Type,System.Object@)
+    name: TryChangeType
+    href: System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: System.ObjectExtension.TryChangeType``1(System.Object)
   commentId: M:System.ObjectExtension.TryChangeType``1(System.Object)
@@ -16626,6 +17167,99 @@ references:
   name: PopupHelper
   nameWithType: PopupHelper
   fullName: H.Controls.OutlookBar.PopupHelper
+- uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  commentId: M:H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+  isExternal: true
+  href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  name: GetGuideTree(UIElement, Predicate<UIElement>)
+  nameWithType: GuideExtension.GetGuideTree(UIElement, Predicate<UIElement>)
+  fullName: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate<System.Windows.UIElement>)
+  nameWithType.vb: GuideExtension.GetGuideTree(UIElement, Predicate(Of UIElement))
+  fullName.vb: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement, System.Predicate(Of System.Windows.UIElement))
+  name.vb: GetGuideTree(UIElement, Predicate(Of UIElement))
+  spec.csharp:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: H.Modules.Guide.GuideExtension.GetGuideTree(System.Windows.UIElement,System.Predicate{System.Windows.UIElement})
+    name: GetGuideTree
+    href: H.Modules.Guide.GuideExtension.html#H_Modules_Guide_GuideExtension_GetGuideTree_System_Windows_UIElement_System_Predicate_System_Windows_UIElement__
+  - name: (
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: ','
+  - name: " "
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Windows.UIElement
+    name: UIElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.uielement
+  - name: )
+  - name: )
+- uid: H.Modules.Guide.GuideExtension
+  commentId: T:H.Modules.Guide.GuideExtension
+  parent: H.Modules.Guide
+  href: H.Modules.Guide.GuideExtension.html
+  name: GuideExtension
+  nameWithType: GuideExtension
+  fullName: H.Modules.Guide.GuideExtension
+- uid: H.Extensions.NewtonsoftJson
+  commentId: N:H.Extensions.NewtonsoftJson
+  href: H.html
+  name: H.Extensions.NewtonsoftJson
+  nameWithType: H.Extensions.NewtonsoftJson
+  fullName: H.Extensions.NewtonsoftJson
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.NewtonsoftJson
+    name: NewtonsoftJson
+    href: H.Extensions.NewtonsoftJson.html
 - uid: H.Controls.FilterColumnDataGrid
   commentId: N:H.Controls.FilterColumnDataGrid
   href: H.html
@@ -16656,6 +17290,36 @@ references:
   - uid: H.Controls.FilterColumnDataGrid
     name: FilterColumnDataGrid
     href: H.Controls.FilterColumnDataGrid.html
+- uid: H.Extensions.TextJsonable
+  commentId: N:H.Extensions.TextJsonable
+  href: H.html
+  name: H.Extensions.TextJsonable
+  nameWithType: H.Extensions.TextJsonable
+  fullName: H.Extensions.TextJsonable
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Extensions
+    name: Extensions
+    href: H.Extensions.html
+  - name: .
+  - uid: H.Extensions.TextJsonable
+    name: TextJsonable
+    href: H.Extensions.TextJsonable.html
 - uid: H.Controls.Dock.Controls
   commentId: N:H.Controls.Dock.Controls
   href: H.html
@@ -16754,6 +17418,36 @@ references:
   - uid: H.Controls.OutlookBar
     name: OutlookBar
     href: H.Controls.OutlookBar.html
+- uid: H.Modules.Guide
+  commentId: N:H.Modules.Guide
+  href: H.html
+  name: H.Modules.Guide
+  nameWithType: H.Modules.Guide
+  fullName: H.Modules.Guide
+  spec.csharp:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Modules
+    name: Modules
+    href: H.Modules.html
+  - name: .
+  - uid: H.Modules.Guide
+    name: Guide
+    href: H.Modules.Guide.html
+  spec.vb:
+  - uid: H
+    name: H
+    href: H.html
+  - name: .
+  - uid: H.Modules
+    name: Modules
+    href: H.Modules.html
+  - name: .
+  - uid: H.Modules.Guide
+    name: Guide
+    href: H.Modules.Guide.html
 - uid: H.Controls.Form.Form.ItemHeaderTemplate*
   commentId: Overload:H.Controls.Form.Form.ItemHeaderTemplate
   href: H.Controls.Form.Form.html#H_Controls_Form_Form_ItemHeaderTemplate
@@ -16776,29 +17470,6 @@ references:
   name: DependencyProperty
   nameWithType: DependencyProperty
   fullName: System.Windows.DependencyProperty
-- uid: H.Controls.Form.Form.Title*
-  commentId: Overload:H.Controls.Form.Form.Title
-  href: H.Controls.Form.Form.html#H_Controls_Form_Form_Title
-  name: Title
-  nameWithType: Form.Title
-  fullName: H.Controls.Form.Form.Title
-- uid: H.Services.Common.IFormOption.Title
-  commentId: P:H.Services.Common.IFormOption.Title
-  parent: H.Services.Common.IFormOption
-  name: Title
-  nameWithType: IFormOption.Title
-  fullName: H.Services.Common.IFormOption.Title
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: H.Controls.Form.Form.SelectObject*
   commentId: Overload:H.Controls.Form.Form.SelectObject
   href: H.Controls.Form.Form.html#H_Controls_Form_Form_SelectObject
@@ -16899,6 +17570,17 @@ references:
   name: ExceptPropertyNames
   nameWithType: IFormOption.ExceptPropertyNames
   fullName: H.Services.Common.IFormOption.ExceptPropertyNames
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: H.Controls.Form.Form.UsePropertyNames*
   commentId: Overload:H.Controls.Form.Form.UsePropertyNames
   href: H.Controls.Form.Form.html#H_Controls_Form_Form_UsePropertyNames
@@ -17163,6 +17845,118 @@ references:
   name: UseGroupNames
   nameWithType: IFormOption.UseGroupNames
   fullName: H.Services.Common.IFormOption.UseGroupNames
+- uid: H.Controls.Form.Form.GroupOrderComparer*
+  commentId: Overload:H.Controls.Form.Form.GroupOrderComparer
+  href: H.Controls.Form.Form.html#H_Controls_Form_Form_GroupOrderComparer
+  name: GroupOrderComparer
+  nameWithType: Form.GroupOrderComparer
+  fullName: H.Controls.Form.Form.GroupOrderComparer
+- uid: H.Services.Common.IFormOption.GroupOrderComparer
+  commentId: P:H.Services.Common.IFormOption.GroupOrderComparer
+  parent: H.Services.Common.IFormOption
+  name: GroupOrderComparer
+  nameWithType: IFormOption.GroupOrderComparer
+  fullName: H.Services.Common.IFormOption.GroupOrderComparer
+- uid: System.Collections.Generic.IComparer{System.String}
+  commentId: T:System.Collections.Generic.IComparer{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IComparer`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<string>
+  nameWithType: IComparer<string>
+  fullName: System.Collections.Generic.IComparer<string>
+  nameWithType.vb: IComparer(Of String)
+  fullName.vb: System.Collections.Generic.IComparer(Of String)
+  name.vb: IComparer(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IComparer`1
+  commentId: T:System.Collections.Generic.IComparer`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  name: IComparer<T>
+  nameWithType: IComparer<T>
+  fullName: System.Collections.Generic.IComparer<T>
+  nameWithType.vb: IComparer(Of T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T)
+  name.vb: IComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: System.Windows.RoutedEvent
   commentId: T:System.Windows.RoutedEvent
   parent: System.Windows

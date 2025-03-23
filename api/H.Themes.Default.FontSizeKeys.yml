@@ -16,6 +16,7 @@ items:
   - H.Themes.Default.FontSizeKeys.Header7
   - H.Themes.Default.FontSizeKeys.Header8
   - H.Themes.Default.FontSizeKeys.Header9
+  - H.Themes.Default.FontSizeKeys.Icon
   langs:
   - csharp
   - vb
@@ -318,6 +319,31 @@ items:
       type: System.Windows.ComponentResourceKey
     content.vb: Public Shared ReadOnly Property [Default] As ComponentResourceKey
   overload: H.Themes.Default.FontSizeKeys.Default*
+- uid: H.Themes.Default.FontSizeKeys.Icon
+  commentId: P:H.Themes.Default.FontSizeKeys.Icon
+  id: Icon
+  parent: H.Themes.Default.FontSizeKeys
+  langs:
+  - csharp
+  - vb
+  name: Icon
+  nameWithType: FontSizeKeys.Icon
+  fullName: H.Themes.Default.FontSizeKeys.Icon
+  type: Property
+  source:
+    id: Icon
+    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Themes\H.Themes.Default\FontSizes\Default.xaml.cs
+    startLine: 20
+  assemblies:
+  - H.Themes.Default
+  namespace: H.Themes.Default
+  syntax:
+    content: public static ComponentResourceKey Icon { get; }
+    parameters: []
+    return:
+      type: System.Windows.ComponentResourceKey
+    content.vb: Public Shared ReadOnly Property Icon As ComponentResourceKey
+  overload: H.Themes.Default.FontSizeKeys.Icon*
 references:
 - uid: H.Themes.Default
   commentId: N:H.Themes.Default
@@ -681,3 +707,9 @@ references:
   name: Default
   nameWithType: FontSizeKeys.Default
   fullName: H.Themes.Default.FontSizeKeys.Default
+- uid: H.Themes.Default.FontSizeKeys.Icon*
+  commentId: Overload:H.Themes.Default.FontSizeKeys.Icon
+  href: H.Themes.Default.FontSizeKeys.html#H_Themes_Default_FontSizeKeys_Icon
+  name: Icon
+  nameWithType: FontSizeKeys.Icon
+  fullName: H.Themes.Default.FontSizeKeys.Icon
