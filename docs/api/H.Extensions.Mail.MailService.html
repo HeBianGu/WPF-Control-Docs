@@ -122,6 +122,12 @@ Class MailService
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="H.Modules.Feedback.FeedBackMailService.html">FeedBackMailService</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -153,10 +159,10 @@ Class MailService
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -165,7 +171,40 @@ Class MailService
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -175,39 +214,6 @@ Class MailService
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
@@ -228,6 +234,37 @@ Class MailService
 </h2>
 
 
+  <a id="H_Extensions_Mail_MailService_GetSmtpSendOptions_" data-uid="H.Extensions.Mail.MailService.GetSmtpSendOptions*"></a>
+
+  <h3 id="H_Extensions_Mail_MailService_GetSmtpSendOptions" data-uid="H.Extensions.Mail.MailService.GetSmtpSendOptions">
+  GetSmtpSendOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ISmtpSendOptions GetSmtpSendOptions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Extensions.Mail.ISmtpSendOptions.html">ISmtpSendOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="H_Extensions_Mail_MailService_Send_" data-uid="H.Extensions.Mail.MailService.Send*"></a>
 
   <h3 id="H_Extensions_Mail_MailService_Send_H_Services_Mail_MailMessageItem_System_Boolean_System_String__" data-uid="H.Extensions.Mail.MailService.Send(H.Services.Mail.MailMessageItem,System.Boolean,System.String@)">
@@ -239,7 +276,7 @@ Class MailService
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Send(MailMessageItem messageItem, bool isBodyHtml, out string message)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool Send(MailMessageItem messageItem, bool isBodyHtml, out string message)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

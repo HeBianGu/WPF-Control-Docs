@@ -7,7 +7,7 @@ items:
   children:
   - H.Extensions.Tree.TreeExtension.GetTreeNodes(H.Extensions.Tree.ITree,System.Boolean)
   - H.Extensions.Tree.TreeExtension.GetTreeNodes(H.Extensions.Tree.ITree,System.Object,System.Boolean)
-  - H.Extensions.Tree.TreeExtension.Where``1(System.Collections.Generic.IEnumerable{H.Mvvm.ITreeNode},System.Func{``0,System.Boolean})
+  - H.Extensions.Tree.TreeExtension.Where``1(System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.ITreeNode},System.Func{``0,System.Boolean})
   langs:
   - csharp
   - vb
@@ -17,8 +17,8 @@ items:
   type: Class
   source:
     id: TreeExtension
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Tree\TreeExtension.cs
-    startLine: 8
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Tree\TreeExtension.cs
+    startLine: 6
   assemblies:
   - H.Extensions.Tree
   namespace: H.Extensions.Tree
@@ -49,8 +49,8 @@ items:
   type: Method
   source:
     id: GetTreeNodes
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Tree\TreeExtension.cs
-    startLine: 10
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Tree\TreeExtension.cs
+    startLine: 8
   assemblies:
   - H.Extensions.Tree
   namespace: H.Extensions.Tree
@@ -62,7 +62,7 @@ items:
     - id: isRecursion
       type: System.Boolean
     return:
-      type: System.Collections.Generic.IEnumerable{H.Mvvm.ITreeNode}
+      type: System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.ITreeNode}
     content.vb: Public Shared Function GetTreeNodes(tree As ITree, isRecursion As Boolean = True) As IEnumerable(Of ITreeNode)
   overload: H.Extensions.Tree.TreeExtension.GetTreeNodes*
   nameWithType.vb: TreeExtension.GetTreeNodes(ITree, Boolean)
@@ -82,8 +82,8 @@ items:
   type: Method
   source:
     id: GetTreeNodes
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Tree\TreeExtension.cs
-    startLine: 25
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Tree\TreeExtension.cs
+    startLine: 23
   assemblies:
   - H.Extensions.Tree
   namespace: H.Extensions.Tree
@@ -97,15 +97,15 @@ items:
     - id: isRecursion
       type: System.Boolean
     return:
-      type: System.Collections.Generic.IEnumerable{H.Mvvm.TreeNodeBase{System.Object}}
+      type: System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.TreeNodeBase{System.Object}}
     content.vb: Public Shared Function GetTreeNodes(tree As ITree, parent As Object, isRecursion As Boolean = True) As IEnumerable(Of TreeNodeBase(Of Object))
   overload: H.Extensions.Tree.TreeExtension.GetTreeNodes*
   nameWithType.vb: TreeExtension.GetTreeNodes(ITree, Object, Boolean)
   fullName.vb: H.Extensions.Tree.TreeExtension.GetTreeNodes(H.Extensions.Tree.ITree, Object, Boolean)
   name.vb: GetTreeNodes(ITree, Object, Boolean)
-- uid: H.Extensions.Tree.TreeExtension.Where``1(System.Collections.Generic.IEnumerable{H.Mvvm.ITreeNode},System.Func{``0,System.Boolean})
-  commentId: M:H.Extensions.Tree.TreeExtension.Where``1(System.Collections.Generic.IEnumerable{H.Mvvm.ITreeNode},System.Func{``0,System.Boolean})
-  id: Where``1(System.Collections.Generic.IEnumerable{H.Mvvm.ITreeNode},System.Func{``0,System.Boolean})
+- uid: H.Extensions.Tree.TreeExtension.Where``1(System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.ITreeNode},System.Func{``0,System.Boolean})
+  commentId: M:H.Extensions.Tree.TreeExtension.Where``1(System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.ITreeNode},System.Func{``0,System.Boolean})
+  id: Where``1(System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.ITreeNode},System.Func{``0,System.Boolean})
   isExtensionMethod: true
   parent: H.Extensions.Tree.TreeExtension
   langs:
@@ -113,12 +113,12 @@ items:
   - vb
   name: Where<T>(IEnumerable<ITreeNode>, Func<T, bool>)
   nameWithType: TreeExtension.Where<T>(IEnumerable<ITreeNode>, Func<T, bool>)
-  fullName: H.Extensions.Tree.TreeExtension.Where<T>(System.Collections.Generic.IEnumerable<H.Mvvm.ITreeNode>, System.Func<T, bool>)
+  fullName: H.Extensions.Tree.TreeExtension.Where<T>(System.Collections.Generic.IEnumerable<H.Mvvm.ViewModels.Tree.ITreeNode>, System.Func<T, bool>)
   type: Method
   source:
     id: Where
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Tree\TreeExtension.cs
-    startLine: 48
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Tree\TreeExtension.cs
+    startLine: 46
   assemblies:
   - H.Extensions.Tree
   namespace: H.Extensions.Tree
@@ -126,17 +126,17 @@ items:
     content: public static IEnumerable<TreeNodeBase<object>> Where<T>(this IEnumerable<ITreeNode> treeNodes, Func<T, bool> func)
     parameters:
     - id: treeNodes
-      type: System.Collections.Generic.IEnumerable{H.Mvvm.ITreeNode}
+      type: System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.ITreeNode}
     - id: func
       type: System.Func{{T},System.Boolean}
     typeParameters:
     - id: T
     return:
-      type: System.Collections.Generic.IEnumerable{H.Mvvm.TreeNodeBase{System.Object}}
+      type: System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.TreeNodeBase{System.Object}}
     content.vb: Public Shared Function Where(Of T)(treeNodes As IEnumerable(Of ITreeNode), func As Func(Of T, Boolean)) As IEnumerable(Of TreeNodeBase(Of Object))
   overload: H.Extensions.Tree.TreeExtension.Where*
   nameWithType.vb: TreeExtension.Where(Of T)(IEnumerable(Of ITreeNode), Func(Of T, Boolean))
-  fullName.vb: H.Extensions.Tree.TreeExtension.Where(Of T)(System.Collections.Generic.IEnumerable(Of H.Mvvm.ITreeNode), System.Func(Of T, Boolean))
+  fullName.vb: H.Extensions.Tree.TreeExtension.Where(Of T)(System.Collections.Generic.IEnumerable(Of H.Mvvm.ViewModels.Tree.ITreeNode), System.Func(Of T, Boolean))
   name.vb: Where(Of T)(IEnumerable(Of ITreeNode), Func(Of T, Boolean))
 references:
 - uid: H.Extensions.Tree
@@ -429,16 +429,16 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: System.Collections.Generic.IEnumerable{H.Mvvm.ITreeNode}
-  commentId: T:System.Collections.Generic.IEnumerable{H.Mvvm.ITreeNode}
+- uid: System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.ITreeNode}
+  commentId: T:System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.ITreeNode}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<ITreeNode>
   nameWithType: IEnumerable<ITreeNode>
-  fullName: System.Collections.Generic.IEnumerable<H.Mvvm.ITreeNode>
+  fullName: System.Collections.Generic.IEnumerable<H.Mvvm.ViewModels.Tree.ITreeNode>
   nameWithType.vb: IEnumerable(Of ITreeNode)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of H.Mvvm.ITreeNode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of H.Mvvm.ViewModels.Tree.ITreeNode)
   name.vb: IEnumerable(Of ITreeNode)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -446,9 +446,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
-  - uid: H.Mvvm.ITreeNode
+  - uid: H.Mvvm.ViewModels.Tree.ITreeNode
     name: ITreeNode
-    href: H.Mvvm.ITreeNode.html
+    href: H.Mvvm.ViewModels.Tree.ITreeNode.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -458,9 +458,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Mvvm.ITreeNode
+  - uid: H.Mvvm.ViewModels.Tree.ITreeNode
     name: ITreeNode
-    href: H.Mvvm.ITreeNode.html
+    href: H.Mvvm.ViewModels.Tree.ITreeNode.html
   - name: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
@@ -527,16 +527,16 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: System.Collections.Generic.IEnumerable{H.Mvvm.TreeNodeBase{System.Object}}
-  commentId: T:System.Collections.Generic.IEnumerable{H.Mvvm.TreeNodeBase{System.Object}}
+- uid: System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.TreeNodeBase{System.Object}}
+  commentId: T:System.Collections.Generic.IEnumerable{H.Mvvm.ViewModels.Tree.TreeNodeBase{System.Object}}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<TreeNodeBase<object>>
   nameWithType: IEnumerable<TreeNodeBase<object>>
-  fullName: System.Collections.Generic.IEnumerable<H.Mvvm.TreeNodeBase<object>>
+  fullName: System.Collections.Generic.IEnumerable<H.Mvvm.ViewModels.Tree.TreeNodeBase<object>>
   nameWithType.vb: IEnumerable(Of TreeNodeBase(Of Object))
-  fullName.vb: System.Collections.Generic.IEnumerable(Of H.Mvvm.TreeNodeBase(Of Object))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of H.Mvvm.ViewModels.Tree.TreeNodeBase(Of Object))
   name.vb: IEnumerable(Of TreeNodeBase(Of Object))
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -544,9 +544,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
-  - uid: H.Mvvm.TreeNodeBase`1
+  - uid: H.Mvvm.ViewModels.Tree.TreeNodeBase`1
     name: TreeNodeBase
-    href: H.Mvvm.TreeNodeBase-1.html
+    href: H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html
   - name: <
   - uid: System.Object
     name: object
@@ -562,9 +562,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Mvvm.TreeNodeBase`1
+  - uid: H.Mvvm.ViewModels.Tree.TreeNodeBase`1
     name: TreeNodeBase
-    href: H.Mvvm.TreeNodeBase-1.html
+    href: H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html
   - name: (
   - name: Of
   - name: " "
@@ -576,7 +576,7 @@ references:
   - name: )
 - uid: H.Extensions.Tree.TreeExtension.Where*
   commentId: Overload:H.Extensions.Tree.TreeExtension.Where
-  href: H.Extensions.Tree.TreeExtension.html#H_Extensions_Tree_TreeExtension_Where__1_System_Collections_Generic_IEnumerable_H_Mvvm_ITreeNode__System_Func___0_System_Boolean__
+  href: H.Extensions.Tree.TreeExtension.html#H_Extensions_Tree_TreeExtension_Where__1_System_Collections_Generic_IEnumerable_H_Mvvm_ViewModels_Tree_ITreeNode__System_Func___0_System_Boolean__
   name: Where
   nameWithType: TreeExtension.Where
   fullName: H.Extensions.Tree.TreeExtension.Where

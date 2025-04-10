@@ -101,7 +101,7 @@ Class NodeTreeNode
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NodeTreeNode : PartTreeNodeBase, INotifyPropertyChanged, IModelBindable&lt;Part&gt;, IModelBindable, ISelectBindable, ITreeNode, ISearchable</code></pre>
+    <pre><code class="lang-csharp hljs">public class NodeTreeNode : PartTreeNodeBase, INotifyPropertyChanged, IModelBindable&lt;Part&gt;, IModelBindable, ISelectable, ITreeNode, ISearchable</code></pre>
   </div>
 
 
@@ -112,9 +112,9 @@ Class NodeTreeNode
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html">BindableBase</a></div>
-      <div><a class="xref" href="H.Mvvm.ModelBindable-1.html">ModelBindable</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</div>
-      <div><a class="xref" href="H.Mvvm.SelectBindable-1.html">SelectBindable</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</div>
-      <div><a class="xref" href="H.Mvvm.TreeNodeBase-1.html">TreeNodeBase</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html">ModelBindable</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.SelectBindable-1.html">SelectBindable</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html">TreeNodeBase</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</div>
       <div><a class="xref" href="H.Controls.Diagram.Presenter.Provider.Tree.PartTreeNodeBase.html">PartTreeNodeBase</a></div>
       <div><span class="xref">NodeTreeNode</span></div>
     </dd>
@@ -124,11 +124,11 @@ Class NodeTreeNode
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IModelBindable-1.html">IModelBindable</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</div>
-      <div><a class="xref" href="H.Mvvm.IModelBindable.html">IModelBindable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.ISelectBindable.html">ISelectBindable</a></div>
-      <div><a class="xref" href="H.Mvvm.ITreeNode.html">ITreeNode</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.ISearchable.html">ISearchable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.IModelBindable-1.html">IModelBindable</a>&lt;<a class="xref" href="H.Controls.Diagram.Parts.Base.Part.html">Part</a>&gt;</div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.IModelBindable.html">IModelBindable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.ISelectable.html">ISelectable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.Tree.ITreeNode.html">ITreeNode</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.ISearchable.html">ISearchable</a></div>
     </dd>
   </dl>
 
@@ -140,73 +140,73 @@ Class NodeTreeNode
       <a class="xref" href="H.Controls.Diagram.Presenter.Provider.Tree.PartTreeNodeBase.html#H_Controls_Diagram_Presenter_Provider_Tree_PartTreeNodeBase_RefreshSelected">PartTreeNodeBase.RefreshSelected()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_TreeNodeEntity">TreeNodeBase&lt;Part&gt;.TreeNodeEntity</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_TreeNodeEntity">TreeNodeBase&lt;Part&gt;.TreeNodeEntity</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_IsChecked">TreeNodeBase&lt;Part&gt;.IsChecked</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_IsChecked">TreeNodeBase&lt;Part&gt;.IsChecked</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_IsCheckable">TreeNodeBase&lt;Part&gt;.IsCheckable</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_IsCheckable">TreeNodeBase&lt;Part&gt;.IsCheckable</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Visibility">TreeNodeBase&lt;Part&gt;.Visibility</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_Visibility">TreeNodeBase&lt;Part&gt;.Visibility</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_IsExpanded">TreeNodeBase&lt;Part&gt;.IsExpanded</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_IsExpanded">TreeNodeBase&lt;Part&gt;.IsExpanded</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_IsLoaded">TreeNodeBase&lt;Part&gt;.IsLoaded</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_IsLoaded">TreeNodeBase&lt;Part&gt;.IsLoaded</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Parent">TreeNodeBase&lt;Part&gt;.Parent</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_Parent">TreeNodeBase&lt;Part&gt;.Parent</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Nodes">TreeNodeBase&lt;Part&gt;.Nodes</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_Nodes">TreeNodeBase&lt;Part&gt;.Nodes</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_AddNode_H_Mvvm_TreeNodeBase__0__">TreeNodeBase&lt;Part&gt;.AddNode(TreeNodeBase&lt;Part&gt;)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_AddNode_H_Mvvm_ViewModels_Tree_TreeNodeBase__0__">TreeNodeBase&lt;Part&gt;.AddNode(TreeNodeBase&lt;Part&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Foreach_System_Action_H_Mvvm_TreeNodeBase__0___">TreeNodeBase&lt;Part&gt;.Foreach(Action&lt;TreeNodeBase&lt;Part&gt;&gt;)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_Foreach_System_Action_H_Mvvm_ViewModels_Tree_TreeNodeBase__0___">TreeNodeBase&lt;Part&gt;.Foreach(Action&lt;TreeNodeBase&lt;Part&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_FindAll_System_Predicate_H_Mvvm_TreeNodeBase__0___">TreeNodeBase&lt;Part&gt;.FindAll(Predicate&lt;TreeNodeBase&lt;Part&gt;&gt;)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_FindAll_System_Predicate_H_Mvvm_ViewModels_Tree_TreeNodeBase__0___">TreeNodeBase&lt;Part&gt;.FindAll(Predicate&lt;TreeNodeBase&lt;Part&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_FindAllParent_System_Predicate_H_Mvvm_TreeNodeBase__0___">TreeNodeBase&lt;Part&gt;.FindAllParent(Predicate&lt;TreeNodeBase&lt;Part&gt;&gt;)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_FindAllParent_System_Predicate_H_Mvvm_ViewModels_Tree_TreeNodeBase__0___">TreeNodeBase&lt;Part&gt;.FindAllParent(Predicate&lt;TreeNodeBase&lt;Part&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.TreeNodeBase-1.html#H_Mvvm_TreeNodeBase_1_Filter_System_String_">TreeNodeBase&lt;Part&gt;.Filter(string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.Tree.TreeNodeBase-1.html#H_Mvvm_ViewModels_Tree_TreeNodeBase_1_Filter_System_String_">TreeNodeBase&lt;Part&gt;.Filter(string)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.SelectBindable-1.html#H_Mvvm_SelectBindable_1_IsSelected">SelectBindable&lt;Part&gt;.IsSelected</a>
+      <a class="xref" href="H.Mvvm.ViewModels.SelectBindable-1.html#H_Mvvm_ViewModels_SelectBindable_1_IsSelected">SelectBindable&lt;Part&gt;.IsSelected</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Model">ModelBindable&lt;Part&gt;.Model</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_Model">ModelBindable&lt;Part&gt;.Model</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_GetModel">ModelBindable&lt;Part&gt;.GetModel()</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_GetModel">ModelBindable&lt;Part&gt;.GetModel()</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Visible">ModelBindable&lt;Part&gt;.Visible</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_Visible">ModelBindable&lt;Part&gt;.Visible</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_IsEnbled">ModelBindable&lt;Part&gt;.IsEnbled</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_IsEnbled">ModelBindable&lt;Part&gt;.IsEnbled</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_IsBuzy">ModelBindable&lt;Part&gt;.IsBuzy</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_IsBuzy">ModelBindable&lt;Part&gt;.IsBuzy</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Value">ModelBindable&lt;Part&gt;.Value</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_Value">ModelBindable&lt;Part&gt;.Value</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_Message">ModelBindable&lt;Part&gt;.Message</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_Message">ModelBindable&lt;Part&gt;.Message</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_LoadValue_System_String__">ModelBindable&lt;Part&gt;.LoadValue(out string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_LoadValue_System_String__">ModelBindable&lt;Part&gt;.LoadValue(out string)</a>
     </div>
     <div>
-      <a class="xref" href="H.Mvvm.ModelBindable-1.html#H_Mvvm_ModelBindable_1_SaveValue_System_String__">ModelBindable&lt;Part&gt;.SaveValue(out string)</a>
+      <a class="xref" href="H.Mvvm.ViewModels.ModelBindable-1.html#H_Mvvm_ViewModels_ModelBindable_1_SaveValue_System_String__">ModelBindable&lt;Part&gt;.SaveValue(out string)</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.ViewModels.Base.BindableBase.html#H_Mvvm_ViewModels_Base_BindableBase_Init">BindableBase.Init()</a>
@@ -244,10 +244,10 @@ Class NodeTreeNode
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -256,7 +256,40 @@ Class NodeTreeNode
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -266,39 +299,6 @@ Class NodeTreeNode
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>

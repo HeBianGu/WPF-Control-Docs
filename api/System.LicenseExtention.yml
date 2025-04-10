@@ -5,8 +5,8 @@ items:
   id: LicenseExtention
   parent: System
   children:
-  - System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.License.LicenseOptions})
-  - System.LicenseExtention.UseLicense(System.IApplicationBuilder,System.Action{H.Modules.License.LicenseOptions})
+  - System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.License.ILicenseOptions})
+  - System.LicenseExtention.UseLicense(System.IApplicationBuilder,System.Action{H.Modules.License.ILicenseOptions})
   langs:
   - csharp
   - vb
@@ -16,8 +16,8 @@ items:
   type: Class
   source:
     id: LicenseExtention
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.License\Extention.cs
-    startLine: 8
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.License\Extention.cs
+    startLine: 10
   assemblies:
   - H.Modules.License
   namespace: System
@@ -34,70 +34,70 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.License.LicenseOptions})
-  commentId: M:System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.License.LicenseOptions})
-  id: AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.License.LicenseOptions})
+- uid: System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.License.ILicenseOptions})
+  commentId: M:System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.License.ILicenseOptions})
+  id: AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.License.ILicenseOptions})
   isExtensionMethod: true
   parent: System.LicenseExtention
   langs:
   - csharp
   - vb
-  name: AddLicenseService(IServiceCollection, Action<LicenseOptions>)
-  nameWithType: LicenseExtention.AddLicenseService(IServiceCollection, Action<LicenseOptions>)
-  fullName: System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.License.LicenseOptions>)
+  name: AddLicenseService(IServiceCollection, Action<ILicenseOptions>)
+  nameWithType: LicenseExtention.AddLicenseService(IServiceCollection, Action<ILicenseOptions>)
+  fullName: System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.License.ILicenseOptions>)
   type: Method
   source:
     id: AddLicenseService
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.License\Extention.cs
-    startLine: 10
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.License\Extention.cs
+    startLine: 12
   assemblies:
   - H.Modules.License
   namespace: System
   syntax:
-    content: public static IServiceCollection AddLicenseService(this IServiceCollection service, Action<LicenseOptions> setupAction = null)
+    content: public static IServiceCollection AddLicenseService(this IServiceCollection service, Action<ILicenseOptions> setupAction = null)
     parameters:
     - id: service
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.License.LicenseOptions}
+      type: System.Action{H.Modules.License.ILicenseOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddLicenseService(service As IServiceCollection, setupAction As Action(Of LicenseOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddLicenseService(service As IServiceCollection, setupAction As Action(Of ILicenseOptions) = Nothing) As IServiceCollection
   overload: System.LicenseExtention.AddLicenseService*
-  nameWithType.vb: LicenseExtention.AddLicenseService(IServiceCollection, Action(Of LicenseOptions))
-  fullName.vb: System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.License.LicenseOptions))
-  name.vb: AddLicenseService(IServiceCollection, Action(Of LicenseOptions))
-- uid: System.LicenseExtention.UseLicense(System.IApplicationBuilder,System.Action{H.Modules.License.LicenseOptions})
-  commentId: M:System.LicenseExtention.UseLicense(System.IApplicationBuilder,System.Action{H.Modules.License.LicenseOptions})
-  id: UseLicense(System.IApplicationBuilder,System.Action{H.Modules.License.LicenseOptions})
+  nameWithType.vb: LicenseExtention.AddLicenseService(IServiceCollection, Action(Of ILicenseOptions))
+  fullName.vb: System.LicenseExtention.AddLicenseService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.License.ILicenseOptions))
+  name.vb: AddLicenseService(IServiceCollection, Action(Of ILicenseOptions))
+- uid: System.LicenseExtention.UseLicense(System.IApplicationBuilder,System.Action{H.Modules.License.ILicenseOptions})
+  commentId: M:System.LicenseExtention.UseLicense(System.IApplicationBuilder,System.Action{H.Modules.License.ILicenseOptions})
+  id: UseLicense(System.IApplicationBuilder,System.Action{H.Modules.License.ILicenseOptions})
   isExtensionMethod: true
   parent: System.LicenseExtention
   langs:
   - csharp
   - vb
-  name: UseLicense(IApplicationBuilder, Action<LicenseOptions>)
-  nameWithType: LicenseExtention.UseLicense(IApplicationBuilder, Action<LicenseOptions>)
-  fullName: System.LicenseExtention.UseLicense(System.IApplicationBuilder, System.Action<H.Modules.License.LicenseOptions>)
+  name: UseLicense(IApplicationBuilder, Action<ILicenseOptions>)
+  nameWithType: LicenseExtention.UseLicense(IApplicationBuilder, Action<ILicenseOptions>)
+  fullName: System.LicenseExtention.UseLicense(System.IApplicationBuilder, System.Action<H.Modules.License.ILicenseOptions>)
   type: Method
   source:
     id: UseLicense
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.License\Extention.cs
-    startLine: 22
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.License\Extention.cs
+    startLine: 24
   assemblies:
   - H.Modules.License
   namespace: System
   syntax:
-    content: public static void UseLicense(this IApplicationBuilder service, Action<LicenseOptions> action = null)
+    content: public static void UseLicense(this IApplicationBuilder service, Action<ILicenseOptions> action = null)
     parameters:
     - id: service
       type: System.IApplicationBuilder
     - id: action
-      type: System.Action{H.Modules.License.LicenseOptions}
-    content.vb: Public Shared Sub UseLicense(service As IApplicationBuilder, action As Action(Of LicenseOptions) = Nothing)
+      type: System.Action{H.Modules.License.ILicenseOptions}
+    content.vb: Public Shared Sub UseLicense(service As IApplicationBuilder, action As Action(Of ILicenseOptions) = Nothing)
   overload: System.LicenseExtention.UseLicense*
-  nameWithType.vb: LicenseExtention.UseLicense(IApplicationBuilder, Action(Of LicenseOptions))
-  fullName.vb: System.LicenseExtention.UseLicense(System.IApplicationBuilder, System.Action(Of H.Modules.License.LicenseOptions))
-  name.vb: UseLicense(IApplicationBuilder, Action(Of LicenseOptions))
+  nameWithType.vb: LicenseExtention.UseLicense(IApplicationBuilder, Action(Of ILicenseOptions))
+  fullName.vb: System.LicenseExtention.UseLicense(System.IApplicationBuilder, System.Action(Of H.Modules.License.ILicenseOptions))
+  name.vb: UseLicense(IApplicationBuilder, Action(Of ILicenseOptions))
 references:
 - uid: System
   commentId: N:System
@@ -337,7 +337,7 @@ references:
   - name: )
 - uid: System.LicenseExtention.AddLicenseService*
   commentId: Overload:System.LicenseExtention.AddLicenseService
-  href: System.LicenseExtention.html#System_LicenseExtention_AddLicenseService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_License_LicenseOptions__
+  href: System.LicenseExtention.html#System_LicenseExtention_AddLicenseService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_License_ILicenseOptions__
   name: AddLicenseService
   nameWithType: LicenseExtention.AddLicenseService
   fullName: System.LicenseExtention.AddLicenseService
@@ -349,26 +349,26 @@ references:
   name: IServiceCollection
   nameWithType: IServiceCollection
   fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
-- uid: System.Action{H.Modules.License.LicenseOptions}
-  commentId: T:System.Action{H.Modules.License.LicenseOptions}
+- uid: System.Action{H.Modules.License.ILicenseOptions}
+  commentId: T:System.Action{H.Modules.License.ILicenseOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<LicenseOptions>
-  nameWithType: Action<LicenseOptions>
-  fullName: System.Action<H.Modules.License.LicenseOptions>
-  nameWithType.vb: Action(Of LicenseOptions)
-  fullName.vb: System.Action(Of H.Modules.License.LicenseOptions)
-  name.vb: Action(Of LicenseOptions)
+  name: Action<ILicenseOptions>
+  nameWithType: Action<ILicenseOptions>
+  fullName: System.Action<H.Modules.License.ILicenseOptions>
+  nameWithType.vb: Action(Of ILicenseOptions)
+  fullName.vb: System.Action(Of H.Modules.License.ILicenseOptions)
+  name.vb: Action(Of ILicenseOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Modules.License.LicenseOptions
-    name: LicenseOptions
-    href: H.Modules.License.LicenseOptions.html
+  - uid: H.Modules.License.ILicenseOptions
+    name: ILicenseOptions
+    href: H.Modules.License.ILicenseOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -378,9 +378,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Modules.License.LicenseOptions
-    name: LicenseOptions
-    href: H.Modules.License.LicenseOptions.html
+  - uid: H.Modules.License.ILicenseOptions
+    name: ILicenseOptions
+    href: H.Modules.License.ILicenseOptions.html
   - name: )
 - uid: Microsoft.Extensions.DependencyInjection
   commentId: N:Microsoft.Extensions.DependencyInjection
@@ -449,7 +449,7 @@ references:
   - name: )
 - uid: System.LicenseExtention.UseLicense*
   commentId: Overload:System.LicenseExtention.UseLicense
-  href: System.LicenseExtention.html#System_LicenseExtention_UseLicense_System_IApplicationBuilder_System_Action_H_Modules_License_LicenseOptions__
+  href: System.LicenseExtention.html#System_LicenseExtention_UseLicense_System_IApplicationBuilder_System_Action_H_Modules_License_ILicenseOptions__
   name: UseLicense
   nameWithType: LicenseExtention.UseLicense
   fullName: System.LicenseExtention.UseLicense

@@ -154,8 +154,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowDataGrid_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowDataGrid*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowDataGrid_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_IItemsSourcePresenter__System_Action_H_Presenters_Common_IItemsSourcePresenter__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_IItemsSourcePresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowDataGrid(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.IItemsSourcePresenter},System.Action{H.Presenters.Common.IItemsSourcePresenter},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.IItemsSourcePresenter,System.Boolean})">
-  ShowDataGrid(IDialogMessageService, Action&lt;IItemsSourcePresenter&gt;, Action&lt;IItemsSourcePresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IItemsSourcePresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowDataGrid_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_IItemsSourcePresenter__System_Action_H_Presenters_Common_IItemsSourcePresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IItemsSourcePresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowDataGrid(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.IItemsSourcePresenter},System.Action{H.Presenters.Common.IItemsSourcePresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IItemsSourcePresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowDataGrid(IDialogMessageService, Action&lt;IItemsSourcePresenter&gt;, Action&lt;IItemsSourcePresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IItemsSourcePresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -163,20 +163,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowDataGrid(this IDialogMessageService service, Action&lt;IItemsSourcePresenter&gt; option, Action&lt;IItemsSourcePresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;IItemsSourcePresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowDataGrid(this IDialogMessageService service, Action&lt;IItemsSourcePresenter&gt; option, Action&lt;IItemsSourcePresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;IItemsSourcePresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IItemsSourcePresenter.html">IItemsSourcePresenter</a>&gt;</dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IItemsSourcePresenter.html">IItemsSourcePresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IItemsSourcePresenter.html">IItemsSourcePresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IItemsSourcePresenter.html">IItemsSourcePresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -198,8 +198,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowFilePathTextBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowFilePathTextBox*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowFilePathTextBox_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_IFilePathTextBoxPresenter__System_Action_H_Presenters_Common_IFilePathTextBoxPresenter__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_IFilePathTextBoxPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowFilePathTextBox(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.IFilePathTextBoxPresenter},System.Action{H.Presenters.Common.IFilePathTextBoxPresenter},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.IFilePathTextBoxPresenter,System.Boolean})">
-  ShowFilePathTextBox(IDialogMessageService, Action&lt;IFilePathTextBoxPresenter&gt;, Action&lt;IFilePathTextBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IFilePathTextBoxPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowFilePathTextBox_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_IFilePathTextBoxPresenter__System_Action_H_Presenters_Common_IFilePathTextBoxPresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IFilePathTextBoxPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowFilePathTextBox(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.IFilePathTextBoxPresenter},System.Action{H.Presenters.Common.IFilePathTextBoxPresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IFilePathTextBoxPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowFilePathTextBox(IDialogMessageService, Action&lt;IFilePathTextBoxPresenter&gt;, Action&lt;IFilePathTextBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IFilePathTextBoxPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -207,20 +207,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowFilePathTextBox(this IDialogMessageService service, Action&lt;IFilePathTextBoxPresenter&gt; option, Action&lt;IFilePathTextBoxPresenter&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IFilePathTextBoxPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowFilePathTextBox(this IDialogMessageService service, Action&lt;IFilePathTextBoxPresenter&gt; option, Action&lt;IFilePathTextBoxPresenter&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IFilePathTextBoxPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IFilePathTextBoxPresenter.html">IFilePathTextBoxPresenter</a>&gt;</dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IFilePathTextBoxPresenter.html">IFilePathTextBoxPresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IFilePathTextBoxPresenter.html">IFilePathTextBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IFilePathTextBoxPresenter.html">IFilePathTextBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -242,8 +242,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_IImageFilePathPresenter__System_Action_H_Presenters_Common_IImageFilePathPresenter__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_IImageFilePathPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.IImageFilePathPresenter},System.Action{H.Presenters.Common.IImageFilePathPresenter},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.IImageFilePathPresenter,System.Boolean})">
-  ShowImageSource(IDialogMessageService, Action&lt;IImageFilePathPresenter&gt;, Action&lt;IImageFilePathPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IImageFilePathPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_IImageFilePathPresenter__System_Action_H_Presenters_Common_IImageFilePathPresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IImageFilePathPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.IImageFilePathPresenter},System.Action{H.Presenters.Common.IImageFilePathPresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IImageFilePathPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowImageSource(IDialogMessageService, Action&lt;IImageFilePathPresenter&gt;, Action&lt;IImageFilePathPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IImageFilePathPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -251,20 +251,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowImageSource(this IDialogMessageService service, Action&lt;IImageFilePathPresenter&gt; option, Action&lt;IImageFilePathPresenter&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IImageFilePathPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowImageSource(this IDialogMessageService service, Action&lt;IImageFilePathPresenter&gt; option, Action&lt;IImageFilePathPresenter&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IImageFilePathPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IImageFilePathPresenter.html">IImageFilePathPresenter</a>&gt;</dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IImageFilePathPresenter.html">IImageFilePathPresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IImageFilePathPresenter.html">IImageFilePathPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IImageFilePathPresenter.html">IImageFilePathPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -286,7 +286,7 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_IImageViewPresenter__System_Action_H_Services_Common_IDialog__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.IImageViewPresenter},System.Action{H.Services.Common.IDialog})">
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_IImageViewPresenter__System_Action_H_Services_Message_Dialog_IDialog__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.IImageViewPresenter},System.Action{H.Services.Message.Dialog.IDialog})">
   ShowImageSource(IDialogMessageService, Action&lt;IImageViewPresenter&gt;, Action&lt;IDialog&gt;)
   
   </h3>
@@ -300,11 +300,11 @@ Class DialogServiceExtension
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IImageViewPresenter.html">IImageViewPresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -326,7 +326,7 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Common_IDialogMessageService_System_String_System_Action_H_Services_Common_IDialog__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Common.IDialogMessageService,System.String,System.Action{H.Services.Common.IDialog})">
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Message_Dialog_IDialogMessageService_System_String_System_Action_H_Services_Message_Dialog_IDialog__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Message.Dialog.IDialogMessageService,System.String,System.Action{H.Services.Message.Dialog.IDialog})">
   ShowImageSource(IDialogMessageService, string, Action&lt;IDialog&gt;)
   
   </h3>
@@ -340,11 +340,11 @@ Class DialogServiceExtension
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -366,8 +366,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Common_IDialogMessageService_System_String_System_Action_System_String__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_IImageFilePathPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Common.IDialogMessageService,System.String,System.Action{System.String},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.IImageFilePathPresenter,System.Boolean})">
-  ShowImageSource(IDialogMessageService, string, Action&lt;string&gt;, Action&lt;IDialog&gt;, Func&lt;IImageFilePathPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Message_Dialog_IDialogMessageService_System_String_System_Action_System_String__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IImageFilePathPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Message.Dialog.IDialogMessageService,System.String,System.Action{System.String},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IImageFilePathPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowImageSource(IDialogMessageService, string, Action&lt;string&gt;, Action&lt;IDialog&gt;, Func&lt;IImageFilePathPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -375,20 +375,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowImageSource(this IDialogMessageService service, string filePath, Action&lt;string&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IImageFilePathPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowImageSource(this IDialogMessageService service, string filePath, Action&lt;string&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IImageFilePathPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IImageFilePathPresenter.html">IImageFilePathPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IImageFilePathPresenter.html">IImageFilePathPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -410,7 +410,7 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Common_IDialogMessageService_System_Windows_Media_ImageSource_System_Action_H_Services_Common_IDialog__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Common.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Common.IDialog})">
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowImageSource_H_Services_Message_Dialog_IDialogMessageService_System_Windows_Media_ImageSource_System_Action_H_Services_Message_Dialog_IDialog__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowImageSource(H.Services.Message.Dialog.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Message.Dialog.IDialog})">
   ShowImageSource(IDialogMessageService, ImageSource, Action&lt;IDialog&gt;)
   
   </h3>
@@ -424,11 +424,11 @@ Class DialogServiceExtension
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>imageSource</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.imagesource">ImageSource</a></dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -450,8 +450,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowItemsControl_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowItemsControl*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowItemsControl_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_IItemsSourcePresenter__System_Action_H_Presenters_Common_IItemsSourcePresenter__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_IItemsSourcePresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowItemsControl(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.IItemsSourcePresenter},System.Action{H.Presenters.Common.IItemsSourcePresenter},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.IItemsSourcePresenter,System.Boolean})">
-  ShowItemsControl(IDialogMessageService, Action&lt;IItemsSourcePresenter&gt;, Action&lt;IItemsSourcePresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IItemsSourcePresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowItemsControl_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_IItemsSourcePresenter__System_Action_H_Presenters_Common_IItemsSourcePresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IItemsSourcePresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowItemsControl(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.IItemsSourcePresenter},System.Action{H.Presenters.Common.IItemsSourcePresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IItemsSourcePresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowItemsControl(IDialogMessageService, Action&lt;IItemsSourcePresenter&gt;, Action&lt;IItemsSourcePresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IItemsSourcePresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -459,20 +459,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowItemsControl(this IDialogMessageService service, Action&lt;IItemsSourcePresenter&gt; option, Action&lt;IItemsSourcePresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;IItemsSourcePresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowItemsControl(this IDialogMessageService service, Action&lt;IItemsSourcePresenter&gt; option, Action&lt;IItemsSourcePresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;IItemsSourcePresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IItemsSourcePresenter.html">IItemsSourcePresenter</a>&gt;</dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IItemsSourcePresenter.html">IItemsSourcePresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IItemsSourcePresenter.html">IItemsSourcePresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IItemsSourcePresenter.html">IItemsSourcePresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -494,8 +494,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowListBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowListBox*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowListBox_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_IListBoxPresenter__System_Action_H_Presenters_Common_IListBoxPresenter__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_IListBoxPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowListBox(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.IListBoxPresenter},System.Action{H.Presenters.Common.IListBoxPresenter},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.IListBoxPresenter,System.Boolean})">
-  ShowListBox(IDialogMessageService, Action&lt;IListBoxPresenter&gt;, Action&lt;IListBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IListBoxPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowListBox_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_IListBoxPresenter__System_Action_H_Presenters_Common_IListBoxPresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IListBoxPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowListBox(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.IListBoxPresenter},System.Action{H.Presenters.Common.IListBoxPresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IListBoxPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowListBox(IDialogMessageService, Action&lt;IListBoxPresenter&gt;, Action&lt;IListBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IListBoxPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -503,20 +503,21 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowListBox(this IDialogMessageService service, Action&lt;IListBoxPresenter&gt; option, Action&lt;IListBoxPresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;IListBoxPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;ShowListBox&lt;T&gt;&quot;)]
+public static Task&lt;bool?&gt; ShowListBox(this IDialogMessageService service, Action&lt;IListBoxPresenter&gt; option, Action&lt;IListBoxPresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;IListBoxPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IListBoxPresenter.html">IListBoxPresenter</a>&gt;</dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IListBoxPresenter.html">IListBoxPresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IListBoxPresenter.html">IListBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IListBoxPresenter.html">IListBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -536,10 +537,10 @@ Class DialogServiceExtension
 
 
 
-  <a id="H_Presenters_Common_DialogServiceExtension_ShowPasswordBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowPasswordBox*"></a>
+  <a id="H_Presenters_Common_DialogServiceExtension_ShowListBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowListBox*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowPasswordBox_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_IPasswordBoxPresenter__System_Action_H_Presenters_Common_IPasswordBoxPresenter__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_IPasswordBoxPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowPasswordBox(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.IPasswordBoxPresenter},System.Action{H.Presenters.Common.IPasswordBoxPresenter},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.IPasswordBoxPresenter,System.Boolean})">
-  ShowPasswordBox(IDialogMessageService, Action&lt;IPasswordBoxPresenter&gt;, Action&lt;IPasswordBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IPasswordBoxPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowListBox__1_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_IListBoxPresenter__System_Action_H_Presenters_Common_IListBoxPresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IListBoxPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowListBox``1(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.IListBoxPresenter},System.Action{H.Presenters.Common.IListBoxPresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IListBoxPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowListBox&lt;T&gt;(IDialogMessageService, Action&lt;IListBoxPresenter&gt;, Action&lt;IListBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IListBoxPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -547,20 +548,69 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowPasswordBox(this IDialogMessageService service, Action&lt;IPasswordBoxPresenter&gt; option, Action&lt;IPasswordBoxPresenter&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IPasswordBoxPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; ShowListBox&lt;T&gt;(this IDialogMessageService service, Action&lt;IListBoxPresenter&gt; option, Action&lt;IListBoxPresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;IListBoxPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IListBoxPresenter.html">IListBoxPresenter</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IListBoxPresenter.html">IListBoxPresenter</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IListBoxPresenter.html">IListBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Presenters_Common_DialogServiceExtension_ShowPasswordBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowPasswordBox*"></a>
+
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowPasswordBox_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_IPasswordBoxPresenter__System_Action_H_Presenters_Common_IPasswordBoxPresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IPasswordBoxPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowPasswordBox(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.IPasswordBoxPresenter},System.Action{H.Presenters.Common.IPasswordBoxPresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IPasswordBoxPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowPasswordBox(IDialogMessageService, Action&lt;IPasswordBoxPresenter&gt;, Action&lt;IPasswordBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;IPasswordBoxPresenter, Task&lt;bool&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowPasswordBox(this IDialogMessageService service, Action&lt;IPasswordBoxPresenter&gt; option, Action&lt;IPasswordBoxPresenter&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IPasswordBoxPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IPasswordBoxPresenter.html">IPasswordBoxPresenter</a>&gt;</dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.IPasswordBoxPresenter.html">IPasswordBoxPresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IPasswordBoxPresenter.html">IPasswordBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IPasswordBoxPresenter.html">IPasswordBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -582,8 +632,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowPasswordBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowPasswordBox*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowPasswordBox_H_Services_Common_IDialogMessageService_System_String_System_Action_System_String__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_IPasswordBoxPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowPasswordBox(H.Services.Common.IDialogMessageService,System.String,System.Action{System.String},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.IPasswordBoxPresenter,System.Boolean})">
-  ShowPasswordBox(IDialogMessageService, string, Action&lt;string&gt;, Action&lt;IDialog&gt;, Func&lt;IPasswordBoxPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowPasswordBox_H_Services_Message_Dialog_IDialogMessageService_System_String_System_Action_System_String__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_IPasswordBoxPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowPasswordBox(H.Services.Message.Dialog.IDialogMessageService,System.String,System.Action{System.String},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.IPasswordBoxPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowPasswordBox(IDialogMessageService, string, Action&lt;string&gt;, Action&lt;IDialog&gt;, Func&lt;IPasswordBoxPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -591,20 +641,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowPasswordBox(this IDialogMessageService service, string password, Action&lt;string&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IPasswordBoxPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowPasswordBox(this IDialogMessageService service, string password, Action&lt;string&gt; sumitAction, Action&lt;IDialog&gt; builder = null, Func&lt;IPasswordBoxPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>password</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IPasswordBoxPresenter.html">IPasswordBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.IPasswordBoxPresenter.html">IPasswordBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -626,8 +676,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowTextBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowTextBox_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_ITextBoxPresenter__System_Action_H_Presenters_Common_ITextBoxPresenter__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_ITextBoxPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.ITextBoxPresenter},System.Action{H.Presenters.Common.ITextBoxPresenter},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.ITextBoxPresenter,System.Boolean})">
-  ShowTextBox(IDialogMessageService, Action&lt;ITextBoxPresenter&gt;, Action&lt;ITextBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;ITextBoxPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowTextBox_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_ITextBoxPresenter__System_Action_H_Presenters_Common_ITextBoxPresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_ITextBoxPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.ITextBoxPresenter},System.Action{H.Presenters.Common.ITextBoxPresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.ITextBoxPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowTextBox(IDialogMessageService, Action&lt;ITextBoxPresenter&gt;, Action&lt;ITextBoxPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;ITextBoxPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -635,20 +685,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowTextBox(this IDialogMessageService service, Action&lt;ITextBoxPresenter&gt; option, Action&lt;ITextBoxPresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;ITextBoxPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowTextBox(this IDialogMessageService service, Action&lt;ITextBoxPresenter&gt; option, Action&lt;ITextBoxPresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;ITextBoxPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.ITextBoxPresenter.html">ITextBoxPresenter</a>&gt;</dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.ITextBoxPresenter.html">ITextBoxPresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.ITextBoxPresenter.html">ITextBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.ITextBoxPresenter.html">ITextBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -670,8 +720,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowTextBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowTextBox_H_Services_Common_IDialogMessageService_System_String_System_Action_System_String__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_ITextBoxPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox(H.Services.Common.IDialogMessageService,System.String,System.Action{System.String},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.ITextBoxPresenter,System.Boolean})">
-  ShowTextBox(IDialogMessageService, string, Action&lt;string&gt;, Action&lt;IDialog&gt;, Func&lt;ITextBoxPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowTextBox_H_Services_Message_Dialog_IDialogMessageService_System_String_System_Action_System_String__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_ITextBoxPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox(H.Services.Message.Dialog.IDialogMessageService,System.String,System.Action{System.String},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.ITextBoxPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowTextBox(IDialogMessageService, string, Action&lt;string&gt;, Action&lt;IDialog&gt;, Func&lt;ITextBoxPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -679,20 +729,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowTextBox(this IDialogMessageService service, string text, Action&lt;string&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;ITextBoxPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowTextBox(this IDialogMessageService service, string text, Action&lt;string&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;ITextBoxPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.ITextBoxPresenter.html">ITextBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.ITextBoxPresenter.html">ITextBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -714,8 +764,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowTextBox_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowTextBox__1_H_Services_Common_IDialogMessageService___0_System_Action___0__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_ITextBoxPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox``1(H.Services.Common.IDialogMessageService,``0,System.Action{``0},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.ITextBoxPresenter,System.Boolean})">
-  ShowTextBox&lt;ResultT&gt;(IDialogMessageService, ResultT, Action&lt;ResultT&gt;, Action&lt;IDialog&gt;, Func&lt;ITextBoxPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowTextBox__1_H_Services_Message_Dialog_IDialogMessageService___0_System_Action___0__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_ITextBoxPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTextBox``1(H.Services.Message.Dialog.IDialogMessageService,``0,System.Action{``0},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.ITextBoxPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowTextBox&lt;ResultT&gt;(IDialogMessageService, ResultT, Action&lt;ResultT&gt;, Action&lt;IDialog&gt;, Func&lt;ITextBoxPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -723,20 +773,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowTextBox&lt;ResultT&gt;(this IDialogMessageService service, ResultT value, Action&lt;ResultT&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;ITextBoxPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowTextBox&lt;ResultT&gt;(this IDialogMessageService service, ResultT value, Action&lt;ResultT&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;ITextBoxPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>value</code> <span class="xref">ResultT</span></dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;ResultT&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.ITextBoxPresenter.html">ITextBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.ITextBoxPresenter.html">ITextBoxPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -763,8 +813,8 @@ Class DialogServiceExtension
 
   <a id="H_Presenters_Common_DialogServiceExtension_ShowTreeView_" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTreeView*"></a>
 
-  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowTreeView_H_Services_Common_IDialogMessageService_System_Action_H_Presenters_Common_ITreeViewPresenter__System_Action_H_Presenters_Common_ITreeViewPresenter__System_Action_H_Services_Common_IDialog__System_Func_H_Presenters_Common_ITreeViewPresenter_System_Boolean__" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTreeView(H.Services.Common.IDialogMessageService,System.Action{H.Presenters.Common.ITreeViewPresenter},System.Action{H.Presenters.Common.ITreeViewPresenter},System.Action{H.Services.Common.IDialog},System.Func{H.Presenters.Common.ITreeViewPresenter,System.Boolean})">
-  ShowTreeView(IDialogMessageService, Action&lt;ITreeViewPresenter&gt;, Action&lt;ITreeViewPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;ITreeViewPresenter, bool&gt;)
+  <h3 id="H_Presenters_Common_DialogServiceExtension_ShowTreeView_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Presenters_Common_ITreeViewPresenter__System_Action_H_Presenters_Common_ITreeViewPresenter__System_Action_H_Services_Message_Dialog_IDialog__System_Func_H_Presenters_Common_ITreeViewPresenter_System_Threading_Tasks_Task_System_Boolean___" data-uid="H.Presenters.Common.DialogServiceExtension.ShowTreeView(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Presenters.Common.ITreeViewPresenter},System.Action{H.Presenters.Common.ITreeViewPresenter},System.Action{H.Services.Message.Dialog.IDialog},System.Func{H.Presenters.Common.ITreeViewPresenter,System.Threading.Tasks.Task{System.Boolean}})">
+  ShowTreeView(IDialogMessageService, Action&lt;ITreeViewPresenter&gt;, Action&lt;ITreeViewPresenter&gt;, Action&lt;IDialog&gt;, Func&lt;ITreeViewPresenter, Task&lt;bool&gt;&gt;)
   
   </h3>
 
@@ -772,20 +822,20 @@ Class DialogServiceExtension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowTreeView(this IDialogMessageService service, Action&lt;ITreeViewPresenter&gt; option, Action&lt;ITreeViewPresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;ITreeViewPresenter, bool&gt; canSumit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowTreeView(this IDialogMessageService service, Action&lt;ITreeViewPresenter&gt; option, Action&lt;ITreeViewPresenter&gt; sumitAction = null, Action&lt;IDialog&gt; builder = null, Func&lt;ITreeViewPresenter, Task&lt;bool&gt;&gt; canSumit = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>service</code> <a class="xref" href="H.Services.Common.IDialogMessageService.html">IDialogMessageService</a></dt>
+    <dt><code>service</code> <a class="xref" href="H.Services.Message.Dialog.IDialogMessageService.html">IDialogMessageService</a></dt>
     <dd></dd>
     <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.ITreeViewPresenter.html">ITreeViewPresenter</a>&gt;</dt>
     <dd></dd>
     <dt><code>sumitAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Presenters.Common.ITreeViewPresenter.html">ITreeViewPresenter</a>&gt;</dt>
     <dd></dd>
-    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.ITreeViewPresenter.html">ITreeViewPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><code>canSumit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="H.Presenters.Common.ITreeViewPresenter.html">ITreeViewPresenter</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 

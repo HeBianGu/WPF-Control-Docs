@@ -4,6 +4,8 @@ items:
   commentId: N:H.Extensions.Geometry
   id: H.Extensions.Geometry
   children:
+  - H.Extensions.Geometry.BeizerExtension
+  - H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment
   - H.Extensions.Geometry.GemetrysSourceExtension
   - H.Extensions.Geometry.GeometryFactory
   - H.Extensions.Geometry.Geometrys
@@ -17,6 +19,34 @@ items:
   assemblies:
   - H.Extensions.Geometry
 references:
+- uid: H.Extensions.Geometry.BeizerExtension
+  commentId: T:H.Extensions.Geometry.BeizerExtension
+  href: H.Extensions.Geometry.BeizerExtension.html
+  name: BeizerExtension
+  nameWithType: BeizerExtension
+  fullName: H.Extensions.Geometry.BeizerExtension
+- uid: H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment
+  commentId: T:H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment
+  href: H.Extensions.Geometry.BeizerExtension.html
+  name: BeizerExtension.BeizerCurveSegment
+  nameWithType: BeizerExtension.BeizerCurveSegment
+  fullName: H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment
+  spec.csharp:
+  - uid: H.Extensions.Geometry.BeizerExtension
+    name: BeizerExtension
+    href: H.Extensions.Geometry.BeizerExtension.html
+  - name: .
+  - uid: H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment
+    name: BeizerCurveSegment
+    href: H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment.html
+  spec.vb:
+  - uid: H.Extensions.Geometry.BeizerExtension
+    name: BeizerExtension
+    href: H.Extensions.Geometry.BeizerExtension.html
+  - name: .
+  - uid: H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment
+    name: BeizerCurveSegment
+    href: H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment.html
 - uid: H.Extensions.Geometry.GeometryFactory
   commentId: T:H.Extensions.Geometry.GeometryFactory
   href: H.Extensions.Geometry.GeometryFactory.html

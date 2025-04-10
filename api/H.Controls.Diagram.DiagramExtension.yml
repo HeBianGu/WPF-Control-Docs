@@ -7,6 +7,7 @@ items:
   children:
   - H.Controls.Diagram.DiagramExtension.AligmentNodes(H.Controls.Diagram.Diagram)
   - H.Controls.Diagram.DiagramExtension.LinkNodes(H.Controls.Diagram.Diagram,H.Controls.Diagram.Parts.Node,H.Controls.Diagram.Parts.Node,System.Windows.Controls.Dock)
+  - H.Controls.Diagram.DiagramExtension.ZoomToFit(H.Controls.Diagram.IDiagram,H.Controls.Diagram.Parts.Base.Part[])
   langs:
   - csharp
   - vb
@@ -16,7 +17,7 @@ items:
   type: Class
   source:
     id: DiagramExtension
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\DiagramExtension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\DiagramExtension.cs
     startLine: 126
   assemblies:
   - H.Controls.Diagram
@@ -48,7 +49,7 @@ items:
   type: Method
   source:
     id: AligmentNodes
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\DiagramExtension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\DiagramExtension.cs
     startLine: 128
   assemblies:
   - H.Controls.Diagram
@@ -74,7 +75,7 @@ items:
   type: Method
   source:
     id: LinkNodes
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\DiagramExtension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\DiagramExtension.cs
     startLine: 133
   assemblies:
   - H.Controls.Diagram
@@ -92,6 +93,37 @@ items:
       type: System.Windows.Controls.Dock
     content.vb: Public Shared Sub LinkNodes(diagram As Diagram, from As Node, [to] As Node, dock As Dock = Dock.Bottom)
   overload: H.Controls.Diagram.DiagramExtension.LinkNodes*
+- uid: H.Controls.Diagram.DiagramExtension.ZoomToFit(H.Controls.Diagram.IDiagram,H.Controls.Diagram.Parts.Base.Part[])
+  commentId: M:H.Controls.Diagram.DiagramExtension.ZoomToFit(H.Controls.Diagram.IDiagram,H.Controls.Diagram.Parts.Base.Part[])
+  id: ZoomToFit(H.Controls.Diagram.IDiagram,H.Controls.Diagram.Parts.Base.Part[])
+  isExtensionMethod: true
+  parent: H.Controls.Diagram.DiagramExtension
+  langs:
+  - csharp
+  - vb
+  name: ZoomToFit(IDiagram, params Part[])
+  nameWithType: DiagramExtension.ZoomToFit(IDiagram, params Part[])
+  fullName: H.Controls.Diagram.DiagramExtension.ZoomToFit(H.Controls.Diagram.IDiagram, params H.Controls.Diagram.Parts.Base.Part[])
+  type: Method
+  source:
+    id: ZoomToFit
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.Diagram\DiagramExtension.cs
+    startLine: 146
+  assemblies:
+  - H.Controls.Diagram
+  namespace: H.Controls.Diagram
+  syntax:
+    content: public static void ZoomToFit(this IDiagram diagram, params Part[] parts)
+    parameters:
+    - id: diagram
+      type: H.Controls.Diagram.IDiagram
+    - id: parts
+      type: H.Controls.Diagram.Parts.Base.Part[]
+    content.vb: Public Shared Sub ZoomToFit(diagram As IDiagram, ParamArray parts As Part())
+  overload: H.Controls.Diagram.DiagramExtension.ZoomToFit*
+  nameWithType.vb: DiagramExtension.ZoomToFit(IDiagram, ParamArray Part())
+  fullName.vb: H.Controls.Diagram.DiagramExtension.ZoomToFit(H.Controls.Diagram.IDiagram, ParamArray H.Controls.Diagram.Parts.Base.Part())
+  name.vb: ZoomToFit(IDiagram, ParamArray Part())
 references:
 - uid: H.Controls.Diagram
   commentId: N:H.Controls.Diagram
@@ -468,3 +500,37 @@ references:
     name: Controls
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.controls
+- uid: H.Controls.Diagram.DiagramExtension.ZoomToFit*
+  commentId: Overload:H.Controls.Diagram.DiagramExtension.ZoomToFit
+  href: H.Controls.Diagram.DiagramExtension.html#H_Controls_Diagram_DiagramExtension_ZoomToFit_H_Controls_Diagram_IDiagram_H_Controls_Diagram_Parts_Base_Part___
+  name: ZoomToFit
+  nameWithType: DiagramExtension.ZoomToFit
+  fullName: H.Controls.Diagram.DiagramExtension.ZoomToFit
+- uid: H.Controls.Diagram.IDiagram
+  commentId: T:H.Controls.Diagram.IDiagram
+  parent: H.Controls.Diagram
+  href: H.Controls.Diagram.IDiagram.html
+  name: IDiagram
+  nameWithType: IDiagram
+  fullName: H.Controls.Diagram.IDiagram
+- uid: H.Controls.Diagram.Parts.Base.Part[]
+  isExternal: true
+  href: H.Controls.Diagram.Parts.Base.Part.html
+  name: Part[]
+  nameWithType: Part[]
+  fullName: H.Controls.Diagram.Parts.Base.Part[]
+  nameWithType.vb: Part()
+  fullName.vb: H.Controls.Diagram.Parts.Base.Part()
+  name.vb: Part()
+  spec.csharp:
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    href: H.Controls.Diagram.Parts.Base.Part.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: H.Controls.Diagram.Parts.Base.Part
+    name: Part
+    href: H.Controls.Diagram.Parts.Base.Part.html
+  - name: (
+  - name: )

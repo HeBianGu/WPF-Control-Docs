@@ -18,8 +18,10 @@ items:
   - H.Controls.Diagram.Presenters.OpenCV.Base.IOpenCVImageNodeData
   - H.Controls.Diagram.Presenters.OpenCV.Base.IOpenCVNodeData
   - H.Controls.Diagram.Presenters.OpenCV.Base.IOtherOpenCVNodeData
+  - H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathable
+  - H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathableStartNodeData
   - H.Controls.Diagram.Presenters.OpenCV.Base.ISrcImageNodeData
-  - H.Controls.Diagram.Presenters.OpenCV.Base.IVideoCaptureImageImportNodeData
+  - H.Controls.Diagram.Presenters.OpenCV.Base.IVideoNodeData
   - H.Controls.Diagram.Presenters.OpenCV.Base.IYolovOpenCVNodeData
   - H.Controls.Diagram.Presenters.OpenCV.Base.IfConditionNodeDataBase
   - H.Controls.Diagram.Presenters.OpenCV.Base.MLOpenCVNodeDataBase
@@ -32,7 +34,7 @@ items:
   - H.Controls.Diagram.Presenters.OpenCV.Base.OtherOpenCVNodeDataBase
   - H.Controls.Diagram.Presenters.OpenCV.Base.PreviewType
   - H.Controls.Diagram.Presenters.OpenCV.Base.SrcImageNodeDataBase
-  - H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureImageImportNodeDataBase
+  - H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureSrcNodeDataBase
   - H.Controls.Diagram.Presenters.OpenCV.Base.YolovOpenCVNodeDataBase
   langs:
   - csharp
@@ -155,13 +157,27 @@ references:
   name: IOtherOpenCVNodeData
   nameWithType: IOtherOpenCVNodeData
   fullName: H.Controls.Diagram.Presenters.OpenCV.Base.IOtherOpenCVNodeData
-- uid: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoCaptureImageImportNodeData
-  commentId: T:H.Controls.Diagram.Presenters.OpenCV.Base.IVideoCaptureImageImportNodeData
+- uid: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathable
+  commentId: T:H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathable
   parent: H.Controls.Diagram.Presenters.OpenCV.Base
-  href: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoCaptureImageImportNodeData.html
-  name: IVideoCaptureImageImportNodeData
-  nameWithType: IVideoCaptureImageImportNodeData
-  fullName: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoCaptureImageImportNodeData
+  href: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathable.html
+  name: ISrcFilePathable
+  nameWithType: ISrcFilePathable
+  fullName: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathable
+- uid: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathableStartNodeData
+  commentId: T:H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathableStartNodeData
+  parent: H.Controls.Diagram.Presenters.OpenCV.Base
+  href: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathableStartNodeData.html
+  name: ISrcFilePathableStartNodeData
+  nameWithType: ISrcFilePathableStartNodeData
+  fullName: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathableStartNodeData
+- uid: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoNodeData
+  commentId: T:H.Controls.Diagram.Presenters.OpenCV.Base.IVideoNodeData
+  parent: H.Controls.Diagram.Presenters.OpenCV.Base
+  href: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoNodeData.html
+  name: IVideoNodeData
+  nameWithType: IVideoNodeData
+  fullName: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoNodeData
 - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IYolovOpenCVNodeData
   commentId: T:H.Controls.Diagram.Presenters.OpenCV.Base.IYolovOpenCVNodeData
   parent: H.Controls.Diagram.Presenters.OpenCV.Base
@@ -239,13 +255,13 @@ references:
   name: SrcImageNodeDataBase
   nameWithType: SrcImageNodeDataBase
   fullName: H.Controls.Diagram.Presenters.OpenCV.Base.SrcImageNodeDataBase
-- uid: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureImageImportNodeDataBase
-  commentId: T:H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureImageImportNodeDataBase
+- uid: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureSrcNodeDataBase
+  commentId: T:H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureSrcNodeDataBase
   parent: H.Controls.Diagram.Presenters.OpenCV.Base
-  href: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureImageImportNodeDataBase.html
-  name: VideoCaptureImageImportNodeDataBase
-  nameWithType: VideoCaptureImageImportNodeDataBase
-  fullName: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureImageImportNodeDataBase
+  href: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureSrcNodeDataBase.html
+  name: VideoCaptureSrcNodeDataBase
+  nameWithType: VideoCaptureSrcNodeDataBase
+  fullName: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureSrcNodeDataBase
 - uid: H.Controls.Diagram.Presenters.OpenCV.Base.YolovOpenCVNodeDataBase
   commentId: T:H.Controls.Diagram.Presenters.OpenCV.Base.YolovOpenCVNodeDataBase
   parent: H.Controls.Diagram.Presenters.OpenCV.Base

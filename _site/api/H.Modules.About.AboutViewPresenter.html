@@ -103,7 +103,7 @@ Class AboutViewPresenter
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Icon(&quot;&quot;)]
 [Display(Name = &quot;关于&quot;, GroupName = &quot;系统设置&quot;, Description = &quot;这是一个关于页面的信息&quot;)]
-public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter&gt;, IAboutViewPresenter, ITitleable, IAboutViewPresenterOption, IIconable</code></pre>
+public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter&gt;, IAboutViewPresenter</code></pre>
   </div>
 
 
@@ -113,7 +113,7 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="H.Iocable.Ioc-2.html">Ioc</a>&lt;<a class="xref" href="H.Modules.About.AboutViewPresenter.html">AboutViewPresenter</a>, <a class="xref" href="H.Services.Common.IAboutViewPresenter.html">IAboutViewPresenter</a>&gt;</div>
+      <div><a class="xref" href="H.Iocable.Ioc-2.html">Ioc</a>&lt;<a class="xref" href="H.Modules.About.AboutViewPresenter.html">AboutViewPresenter</a>, <a class="xref" href="H.Services.Common.About.IAboutViewPresenter.html">IAboutViewPresenter</a>&gt;</div>
       <div><span class="xref">AboutViewPresenter</span></div>
     </dd>
   </dl>
@@ -121,10 +121,7 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="H.Services.Common.IAboutViewPresenter.html">IAboutViewPresenter</a></div>
-      <div><a class="xref" href="H.Services.Common.ITitleable.html">ITitleable</a></div>
-      <div><a class="xref" href="H.Modules.About.IAboutViewPresenterOption.html">IAboutViewPresenterOption</a></div>
-      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Services.Common.About.IAboutViewPresenter.html">IAboutViewPresenter</a></div>
     </dd>
   </dl>
 
@@ -162,10 +159,10 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -174,7 +171,40 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -186,39 +216,6 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
-  </div>
-  <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
   </div>
   <div>
@@ -228,565 +225,6 @@ public class AboutViewPresenter : Ioc&lt;AboutViewPresenter, IAboutViewPresenter
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, IList, Func&lt;IList&gt;, Action, DispatcherPriority)</a>
   </div>
   </dd></dl>
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="H_Modules_About_AboutViewPresenter__ctor_" data-uid="H.Modules.About.AboutViewPresenter.#ctor*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter__ctor" data-uid="H.Modules.About.AboutViewPresenter.#ctor">
-  AboutViewPresenter()
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AboutViewPresenter()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Agreement_" data-uid="H.Modules.About.AboutViewPresenter.Agreement*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Agreement" data-uid="H.Modules.About.AboutViewPresenter.Agreement">
-  Agreement
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;服务协议&quot;)]
-public string Agreement { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_AssemblyVersion_" data-uid="H.Modules.About.AboutViewPresenter.AssemblyVersion*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_AssemblyVersion" data-uid="H.Modules.About.AboutViewPresenter.AssemblyVersion">
-  AssemblyVersion
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;程序集版本&quot;, Description = &quot;程序集的版本号，用于标识程序集的唯一性和兼容性&quot;)]
-public string AssemblyVersion { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Company_" data-uid="H.Modules.About.AboutViewPresenter.Company*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Company" data-uid="H.Modules.About.AboutViewPresenter.Company">
-  Company
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;公司信息&quot;)]
-public string Company { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Configuration_" data-uid="H.Modules.About.AboutViewPresenter.Configuration*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Configuration" data-uid="H.Modules.About.AboutViewPresenter.Configuration">
-  Configuration
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;产品配置&quot;)]
-public string Configuration { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Contact_" data-uid="H.Modules.About.AboutViewPresenter.Contact*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Contact" data-uid="H.Modules.About.AboutViewPresenter.Contact">
-  Contact
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;联系方式&quot;)]
-public string Contact { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Copyright_" data-uid="H.Modules.About.AboutViewPresenter.Copyright*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Copyright" data-uid="H.Modules.About.AboutViewPresenter.Copyright">
-  Copyright
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;许可证书&quot;)]
-public string Copyright { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Culture_" data-uid="H.Modules.About.AboutViewPresenter.Culture*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Culture" data-uid="H.Modules.About.AboutViewPresenter.Culture">
-  Culture
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;产品区域&quot;)]
-public string Culture { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_FileVersion_" data-uid="H.Modules.About.AboutViewPresenter.FileVersion*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_FileVersion" data-uid="H.Modules.About.AboutViewPresenter.FileVersion">
-  FileVersion
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;文件版本&quot;)]
-public string FileVersion { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Icon_" data-uid="H.Modules.About.AboutViewPresenter.Icon*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Icon" data-uid="H.Modules.About.AboutViewPresenter.Icon">
-  Icon
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Icon { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Privacy_" data-uid="H.Modules.About.AboutViewPresenter.Privacy*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Privacy" data-uid="H.Modules.About.AboutViewPresenter.Privacy">
-  Privacy
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;隐私政策&quot;)]
-public string Privacy { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_ProductDescription_" data-uid="H.Modules.About.AboutViewPresenter.ProductDescription*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_ProductDescription" data-uid="H.Modules.About.AboutViewPresenter.ProductDescription">
-  ProductDescription
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;产品信息&quot;)]
-public string ProductDescription { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_ProductName_" data-uid="H.Modules.About.AboutViewPresenter.ProductName*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_ProductName" data-uid="H.Modules.About.AboutViewPresenter.ProductName">
-  ProductName
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;产品名称&quot;)]
-public string ProductName { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Title_" data-uid="H.Modules.About.AboutViewPresenter.Title*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Title" data-uid="H.Modules.About.AboutViewPresenter.Title">
-  Title
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>获取或设置标题。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Trademark_" data-uid="H.Modules.About.AboutViewPresenter.Trademark*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Trademark" data-uid="H.Modules.About.AboutViewPresenter.Trademark">
-  Trademark
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;产品商标&quot;)]
-public string Trademark { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_Version_" data-uid="H.Modules.About.AboutViewPresenter.Version*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_Version" data-uid="H.Modules.About.AboutViewPresenter.Version">
-  Version
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;版本号&quot;, Description = &quot;文件的版本号，通常用于标识文件的发布版本&quot;)]
-public string Version { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Modules_About_AboutViewPresenter_WebSet_" data-uid="H.Modules.About.AboutViewPresenter.WebSet*"></a>
-
-  <h3 id="H_Modules_About_AboutViewPresenter_WebSet" data-uid="H.Modules.About.AboutViewPresenter.WebSet">
-  WebSet
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[Display(Name = &quot;官方网站&quot;)]
-public string WebSet { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
 
 
 

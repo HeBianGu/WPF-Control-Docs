@@ -16,6 +16,7 @@ items:
   - H.Controls.FavoriteBox.FavoriteTree
   - H.Controls.FavoriteBox.FavoritesPresenter
   - H.Controls.FavoriteBox.IFavoriteItem
+  - H.Controls.FavoriteBox.IFavoriteOptions
   - H.Controls.FavoriteBox.IFavoriteService
   - H.Controls.FavoriteBox.InsertFavoriteCommand
   - H.Controls.FavoriteBox.IocFavoriteService
@@ -30,6 +31,36 @@ items:
   assemblies:
   - H.Controls.FavoriteBox
 references:
+- uid: H.Controls.FavoriteBox.CreateFavoriteCommand
+  commentId: T:H.Controls.FavoriteBox.CreateFavoriteCommand
+  href: H.Controls.FavoriteBox.CreateFavoriteCommand.html
+  name: CreateFavoriteCommand
+  nameWithType: CreateFavoriteCommand
+  fullName: H.Controls.FavoriteBox.CreateFavoriteCommand
+- uid: H.Controls.FavoriteBox.DeleteFavoriteCommand
+  commentId: T:H.Controls.FavoriteBox.DeleteFavoriteCommand
+  href: H.Controls.FavoriteBox.DeleteFavoriteCommand.html
+  name: DeleteFavoriteCommand
+  nameWithType: DeleteFavoriteCommand
+  fullName: H.Controls.FavoriteBox.DeleteFavoriteCommand
+- uid: H.Controls.FavoriteBox.EditFavoriteCommand
+  commentId: T:H.Controls.FavoriteBox.EditFavoriteCommand
+  href: H.Controls.FavoriteBox.EditFavoriteCommand.html
+  name: EditFavoriteCommand
+  nameWithType: EditFavoriteCommand
+  fullName: H.Controls.FavoriteBox.EditFavoriteCommand
+- uid: H.Controls.FavoriteBox.InsertFavoriteCommand
+  commentId: T:H.Controls.FavoriteBox.InsertFavoriteCommand
+  href: H.Controls.FavoriteBox.InsertFavoriteCommand.html
+  name: InsertFavoriteCommand
+  nameWithType: InsertFavoriteCommand
+  fullName: H.Controls.FavoriteBox.InsertFavoriteCommand
+- uid: H.Controls.FavoriteBox.ManageFavoriteCommand
+  commentId: T:H.Controls.FavoriteBox.ManageFavoriteCommand
+  href: H.Controls.FavoriteBox.ManageFavoriteCommand.html
+  name: ManageFavoriteCommand
+  nameWithType: ManageFavoriteCommand
+  fullName: H.Controls.FavoriteBox.ManageFavoriteCommand
 - uid: H.Controls.FavoriteBox.FavoriteBox
   commentId: T:H.Controls.FavoriteBox.FavoriteBox
   href: H.Controls.FavoriteBox.FavoriteBox.html
@@ -61,36 +92,6 @@ references:
   name: FavoritesPresenter
   nameWithType: FavoritesPresenter
   fullName: H.Controls.FavoriteBox.FavoritesPresenter
-- uid: H.Controls.FavoriteBox.CreateFavoriteCommand
-  commentId: T:H.Controls.FavoriteBox.CreateFavoriteCommand
-  href: H.Controls.FavoriteBox.CreateFavoriteCommand.html
-  name: CreateFavoriteCommand
-  nameWithType: CreateFavoriteCommand
-  fullName: H.Controls.FavoriteBox.CreateFavoriteCommand
-- uid: H.Controls.FavoriteBox.DeleteFavoriteCommand
-  commentId: T:H.Controls.FavoriteBox.DeleteFavoriteCommand
-  href: H.Controls.FavoriteBox.DeleteFavoriteCommand.html
-  name: DeleteFavoriteCommand
-  nameWithType: DeleteFavoriteCommand
-  fullName: H.Controls.FavoriteBox.DeleteFavoriteCommand
-- uid: H.Controls.FavoriteBox.EditFavoriteCommand
-  commentId: T:H.Controls.FavoriteBox.EditFavoriteCommand
-  href: H.Controls.FavoriteBox.EditFavoriteCommand.html
-  name: EditFavoriteCommand
-  nameWithType: EditFavoriteCommand
-  fullName: H.Controls.FavoriteBox.EditFavoriteCommand
-- uid: H.Controls.FavoriteBox.InsertFavoriteCommand
-  commentId: T:H.Controls.FavoriteBox.InsertFavoriteCommand
-  href: H.Controls.FavoriteBox.InsertFavoriteCommand.html
-  name: InsertFavoriteCommand
-  nameWithType: InsertFavoriteCommand
-  fullName: H.Controls.FavoriteBox.InsertFavoriteCommand
-- uid: H.Controls.FavoriteBox.ManageFavoriteCommand
-  commentId: T:H.Controls.FavoriteBox.ManageFavoriteCommand
-  href: H.Controls.FavoriteBox.ManageFavoriteCommand.html
-  name: ManageFavoriteCommand
-  nameWithType: ManageFavoriteCommand
-  fullName: H.Controls.FavoriteBox.ManageFavoriteCommand
 - uid: H.Controls.FavoriteBox.FavoriteOptions
   commentId: T:H.Controls.FavoriteBox.FavoriteOptions
   href: H.Controls.FavoriteBox.FavoriteOptions.html
@@ -116,6 +117,13 @@ references:
   name: IFavoriteItem
   nameWithType: IFavoriteItem
   fullName: H.Controls.FavoriteBox.IFavoriteItem
+- uid: H.Controls.FavoriteBox.IFavoriteOptions
+  commentId: T:H.Controls.FavoriteBox.IFavoriteOptions
+  parent: H.Controls.FavoriteBox
+  href: H.Controls.FavoriteBox.IFavoriteOptions.html
+  name: IFavoriteOptions
+  nameWithType: IFavoriteOptions
+  fullName: H.Controls.FavoriteBox.IFavoriteOptions
 - uid: H.Controls.FavoriteBox.IFavoriteService
   commentId: T:H.Controls.FavoriteBox.IFavoriteService
   parent: H.Controls.FavoriteBox

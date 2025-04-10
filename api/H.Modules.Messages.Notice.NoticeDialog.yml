@@ -5,13 +5,13 @@ items:
   id: NoticeDialog
   parent: H.Modules.Messages.Notice
   children:
-  - H.Modules.Messages.Notice.NoticeDialog.Show(H.Services.Common.INoticeItem)
+  - H.Modules.Messages.Notice.NoticeDialog.Show(H.Services.Message.Notice.INoticeItem)
   - H.Modules.Messages.Notice.NoticeDialog.ShowDialog(System.String)
   - H.Modules.Messages.Notice.NoticeDialog.ShowError(System.String)
   - H.Modules.Messages.Notice.NoticeDialog.ShowFatal(System.String)
   - H.Modules.Messages.Notice.NoticeDialog.ShowInfo(System.String)
-  - H.Modules.Messages.Notice.NoticeDialog.ShowProgress``1(System.Func{H.Services.Common.IPercentNoticeItem,``0})
-  - H.Modules.Messages.Notice.NoticeDialog.ShowString``1(System.Func{H.Services.Common.INoticeItem,``0})
+  - H.Modules.Messages.Notice.NoticeDialog.ShowProgress``1(System.Func{H.Services.Message.Notice.IPercentNoticeItem,``0})
+  - H.Modules.Messages.Notice.NoticeDialog.ShowString``1(System.Func{H.Services.Message.Notice.INoticeItem,``0})
   - H.Modules.Messages.Notice.NoticeDialog.ShowSuccess(System.String)
   - H.Modules.Messages.Notice.NoticeDialog.ShowWarn(System.String)
   langs:
@@ -23,8 +23,8 @@ items:
   type: Class
   source:
     id: NoticeDialog
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 8
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 6
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -54,8 +54,8 @@ items:
   type: Method
   source:
     id: ShowInfo
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 11
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 9
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -82,8 +82,8 @@ items:
   type: Method
   source:
     id: ShowError
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 15
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 13
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -110,8 +110,8 @@ items:
   type: Method
   source:
     id: ShowWarn
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 19
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 17
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -138,8 +138,8 @@ items:
   type: Method
   source:
     id: ShowSuccess
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 23
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 21
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -166,8 +166,8 @@ items:
   type: Method
   source:
     id: ShowFatal
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 27
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 25
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -194,8 +194,8 @@ items:
   type: Method
   source:
     id: ShowDialog
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 32
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 30
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -211,21 +211,21 @@ items:
   nameWithType.vb: NoticeDialog.ShowDialog(String)
   fullName.vb: H.Modules.Messages.Notice.NoticeDialog.ShowDialog(String)
   name.vb: ShowDialog(String)
-- uid: H.Modules.Messages.Notice.NoticeDialog.ShowProgress``1(System.Func{H.Services.Common.IPercentNoticeItem,``0})
-  commentId: M:H.Modules.Messages.Notice.NoticeDialog.ShowProgress``1(System.Func{H.Services.Common.IPercentNoticeItem,``0})
-  id: ShowProgress``1(System.Func{H.Services.Common.IPercentNoticeItem,``0})
+- uid: H.Modules.Messages.Notice.NoticeDialog.ShowProgress``1(System.Func{H.Services.Message.Notice.IPercentNoticeItem,``0})
+  commentId: M:H.Modules.Messages.Notice.NoticeDialog.ShowProgress``1(System.Func{H.Services.Message.Notice.IPercentNoticeItem,``0})
+  id: ShowProgress``1(System.Func{H.Services.Message.Notice.IPercentNoticeItem,``0})
   parent: H.Modules.Messages.Notice.NoticeDialog
   langs:
   - csharp
   - vb
   name: ShowProgress<T>(Func<IPercentNoticeItem, T>)
   nameWithType: NoticeDialog.ShowProgress<T>(Func<IPercentNoticeItem, T>)
-  fullName: H.Modules.Messages.Notice.NoticeDialog.ShowProgress<T>(System.Func<H.Services.Common.IPercentNoticeItem, T>)
+  fullName: H.Modules.Messages.Notice.NoticeDialog.ShowProgress<T>(System.Func<H.Services.Message.Notice.IPercentNoticeItem, T>)
   type: Method
   source:
     id: ShowProgress
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 36
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 34
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -233,7 +233,7 @@ items:
     content: public static Task<T> ShowProgress<T>(Func<IPercentNoticeItem, T> action)
     parameters:
     - id: action
-      type: System.Func{H.Services.Common.IPercentNoticeItem,{T}}
+      type: System.Func{H.Services.Message.Notice.IPercentNoticeItem,{T}}
     typeParameters:
     - id: T
     return:
@@ -241,23 +241,23 @@ items:
     content.vb: Public Shared Function ShowProgress(Of T)(action As Func(Of IPercentNoticeItem, T)) As Task(Of T)
   overload: H.Modules.Messages.Notice.NoticeDialog.ShowProgress*
   nameWithType.vb: NoticeDialog.ShowProgress(Of T)(Func(Of IPercentNoticeItem, T))
-  fullName.vb: H.Modules.Messages.Notice.NoticeDialog.ShowProgress(Of T)(System.Func(Of H.Services.Common.IPercentNoticeItem, T))
+  fullName.vb: H.Modules.Messages.Notice.NoticeDialog.ShowProgress(Of T)(System.Func(Of H.Services.Message.Notice.IPercentNoticeItem, T))
   name.vb: ShowProgress(Of T)(Func(Of IPercentNoticeItem, T))
-- uid: H.Modules.Messages.Notice.NoticeDialog.ShowString``1(System.Func{H.Services.Common.INoticeItem,``0})
-  commentId: M:H.Modules.Messages.Notice.NoticeDialog.ShowString``1(System.Func{H.Services.Common.INoticeItem,``0})
-  id: ShowString``1(System.Func{H.Services.Common.INoticeItem,``0})
+- uid: H.Modules.Messages.Notice.NoticeDialog.ShowString``1(System.Func{H.Services.Message.Notice.INoticeItem,``0})
+  commentId: M:H.Modules.Messages.Notice.NoticeDialog.ShowString``1(System.Func{H.Services.Message.Notice.INoticeItem,``0})
+  id: ShowString``1(System.Func{H.Services.Message.Notice.INoticeItem,``0})
   parent: H.Modules.Messages.Notice.NoticeDialog
   langs:
   - csharp
   - vb
   name: ShowString<T>(Func<INoticeItem, T>)
   nameWithType: NoticeDialog.ShowString<T>(Func<INoticeItem, T>)
-  fullName: H.Modules.Messages.Notice.NoticeDialog.ShowString<T>(System.Func<H.Services.Common.INoticeItem, T>)
+  fullName: H.Modules.Messages.Notice.NoticeDialog.ShowString<T>(System.Func<H.Services.Message.Notice.INoticeItem, T>)
   type: Method
   source:
     id: ShowString
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 40
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 38
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -265,7 +265,7 @@ items:
     content: public static Task<T> ShowString<T>(Func<INoticeItem, T> action)
     parameters:
     - id: action
-      type: System.Func{H.Services.Common.INoticeItem,{T}}
+      type: System.Func{H.Services.Message.Notice.INoticeItem,{T}}
     typeParameters:
     - id: T
     return:
@@ -273,23 +273,23 @@ items:
     content.vb: Public Shared Function ShowString(Of T)(action As Func(Of INoticeItem, T)) As Task(Of T)
   overload: H.Modules.Messages.Notice.NoticeDialog.ShowString*
   nameWithType.vb: NoticeDialog.ShowString(Of T)(Func(Of INoticeItem, T))
-  fullName.vb: H.Modules.Messages.Notice.NoticeDialog.ShowString(Of T)(System.Func(Of H.Services.Common.INoticeItem, T))
+  fullName.vb: H.Modules.Messages.Notice.NoticeDialog.ShowString(Of T)(System.Func(Of H.Services.Message.Notice.INoticeItem, T))
   name.vb: ShowString(Of T)(Func(Of INoticeItem, T))
-- uid: H.Modules.Messages.Notice.NoticeDialog.Show(H.Services.Common.INoticeItem)
-  commentId: M:H.Modules.Messages.Notice.NoticeDialog.Show(H.Services.Common.INoticeItem)
-  id: Show(H.Services.Common.INoticeItem)
+- uid: H.Modules.Messages.Notice.NoticeDialog.Show(H.Services.Message.Notice.INoticeItem)
+  commentId: M:H.Modules.Messages.Notice.NoticeDialog.Show(H.Services.Message.Notice.INoticeItem)
+  id: Show(H.Services.Message.Notice.INoticeItem)
   parent: H.Modules.Messages.Notice.NoticeDialog
   langs:
   - csharp
   - vb
   name: Show(INoticeItem)
   nameWithType: NoticeDialog.Show(INoticeItem)
-  fullName: H.Modules.Messages.Notice.NoticeDialog.Show(H.Services.Common.INoticeItem)
+  fullName: H.Modules.Messages.Notice.NoticeDialog.Show(H.Services.Message.Notice.INoticeItem)
   type: Method
   source:
     id: Show
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
-    startLine: 44
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Notice\NoticeDialog.cs
+    startLine: 42
   assemblies:
   - H.Modules.Messages.Notice
   namespace: H.Modules.Messages.Notice
@@ -297,7 +297,7 @@ items:
     content: public static void Show(INoticeItem message)
     parameters:
     - id: message
-      type: H.Services.Common.INoticeItem
+      type: H.Services.Message.Notice.INoticeItem
     content.vb: Public Shared Sub Show(message As INoticeItem)
   overload: H.Modules.Messages.Notice.NoticeDialog.Show*
 references:
@@ -726,20 +726,20 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
 - uid: H.Modules.Messages.Notice.NoticeDialog.ShowProgress*
   commentId: Overload:H.Modules.Messages.Notice.NoticeDialog.ShowProgress
-  href: H.Modules.Messages.Notice.NoticeDialog.html#H_Modules_Messages_Notice_NoticeDialog_ShowProgress__1_System_Func_H_Services_Common_IPercentNoticeItem___0__
+  href: H.Modules.Messages.Notice.NoticeDialog.html#H_Modules_Messages_Notice_NoticeDialog_ShowProgress__1_System_Func_H_Services_Message_Notice_IPercentNoticeItem___0__
   name: ShowProgress
   nameWithType: NoticeDialog.ShowProgress
   fullName: H.Modules.Messages.Notice.NoticeDialog.ShowProgress
-- uid: System.Func{H.Services.Common.IPercentNoticeItem,{T}}
-  commentId: T:System.Func{H.Services.Common.IPercentNoticeItem,``0}
+- uid: System.Func{H.Services.Message.Notice.IPercentNoticeItem,{T}}
+  commentId: T:System.Func{H.Services.Message.Notice.IPercentNoticeItem,``0}
   parent: System
   definition: System.Func`2
   href: https://learn.microsoft.com/dotnet/api/system.func-2
   name: Func<IPercentNoticeItem, T>
   nameWithType: Func<IPercentNoticeItem, T>
-  fullName: System.Func<H.Services.Common.IPercentNoticeItem, T>
+  fullName: System.Func<H.Services.Message.Notice.IPercentNoticeItem, T>
   nameWithType.vb: Func(Of IPercentNoticeItem, T)
-  fullName.vb: System.Func(Of H.Services.Common.IPercentNoticeItem, T)
+  fullName.vb: System.Func(Of H.Services.Message.Notice.IPercentNoticeItem, T)
   name.vb: Func(Of IPercentNoticeItem, T)
   spec.csharp:
   - uid: System.Func`2
@@ -747,9 +747,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.func-2
   - name: <
-  - uid: H.Services.Common.IPercentNoticeItem
+  - uid: H.Services.Message.Notice.IPercentNoticeItem
     name: IPercentNoticeItem
-    href: H.Services.Common.IPercentNoticeItem.html
+    href: H.Services.Message.Notice.IPercentNoticeItem.html
   - name: ','
   - name: " "
   - name: T
@@ -762,15 +762,15 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.IPercentNoticeItem
+  - uid: H.Services.Message.Notice.IPercentNoticeItem
     name: IPercentNoticeItem
-    href: H.Services.Common.IPercentNoticeItem.html
+    href: H.Services.Message.Notice.IPercentNoticeItem.html
   - name: ','
   - name: " "
   - name: T
   - name: )
 - uid: System.Threading.Tasks.Task{{T}}
-  commentId: T:System.Threading.Tasks.Task{``1}
+  commentId: T:System.Threading.Tasks.Task{``0}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
@@ -834,20 +834,20 @@ references:
   - name: )
 - uid: H.Modules.Messages.Notice.NoticeDialog.ShowString*
   commentId: Overload:H.Modules.Messages.Notice.NoticeDialog.ShowString
-  href: H.Modules.Messages.Notice.NoticeDialog.html#H_Modules_Messages_Notice_NoticeDialog_ShowString__1_System_Func_H_Services_Common_INoticeItem___0__
+  href: H.Modules.Messages.Notice.NoticeDialog.html#H_Modules_Messages_Notice_NoticeDialog_ShowString__1_System_Func_H_Services_Message_Notice_INoticeItem___0__
   name: ShowString
   nameWithType: NoticeDialog.ShowString
   fullName: H.Modules.Messages.Notice.NoticeDialog.ShowString
-- uid: System.Func{H.Services.Common.INoticeItem,{T}}
-  commentId: T:System.Func{H.Services.Common.INoticeItem,``0}
+- uid: System.Func{H.Services.Message.Notice.INoticeItem,{T}}
+  commentId: T:System.Func{H.Services.Message.Notice.INoticeItem,``0}
   parent: System
   definition: System.Func`2
   href: https://learn.microsoft.com/dotnet/api/system.func-2
   name: Func<INoticeItem, T>
   nameWithType: Func<INoticeItem, T>
-  fullName: System.Func<H.Services.Common.INoticeItem, T>
+  fullName: System.Func<H.Services.Message.Notice.INoticeItem, T>
   nameWithType.vb: Func(Of INoticeItem, T)
-  fullName.vb: System.Func(Of H.Services.Common.INoticeItem, T)
+  fullName.vb: System.Func(Of H.Services.Message.Notice.INoticeItem, T)
   name.vb: Func(Of INoticeItem, T)
   spec.csharp:
   - uid: System.Func`2
@@ -855,9 +855,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.func-2
   - name: <
-  - uid: H.Services.Common.INoticeItem
+  - uid: H.Services.Message.Notice.INoticeItem
     name: INoticeItem
-    href: H.Services.Common.INoticeItem.html
+    href: H.Services.Message.Notice.INoticeItem.html
   - name: ','
   - name: " "
   - name: T
@@ -870,32 +870,32 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.INoticeItem
+  - uid: H.Services.Message.Notice.INoticeItem
     name: INoticeItem
-    href: H.Services.Common.INoticeItem.html
+    href: H.Services.Message.Notice.INoticeItem.html
   - name: ','
   - name: " "
   - name: T
   - name: )
 - uid: H.Modules.Messages.Notice.NoticeDialog.Show*
   commentId: Overload:H.Modules.Messages.Notice.NoticeDialog.Show
-  href: H.Modules.Messages.Notice.NoticeDialog.html#H_Modules_Messages_Notice_NoticeDialog_Show_H_Services_Common_INoticeItem_
+  href: H.Modules.Messages.Notice.NoticeDialog.html#H_Modules_Messages_Notice_NoticeDialog_Show_H_Services_Message_Notice_INoticeItem_
   name: Show
   nameWithType: NoticeDialog.Show
   fullName: H.Modules.Messages.Notice.NoticeDialog.Show
-- uid: H.Services.Common.INoticeItem
-  commentId: T:H.Services.Common.INoticeItem
-  parent: H.Services.Common
-  href: H.Services.Common.INoticeItem.html
+- uid: H.Services.Message.Notice.INoticeItem
+  commentId: T:H.Services.Message.Notice.INoticeItem
+  parent: H.Services.Message.Notice
+  href: H.Services.Message.Notice.INoticeItem.html
   name: INoticeItem
   nameWithType: INoticeItem
-  fullName: H.Services.Common.INoticeItem
-- uid: H.Services.Common
-  commentId: N:H.Services.Common
+  fullName: H.Services.Message.Notice.INoticeItem
+- uid: H.Services.Message.Notice
+  commentId: N:H.Services.Message.Notice
   href: H.html
-  name: H.Services.Common
-  nameWithType: H.Services.Common
-  fullName: H.Services.Common
+  name: H.Services.Message.Notice
+  nameWithType: H.Services.Message.Notice
+  fullName: H.Services.Message.Notice
   spec.csharp:
   - uid: H
     name: H
@@ -905,9 +905,13 @@ references:
     name: Services
     href: H.Services.html
   - name: .
-  - uid: H.Services.Common
-    name: Common
-    href: H.Services.Common.html
+  - uid: H.Services.Message
+    name: Message
+    href: H.Services.Message.html
+  - name: .
+  - uid: H.Services.Message.Notice
+    name: Notice
+    href: H.Services.Message.Notice.html
   spec.vb:
   - uid: H
     name: H
@@ -917,6 +921,10 @@ references:
     name: Services
     href: H.Services.html
   - name: .
-  - uid: H.Services.Common
-    name: Common
-    href: H.Services.Common.html
+  - uid: H.Services.Message
+    name: Message
+    href: H.Services.Message.html
+  - name: .
+  - uid: H.Services.Message.Notice
+    name: Notice
+    href: H.Services.Message.Notice.html

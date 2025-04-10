@@ -5,13 +5,13 @@ items:
   id: SnackDialog
   parent: H.Modules.Messages.Snack
   children:
-  - H.Modules.Messages.Snack.SnackDialog.Show(H.Services.Common.ISnackItem)
+  - H.Modules.Messages.Snack.SnackDialog.Show(H.Services.Message.Snack.ISnackItem)
   - H.Modules.Messages.Snack.SnackDialog.ShowDialog(System.String)
   - H.Modules.Messages.Snack.SnackDialog.ShowError(System.String)
   - H.Modules.Messages.Snack.SnackDialog.ShowFatal(System.String)
   - H.Modules.Messages.Snack.SnackDialog.ShowInfo(System.String)
-  - H.Modules.Messages.Snack.SnackDialog.ShowProgress``1(System.Func{H.Services.Common.IPercentSnackItem,``0})
-  - H.Modules.Messages.Snack.SnackDialog.ShowString``1(System.Func{H.Services.Common.ISnackItem,``0})
+  - H.Modules.Messages.Snack.SnackDialog.ShowProgress``1(System.Func{H.Services.Message.Snack.IPercentSnackItem,``0})
+  - H.Modules.Messages.Snack.SnackDialog.ShowString``1(System.Func{H.Services.Message.Snack.ISnackItem,``0})
   - H.Modules.Messages.Snack.SnackDialog.ShowSuccess(System.String)
   - H.Modules.Messages.Snack.SnackDialog.ShowWarn(System.String)
   langs:
@@ -23,7 +23,7 @@ items:
   type: Class
   source:
     id: SnackDialog
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 8
   assemblies:
   - H.Modules.Messages.Snack
@@ -54,7 +54,7 @@ items:
   type: Method
   source:
     id: ShowInfo
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 11
   assemblies:
   - H.Modules.Messages.Snack
@@ -82,7 +82,7 @@ items:
   type: Method
   source:
     id: ShowError
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 15
   assemblies:
   - H.Modules.Messages.Snack
@@ -110,7 +110,7 @@ items:
   type: Method
   source:
     id: ShowWarn
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 19
   assemblies:
   - H.Modules.Messages.Snack
@@ -138,7 +138,7 @@ items:
   type: Method
   source:
     id: ShowSuccess
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 23
   assemblies:
   - H.Modules.Messages.Snack
@@ -166,7 +166,7 @@ items:
   type: Method
   source:
     id: ShowFatal
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 27
   assemblies:
   - H.Modules.Messages.Snack
@@ -194,7 +194,7 @@ items:
   type: Method
   source:
     id: ShowDialog
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 32
   assemblies:
   - H.Modules.Messages.Snack
@@ -211,20 +211,20 @@ items:
   nameWithType.vb: SnackDialog.ShowDialog(String)
   fullName.vb: H.Modules.Messages.Snack.SnackDialog.ShowDialog(String)
   name.vb: ShowDialog(String)
-- uid: H.Modules.Messages.Snack.SnackDialog.ShowProgress``1(System.Func{H.Services.Common.IPercentSnackItem,``0})
-  commentId: M:H.Modules.Messages.Snack.SnackDialog.ShowProgress``1(System.Func{H.Services.Common.IPercentSnackItem,``0})
-  id: ShowProgress``1(System.Func{H.Services.Common.IPercentSnackItem,``0})
+- uid: H.Modules.Messages.Snack.SnackDialog.ShowProgress``1(System.Func{H.Services.Message.Snack.IPercentSnackItem,``0})
+  commentId: M:H.Modules.Messages.Snack.SnackDialog.ShowProgress``1(System.Func{H.Services.Message.Snack.IPercentSnackItem,``0})
+  id: ShowProgress``1(System.Func{H.Services.Message.Snack.IPercentSnackItem,``0})
   parent: H.Modules.Messages.Snack.SnackDialog
   langs:
   - csharp
   - vb
   name: ShowProgress<T>(Func<IPercentSnackItem, T>)
   nameWithType: SnackDialog.ShowProgress<T>(Func<IPercentSnackItem, T>)
-  fullName: H.Modules.Messages.Snack.SnackDialog.ShowProgress<T>(System.Func<H.Services.Common.IPercentSnackItem, T>)
+  fullName: H.Modules.Messages.Snack.SnackDialog.ShowProgress<T>(System.Func<H.Services.Message.Snack.IPercentSnackItem, T>)
   type: Method
   source:
     id: ShowProgress
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 36
   assemblies:
   - H.Modules.Messages.Snack
@@ -233,7 +233,7 @@ items:
     content: public static Task<T> ShowProgress<T>(Func<IPercentSnackItem, T> action)
     parameters:
     - id: action
-      type: System.Func{H.Services.Common.IPercentSnackItem,{T}}
+      type: System.Func{H.Services.Message.Snack.IPercentSnackItem,{T}}
     typeParameters:
     - id: T
     return:
@@ -241,22 +241,22 @@ items:
     content.vb: Public Shared Function ShowProgress(Of T)(action As Func(Of IPercentSnackItem, T)) As Task(Of T)
   overload: H.Modules.Messages.Snack.SnackDialog.ShowProgress*
   nameWithType.vb: SnackDialog.ShowProgress(Of T)(Func(Of IPercentSnackItem, T))
-  fullName.vb: H.Modules.Messages.Snack.SnackDialog.ShowProgress(Of T)(System.Func(Of H.Services.Common.IPercentSnackItem, T))
+  fullName.vb: H.Modules.Messages.Snack.SnackDialog.ShowProgress(Of T)(System.Func(Of H.Services.Message.Snack.IPercentSnackItem, T))
   name.vb: ShowProgress(Of T)(Func(Of IPercentSnackItem, T))
-- uid: H.Modules.Messages.Snack.SnackDialog.ShowString``1(System.Func{H.Services.Common.ISnackItem,``0})
-  commentId: M:H.Modules.Messages.Snack.SnackDialog.ShowString``1(System.Func{H.Services.Common.ISnackItem,``0})
-  id: ShowString``1(System.Func{H.Services.Common.ISnackItem,``0})
+- uid: H.Modules.Messages.Snack.SnackDialog.ShowString``1(System.Func{H.Services.Message.Snack.ISnackItem,``0})
+  commentId: M:H.Modules.Messages.Snack.SnackDialog.ShowString``1(System.Func{H.Services.Message.Snack.ISnackItem,``0})
+  id: ShowString``1(System.Func{H.Services.Message.Snack.ISnackItem,``0})
   parent: H.Modules.Messages.Snack.SnackDialog
   langs:
   - csharp
   - vb
   name: ShowString<T>(Func<ISnackItem, T>)
   nameWithType: SnackDialog.ShowString<T>(Func<ISnackItem, T>)
-  fullName: H.Modules.Messages.Snack.SnackDialog.ShowString<T>(System.Func<H.Services.Common.ISnackItem, T>)
+  fullName: H.Modules.Messages.Snack.SnackDialog.ShowString<T>(System.Func<H.Services.Message.Snack.ISnackItem, T>)
   type: Method
   source:
     id: ShowString
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 40
   assemblies:
   - H.Modules.Messages.Snack
@@ -265,7 +265,7 @@ items:
     content: public static Task<T> ShowString<T>(Func<ISnackItem, T> action)
     parameters:
     - id: action
-      type: System.Func{H.Services.Common.ISnackItem,{T}}
+      type: System.Func{H.Services.Message.Snack.ISnackItem,{T}}
     typeParameters:
     - id: T
     return:
@@ -273,22 +273,22 @@ items:
     content.vb: Public Shared Function ShowString(Of T)(action As Func(Of ISnackItem, T)) As Task(Of T)
   overload: H.Modules.Messages.Snack.SnackDialog.ShowString*
   nameWithType.vb: SnackDialog.ShowString(Of T)(Func(Of ISnackItem, T))
-  fullName.vb: H.Modules.Messages.Snack.SnackDialog.ShowString(Of T)(System.Func(Of H.Services.Common.ISnackItem, T))
+  fullName.vb: H.Modules.Messages.Snack.SnackDialog.ShowString(Of T)(System.Func(Of H.Services.Message.Snack.ISnackItem, T))
   name.vb: ShowString(Of T)(Func(Of ISnackItem, T))
-- uid: H.Modules.Messages.Snack.SnackDialog.Show(H.Services.Common.ISnackItem)
-  commentId: M:H.Modules.Messages.Snack.SnackDialog.Show(H.Services.Common.ISnackItem)
-  id: Show(H.Services.Common.ISnackItem)
+- uid: H.Modules.Messages.Snack.SnackDialog.Show(H.Services.Message.Snack.ISnackItem)
+  commentId: M:H.Modules.Messages.Snack.SnackDialog.Show(H.Services.Message.Snack.ISnackItem)
+  id: Show(H.Services.Message.Snack.ISnackItem)
   parent: H.Modules.Messages.Snack.SnackDialog
   langs:
   - csharp
   - vb
   name: Show(ISnackItem)
   nameWithType: SnackDialog.Show(ISnackItem)
-  fullName: H.Modules.Messages.Snack.SnackDialog.Show(H.Services.Common.ISnackItem)
+  fullName: H.Modules.Messages.Snack.SnackDialog.Show(H.Services.Message.Snack.ISnackItem)
   type: Method
   source:
     id: Show
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Snack\SnackDialog.cs
     startLine: 44
   assemblies:
   - H.Modules.Messages.Snack
@@ -297,7 +297,7 @@ items:
     content: public static void Show(ISnackItem message)
     parameters:
     - id: message
-      type: H.Services.Common.ISnackItem
+      type: H.Services.Message.Snack.ISnackItem
     content.vb: Public Shared Sub Show(message As ISnackItem)
   overload: H.Modules.Messages.Snack.SnackDialog.Show*
 references:
@@ -726,20 +726,20 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
 - uid: H.Modules.Messages.Snack.SnackDialog.ShowProgress*
   commentId: Overload:H.Modules.Messages.Snack.SnackDialog.ShowProgress
-  href: H.Modules.Messages.Snack.SnackDialog.html#H_Modules_Messages_Snack_SnackDialog_ShowProgress__1_System_Func_H_Services_Common_IPercentSnackItem___0__
+  href: H.Modules.Messages.Snack.SnackDialog.html#H_Modules_Messages_Snack_SnackDialog_ShowProgress__1_System_Func_H_Services_Message_Snack_IPercentSnackItem___0__
   name: ShowProgress
   nameWithType: SnackDialog.ShowProgress
   fullName: H.Modules.Messages.Snack.SnackDialog.ShowProgress
-- uid: System.Func{H.Services.Common.IPercentSnackItem,{T}}
-  commentId: T:System.Func{H.Services.Common.IPercentSnackItem,``0}
+- uid: System.Func{H.Services.Message.Snack.IPercentSnackItem,{T}}
+  commentId: T:System.Func{H.Services.Message.Snack.IPercentSnackItem,``0}
   parent: System
   definition: System.Func`2
   href: https://learn.microsoft.com/dotnet/api/system.func-2
   name: Func<IPercentSnackItem, T>
   nameWithType: Func<IPercentSnackItem, T>
-  fullName: System.Func<H.Services.Common.IPercentSnackItem, T>
+  fullName: System.Func<H.Services.Message.Snack.IPercentSnackItem, T>
   nameWithType.vb: Func(Of IPercentSnackItem, T)
-  fullName.vb: System.Func(Of H.Services.Common.IPercentSnackItem, T)
+  fullName.vb: System.Func(Of H.Services.Message.Snack.IPercentSnackItem, T)
   name.vb: Func(Of IPercentSnackItem, T)
   spec.csharp:
   - uid: System.Func`2
@@ -747,9 +747,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.func-2
   - name: <
-  - uid: H.Services.Common.IPercentSnackItem
+  - uid: H.Services.Message.Snack.IPercentSnackItem
     name: IPercentSnackItem
-    href: H.Services.Common.IPercentSnackItem.html
+    href: H.Services.Message.Snack.IPercentSnackItem.html
   - name: ','
   - name: " "
   - name: T
@@ -762,15 +762,15 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.IPercentSnackItem
+  - uid: H.Services.Message.Snack.IPercentSnackItem
     name: IPercentSnackItem
-    href: H.Services.Common.IPercentSnackItem.html
+    href: H.Services.Message.Snack.IPercentSnackItem.html
   - name: ','
   - name: " "
   - name: T
   - name: )
 - uid: System.Threading.Tasks.Task{{T}}
-  commentId: T:System.Threading.Tasks.Task{``1}
+  commentId: T:System.Threading.Tasks.Task{``0}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
@@ -834,20 +834,20 @@ references:
   - name: )
 - uid: H.Modules.Messages.Snack.SnackDialog.ShowString*
   commentId: Overload:H.Modules.Messages.Snack.SnackDialog.ShowString
-  href: H.Modules.Messages.Snack.SnackDialog.html#H_Modules_Messages_Snack_SnackDialog_ShowString__1_System_Func_H_Services_Common_ISnackItem___0__
+  href: H.Modules.Messages.Snack.SnackDialog.html#H_Modules_Messages_Snack_SnackDialog_ShowString__1_System_Func_H_Services_Message_Snack_ISnackItem___0__
   name: ShowString
   nameWithType: SnackDialog.ShowString
   fullName: H.Modules.Messages.Snack.SnackDialog.ShowString
-- uid: System.Func{H.Services.Common.ISnackItem,{T}}
-  commentId: T:System.Func{H.Services.Common.ISnackItem,``0}
+- uid: System.Func{H.Services.Message.Snack.ISnackItem,{T}}
+  commentId: T:System.Func{H.Services.Message.Snack.ISnackItem,``0}
   parent: System
   definition: System.Func`2
   href: https://learn.microsoft.com/dotnet/api/system.func-2
   name: Func<ISnackItem, T>
   nameWithType: Func<ISnackItem, T>
-  fullName: System.Func<H.Services.Common.ISnackItem, T>
+  fullName: System.Func<H.Services.Message.Snack.ISnackItem, T>
   nameWithType.vb: Func(Of ISnackItem, T)
-  fullName.vb: System.Func(Of H.Services.Common.ISnackItem, T)
+  fullName.vb: System.Func(Of H.Services.Message.Snack.ISnackItem, T)
   name.vb: Func(Of ISnackItem, T)
   spec.csharp:
   - uid: System.Func`2
@@ -855,9 +855,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.func-2
   - name: <
-  - uid: H.Services.Common.ISnackItem
+  - uid: H.Services.Message.Snack.ISnackItem
     name: ISnackItem
-    href: H.Services.Common.ISnackItem.html
+    href: H.Services.Message.Snack.ISnackItem.html
   - name: ','
   - name: " "
   - name: T
@@ -870,32 +870,32 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.ISnackItem
+  - uid: H.Services.Message.Snack.ISnackItem
     name: ISnackItem
-    href: H.Services.Common.ISnackItem.html
+    href: H.Services.Message.Snack.ISnackItem.html
   - name: ','
   - name: " "
   - name: T
   - name: )
 - uid: H.Modules.Messages.Snack.SnackDialog.Show*
   commentId: Overload:H.Modules.Messages.Snack.SnackDialog.Show
-  href: H.Modules.Messages.Snack.SnackDialog.html#H_Modules_Messages_Snack_SnackDialog_Show_H_Services_Common_ISnackItem_
+  href: H.Modules.Messages.Snack.SnackDialog.html#H_Modules_Messages_Snack_SnackDialog_Show_H_Services_Message_Snack_ISnackItem_
   name: Show
   nameWithType: SnackDialog.Show
   fullName: H.Modules.Messages.Snack.SnackDialog.Show
-- uid: H.Services.Common.ISnackItem
-  commentId: T:H.Services.Common.ISnackItem
-  parent: H.Services.Common
-  href: H.Services.Common.ISnackItem.html
+- uid: H.Services.Message.Snack.ISnackItem
+  commentId: T:H.Services.Message.Snack.ISnackItem
+  parent: H.Services.Message.Snack
+  href: H.Services.Message.Snack.ISnackItem.html
   name: ISnackItem
   nameWithType: ISnackItem
-  fullName: H.Services.Common.ISnackItem
-- uid: H.Services.Common
-  commentId: N:H.Services.Common
+  fullName: H.Services.Message.Snack.ISnackItem
+- uid: H.Services.Message.Snack
+  commentId: N:H.Services.Message.Snack
   href: H.html
-  name: H.Services.Common
-  nameWithType: H.Services.Common
-  fullName: H.Services.Common
+  name: H.Services.Message.Snack
+  nameWithType: H.Services.Message.Snack
+  fullName: H.Services.Message.Snack
   spec.csharp:
   - uid: H
     name: H
@@ -905,9 +905,13 @@ references:
     name: Services
     href: H.Services.html
   - name: .
-  - uid: H.Services.Common
-    name: Common
-    href: H.Services.Common.html
+  - uid: H.Services.Message
+    name: Message
+    href: H.Services.Message.html
+  - name: .
+  - uid: H.Services.Message.Snack
+    name: Snack
+    href: H.Services.Message.Snack.html
   spec.vb:
   - uid: H
     name: H
@@ -917,6 +921,10 @@ references:
     name: Services
     href: H.Services.html
   - name: .
-  - uid: H.Services.Common
-    name: Common
-    href: H.Services.Common.html
+  - uid: H.Services.Message
+    name: Message
+    href: H.Services.Message.html
+  - name: .
+  - uid: H.Services.Message.Snack
+    name: Snack
+    href: H.Services.Message.Snack.html

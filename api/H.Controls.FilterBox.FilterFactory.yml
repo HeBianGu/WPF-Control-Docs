@@ -15,8 +15,8 @@ items:
   type: Class
   source:
     id: FilterFactory
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FilterBox\Provider\Base\FilterFactory.cs
-    startLine: 10
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FilterBox\Provider\Base\FilterFactory.cs
+    startLine: 7
   assemblies:
   - H.Controls.FilterBox
   namespace: H.Controls.FilterBox
@@ -46,8 +46,8 @@ items:
   type: Method
   source:
     id: Create
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FilterBox\Provider\Base\FilterFactory.cs
-    startLine: 12
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FilterBox\Provider\Base\FilterFactory.cs
+    startLine: 9
   assemblies:
   - H.Controls.FilterBox
   namespace: H.Controls.FilterBox
@@ -59,7 +59,7 @@ items:
     - id: source
       type: System.Collections.IEnumerable
     return:
-      type: H.Services.Common.IFilterable
+      type: H.Common.Interfaces.Where.IFilterable
     content.vb: Public Shared Function Create([property] As PropertyInfo, source As IEnumerable) As IFilterable
   overload: H.Controls.FilterBox.FilterFactory.Create*
 references:
@@ -351,13 +351,13 @@ references:
   name: IEnumerable
   nameWithType: IEnumerable
   fullName: System.Collections.IEnumerable
-- uid: H.Services.Common.IFilterable
-  commentId: T:H.Services.Common.IFilterable
-  parent: H.Services.Common
-  href: H.Services.Common.IFilterable.html
+- uid: H.Common.Interfaces.Where.IFilterable
+  commentId: T:H.Common.Interfaces.Where.IFilterable
+  parent: H.Common.Interfaces.Where
+  href: H.Common.Interfaces.Where.IFilterable.html
   name: IFilterable
   nameWithType: IFilterable
-  fullName: H.Services.Common.IFilterable
+  fullName: H.Common.Interfaces.Where.IFilterable
 - uid: System.Reflection
   commentId: N:System.Reflection
   isExternal: true
@@ -412,33 +412,41 @@ references:
     name: Collections
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections
-- uid: H.Services.Common
-  commentId: N:H.Services.Common
+- uid: H.Common.Interfaces.Where
+  commentId: N:H.Common.Interfaces.Where
   href: H.html
-  name: H.Services.Common
-  nameWithType: H.Services.Common
-  fullName: H.Services.Common
+  name: H.Common.Interfaces.Where
+  nameWithType: H.Common.Interfaces.Where
+  fullName: H.Common.Interfaces.Where
   spec.csharp:
   - uid: H
     name: H
     href: H.html
   - name: .
-  - uid: H.Services
-    name: Services
-    href: H.Services.html
-  - name: .
-  - uid: H.Services.Common
+  - uid: H.Common
     name: Common
-    href: H.Services.Common.html
+    href: H.Common.html
+  - name: .
+  - uid: H.Common.Interfaces
+    name: Interfaces
+    href: H.Common.Interfaces.html
+  - name: .
+  - uid: H.Common.Interfaces.Where
+    name: Where
+    href: H.Common.Interfaces.Where.html
   spec.vb:
   - uid: H
     name: H
     href: H.html
   - name: .
-  - uid: H.Services
-    name: Services
-    href: H.Services.html
-  - name: .
-  - uid: H.Services.Common
+  - uid: H.Common
     name: Common
-    href: H.Services.Common.html
+    href: H.Common.html
+  - name: .
+  - uid: H.Common.Interfaces
+    name: Interfaces
+    href: H.Common.Interfaces.html
+  - name: .
+  - uid: H.Common.Interfaces.Where
+    name: Where
+    href: H.Common.Interfaces.Where.html

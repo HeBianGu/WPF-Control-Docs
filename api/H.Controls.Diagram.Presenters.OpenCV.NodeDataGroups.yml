@@ -11,12 +11,15 @@ items:
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.FeatureDetectorDataGroup
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.FilterDataGroup
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IBasicDataGroup
+  - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IImageDataGroup
+  - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IVideoDataGroup
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IfConditionDataGroup
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.ImageDataGroup
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.MLDataGroup
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.MorphologyDataGroup
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.OtherDataGroup
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoCaptureDataGroup
+  - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoDataGroupBase
   - H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.YolovCaptureDataGroup
   langs:
   - csharp
@@ -78,12 +81,26 @@ references:
   name: IfConditionDataGroup
   nameWithType: IfConditionDataGroup
   fullName: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IfConditionDataGroup
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IImageDataGroup
+  commentId: T:H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IImageDataGroup
+  parent: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups
+  href: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IImageDataGroup.html
+  name: IImageDataGroup
+  nameWithType: IImageDataGroup
+  fullName: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IImageDataGroup
 - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.ImageDataGroup
   commentId: T:H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.ImageDataGroup
   href: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.ImageDataGroup.html
   name: ImageDataGroup
   nameWithType: ImageDataGroup
   fullName: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.ImageDataGroup
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IVideoDataGroup
+  commentId: T:H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IVideoDataGroup
+  parent: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups
+  href: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IVideoDataGroup.html
+  name: IVideoDataGroup
+  nameWithType: IVideoDataGroup
+  fullName: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IVideoDataGroup
 - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.MLDataGroup
   commentId: T:H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.MLDataGroup
   href: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.MLDataGroup.html
@@ -108,6 +125,13 @@ references:
   name: VideoCaptureDataGroup
   nameWithType: VideoCaptureDataGroup
   fullName: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoCaptureDataGroup
+- uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoDataGroupBase
+  commentId: T:H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoDataGroupBase
+  parent: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups
+  href: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoDataGroupBase.html
+  name: VideoDataGroupBase
+  nameWithType: VideoDataGroupBase
+  fullName: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoDataGroupBase
 - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.YolovCaptureDataGroup
   commentId: T:H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.YolovCaptureDataGroup
   href: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.YolovCaptureDataGroup.html

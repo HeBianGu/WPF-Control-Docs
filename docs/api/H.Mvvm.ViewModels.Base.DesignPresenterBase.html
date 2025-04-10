@@ -123,14 +123,14 @@ Class DesignPresenterBase
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IDisplayBindable.html">IDisplayBindable</a></div>
-      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
-      <div><a class="xref" href="H.Mvvm.IOrderable.html">IOrderable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IGroupable.html">IGroupable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IDable.html">IDable</a></div>
-      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
-      <div><a class="xref" href="H.Mvvm.IDesignPresenterBase.html">IDesignPresenterBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.IDisplayBindable.html">IDisplayBindable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IOrderable.html">IOrderable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IGroupable.html">IGroupable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDescriptionable.html">IDescriptionable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDesignPresenterBase.html">IDesignPresenterBase</a></div>
     </dd>
   </dl>
 
@@ -139,7 +139,7 @@ Class DesignPresenterBase
     <dd>
       <div><a class="xref" href="H.Controls.Chart2D.Chart2DPresenterBase.html">Chart2DPresenterBase</a></div>
       <div><a class="xref" href="H.Modules.Messages.Dialog.AdornerDialogPresenter.html">AdornerDialogPresenter</a></div>
-      <div><a class="xref" href="H.Presenters.Design.DesignPresenter.html">DesignPresenter</a></div>
+      <div><a class="xref" href="H.Presenters.Design.Base.DesignPresenter.html">DesignPresenter</a></div>
     </dd>
   </dl>
 
@@ -239,10 +239,10 @@ Class DesignPresenterBase
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -251,7 +251,40 @@ Class DesignPresenterBase
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -261,39 +294,6 @@ Class DesignPresenterBase
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
@@ -486,7 +486,7 @@ public int ColumnSpan { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Display(Name = &quot;删除&quot;)]
-public RelayCommand DeleteCommand { get; }</code></pre>
+public ICommand DeleteCommand { get; }</code></pre>
   </div>
 
 
@@ -495,7 +495,7 @@ public RelayCommand DeleteCommand { get; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Mvvm.RelayCommand.html">RelayCommand</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand">ICommand</a></dt>
     <dd></dd>
   </dl>
 
@@ -755,6 +755,72 @@ public Thickness Margin { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_ViewModels_Base_DesignPresenterBase_MaxHeight_" data-uid="H.Mvvm.ViewModels.Base.DesignPresenterBase.MaxHeight*"></a>
+
+  <h3 id="H_Mvvm_ViewModels_Base_DesignPresenterBase_MaxHeight" data-uid="H.Mvvm.ViewModels.Base.DesignPresenterBase.MaxHeight">
+  MaxHeight
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;最大高度&quot;, GroupName = &quot;布局&quot;)]
+[TypeConverter(typeof(LengthConverter))]
+public double MaxHeight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="H_Mvvm_ViewModels_Base_DesignPresenterBase_MaxWidth_" data-uid="H.Mvvm.ViewModels.Base.DesignPresenterBase.MaxWidth*"></a>
+
+  <h3 id="H_Mvvm_ViewModels_Base_DesignPresenterBase_MaxWidth" data-uid="H.Mvvm.ViewModels.Base.DesignPresenterBase.MaxWidth">
+  MaxWidth
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;最大宽度&quot;, GroupName = &quot;布局&quot;)]
+[TypeConverter(typeof(LengthConverter))]
+public double MaxWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd></dd>
   </dl>
 

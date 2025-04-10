@@ -4,23 +4,11 @@ items:
   commentId: N:H.Modules.Setting
   id: H.Modules.Setting
   children:
-  - H.Modules.Setting.CancelSettingCommand
-  - H.Modules.Setting.FileSetting
-  - H.Modules.Setting.HotKeyItem
-  - H.Modules.Setting.HotKeySetting
-  - H.Modules.Setting.LoginSetting
-  - H.Modules.Setting.MainSetting
-  - H.Modules.Setting.MessageSetting
-  - H.Modules.Setting.NotifySetting
-  - H.Modules.Setting.PasswordSetting
-  - H.Modules.Setting.PersonalSetting
+  - H.Modules.Setting.ISettingSecurityViewOption
+  - H.Modules.Setting.ISettingViewOptions
   - H.Modules.Setting.SettableGroup
-  - H.Modules.Setting.SettingButtonPresenter
-  - H.Modules.Setting.SettingDefaultCommand
+  - H.Modules.Setting.SettingDataService
   - H.Modules.Setting.SettingViewPresenter
-  - H.Modules.Setting.ShowSettingCommand
-  - H.Modules.Setting.StateSetting
-  - H.Modules.Setting.ViewSetting
   langs:
   - csharp
   - vb
@@ -31,90 +19,24 @@ items:
   assemblies:
   - H.Modules.Setting
 references:
-- uid: H.Modules.Setting.FileSetting
-  commentId: T:H.Modules.Setting.FileSetting
-  href: H.Modules.Setting.FileSetting.html
-  name: FileSetting
-  nameWithType: FileSetting
-  fullName: H.Modules.Setting.FileSetting
-- uid: H.Modules.Setting.PasswordSetting
-  commentId: T:H.Modules.Setting.PasswordSetting
-  href: H.Modules.Setting.PasswordSetting.html
-  name: PasswordSetting
-  nameWithType: PasswordSetting
-  fullName: H.Modules.Setting.PasswordSetting
-- uid: H.Modules.Setting.MessageSetting
-  commentId: T:H.Modules.Setting.MessageSetting
-  href: H.Modules.Setting.MessageSetting.html
-  name: MessageSetting
-  nameWithType: MessageSetting
-  fullName: H.Modules.Setting.MessageSetting
-- uid: H.Modules.Setting.PersonalSetting
-  commentId: T:H.Modules.Setting.PersonalSetting
-  href: H.Modules.Setting.PersonalSetting.html
-  name: PersonalSetting
-  nameWithType: PersonalSetting
-  fullName: H.Modules.Setting.PersonalSetting
-- uid: H.Modules.Setting.HotKeySetting
-  commentId: T:H.Modules.Setting.HotKeySetting
-  href: H.Modules.Setting.HotKeySetting.html
-  name: HotKeySetting
-  nameWithType: HotKeySetting
-  fullName: H.Modules.Setting.HotKeySetting
-- uid: H.Modules.Setting.HotKeyItem
-  commentId: T:H.Modules.Setting.HotKeyItem
-  href: H.Modules.Setting.HotKeyItem.html
-  name: HotKeyItem
-  nameWithType: HotKeyItem
-  fullName: H.Modules.Setting.HotKeyItem
-- uid: H.Modules.Setting.LoginSetting
-  commentId: T:H.Modules.Setting.LoginSetting
-  href: H.Modules.Setting.LoginSetting.html
-  name: LoginSetting
-  nameWithType: LoginSetting
-  fullName: H.Modules.Setting.LoginSetting
-- uid: H.Modules.Setting.MainSetting
-  commentId: T:H.Modules.Setting.MainSetting
-  href: H.Modules.Setting.MainSetting.html
-  name: MainSetting
-  nameWithType: MainSetting
-  fullName: H.Modules.Setting.MainSetting
-- uid: H.Modules.Setting.NotifySetting
-  commentId: T:H.Modules.Setting.NotifySetting
-  href: H.Modules.Setting.NotifySetting.html
-  name: NotifySetting
-  nameWithType: NotifySetting
-  fullName: H.Modules.Setting.NotifySetting
-- uid: H.Modules.Setting.StateSetting
-  commentId: T:H.Modules.Setting.StateSetting
-  href: H.Modules.Setting.StateSetting.html
-  name: StateSetting
-  nameWithType: StateSetting
-  fullName: H.Modules.Setting.StateSetting
-- uid: H.Modules.Setting.ViewSetting
-  commentId: T:H.Modules.Setting.ViewSetting
-  href: H.Modules.Setting.ViewSetting.html
-  name: ViewSetting
-  nameWithType: ViewSetting
-  fullName: H.Modules.Setting.ViewSetting
-- uid: H.Modules.Setting.CancelSettingCommand
-  commentId: T:H.Modules.Setting.CancelSettingCommand
-  href: H.Modules.Setting.CancelSettingCommand.html
-  name: CancelSettingCommand
-  nameWithType: CancelSettingCommand
-  fullName: H.Modules.Setting.CancelSettingCommand
-- uid: H.Modules.Setting.SettingButtonPresenter
-  commentId: T:H.Modules.Setting.SettingButtonPresenter
-  href: H.Modules.Setting.SettingButtonPresenter.html
-  name: SettingButtonPresenter
-  nameWithType: SettingButtonPresenter
-  fullName: H.Modules.Setting.SettingButtonPresenter
-- uid: H.Modules.Setting.SettingDefaultCommand
-  commentId: T:H.Modules.Setting.SettingDefaultCommand
-  href: H.Modules.Setting.SettingDefaultCommand.html
-  name: SettingDefaultCommand
-  nameWithType: SettingDefaultCommand
-  fullName: H.Modules.Setting.SettingDefaultCommand
+- uid: H.Modules.Setting.ISettingSecurityViewOption
+  commentId: T:H.Modules.Setting.ISettingSecurityViewOption
+  href: H.Modules.Setting.ISettingSecurityViewOption.html
+  name: ISettingSecurityViewOption
+  nameWithType: ISettingSecurityViewOption
+  fullName: H.Modules.Setting.ISettingSecurityViewOption
+- uid: H.Modules.Setting.ISettingViewOptions
+  commentId: T:H.Modules.Setting.ISettingViewOptions
+  href: H.Modules.Setting.ISettingViewOptions.html
+  name: ISettingViewOptions
+  nameWithType: ISettingViewOptions
+  fullName: H.Modules.Setting.ISettingViewOptions
+- uid: H.Modules.Setting.SettingDataService
+  commentId: T:H.Modules.Setting.SettingDataService
+  href: H.Modules.Setting.SettingDataService.html
+  name: SettingDataService
+  nameWithType: SettingDataService
+  fullName: H.Modules.Setting.SettingDataService
 - uid: H.Modules.Setting.SettableGroup
   commentId: T:H.Modules.Setting.SettableGroup
   parent: H.Modules.Setting
@@ -128,12 +50,6 @@ references:
   name: SettingViewPresenter
   nameWithType: SettingViewPresenter
   fullName: H.Modules.Setting.SettingViewPresenter
-- uid: H.Modules.Setting.ShowSettingCommand
-  commentId: T:H.Modules.Setting.ShowSettingCommand
-  href: H.Modules.Setting.ShowSettingCommand.html
-  name: ShowSettingCommand
-  nameWithType: ShowSettingCommand
-  fullName: H.Modules.Setting.ShowSettingCommand
 - uid: H.Modules.Setting
   commentId: N:H.Modules.Setting
   href: H.html

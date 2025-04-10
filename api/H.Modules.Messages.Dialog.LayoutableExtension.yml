@@ -5,7 +5,7 @@ items:
   id: LayoutableExtension
   parent: H.Modules.Messages.Dialog
   children:
-  - H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom(H.Services.Common.ILayoutable,H.Mvvm.IDesignPresenterBase)
+  - H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom(H.Common.Interfaces.ILayoutable,H.Common.Interfaces.IDesignPresenterBase)
   langs:
   - csharp
   - vb
@@ -15,8 +15,8 @@ items:
   type: Class
   source:
     id: LayoutableExtension
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\DialogMessage.Adorner.cs
-    startLine: 115
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\DialogMessage.Adorner.cs
+    startLine: 112
   assemblies:
   - H.Modules.Messages.Dialog
   namespace: H.Modules.Messages.Dialog
@@ -33,9 +33,9 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom(H.Services.Common.ILayoutable,H.Mvvm.IDesignPresenterBase)
-  commentId: M:H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom(H.Services.Common.ILayoutable,H.Mvvm.IDesignPresenterBase)
-  id: CopyFrom(H.Services.Common.ILayoutable,H.Mvvm.IDesignPresenterBase)
+- uid: H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom(H.Common.Interfaces.ILayoutable,H.Common.Interfaces.IDesignPresenterBase)
+  commentId: M:H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom(H.Common.Interfaces.ILayoutable,H.Common.Interfaces.IDesignPresenterBase)
+  id: CopyFrom(H.Common.Interfaces.ILayoutable,H.Common.Interfaces.IDesignPresenterBase)
   isExtensionMethod: true
   parent: H.Modules.Messages.Dialog.LayoutableExtension
   langs:
@@ -43,12 +43,12 @@ items:
   - vb
   name: CopyFrom(ILayoutable, IDesignPresenterBase)
   nameWithType: LayoutableExtension.CopyFrom(ILayoutable, IDesignPresenterBase)
-  fullName: H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom(H.Services.Common.ILayoutable, H.Mvvm.IDesignPresenterBase)
+  fullName: H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom(H.Common.Interfaces.ILayoutable, H.Common.Interfaces.IDesignPresenterBase)
   type: Method
   source:
     id: CopyFrom
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\DialogMessage.Adorner.cs
-    startLine: 117
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\DialogMessage.Adorner.cs
+    startLine: 114
   assemblies:
   - H.Modules.Messages.Dialog
   namespace: H.Modules.Messages.Dialog
@@ -56,9 +56,9 @@ items:
     content: public static void CopyFrom(this ILayoutable layoutable, IDesignPresenterBase from)
     parameters:
     - id: layoutable
-      type: H.Services.Common.ILayoutable
+      type: H.Common.Interfaces.ILayoutable
     - id: from
-      type: H.Mvvm.IDesignPresenterBase
+      type: H.Common.Interfaces.IDesignPresenterBase
     content.vb: Public Shared Sub CopyFrom(layoutable As ILayoutable, from As IDesignPresenterBase)
   overload: H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom*
 references:
@@ -338,73 +338,51 @@ references:
   fullName: System
 - uid: H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom*
   commentId: Overload:H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom
-  href: H.Modules.Messages.Dialog.LayoutableExtension.html#H_Modules_Messages_Dialog_LayoutableExtension_CopyFrom_H_Services_Common_ILayoutable_H_Mvvm_IDesignPresenterBase_
+  href: H.Modules.Messages.Dialog.LayoutableExtension.html#H_Modules_Messages_Dialog_LayoutableExtension_CopyFrom_H_Common_Interfaces_ILayoutable_H_Common_Interfaces_IDesignPresenterBase_
   name: CopyFrom
   nameWithType: LayoutableExtension.CopyFrom
   fullName: H.Modules.Messages.Dialog.LayoutableExtension.CopyFrom
-- uid: H.Services.Common.ILayoutable
-  commentId: T:H.Services.Common.ILayoutable
-  parent: H.Services.Common
-  href: H.Services.Common.ILayoutable.html
+- uid: H.Common.Interfaces.ILayoutable
+  commentId: T:H.Common.Interfaces.ILayoutable
+  parent: H.Common.Interfaces
+  href: H.Common.Interfaces.ILayoutable.html
   name: ILayoutable
   nameWithType: ILayoutable
-  fullName: H.Services.Common.ILayoutable
-- uid: H.Mvvm.IDesignPresenterBase
-  commentId: T:H.Mvvm.IDesignPresenterBase
-  parent: H.Mvvm
-  href: H.Mvvm.IDesignPresenterBase.html
+  fullName: H.Common.Interfaces.ILayoutable
+- uid: H.Common.Interfaces.IDesignPresenterBase
+  commentId: T:H.Common.Interfaces.IDesignPresenterBase
+  parent: H.Common.Interfaces
+  href: H.Common.Interfaces.IDesignPresenterBase.html
   name: IDesignPresenterBase
   nameWithType: IDesignPresenterBase
-  fullName: H.Mvvm.IDesignPresenterBase
-- uid: H.Services.Common
-  commentId: N:H.Services.Common
+  fullName: H.Common.Interfaces.IDesignPresenterBase
+- uid: H.Common.Interfaces
+  commentId: N:H.Common.Interfaces
   href: H.html
-  name: H.Services.Common
-  nameWithType: H.Services.Common
-  fullName: H.Services.Common
+  name: H.Common.Interfaces
+  nameWithType: H.Common.Interfaces
+  fullName: H.Common.Interfaces
   spec.csharp:
   - uid: H
     name: H
     href: H.html
   - name: .
-  - uid: H.Services
-    name: Services
-    href: H.Services.html
-  - name: .
-  - uid: H.Services.Common
+  - uid: H.Common
     name: Common
-    href: H.Services.Common.html
+    href: H.Common.html
+  - name: .
+  - uid: H.Common.Interfaces
+    name: Interfaces
+    href: H.Common.Interfaces.html
   spec.vb:
   - uid: H
     name: H
     href: H.html
   - name: .
-  - uid: H.Services
-    name: Services
-    href: H.Services.html
-  - name: .
-  - uid: H.Services.Common
+  - uid: H.Common
     name: Common
-    href: H.Services.Common.html
-- uid: H.Mvvm
-  commentId: N:H.Mvvm
-  href: H.html
-  name: H.Mvvm
-  nameWithType: H.Mvvm
-  fullName: H.Mvvm
-  spec.csharp:
-  - uid: H
-    name: H
-    href: H.html
+    href: H.Common.html
   - name: .
-  - uid: H.Mvvm
-    name: Mvvm
-    href: H.Mvvm.html
-  spec.vb:
-  - uid: H
-    name: H
-    href: H.html
-  - name: .
-  - uid: H.Mvvm
-    name: Mvvm
-    href: H.Mvvm.html
+  - uid: H.Common.Interfaces
+    name: Interfaces
+    href: H.Common.Interfaces.html

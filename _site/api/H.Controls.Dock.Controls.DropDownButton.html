@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DropDownButton | WPF-Control开发文档 ">
       
-      <meta name="description" content="Base class for controls that can switch states, such as .">
+      <meta name="description" content="Implements a button that is used to display a  when the user clicks on it (see templates for , , and ).">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,12 +97,15 @@ Class DropDownButton
   <dl><dt>Assembly</dt><dd>H.Controls.Dock.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Base class for controls that can switch states, such as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.checkbox">CheckBox</a>.</p>
+  <div class="markdown summary"><p>Implements a button that is used to display a <a class="xref" href="H.Controls.Dock.Controls.ContextMenuEx.html">ContextMenuEx</a>
+when the user clicks on it
+(see templates for <a class="xref" href="H.Controls.Dock.Controls.LayoutAnchorableFloatingWindowControl.html">LayoutAnchorableFloatingWindowControl</a>,
+<a class="xref" href="H.Controls.Dock.Controls.AnchorablePaneTitle.html">AnchorablePaneTitle</a>, and <a class="xref" href="H.Controls.Dock.Controls.LayoutDocumentPaneControl.html">LayoutDocumentPaneControl</a>).</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DropDownButton : ToggleButton, IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild, ICommandSource</code></pre>
+    <pre><code class="lang-csharp hljs">public class DropDownButton : FontIconToggleButton, IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild, ICommandSource</code></pre>
   </div>
 
 
@@ -121,6 +124,7 @@ Class DropDownButton
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.contentcontrol">ContentControl</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.primitives.buttonbase">ButtonBase</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.primitives.togglebutton">ToggleButton</a></div>
+      <div><a class="xref" href="H.Styles.Controls.FontIconToggleButton.html">FontIconToggleButton</a></div>
       <div><span class="xref">DropDownButton</span></div>
     </dd>
   </dl>
@@ -142,6 +146,18 @@ Class DropDownButton
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="H.Styles.Controls.FontIconToggleButton.html#H_Styles_Controls_FontIconToggleButton_CheckedGlyph">FontIconToggleButton.CheckedGlyph</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Styles.Controls.FontIconToggleButton.html#H_Styles_Controls_FontIconToggleButton_CheckedGlyphProperty">FontIconToggleButton.CheckedGlyphProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Styles.Controls.FontIconToggleButton.html#H_Styles_Controls_FontIconToggleButton_UncheckedGlyph">FontIconToggleButton.UncheckedGlyph</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Styles.Controls.FontIconToggleButton.html#H_Styles_Controls_FontIconToggleButton_UncheckedGlyphProperty">FontIconToggleButton.UncheckedGlyphProperty</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.primitives.togglebutton.checkedevent">ToggleButton.CheckedEvent</a>
     </div>
@@ -2089,10 +2105,10 @@ Class DropDownButton
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -2101,7 +2117,40 @@ Class DropDownButton
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -2111,39 +2160,6 @@ Class DropDownButton
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
@@ -2177,9 +2193,6 @@ Class DropDownButton
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.VisualTreeHelpers.html#H_Controls_FilterColumnDataGrid_VisualTreeHelpers_TryFindParent__1_System_Windows_DependencyObject_">VisualTreeHelpers.TryFindParent&lt;T&gt;(DependencyObject)</a>
-  </div>
-  <div>
-      <a class="xref" href="H.Windows.Ribbon.VisualTreeExtention.html#H_Windows_Ribbon_VisualTreeExtention_GetParent__1_System_Windows_DependencyObject_">VisualTreeExtention.GetParent&lt;T&gt;(DependencyObject)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.OutlookBar.PopupHelper.html#H_Controls_OutlookBar_PopupHelper_IsLogicalAncestorOf_System_Windows_UIElement_System_Windows_UIElement_">PopupHelper.IsLogicalAncestorOf(UIElement, UIElement)</a>

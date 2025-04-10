@@ -4,7 +4,7 @@ items:
   commentId: N:H.Services.Mail
   id: H.Services.Mail
   children:
-  - H.Services.Mail.IMailLogService
+  - H.Services.Mail.ILogMailService
   - H.Services.Mail.IMailService
   - H.Services.Mail.MailMessageItem
   langs:
@@ -17,13 +17,13 @@ items:
   assemblies:
   - H.Services.Mail
 references:
-- uid: H.Services.Mail.IMailLogService
-  commentId: T:H.Services.Mail.IMailLogService
+- uid: H.Services.Mail.ILogMailService
+  commentId: T:H.Services.Mail.ILogMailService
   parent: H.Services.Mail
-  href: H.Services.Mail.IMailLogService.html
-  name: IMailLogService
-  nameWithType: IMailLogService
-  fullName: H.Services.Mail.IMailLogService
+  href: H.Services.Mail.ILogMailService.html
+  name: ILogMailService
+  nameWithType: ILogMailService
+  fullName: H.Services.Mail.ILogMailService
 - uid: H.Services.Mail.IMailService
   commentId: T:H.Services.Mail.IMailService
   parent: H.Services.Mail

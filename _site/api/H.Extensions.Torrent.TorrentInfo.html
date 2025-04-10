@@ -147,10 +147,10 @@ Class TorrentInfo
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -159,7 +159,40 @@ Class TorrentInfo
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -169,39 +202,6 @@ Class TorrentInfo
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
@@ -224,7 +224,7 @@ Class TorrentInfo
 
   <a id="H_Extensions_Torrent_TorrentInfo__ctor_" data-uid="H.Extensions.Torrent.TorrentInfo.#ctor*"></a>
 
-  <h3 id="H_Extensions_Torrent_TorrentInfo__ctor_System_String_H_Extensions_Torrent_Sha1Hash_System_Collections_Generic_IEnumerable_H_Extensions_Torrent_TorrentFile__System_Collections_Generic_IEnumerable_H_Extensions_Torrent_Piece__System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable_System_Uri___System_Collections_Generic_IReadOnlyList_System_Byte__" data-uid="H.Extensions.Torrent.TorrentInfo.#ctor(System.String,H.Extensions.Torrent.Sha1Hash,System.Collections.Generic.IEnumerable{H.Extensions.Torrent.TorrentFile},System.Collections.Generic.IEnumerable{H.Extensions.Torrent.Piece},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Uri}},System.Collections.Generic.IReadOnlyList{System.Byte})">
+  <h3 id="H_Extensions_Torrent_TorrentInfo__ctor_System_String_H_Extensions_Torrent_Provider_Sha1Hash_System_Collections_Generic_IEnumerable_H_Extensions_Torrent_Provider_TorrentFile__System_Collections_Generic_IEnumerable_H_Extensions_Torrent_Provider_Piece__System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable_System_Uri___System_Collections_Generic_IReadOnlyList_System_Byte__" data-uid="H.Extensions.Torrent.TorrentInfo.#ctor(System.String,H.Extensions.Torrent.Provider.Sha1Hash,System.Collections.Generic.IEnumerable{H.Extensions.Torrent.Provider.TorrentFile},System.Collections.Generic.IEnumerable{H.Extensions.Torrent.Provider.Piece},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Uri}},System.Collections.Generic.IReadOnlyList{System.Byte})">
   TorrentInfo(string, Sha1Hash, IEnumerable&lt;TorrentFile&gt;, IEnumerable&lt;Piece&gt;, IEnumerable&lt;IEnumerable&lt;Uri&gt;&gt;, IReadOnlyList&lt;byte&gt;)
   
   </h3>
@@ -240,11 +240,11 @@ Class TorrentInfo
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>infoHash</code> <a class="xref" href="H.Extensions.Torrent.Sha1Hash.html">Sha1Hash</a></dt>
+    <dt><code>infoHash</code> <a class="xref" href="H.Extensions.Torrent.Provider.Sha1Hash.html">Sha1Hash</a></dt>
     <dd></dd>
-    <dt><code>files</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Extensions.Torrent.TorrentFile.html">TorrentFile</a>&gt;</dt>
+    <dt><code>files</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Extensions.Torrent.Provider.TorrentFile.html">TorrentFile</a>&gt;</dt>
     <dd></dd>
-    <dt><code>pieces</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Extensions.Torrent.Piece.html">Piece</a>&gt;</dt>
+    <dt><code>pieces</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Extensions.Torrent.Provider.Piece.html">Piece</a>&gt;</dt>
     <dd></dd>
     <dt><code>trackers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a>&gt;&gt;</dt>
     <dd></dd>
@@ -287,7 +287,7 @@ Class TorrentInfo
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="H.Extensions.Torrent.TorrentFile.html">TorrentFile</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="H.Extensions.Torrent.Provider.TorrentFile.html">TorrentFile</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -318,7 +318,7 @@ Class TorrentInfo
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Extensions.Torrent.Sha1Hash.html">Sha1Hash</a></dt>
+    <dt><a class="xref" href="H.Extensions.Torrent.Provider.Sha1Hash.html">Sha1Hash</a></dt>
     <dd></dd>
   </dl>
 
@@ -442,7 +442,7 @@ Class TorrentInfo
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="H.Extensions.Torrent.Piece.html">Piece</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="H.Extensions.Torrent.Provider.Piece.html">Piece</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -631,7 +631,7 @@ Class TorrentInfo
 
   <a id="H_Extensions_Torrent_TorrentInfo_PieceOffset_" data-uid="H.Extensions.Torrent.TorrentInfo.PieceOffset*"></a>
 
-  <h3 id="H_Extensions_Torrent_TorrentInfo_PieceOffset_H_Extensions_Torrent_Piece_" data-uid="H.Extensions.Torrent.TorrentInfo.PieceOffset(H.Extensions.Torrent.Piece)">
+  <h3 id="H_Extensions_Torrent_TorrentInfo_PieceOffset_H_Extensions_Torrent_Provider_Piece_" data-uid="H.Extensions.Torrent.TorrentInfo.PieceOffset(H.Extensions.Torrent.Provider.Piece)">
   PieceOffset(Piece)
   
   </h3>
@@ -645,7 +645,7 @@ Class TorrentInfo
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>piece</code> <a class="xref" href="H.Extensions.Torrent.Piece.html">Piece</a></dt>
+    <dt><code>piece</code> <a class="xref" href="H.Extensions.Torrent.Provider.Piece.html">Piece</a></dt>
     <dd></dd>
   </dl>
 

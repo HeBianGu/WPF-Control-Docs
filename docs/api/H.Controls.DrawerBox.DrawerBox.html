@@ -131,7 +131,7 @@ public class DrawerBox : Control, IAnimatable, ISupportInitialize, IFrameworkInp
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.iframeworkinputelement">IFrameworkInputElement</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.iinputelement">IInputElement</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.iqueryambient">IQueryAmbient</a></div>
-      <div><a class="xref" href="H.Services.Common.ITransitionHostable.html">ITransitionHostable</a></div>
+      <div><a class="xref" href="H.Common.Transitionable.ITransitionHostable.html">ITransitionHostable</a></div>
     </dd>
   </dl>
 
@@ -1954,10 +1954,16 @@ public class DrawerBox : Control, IAnimatable, ISupportInitialize, IFrameworkInp
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Common.Transitionable.TransitionHostableExtensions.html#H_Common_Transitionable_TransitionHostableExtensions_Close_H_Common_Transitionable_ITransitionHostable_System_Windows_UIElement_">TransitionHostableExtensions.Close(ITransitionHostable, UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Common.Transitionable.TransitionHostableExtensions.html#H_Common_Transitionable_TransitionHostableExtensions_Show_H_Common_Transitionable_ITransitionHostable_System_Windows_UIElement_">TransitionHostableExtensions.Show(ITransitionHostable, UIElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_GetDispatcherValue__2___0_System_Func___0___1__">DispatcherExtension.GetDispatcherValue&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
@@ -1969,19 +1975,46 @@ public class DrawerBox : Control, IAnimatable, ISupportInitialize, IFrameworkInp
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_InvokeDispatcher__2___0_System_Func___0___1__">DispatcherExtension.InvokeDispatcher&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="H.Services.Common.TransitionHostableExtensions.html#H_Services_Common_TransitionHostableExtensions_Close_H_Services_Common_ITransitionHostable_System_Windows_UIElement_">TransitionHostableExtensions.Close(ITransitionHostable, UIElement)</a>
-  </div>
-  <div>
-      <a class="xref" href="H.Services.Common.TransitionHostableExtensions.html#H_Services_Common_TransitionHostableExtensions_Show_H_Services_Common_ITransitionHostable_System_Windows_UIElement_">TransitionHostableExtensions.Show(ITransitionHostable, UIElement)</a>
-  </div>
-  <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -1993,39 +2026,6 @@ public class DrawerBox : Control, IAnimatable, ISupportInitialize, IFrameworkInp
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
-  </div>
-  <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
   </div>
   <div>
@@ -2035,163 +2035,163 @@ public class DrawerBox : Control, IAnimatable, ISupportInitialize, IFrameworkInp
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, IList, Func&lt;IList&gt;, Action, DispatcherPriority)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetTemplateByName__1_System_Windows_Controls_Control_System_String_">ElementExtention.GetTemplateByName&lt;T&gt;(Control, string)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetTemplateByName__1_System_Windows_Controls_Control_System_String_">ElementExtention.GetTemplateByName&lt;T&gt;(Control, string)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_Ancestors_System_Windows_DependencyObject_">ElementExtention.Ancestors(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_Ancestors_System_Windows_DependencyObject_">ElementExtention.Ancestors(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_AncestorsAndSelf_System_Windows_DependencyObject_">ElementExtention.AncestorsAndSelf(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_AncestorsAndSelf_System_Windows_DependencyObject_">ElementExtention.AncestorsAndSelf(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_FindAllVisualChild__1_System_Windows_DependencyObject_System_Predicate___0__">ElementExtention.FindAllVisualChild&lt;T&gt;(DependencyObject, Predicate&lt;T&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_FindAllVisualChild__1_System_Windows_DependencyObject_System_Predicate___0__">ElementExtention.FindAllVisualChild&lt;T&gt;(DependencyObject, Predicate&lt;T&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetChild__1_System_Windows_DependencyObject_System_Func___0_System_Boolean__">ElementExtention.GetChild&lt;T&gt;(DependencyObject, Func&lt;T, bool&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetChild__1_System_Windows_DependencyObject_System_Func___0_System_Boolean__">ElementExtention.GetChild&lt;T&gt;(DependencyObject, Func&lt;T, bool&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetChildren__1_System_Windows_DependencyObject_System_Func___0_System_Boolean__System_Boolean_">ElementExtention.GetChildren&lt;T&gt;(DependencyObject, Func&lt;T, bool&gt;, bool)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetChildren__1_System_Windows_DependencyObject_System_Func___0_System_Boolean__System_Boolean_">ElementExtention.GetChildren&lt;T&gt;(DependencyObject, Func&lt;T, bool&gt;, bool)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetElement__1_System_Windows_DependencyObject_">ElementExtention.GetElement&lt;T&gt;(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetElement__1_System_Windows_DependencyObject_">ElementExtention.GetElement&lt;T&gt;(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetElements__1_System_Windows_DependencyObject_">ElementExtention.GetElements&lt;T&gt;(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetElements__1_System_Windows_DependencyObject_">ElementExtention.GetElements&lt;T&gt;(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetImplementationRoot_System_Windows_DependencyObject_">ElementExtention.GetImplementationRoot(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetImplementationRoot_System_Windows_DependencyObject_">ElementExtention.GetImplementationRoot(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetParent_System_Windows_DependencyObject_">ElementExtention.GetParent(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetParent_System_Windows_DependencyObject_">ElementExtention.GetParent(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetParent_System_Windows_DependencyObject_System_Type_">ElementExtention.GetParent(DependencyObject, Type)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetParent_System_Windows_DependencyObject_System_Type_">ElementExtention.GetParent(DependencyObject, Type)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetParent__1_System_Windows_DependencyObject_">ElementExtention.GetParent&lt;T&gt;(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetParent__1_System_Windows_DependencyObject_">ElementExtention.GetParent&lt;T&gt;(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetParent__1_System_Windows_DependencyObject_System_Func___0_System_Boolean__">ElementExtention.GetParent&lt;T&gt;(DependencyObject, Func&lt;T, bool&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetParent__1_System_Windows_DependencyObject_System_Func___0_System_Boolean__">ElementExtention.GetParent&lt;T&gt;(DependencyObject, Func&lt;T, bool&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetValueSync__1_System_Windows_DependencyObject_System_Windows_DependencyProperty_">ElementExtention.GetValueSync&lt;T&gt;(DependencyObject, DependencyProperty)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetValueSync__1_System_Windows_DependencyObject_System_Windows_DependencyProperty_">ElementExtention.GetValueSync&lt;T&gt;(DependencyObject, DependencyProperty)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_PrintLogicalTree_System_Windows_DependencyObject_">ElementExtention.PrintLogicalTree(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_PrintLogicalTree_System_Windows_DependencyObject_">ElementExtention.PrintLogicalTree(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_PrintVisualTree_System_Windows_DependencyObject_">ElementExtention.PrintVisualTree(DependencyObject)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_PrintVisualTree_System_Windows_DependencyObject_">ElementExtention.PrintVisualTree(DependencyObject)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_SetValueSync__1_System_Windows_DependencyObject_System_Windows_DependencyProperty___0_">ElementExtention.SetValueSync&lt;T&gt;(DependencyObject, DependencyProperty, T)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_SetValueSync__1_System_Windows_DependencyObject_System_Windows_DependencyProperty___0_">ElementExtention.SetValueSync&lt;T&gt;(DependencyObject, DependencyProperty, T)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_TryGetVisualStateGroup_System_Windows_DependencyObject_System_String_">ElementExtention.TryGetVisualStateGroup(DependencyObject, string)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_TryGetVisualStateGroup_System_Windows_DependencyObject_System_String_">ElementExtention.TryGetVisualStateGroup(DependencyObject, string)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_AddAdorner_System_Windows_UIElement_System_Windows_Documents_Adorner_">ElementExtention.AddAdorner(UIElement, Adorner)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_AddAdorner_System_Windows_UIElement_System_Windows_Documents_Adorner_">ElementExtention.AddAdorner(UIElement, Adorner)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationAngle_System_Windows_UIElement_System_Double_System_Double_">ElementExtention.BeginAnimationAngle(UIElement, double, double)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_BindCommand_System_Windows_UIElement_System_Windows_Input_ICommand_">ElementExtention.BindCommand(UIElement, ICommand)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationAngle_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationAngle(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_BindCommand_System_Windows_UIElement_System_Windows_Input_ICommand_System_Action_System_Object_System_Windows_Input_ExecutedRoutedEventArgs__">ElementExtention.BindCommand(UIElement, ICommand, Action&lt;object, ExecutedRoutedEventArgs&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationOpacity_System_Windows_UIElement_System_Double_System_Double_">ElementExtention.BeginAnimationOpacity(UIElement, double, double)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_ClearAdorner_System_Windows_UIElement_System_Predicate_System_Windows_Documents_Adorner__">ElementExtention.ClearAdorner(UIElement, Predicate&lt;Adorner&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationOpacity_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationOpacity(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_Collapsed_System_Windows_UIElement_">ElementExtention.Collapsed(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationPath_System_Windows_UIElement_System_Windows_Media_PathGeometry_System_Double_System_Boolean_System_Boolean_">ElementExtention.BeginAnimationPath(UIElement, PathGeometry, double, bool, bool)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetAdorner_System_Windows_UIElement_System_Predicate_System_Windows_Documents_Adorner__">ElementExtention.GetAdorner(UIElement, Predicate&lt;Adorner&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationScale_System_Windows_UIElement_System_Double_System_Double_System_Double_">ElementExtention.BeginAnimationScale(UIElement, double, double, double)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetAdorners_System_Windows_UIElement_System_Predicate_System_Windows_Documents_Adorner__">ElementExtention.GetAdorners(UIElement, Predicate&lt;Adorner&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationScaleX_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationScaleX(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetContent_System_Windows_UIElement_">ElementExtention.GetContent(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationScaleY_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationScaleY(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetDataContext_System_Windows_UIElement_">ElementExtention.GetDataContext(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationSkew_System_Windows_UIElement_System_Double_System_Double_System_Double_">ElementExtention.BeginAnimationSkew(UIElement, double, double, double)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetImage_System_Windows_UIElement_">ElementExtention.GetImage(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationSkewX_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationSkewX(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_GetItemsSource__1_System_Windows_UIElement_">ElementExtention.GetItemsSource&lt;T&gt;(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationSkewY_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationSkewY(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_Hidden_System_Windows_UIElement_">ElementExtention.Hidden(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationX_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationX(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_HitTest__1_System_Windows_UIElement_System_Windows_Media_Geometry_System_Predicate___0__">ElementExtention.HitTest&lt;T&gt;(UIElement, Geometry, Predicate&lt;T&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationXY_System_Windows_UIElement_System_Double_System_Double_System_Double_">ElementExtention.BeginAnimationXY(UIElement, double, double, double)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_HitTest__1_System_Windows_UIElement_System_Windows_Point_">ElementExtention.HitTest&lt;T&gt;(UIElement, Point)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BeginAnimationY_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationY(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_HitTest__1_System_Windows_UIElement_System_Windows_Point_System_Predicate___0__">ElementExtention.HitTest&lt;T&gt;(UIElement, Point, Predicate&lt;T&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BegionDoubleStoryBoard_System_Windows_UIElement_System_Double_System_Double_System_Double_System_String_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BegionDoubleStoryBoard(UIElement, double, double, double, string, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_VisibilityWith_System_Windows_UIElement_System_Boolean_">ElementExtention.VisibilityWith(UIElement, bool)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BindCommand_System_Windows_UIElement_System_Windows_Input_ICommand_">ElementExtention.BindCommand(UIElement, ICommand)</a>
+      <a class="xref" href="H.Extensions.Common.ElementExtention.html#H_Extensions_Common_ElementExtention_Visible_System_Windows_UIElement_">ElementExtention.Visible(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_BindCommand_System_Windows_UIElement_System_Windows_Input_ICommand_System_Action_System_Object_System_Windows_Input_ExecutedRoutedEventArgs__">ElementExtention.BindCommand(UIElement, ICommand, Action&lt;object, ExecutedRoutedEventArgs&gt;)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationAngle_System_Windows_UIElement_System_Double_System_Double_">ElementExtention.BeginAnimationAngle(UIElement, double, double)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_CheckDefaultTransformGroup_System_Windows_UIElement_">ElementExtention.CheckDefaultTransformGroup(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationAngle_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationAngle(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_ClearAdorner_System_Windows_UIElement_System_Predicate_System_Windows_Documents_Adorner__">ElementExtention.ClearAdorner(UIElement, Predicate&lt;Adorner&gt;)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationOpacity_System_Windows_UIElement_System_Double_System_Double_">ElementExtention.BeginAnimationOpacity(UIElement, double, double)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_Collapsed_System_Windows_UIElement_">ElementExtention.Collapsed(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationOpacity_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationOpacity(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetAdorner_System_Windows_UIElement_System_Predicate_System_Windows_Documents_Adorner__">ElementExtention.GetAdorner(UIElement, Predicate&lt;Adorner&gt;)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationPath_System_Windows_UIElement_System_Windows_Media_PathGeometry_System_Double_System_Boolean_System_Boolean_">ElementExtention.BeginAnimationPath(UIElement, PathGeometry, double, bool, bool)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetAdorners_System_Windows_UIElement_System_Predicate_System_Windows_Documents_Adorner__">ElementExtention.GetAdorners(UIElement, Predicate&lt;Adorner&gt;)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationScale_System_Windows_UIElement_System_Double_System_Double_System_Double_">ElementExtention.BeginAnimationScale(UIElement, double, double, double)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetContent_System_Windows_UIElement_">ElementExtention.GetContent(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationScaleX_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationScaleX(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetDataContext_System_Windows_UIElement_">ElementExtention.GetDataContext(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationScaleY_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationScaleY(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetImage_System_Windows_UIElement_">ElementExtention.GetImage(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationSkew_System_Windows_UIElement_System_Double_System_Double_System_Double_">ElementExtention.BeginAnimationSkew(UIElement, double, double, double)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetItemsSource__1_System_Windows_UIElement_">ElementExtention.GetItemsSource&lt;T&gt;(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationSkewX_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationSkewX(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_GetTransform__1_System_Windows_UIElement_">ElementExtention.GetTransform&lt;T&gt;(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationSkewY_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationSkewY(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_Hidden_System_Windows_UIElement_">ElementExtention.Hidden(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationX_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationX(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_HitTest__1_System_Windows_UIElement_System_Windows_Media_Geometry_System_Predicate___0__">ElementExtention.HitTest&lt;T&gt;(UIElement, Geometry, Predicate&lt;T&gt;)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationXY_System_Windows_UIElement_System_Double_System_Double_System_Double_">ElementExtention.BeginAnimationXY(UIElement, double, double, double)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_HitTest__1_System_Windows_UIElement_System_Windows_Point_">ElementExtention.HitTest&lt;T&gt;(UIElement, Point)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BeginAnimationY_System_Windows_UIElement_System_Double_System_Double_System_Double_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BeginAnimationY(UIElement, double, double, double, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_HitTest__1_System_Windows_UIElement_System_Windows_Point_System_Predicate___0__">ElementExtention.HitTest&lt;T&gt;(UIElement, Point, Predicate&lt;T&gt;)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_BegionDoubleStoryBoard_System_Windows_UIElement_System_Double_System_Double_System_Double_System_String_System_Action_System_Windows_UIElement__System_Action_H_Extensions_StoryBoard_StoryboardEngineBase__">ElementExtention.BegionDoubleStoryBoard(UIElement, double, double, double, string, Action&lt;UIElement&gt;, Action&lt;StoryboardEngineBase&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_VisibilityWith_System_Windows_UIElement_System_Boolean_">ElementExtention.VisibilityWith(UIElement, bool)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_CheckDefaultTransformGroup_System_Windows_UIElement_">ElementExtention.CheckDefaultTransformGroup(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_Visible_System_Windows_UIElement_">ElementExtention.Visible(UIElement)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_GetTransform__1_System_Windows_UIElement_">ElementExtention.GetTransform&lt;T&gt;(UIElement)</a>
   </div>
   <div>
-      <a class="xref" href="System.Windows.ElementExtention.html#System_Windows_ElementExtention_Wait_System_Windows_UIElement_System_Double_System_Action_System_Windows_UIElement__">ElementExtention.Wait(UIElement, double, Action&lt;UIElement&gt;)</a>
+      <a class="xref" href="H.Extensions.StoryBoard.ElementExtention.html#H_Extensions_StoryBoard_ElementExtention_Wait_System_Windows_UIElement_System_Double_System_Action_System_Windows_UIElement__">ElementExtention.Wait(UIElement, double, Action&lt;UIElement&gt;)</a>
   </div>
   </dd></dl>
 
@@ -2410,7 +2410,7 @@ public class DrawerBox : Control, IAnimatable, ISupportInitialize, IFrameworkInp
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="H.Services.Common.ITransitionable.html">ITransitionable</a></dt>
+    <dt><a class="xref" href="H.Common.Transitionable.ITransitionable.html">ITransitionable</a></dt>
     <dd></dd>
   </dl>
 

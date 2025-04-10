@@ -101,7 +101,7 @@ Class SqlServerSettable&lt;TSetting&gt;
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SqlServerSettable&lt;TSetting&gt; : DbSettableBase&lt;TSetting&gt;, INotifyPropertyChanged, IDisplayBindable, IIconable, IDable, IDescriptionable, ISettable, INameable, IOrderable, IGroupable, ILoadable, ISaveable, IDefaultable, IDbSettable, ISqlServerOption where TSetting : new()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SqlServerSettable&lt;TSetting&gt; : DbSettableBase&lt;TSetting&gt;, INotifyPropertyChanged, IDisplayBindable, IIconable, IDable, IDescriptionable, ISettable, INameable, IOrderable, IGroupable, ILoadable, ISaveable, IDefaultable, IClearable, IDbSettable, ISqlServerOption where TSetting : new()</code></pre>
   </div>
 
 
@@ -131,17 +131,18 @@ Class SqlServerSettable&lt;TSetting&gt;
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IDisplayBindable.html">IDisplayBindable</a></div>
-      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IDable.html">IDable</a></div>
-      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
-      <div><a class="xref" href="H.Services.Common.ISettable.html">ISettable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
-      <div><a class="xref" href="H.Mvvm.IOrderable.html">IOrderable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IGroupable.html">IGroupable</a></div>
-      <div><a class="xref" href="H.Services.Common.ILoadable.html">ILoadable</a></div>
-      <div><a class="xref" href="H.Services.Common.ISaveable.html">ISaveable</a></div>
-      <div><a class="xref" href="H.Services.Common.IDefaultable.html">IDefaultable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.IDisplayBindable.html">IDisplayBindable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDescriptionable.html">IDescriptionable</a></div>
+      <div><a class="xref" href="H.Services.Setting.ISettable.html">ISettable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IOrderable.html">IOrderable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IGroupable.html">IGroupable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.ILoadable.html">ILoadable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.ISaveable.html">ISaveable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDefaultable.html">IDefaultable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IClearable.html">IClearable</a></div>
       <div><a class="xref" href="H.DataBases.Share.IDbSettable.html">IDbSettable</a></div>
       <div><a class="xref" href="H.DataBases.SqlServer.ISqlServerOption.html">ISqlServerOption</a></div>
     </dd>
@@ -158,6 +159,15 @@ Class SqlServerSettable&lt;TSetting&gt;
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="H.DataBases.Share.DbSettableBase-1.html#H_DataBases_Share_DbSettableBase_1_LoadDefault">DbSettableBase&lt;TSetting&gt;.LoadDefault()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.DataBases.Share.DbSettableBase-1.html#H_DataBases_Share_DbSettableBase_1_GetDefaultPath">DbSettableBase&lt;TSetting&gt;.GetDefaultPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.DataBases.Share.DbSettableBase-1.html#H_DataBases_Share_DbSettableBase_1_ConfigPath">DbSettableBase&lt;TSetting&gt;.ConfigPath</a>
+    </div>
+    <div>
       <a class="xref" href="H.DataBases.Share.DbSettableBase-1.html#H_DataBases_Share_DbSettableBase_1_ConnectCommand">DbSettableBase&lt;TSetting&gt;.ConnectCommand</a>
     </div>
     <div>
@@ -165,6 +175,9 @@ Class SqlServerSettable&lt;TSetting&gt;
     </div>
     <div>
       <a class="xref" href="H.Extensions.Setting.LazySettableInstance-1.html#H_Extensions_Setting_LazySettableInstance_1_Instance">LazySettableInstance&lt;TSetting&gt;.Instance</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Setting.SettableBase.html#H_Extensions_Setting_SettableBase_IsVisibleInSetting">SettableBase.IsVisibleInSetting</a>
     </div>
     <div>
       <a class="xref" href="H.Extensions.Setting.SettableBase.html#H_Extensions_Setting_SettableBase_GetDefaultFolder">SettableBase.GetDefaultFolder()</a>
@@ -183,6 +196,9 @@ Class SqlServerSettable&lt;TSetting&gt;
     </div>
     <div>
       <a class="xref" href="H.Extensions.Setting.SettableBase.html#H_Extensions_Setting_SettableBase_IsInit">SettableBase.IsInit()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Setting.SettableBase.html#H_Extensions_Setting_SettableBase_Clear">SettableBase.Clear()</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
@@ -274,10 +290,10 @@ Class SqlServerSettable&lt;TSetting&gt;
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -286,7 +302,40 @@ Class SqlServerSettable&lt;TSetting&gt;
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -296,39 +345,6 @@ Class SqlServerSettable&lt;TSetting&gt;
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
@@ -347,39 +363,6 @@ Class SqlServerSettable&lt;TSetting&gt;
 
   <h2 class="section" id="properties">Properties
 </h2>
-
-
-  <a id="H_DataBases_SqlServer_SqlServerSettable_1_ConfigPath_" data-uid="H.DataBases.SqlServer.SqlServerSettable`1.ConfigPath*"></a>
-
-  <h3 id="H_DataBases_SqlServer_SqlServerSettable_1_ConfigPath" data-uid="H.DataBases.SqlServer.SqlServerSettable`1.ConfigPath">
-  ConfigPath
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Browsable(false)]
-[Display(Name = &quot;文件路径&quot;)]
-public string ConfigPath { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
   <a id="H_DataBases_SqlServer_SqlServerSettable_1_InitialCatalog_" data-uid="H.DataBases.SqlServer.SqlServerSettable`1.InitialCatalog*"></a>
@@ -534,64 +517,6 @@ public string UserName { get; set; }</code></pre>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="H_DataBases_SqlServer_SqlServerSettable_1_GetDefaultPath_" data-uid="H.DataBases.SqlServer.SqlServerSettable`1.GetDefaultPath*"></a>
-
-  <h3 id="H_DataBases_SqlServer_SqlServerSettable_1_GetDefaultPath" data-uid="H.DataBases.SqlServer.SqlServerSettable`1.GetDefaultPath">
-  GetDefaultPath()
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string GetDefaultPath()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="H_DataBases_SqlServer_SqlServerSettable_1_LoadDefault_" data-uid="H.DataBases.SqlServer.SqlServerSettable`1.LoadDefault*"></a>
-
-  <h3 id="H_DataBases_SqlServer_SqlServerSettable_1_LoadDefault" data-uid="H.DataBases.SqlServer.SqlServerSettable`1.LoadDefault">
-  LoadDefault()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>加载默认值。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void LoadDefault()</code></pre>
-  </div>
-
-
 
 
 

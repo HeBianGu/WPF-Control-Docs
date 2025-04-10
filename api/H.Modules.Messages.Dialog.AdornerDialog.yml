@@ -5,8 +5,8 @@ items:
   id: AdornerDialog
   parent: H.Modules.Messages.Dialog
   children:
-  - H.Modules.Messages.Dialog.AdornerDialog.ShowAction``2(``0,System.Func{H.Services.Common.IDialog,``0,``1},System.Action{H.Services.Common.IDialog})
-  - H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(System.Object,System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+  - H.Modules.Messages.Dialog.AdornerDialog.ShowAction``2(``0,System.Func{H.Services.Message.Dialog.IDialog,``0,``1},System.Action{H.Services.Message.Dialog.IDialog})
+  - H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(System.Object,System.Action{H.Services.Message.Dialog.IDialog},System.Func{System.Threading.Tasks.Task{System.Boolean}})
   langs:
   - csharp
   - vb
@@ -16,8 +16,8 @@ items:
   type: Class
   source:
     id: AdornerDialog
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\AdonerDialog\AdornerDialog.cs
-    startLine: 8
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\AdonerDialog\AdornerDialog.cs
+    startLine: 7
   assemblies:
   - H.Modules.Messages.Dialog
   namespace: H.Modules.Messages.Dialog
@@ -34,55 +34,55 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(System.Object,System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
-  commentId: M:H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(System.Object,System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
-  id: ShowPresenter(System.Object,System.Action{H.Services.Common.IDialog},System.Func{System.Boolean})
+- uid: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(System.Object,System.Action{H.Services.Message.Dialog.IDialog},System.Func{System.Threading.Tasks.Task{System.Boolean}})
+  commentId: M:H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(System.Object,System.Action{H.Services.Message.Dialog.IDialog},System.Func{System.Threading.Tasks.Task{System.Boolean}})
+  id: ShowPresenter(System.Object,System.Action{H.Services.Message.Dialog.IDialog},System.Func{System.Threading.Tasks.Task{System.Boolean}})
   parent: H.Modules.Messages.Dialog.AdornerDialog
   langs:
   - csharp
   - vb
-  name: ShowPresenter(object, Action<IDialog>, Func<bool>)
-  nameWithType: AdornerDialog.ShowPresenter(object, Action<IDialog>, Func<bool>)
-  fullName: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(object, System.Action<H.Services.Common.IDialog>, System.Func<bool>)
+  name: ShowPresenter(object, Action<IDialog>, Func<Task<bool>>)
+  nameWithType: AdornerDialog.ShowPresenter(object, Action<IDialog>, Func<Task<bool>>)
+  fullName: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(object, System.Action<H.Services.Message.Dialog.IDialog>, System.Func<System.Threading.Tasks.Task<bool>>)
   type: Method
   source:
     id: ShowPresenter
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\AdonerDialog\AdornerDialog.cs
-    startLine: 10
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\AdonerDialog\AdornerDialog.cs
+    startLine: 9
   assemblies:
   - H.Modules.Messages.Dialog
   namespace: H.Modules.Messages.Dialog
   syntax:
-    content: public static Task<bool?> ShowPresenter(object presenter, Action<IDialog> action = null, Func<bool> canSumit = null)
+    content: public static Task<bool?> ShowPresenter(object presenter, Action<IDialog> action = null, Func<Task<bool>> canSumit = null)
     parameters:
     - id: presenter
       type: System.Object
     - id: action
-      type: System.Action{H.Services.Common.IDialog}
+      type: System.Action{H.Services.Message.Dialog.IDialog}
     - id: canSumit
-      type: System.Func{System.Boolean}
+      type: System.Func{System.Threading.Tasks.Task{System.Boolean}}
     return:
       type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
-    content.vb: Public Shared Function ShowPresenter(presenter As Object, action As Action(Of IDialog) = Nothing, canSumit As Func(Of Boolean) = Nothing) As Task(Of Boolean?)
+    content.vb: Public Shared Function ShowPresenter(presenter As Object, action As Action(Of IDialog) = Nothing, canSumit As Func(Of Task(Of Boolean)) = Nothing) As Task(Of Boolean?)
   overload: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter*
-  nameWithType.vb: AdornerDialog.ShowPresenter(Object, Action(Of IDialog), Func(Of Boolean))
-  fullName.vb: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(Object, System.Action(Of H.Services.Common.IDialog), System.Func(Of Boolean))
-  name.vb: ShowPresenter(Object, Action(Of IDialog), Func(Of Boolean))
-- uid: H.Modules.Messages.Dialog.AdornerDialog.ShowAction``2(``0,System.Func{H.Services.Common.IDialog,``0,``1},System.Action{H.Services.Common.IDialog})
-  commentId: M:H.Modules.Messages.Dialog.AdornerDialog.ShowAction``2(``0,System.Func{H.Services.Common.IDialog,``0,``1},System.Action{H.Services.Common.IDialog})
-  id: ShowAction``2(``0,System.Func{H.Services.Common.IDialog,``0,``1},System.Action{H.Services.Common.IDialog})
+  nameWithType.vb: AdornerDialog.ShowPresenter(Object, Action(Of IDialog), Func(Of Task(Of Boolean)))
+  fullName.vb: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter(Object, System.Action(Of H.Services.Message.Dialog.IDialog), System.Func(Of System.Threading.Tasks.Task(Of Boolean)))
+  name.vb: ShowPresenter(Object, Action(Of IDialog), Func(Of Task(Of Boolean)))
+- uid: H.Modules.Messages.Dialog.AdornerDialog.ShowAction``2(``0,System.Func{H.Services.Message.Dialog.IDialog,``0,``1},System.Action{H.Services.Message.Dialog.IDialog})
+  commentId: M:H.Modules.Messages.Dialog.AdornerDialog.ShowAction``2(``0,System.Func{H.Services.Message.Dialog.IDialog,``0,``1},System.Action{H.Services.Message.Dialog.IDialog})
+  id: ShowAction``2(``0,System.Func{H.Services.Message.Dialog.IDialog,``0,``1},System.Action{H.Services.Message.Dialog.IDialog})
   parent: H.Modules.Messages.Dialog.AdornerDialog
   langs:
   - csharp
   - vb
   name: ShowAction<P, T>(P, Func<IDialog, P, T>, Action<IDialog>)
   nameWithType: AdornerDialog.ShowAction<P, T>(P, Func<IDialog, P, T>, Action<IDialog>)
-  fullName: H.Modules.Messages.Dialog.AdornerDialog.ShowAction<P, T>(P, System.Func<H.Services.Common.IDialog, P, T>, System.Action<H.Services.Common.IDialog>)
+  fullName: H.Modules.Messages.Dialog.AdornerDialog.ShowAction<P, T>(P, System.Func<H.Services.Message.Dialog.IDialog, P, T>, System.Action<H.Services.Message.Dialog.IDialog>)
   type: Method
   source:
     id: ShowAction
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\AdonerDialog\AdornerDialog.cs
-    startLine: 20
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Messages.Dialog\AdonerDialog\AdornerDialog.cs
+    startLine: 19
   assemblies:
   - H.Modules.Messages.Dialog
   namespace: H.Modules.Messages.Dialog
@@ -92,9 +92,9 @@ items:
     - id: presenter
       type: '{P}'
     - id: func
-      type: System.Func{H.Services.Common.IDialog,{P},{T}}
+      type: System.Func{H.Services.Message.Dialog.IDialog,{P},{T}}
     - id: action
-      type: System.Action{H.Services.Common.IDialog}
+      type: System.Action{H.Services.Message.Dialog.IDialog}
     typeParameters:
     - id: P
     - id: T
@@ -103,7 +103,7 @@ items:
     content.vb: Public Shared Function ShowAction(Of P, T)(presenter As P, func As Func(Of IDialog, P, T) = Nothing, action As Action(Of IDialog) = Nothing) As Task(Of T)
   overload: H.Modules.Messages.Dialog.AdornerDialog.ShowAction*
   nameWithType.vb: AdornerDialog.ShowAction(Of P, T)(P, Func(Of IDialog, P, T), Action(Of IDialog))
-  fullName.vb: H.Modules.Messages.Dialog.AdornerDialog.ShowAction(Of P, T)(P, System.Func(Of H.Services.Common.IDialog, P, T), System.Action(Of H.Services.Common.IDialog))
+  fullName.vb: H.Modules.Messages.Dialog.AdornerDialog.ShowAction(Of P, T)(P, System.Func(Of H.Services.Message.Dialog.IDialog, P, T), System.Action(Of H.Services.Message.Dialog.IDialog))
   name.vb: ShowAction(Of P, T)(P, Func(Of IDialog, P, T), Action(Of IDialog))
 references:
 - uid: H.Modules.Messages.Dialog
@@ -382,20 +382,20 @@ references:
   fullName: System
 - uid: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter*
   commentId: Overload:H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter
-  href: H.Modules.Messages.Dialog.AdornerDialog.html#H_Modules_Messages_Dialog_AdornerDialog_ShowPresenter_System_Object_System_Action_H_Services_Common_IDialog__System_Func_System_Boolean__
+  href: H.Modules.Messages.Dialog.AdornerDialog.html#H_Modules_Messages_Dialog_AdornerDialog_ShowPresenter_System_Object_System_Action_H_Services_Message_Dialog_IDialog__System_Func_System_Threading_Tasks_Task_System_Boolean___
   name: ShowPresenter
   nameWithType: AdornerDialog.ShowPresenter
   fullName: H.Modules.Messages.Dialog.AdornerDialog.ShowPresenter
-- uid: System.Action{H.Services.Common.IDialog}
-  commentId: T:System.Action{H.Services.Common.IDialog}
+- uid: System.Action{H.Services.Message.Dialog.IDialog}
+  commentId: T:System.Action{H.Services.Message.Dialog.IDialog}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
   name: Action<IDialog>
   nameWithType: Action<IDialog>
-  fullName: System.Action<H.Services.Common.IDialog>
+  fullName: System.Action<H.Services.Message.Dialog.IDialog>
   nameWithType.vb: Action(Of IDialog)
-  fullName.vb: System.Action(Of H.Services.Common.IDialog)
+  fullName.vb: System.Action(Of H.Services.Message.Dialog.IDialog)
   name.vb: Action(Of IDialog)
   spec.csharp:
   - uid: System.Action`1
@@ -403,9 +403,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Services.Common.IDialog
+  - uid: H.Services.Message.Dialog.IDialog
     name: IDialog
-    href: H.Services.Common.IDialog.html
+    href: H.Services.Message.Dialog.IDialog.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -415,31 +415,37 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.IDialog
+  - uid: H.Services.Message.Dialog.IDialog
     name: IDialog
-    href: H.Services.Common.IDialog.html
+    href: H.Services.Message.Dialog.IDialog.html
   - name: )
-- uid: System.Func{System.Boolean}
-  commentId: T:System.Func{System.Boolean}
+- uid: System.Func{System.Threading.Tasks.Task{System.Boolean}}
+  commentId: T:System.Func{System.Threading.Tasks.Task{System.Boolean}}
   parent: System
   definition: System.Func`1
   href: https://learn.microsoft.com/dotnet/api/system.func-1
-  name: Func<bool>
-  nameWithType: Func<bool>
-  fullName: System.Func<bool>
-  nameWithType.vb: Func(Of Boolean)
-  fullName.vb: System.Func(Of Boolean)
-  name.vb: Func(Of Boolean)
+  name: Func<Task<bool>>
+  nameWithType: Func<Task<bool>>
+  fullName: System.Func<System.Threading.Tasks.Task<bool>>
+  nameWithType.vb: Func(Of Task(Of Boolean))
+  fullName.vb: System.Func(Of System.Threading.Tasks.Task(Of Boolean))
+  name.vb: Func(Of Task(Of Boolean))
   spec.csharp:
   - uid: System.Func`1
     name: Func
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.func-1
   - name: <
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
   - uid: System.Boolean
     name: bool
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
   - name: '>'
   spec.vb:
   - uid: System.Func`1
@@ -449,10 +455,18 @@ references:
   - name: (
   - name: Of
   - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
   - uid: System.Boolean
     name: Boolean
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
   - name: )
 - uid: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
   commentId: T:System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
@@ -614,7 +628,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
 - uid: H.Modules.Messages.Dialog.AdornerDialog.ShowAction*
   commentId: Overload:H.Modules.Messages.Dialog.AdornerDialog.ShowAction
-  href: H.Modules.Messages.Dialog.AdornerDialog.html#H_Modules_Messages_Dialog_AdornerDialog_ShowAction__2___0_System_Func_H_Services_Common_IDialog___0___1__System_Action_H_Services_Common_IDialog__
+  href: H.Modules.Messages.Dialog.AdornerDialog.html#H_Modules_Messages_Dialog_AdornerDialog_ShowAction__2___0_System_Func_H_Services_Message_Dialog_IDialog___0___1__System_Action_H_Services_Message_Dialog_IDialog__
   name: ShowAction
   nameWithType: AdornerDialog.ShowAction
   fullName: H.Modules.Messages.Dialog.AdornerDialog.ShowAction
@@ -624,16 +638,16 @@ references:
   name: P
   nameWithType: P
   fullName: P
-- uid: System.Func{H.Services.Common.IDialog,{P},{T}}
-  commentId: T:System.Func{H.Services.Common.IDialog,``0,``1}
+- uid: System.Func{H.Services.Message.Dialog.IDialog,{P},{T}}
+  commentId: T:System.Func{H.Services.Message.Dialog.IDialog,``0,``1}
   parent: System
   definition: System.Func`3
   href: https://learn.microsoft.com/dotnet/api/system.func-3
   name: Func<IDialog, P, T>
   nameWithType: Func<IDialog, P, T>
-  fullName: System.Func<H.Services.Common.IDialog, P, T>
+  fullName: System.Func<H.Services.Message.Dialog.IDialog, P, T>
   nameWithType.vb: Func(Of IDialog, P, T)
-  fullName.vb: System.Func(Of H.Services.Common.IDialog, P, T)
+  fullName.vb: System.Func(Of H.Services.Message.Dialog.IDialog, P, T)
   name.vb: Func(Of IDialog, P, T)
   spec.csharp:
   - uid: System.Func`3
@@ -641,9 +655,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.func-3
   - name: <
-  - uid: H.Services.Common.IDialog
+  - uid: H.Services.Message.Dialog.IDialog
     name: IDialog
-    href: H.Services.Common.IDialog.html
+    href: H.Services.Message.Dialog.IDialog.html
   - name: ','
   - name: " "
   - name: P
@@ -659,9 +673,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.IDialog
+  - uid: H.Services.Message.Dialog.IDialog
     name: IDialog
-    href: H.Services.Common.IDialog.html
+    href: H.Services.Message.Dialog.IDialog.html
   - name: ','
   - name: " "
   - name: P
@@ -670,7 +684,7 @@ references:
   - name: T
   - name: )
 - uid: System.Threading.Tasks.Task{{T}}
-  commentId: T:System.Threading.Tasks.Task{``1}
+  commentId: T:System.Threading.Tasks.Task{``0}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1

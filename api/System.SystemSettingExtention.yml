@@ -5,11 +5,12 @@ items:
   id: SystemSettingExtention
   parent: System
   children:
-  - System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Services.Common.ISettingViewOption})
-  - System.SystemSettingExtention.UseSetting(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingViewOption})
-  - System.SystemSettingExtention.UseSettingDataManager(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})
-  - System.SystemSettingExtention.UseSettingDefault(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})
-  - System.SystemSettingExtention.UseSettingSecurity(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingSecurityViewOption})
+  - System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})
+  - System.SystemSettingExtention.AddSettingDataService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})
+  - System.SystemSettingExtention.UseSettingDataOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})
+  - System.SystemSettingExtention.UseSettingDefaultOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})
+  - System.SystemSettingExtention.UseSettingSecurityOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingSecurityViewOption})
+  - System.SystemSettingExtention.UseSettingViewOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingViewOptions})
   langs:
   - csharp
   - vb
@@ -19,8 +20,8 @@ items:
   type: Class
   source:
     id: SystemSettingExtention
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
-    startLine: 9
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
+    startLine: 10
   assemblies:
   - H.Modules.Setting
   namespace: System
@@ -37,175 +38,206 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Services.Common.ISettingViewOption})
-  commentId: M:System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Services.Common.ISettingViewOption})
-  id: AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Services.Common.ISettingViewOption})
+- uid: System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})
+  commentId: M:System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})
+  id: AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})
   isExtensionMethod: true
   parent: System.SystemSettingExtention
   langs:
   - csharp
   - vb
-  name: AddSetting(IServiceCollection, Action<ISettingViewOption>)
-  nameWithType: SystemSettingExtention.AddSetting(IServiceCollection, Action<ISettingViewOption>)
-  fullName: System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Services.Common.ISettingViewOption>)
+  name: AddSetting(IServiceCollection, Action<ISettingViewOptions>)
+  nameWithType: SystemSettingExtention.AddSetting(IServiceCollection, Action<ISettingViewOptions>)
+  fullName: System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Setting.ISettingViewOptions>)
   type: Method
   source:
     id: AddSetting
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
-    startLine: 14
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
+    startLine: 12
   assemblies:
   - H.Modules.Setting
   namespace: System
-  summary: 设置系统路径
-  example: []
   syntax:
-    content: public static IServiceCollection AddSetting(this IServiceCollection services, Action<ISettingViewOption> setupAction = null)
+    content: public static IServiceCollection AddSetting(this IServiceCollection services, Action<ISettingViewOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Services.Common.ISettingViewOption}
+      type: System.Action{H.Modules.Setting.ISettingViewOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddSetting(services As IServiceCollection, setupAction As Action(Of ISettingViewOption) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddSetting(services As IServiceCollection, setupAction As Action(Of ISettingViewOptions) = Nothing) As IServiceCollection
   overload: System.SystemSettingExtention.AddSetting*
-  nameWithType.vb: SystemSettingExtention.AddSetting(IServiceCollection, Action(Of ISettingViewOption))
-  fullName.vb: System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Services.Common.ISettingViewOption))
-  name.vb: AddSetting(IServiceCollection, Action(Of ISettingViewOption))
-- uid: System.SystemSettingExtention.UseSettingDataManager(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})
-  commentId: M:System.SystemSettingExtention.UseSettingDataManager(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})
-  id: UseSettingDataManager(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})
+  nameWithType.vb: SystemSettingExtention.AddSetting(IServiceCollection, Action(Of ISettingViewOptions))
+  fullName.vb: System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Setting.ISettingViewOptions))
+  name.vb: AddSetting(IServiceCollection, Action(Of ISettingViewOptions))
+- uid: System.SystemSettingExtention.AddSettingDataService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})
+  commentId: M:System.SystemSettingExtention.AddSettingDataService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})
+  id: AddSettingDataService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})
   isExtensionMethod: true
   parent: System.SystemSettingExtention
   langs:
   - csharp
   - vb
-  name: UseSettingDataManager(IApplicationBuilder, Action<ISettingDataManagerOption>)
-  nameWithType: SystemSettingExtention.UseSettingDataManager(IApplicationBuilder, Action<ISettingDataManagerOption>)
-  fullName: System.SystemSettingExtention.UseSettingDataManager(System.IApplicationBuilder, System.Action<H.Services.Common.ISettingDataManagerOption>)
+  name: AddSettingDataService(IServiceCollection, Action<ISettingViewOptions>)
+  nameWithType: SystemSettingExtention.AddSettingDataService(IServiceCollection, Action<ISettingViewOptions>)
+  fullName: System.SystemSettingExtention.AddSettingDataService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Setting.ISettingViewOptions>)
   type: Method
   source:
-    id: UseSettingDataManager
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
-    startLine: 37
+    id: AddSettingDataService
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
+    startLine: 20
   assemblies:
   - H.Modules.Setting
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseSettingDataManager(this IApplicationBuilder builder, Action<ISettingDataManagerOption> option = null)
+    content: public static IServiceCollection AddSettingDataService(this IServiceCollection services, Action<ISettingViewOptions> setupAction = null)
     parameters:
-    - id: builder
-      type: System.IApplicationBuilder
-    - id: option
-      type: System.Action{H.Services.Common.ISettingDataManagerOption}
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: setupAction
+      type: System.Action{H.Modules.Setting.ISettingViewOptions}
     return:
-      type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseSettingDataManager(builder As IApplicationBuilder, [option] As Action(Of ISettingDataManagerOption) = Nothing) As IApplicationBuilder
-  overload: System.SystemSettingExtention.UseSettingDataManager*
-  nameWithType.vb: SystemSettingExtention.UseSettingDataManager(IApplicationBuilder, Action(Of ISettingDataManagerOption))
-  fullName.vb: System.SystemSettingExtention.UseSettingDataManager(System.IApplicationBuilder, System.Action(Of H.Services.Common.ISettingDataManagerOption))
-  name.vb: UseSettingDataManager(IApplicationBuilder, Action(Of ISettingDataManagerOption))
-- uid: System.SystemSettingExtention.UseSetting(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingViewOption})
-  commentId: M:System.SystemSettingExtention.UseSetting(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingViewOption})
-  id: UseSetting(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingViewOption})
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddSettingDataService(services As IServiceCollection, setupAction As Action(Of ISettingViewOptions) = Nothing) As IServiceCollection
+  overload: System.SystemSettingExtention.AddSettingDataService*
+  nameWithType.vb: SystemSettingExtention.AddSettingDataService(IServiceCollection, Action(Of ISettingViewOptions))
+  fullName.vb: System.SystemSettingExtention.AddSettingDataService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Setting.ISettingViewOptions))
+  name.vb: AddSettingDataService(IServiceCollection, Action(Of ISettingViewOptions))
+- uid: System.SystemSettingExtention.UseSettingDataOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})
+  commentId: M:System.SystemSettingExtention.UseSettingDataOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})
+  id: UseSettingDataOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})
   isExtensionMethod: true
   parent: System.SystemSettingExtention
   langs:
   - csharp
   - vb
-  name: UseSetting(IApplicationBuilder, Action<ISettingViewOption>)
-  nameWithType: SystemSettingExtention.UseSetting(IApplicationBuilder, Action<ISettingViewOption>)
-  fullName: System.SystemSettingExtention.UseSetting(System.IApplicationBuilder, System.Action<H.Services.Common.ISettingViewOption>)
+  name: UseSettingDataOptions(IApplicationBuilder, Action<ISettingDataOption>)
+  nameWithType: SystemSettingExtention.UseSettingDataOptions(IApplicationBuilder, Action<ISettingDataOption>)
+  fullName: System.SystemSettingExtention.UseSettingDataOptions(System.IApplicationBuilder, System.Action<H.Services.Setting.ISettingDataOption>)
   type: Method
   source:
-    id: UseSetting
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
-    startLine: 43
+    id: UseSettingDataOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
+    startLine: 29
   assemblies:
   - H.Modules.Setting
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseSetting(this IApplicationBuilder builder, Action<ISettingViewOption> option = null)
+    content: public static IApplicationBuilder UseSettingDataOptions(this IApplicationBuilder builder, Action<ISettingDataOption> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Services.Common.ISettingViewOption}
+      type: System.Action{H.Services.Setting.ISettingDataOption}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseSetting(builder As IApplicationBuilder, [option] As Action(Of ISettingViewOption) = Nothing) As IApplicationBuilder
-  overload: System.SystemSettingExtention.UseSetting*
-  nameWithType.vb: SystemSettingExtention.UseSetting(IApplicationBuilder, Action(Of ISettingViewOption))
-  fullName.vb: System.SystemSettingExtention.UseSetting(System.IApplicationBuilder, System.Action(Of H.Services.Common.ISettingViewOption))
-  name.vb: UseSetting(IApplicationBuilder, Action(Of ISettingViewOption))
-- uid: System.SystemSettingExtention.UseSettingSecurity(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingSecurityViewOption})
-  commentId: M:System.SystemSettingExtention.UseSettingSecurity(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingSecurityViewOption})
-  id: UseSettingSecurity(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingSecurityViewOption})
+    content.vb: Public Shared Function UseSettingDataOptions(builder As IApplicationBuilder, [option] As Action(Of ISettingDataOption) = Nothing) As IApplicationBuilder
+  overload: System.SystemSettingExtention.UseSettingDataOptions*
+  nameWithType.vb: SystemSettingExtention.UseSettingDataOptions(IApplicationBuilder, Action(Of ISettingDataOption))
+  fullName.vb: System.SystemSettingExtention.UseSettingDataOptions(System.IApplicationBuilder, System.Action(Of H.Services.Setting.ISettingDataOption))
+  name.vb: UseSettingDataOptions(IApplicationBuilder, Action(Of ISettingDataOption))
+- uid: System.SystemSettingExtention.UseSettingViewOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingViewOptions})
+  commentId: M:System.SystemSettingExtention.UseSettingViewOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingViewOptions})
+  id: UseSettingViewOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingViewOptions})
   isExtensionMethod: true
   parent: System.SystemSettingExtention
   langs:
   - csharp
   - vb
-  name: UseSettingSecurity(IApplicationBuilder, Action<ISettingSecurityViewOption>)
-  nameWithType: SystemSettingExtention.UseSettingSecurity(IApplicationBuilder, Action<ISettingSecurityViewOption>)
-  fullName: System.SystemSettingExtention.UseSettingSecurity(System.IApplicationBuilder, System.Action<H.Services.Common.ISettingSecurityViewOption>)
+  name: UseSettingViewOptions(IApplicationBuilder, Action<ISettingViewOptions>)
+  nameWithType: SystemSettingExtention.UseSettingViewOptions(IApplicationBuilder, Action<ISettingViewOptions>)
+  fullName: System.SystemSettingExtention.UseSettingViewOptions(System.IApplicationBuilder, System.Action<H.Modules.Setting.ISettingViewOptions>)
   type: Method
   source:
-    id: UseSettingSecurity
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
-    startLine: 50
+    id: UseSettingViewOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
+    startLine: 35
   assemblies:
   - H.Modules.Setting
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseSettingSecurity(this IApplicationBuilder builder, Action<ISettingSecurityViewOption> option = null)
+    content: public static IApplicationBuilder UseSettingViewOptions(this IApplicationBuilder builder, Action<ISettingViewOptions> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Services.Common.ISettingSecurityViewOption}
+      type: System.Action{H.Modules.Setting.ISettingViewOptions}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseSettingSecurity(builder As IApplicationBuilder, [option] As Action(Of ISettingSecurityViewOption) = Nothing) As IApplicationBuilder
-  overload: System.SystemSettingExtention.UseSettingSecurity*
-  nameWithType.vb: SystemSettingExtention.UseSettingSecurity(IApplicationBuilder, Action(Of ISettingSecurityViewOption))
-  fullName.vb: System.SystemSettingExtention.UseSettingSecurity(System.IApplicationBuilder, System.Action(Of H.Services.Common.ISettingSecurityViewOption))
-  name.vb: UseSettingSecurity(IApplicationBuilder, Action(Of ISettingSecurityViewOption))
-- uid: System.SystemSettingExtention.UseSettingDefault(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})
-  commentId: M:System.SystemSettingExtention.UseSettingDefault(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})
-  id: UseSettingDefault(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})
+    content.vb: Public Shared Function UseSettingViewOptions(builder As IApplicationBuilder, [option] As Action(Of ISettingViewOptions) = Nothing) As IApplicationBuilder
+  overload: System.SystemSettingExtention.UseSettingViewOptions*
+  nameWithType.vb: SystemSettingExtention.UseSettingViewOptions(IApplicationBuilder, Action(Of ISettingViewOptions))
+  fullName.vb: System.SystemSettingExtention.UseSettingViewOptions(System.IApplicationBuilder, System.Action(Of H.Modules.Setting.ISettingViewOptions))
+  name.vb: UseSettingViewOptions(IApplicationBuilder, Action(Of ISettingViewOptions))
+- uid: System.SystemSettingExtention.UseSettingSecurityOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingSecurityViewOption})
+  commentId: M:System.SystemSettingExtention.UseSettingSecurityOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingSecurityViewOption})
+  id: UseSettingSecurityOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingSecurityViewOption})
   isExtensionMethod: true
   parent: System.SystemSettingExtention
   langs:
   - csharp
   - vb
-  name: UseSettingDefault(IApplicationBuilder, Action<ISettingDataManagerOption>)
-  nameWithType: SystemSettingExtention.UseSettingDefault(IApplicationBuilder, Action<ISettingDataManagerOption>)
-  fullName: System.SystemSettingExtention.UseSettingDefault(System.IApplicationBuilder, System.Action<H.Services.Common.ISettingDataManagerOption>)
+  name: UseSettingSecurityOptions(IApplicationBuilder, Action<ISettingSecurityViewOption>)
+  nameWithType: SystemSettingExtention.UseSettingSecurityOptions(IApplicationBuilder, Action<ISettingSecurityViewOption>)
+  fullName: System.SystemSettingExtention.UseSettingSecurityOptions(System.IApplicationBuilder, System.Action<H.Modules.Setting.ISettingSecurityViewOption>)
   type: Method
   source:
-    id: UseSettingDefault
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
-    startLine: 60
+    id: UseSettingSecurityOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
+    startLine: 42
+  assemblies:
+  - H.Modules.Setting
+  namespace: System
+  syntax:
+    content: public static IApplicationBuilder UseSettingSecurityOptions(this IApplicationBuilder builder, Action<ISettingSecurityViewOption> option = null)
+    parameters:
+    - id: builder
+      type: System.IApplicationBuilder
+    - id: option
+      type: System.Action{H.Modules.Setting.ISettingSecurityViewOption}
+    return:
+      type: System.IApplicationBuilder
+    content.vb: Public Shared Function UseSettingSecurityOptions(builder As IApplicationBuilder, [option] As Action(Of ISettingSecurityViewOption) = Nothing) As IApplicationBuilder
+  overload: System.SystemSettingExtention.UseSettingSecurityOptions*
+  nameWithType.vb: SystemSettingExtention.UseSettingSecurityOptions(IApplicationBuilder, Action(Of ISettingSecurityViewOption))
+  fullName.vb: System.SystemSettingExtention.UseSettingSecurityOptions(System.IApplicationBuilder, System.Action(Of H.Modules.Setting.ISettingSecurityViewOption))
+  name.vb: UseSettingSecurityOptions(IApplicationBuilder, Action(Of ISettingSecurityViewOption))
+- uid: System.SystemSettingExtention.UseSettingDefaultOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})
+  commentId: M:System.SystemSettingExtention.UseSettingDefaultOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})
+  id: UseSettingDefaultOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})
+  isExtensionMethod: true
+  parent: System.SystemSettingExtention
+  langs:
+  - csharp
+  - vb
+  name: UseSettingDefaultOptions(IApplicationBuilder, Action<ISettingDataOption>)
+  nameWithType: SystemSettingExtention.UseSettingDefaultOptions(IApplicationBuilder, Action<ISettingDataOption>)
+  fullName: System.SystemSettingExtention.UseSettingDefaultOptions(System.IApplicationBuilder, System.Action<H.Services.Setting.ISettingDataOption>)
+  type: Method
+  source:
+    id: UseSettingDefaultOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Setting\Extention.cs
+    startLine: 52
   assemblies:
   - H.Modules.Setting
   namespace: System
   summary: 设置系统路径
   example: []
   syntax:
-    content: public static IApplicationBuilder UseSettingDefault(this IApplicationBuilder builder, Action<ISettingDataManagerOption> option = null)
+    content: public static IApplicationBuilder UseSettingDefaultOptions(this IApplicationBuilder builder, Action<ISettingDataOption> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Services.Common.ISettingDataManagerOption}
+      type: System.Action{H.Services.Setting.ISettingDataOption}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseSettingDefault(builder As IApplicationBuilder, [option] As Action(Of ISettingDataManagerOption) = Nothing) As IApplicationBuilder
-  overload: System.SystemSettingExtention.UseSettingDefault*
-  nameWithType.vb: SystemSettingExtention.UseSettingDefault(IApplicationBuilder, Action(Of ISettingDataManagerOption))
-  fullName.vb: System.SystemSettingExtention.UseSettingDefault(System.IApplicationBuilder, System.Action(Of H.Services.Common.ISettingDataManagerOption))
-  name.vb: UseSettingDefault(IApplicationBuilder, Action(Of ISettingDataManagerOption))
+    content.vb: Public Shared Function UseSettingDefaultOptions(builder As IApplicationBuilder, [option] As Action(Of ISettingDataOption) = Nothing) As IApplicationBuilder
+  overload: System.SystemSettingExtention.UseSettingDefaultOptions*
+  nameWithType.vb: SystemSettingExtention.UseSettingDefaultOptions(IApplicationBuilder, Action(Of ISettingDataOption))
+  fullName.vb: System.SystemSettingExtention.UseSettingDefaultOptions(System.IApplicationBuilder, System.Action(Of H.Services.Setting.ISettingDataOption))
+  name.vb: UseSettingDefaultOptions(IApplicationBuilder, Action(Of ISettingDataOption))
 references:
 - uid: System
   commentId: N:System
@@ -445,7 +477,7 @@ references:
   - name: )
 - uid: System.SystemSettingExtention.AddSetting*
   commentId: Overload:System.SystemSettingExtention.AddSetting
-  href: System.SystemSettingExtention.html#System_SystemSettingExtention_AddSetting_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Services_Common_ISettingViewOption__
+  href: System.SystemSettingExtention.html#System_SystemSettingExtention_AddSetting_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Setting_ISettingViewOptions__
   name: AddSetting
   nameWithType: SystemSettingExtention.AddSetting
   fullName: System.SystemSettingExtention.AddSetting
@@ -457,25 +489,26 @@ references:
   name: IServiceCollection
   nameWithType: IServiceCollection
   fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
-- uid: System.Action{H.Services.Common.ISettingViewOption}
-  commentId: T:System.Action{H.Services.Common.ISettingViewOption}
+- uid: System.Action{H.Modules.Setting.ISettingViewOptions}
+  commentId: T:System.Action{H.Modules.Setting.ISettingViewOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<ISettingViewOption>
-  nameWithType: Action<ISettingViewOption>
-  fullName: System.Action<H.Services.Common.ISettingViewOption>
-  nameWithType.vb: Action(Of ISettingViewOption)
-  fullName.vb: System.Action(Of H.Services.Common.ISettingViewOption)
-  name.vb: Action(Of ISettingViewOption)
+  name: Action<ISettingViewOptions>
+  nameWithType: Action<ISettingViewOptions>
+  fullName: System.Action<H.Modules.Setting.ISettingViewOptions>
+  nameWithType.vb: Action(Of ISettingViewOptions)
+  fullName.vb: System.Action(Of H.Modules.Setting.ISettingViewOptions)
+  name.vb: Action(Of ISettingViewOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Services.Common.ISettingViewOption
-    name: ISettingViewOption
+  - uid: H.Modules.Setting.ISettingViewOptions
+    name: ISettingViewOptions
+    href: H.Modules.Setting.ISettingViewOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -485,8 +518,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.ISettingViewOption
-    name: ISettingViewOption
+  - uid: H.Modules.Setting.ISettingViewOptions
+    name: ISettingViewOptions
+    href: H.Modules.Setting.ISettingViewOptions.html
   - name: )
 - uid: Microsoft.Extensions.DependencyInjection
   commentId: N:Microsoft.Extensions.DependencyInjection
@@ -553,12 +587,18 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: System.SystemSettingExtention.UseSettingDataManager*
-  commentId: Overload:System.SystemSettingExtention.UseSettingDataManager
-  href: System.SystemSettingExtention.html#System_SystemSettingExtention_UseSettingDataManager_System_IApplicationBuilder_System_Action_H_Services_Common_ISettingDataManagerOption__
-  name: UseSettingDataManager
-  nameWithType: SystemSettingExtention.UseSettingDataManager
-  fullName: System.SystemSettingExtention.UseSettingDataManager
+- uid: System.SystemSettingExtention.AddSettingDataService*
+  commentId: Overload:System.SystemSettingExtention.AddSettingDataService
+  href: System.SystemSettingExtention.html#System_SystemSettingExtention_AddSettingDataService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Setting_ISettingViewOptions__
+  name: AddSettingDataService
+  nameWithType: SystemSettingExtention.AddSettingDataService
+  fullName: System.SystemSettingExtention.AddSettingDataService
+- uid: System.SystemSettingExtention.UseSettingDataOptions*
+  commentId: Overload:System.SystemSettingExtention.UseSettingDataOptions
+  href: System.SystemSettingExtention.html#System_SystemSettingExtention_UseSettingDataOptions_System_IApplicationBuilder_System_Action_H_Services_Setting_ISettingDataOption__
+  name: UseSettingDataOptions
+  nameWithType: SystemSettingExtention.UseSettingDataOptions
+  fullName: System.SystemSettingExtention.UseSettingDataOptions
 - uid: System.IApplicationBuilder
   commentId: T:System.IApplicationBuilder
   parent: System
@@ -566,25 +606,25 @@ references:
   name: IApplicationBuilder
   nameWithType: IApplicationBuilder
   fullName: System.IApplicationBuilder
-- uid: System.Action{H.Services.Common.ISettingDataManagerOption}
-  commentId: T:System.Action{H.Services.Common.ISettingDataManagerOption}
+- uid: System.Action{H.Services.Setting.ISettingDataOption}
+  commentId: T:System.Action{H.Services.Setting.ISettingDataOption}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<ISettingDataManagerOption>
-  nameWithType: Action<ISettingDataManagerOption>
-  fullName: System.Action<H.Services.Common.ISettingDataManagerOption>
-  nameWithType.vb: Action(Of ISettingDataManagerOption)
-  fullName.vb: System.Action(Of H.Services.Common.ISettingDataManagerOption)
-  name.vb: Action(Of ISettingDataManagerOption)
+  name: Action<ISettingDataOption>
+  nameWithType: Action<ISettingDataOption>
+  fullName: System.Action<H.Services.Setting.ISettingDataOption>
+  nameWithType.vb: Action(Of ISettingDataOption)
+  fullName.vb: System.Action(Of H.Services.Setting.ISettingDataOption)
+  name.vb: Action(Of ISettingDataOption)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Services.Common.ISettingDataManagerOption
-    name: ISettingDataManagerOption
+  - uid: H.Services.Setting.ISettingDataOption
+    name: ISettingDataOption
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -594,31 +634,31 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.ISettingDataManagerOption
-    name: ISettingDataManagerOption
+  - uid: H.Services.Setting.ISettingDataOption
+    name: ISettingDataOption
   - name: )
-- uid: System.SystemSettingExtention.UseSetting*
-  commentId: Overload:System.SystemSettingExtention.UseSetting
-  href: System.SystemSettingExtention.html#System_SystemSettingExtention_UseSetting_System_IApplicationBuilder_System_Action_H_Services_Common_ISettingViewOption__
-  name: UseSetting
-  nameWithType: SystemSettingExtention.UseSetting
-  fullName: System.SystemSettingExtention.UseSetting
-- uid: System.SystemSettingExtention.UseSettingSecurity*
-  commentId: Overload:System.SystemSettingExtention.UseSettingSecurity
-  href: System.SystemSettingExtention.html#System_SystemSettingExtention_UseSettingSecurity_System_IApplicationBuilder_System_Action_H_Services_Common_ISettingSecurityViewOption__
-  name: UseSettingSecurity
-  nameWithType: SystemSettingExtention.UseSettingSecurity
-  fullName: System.SystemSettingExtention.UseSettingSecurity
-- uid: System.Action{H.Services.Common.ISettingSecurityViewOption}
-  commentId: T:System.Action{H.Services.Common.ISettingSecurityViewOption}
+- uid: System.SystemSettingExtention.UseSettingViewOptions*
+  commentId: Overload:System.SystemSettingExtention.UseSettingViewOptions
+  href: System.SystemSettingExtention.html#System_SystemSettingExtention_UseSettingViewOptions_System_IApplicationBuilder_System_Action_H_Modules_Setting_ISettingViewOptions__
+  name: UseSettingViewOptions
+  nameWithType: SystemSettingExtention.UseSettingViewOptions
+  fullName: System.SystemSettingExtention.UseSettingViewOptions
+- uid: System.SystemSettingExtention.UseSettingSecurityOptions*
+  commentId: Overload:System.SystemSettingExtention.UseSettingSecurityOptions
+  href: System.SystemSettingExtention.html#System_SystemSettingExtention_UseSettingSecurityOptions_System_IApplicationBuilder_System_Action_H_Modules_Setting_ISettingSecurityViewOption__
+  name: UseSettingSecurityOptions
+  nameWithType: SystemSettingExtention.UseSettingSecurityOptions
+  fullName: System.SystemSettingExtention.UseSettingSecurityOptions
+- uid: System.Action{H.Modules.Setting.ISettingSecurityViewOption}
+  commentId: T:System.Action{H.Modules.Setting.ISettingSecurityViewOption}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
   name: Action<ISettingSecurityViewOption>
   nameWithType: Action<ISettingSecurityViewOption>
-  fullName: System.Action<H.Services.Common.ISettingSecurityViewOption>
+  fullName: System.Action<H.Modules.Setting.ISettingSecurityViewOption>
   nameWithType.vb: Action(Of ISettingSecurityViewOption)
-  fullName.vb: System.Action(Of H.Services.Common.ISettingSecurityViewOption)
+  fullName.vb: System.Action(Of H.Modules.Setting.ISettingSecurityViewOption)
   name.vb: Action(Of ISettingSecurityViewOption)
   spec.csharp:
   - uid: System.Action`1
@@ -626,8 +666,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Services.Common.ISettingSecurityViewOption
+  - uid: H.Modules.Setting.ISettingSecurityViewOption
     name: ISettingSecurityViewOption
+    href: H.Modules.Setting.ISettingSecurityViewOption.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -637,12 +678,13 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.ISettingSecurityViewOption
+  - uid: H.Modules.Setting.ISettingSecurityViewOption
     name: ISettingSecurityViewOption
+    href: H.Modules.Setting.ISettingSecurityViewOption.html
   - name: )
-- uid: System.SystemSettingExtention.UseSettingDefault*
-  commentId: Overload:System.SystemSettingExtention.UseSettingDefault
-  href: System.SystemSettingExtention.html#System_SystemSettingExtention_UseSettingDefault_System_IApplicationBuilder_System_Action_H_Services_Common_ISettingDataManagerOption__
-  name: UseSettingDefault
-  nameWithType: SystemSettingExtention.UseSettingDefault
-  fullName: System.SystemSettingExtention.UseSettingDefault
+- uid: System.SystemSettingExtention.UseSettingDefaultOptions*
+  commentId: Overload:System.SystemSettingExtention.UseSettingDefaultOptions
+  href: System.SystemSettingExtention.html#System_SystemSettingExtention_UseSettingDefaultOptions_System_IApplicationBuilder_System_Action_H_Services_Setting_ISettingDataOption__
+  name: UseSettingDefaultOptions
+  nameWithType: SystemSettingExtention.UseSettingDefaultOptions
+  fullName: System.SystemSettingExtention.UseSettingDefaultOptions

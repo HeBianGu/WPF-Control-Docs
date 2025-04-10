@@ -154,24 +154,23 @@ Class SystemSettingExtention
 
   <a id="System_SystemSettingExtention_AddSetting_" data-uid="System.SystemSettingExtention.AddSetting*"></a>
 
-  <h3 id="System_SystemSettingExtention_AddSetting_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Services_Common_ISettingViewOption__" data-uid="System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Services.Common.ISettingViewOption})">
-  AddSetting(IServiceCollection, Action&lt;ISettingViewOption&gt;)
+  <h3 id="System_SystemSettingExtention_AddSetting_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Setting_ISettingViewOptions__" data-uid="System.SystemSettingExtention.AddSetting(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})">
+  AddSetting(IServiceCollection, Action&lt;ISettingViewOptions&gt;)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>设置系统路径</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddSetting(this IServiceCollection services, Action&lt;ISettingViewOption&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddSetting(this IServiceCollection services, Action&lt;ISettingViewOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.ISettingViewOption.html">ISettingViewOption</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Setting.ISettingViewOptions.html">ISettingViewOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -191,10 +190,10 @@ Class SystemSettingExtention
 
 
 
-  <a id="System_SystemSettingExtention_UseSetting_" data-uid="System.SystemSettingExtention.UseSetting*"></a>
+  <a id="System_SystemSettingExtention_AddSettingDataService_" data-uid="System.SystemSettingExtention.AddSettingDataService*"></a>
 
-  <h3 id="System_SystemSettingExtention_UseSetting_System_IApplicationBuilder_System_Action_H_Services_Common_ISettingViewOption__" data-uid="System.SystemSettingExtention.UseSetting(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingViewOption})">
-  UseSetting(IApplicationBuilder, Action&lt;ISettingViewOption&gt;)
+  <h3 id="System_SystemSettingExtention_AddSettingDataService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Setting_ISettingViewOptions__" data-uid="System.SystemSettingExtention.AddSettingDataService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Setting.ISettingViewOptions})">
+  AddSettingDataService(IServiceCollection, Action&lt;ISettingViewOptions&gt;)
   
   </h3>
 
@@ -202,14 +201,52 @@ Class SystemSettingExtention
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSetting(this IApplicationBuilder builder, Action&lt;ISettingViewOption&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddSettingDataService(this IServiceCollection services, Action&lt;ISettingViewOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Setting.ISettingViewOptions.html">ISettingViewOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_SystemSettingExtention_UseSettingDataOptions_" data-uid="System.SystemSettingExtention.UseSettingDataOptions*"></a>
+
+  <h3 id="System_SystemSettingExtention_UseSettingDataOptions_System_IApplicationBuilder_System_Action_H_Services_Setting_ISettingDataOption__" data-uid="System.SystemSettingExtention.UseSettingDataOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})">
+  UseSettingDataOptions(IApplicationBuilder, Action&lt;ISettingDataOption&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSettingDataOptions(this IApplicationBuilder builder, Action&lt;ISettingDataOption&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.ISettingViewOption.html">ISettingViewOption</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Setting.ISettingDataOption.html">ISettingDataOption</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -229,48 +266,10 @@ Class SystemSettingExtention
 
 
 
-  <a id="System_SystemSettingExtention_UseSettingDataManager_" data-uid="System.SystemSettingExtention.UseSettingDataManager*"></a>
+  <a id="System_SystemSettingExtention_UseSettingDefaultOptions_" data-uid="System.SystemSettingExtention.UseSettingDefaultOptions*"></a>
 
-  <h3 id="System_SystemSettingExtention_UseSettingDataManager_System_IApplicationBuilder_System_Action_H_Services_Common_ISettingDataManagerOption__" data-uid="System.SystemSettingExtention.UseSettingDataManager(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})">
-  UseSettingDataManager(IApplicationBuilder, Action&lt;ISettingDataManagerOption&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSettingDataManager(this IApplicationBuilder builder, Action&lt;ISettingDataManagerOption&gt; option = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
-    <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.ISettingDataManagerOption.html">ISettingDataManagerOption</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="System_SystemSettingExtention_UseSettingDefault_" data-uid="System.SystemSettingExtention.UseSettingDefault*"></a>
-
-  <h3 id="System_SystemSettingExtention_UseSettingDefault_System_IApplicationBuilder_System_Action_H_Services_Common_ISettingDataManagerOption__" data-uid="System.SystemSettingExtention.UseSettingDefault(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingDataManagerOption})">
-  UseSettingDefault(IApplicationBuilder, Action&lt;ISettingDataManagerOption&gt;)
+  <h3 id="System_SystemSettingExtention_UseSettingDefaultOptions_System_IApplicationBuilder_System_Action_H_Services_Setting_ISettingDataOption__" data-uid="System.SystemSettingExtention.UseSettingDefaultOptions(System.IApplicationBuilder,System.Action{H.Services.Setting.ISettingDataOption})">
+  UseSettingDefaultOptions(IApplicationBuilder, Action&lt;ISettingDataOption&gt;)
   
   </h3>
 
@@ -279,14 +278,14 @@ Class SystemSettingExtention
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSettingDefault(this IApplicationBuilder builder, Action&lt;ISettingDataManagerOption&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSettingDefaultOptions(this IApplicationBuilder builder, Action&lt;ISettingDataOption&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.ISettingDataManagerOption.html">ISettingDataManagerOption</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Setting.ISettingDataOption.html">ISettingDataOption</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -306,10 +305,10 @@ Class SystemSettingExtention
 
 
 
-  <a id="System_SystemSettingExtention_UseSettingSecurity_" data-uid="System.SystemSettingExtention.UseSettingSecurity*"></a>
+  <a id="System_SystemSettingExtention_UseSettingSecurityOptions_" data-uid="System.SystemSettingExtention.UseSettingSecurityOptions*"></a>
 
-  <h3 id="System_SystemSettingExtention_UseSettingSecurity_System_IApplicationBuilder_System_Action_H_Services_Common_ISettingSecurityViewOption__" data-uid="System.SystemSettingExtention.UseSettingSecurity(System.IApplicationBuilder,System.Action{H.Services.Common.ISettingSecurityViewOption})">
-  UseSettingSecurity(IApplicationBuilder, Action&lt;ISettingSecurityViewOption&gt;)
+  <h3 id="System_SystemSettingExtention_UseSettingSecurityOptions_System_IApplicationBuilder_System_Action_H_Modules_Setting_ISettingSecurityViewOption__" data-uid="System.SystemSettingExtention.UseSettingSecurityOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingSecurityViewOption})">
+  UseSettingSecurityOptions(IApplicationBuilder, Action&lt;ISettingSecurityViewOption&gt;)
   
   </h3>
 
@@ -317,14 +316,52 @@ Class SystemSettingExtention
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSettingSecurity(this IApplicationBuilder builder, Action&lt;ISettingSecurityViewOption&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSettingSecurityOptions(this IApplicationBuilder builder, Action&lt;ISettingSecurityViewOption&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.ISettingSecurityViewOption.html">ISettingSecurityViewOption</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Setting.ISettingSecurityViewOption.html">ISettingSecurityViewOption</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_SystemSettingExtention_UseSettingViewOptions_" data-uid="System.SystemSettingExtention.UseSettingViewOptions*"></a>
+
+  <h3 id="System_SystemSettingExtention_UseSettingViewOptions_System_IApplicationBuilder_System_Action_H_Modules_Setting_ISettingViewOptions__" data-uid="System.SystemSettingExtention.UseSettingViewOptions(System.IApplicationBuilder,System.Action{H.Modules.Setting.ISettingViewOptions})">
+  UseSettingViewOptions(IApplicationBuilder, Action&lt;ISettingViewOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSettingViewOptions(this IApplicationBuilder builder, Action&lt;ISettingViewOptions&gt; option = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Setting.ISettingViewOptions.html">ISettingViewOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 

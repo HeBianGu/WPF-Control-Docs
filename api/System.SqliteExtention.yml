@@ -7,6 +7,7 @@ items:
   children:
   - System.SqliteExtention.AddDbContextBySetting``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.DataBases.Sqlite.ISqliteOption})
   - System.SqliteExtention.AddDbContextNewSetting``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.DataBases.Sqlite.ISqliteOption})
+  - System.SqliteExtention.UseSqlite(System.IApplicationBuilder)
   langs:
   - csharp
   - vb
@@ -16,8 +17,8 @@ items:
   type: Class
   source:
     id: SqliteExtention
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.Sqlite\Extention.cs
-    startLine: 18
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.Sqlite\Extention.cs
+    startLine: 20
   assemblies:
   - H.DataBases.Sqlite
   namespace: System
@@ -48,8 +49,8 @@ items:
   type: Method
   source:
     id: AddDbContextBySetting
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.Sqlite\Extention.cs
-    startLine: 29
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.Sqlite\Extention.cs
+    startLine: 31
   assemblies:
   - H.DataBases.Sqlite
   namespace: System
@@ -81,8 +82,8 @@ items:
   type: Method
   source:
     id: AddDbContextNewSetting
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.Sqlite\Extention.cs
-    startLine: 40
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.Sqlite\Extention.cs
+    startLine: 43
   assemblies:
   - H.DataBases.Sqlite
   namespace: System
@@ -100,6 +101,32 @@ items:
   nameWithType.vb: SqliteExtention.AddDbContextNewSetting(Of TDbContext)(IServiceCollection, Action(Of ISqliteOption))
   fullName.vb: System.SqliteExtention.AddDbContextNewSetting(Of TDbContext)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.DataBases.Sqlite.ISqliteOption))
   name.vb: AddDbContextNewSetting(Of TDbContext)(IServiceCollection, Action(Of ISqliteOption))
+- uid: System.SqliteExtention.UseSqlite(System.IApplicationBuilder)
+  commentId: M:System.SqliteExtention.UseSqlite(System.IApplicationBuilder)
+  id: UseSqlite(System.IApplicationBuilder)
+  isExtensionMethod: true
+  parent: System.SqliteExtention
+  langs:
+  - csharp
+  - vb
+  name: UseSqlite(IApplicationBuilder)
+  nameWithType: SqliteExtention.UseSqlite(IApplicationBuilder)
+  fullName: System.SqliteExtention.UseSqlite(System.IApplicationBuilder)
+  type: Method
+  source:
+    id: UseSqlite
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.Sqlite\Extention.cs
+    startLine: 60
+  assemblies:
+  - H.DataBases.Sqlite
+  namespace: System
+  syntax:
+    content: public static void UseSqlite(this IApplicationBuilder service)
+    parameters:
+    - id: service
+      type: System.IApplicationBuilder
+    content.vb: Public Shared Sub UseSqlite(service As IApplicationBuilder)
+  overload: System.SqliteExtention.UseSqlite*
 references:
 - uid: System
   commentId: N:System
@@ -455,3 +482,16 @@ references:
   name: AddDbContextNewSetting
   nameWithType: SqliteExtention.AddDbContextNewSetting
   fullName: System.SqliteExtention.AddDbContextNewSetting
+- uid: System.SqliteExtention.UseSqlite*
+  commentId: Overload:System.SqliteExtention.UseSqlite
+  href: System.SqliteExtention.html#System_SqliteExtention_UseSqlite_System_IApplicationBuilder_
+  name: UseSqlite
+  nameWithType: SqliteExtention.UseSqlite
+  fullName: System.SqliteExtention.UseSqlite
+- uid: System.IApplicationBuilder
+  commentId: T:System.IApplicationBuilder
+  parent: System
+  href: System.IApplicationBuilder.html
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: System.IApplicationBuilder

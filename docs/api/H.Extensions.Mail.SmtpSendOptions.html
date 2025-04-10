@@ -101,8 +101,9 @@ Class SmtpSendOptions
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;邮件外发设置&quot;, GroupName = &quot;系统设置&quot;, Description = &quot;邮件外发设置的信息&quot;)]
-public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotifyPropertyChanged, IDisplayBindable, IIconable, IDable, IDescriptionable, ISettable, INameable, IOrderable, IGroupable, ILoadable, ISaveable, IDefaultable, IOptions&lt;SmtpSendOptions&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Icon(&quot;&quot;)]
+[Display(Name = &quot;邮件外发设置&quot;, GroupName = &quot;系统设置&quot;, Description = &quot;邮件外发设置的信息&quot;)]
+public class SmtpSendOptions : SmtpSendOptions&lt;SmtpSendOptions&gt;, INotifyPropertyChanged, IDisplayBindable, IIconable, IDable, IDescriptionable, ISettable, INameable, IOrderable, IGroupable, ILoadable, ISaveable, IDefaultable, IClearable, IOptions&lt;SmtpSendOptions&gt;, ISmtpSendOptions</code></pre>
   </div>
 
 
@@ -118,6 +119,7 @@ public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotify
       <div><a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html">DisplayBindableBase</a></div>
       <div><a class="xref" href="H.Extensions.Setting.SettableBase.html">SettableBase</a></div>
       <div><a class="xref" href="H.Extensions.Setting.IocOptionInstance-1.html">IocOptionInstance</a>&lt;<a class="xref" href="H.Extensions.Mail.SmtpSendOptions.html">SmtpSendOptions</a>&gt;</div>
+      <div><a class="xref" href="H.Extensions.Mail.SmtpSendOptions-1.html">SmtpSendOptions</a>&lt;<a class="xref" href="H.Extensions.Mail.SmtpSendOptions.html">SmtpSendOptions</a>&gt;</div>
       <div><span class="xref">SmtpSendOptions</span></div>
     </dd>
   </dl>
@@ -126,18 +128,20 @@ public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotify
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IDisplayBindable.html">IDisplayBindable</a></div>
-      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IDable.html">IDable</a></div>
-      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
-      <div><a class="xref" href="H.Services.Common.ISettable.html">ISettable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
-      <div><a class="xref" href="H.Mvvm.IOrderable.html">IOrderable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IGroupable.html">IGroupable</a></div>
-      <div><a class="xref" href="H.Services.Common.ILoadable.html">ILoadable</a></div>
-      <div><a class="xref" href="H.Services.Common.ISaveable.html">ISaveable</a></div>
-      <div><a class="xref" href="H.Services.Common.IDefaultable.html">IDefaultable</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.IDisplayBindable.html">IDisplayBindable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDescriptionable.html">IDescriptionable</a></div>
+      <div><a class="xref" href="H.Services.Setting.ISettable.html">ISettable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IOrderable.html">IOrderable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IGroupable.html">IGroupable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.ILoadable.html">ILoadable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.ISaveable.html">ISaveable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDefaultable.html">IDefaultable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IClearable.html">IClearable</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;<a class="xref" href="H.Extensions.Mail.SmtpSendOptions.html">SmtpSendOptions</a>&gt;</div>
+      <div><a class="xref" href="H.Extensions.Mail.ISmtpSendOptions.html">ISmtpSendOptions</a></div>
     </dd>
   </dl>
 
@@ -146,7 +150,28 @@ public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotify
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="H.Extensions.Mail.SmtpSendOptions-1.html#H_Extensions_Mail_SmtpSendOptions_1_Host">SmtpSendOptions&lt;SmtpSendOptions&gt;.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Mail.SmtpSendOptions-1.html#H_Extensions_Mail_SmtpSendOptions_1_Port">SmtpSendOptions&lt;SmtpSendOptions&gt;.Port</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Mail.SmtpSendOptions-1.html#H_Extensions_Mail_SmtpSendOptions_1_EnableSsl">SmtpSendOptions&lt;SmtpSendOptions&gt;.EnableSsl</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Mail.SmtpSendOptions-1.html#H_Extensions_Mail_SmtpSendOptions_1_User">SmtpSendOptions&lt;SmtpSendOptions&gt;.User</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Mail.SmtpSendOptions-1.html#H_Extensions_Mail_SmtpSendOptions_1_Password">SmtpSendOptions&lt;SmtpSendOptions&gt;.Password</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Mail.SmtpSendOptions-1.html#H_Extensions_Mail_SmtpSendOptions_1_IsBodyHtml">SmtpSendOptions&lt;SmtpSendOptions&gt;.IsBodyHtml</a>
+    </div>
+    <div>
       <a class="xref" href="H.Extensions.Setting.IocOptionInstance-1.html#H_Extensions_Setting_IocOptionInstance_1_Instance">IocOptionInstance&lt;SmtpSendOptions&gt;.Instance</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Setting.SettableBase.html#H_Extensions_Setting_SettableBase_IsVisibleInSetting">SettableBase.IsVisibleInSetting</a>
     </div>
     <div>
       <a class="xref" href="H.Extensions.Setting.SettableBase.html#H_Extensions_Setting_SettableBase_LoadDefault">SettableBase.LoadDefault()</a>
@@ -171,6 +196,9 @@ public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotify
     </div>
     <div>
       <a class="xref" href="H.Extensions.Setting.SettableBase.html#H_Extensions_Setting_SettableBase_IsInit">SettableBase.IsInit()</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Extensions.Setting.SettableBase.html#H_Extensions_Setting_SettableBase_Clear">SettableBase.Clear()</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.ViewModels.Base.DisplayBindableBase.html#H_Mvvm_ViewModels_Base_DisplayBindableBase_IsLoaded">DisplayBindableBase.IsLoaded</a>
@@ -262,10 +290,10 @@ public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotify
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -274,7 +302,40 @@ public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotify
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -286,39 +347,6 @@ public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotify
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
-  </div>
-  <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
   </div>
   <div>
@@ -328,205 +356,6 @@ public class SmtpSendOptions : IocOptionInstance&lt;SmtpSendOptions&gt;, INotify
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Collections_IList_System_Func_System_Collections_IList__System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, IList, Func&lt;IList&gt;, Action, DispatcherPriority)</a>
   </div>
   </dd></dl>
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="H_Extensions_Mail_SmtpSendOptions_EnableSsl_" data-uid="H.Extensions.Mail.SmtpSendOptions.EnableSsl*"></a>
-
-  <h3 id="H_Extensions_Mail_SmtpSendOptions_EnableSsl" data-uid="H.Extensions.Mail.SmtpSendOptions.EnableSsl">
-  EnableSsl
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;启用SSL&quot;)]
-public bool EnableSsl { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Extensions_Mail_SmtpSendOptions_Host_" data-uid="H.Extensions.Mail.SmtpSendOptions.Host*"></a>
-
-  <h3 id="H_Extensions_Mail_SmtpSendOptions_Host" data-uid="H.Extensions.Mail.SmtpSendOptions.Host">
-  Host
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-[Display(Name = &quot;服务器&quot;)]
-public string Host { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Extensions_Mail_SmtpSendOptions_IsBodyHtml_" data-uid="H.Extensions.Mail.SmtpSendOptions.IsBodyHtml*"></a>
-
-  <h3 id="H_Extensions_Mail_SmtpSendOptions_IsBodyHtml" data-uid="H.Extensions.Mail.SmtpSendOptions.IsBodyHtml">
-  IsBodyHtml
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;启用HTML格式&quot;)]
-public bool IsBodyHtml { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Extensions_Mail_SmtpSendOptions_Password_" data-uid="H.Extensions.Mail.SmtpSendOptions.Password*"></a>
-
-  <h3 id="H_Extensions_Mail_SmtpSendOptions_Password" data-uid="H.Extensions.Mail.SmtpSendOptions.Password">
-  Password
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-[Display(Name = &quot;授权码&quot;)]
-public string Password { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Extensions_Mail_SmtpSendOptions_Port_" data-uid="H.Extensions.Mail.SmtpSendOptions.Port*"></a>
-
-  <h3 id="H_Extensions_Mail_SmtpSendOptions_Port" data-uid="H.Extensions.Mail.SmtpSendOptions.Port">
-  Port
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Display(Name = &quot;端口号&quot;)]
-public int Port { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="H_Extensions_Mail_SmtpSendOptions_User_" data-uid="H.Extensions.Mail.SmtpSendOptions.User*"></a>
-
-  <h3 id="H_Extensions_Mail_SmtpSendOptions_User" data-uid="H.Extensions.Mail.SmtpSendOptions.User">
-  User
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-[Display(Name = &quot;外发账号&quot;)]
-public string User { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
 
 
 

@@ -101,7 +101,7 @@ Class ApplicationBase
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ApplicationBase : Application, IQueryAmbient</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ApplicationBase : Application, IQueryAmbient, IConfigureableApplication</code></pre>
   </div>
 
 
@@ -121,9 +121,20 @@ Class ApplicationBase
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.iqueryambient">IQueryAmbient</a></div>
+      <div><a class="xref" href="System.IConfigureableApplication.html">IConfigureableApplication</a></div>
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="H.ApplicationBases.Default.DefaultApplicationBase.html">DefaultApplicationBase</a></div>
+      <div><a class="xref" href="H.ApplicationBases.Identify.IdentifyApplicationBase.html">IdentifyApplicationBase</a></div>
+      <div><a class="xref" href="H.ApplicationBases.Messages.MessageApplicationBase.html">MessageApplicationBase</a></div>
+      <div><a class="xref" href="H.ApplicationBases.Modules.ModulesApplicationBase.html">ModulesApplicationBase</a></div>
+      <div><a class="xref" href="H.ApplicationBases.Themes.ThemesApplicationBase.html">ThemesApplicationBase</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -290,10 +301,10 @@ Class ApplicationBase
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_GetDispatcherValue__2___0_System_Func___0___1__">DispatcherExtension.GetDispatcherValue&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
@@ -311,7 +322,40 @@ Class ApplicationBase
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -321,39 +365,6 @@ Class ApplicationBase
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
@@ -474,6 +485,32 @@ Class ApplicationBase
 
   <a id="H_Extensions_ApplicationBase_ApplicationBase_Configure_" data-uid="H.Extensions.ApplicationBase.ApplicationBase.Configure*"></a>
 
+  <h3 id="H_Extensions_ApplicationBase_ApplicationBase_Configure" data-uid="H.Extensions.ApplicationBase.ApplicationBase.Configure">
+  Configure()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Configure()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Extensions_ApplicationBase_ApplicationBase_Configure_" data-uid="H.Extensions.ApplicationBase.ApplicationBase.Configure*"></a>
+
   <h3 id="H_Extensions_ApplicationBase_ApplicationBase_Configure_System_IApplicationBuilder_" data-uid="H.Extensions.ApplicationBase.ApplicationBase.Configure(System.IApplicationBuilder)">
   Configure(IApplicationBuilder)
   
@@ -524,6 +561,37 @@ Class ApplicationBase
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Extensions_ApplicationBase_ApplicationBase_CreateAppPathServce_" data-uid="H.Extensions.ApplicationBase.ApplicationBase.CreateAppPathServce*"></a>
+
+  <h3 id="H_Extensions_ApplicationBase_ApplicationBase_CreateAppPathServce" data-uid="H.Extensions.ApplicationBase.ApplicationBase.CreateAppPathServce">
+  CreateAppPathServce()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IAppPathServce CreateAppPathServce()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="H.Services.AppPath.IAppPathServce.html">IAppPathServce</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -621,7 +689,7 @@ Class ApplicationBase
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Services.Common.ISplashLoad.html">ISplashLoad</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="H.Common.Interfaces.ISplashLoad.html">ISplashLoad</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -635,10 +703,10 @@ Class ApplicationBase
 
 
 
-  <a id="H_Extensions_ApplicationBase_ApplicationBase_OnExcetion_" data-uid="H.Extensions.ApplicationBase.ApplicationBase.OnExcetion*"></a>
+  <a id="H_Extensions_ApplicationBase_ApplicationBase_InitExcetion_" data-uid="H.Extensions.ApplicationBase.ApplicationBase.InitExcetion*"></a>
 
-  <h3 id="H_Extensions_ApplicationBase_ApplicationBase_OnExcetion" data-uid="H.Extensions.ApplicationBase.ApplicationBase.OnExcetion">
-  OnExcetion()
+  <h3 id="H_Extensions_ApplicationBase_ApplicationBase_InitExcetion" data-uid="H.Extensions.ApplicationBase.ApplicationBase.InitExcetion">
+  InitExcetion()
   
   </h3>
 
@@ -646,7 +714,33 @@ Class ApplicationBase
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnExcetion()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void InitExcetion()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Extensions_ApplicationBase_ApplicationBase_InitServiceCollection_" data-uid="H.Extensions.ApplicationBase.ApplicationBase.InitServiceCollection*"></a>
+
+  <h3 id="H_Extensions_ApplicationBase_ApplicationBase_InitServiceCollection" data-uid="H.Extensions.ApplicationBase.ApplicationBase.InitServiceCollection">
+  InitServiceCollection()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void InitServiceCollection()</code></pre>
   </div>
 
 
@@ -714,32 +808,6 @@ Class ApplicationBase
     <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.startupeventargs">StartupEventArgs</a></dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="H_Extensions_ApplicationBase_ApplicationBase_OnRefreshIoc_" data-uid="H.Extensions.ApplicationBase.ApplicationBase.OnRefreshIoc*"></a>
-
-  <h3 id="H_Extensions_ApplicationBase_ApplicationBase_OnRefreshIoc" data-uid="H.Extensions.ApplicationBase.ApplicationBase.OnRefreshIoc">
-  OnRefreshIoc()
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void OnRefreshIoc()</code></pre>
-  </div>
-
 
 
 

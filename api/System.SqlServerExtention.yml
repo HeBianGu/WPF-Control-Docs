@@ -6,6 +6,7 @@ items:
   parent: System
   children:
   - System.SqlServerExtention.AddDbContextBySetting``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.DataBases.SqlServer.ISqlServerOption})
+  - System.SqlServerExtention.UseSqlServer(System.IApplicationBuilder,System.Action{H.DataBases.SqlServer.ISqlServerOption})
   langs:
   - csharp
   - vb
@@ -15,8 +16,8 @@ items:
   type: Class
   source:
     id: SqlServerExtention
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.SqlServer\Extention.cs
-    startLine: 19
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.SqlServer\Extention.cs
+    startLine: 21
   assemblies:
   - H.DataBases.SqlServer
   namespace: System
@@ -47,8 +48,8 @@ items:
   type: Method
   source:
     id: AddDbContextBySetting
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.SqlServer\Extention.cs
-    startLine: 30
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.SqlServer\Extention.cs
+    startLine: 32
   assemblies:
   - H.DataBases.SqlServer
   namespace: System
@@ -66,6 +67,37 @@ items:
   nameWithType.vb: SqlServerExtention.AddDbContextBySetting(Of TDbContext)(IServiceCollection, Action(Of ISqlServerOption))
   fullName.vb: System.SqlServerExtention.AddDbContextBySetting(Of TDbContext)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.DataBases.SqlServer.ISqlServerOption))
   name.vb: AddDbContextBySetting(Of TDbContext)(IServiceCollection, Action(Of ISqlServerOption))
+- uid: System.SqlServerExtention.UseSqlServer(System.IApplicationBuilder,System.Action{H.DataBases.SqlServer.ISqlServerOption})
+  commentId: M:System.SqlServerExtention.UseSqlServer(System.IApplicationBuilder,System.Action{H.DataBases.SqlServer.ISqlServerOption})
+  id: UseSqlServer(System.IApplicationBuilder,System.Action{H.DataBases.SqlServer.ISqlServerOption})
+  isExtensionMethod: true
+  parent: System.SqlServerExtention
+  langs:
+  - csharp
+  - vb
+  name: UseSqlServer(IApplicationBuilder, Action<ISqlServerOption>)
+  nameWithType: SqlServerExtention.UseSqlServer(IApplicationBuilder, Action<ISqlServerOption>)
+  fullName: System.SqlServerExtention.UseSqlServer(System.IApplicationBuilder, System.Action<H.DataBases.SqlServer.ISqlServerOption>)
+  type: Method
+  source:
+    id: UseSqlServer
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\DataBases\H.DataBases.SqlServer\Extention.cs
+    startLine: 43
+  assemblies:
+  - H.DataBases.SqlServer
+  namespace: System
+  syntax:
+    content: public static void UseSqlServer(this IApplicationBuilder service, Action<ISqlServerOption> action = null)
+    parameters:
+    - id: service
+      type: System.IApplicationBuilder
+    - id: action
+      type: System.Action{H.DataBases.SqlServer.ISqlServerOption}
+    content.vb: Public Shared Sub UseSqlServer(service As IApplicationBuilder, action As Action(Of ISqlServerOption) = Nothing)
+  overload: System.SqlServerExtention.UseSqlServer*
+  nameWithType.vb: SqlServerExtention.UseSqlServer(IApplicationBuilder, Action(Of ISqlServerOption))
+  fullName.vb: System.SqlServerExtention.UseSqlServer(System.IApplicationBuilder, System.Action(Of H.DataBases.SqlServer.ISqlServerOption))
+  name.vb: UseSqlServer(IApplicationBuilder, Action(Of ISqlServerOption))
 references:
 - uid: System
   commentId: N:System
@@ -415,3 +447,16 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: System.SqlServerExtention.UseSqlServer*
+  commentId: Overload:System.SqlServerExtention.UseSqlServer
+  href: System.SqlServerExtention.html#System_SqlServerExtention_UseSqlServer_System_IApplicationBuilder_System_Action_H_DataBases_SqlServer_ISqlServerOption__
+  name: UseSqlServer
+  nameWithType: SqlServerExtention.UseSqlServer
+  fullName: System.SqlServerExtention.UseSqlServer
+- uid: System.IApplicationBuilder
+  commentId: T:System.IApplicationBuilder
+  parent: System
+  href: System.IApplicationBuilder.html
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: System.IApplicationBuilder

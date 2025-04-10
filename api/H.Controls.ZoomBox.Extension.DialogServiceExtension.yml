@@ -5,9 +5,9 @@ items:
   id: DialogServiceExtension
   parent: H.Controls.ZoomBox.Extension
   children:
-  - H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter},System.Action{H.Services.Common.IDialog})
-  - H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.String,System.Action{H.Services.Common.IDialog})
-  - H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Common.IDialog})
+  - H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter},System.Action{H.Services.Message.Dialog.IDialog})
+  - H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.String,System.Action{H.Services.Message.Dialog.IDialog})
+  - H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Message.Dialog.IDialog})
   langs:
   - csharp
   - vb
@@ -17,8 +17,8 @@ items:
   type: Class
   source:
     id: DialogServiceExtension
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ZoomBox.Extension\DialogServiceExtension.cs
-    startLine: 8
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ZoomBox.Extension\DialogServiceExtension.cs
+    startLine: 9
   assemblies:
   - H.Controls.ZoomBox.Extension
   namespace: H.Controls.ZoomBox.Extension
@@ -35,9 +35,9 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter},System.Action{H.Services.Common.IDialog})
-  commentId: M:H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter},System.Action{H.Services.Common.IDialog})
-  id: ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter},System.Action{H.Services.Common.IDialog})
+- uid: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter},System.Action{H.Services.Message.Dialog.IDialog})
+  commentId: M:H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter},System.Action{H.Services.Message.Dialog.IDialog})
+  id: ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter},System.Action{H.Services.Message.Dialog.IDialog})
   isExtensionMethod: true
   parent: H.Controls.ZoomBox.Extension.DialogServiceExtension
   langs:
@@ -45,12 +45,12 @@ items:
   - vb
   name: ShowZoomViewImage(IDialogMessageService, Action<IImageZoomViewPresenter>, Action<IDialog>)
   nameWithType: DialogServiceExtension.ShowZoomViewImage(IDialogMessageService, Action<IImageZoomViewPresenter>, Action<IDialog>)
-  fullName: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService, System.Action<H.Controls.ZoomBox.Extension.IImageZoomViewPresenter>, System.Action<H.Services.Common.IDialog>)
+  fullName: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService, System.Action<H.Controls.ZoomBox.Extension.IImageZoomViewPresenter>, System.Action<H.Services.Message.Dialog.IDialog>)
   type: Method
   source:
     id: ShowZoomViewImage
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ZoomBox.Extension\DialogServiceExtension.cs
-    startLine: 10
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ZoomBox.Extension\DialogServiceExtension.cs
+    startLine: 11
   assemblies:
   - H.Controls.ZoomBox.Extension
   namespace: H.Controls.ZoomBox.Extension
@@ -58,21 +58,21 @@ items:
     content: public static Task<bool?> ShowZoomViewImage(this IDialogMessageService service, Action<IImageZoomViewPresenter> option, Action<IDialog> builder = null)
     parameters:
     - id: service
-      type: H.Services.Common.IDialogMessageService
+      type: H.Services.Message.Dialog.IDialogMessageService
     - id: option
       type: System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter}
     - id: builder
-      type: System.Action{H.Services.Common.IDialog}
+      type: System.Action{H.Services.Message.Dialog.IDialog}
     return:
       type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
     content.vb: Public Shared Function ShowZoomViewImage(service As IDialogMessageService, [option] As Action(Of IImageZoomViewPresenter), builder As Action(Of IDialog) = Nothing) As Task(Of Boolean?)
   overload: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage*
   nameWithType.vb: DialogServiceExtension.ShowZoomViewImage(IDialogMessageService, Action(Of IImageZoomViewPresenter), Action(Of IDialog))
-  fullName.vb: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService, System.Action(Of H.Controls.ZoomBox.Extension.IImageZoomViewPresenter), System.Action(Of H.Services.Common.IDialog))
+  fullName.vb: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService, System.Action(Of H.Controls.ZoomBox.Extension.IImageZoomViewPresenter), System.Action(Of H.Services.Message.Dialog.IDialog))
   name.vb: ShowZoomViewImage(IDialogMessageService, Action(Of IImageZoomViewPresenter), Action(Of IDialog))
-- uid: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Common.IDialog})
-  commentId: M:H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Common.IDialog})
-  id: ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Common.IDialog})
+- uid: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Message.Dialog.IDialog})
+  commentId: M:H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Message.Dialog.IDialog})
+  id: ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.Windows.Media.ImageSource,System.Action{H.Services.Message.Dialog.IDialog})
   isExtensionMethod: true
   parent: H.Controls.ZoomBox.Extension.DialogServiceExtension
   langs:
@@ -80,12 +80,12 @@ items:
   - vb
   name: ShowZoomViewImage(IDialogMessageService, ImageSource, Action<IDialog>)
   nameWithType: DialogServiceExtension.ShowZoomViewImage(IDialogMessageService, ImageSource, Action<IDialog>)
-  fullName: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService, System.Windows.Media.ImageSource, System.Action<H.Services.Common.IDialog>)
+  fullName: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService, System.Windows.Media.ImageSource, System.Action<H.Services.Message.Dialog.IDialog>)
   type: Method
   source:
     id: ShowZoomViewImage
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ZoomBox.Extension\DialogServiceExtension.cs
-    startLine: 20
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ZoomBox.Extension\DialogServiceExtension.cs
+    startLine: 21
   assemblies:
   - H.Controls.ZoomBox.Extension
   namespace: H.Controls.ZoomBox.Extension
@@ -93,21 +93,21 @@ items:
     content: public static Task<bool?> ShowZoomViewImage(this IDialogMessageService service, ImageSource imageSource, Action<IDialog> builder = null)
     parameters:
     - id: service
-      type: H.Services.Common.IDialogMessageService
+      type: H.Services.Message.Dialog.IDialogMessageService
     - id: imageSource
       type: System.Windows.Media.ImageSource
     - id: builder
-      type: System.Action{H.Services.Common.IDialog}
+      type: System.Action{H.Services.Message.Dialog.IDialog}
     return:
       type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
     content.vb: Public Shared Function ShowZoomViewImage(service As IDialogMessageService, imageSource As ImageSource, builder As Action(Of IDialog) = Nothing) As Task(Of Boolean?)
   overload: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage*
   nameWithType.vb: DialogServiceExtension.ShowZoomViewImage(IDialogMessageService, ImageSource, Action(Of IDialog))
-  fullName.vb: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService, System.Windows.Media.ImageSource, System.Action(Of H.Services.Common.IDialog))
+  fullName.vb: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService, System.Windows.Media.ImageSource, System.Action(Of H.Services.Message.Dialog.IDialog))
   name.vb: ShowZoomViewImage(IDialogMessageService, ImageSource, Action(Of IDialog))
-- uid: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.String,System.Action{H.Services.Common.IDialog})
-  commentId: M:H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.String,System.Action{H.Services.Common.IDialog})
-  id: ShowZoomViewImage(H.Services.Common.IDialogMessageService,System.String,System.Action{H.Services.Common.IDialog})
+- uid: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.String,System.Action{H.Services.Message.Dialog.IDialog})
+  commentId: M:H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.String,System.Action{H.Services.Message.Dialog.IDialog})
+  id: ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService,System.String,System.Action{H.Services.Message.Dialog.IDialog})
   isExtensionMethod: true
   parent: H.Controls.ZoomBox.Extension.DialogServiceExtension
   langs:
@@ -115,12 +115,12 @@ items:
   - vb
   name: ShowZoomViewImage(IDialogMessageService, string, Action<IDialog>)
   nameWithType: DialogServiceExtension.ShowZoomViewImage(IDialogMessageService, string, Action<IDialog>)
-  fullName: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService, string, System.Action<H.Services.Common.IDialog>)
+  fullName: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService, string, System.Action<H.Services.Message.Dialog.IDialog>)
   type: Method
   source:
     id: ShowZoomViewImage
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ZoomBox.Extension\DialogServiceExtension.cs
-    startLine: 25
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ZoomBox.Extension\DialogServiceExtension.cs
+    startLine: 26
   assemblies:
   - H.Controls.ZoomBox.Extension
   namespace: H.Controls.ZoomBox.Extension
@@ -128,17 +128,17 @@ items:
     content: public static Task<bool?> ShowZoomViewImage(this IDialogMessageService service, string filePath, Action<IDialog> builder = null)
     parameters:
     - id: service
-      type: H.Services.Common.IDialogMessageService
+      type: H.Services.Message.Dialog.IDialogMessageService
     - id: filePath
       type: System.String
     - id: builder
-      type: System.Action{H.Services.Common.IDialog}
+      type: System.Action{H.Services.Message.Dialog.IDialog}
     return:
       type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
     content.vb: Public Shared Function ShowZoomViewImage(service As IDialogMessageService, filePath As String, builder As Action(Of IDialog) = Nothing) As Task(Of Boolean?)
   overload: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage*
   nameWithType.vb: DialogServiceExtension.ShowZoomViewImage(IDialogMessageService, String, Action(Of IDialog))
-  fullName.vb: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Common.IDialogMessageService, String, System.Action(Of H.Services.Common.IDialog))
+  fullName.vb: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage(H.Services.Message.Dialog.IDialogMessageService, String, System.Action(Of H.Services.Message.Dialog.IDialog))
   name.vb: ShowZoomViewImage(IDialogMessageService, String, Action(Of IDialog))
 references:
 - uid: H.Controls.ZoomBox.Extension
@@ -417,17 +417,17 @@ references:
   fullName: System
 - uid: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage*
   commentId: Overload:H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage
-  href: H.Controls.ZoomBox.Extension.DialogServiceExtension.html#H_Controls_ZoomBox_Extension_DialogServiceExtension_ShowZoomViewImage_H_Services_Common_IDialogMessageService_System_Action_H_Controls_ZoomBox_Extension_IImageZoomViewPresenter__System_Action_H_Services_Common_IDialog__
+  href: H.Controls.ZoomBox.Extension.DialogServiceExtension.html#H_Controls_ZoomBox_Extension_DialogServiceExtension_ShowZoomViewImage_H_Services_Message_Dialog_IDialogMessageService_System_Action_H_Controls_ZoomBox_Extension_IImageZoomViewPresenter__System_Action_H_Services_Message_Dialog_IDialog__
   name: ShowZoomViewImage
   nameWithType: DialogServiceExtension.ShowZoomViewImage
   fullName: H.Controls.ZoomBox.Extension.DialogServiceExtension.ShowZoomViewImage
-- uid: H.Services.Common.IDialogMessageService
-  commentId: T:H.Services.Common.IDialogMessageService
-  parent: H.Services.Common
-  href: H.Services.Common.IDialogMessageService.html
+- uid: H.Services.Message.Dialog.IDialogMessageService
+  commentId: T:H.Services.Message.Dialog.IDialogMessageService
+  parent: H.Services.Message.Dialog
+  href: H.Services.Message.Dialog.IDialogMessageService.html
   name: IDialogMessageService
   nameWithType: IDialogMessageService
-  fullName: H.Services.Common.IDialogMessageService
+  fullName: H.Services.Message.Dialog.IDialogMessageService
 - uid: System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter}
   commentId: T:System.Action{H.Controls.ZoomBox.Extension.IImageZoomViewPresenter}
   parent: System
@@ -461,16 +461,16 @@ references:
     name: IImageZoomViewPresenter
     href: H.Controls.ZoomBox.Extension.IImageZoomViewPresenter.html
   - name: )
-- uid: System.Action{H.Services.Common.IDialog}
-  commentId: T:System.Action{H.Services.Common.IDialog}
+- uid: System.Action{H.Services.Message.Dialog.IDialog}
+  commentId: T:System.Action{H.Services.Message.Dialog.IDialog}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
   name: Action<IDialog>
   nameWithType: Action<IDialog>
-  fullName: System.Action<H.Services.Common.IDialog>
+  fullName: System.Action<H.Services.Message.Dialog.IDialog>
   nameWithType.vb: Action(Of IDialog)
-  fullName.vb: System.Action(Of H.Services.Common.IDialog)
+  fullName.vb: System.Action(Of H.Services.Message.Dialog.IDialog)
   name.vb: Action(Of IDialog)
   spec.csharp:
   - uid: System.Action`1
@@ -478,9 +478,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Services.Common.IDialog
+  - uid: H.Services.Message.Dialog.IDialog
     name: IDialog
-    href: H.Services.Common.IDialog.html
+    href: H.Services.Message.Dialog.IDialog.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -490,9 +490,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Services.Common.IDialog
+  - uid: H.Services.Message.Dialog.IDialog
     name: IDialog
-    href: H.Services.Common.IDialog.html
+    href: H.Services.Message.Dialog.IDialog.html
   - name: )
 - uid: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
   commentId: T:System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
@@ -531,12 +531,12 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: '?'
   - name: )
-- uid: H.Services.Common
-  commentId: N:H.Services.Common
+- uid: H.Services.Message.Dialog
+  commentId: N:H.Services.Message.Dialog
   href: H.html
-  name: H.Services.Common
-  nameWithType: H.Services.Common
-  fullName: H.Services.Common
+  name: H.Services.Message.Dialog
+  nameWithType: H.Services.Message.Dialog
+  fullName: H.Services.Message.Dialog
   spec.csharp:
   - uid: H
     name: H
@@ -546,9 +546,13 @@ references:
     name: Services
     href: H.Services.html
   - name: .
-  - uid: H.Services.Common
-    name: Common
-    href: H.Services.Common.html
+  - uid: H.Services.Message
+    name: Message
+    href: H.Services.Message.html
+  - name: .
+  - uid: H.Services.Message.Dialog
+    name: Dialog
+    href: H.Services.Message.Dialog.html
   spec.vb:
   - uid: H
     name: H
@@ -558,9 +562,13 @@ references:
     name: Services
     href: H.Services.html
   - name: .
-  - uid: H.Services.Common
-    name: Common
-    href: H.Services.Common.html
+  - uid: H.Services.Message
+    name: Message
+    href: H.Services.Message.html
+  - name: .
+  - uid: H.Services.Message.Dialog
+    name: Dialog
+    href: H.Services.Message.Dialog.html
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true
@@ -664,6 +672,7 @@ references:
   fullName: System.Windows.Media.ImageSource
 - uid: System.Windows.Media
   commentId: N:System.Windows.Media
+  isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system
   name: System.Windows.Media
   nameWithType: System.Windows.Media
@@ -671,26 +680,32 @@ references:
   spec.csharp:
   - uid: System
     name: System
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system
   - name: .
   - uid: System.Windows
     name: Windows
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows
   - name: .
   - uid: System.Windows.Media
     name: Media
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.media
   spec.vb:
   - uid: System
     name: System
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system
   - name: .
   - uid: System.Windows
     name: Windows
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows
   - name: .
   - uid: System.Windows.Media
     name: Media
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.media
 - uid: System.String
   commentId: T:System.String

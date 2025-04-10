@@ -6,6 +6,7 @@ items:
   children:
   - H.Modules.License.ILicenseFlagViewPresenter
   - H.Modules.License.ILicenseManager
+  - H.Modules.License.ILicenseOptions
   - H.Modules.License.ILicenseService
   - H.Modules.License.ILicenseViewPresenter
   - H.Modules.License.IVipFlagViewPresenter
@@ -29,6 +30,13 @@ items:
   assemblies:
   - H.Modules.License
 references:
+- uid: H.Modules.License.ILicenseOptions
+  commentId: T:H.Modules.License.ILicenseOptions
+  parent: H.Modules.License
+  href: H.Modules.License.ILicenseOptions.html
+  name: ILicenseOptions
+  nameWithType: ILicenseOptions
+  fullName: H.Modules.License.ILicenseOptions
 - uid: H.Modules.License.ILicenseFlagViewPresenter
   commentId: T:H.Modules.License.ILicenseFlagViewPresenter
   parent: H.Modules.License

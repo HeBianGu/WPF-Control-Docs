@@ -6,6 +6,8 @@ items:
   children:
   - H.Modules.Login.Forget
   - H.Modules.Login.ILoginOption
+  - H.Modules.Login.ILoginOptions
+  - H.Modules.Login.IRegistorOptions
   - H.Modules.Login.LoginOptions
   - H.Modules.Login.LoginViewPresenter
   - H.Modules.Login.LoginedSplashViewPresenter
@@ -24,6 +26,20 @@ items:
   assemblies:
   - H.Modules.Login
 references:
+- uid: H.Modules.Login.ILoginOptions
+  commentId: T:H.Modules.Login.ILoginOptions
+  parent: H.Modules.Login
+  href: H.Modules.Login.ILoginOptions.html
+  name: ILoginOptions
+  nameWithType: ILoginOptions
+  fullName: H.Modules.Login.ILoginOptions
+- uid: H.Modules.Login.IRegistorOptions
+  commentId: T:H.Modules.Login.IRegistorOptions
+  parent: H.Modules.Login
+  href: H.Modules.Login.IRegistorOptions.html
+  name: IRegistorOptions
+  nameWithType: IRegistorOptions
+  fullName: H.Modules.Login.IRegistorOptions
 - uid: H.Modules.Login.LoginedSplashViewPresenter
   commentId: T:H.Modules.Login.LoginedSplashViewPresenter
   href: H.Modules.Login.LoginedSplashViewPresenter.html

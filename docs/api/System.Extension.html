@@ -152,10 +152,10 @@ Class Extension
 </h2>
 
 
-  <a id="System_Extension_AddFavorite_" data-uid="System.Extension.AddFavorite*"></a>
+  <a id="System_Extension_AddColorThemeViewPresenter_" data-uid="System.Extension.AddColorThemeViewPresenter*"></a>
 
-  <h3 id="System_Extension_AddFavorite_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_FavoriteBox_FavoriteOptions__" data-uid="System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})">
-  AddFavorite(IServiceCollection, Action&lt;FavoriteOptions&gt;)
+  <h3 id="System_Extension_AddColorThemeViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Theme_IColorThemeOptions__" data-uid="System.Extension.AddColorThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IColorThemeOptions})">
+  AddColorThemeViewPresenter(IServiceCollection, Action&lt;IColorThemeOptions&gt;)
   
   </h3>
 
@@ -163,14 +163,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddFavorite(this IServiceCollection services, Action&lt;FavoriteOptions&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddColorThemeViewPresenter(this IServiceCollection services, Action&lt;IColorThemeOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.FavoriteBox.FavoriteOptions.html">FavoriteOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Theme.IColorThemeOptions.html">IColorThemeOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -192,8 +192,8 @@ Class Extension
 
   <a id="System_Extension_AddFavorite_" data-uid="System.Extension.AddFavorite*"></a>
 
-  <h3 id="System_Extension_AddFavorite__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_FavoriteBox_FavoriteOptions__" data-uid="System.Extension.AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})">
-  AddFavorite&lt;T&gt;(IServiceCollection, Action&lt;FavoriteOptions&gt;)
+  <h3 id="System_Extension_AddFavorite_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_FavoriteBox_IFavoriteOptions__" data-uid="System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})">
+  AddFavorite(IServiceCollection, Action&lt;IFavoriteOptions&gt;)
   
   </h3>
 
@@ -201,14 +201,52 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddFavorite&lt;T&gt;(this IServiceCollection services, Action&lt;FavoriteOptions&gt; setupAction = null) where T : class, IFavoriteService</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddFavorite(this IServiceCollection services, Action&lt;IFavoriteOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.FavoriteBox.FavoriteOptions.html">FavoriteOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.FavoriteBox.IFavoriteOptions.html">IFavoriteOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extension_AddFavorite_" data-uid="System.Extension.AddFavorite*"></a>
+
+  <h3 id="System_Extension_AddFavorite__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_FavoriteBox_IFavoriteOptions__" data-uid="System.Extension.AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})">
+  AddFavorite&lt;T&gt;(IServiceCollection, Action&lt;IFavoriteOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddFavorite&lt;T&gt;(this IServiceCollection services, Action&lt;IFavoriteOptions&gt; setupAction = null) where T : class, IFavoriteService</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.FavoriteBox.IFavoriteOptions.html">IFavoriteOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -235,8 +273,8 @@ Class Extension
 
   <a id="System_Extension_AddFeedBack_" data-uid="System.Extension.AddFeedBack*"></a>
 
-  <h3 id="System_Extension_AddFeedBack_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Feedback_FeedbackOptions__" data-uid="System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.FeedbackOptions})">
-  AddFeedBack(IServiceCollection, Action&lt;FeedbackOptions&gt;)
+  <h3 id="System_Extension_AddFeedBack_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Feedback_IFeedbackOptions__" data-uid="System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.IFeedbackOptions})">
+  AddFeedBack(IServiceCollection, Action&lt;IFeedbackOptions&gt;)
   
   </h3>
 
@@ -244,14 +282,53 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddFeedBack(this IServiceCollection services, Action&lt;FeedbackOptions&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddFeedBack(this IServiceCollection services, Action&lt;IFeedbackOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Feedback.FeedbackOptions.html">FeedbackOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Feedback.IFeedbackOptions.html">IFeedbackOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extension_AddLoadThemeOptionsService_" data-uid="System.Extension.AddLoadThemeOptionsService*"></a>
+
+  <h3 id="System_Extension_AddLoadThemeOptionsService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Theme_IThemeOptions__" data-uid="System.Extension.AddLoadThemeOptionsService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})">
+  AddLoadThemeOptionsService(IServiceCollection, Action&lt;IThemeOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;AddTheme&quot;)]
+public static IServiceCollection AddLoadThemeOptionsService(this IServiceCollection services, Action&lt;IThemeOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Theme.IThemeOptions.html">IThemeOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -273,8 +350,8 @@ Class Extension
 
   <a id="System_Extension_AddLoginViewPresenter_" data-uid="System.Extension.AddLoginViewPresenter*"></a>
 
-  <h3 id="System_Extension_AddLoginViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_LoginOptions__" data-uid="System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})">
-  AddLoginViewPresenter(IServiceCollection, Action&lt;LoginOptions&gt;)
+  <h3 id="System_Extension_AddLoginViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_ILoginOptions__" data-uid="System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})">
+  AddLoginViewPresenter(IServiceCollection, Action&lt;ILoginOptions&gt;)
   
   </h3>
 
@@ -282,14 +359,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddLoginViewPresenter(this IServiceCollection services, Action&lt;LoginOptions&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddLoginViewPresenter(this IServiceCollection services, Action&lt;ILoginOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.LoginOptions.html">LoginOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.ILoginOptions.html">ILoginOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -311,8 +388,8 @@ Class Extension
 
   <a id="System_Extension_AddRegisterLoginViewPresenter_" data-uid="System.Extension.AddRegisterLoginViewPresenter*"></a>
 
-  <h3 id="System_Extension_AddRegisterLoginViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_LoginOptions__System_Action_H_Modules_Login_RegistorOptions__" data-uid="System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions},System.Action{H.Modules.Login.RegistorOptions})">
-  AddRegisterLoginViewPresenter(IServiceCollection, Action&lt;LoginOptions&gt;, Action&lt;RegistorOptions&gt;)
+  <h3 id="System_Extension_AddRegisterLoginViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_ILoginOptions__System_Action_H_Modules_Login_IRegistorOptions__" data-uid="System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions},System.Action{H.Modules.Login.IRegistorOptions})">
+  AddRegisterLoginViewPresenter(IServiceCollection, Action&lt;ILoginOptions&gt;, Action&lt;IRegistorOptions&gt;)
   
   </h3>
 
@@ -320,16 +397,16 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddRegisterLoginViewPresenter(this IServiceCollection services, Action&lt;LoginOptions&gt; setupAction = null, Action&lt;RegistorOptions&gt; setupRegisterAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddRegisterLoginViewPresenter(this IServiceCollection services, Action&lt;ILoginOptions&gt; setupAction = null, Action&lt;IRegistorOptions&gt; setupRegisterAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.LoginOptions.html">LoginOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.ILoginOptions.html">ILoginOptions</a>&gt;</dt>
     <dd></dd>
-    <dt><code>setupRegisterAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.RegistorOptions.html">RegistorOptions</a>&gt;</dt>
+    <dt><code>setupRegisterAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.IRegistorOptions.html">IRegistorOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -351,8 +428,8 @@ Class Extension
 
   <a id="System_Extension_AddRevertible_" data-uid="System.Extension.AddRevertible*"></a>
 
-  <h3 id="System_Extension_AddRevertible_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Extensions_Revertible_RevertibleOptions__" data-uid="System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.RevertibleOptions})">
-  AddRevertible(IServiceCollection, Action&lt;RevertibleOptions&gt;)
+  <h3 id="System_Extension_AddRevertible_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Extensions_Revertible_IRevertibleOptions__" data-uid="System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.IRevertibleOptions})">
+  AddRevertible(IServiceCollection, Action&lt;IRevertibleOptions&gt;)
   
   </h3>
 
@@ -360,14 +437,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddRevertible(this IServiceCollection services, Action&lt;RevertibleOptions&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddRevertible(this IServiceCollection services, Action&lt;IRevertibleOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.Revertible.RevertibleOptions.html">RevertibleOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.Revertible.IRevertibleOptions.html">IRevertibleOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -425,8 +502,8 @@ Class Extension
 
   <a id="System_Extension_AddSplashScreen_" data-uid="System.Extension.AddSplashScreen*"></a>
 
-  <h3 id="System_Extension_AddSplashScreen_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_SplashScreen_SplashScreenOption__" data-uid="System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})">
-  AddSplashScreen(IServiceCollection, Action&lt;SplashScreenOption&gt;)
+  <h3 id="System_Extension_AddSplashScreen_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_SplashScreen_ISplashScreenOptions__" data-uid="System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})">
+  AddSplashScreen(IServiceCollection, Action&lt;ISplashScreenOptions&gt;)
   
   </h3>
 
@@ -434,14 +511,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddSplashScreen(this IServiceCollection services, Action&lt;SplashScreenOption&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddSplashScreen(this IServiceCollection services, Action&lt;ISplashScreenOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.SplashScreen.SplashScreenOption.html">SplashScreenOption</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.SplashScreen.ISplashScreenOptions.html">ISplashScreenOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -463,8 +540,8 @@ Class Extension
 
   <a id="System_Extension_AddSplashScreen_" data-uid="System.Extension.AddSplashScreen*"></a>
 
-  <h3 id="System_Extension_AddSplashScreen__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_SplashScreen_SplashScreenOption__" data-uid="System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})">
-  AddSplashScreen&lt;T&gt;(IServiceCollection, Action&lt;SplashScreenOption&gt;)
+  <h3 id="System_Extension_AddSplashScreen__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_SplashScreen_ISplashScreenOptions__" data-uid="System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})">
+  AddSplashScreen&lt;T&gt;(IServiceCollection, Action&lt;ISplashScreenOptions&gt;)
   
   </h3>
 
@@ -472,14 +549,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddSplashScreen&lt;T&gt;(this IServiceCollection services, Action&lt;SplashScreenOption&gt; setupAction = null) where T : ISplashScreenViewPresenter</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddSplashScreen&lt;T&gt;(this IServiceCollection services, Action&lt;ISplashScreenOptions&gt; setupAction = null) where T : ISplashScreenViewPresenter</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.SplashScreen.SplashScreenOption.html">SplashScreenOption</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.SplashScreen.ISplashScreenOptions.html">ISplashScreenOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -504,10 +581,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_AddSwitchThemeViewPresenter_" data-uid="System.Extension.AddSwitchThemeViewPresenter*"></a>
+  <a id="System_Extension_AddTag_" data-uid="System.Extension.AddTag*"></a>
 
-  <h3 id="System_Extension_AddSwitchThemeViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Theme_SwitchThemeOptions__" data-uid="System.Extension.AddSwitchThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.SwitchThemeOptions})">
-  AddSwitchThemeViewPresenter(IServiceCollection, Action&lt;SwitchThemeOptions&gt;)
+  <h3 id="System_Extension_AddTag_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_TagBox_ITagOptions__" data-uid="System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})">
+  AddTag(IServiceCollection, Action&lt;ITagOptions&gt;)
   
   </h3>
 
@@ -515,14 +592,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddSwitchThemeViewPresenter(this IServiceCollection services, Action&lt;SwitchThemeOptions&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTag(this IServiceCollection services, Action&lt;ITagOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Theme.SwitchThemeOptions.html">SwitchThemeOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.TagBox.ITagOptions.html">ITagOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -544,8 +621,8 @@ Class Extension
 
   <a id="System_Extension_AddTag_" data-uid="System.Extension.AddTag*"></a>
 
-  <h3 id="System_Extension_AddTag_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_TagBox_TagOptions__" data-uid="System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})">
-  AddTag(IServiceCollection, Action&lt;TagOptions&gt;)
+  <h3 id="System_Extension_AddTag__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_TagBox_ITagOptions__" data-uid="System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})">
+  AddTag&lt;T&gt;(IServiceCollection, Action&lt;ITagOptions&gt;)
   
   </h3>
 
@@ -553,52 +630,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTag(this IServiceCollection services, Action&lt;TagOptions&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTag&lt;T&gt;(this IServiceCollection services, Action&lt;ITagOptions&gt; setupAction = null) where T : class, ITagService</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.TagBox.TagOptions.html">TagOptions</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="System_Extension_AddTag_" data-uid="System.Extension.AddTag*"></a>
-
-  <h3 id="System_Extension_AddTag__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_TagBox_TagOptions__" data-uid="System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})">
-  AddTag&lt;T&gt;(IServiceCollection, Action&lt;TagOptions&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTag&lt;T&gt;(this IServiceCollection services, Action&lt;TagOptions&gt; setupAction = null) where T : class, ITagService</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.TagBox.TagOptions.html">TagOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.TagBox.ITagOptions.html">ITagOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -625,8 +664,8 @@ Class Extension
 
   <a id="System_Extension_AddTestLoginService_" data-uid="System.Extension.AddTestLoginService*"></a>
 
-  <h3 id="System_Extension_AddTestLoginService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_LoginOptions__" data-uid="System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})">
-  AddTestLoginService(IServiceCollection, Action&lt;LoginOptions&gt;)
+  <h3 id="System_Extension_AddTestLoginService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_ILoginOptions__" data-uid="System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})">
+  AddTestLoginService(IServiceCollection, Action&lt;ILoginOptions&gt;)
   
   </h3>
 
@@ -634,14 +673,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTestLoginService(this IServiceCollection services, Action&lt;LoginOptions&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTestLoginService(this IServiceCollection services, Action&lt;ILoginOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.LoginOptions.html">LoginOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.ILoginOptions.html">ILoginOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -663,8 +702,8 @@ Class Extension
 
   <a id="System_Extension_AddTestRegistorService_" data-uid="System.Extension.AddTestRegistorService*"></a>
 
-  <h3 id="System_Extension_AddTestRegistorService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_RegistorOptions__" data-uid="System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.RegistorOptions})">
-  AddTestRegistorService(IServiceCollection, Action&lt;RegistorOptions&gt;)
+  <h3 id="System_Extension_AddTestRegistorService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_IRegistorOptions__" data-uid="System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.IRegistorOptions})">
+  AddTestRegistorService(IServiceCollection, Action&lt;IRegistorOptions&gt;)
   
   </h3>
 
@@ -672,14 +711,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTestRegistorService(this IServiceCollection services, Action&lt;RegistorOptions&gt; setupAction = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTestRegistorService(this IServiceCollection services, Action&lt;IRegistorOptions&gt; setupAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
     <dd></dd>
-    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.RegistorOptions.html">RegistorOptions</a>&gt;</dt>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.IRegistorOptions.html">IRegistorOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -699,10 +738,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseFavorite_" data-uid="System.Extension.UseFavorite*"></a>
+  <a id="System_Extension_AddTheme_" data-uid="System.Extension.AddTheme*"></a>
 
-  <h3 id="System_Extension_UseFavorite_System_IApplicationBuilder_System_Action_H_Controls_FavoriteBox_FavoriteOptions__" data-uid="System.Extension.UseFavorite(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.FavoriteOptions})">
-  UseFavorite(IApplicationBuilder, Action&lt;FavoriteOptions&gt;)
+  <h3 id="System_Extension_AddTheme_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Theme_IThemeOptions__" data-uid="System.Extension.AddTheme(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})">
+  AddTheme(IServiceCollection, Action&lt;IThemeOptions&gt;)
   
   </h3>
 
@@ -710,14 +749,52 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseFavorite(this IApplicationBuilder builder, Action&lt;FavoriteOptions&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddTheme(this IServiceCollection services, Action&lt;IThemeOptions&gt; setupAction = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>setupAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Theme.IThemeOptions.html">IThemeOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Extension_UseFavoriteOptions_" data-uid="System.Extension.UseFavoriteOptions*"></a>
+
+  <h3 id="System_Extension_UseFavoriteOptions_System_IApplicationBuilder_System_Action_H_Controls_FavoriteBox_IFavoriteOptions__" data-uid="System.Extension.UseFavoriteOptions(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})">
+  UseFavoriteOptions(IApplicationBuilder, Action&lt;IFavoriteOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseFavoriteOptions(this IApplicationBuilder builder, Action&lt;IFavoriteOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.FavoriteBox.FavoriteOptions.html">FavoriteOptions</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.FavoriteBox.IFavoriteOptions.html">IFavoriteOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -737,10 +814,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseFeedBack_" data-uid="System.Extension.UseFeedBack*"></a>
+  <a id="System_Extension_UseFeedBackOptions_" data-uid="System.Extension.UseFeedBackOptions*"></a>
 
-  <h3 id="System_Extension_UseFeedBack_System_IApplicationBuilder_System_Action_H_Modules_Feedback_FeedbackOptions__" data-uid="System.Extension.UseFeedBack(System.IApplicationBuilder,System.Action{H.Modules.Feedback.FeedbackOptions})">
-  UseFeedBack(IApplicationBuilder, Action&lt;FeedbackOptions&gt;)
+  <h3 id="System_Extension_UseFeedBackOptions_System_IApplicationBuilder_System_Action_H_Modules_Feedback_IFeedbackOptions__" data-uid="System.Extension.UseFeedBackOptions(System.IApplicationBuilder,System.Action{H.Modules.Feedback.IFeedbackOptions})">
+  UseFeedBackOptions(IApplicationBuilder, Action&lt;IFeedbackOptions&gt;)
   
   </h3>
 
@@ -748,14 +825,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseFeedBack(this IApplicationBuilder builder, Action&lt;FeedbackOptions&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseFeedBackOptions(this IApplicationBuilder builder, Action&lt;IFeedbackOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Feedback.FeedbackOptions.html">FeedbackOptions</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Feedback.IFeedbackOptions.html">IFeedbackOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -775,10 +852,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseLogin_" data-uid="System.Extension.UseLogin*"></a>
+  <a id="System_Extension_UseLoginOptions_" data-uid="System.Extension.UseLoginOptions*"></a>
 
-  <h3 id="System_Extension_UseLogin_System_IApplicationBuilder_System_Action_H_Extensions_Revertible_RevertibleOptions__" data-uid="System.Extension.UseLogin(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.RevertibleOptions})">
-  UseLogin(IApplicationBuilder, Action&lt;RevertibleOptions&gt;)
+  <h3 id="System_Extension_UseLoginOptions_System_IApplicationBuilder_System_Action_H_Modules_Login_ILoginOptions__" data-uid="System.Extension.UseLoginOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.ILoginOptions})">
+  UseLoginOptions(IApplicationBuilder, Action&lt;ILoginOptions&gt;)
   
   </h3>
 
@@ -786,14 +863,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseLogin(this IApplicationBuilder builder, Action&lt;RevertibleOptions&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseLoginOptions(this IApplicationBuilder builder, Action&lt;ILoginOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.Revertible.RevertibleOptions.html">RevertibleOptions</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.ILoginOptions.html">ILoginOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -813,10 +890,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseLogin_" data-uid="System.Extension.UseLogin*"></a>
+  <a id="System_Extension_UseRegistorOptions_" data-uid="System.Extension.UseRegistorOptions*"></a>
 
-  <h3 id="System_Extension_UseLogin_System_IApplicationBuilder_System_Action_H_Modules_Login_LoginOptions__" data-uid="System.Extension.UseLogin(System.IApplicationBuilder,System.Action{H.Modules.Login.LoginOptions})">
-  UseLogin(IApplicationBuilder, Action&lt;LoginOptions&gt;)
+  <h3 id="System_Extension_UseRegistorOptions_System_IApplicationBuilder_System_Action_H_Modules_Login_IRegistorOptions__" data-uid="System.Extension.UseRegistorOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.IRegistorOptions})">
+  UseRegistorOptions(IApplicationBuilder, Action&lt;IRegistorOptions&gt;)
   
   </h3>
 
@@ -824,14 +901,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseLogin(this IApplicationBuilder builder, Action&lt;LoginOptions&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseRegistorOptions(this IApplicationBuilder builder, Action&lt;IRegistorOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.LoginOptions.html">LoginOptions</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.IRegistorOptions.html">IRegistorOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -851,10 +928,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseRegistor_" data-uid="System.Extension.UseRegistor*"></a>
+  <a id="System_Extension_UseRevertibleOptions_" data-uid="System.Extension.UseRevertibleOptions*"></a>
 
-  <h3 id="System_Extension_UseRegistor_System_IApplicationBuilder_System_Action_H_Modules_Login_RegistorOptions__" data-uid="System.Extension.UseRegistor(System.IApplicationBuilder,System.Action{H.Modules.Login.RegistorOptions})">
-  UseRegistor(IApplicationBuilder, Action&lt;RegistorOptions&gt;)
+  <h3 id="System_Extension_UseRevertibleOptions_System_IApplicationBuilder_System_Action_H_Extensions_Revertible_IRevertibleOptions__" data-uid="System.Extension.UseRevertibleOptions(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.IRevertibleOptions})">
+  UseRevertibleOptions(IApplicationBuilder, Action&lt;IRevertibleOptions&gt;)
   
   </h3>
 
@@ -862,14 +939,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseRegistor(this IApplicationBuilder builder, Action&lt;RegistorOptions&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseRevertibleOptions(this IApplicationBuilder builder, Action&lt;IRevertibleOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Login.RegistorOptions.html">RegistorOptions</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Extensions.Revertible.IRevertibleOptions.html">IRevertibleOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -889,10 +966,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseSplashScreen_" data-uid="System.Extension.UseSplashScreen*"></a>
+  <a id="System_Extension_UseSplashScreenOptions_" data-uid="System.Extension.UseSplashScreenOptions*"></a>
 
-  <h3 id="System_Extension_UseSplashScreen_System_IApplicationBuilder_System_Action_H_Modules_SplashScreen_SplashScreenOption__" data-uid="System.Extension.UseSplashScreen(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.SplashScreenOption})">
-  UseSplashScreen(IApplicationBuilder, Action&lt;SplashScreenOption&gt;)
+  <h3 id="System_Extension_UseSplashScreenOptions_System_IApplicationBuilder_System_Action_H_Modules_SplashScreen_ISplashScreenOptions__" data-uid="System.Extension.UseSplashScreenOptions(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})">
+  UseSplashScreenOptions(IApplicationBuilder, Action&lt;ISplashScreenOptions&gt;)
   
   </h3>
 
@@ -900,14 +977,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSplashScreen(this IApplicationBuilder builder, Action&lt;SplashScreenOption&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSplashScreenOptions(this IApplicationBuilder builder, Action&lt;ISplashScreenOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.SplashScreen.SplashScreenOption.html">SplashScreenOption</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.SplashScreen.ISplashScreenOptions.html">ISplashScreenOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -927,10 +1004,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseSwithTheme_" data-uid="System.Extension.UseSwithTheme*"></a>
+  <a id="System_Extension_UseStyleOptions_" data-uid="System.Extension.UseStyleOptions*"></a>
 
-  <h3 id="System_Extension_UseSwithTheme_System_IApplicationBuilder_System_Action_H_Modules_Theme_SwitchThemeOptions__" data-uid="System.Extension.UseSwithTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.SwitchThemeOptions})">
-  UseSwithTheme(IApplicationBuilder, Action&lt;SwitchThemeOptions&gt;)
+  <h3 id="System_Extension_UseStyleOptions_System_IApplicationBuilder_System_Action_H_Modules_Style_IStyleOptions__" data-uid="System.Extension.UseStyleOptions(System.IApplicationBuilder,System.Action{H.Modules.Style.IStyleOptions})">
+  UseStyleOptions(IApplicationBuilder, Action&lt;IStyleOptions&gt;)
   
   </h3>
 
@@ -938,14 +1015,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseSwithTheme(this IApplicationBuilder builder, Action&lt;SwitchThemeOptions&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseStyleOptions(this IApplicationBuilder builder, Action&lt;IStyleOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Theme.SwitchThemeOptions.html">SwitchThemeOptions</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Style.IStyleOptions.html">IStyleOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -965,10 +1042,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseTag_" data-uid="System.Extension.UseTag*"></a>
+  <a id="System_Extension_UseTagOptions_" data-uid="System.Extension.UseTagOptions*"></a>
 
-  <h3 id="System_Extension_UseTag_System_IApplicationBuilder_System_Action_H_Controls_TagBox_TagOptions__" data-uid="System.Extension.UseTag(System.IApplicationBuilder,System.Action{H.Controls.TagBox.TagOptions})">
-  UseTag(IApplicationBuilder, Action&lt;TagOptions&gt;)
+  <h3 id="System_Extension_UseTagOptions_System_IApplicationBuilder_System_Action_H_Controls_TagBox_ITagOptions__" data-uid="System.Extension.UseTagOptions(System.IApplicationBuilder,System.Action{H.Controls.TagBox.ITagOptions})">
+  UseTagOptions(IApplicationBuilder, Action&lt;ITagOptions&gt;)
   
   </h3>
 
@@ -976,14 +1053,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseTag(this IApplicationBuilder builder, Action&lt;TagOptions&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseTagOptions(this IApplicationBuilder builder, Action&lt;ITagOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.TagBox.TagOptions.html">TagOptions</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Controls.TagBox.ITagOptions.html">ITagOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -1003,10 +1080,10 @@ Class Extension
 
 
 
-  <a id="System_Extension_UseTheme_" data-uid="System.Extension.UseTheme*"></a>
+  <a id="System_Extension_UseThemeOptions_" data-uid="System.Extension.UseThemeOptions*"></a>
 
-  <h3 id="System_Extension_UseTheme_System_IApplicationBuilder_System_Action_H_Modules_Theme_ThemeSetting__" data-uid="System.Extension.UseTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.ThemeSetting})">
-  UseTheme(IApplicationBuilder, Action&lt;ThemeSetting&gt;)
+  <h3 id="System_Extension_UseThemeOptions_System_IApplicationBuilder_System_Action_H_Modules_Theme_IThemeOptions__" data-uid="System.Extension.UseThemeOptions(System.IApplicationBuilder,System.Action{H.Modules.Theme.IThemeOptions})">
+  UseThemeOptions(IApplicationBuilder, Action&lt;IThemeOptions&gt;)
   
   </h3>
 
@@ -1014,14 +1091,14 @@ Class Extension
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseTheme(this IApplicationBuilder builder, Action&lt;ThemeSetting&gt; option = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseThemeOptions(this IApplicationBuilder builder, Action&lt;IThemeOptions&gt; option = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>builder</code> <a class="xref" href="System.IApplicationBuilder.html">IApplicationBuilder</a></dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Theme.ThemeSetting.html">ThemeSetting</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Modules.Theme.IThemeOptions.html">IThemeOptions</a>&gt;</dt>
     <dd></dd>
   </dl>
 

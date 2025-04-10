@@ -20,8 +20,8 @@ items:
   type: Class
   source:
     id: Transitionables
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
-    startLine: 4
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
+    startLine: 2
   assemblies:
   - H.Extensions.Animations
   namespace: H.Extensions.Animations
@@ -51,15 +51,15 @@ items:
   type: Field
   source:
     id: Opacity
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
-    startLine: 6
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
+    startLine: 4
   assemblies:
   - H.Extensions.Animations
   namespace: H.Extensions.Animations
   syntax:
     content: public static ITransitionable Opacity
     return:
-      type: H.Services.Common.ITransitionable
+      type: H.Common.Transitionable.ITransitionable
     content.vb: Public Shared Opacity As ITransitionable
 - uid: H.Extensions.Animations.Transitionables.Scale
   commentId: F:H.Extensions.Animations.Transitionables.Scale
@@ -74,15 +74,15 @@ items:
   type: Field
   source:
     id: Scale
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
-    startLine: 7
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
+    startLine: 5
   assemblies:
   - H.Extensions.Animations
   namespace: H.Extensions.Animations
   syntax:
     content: public static ITransitionable Scale
     return:
-      type: H.Services.Common.ITransitionable
+      type: H.Common.Transitionable.ITransitionable
     content.vb: Public Shared Scale As ITransitionable
 - uid: H.Extensions.Animations.Transitionables.Rotate
   commentId: F:H.Extensions.Animations.Transitionables.Rotate
@@ -97,15 +97,15 @@ items:
   type: Field
   source:
     id: Rotate
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
-    startLine: 8
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
+    startLine: 6
   assemblies:
   - H.Extensions.Animations
   namespace: H.Extensions.Animations
   syntax:
     content: public static ITransitionable Rotate
     return:
-      type: H.Services.Common.ITransitionable
+      type: H.Common.Transitionable.ITransitionable
     content.vb: Public Shared Rotate As ITransitionable
 - uid: H.Extensions.Animations.Transitionables.XTranslate
   commentId: F:H.Extensions.Animations.Transitionables.XTranslate
@@ -120,15 +120,15 @@ items:
   type: Field
   source:
     id: XTranslate
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
-    startLine: 9
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
+    startLine: 7
   assemblies:
   - H.Extensions.Animations
   namespace: H.Extensions.Animations
   syntax:
     content: public static ITransitionable XTranslate
     return:
-      type: H.Services.Common.ITransitionable
+      type: H.Common.Transitionable.ITransitionable
     content.vb: Public Shared XTranslate As ITransitionable
 - uid: H.Extensions.Animations.Transitionables.YTranslate
   commentId: F:H.Extensions.Animations.Transitionables.YTranslate
@@ -143,15 +143,15 @@ items:
   type: Field
   source:
     id: YTranslate
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
-    startLine: 10
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
+    startLine: 8
   assemblies:
   - H.Extensions.Animations
   namespace: H.Extensions.Animations
   syntax:
     content: public static ITransitionable YTranslate
     return:
-      type: H.Services.Common.ITransitionable
+      type: H.Common.Transitionable.ITransitionable
     content.vb: Public Shared YTranslate As ITransitionable
 - uid: H.Extensions.Animations.Transitionables.OpacityScale
   commentId: F:H.Extensions.Animations.Transitionables.OpacityScale
@@ -166,15 +166,15 @@ items:
   type: Field
   source:
     id: OpacityScale
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
-    startLine: 16
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Animations\Transitionables.cs
+    startLine: 14
   assemblies:
   - H.Extensions.Animations
   namespace: H.Extensions.Animations
   syntax:
     content: public static ITransitionable OpacityScale
     return:
-      type: H.Services.Common.ITransitionable
+      type: H.Common.Transitionable.ITransitionable
     content.vb: Public Shared OpacityScale As ITransitionable
 references:
 - uid: H.Extensions.Animations
@@ -443,40 +443,40 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: H.Services.Common.ITransitionable
-  commentId: T:H.Services.Common.ITransitionable
-  parent: H.Services.Common
-  href: H.Services.Common.ITransitionable.html
+- uid: H.Common.Transitionable.ITransitionable
+  commentId: T:H.Common.Transitionable.ITransitionable
+  parent: H.Common.Transitionable
+  href: H.Common.Transitionable.ITransitionable.html
   name: ITransitionable
   nameWithType: ITransitionable
-  fullName: H.Services.Common.ITransitionable
-- uid: H.Services.Common
-  commentId: N:H.Services.Common
+  fullName: H.Common.Transitionable.ITransitionable
+- uid: H.Common.Transitionable
+  commentId: N:H.Common.Transitionable
   href: H.html
-  name: H.Services.Common
-  nameWithType: H.Services.Common
-  fullName: H.Services.Common
+  name: H.Common.Transitionable
+  nameWithType: H.Common.Transitionable
+  fullName: H.Common.Transitionable
   spec.csharp:
   - uid: H
     name: H
     href: H.html
   - name: .
-  - uid: H.Services
-    name: Services
-    href: H.Services.html
-  - name: .
-  - uid: H.Services.Common
+  - uid: H.Common
     name: Common
-    href: H.Services.Common.html
+    href: H.Common.html
+  - name: .
+  - uid: H.Common.Transitionable
+    name: Transitionable
+    href: H.Common.Transitionable.html
   spec.vb:
   - uid: H
     name: H
     href: H.html
   - name: .
-  - uid: H.Services
-    name: Services
-    href: H.Services.html
-  - name: .
-  - uid: H.Services.Common
+  - uid: H.Common
     name: Common
-    href: H.Services.Common.html
+    href: H.Common.html
+  - name: .
+  - uid: H.Common.Transitionable
+    name: Transitionable
+    href: H.Common.Transitionable.html

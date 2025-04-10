@@ -94,7 +94,7 @@ Interface IApplicationBuilder
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="System.html">System</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>H.Services.Common.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>H.Services.Setting.dll</dd></dl>
   </div>
 
   <div class="markdown summary"></div>
@@ -115,28 +115,28 @@ Interface IApplicationBuilder
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
       <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="System.Extension.html#System_Extension_UseLogin_System_IApplicationBuilder_System_Action_H_Extensions_Revertible_RevertibleOptions__">Extension.UseLogin(IApplicationBuilder, Action&lt;RevertibleOptions&gt;)</a>
+      <a class="xref" href="System.Extension.html#System_Extension_UseRevertibleOptions_System_IApplicationBuilder_System_Action_H_Extensions_Revertible_IRevertibleOptions__">Extension.UseRevertibleOptions(IApplicationBuilder, Action&lt;IRevertibleOptions&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Extention.html#System_Extention_UseAddLog4netSetting_System_IApplicationBuilder_System_Action_H_Extensions_Revertible_Log4netOptions__">Extention.UseAddLog4netSetting(IApplicationBuilder, Action&lt;Log4netOptions&gt;)</a>
+      <a class="xref" href="System.Extention.html#System_Extention_UseAddLog4netOptions_System_IApplicationBuilder_System_Action_H_Extensions_Log4net_ILog4netOptions__">Extention.UseAddLog4netOptions(IApplicationBuilder, Action&lt;ILog4netOptions&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Extention.html#System_Extention_UseFFMpeg_System_IApplicationBuilder_System_Action_H_Extensions_FFMpeg_FFMpegOption__">Extention.UseFFMpeg(IApplicationBuilder, Action&lt;FFMpegOption&gt;)</a>
+      <a class="xref" href="System.Extention.html#System_Extention_UseFFMpeg_System_IApplicationBuilder_System_Action_H_Extensions_FFMpeg_IFFMpegOption__">Extention.UseFFMpeg(IApplicationBuilder, Action&lt;IFFMpegOption&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Extention.html#System_Extention_UseMail_System_IApplicationBuilder_System_Action_H_Extensions_Mail_SmtpSendOptions__">Extention.UseMail(IApplicationBuilder, Action&lt;SmtpSendOptions&gt;)</a>
+      <a class="xref" href="System.Extention.html#System_Extention_UseMailOptions_System_IApplicationBuilder_System_Action_H_Extensions_Mail_ISmtpSendOptions__">Extention.UseMailOptions(IApplicationBuilder, Action&lt;ISmtpSendOptions&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Extention.html#System_Extention_UseNewtonsoftJson_System_IApplicationBuilder_System_Action_H_Extensions_NewtonsoftJson_NewtonsoftJsonOptions__">Extention.UseNewtonsoftJson(IApplicationBuilder, Action&lt;NewtonsoftJsonOptions&gt;)</a>
+      <a class="xref" href="System.Extention.html#System_Extention_UseNewtonsoftJsonOptions_System_IApplicationBuilder_System_Action_H_Extensions_NewtonsoftJson_INewtonsoftJsonOptions__">Extention.UseNewtonsoftJsonOptions(IApplicationBuilder, Action&lt;INewtonsoftJsonOptions&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.Extention.html#System_Extention_UseTypeLicense_System_IApplicationBuilder_System_Action_H_Extensions_TypeLicense_TypeLicenseOptions__">Extention.UseTypeLicense(IApplicationBuilder, Action&lt;TypeLicenseOptions&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="System.Extention.html#System_Extention_UseTypeLicenseOptions_System_IApplicationBuilder_System_Action_H_Extensions_TypeLicense_ITypeLicenseOptions__">Extention.UseTypeLicenseOptions(IApplicationBuilder, Action&lt;ITypeLicenseOptions&gt;)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -145,7 +145,40 @@ Interface IApplicationBuilder
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -155,39 +188,6 @@ Interface IApplicationBuilder
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>

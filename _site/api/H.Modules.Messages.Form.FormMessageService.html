@@ -118,7 +118,7 @@ Class FormMessageService
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="H.Services.Common.IFormMessageService.html">IFormMessageService</a></div>
+      <div><a class="xref" href="H.Services.Message.Form.IFormMessageService.html">IFormMessageService</a></div>
     </dd>
   </dl>
 
@@ -153,10 +153,10 @@ Class FormMessageService
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -165,7 +165,40 @@ Class FormMessageService
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -175,39 +208,6 @@ Class FormMessageService
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
@@ -230,7 +230,7 @@ Class FormMessageService
 
   <a id="H_Modules_Messages_Form_FormMessageService_ShowEdit_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowEdit*"></a>
 
-  <h3 id="H_Modules_Messages_Form_FormMessageService_ShowEdit__1___0_System_Action_H_Services_Common_IDialog__System_Predicate___0__System_Action_H_Services_Common_IFormOption__System_Windows_Window_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)">
+  <h3 id="H_Modules_Messages_Form_FormMessageService_ShowEdit__1___0_System_Action_H_Services_Message_Dialog_IDialog__System_Predicate___0__System_Action_H_Services_Message_Form_IFormOption__System_Windows_Window_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowEdit``1(``0,System.Action{H.Services.Message.Dialog.IDialog},System.Predicate{``0},System.Action{H.Services.Message.Form.IFormOption},System.Windows.Window)">
   ShowEdit&lt;T&gt;(T, Action&lt;IDialog&gt;, Predicate&lt;T&gt;, Action&lt;IFormOption&gt;, Window)
   
   </h3>
@@ -246,11 +246,11 @@ Class FormMessageService
   <dl class="parameters">
     <dt><code>value</code> <span class="xref">T</span></dt>
     <dd></dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
     <dt><code>match</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;T&gt;</dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IFormOption.html">IFormOption</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Form.IFormOption.html">IFormOption</a>&gt;</dt>
     <dd></dd>
     <dt><code>owner</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window">Window</a></dt>
     <dd></dd>
@@ -279,7 +279,7 @@ Class FormMessageService
 
   <a id="H_Modules_Messages_Form_FormMessageService_ShowTabEdit_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowTabEdit*"></a>
 
-  <h3 id="H_Modules_Messages_Form_FormMessageService_ShowTabEdit__1___0_System_Action_H_Services_Common_IDialog__System_Predicate___0__System_Action_H_Services_Common_IFormOption__System_Windows_Window_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Common.IDialog},System.Predicate{``0},System.Action{H.Services.Common.IFormOption},System.Windows.Window)">
+  <h3 id="H_Modules_Messages_Form_FormMessageService_ShowTabEdit__1___0_System_Action_H_Services_Message_Dialog_IDialog__System_Predicate___0__System_Action_H_Services_Message_Form_IFormOption__System_Windows_Window_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowTabEdit``1(``0,System.Action{H.Services.Message.Dialog.IDialog},System.Predicate{``0},System.Action{H.Services.Message.Form.IFormOption},System.Windows.Window)">
   ShowTabEdit&lt;T&gt;(T, Action&lt;IDialog&gt;, Predicate&lt;T&gt;, Action&lt;IFormOption&gt;, Window)
   
   </h3>
@@ -295,11 +295,11 @@ Class FormMessageService
   <dl class="parameters">
     <dt><code>value</code> <span class="xref">T</span></dt>
     <dd></dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
     <dt><code>match</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;T&gt;</dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IFormOption.html">IFormOption</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Form.IFormOption.html">IFormOption</a>&gt;</dt>
     <dd></dd>
     <dt><code>owner</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window">Window</a></dt>
     <dd></dd>
@@ -328,7 +328,7 @@ Class FormMessageService
 
   <a id="H_Modules_Messages_Form_FormMessageService_ShowView_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowView*"></a>
 
-  <h3 id="H_Modules_Messages_Form_FormMessageService_ShowView__1___0_System_Action_H_Services_Common_IDialog__System_Action_H_Services_Common_IFormOption__System_Windows_Window_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowView``1(``0,System.Action{H.Services.Common.IDialog},System.Action{H.Services.Common.IFormOption},System.Windows.Window)">
+  <h3 id="H_Modules_Messages_Form_FormMessageService_ShowView__1___0_System_Action_H_Services_Message_Dialog_IDialog__System_Action_H_Services_Message_Form_IFormOption__System_Windows_Window_" data-uid="H.Modules.Messages.Form.FormMessageService.ShowView``1(``0,System.Action{H.Services.Message.Dialog.IDialog},System.Action{H.Services.Message.Form.IFormOption},System.Windows.Window)">
   ShowView&lt;T&gt;(T, Action&lt;IDialog&gt;, Action&lt;IFormOption&gt;, Window)
   
   </h3>
@@ -344,9 +344,9 @@ Class FormMessageService
   <dl class="parameters">
     <dt><code>value</code> <span class="xref">T</span></dt>
     <dd></dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
-    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IFormOption.html">IFormOption</a>&gt;</dt>
+    <dt><code>option</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Form.IFormOption.html">IFormOption</a>&gt;</dt>
     <dd></dd>
     <dt><code>owner</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window">Window</a></dt>
     <dd></dd>

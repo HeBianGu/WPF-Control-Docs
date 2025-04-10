@@ -5,29 +5,31 @@ items:
   id: Extension
   parent: System
   children:
-  - System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  - System.Extension.AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  - System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.FeedbackOptions})
-  - System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})
-  - System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions},System.Action{H.Modules.Login.RegistorOptions})
-  - System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.RevertibleOptions})
+  - System.Extension.AddColorThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IColorThemeOptions})
+  - System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  - System.Extension.AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  - System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.IFeedbackOptions})
+  - System.Extension.AddLoadThemeOptionsService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})
+  - System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})
+  - System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions},System.Action{H.Modules.Login.IRegistorOptions})
+  - System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.IRevertibleOptions})
   - System.Extension.AddSchedule(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  - System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  - System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  - System.Extension.AddSwitchThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.SwitchThemeOptions})
-  - System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
-  - System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
-  - System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})
-  - System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.RegistorOptions})
-  - System.Extension.UseFavorite(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  - System.Extension.UseFeedBack(System.IApplicationBuilder,System.Action{H.Modules.Feedback.FeedbackOptions})
-  - System.Extension.UseLogin(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.RevertibleOptions})
-  - System.Extension.UseLogin(System.IApplicationBuilder,System.Action{H.Modules.Login.LoginOptions})
-  - System.Extension.UseRegistor(System.IApplicationBuilder,System.Action{H.Modules.Login.RegistorOptions})
-  - System.Extension.UseSplashScreen(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  - System.Extension.UseSwithTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.SwitchThemeOptions})
-  - System.Extension.UseTag(System.IApplicationBuilder,System.Action{H.Controls.TagBox.TagOptions})
-  - System.Extension.UseTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.ThemeSetting})
+  - System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  - System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  - System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})
+  - System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})
+  - System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})
+  - System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.IRegistorOptions})
+  - System.Extension.AddTheme(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})
+  - System.Extension.UseFavoriteOptions(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  - System.Extension.UseFeedBackOptions(System.IApplicationBuilder,System.Action{H.Modules.Feedback.IFeedbackOptions})
+  - System.Extension.UseLoginOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.ILoginOptions})
+  - System.Extension.UseRegistorOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.IRegistorOptions})
+  - System.Extension.UseRevertibleOptions(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.IRevertibleOptions})
+  - System.Extension.UseSplashScreenOptions(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  - System.Extension.UseStyleOptions(System.IApplicationBuilder,System.Action{H.Modules.Style.IStyleOptions})
+  - System.Extension.UseTagOptions(System.IApplicationBuilder,System.Action{H.Controls.TagBox.ITagOptions})
+  - System.Extension.UseThemeOptions(System.IApplicationBuilder,System.Action{H.Modules.Theme.IThemeOptions})
   langs:
   - csharp
   - vb
@@ -37,8 +39,8 @@ items:
   type: Class
   source:
     id: Extension
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
-    startLine: 8
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
+    startLine: 10
   assemblies:
   - H.Modules.Login
   namespace: System
@@ -55,674 +57,719 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})
-  commentId: M:System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})
-  id: AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})
+- uid: System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})
+  commentId: M:System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})
+  id: AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddLoginViewPresenter(IServiceCollection, Action<LoginOptions>)
-  nameWithType: Extension.AddLoginViewPresenter(IServiceCollection, Action<LoginOptions>)
-  fullName: System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Login.LoginOptions>)
+  name: AddLoginViewPresenter(IServiceCollection, Action<ILoginOptions>)
+  nameWithType: Extension.AddLoginViewPresenter(IServiceCollection, Action<ILoginOptions>)
+  fullName: System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Login.ILoginOptions>)
   type: Method
   source:
     id: AddLoginViewPresenter
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
-    startLine: 10
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
+    startLine: 12
   assemblies:
   - H.Modules.Login
   namespace: System
   syntax:
-    content: public static IServiceCollection AddLoginViewPresenter(this IServiceCollection services, Action<LoginOptions> setupAction = null)
+    content: public static IServiceCollection AddLoginViewPresenter(this IServiceCollection services, Action<ILoginOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.Login.LoginOptions}
+      type: System.Action{H.Modules.Login.ILoginOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddLoginViewPresenter(services As IServiceCollection, setupAction As Action(Of LoginOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddLoginViewPresenter(services As IServiceCollection, setupAction As Action(Of ILoginOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddLoginViewPresenter*
-  nameWithType.vb: Extension.AddLoginViewPresenter(IServiceCollection, Action(Of LoginOptions))
-  fullName.vb: System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Login.LoginOptions))
-  name.vb: AddLoginViewPresenter(IServiceCollection, Action(Of LoginOptions))
-- uid: System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions},System.Action{H.Modules.Login.RegistorOptions})
-  commentId: M:System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions},System.Action{H.Modules.Login.RegistorOptions})
-  id: AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions},System.Action{H.Modules.Login.RegistorOptions})
+  nameWithType.vb: Extension.AddLoginViewPresenter(IServiceCollection, Action(Of ILoginOptions))
+  fullName.vb: System.Extension.AddLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Login.ILoginOptions))
+  name.vb: AddLoginViewPresenter(IServiceCollection, Action(Of ILoginOptions))
+- uid: System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions},System.Action{H.Modules.Login.IRegistorOptions})
+  commentId: M:System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions},System.Action{H.Modules.Login.IRegistorOptions})
+  id: AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions},System.Action{H.Modules.Login.IRegistorOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddRegisterLoginViewPresenter(IServiceCollection, Action<LoginOptions>, Action<RegistorOptions>)
-  nameWithType: Extension.AddRegisterLoginViewPresenter(IServiceCollection, Action<LoginOptions>, Action<RegistorOptions>)
-  fullName: System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Login.LoginOptions>, System.Action<H.Modules.Login.RegistorOptions>)
+  name: AddRegisterLoginViewPresenter(IServiceCollection, Action<ILoginOptions>, Action<IRegistorOptions>)
+  nameWithType: Extension.AddRegisterLoginViewPresenter(IServiceCollection, Action<ILoginOptions>, Action<IRegistorOptions>)
+  fullName: System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Login.ILoginOptions>, System.Action<H.Modules.Login.IRegistorOptions>)
   type: Method
   source:
     id: AddRegisterLoginViewPresenter
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
-    startLine: 20
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
+    startLine: 22
   assemblies:
   - H.Modules.Login
   namespace: System
   syntax:
-    content: public static IServiceCollection AddRegisterLoginViewPresenter(this IServiceCollection services, Action<LoginOptions> setupAction = null, Action<RegistorOptions> setupRegisterAction = null)
+    content: public static IServiceCollection AddRegisterLoginViewPresenter(this IServiceCollection services, Action<ILoginOptions> setupAction = null, Action<IRegistorOptions> setupRegisterAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.Login.LoginOptions}
+      type: System.Action{H.Modules.Login.ILoginOptions}
     - id: setupRegisterAction
-      type: System.Action{H.Modules.Login.RegistorOptions}
+      type: System.Action{H.Modules.Login.IRegistorOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddRegisterLoginViewPresenter(services As IServiceCollection, setupAction As Action(Of LoginOptions) = Nothing, setupRegisterAction As Action(Of RegistorOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddRegisterLoginViewPresenter(services As IServiceCollection, setupAction As Action(Of ILoginOptions) = Nothing, setupRegisterAction As Action(Of IRegistorOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddRegisterLoginViewPresenter*
-  nameWithType.vb: Extension.AddRegisterLoginViewPresenter(IServiceCollection, Action(Of LoginOptions), Action(Of RegistorOptions))
-  fullName.vb: System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Login.LoginOptions), System.Action(Of H.Modules.Login.RegistorOptions))
-  name.vb: AddRegisterLoginViewPresenter(IServiceCollection, Action(Of LoginOptions), Action(Of RegistorOptions))
-- uid: System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})
-  commentId: M:System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})
-  id: AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.LoginOptions})
+  nameWithType.vb: Extension.AddRegisterLoginViewPresenter(IServiceCollection, Action(Of ILoginOptions), Action(Of IRegistorOptions))
+  fullName.vb: System.Extension.AddRegisterLoginViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Login.ILoginOptions), System.Action(Of H.Modules.Login.IRegistorOptions))
+  name.vb: AddRegisterLoginViewPresenter(IServiceCollection, Action(Of ILoginOptions), Action(Of IRegistorOptions))
+- uid: System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})
+  commentId: M:System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})
+  id: AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.ILoginOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddTestLoginService(IServiceCollection, Action<LoginOptions>)
-  nameWithType: Extension.AddTestLoginService(IServiceCollection, Action<LoginOptions>)
-  fullName: System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Login.LoginOptions>)
+  name: AddTestLoginService(IServiceCollection, Action<ILoginOptions>)
+  nameWithType: Extension.AddTestLoginService(IServiceCollection, Action<ILoginOptions>)
+  fullName: System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Login.ILoginOptions>)
   type: Method
   source:
     id: AddTestLoginService
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
-    startLine: 32
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
+    startLine: 34
   assemblies:
   - H.Modules.Login
   namespace: System
   syntax:
-    content: public static IServiceCollection AddTestLoginService(this IServiceCollection services, Action<LoginOptions> setupAction = null)
+    content: public static IServiceCollection AddTestLoginService(this IServiceCollection services, Action<ILoginOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.Login.LoginOptions}
+      type: System.Action{H.Modules.Login.ILoginOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddTestLoginService(services As IServiceCollection, setupAction As Action(Of LoginOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddTestLoginService(services As IServiceCollection, setupAction As Action(Of ILoginOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddTestLoginService*
-  nameWithType.vb: Extension.AddTestLoginService(IServiceCollection, Action(Of LoginOptions))
-  fullName.vb: System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Login.LoginOptions))
-  name.vb: AddTestLoginService(IServiceCollection, Action(Of LoginOptions))
-- uid: System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.RegistorOptions})
-  commentId: M:System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.RegistorOptions})
-  id: AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.RegistorOptions})
+  nameWithType.vb: Extension.AddTestLoginService(IServiceCollection, Action(Of ILoginOptions))
+  fullName.vb: System.Extension.AddTestLoginService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Login.ILoginOptions))
+  name.vb: AddTestLoginService(IServiceCollection, Action(Of ILoginOptions))
+- uid: System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.IRegistorOptions})
+  commentId: M:System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.IRegistorOptions})
+  id: AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Login.IRegistorOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddTestRegistorService(IServiceCollection, Action<RegistorOptions>)
-  nameWithType: Extension.AddTestRegistorService(IServiceCollection, Action<RegistorOptions>)
-  fullName: System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Login.RegistorOptions>)
+  name: AddTestRegistorService(IServiceCollection, Action<IRegistorOptions>)
+  nameWithType: Extension.AddTestRegistorService(IServiceCollection, Action<IRegistorOptions>)
+  fullName: System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Login.IRegistorOptions>)
   type: Method
   source:
     id: AddTestRegistorService
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
-    startLine: 41
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
+    startLine: 43
   assemblies:
   - H.Modules.Login
   namespace: System
   syntax:
-    content: public static IServiceCollection AddTestRegistorService(this IServiceCollection services, Action<RegistorOptions> setupAction = null)
+    content: public static IServiceCollection AddTestRegistorService(this IServiceCollection services, Action<IRegistorOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.Login.RegistorOptions}
+      type: System.Action{H.Modules.Login.IRegistorOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddTestRegistorService(services As IServiceCollection, setupAction As Action(Of RegistorOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddTestRegistorService(services As IServiceCollection, setupAction As Action(Of IRegistorOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddTestRegistorService*
-  nameWithType.vb: Extension.AddTestRegistorService(IServiceCollection, Action(Of RegistorOptions))
-  fullName.vb: System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Login.RegistorOptions))
-  name.vb: AddTestRegistorService(IServiceCollection, Action(Of RegistorOptions))
-- uid: System.Extension.UseLogin(System.IApplicationBuilder,System.Action{H.Modules.Login.LoginOptions})
-  commentId: M:System.Extension.UseLogin(System.IApplicationBuilder,System.Action{H.Modules.Login.LoginOptions})
-  id: UseLogin(System.IApplicationBuilder,System.Action{H.Modules.Login.LoginOptions})
+  nameWithType.vb: Extension.AddTestRegistorService(IServiceCollection, Action(Of IRegistorOptions))
+  fullName.vb: System.Extension.AddTestRegistorService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Login.IRegistorOptions))
+  name.vb: AddTestRegistorService(IServiceCollection, Action(Of IRegistorOptions))
+- uid: System.Extension.UseLoginOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.ILoginOptions})
+  commentId: M:System.Extension.UseLoginOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.ILoginOptions})
+  id: UseLoginOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.ILoginOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: UseLogin(IApplicationBuilder, Action<LoginOptions>)
-  nameWithType: Extension.UseLogin(IApplicationBuilder, Action<LoginOptions>)
-  fullName: System.Extension.UseLogin(System.IApplicationBuilder, System.Action<H.Modules.Login.LoginOptions>)
+  name: UseLoginOptions(IApplicationBuilder, Action<ILoginOptions>)
+  nameWithType: Extension.UseLoginOptions(IApplicationBuilder, Action<ILoginOptions>)
+  fullName: System.Extension.UseLoginOptions(System.IApplicationBuilder, System.Action<H.Modules.Login.ILoginOptions>)
   type: Method
   source:
-    id: UseLogin
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
-    startLine: 50
+    id: UseLoginOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
+    startLine: 52
   assemblies:
   - H.Modules.Login
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseLogin(this IApplicationBuilder builder, Action<LoginOptions> option = null)
+    content: public static IApplicationBuilder UseLoginOptions(this IApplicationBuilder builder, Action<ILoginOptions> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Modules.Login.LoginOptions}
+      type: System.Action{H.Modules.Login.ILoginOptions}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseLogin(builder As IApplicationBuilder, [option] As Action(Of LoginOptions) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseLogin*
-  nameWithType.vb: Extension.UseLogin(IApplicationBuilder, Action(Of LoginOptions))
-  fullName.vb: System.Extension.UseLogin(System.IApplicationBuilder, System.Action(Of H.Modules.Login.LoginOptions))
-  name.vb: UseLogin(IApplicationBuilder, Action(Of LoginOptions))
-- uid: System.Extension.UseRegistor(System.IApplicationBuilder,System.Action{H.Modules.Login.RegistorOptions})
-  commentId: M:System.Extension.UseRegistor(System.IApplicationBuilder,System.Action{H.Modules.Login.RegistorOptions})
-  id: UseRegistor(System.IApplicationBuilder,System.Action{H.Modules.Login.RegistorOptions})
+    content.vb: Public Shared Function UseLoginOptions(builder As IApplicationBuilder, [option] As Action(Of ILoginOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseLoginOptions*
+  nameWithType.vb: Extension.UseLoginOptions(IApplicationBuilder, Action(Of ILoginOptions))
+  fullName.vb: System.Extension.UseLoginOptions(System.IApplicationBuilder, System.Action(Of H.Modules.Login.ILoginOptions))
+  name.vb: UseLoginOptions(IApplicationBuilder, Action(Of ILoginOptions))
+- uid: System.Extension.UseRegistorOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.IRegistorOptions})
+  commentId: M:System.Extension.UseRegistorOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.IRegistorOptions})
+  id: UseRegistorOptions(System.IApplicationBuilder,System.Action{H.Modules.Login.IRegistorOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: UseRegistor(IApplicationBuilder, Action<RegistorOptions>)
-  nameWithType: Extension.UseRegistor(IApplicationBuilder, Action<RegistorOptions>)
-  fullName: System.Extension.UseRegistor(System.IApplicationBuilder, System.Action<H.Modules.Login.RegistorOptions>)
+  name: UseRegistorOptions(IApplicationBuilder, Action<IRegistorOptions>)
+  nameWithType: Extension.UseRegistorOptions(IApplicationBuilder, Action<IRegistorOptions>)
+  fullName: System.Extension.UseRegistorOptions(System.IApplicationBuilder, System.Action<H.Modules.Login.IRegistorOptions>)
   type: Method
   source:
-    id: UseRegistor
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
-    startLine: 57
+    id: UseRegistorOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Login\Extension.cs
+    startLine: 59
   assemblies:
   - H.Modules.Login
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseRegistor(this IApplicationBuilder builder, Action<RegistorOptions> option = null)
+    content: public static IApplicationBuilder UseRegistorOptions(this IApplicationBuilder builder, Action<IRegistorOptions> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Modules.Login.RegistorOptions}
+      type: System.Action{H.Modules.Login.IRegistorOptions}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseRegistor(builder As IApplicationBuilder, [option] As Action(Of RegistorOptions) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseRegistor*
-  nameWithType.vb: Extension.UseRegistor(IApplicationBuilder, Action(Of RegistorOptions))
-  fullName.vb: System.Extension.UseRegistor(System.IApplicationBuilder, System.Action(Of H.Modules.Login.RegistorOptions))
-  name.vb: UseRegistor(IApplicationBuilder, Action(Of RegistorOptions))
-- uid: System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  commentId: M:System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  id: AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
+    content.vb: Public Shared Function UseRegistorOptions(builder As IApplicationBuilder, [option] As Action(Of IRegistorOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseRegistorOptions*
+  nameWithType.vb: Extension.UseRegistorOptions(IApplicationBuilder, Action(Of IRegistorOptions))
+  fullName.vb: System.Extension.UseRegistorOptions(System.IApplicationBuilder, System.Action(Of H.Modules.Login.IRegistorOptions))
+  name.vb: UseRegistorOptions(IApplicationBuilder, Action(Of IRegistorOptions))
+- uid: System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  commentId: M:System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  id: AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddSplashScreen(IServiceCollection, Action<SplashScreenOption>)
-  nameWithType: Extension.AddSplashScreen(IServiceCollection, Action<SplashScreenOption>)
-  fullName: System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.SplashScreen.SplashScreenOption>)
+  name: AddSplashScreen(IServiceCollection, Action<ISplashScreenOptions>)
+  nameWithType: Extension.AddSplashScreen(IServiceCollection, Action<ISplashScreenOptions>)
+  fullName: System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.SplashScreen.ISplashScreenOptions>)
   type: Method
   source:
     id: AddSplashScreen
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.SplashScreen\Extension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.SplashScreen\Extension.cs
     startLine: 10
   assemblies:
   - H.Modules.SplashScreen
   namespace: System
   syntax:
-    content: public static IServiceCollection AddSplashScreen(this IServiceCollection services, Action<SplashScreenOption> setupAction = null)
+    content: public static IServiceCollection AddSplashScreen(this IServiceCollection services, Action<ISplashScreenOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.SplashScreen.SplashScreenOption}
+      type: System.Action{H.Modules.SplashScreen.ISplashScreenOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddSplashScreen(services As IServiceCollection, setupAction As Action(Of SplashScreenOption) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddSplashScreen(services As IServiceCollection, setupAction As Action(Of ISplashScreenOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddSplashScreen*
-  nameWithType.vb: Extension.AddSplashScreen(IServiceCollection, Action(Of SplashScreenOption))
-  fullName.vb: System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.SplashScreen.SplashScreenOption))
-  name.vb: AddSplashScreen(IServiceCollection, Action(Of SplashScreenOption))
-- uid: System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  commentId: M:System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  id: AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.SplashScreenOption})
+  nameWithType.vb: Extension.AddSplashScreen(IServiceCollection, Action(Of ISplashScreenOptions))
+  fullName.vb: System.Extension.AddSplashScreen(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.SplashScreen.ISplashScreenOptions))
+  name.vb: AddSplashScreen(IServiceCollection, Action(Of ISplashScreenOptions))
+- uid: System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  commentId: M:System.Extension.AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  id: AddSplashScreen``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddSplashScreen<T>(IServiceCollection, Action<SplashScreenOption>)
-  nameWithType: Extension.AddSplashScreen<T>(IServiceCollection, Action<SplashScreenOption>)
-  fullName: System.Extension.AddSplashScreen<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.SplashScreen.SplashScreenOption>)
+  name: AddSplashScreen<T>(IServiceCollection, Action<ISplashScreenOptions>)
+  nameWithType: Extension.AddSplashScreen<T>(IServiceCollection, Action<ISplashScreenOptions>)
+  fullName: System.Extension.AddSplashScreen<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.SplashScreen.ISplashScreenOptions>)
   type: Method
   source:
     id: AddSplashScreen
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.SplashScreen\Extension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.SplashScreen\Extension.cs
     startLine: 14
   assemblies:
   - H.Modules.SplashScreen
   namespace: System
   syntax:
-    content: 'public static IServiceCollection AddSplashScreen<T>(this IServiceCollection services, Action<SplashScreenOption> setupAction = null) where T : ISplashScreenViewPresenter'
+    content: 'public static IServiceCollection AddSplashScreen<T>(this IServiceCollection services, Action<ISplashScreenOptions> setupAction = null) where T : ISplashScreenViewPresenter'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.SplashScreen.SplashScreenOption}
+      type: System.Action{H.Modules.SplashScreen.ISplashScreenOptions}
     typeParameters:
     - id: T
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddSplashScreen(Of T As ISplashScreenViewPresenter)(services As IServiceCollection, setupAction As Action(Of SplashScreenOption) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddSplashScreen(Of T As ISplashScreenViewPresenter)(services As IServiceCollection, setupAction As Action(Of ISplashScreenOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddSplashScreen*
-  nameWithType.vb: Extension.AddSplashScreen(Of T)(IServiceCollection, Action(Of SplashScreenOption))
-  fullName.vb: System.Extension.AddSplashScreen(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.SplashScreen.SplashScreenOption))
-  name.vb: AddSplashScreen(Of T)(IServiceCollection, Action(Of SplashScreenOption))
-- uid: System.Extension.UseSplashScreen(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  commentId: M:System.Extension.UseSplashScreen(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.SplashScreenOption})
-  id: UseSplashScreen(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.SplashScreenOption})
+  nameWithType.vb: Extension.AddSplashScreen(Of T)(IServiceCollection, Action(Of ISplashScreenOptions))
+  fullName.vb: System.Extension.AddSplashScreen(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.SplashScreen.ISplashScreenOptions))
+  name.vb: AddSplashScreen(Of T)(IServiceCollection, Action(Of ISplashScreenOptions))
+- uid: System.Extension.UseSplashScreenOptions(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  commentId: M:System.Extension.UseSplashScreenOptions(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
+  id: UseSplashScreenOptions(System.IApplicationBuilder,System.Action{H.Modules.SplashScreen.ISplashScreenOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: UseSplashScreen(IApplicationBuilder, Action<SplashScreenOption>)
-  nameWithType: Extension.UseSplashScreen(IApplicationBuilder, Action<SplashScreenOption>)
-  fullName: System.Extension.UseSplashScreen(System.IApplicationBuilder, System.Action<H.Modules.SplashScreen.SplashScreenOption>)
+  name: UseSplashScreenOptions(IApplicationBuilder, Action<ISplashScreenOptions>)
+  nameWithType: Extension.UseSplashScreenOptions(IApplicationBuilder, Action<ISplashScreenOptions>)
+  fullName: System.Extension.UseSplashScreenOptions(System.IApplicationBuilder, System.Action<H.Modules.SplashScreen.ISplashScreenOptions>)
   type: Method
   source:
-    id: UseSplashScreen
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.SplashScreen\Extension.cs
+    id: UseSplashScreenOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.SplashScreen\Extension.cs
     startLine: 23
   assemblies:
   - H.Modules.SplashScreen
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseSplashScreen(this IApplicationBuilder builder, Action<SplashScreenOption> option = null)
+    content: public static IApplicationBuilder UseSplashScreenOptions(this IApplicationBuilder builder, Action<ISplashScreenOptions> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Modules.SplashScreen.SplashScreenOption}
+      type: System.Action{H.Modules.SplashScreen.ISplashScreenOptions}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseSplashScreen(builder As IApplicationBuilder, [option] As Action(Of SplashScreenOption) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseSplashScreen*
-  nameWithType.vb: Extension.UseSplashScreen(IApplicationBuilder, Action(Of SplashScreenOption))
-  fullName.vb: System.Extension.UseSplashScreen(System.IApplicationBuilder, System.Action(Of H.Modules.SplashScreen.SplashScreenOption))
-  name.vb: UseSplashScreen(IApplicationBuilder, Action(Of SplashScreenOption))
-- uid: System.Extension.UseTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.ThemeSetting})
-  commentId: M:System.Extension.UseTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.ThemeSetting})
-  id: UseTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.ThemeSetting})
+    content.vb: Public Shared Function UseSplashScreenOptions(builder As IApplicationBuilder, [option] As Action(Of ISplashScreenOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseSplashScreenOptions*
+  nameWithType.vb: Extension.UseSplashScreenOptions(IApplicationBuilder, Action(Of ISplashScreenOptions))
+  fullName.vb: System.Extension.UseSplashScreenOptions(System.IApplicationBuilder, System.Action(Of H.Modules.SplashScreen.ISplashScreenOptions))
+  name.vb: UseSplashScreenOptions(IApplicationBuilder, Action(Of ISplashScreenOptions))
+- uid: System.Extension.AddTheme(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})
+  commentId: M:System.Extension.AddTheme(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})
+  id: AddTheme(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: UseTheme(IApplicationBuilder, Action<ThemeSetting>)
-  nameWithType: Extension.UseTheme(IApplicationBuilder, Action<ThemeSetting>)
-  fullName: System.Extension.UseTheme(System.IApplicationBuilder, System.Action<H.Modules.Theme.ThemeSetting>)
+  name: AddTheme(IServiceCollection, Action<IThemeOptions>)
+  nameWithType: Extension.AddTheme(IServiceCollection, Action<IThemeOptions>)
+  fullName: System.Extension.AddTheme(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Theme.IThemeOptions>)
   type: Method
   source:
-    id: UseTheme
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Theme\Extension.cs
-    startLine: 10
+    id: AddTheme
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Theme\Extension.cs
+    startLine: 13
   assemblies:
   - H.Modules.Theme
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseTheme(this IApplicationBuilder builder, Action<ThemeSetting> option = null)
-    parameters:
-    - id: builder
-      type: System.IApplicationBuilder
-    - id: option
-      type: System.Action{H.Modules.Theme.ThemeSetting}
-    return:
-      type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseTheme(builder As IApplicationBuilder, [option] As Action(Of ThemeSetting) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseTheme*
-  nameWithType.vb: Extension.UseTheme(IApplicationBuilder, Action(Of ThemeSetting))
-  fullName.vb: System.Extension.UseTheme(System.IApplicationBuilder, System.Action(Of H.Modules.Theme.ThemeSetting))
-  name.vb: UseTheme(IApplicationBuilder, Action(Of ThemeSetting))
-- uid: System.Extension.UseSwithTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.SwitchThemeOptions})
-  commentId: M:System.Extension.UseSwithTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.SwitchThemeOptions})
-  id: UseSwithTheme(System.IApplicationBuilder,System.Action{H.Modules.Theme.SwitchThemeOptions})
-  isExtensionMethod: true
-  parent: System.Extension
-  langs:
-  - csharp
-  - vb
-  name: UseSwithTheme(IApplicationBuilder, Action<SwitchThemeOptions>)
-  nameWithType: Extension.UseSwithTheme(IApplicationBuilder, Action<SwitchThemeOptions>)
-  fullName: System.Extension.UseSwithTheme(System.IApplicationBuilder, System.Action<H.Modules.Theme.SwitchThemeOptions>)
-  type: Method
-  source:
-    id: UseSwithTheme
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Theme\Extension.cs
-    startLine: 17
-  assemblies:
-  - H.Modules.Theme
-  namespace: System
-  syntax:
-    content: public static IApplicationBuilder UseSwithTheme(this IApplicationBuilder builder, Action<SwitchThemeOptions> option = null)
-    parameters:
-    - id: builder
-      type: System.IApplicationBuilder
-    - id: option
-      type: System.Action{H.Modules.Theme.SwitchThemeOptions}
-    return:
-      type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseSwithTheme(builder As IApplicationBuilder, [option] As Action(Of SwitchThemeOptions) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseSwithTheme*
-  nameWithType.vb: Extension.UseSwithTheme(IApplicationBuilder, Action(Of SwitchThemeOptions))
-  fullName.vb: System.Extension.UseSwithTheme(System.IApplicationBuilder, System.Action(Of H.Modules.Theme.SwitchThemeOptions))
-  name.vb: UseSwithTheme(IApplicationBuilder, Action(Of SwitchThemeOptions))
-- uid: System.Extension.AddSwitchThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.SwitchThemeOptions})
-  commentId: M:System.Extension.AddSwitchThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.SwitchThemeOptions})
-  id: AddSwitchThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.SwitchThemeOptions})
-  isExtensionMethod: true
-  parent: System.Extension
-  langs:
-  - csharp
-  - vb
-  name: AddSwitchThemeViewPresenter(IServiceCollection, Action<SwitchThemeOptions>)
-  nameWithType: Extension.AddSwitchThemeViewPresenter(IServiceCollection, Action<SwitchThemeOptions>)
-  fullName: System.Extension.AddSwitchThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Theme.SwitchThemeOptions>)
-  type: Method
-  source:
-    id: AddSwitchThemeViewPresenter
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Theme\Extension.cs
-    startLine: 24
-  assemblies:
-  - H.Modules.Theme
-  namespace: System
-  syntax:
-    content: public static IServiceCollection AddSwitchThemeViewPresenter(this IServiceCollection services, Action<SwitchThemeOptions> setupAction = null)
+    content: public static IServiceCollection AddTheme(this IServiceCollection services, Action<IThemeOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.Theme.SwitchThemeOptions}
+      type: System.Action{H.Modules.Theme.IThemeOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddSwitchThemeViewPresenter(services As IServiceCollection, setupAction As Action(Of SwitchThemeOptions) = Nothing) As IServiceCollection
-  overload: System.Extension.AddSwitchThemeViewPresenter*
-  nameWithType.vb: Extension.AddSwitchThemeViewPresenter(IServiceCollection, Action(Of SwitchThemeOptions))
-  fullName.vb: System.Extension.AddSwitchThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Theme.SwitchThemeOptions))
-  name.vb: AddSwitchThemeViewPresenter(IServiceCollection, Action(Of SwitchThemeOptions))
-- uid: System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.RevertibleOptions})
-  commentId: M:System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.RevertibleOptions})
-  id: AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.RevertibleOptions})
+    content.vb: Public Shared Function AddTheme(services As IServiceCollection, setupAction As Action(Of IThemeOptions) = Nothing) As IServiceCollection
+  overload: System.Extension.AddTheme*
+  nameWithType.vb: Extension.AddTheme(IServiceCollection, Action(Of IThemeOptions))
+  fullName.vb: System.Extension.AddTheme(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Theme.IThemeOptions))
+  name.vb: AddTheme(IServiceCollection, Action(Of IThemeOptions))
+- uid: System.Extension.AddLoadThemeOptionsService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})
+  commentId: M:System.Extension.AddLoadThemeOptionsService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})
+  id: AddLoadThemeOptionsService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IThemeOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddRevertible(IServiceCollection, Action<RevertibleOptions>)
-  nameWithType: Extension.AddRevertible(IServiceCollection, Action<RevertibleOptions>)
-  fullName: System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Extensions.Revertible.RevertibleOptions>)
+  name: AddLoadThemeOptionsService(IServiceCollection, Action<IThemeOptions>)
+  nameWithType: Extension.AddLoadThemeOptionsService(IServiceCollection, Action<IThemeOptions>)
+  fullName: System.Extension.AddLoadThemeOptionsService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Theme.IThemeOptions>)
+  type: Method
+  source:
+    id: AddLoadThemeOptionsService
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Theme\Extension.cs
+    startLine: 23
+  assemblies:
+  - H.Modules.Theme
+  namespace: System
+  syntax:
+    content: >-
+      [Obsolete("AddTheme")]
+
+      public static IServiceCollection AddLoadThemeOptionsService(this IServiceCollection services, Action<IThemeOptions> setupAction = null)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: setupAction
+      type: System.Action{H.Modules.Theme.IThemeOptions}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: >-
+      <Obsolete("AddTheme")>
+
+      Public Shared Function AddLoadThemeOptionsService(services As IServiceCollection, setupAction As Action(Of IThemeOptions) = Nothing) As IServiceCollection
+  overload: System.Extension.AddLoadThemeOptionsService*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: AddTheme
+  nameWithType.vb: Extension.AddLoadThemeOptionsService(IServiceCollection, Action(Of IThemeOptions))
+  fullName.vb: System.Extension.AddLoadThemeOptionsService(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Theme.IThemeOptions))
+  name.vb: AddLoadThemeOptionsService(IServiceCollection, Action(Of IThemeOptions))
+- uid: System.Extension.AddColorThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IColorThemeOptions})
+  commentId: M:System.Extension.AddColorThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IColorThemeOptions})
+  id: AddColorThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Theme.IColorThemeOptions})
+  isExtensionMethod: true
+  parent: System.Extension
+  langs:
+  - csharp
+  - vb
+  name: AddColorThemeViewPresenter(IServiceCollection, Action<IColorThemeOptions>)
+  nameWithType: Extension.AddColorThemeViewPresenter(IServiceCollection, Action<IColorThemeOptions>)
+  fullName: System.Extension.AddColorThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Theme.IColorThemeOptions>)
+  type: Method
+  source:
+    id: AddColorThemeViewPresenter
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Theme\Extension.cs
+    startLine: 33
+  assemblies:
+  - H.Modules.Theme
+  namespace: System
+  syntax:
+    content: public static IServiceCollection AddColorThemeViewPresenter(this IServiceCollection services, Action<IColorThemeOptions> setupAction = null)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: setupAction
+      type: System.Action{H.Modules.Theme.IColorThemeOptions}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddColorThemeViewPresenter(services As IServiceCollection, setupAction As Action(Of IColorThemeOptions) = Nothing) As IServiceCollection
+  overload: System.Extension.AddColorThemeViewPresenter*
+  nameWithType.vb: Extension.AddColorThemeViewPresenter(IServiceCollection, Action(Of IColorThemeOptions))
+  fullName.vb: System.Extension.AddColorThemeViewPresenter(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Theme.IColorThemeOptions))
+  name.vb: AddColorThemeViewPresenter(IServiceCollection, Action(Of IColorThemeOptions))
+- uid: System.Extension.UseThemeOptions(System.IApplicationBuilder,System.Action{H.Modules.Theme.IThemeOptions})
+  commentId: M:System.Extension.UseThemeOptions(System.IApplicationBuilder,System.Action{H.Modules.Theme.IThemeOptions})
+  id: UseThemeOptions(System.IApplicationBuilder,System.Action{H.Modules.Theme.IThemeOptions})
+  isExtensionMethod: true
+  parent: System.Extension
+  langs:
+  - csharp
+  - vb
+  name: UseThemeOptions(IApplicationBuilder, Action<IThemeOptions>)
+  nameWithType: Extension.UseThemeOptions(IApplicationBuilder, Action<IThemeOptions>)
+  fullName: System.Extension.UseThemeOptions(System.IApplicationBuilder, System.Action<H.Modules.Theme.IThemeOptions>)
+  type: Method
+  source:
+    id: UseThemeOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Theme\Extension.cs
+    startLine: 41
+  assemblies:
+  - H.Modules.Theme
+  namespace: System
+  syntax:
+    content: public static IApplicationBuilder UseThemeOptions(this IApplicationBuilder builder, Action<IThemeOptions> option = null)
+    parameters:
+    - id: builder
+      type: System.IApplicationBuilder
+    - id: option
+      type: System.Action{H.Modules.Theme.IThemeOptions}
+    return:
+      type: System.IApplicationBuilder
+    content.vb: Public Shared Function UseThemeOptions(builder As IApplicationBuilder, [option] As Action(Of IThemeOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseThemeOptions*
+  nameWithType.vb: Extension.UseThemeOptions(IApplicationBuilder, Action(Of IThemeOptions))
+  fullName.vb: System.Extension.UseThemeOptions(System.IApplicationBuilder, System.Action(Of H.Modules.Theme.IThemeOptions))
+  name.vb: UseThemeOptions(IApplicationBuilder, Action(Of IThemeOptions))
+- uid: System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.IRevertibleOptions})
+  commentId: M:System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.IRevertibleOptions})
+  id: AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Extensions.Revertible.IRevertibleOptions})
+  isExtensionMethod: true
+  parent: System.Extension
+  langs:
+  - csharp
+  - vb
+  name: AddRevertible(IServiceCollection, Action<IRevertibleOptions>)
+  nameWithType: Extension.AddRevertible(IServiceCollection, Action<IRevertibleOptions>)
+  fullName: System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Extensions.Revertible.IRevertibleOptions>)
   type: Method
   source:
     id: AddRevertible
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Revertible\Extension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Revertible\Extension.cs
+    startLine: 10
+  assemblies:
+  - H.Extensions.Revertible
+  namespace: System
+  syntax:
+    content: public static IServiceCollection AddRevertible(this IServiceCollection services, Action<IRevertibleOptions> setupAction = null)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: setupAction
+      type: System.Action{H.Extensions.Revertible.IRevertibleOptions}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddRevertible(services As IServiceCollection, setupAction As Action(Of IRevertibleOptions) = Nothing) As IServiceCollection
+  overload: System.Extension.AddRevertible*
+  nameWithType.vb: Extension.AddRevertible(IServiceCollection, Action(Of IRevertibleOptions))
+  fullName.vb: System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Extensions.Revertible.IRevertibleOptions))
+  name.vb: AddRevertible(IServiceCollection, Action(Of IRevertibleOptions))
+- uid: System.Extension.UseRevertibleOptions(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.IRevertibleOptions})
+  commentId: M:System.Extension.UseRevertibleOptions(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.IRevertibleOptions})
+  id: UseRevertibleOptions(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.IRevertibleOptions})
+  isExtensionMethod: true
+  parent: System.Extension
+  langs:
+  - csharp
+  - vb
+  name: UseRevertibleOptions(IApplicationBuilder, Action<IRevertibleOptions>)
+  nameWithType: Extension.UseRevertibleOptions(IApplicationBuilder, Action<IRevertibleOptions>)
+  fullName: System.Extension.UseRevertibleOptions(System.IApplicationBuilder, System.Action<H.Extensions.Revertible.IRevertibleOptions>)
+  type: Method
+  source:
+    id: UseRevertibleOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Revertible\Extension.cs
+    startLine: 18
+  assemblies:
+  - H.Extensions.Revertible
+  namespace: System
+  syntax:
+    content: public static IApplicationBuilder UseRevertibleOptions(this IApplicationBuilder builder, Action<IRevertibleOptions> option = null)
+    parameters:
+    - id: builder
+      type: System.IApplicationBuilder
+    - id: option
+      type: System.Action{H.Extensions.Revertible.IRevertibleOptions}
+    return:
+      type: System.IApplicationBuilder
+    content.vb: Public Shared Function UseRevertibleOptions(builder As IApplicationBuilder, [option] As Action(Of IRevertibleOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseRevertibleOptions*
+  nameWithType.vb: Extension.UseRevertibleOptions(IApplicationBuilder, Action(Of IRevertibleOptions))
+  fullName.vb: System.Extension.UseRevertibleOptions(System.IApplicationBuilder, System.Action(Of H.Extensions.Revertible.IRevertibleOptions))
+  name.vb: UseRevertibleOptions(IApplicationBuilder, Action(Of IRevertibleOptions))
+- uid: System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})
+  commentId: M:System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})
+  id: AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})
+  isExtensionMethod: true
+  parent: System.Extension
+  langs:
+  - csharp
+  - vb
+  name: AddTag(IServiceCollection, Action<ITagOptions>)
+  nameWithType: Extension.AddTag(IServiceCollection, Action<ITagOptions>)
+  fullName: System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Controls.TagBox.ITagOptions>)
+  type: Method
+  source:
+    id: AddTag
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.TagBox\Extension.cs
     startLine: 11
   assemblies:
-  - H.Extensions.Revertible
-  namespace: System
-  syntax:
-    content: public static IServiceCollection AddRevertible(this IServiceCollection services, Action<RevertibleOptions> setupAction = null)
-    parameters:
-    - id: services
-      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    - id: setupAction
-      type: System.Action{H.Extensions.Revertible.RevertibleOptions}
-    return:
-      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddRevertible(services As IServiceCollection, setupAction As Action(Of RevertibleOptions) = Nothing) As IServiceCollection
-  overload: System.Extension.AddRevertible*
-  nameWithType.vb: Extension.AddRevertible(IServiceCollection, Action(Of RevertibleOptions))
-  fullName.vb: System.Extension.AddRevertible(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Extensions.Revertible.RevertibleOptions))
-  name.vb: AddRevertible(IServiceCollection, Action(Of RevertibleOptions))
-- uid: System.Extension.UseLogin(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.RevertibleOptions})
-  commentId: M:System.Extension.UseLogin(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.RevertibleOptions})
-  id: UseLogin(System.IApplicationBuilder,System.Action{H.Extensions.Revertible.RevertibleOptions})
-  isExtensionMethod: true
-  parent: System.Extension
-  langs:
-  - csharp
-  - vb
-  name: UseLogin(IApplicationBuilder, Action<RevertibleOptions>)
-  nameWithType: Extension.UseLogin(IApplicationBuilder, Action<RevertibleOptions>)
-  fullName: System.Extension.UseLogin(System.IApplicationBuilder, System.Action<H.Extensions.Revertible.RevertibleOptions>)
-  type: Method
-  source:
-    id: UseLogin
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Extensions\H.Extensions.Revertible\Extension.cs
-    startLine: 19
-  assemblies:
-  - H.Extensions.Revertible
-  namespace: System
-  syntax:
-    content: public static IApplicationBuilder UseLogin(this IApplicationBuilder builder, Action<RevertibleOptions> option = null)
-    parameters:
-    - id: builder
-      type: System.IApplicationBuilder
-    - id: option
-      type: System.Action{H.Extensions.Revertible.RevertibleOptions}
-    return:
-      type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseLogin(builder As IApplicationBuilder, [option] As Action(Of RevertibleOptions) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseLogin*
-  nameWithType.vb: Extension.UseLogin(IApplicationBuilder, Action(Of RevertibleOptions))
-  fullName.vb: System.Extension.UseLogin(System.IApplicationBuilder, System.Action(Of H.Extensions.Revertible.RevertibleOptions))
-  name.vb: UseLogin(IApplicationBuilder, Action(Of RevertibleOptions))
-- uid: System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
-  commentId: M:System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
-  id: AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
-  isExtensionMethod: true
-  parent: System.Extension
-  langs:
-  - csharp
-  - vb
-  name: AddTag(IServiceCollection, Action<TagOptions>)
-  nameWithType: Extension.AddTag(IServiceCollection, Action<TagOptions>)
-  fullName: System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Controls.TagBox.TagOptions>)
-  type: Method
-  source:
-    id: AddTag
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.TagBox\Extension.cs
-    startLine: 10
-  assemblies:
   - H.Controls.TagBox
   namespace: System
   syntax:
-    content: public static IServiceCollection AddTag(this IServiceCollection services, Action<TagOptions> setupAction = null)
+    content: public static IServiceCollection AddTag(this IServiceCollection services, Action<ITagOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Controls.TagBox.TagOptions}
+      type: System.Action{H.Controls.TagBox.ITagOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddTag(services As IServiceCollection, setupAction As Action(Of TagOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddTag(services As IServiceCollection, setupAction As Action(Of ITagOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddTag*
-  nameWithType.vb: Extension.AddTag(IServiceCollection, Action(Of TagOptions))
-  fullName.vb: System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Controls.TagBox.TagOptions))
-  name.vb: AddTag(IServiceCollection, Action(Of TagOptions))
-- uid: System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
-  commentId: M:System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
-  id: AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.TagOptions})
+  nameWithType.vb: Extension.AddTag(IServiceCollection, Action(Of ITagOptions))
+  fullName.vb: System.Extension.AddTag(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Controls.TagBox.ITagOptions))
+  name.vb: AddTag(IServiceCollection, Action(Of ITagOptions))
+- uid: System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})
+  commentId: M:System.Extension.AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})
+  id: AddTag``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.TagBox.ITagOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddTag<T>(IServiceCollection, Action<TagOptions>)
-  nameWithType: Extension.AddTag<T>(IServiceCollection, Action<TagOptions>)
-  fullName: System.Extension.AddTag<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Controls.TagBox.TagOptions>)
+  name: AddTag<T>(IServiceCollection, Action<ITagOptions>)
+  nameWithType: Extension.AddTag<T>(IServiceCollection, Action<ITagOptions>)
+  fullName: System.Extension.AddTag<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Controls.TagBox.ITagOptions>)
   type: Method
   source:
     id: AddTag
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.TagBox\Extension.cs
-    startLine: 15
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.TagBox\Extension.cs
+    startLine: 16
   assemblies:
   - H.Controls.TagBox
   namespace: System
   syntax:
-    content: 'public static IServiceCollection AddTag<T>(this IServiceCollection services, Action<TagOptions> setupAction = null) where T : class, ITagService'
+    content: 'public static IServiceCollection AddTag<T>(this IServiceCollection services, Action<ITagOptions> setupAction = null) where T : class, ITagService'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Controls.TagBox.TagOptions}
+      type: System.Action{H.Controls.TagBox.ITagOptions}
     typeParameters:
     - id: T
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddTag(Of T As {Class, ITagService})(services As IServiceCollection, setupAction As Action(Of TagOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddTag(Of T As {Class, ITagService})(services As IServiceCollection, setupAction As Action(Of ITagOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddTag*
-  nameWithType.vb: Extension.AddTag(Of T)(IServiceCollection, Action(Of TagOptions))
-  fullName.vb: System.Extension.AddTag(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Controls.TagBox.TagOptions))
-  name.vb: AddTag(Of T)(IServiceCollection, Action(Of TagOptions))
-- uid: System.Extension.UseTag(System.IApplicationBuilder,System.Action{H.Controls.TagBox.TagOptions})
-  commentId: M:System.Extension.UseTag(System.IApplicationBuilder,System.Action{H.Controls.TagBox.TagOptions})
-  id: UseTag(System.IApplicationBuilder,System.Action{H.Controls.TagBox.TagOptions})
+  nameWithType.vb: Extension.AddTag(Of T)(IServiceCollection, Action(Of ITagOptions))
+  fullName.vb: System.Extension.AddTag(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Controls.TagBox.ITagOptions))
+  name.vb: AddTag(Of T)(IServiceCollection, Action(Of ITagOptions))
+- uid: System.Extension.UseTagOptions(System.IApplicationBuilder,System.Action{H.Controls.TagBox.ITagOptions})
+  commentId: M:System.Extension.UseTagOptions(System.IApplicationBuilder,System.Action{H.Controls.TagBox.ITagOptions})
+  id: UseTagOptions(System.IApplicationBuilder,System.Action{H.Controls.TagBox.ITagOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: UseTag(IApplicationBuilder, Action<TagOptions>)
-  nameWithType: Extension.UseTag(IApplicationBuilder, Action<TagOptions>)
-  fullName: System.Extension.UseTag(System.IApplicationBuilder, System.Action<H.Controls.TagBox.TagOptions>)
+  name: UseTagOptions(IApplicationBuilder, Action<ITagOptions>)
+  nameWithType: Extension.UseTagOptions(IApplicationBuilder, Action<ITagOptions>)
+  fullName: System.Extension.UseTagOptions(System.IApplicationBuilder, System.Action<H.Controls.TagBox.ITagOptions>)
   type: Method
   source:
-    id: UseTag
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.TagBox\Extension.cs
-    startLine: 24
+    id: UseTagOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.TagBox\Extension.cs
+    startLine: 25
   assemblies:
   - H.Controls.TagBox
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseTag(this IApplicationBuilder builder, Action<TagOptions> option = null)
+    content: public static IApplicationBuilder UseTagOptions(this IApplicationBuilder builder, Action<ITagOptions> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Controls.TagBox.TagOptions}
+      type: System.Action{H.Controls.TagBox.ITagOptions}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseTag(builder As IApplicationBuilder, [option] As Action(Of TagOptions) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseTag*
-  nameWithType.vb: Extension.UseTag(IApplicationBuilder, Action(Of TagOptions))
-  fullName.vb: System.Extension.UseTag(System.IApplicationBuilder, System.Action(Of H.Controls.TagBox.TagOptions))
-  name.vb: UseTag(IApplicationBuilder, Action(Of TagOptions))
-- uid: System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  commentId: M:System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  id: AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
+    content.vb: Public Shared Function UseTagOptions(builder As IApplicationBuilder, [option] As Action(Of ITagOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseTagOptions*
+  nameWithType.vb: Extension.UseTagOptions(IApplicationBuilder, Action(Of ITagOptions))
+  fullName.vb: System.Extension.UseTagOptions(System.IApplicationBuilder, System.Action(Of H.Controls.TagBox.ITagOptions))
+  name.vb: UseTagOptions(IApplicationBuilder, Action(Of ITagOptions))
+- uid: System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  commentId: M:System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  id: AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddFavorite(IServiceCollection, Action<FavoriteOptions>)
-  nameWithType: Extension.AddFavorite(IServiceCollection, Action<FavoriteOptions>)
-  fullName: System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Controls.FavoriteBox.FavoriteOptions>)
+  name: AddFavorite(IServiceCollection, Action<IFavoriteOptions>)
+  nameWithType: Extension.AddFavorite(IServiceCollection, Action<IFavoriteOptions>)
+  fullName: System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Controls.FavoriteBox.IFavoriteOptions>)
   type: Method
   source:
     id: AddFavorite
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FavoriteBox\Extension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FavoriteBox\Extension.cs
     startLine: 10
   assemblies:
   - H.Controls.FavoriteBox
   namespace: System
   syntax:
-    content: public static IServiceCollection AddFavorite(this IServiceCollection services, Action<FavoriteOptions> setupAction = null)
+    content: public static IServiceCollection AddFavorite(this IServiceCollection services, Action<IFavoriteOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Controls.FavoriteBox.FavoriteOptions}
+      type: System.Action{H.Controls.FavoriteBox.IFavoriteOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddFavorite(services As IServiceCollection, setupAction As Action(Of FavoriteOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddFavorite(services As IServiceCollection, setupAction As Action(Of IFavoriteOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddFavorite*
-  nameWithType.vb: Extension.AddFavorite(IServiceCollection, Action(Of FavoriteOptions))
-  fullName.vb: System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Controls.FavoriteBox.FavoriteOptions))
-  name.vb: AddFavorite(IServiceCollection, Action(Of FavoriteOptions))
-- uid: System.Extension.AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  commentId: M:System.Extension.AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  id: AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
+  nameWithType.vb: Extension.AddFavorite(IServiceCollection, Action(Of IFavoriteOptions))
+  fullName.vb: System.Extension.AddFavorite(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Controls.FavoriteBox.IFavoriteOptions))
+  name.vb: AddFavorite(IServiceCollection, Action(Of IFavoriteOptions))
+- uid: System.Extension.AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  commentId: M:System.Extension.AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  id: AddFavorite``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddFavorite<T>(IServiceCollection, Action<FavoriteOptions>)
-  nameWithType: Extension.AddFavorite<T>(IServiceCollection, Action<FavoriteOptions>)
-  fullName: System.Extension.AddFavorite<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Controls.FavoriteBox.FavoriteOptions>)
+  name: AddFavorite<T>(IServiceCollection, Action<IFavoriteOptions>)
+  nameWithType: Extension.AddFavorite<T>(IServiceCollection, Action<IFavoriteOptions>)
+  fullName: System.Extension.AddFavorite<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Controls.FavoriteBox.IFavoriteOptions>)
   type: Method
   source:
     id: AddFavorite
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FavoriteBox\Extension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FavoriteBox\Extension.cs
     startLine: 15
   assemblies:
   - H.Controls.FavoriteBox
   namespace: System
   syntax:
-    content: 'public static IServiceCollection AddFavorite<T>(this IServiceCollection services, Action<FavoriteOptions> setupAction = null) where T : class, IFavoriteService'
+    content: 'public static IServiceCollection AddFavorite<T>(this IServiceCollection services, Action<IFavoriteOptions> setupAction = null) where T : class, IFavoriteService'
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Controls.FavoriteBox.FavoriteOptions}
+      type: System.Action{H.Controls.FavoriteBox.IFavoriteOptions}
     typeParameters:
     - id: T
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddFavorite(Of T As {Class, IFavoriteService})(services As IServiceCollection, setupAction As Action(Of FavoriteOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddFavorite(Of T As {Class, IFavoriteService})(services As IServiceCollection, setupAction As Action(Of IFavoriteOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddFavorite*
-  nameWithType.vb: Extension.AddFavorite(Of T)(IServiceCollection, Action(Of FavoriteOptions))
-  fullName.vb: System.Extension.AddFavorite(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Controls.FavoriteBox.FavoriteOptions))
-  name.vb: AddFavorite(Of T)(IServiceCollection, Action(Of FavoriteOptions))
-- uid: System.Extension.UseFavorite(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  commentId: M:System.Extension.UseFavorite(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
-  id: UseFavorite(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.FavoriteOptions})
+  nameWithType.vb: Extension.AddFavorite(Of T)(IServiceCollection, Action(Of IFavoriteOptions))
+  fullName.vb: System.Extension.AddFavorite(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Controls.FavoriteBox.IFavoriteOptions))
+  name.vb: AddFavorite(Of T)(IServiceCollection, Action(Of IFavoriteOptions))
+- uid: System.Extension.UseFavoriteOptions(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  commentId: M:System.Extension.UseFavoriteOptions(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
+  id: UseFavoriteOptions(System.IApplicationBuilder,System.Action{H.Controls.FavoriteBox.IFavoriteOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: UseFavorite(IApplicationBuilder, Action<FavoriteOptions>)
-  nameWithType: Extension.UseFavorite(IApplicationBuilder, Action<FavoriteOptions>)
-  fullName: System.Extension.UseFavorite(System.IApplicationBuilder, System.Action<H.Controls.FavoriteBox.FavoriteOptions>)
+  name: UseFavoriteOptions(IApplicationBuilder, Action<IFavoriteOptions>)
+  nameWithType: Extension.UseFavoriteOptions(IApplicationBuilder, Action<IFavoriteOptions>)
+  fullName: System.Extension.UseFavoriteOptions(System.IApplicationBuilder, System.Action<H.Controls.FavoriteBox.IFavoriteOptions>)
   type: Method
   source:
-    id: UseFavorite
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FavoriteBox\Extension.cs
+    id: UseFavoriteOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.FavoriteBox\Extension.cs
     startLine: 24
   assemblies:
   - H.Controls.FavoriteBox
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseFavorite(this IApplicationBuilder builder, Action<FavoriteOptions> option = null)
+    content: public static IApplicationBuilder UseFavoriteOptions(this IApplicationBuilder builder, Action<IFavoriteOptions> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Controls.FavoriteBox.FavoriteOptions}
+      type: System.Action{H.Controls.FavoriteBox.IFavoriteOptions}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseFavorite(builder As IApplicationBuilder, [option] As Action(Of FavoriteOptions) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseFavorite*
-  nameWithType.vb: Extension.UseFavorite(IApplicationBuilder, Action(Of FavoriteOptions))
-  fullName.vb: System.Extension.UseFavorite(System.IApplicationBuilder, System.Action(Of H.Controls.FavoriteBox.FavoriteOptions))
-  name.vb: UseFavorite(IApplicationBuilder, Action(Of FavoriteOptions))
+    content.vb: Public Shared Function UseFavoriteOptions(builder As IApplicationBuilder, [option] As Action(Of IFavoriteOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseFavoriteOptions*
+  nameWithType.vb: Extension.UseFavoriteOptions(IApplicationBuilder, Action(Of IFavoriteOptions))
+  fullName.vb: System.Extension.UseFavoriteOptions(System.IApplicationBuilder, System.Action(Of H.Controls.FavoriteBox.IFavoriteOptions))
+  name.vb: UseFavoriteOptions(IApplicationBuilder, Action(Of IFavoriteOptions))
 - uid: System.Extension.AddSchedule(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   commentId: M:System.Extension.AddSchedule(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   id: AddSchedule(Microsoft.Extensions.DependencyInjection.IServiceCollection)
@@ -737,7 +784,7 @@ items:
   type: Method
   source:
     id: AddSchedule
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ScheduleBox\Extension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Controls\H.Controls.ScheduleBox\Extension.cs
     startLine: 10
   assemblies:
   - H.Controls.ScheduleBox
@@ -751,72 +798,105 @@ items:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     content.vb: Public Shared Function AddSchedule(services As IServiceCollection) As IServiceCollection
   overload: System.Extension.AddSchedule*
-- uid: System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.FeedbackOptions})
-  commentId: M:System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.FeedbackOptions})
-  id: AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.FeedbackOptions})
+- uid: System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.IFeedbackOptions})
+  commentId: M:System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.IFeedbackOptions})
+  id: AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{H.Modules.Feedback.IFeedbackOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: AddFeedBack(IServiceCollection, Action<FeedbackOptions>)
-  nameWithType: Extension.AddFeedBack(IServiceCollection, Action<FeedbackOptions>)
-  fullName: System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Feedback.FeedbackOptions>)
+  name: AddFeedBack(IServiceCollection, Action<IFeedbackOptions>)
+  nameWithType: Extension.AddFeedBack(IServiceCollection, Action<IFeedbackOptions>)
+  fullName: System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<H.Modules.Feedback.IFeedbackOptions>)
   type: Method
   source:
     id: AddFeedBack
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Feedback\Extension.cs
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Feedback\Extension.cs
     startLine: 10
   assemblies:
   - H.Modules.Feedback
   namespace: System
   syntax:
-    content: public static IServiceCollection AddFeedBack(this IServiceCollection services, Action<FeedbackOptions> setupAction = null)
+    content: public static IServiceCollection AddFeedBack(this IServiceCollection services, Action<IFeedbackOptions> setupAction = null)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     - id: setupAction
-      type: System.Action{H.Modules.Feedback.FeedbackOptions}
+      type: System.Action{H.Modules.Feedback.IFeedbackOptions}
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Shared Function AddFeedBack(services As IServiceCollection, setupAction As Action(Of FeedbackOptions) = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddFeedBack(services As IServiceCollection, setupAction As Action(Of IFeedbackOptions) = Nothing) As IServiceCollection
   overload: System.Extension.AddFeedBack*
-  nameWithType.vb: Extension.AddFeedBack(IServiceCollection, Action(Of FeedbackOptions))
-  fullName.vb: System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Feedback.FeedbackOptions))
-  name.vb: AddFeedBack(IServiceCollection, Action(Of FeedbackOptions))
-- uid: System.Extension.UseFeedBack(System.IApplicationBuilder,System.Action{H.Modules.Feedback.FeedbackOptions})
-  commentId: M:System.Extension.UseFeedBack(System.IApplicationBuilder,System.Action{H.Modules.Feedback.FeedbackOptions})
-  id: UseFeedBack(System.IApplicationBuilder,System.Action{H.Modules.Feedback.FeedbackOptions})
+  nameWithType.vb: Extension.AddFeedBack(IServiceCollection, Action(Of IFeedbackOptions))
+  fullName.vb: System.Extension.AddFeedBack(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of H.Modules.Feedback.IFeedbackOptions))
+  name.vb: AddFeedBack(IServiceCollection, Action(Of IFeedbackOptions))
+- uid: System.Extension.UseFeedBackOptions(System.IApplicationBuilder,System.Action{H.Modules.Feedback.IFeedbackOptions})
+  commentId: M:System.Extension.UseFeedBackOptions(System.IApplicationBuilder,System.Action{H.Modules.Feedback.IFeedbackOptions})
+  id: UseFeedBackOptions(System.IApplicationBuilder,System.Action{H.Modules.Feedback.IFeedbackOptions})
   isExtensionMethod: true
   parent: System.Extension
   langs:
   - csharp
   - vb
-  name: UseFeedBack(IApplicationBuilder, Action<FeedbackOptions>)
-  nameWithType: Extension.UseFeedBack(IApplicationBuilder, Action<FeedbackOptions>)
-  fullName: System.Extension.UseFeedBack(System.IApplicationBuilder, System.Action<H.Modules.Feedback.FeedbackOptions>)
+  name: UseFeedBackOptions(IApplicationBuilder, Action<IFeedbackOptions>)
+  nameWithType: Extension.UseFeedBackOptions(IApplicationBuilder, Action<IFeedbackOptions>)
+  fullName: System.Extension.UseFeedBackOptions(System.IApplicationBuilder, System.Action<H.Modules.Feedback.IFeedbackOptions>)
   type: Method
   source:
-    id: UseFeedBack
-    path: H:\Github\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Feedback\Extension.cs
-    startLine: 19
+    id: UseFeedBackOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Feedback\Extension.cs
+    startLine: 20
   assemblies:
   - H.Modules.Feedback
   namespace: System
   syntax:
-    content: public static IApplicationBuilder UseFeedBack(this IApplicationBuilder builder, Action<FeedbackOptions> option = null)
+    content: public static IApplicationBuilder UseFeedBackOptions(this IApplicationBuilder builder, Action<IFeedbackOptions> option = null)
     parameters:
     - id: builder
       type: System.IApplicationBuilder
     - id: option
-      type: System.Action{H.Modules.Feedback.FeedbackOptions}
+      type: System.Action{H.Modules.Feedback.IFeedbackOptions}
     return:
       type: System.IApplicationBuilder
-    content.vb: Public Shared Function UseFeedBack(builder As IApplicationBuilder, [option] As Action(Of FeedbackOptions) = Nothing) As IApplicationBuilder
-  overload: System.Extension.UseFeedBack*
-  nameWithType.vb: Extension.UseFeedBack(IApplicationBuilder, Action(Of FeedbackOptions))
-  fullName.vb: System.Extension.UseFeedBack(System.IApplicationBuilder, System.Action(Of H.Modules.Feedback.FeedbackOptions))
-  name.vb: UseFeedBack(IApplicationBuilder, Action(Of FeedbackOptions))
+    content.vb: Public Shared Function UseFeedBackOptions(builder As IApplicationBuilder, [option] As Action(Of IFeedbackOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseFeedBackOptions*
+  nameWithType.vb: Extension.UseFeedBackOptions(IApplicationBuilder, Action(Of IFeedbackOptions))
+  fullName.vb: System.Extension.UseFeedBackOptions(System.IApplicationBuilder, System.Action(Of H.Modules.Feedback.IFeedbackOptions))
+  name.vb: UseFeedBackOptions(IApplicationBuilder, Action(Of IFeedbackOptions))
+- uid: System.Extension.UseStyleOptions(System.IApplicationBuilder,System.Action{H.Modules.Style.IStyleOptions})
+  commentId: M:System.Extension.UseStyleOptions(System.IApplicationBuilder,System.Action{H.Modules.Style.IStyleOptions})
+  id: UseStyleOptions(System.IApplicationBuilder,System.Action{H.Modules.Style.IStyleOptions})
+  isExtensionMethod: true
+  parent: System.Extension
+  langs:
+  - csharp
+  - vb
+  name: UseStyleOptions(IApplicationBuilder, Action<IStyleOptions>)
+  nameWithType: Extension.UseStyleOptions(IApplicationBuilder, Action<IStyleOptions>)
+  fullName: System.Extension.UseStyleOptions(System.IApplicationBuilder, System.Action<H.Modules.Style.IStyleOptions>)
+  type: Method
+  source:
+    id: UseStyleOptions
+    path: D:\GitHub\WPF-Control-Docs\Source\WPF-Control\Source\Modules\H.Modules.Style\Extension.cs
+    startLine: 10
+  assemblies:
+  - H.Modules.Style
+  namespace: System
+  syntax:
+    content: public static IApplicationBuilder UseStyleOptions(this IApplicationBuilder builder, Action<IStyleOptions> option = null)
+    parameters:
+    - id: builder
+      type: System.IApplicationBuilder
+    - id: option
+      type: System.Action{H.Modules.Style.IStyleOptions}
+    return:
+      type: System.IApplicationBuilder
+    content.vb: Public Shared Function UseStyleOptions(builder As IApplicationBuilder, [option] As Action(Of IStyleOptions) = Nothing) As IApplicationBuilder
+  overload: System.Extension.UseStyleOptions*
+  nameWithType.vb: Extension.UseStyleOptions(IApplicationBuilder, Action(Of IStyleOptions))
+  fullName.vb: System.Extension.UseStyleOptions(System.IApplicationBuilder, System.Action(Of H.Modules.Style.IStyleOptions))
+  name.vb: UseStyleOptions(IApplicationBuilder, Action(Of IStyleOptions))
 references:
 - uid: System
   commentId: N:System
@@ -1056,7 +1136,7 @@ references:
   - name: )
 - uid: System.Extension.AddLoginViewPresenter*
   commentId: Overload:System.Extension.AddLoginViewPresenter
-  href: System.Extension.html#System_Extension_AddLoginViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_LoginOptions__
+  href: System.Extension.html#System_Extension_AddLoginViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_ILoginOptions__
   name: AddLoginViewPresenter
   nameWithType: Extension.AddLoginViewPresenter
   fullName: System.Extension.AddLoginViewPresenter
@@ -1068,26 +1148,26 @@ references:
   name: IServiceCollection
   nameWithType: IServiceCollection
   fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
-- uid: System.Action{H.Modules.Login.LoginOptions}
-  commentId: T:System.Action{H.Modules.Login.LoginOptions}
+- uid: System.Action{H.Modules.Login.ILoginOptions}
+  commentId: T:System.Action{H.Modules.Login.ILoginOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<LoginOptions>
-  nameWithType: Action<LoginOptions>
-  fullName: System.Action<H.Modules.Login.LoginOptions>
-  nameWithType.vb: Action(Of LoginOptions)
-  fullName.vb: System.Action(Of H.Modules.Login.LoginOptions)
-  name.vb: Action(Of LoginOptions)
+  name: Action<ILoginOptions>
+  nameWithType: Action<ILoginOptions>
+  fullName: System.Action<H.Modules.Login.ILoginOptions>
+  nameWithType.vb: Action(Of ILoginOptions)
+  fullName.vb: System.Action(Of H.Modules.Login.ILoginOptions)
+  name.vb: Action(Of ILoginOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Modules.Login.LoginOptions
-    name: LoginOptions
-    href: H.Modules.Login.LoginOptions.html
+  - uid: H.Modules.Login.ILoginOptions
+    name: ILoginOptions
+    href: H.Modules.Login.ILoginOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1097,9 +1177,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Modules.Login.LoginOptions
-    name: LoginOptions
-    href: H.Modules.Login.LoginOptions.html
+  - uid: H.Modules.Login.ILoginOptions
+    name: ILoginOptions
+    href: H.Modules.Login.ILoginOptions.html
   - name: )
 - uid: Microsoft.Extensions.DependencyInjection
   commentId: N:Microsoft.Extensions.DependencyInjection
@@ -1168,30 +1248,30 @@ references:
   - name: )
 - uid: System.Extension.AddRegisterLoginViewPresenter*
   commentId: Overload:System.Extension.AddRegisterLoginViewPresenter
-  href: System.Extension.html#System_Extension_AddRegisterLoginViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_LoginOptions__System_Action_H_Modules_Login_RegistorOptions__
+  href: System.Extension.html#System_Extension_AddRegisterLoginViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_ILoginOptions__System_Action_H_Modules_Login_IRegistorOptions__
   name: AddRegisterLoginViewPresenter
   nameWithType: Extension.AddRegisterLoginViewPresenter
   fullName: System.Extension.AddRegisterLoginViewPresenter
-- uid: System.Action{H.Modules.Login.RegistorOptions}
-  commentId: T:System.Action{H.Modules.Login.RegistorOptions}
+- uid: System.Action{H.Modules.Login.IRegistorOptions}
+  commentId: T:System.Action{H.Modules.Login.IRegistorOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<RegistorOptions>
-  nameWithType: Action<RegistorOptions>
-  fullName: System.Action<H.Modules.Login.RegistorOptions>
-  nameWithType.vb: Action(Of RegistorOptions)
-  fullName.vb: System.Action(Of H.Modules.Login.RegistorOptions)
-  name.vb: Action(Of RegistorOptions)
+  name: Action<IRegistorOptions>
+  nameWithType: Action<IRegistorOptions>
+  fullName: System.Action<H.Modules.Login.IRegistorOptions>
+  nameWithType.vb: Action(Of IRegistorOptions)
+  fullName.vb: System.Action(Of H.Modules.Login.IRegistorOptions)
+  name.vb: Action(Of IRegistorOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Modules.Login.RegistorOptions
-    name: RegistorOptions
-    href: H.Modules.Login.RegistorOptions.html
+  - uid: H.Modules.Login.IRegistorOptions
+    name: IRegistorOptions
+    href: H.Modules.Login.IRegistorOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1201,28 +1281,28 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Modules.Login.RegistorOptions
-    name: RegistorOptions
-    href: H.Modules.Login.RegistorOptions.html
+  - uid: H.Modules.Login.IRegistorOptions
+    name: IRegistorOptions
+    href: H.Modules.Login.IRegistorOptions.html
   - name: )
 - uid: System.Extension.AddTestLoginService*
   commentId: Overload:System.Extension.AddTestLoginService
-  href: System.Extension.html#System_Extension_AddTestLoginService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_LoginOptions__
+  href: System.Extension.html#System_Extension_AddTestLoginService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_ILoginOptions__
   name: AddTestLoginService
   nameWithType: Extension.AddTestLoginService
   fullName: System.Extension.AddTestLoginService
 - uid: System.Extension.AddTestRegistorService*
   commentId: Overload:System.Extension.AddTestRegistorService
-  href: System.Extension.html#System_Extension_AddTestRegistorService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_RegistorOptions__
+  href: System.Extension.html#System_Extension_AddTestRegistorService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Login_IRegistorOptions__
   name: AddTestRegistorService
   nameWithType: Extension.AddTestRegistorService
   fullName: System.Extension.AddTestRegistorService
-- uid: System.Extension.UseLogin*
-  commentId: Overload:System.Extension.UseLogin
-  href: System.Extension.html#System_Extension_UseLogin_System_IApplicationBuilder_System_Action_H_Modules_Login_LoginOptions__
-  name: UseLogin
-  nameWithType: Extension.UseLogin
-  fullName: System.Extension.UseLogin
+- uid: System.Extension.UseLoginOptions*
+  commentId: Overload:System.Extension.UseLoginOptions
+  href: System.Extension.html#System_Extension_UseLoginOptions_System_IApplicationBuilder_System_Action_H_Modules_Login_ILoginOptions__
+  name: UseLoginOptions
+  nameWithType: Extension.UseLoginOptions
+  fullName: System.Extension.UseLoginOptions
 - uid: System.IApplicationBuilder
   commentId: T:System.IApplicationBuilder
   parent: System
@@ -1230,38 +1310,38 @@ references:
   name: IApplicationBuilder
   nameWithType: IApplicationBuilder
   fullName: System.IApplicationBuilder
-- uid: System.Extension.UseRegistor*
-  commentId: Overload:System.Extension.UseRegistor
-  href: System.Extension.html#System_Extension_UseRegistor_System_IApplicationBuilder_System_Action_H_Modules_Login_RegistorOptions__
-  name: UseRegistor
-  nameWithType: Extension.UseRegistor
-  fullName: System.Extension.UseRegistor
+- uid: System.Extension.UseRegistorOptions*
+  commentId: Overload:System.Extension.UseRegistorOptions
+  href: System.Extension.html#System_Extension_UseRegistorOptions_System_IApplicationBuilder_System_Action_H_Modules_Login_IRegistorOptions__
+  name: UseRegistorOptions
+  nameWithType: Extension.UseRegistorOptions
+  fullName: System.Extension.UseRegistorOptions
 - uid: System.Extension.AddSplashScreen*
   commentId: Overload:System.Extension.AddSplashScreen
-  href: System.Extension.html#System_Extension_AddSplashScreen_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_SplashScreen_SplashScreenOption__
+  href: System.Extension.html#System_Extension_AddSplashScreen_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_SplashScreen_ISplashScreenOptions__
   name: AddSplashScreen
   nameWithType: Extension.AddSplashScreen
   fullName: System.Extension.AddSplashScreen
-- uid: System.Action{H.Modules.SplashScreen.SplashScreenOption}
-  commentId: T:System.Action{H.Modules.SplashScreen.SplashScreenOption}
+- uid: System.Action{H.Modules.SplashScreen.ISplashScreenOptions}
+  commentId: T:System.Action{H.Modules.SplashScreen.ISplashScreenOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<SplashScreenOption>
-  nameWithType: Action<SplashScreenOption>
-  fullName: System.Action<H.Modules.SplashScreen.SplashScreenOption>
-  nameWithType.vb: Action(Of SplashScreenOption)
-  fullName.vb: System.Action(Of H.Modules.SplashScreen.SplashScreenOption)
-  name.vb: Action(Of SplashScreenOption)
+  name: Action<ISplashScreenOptions>
+  nameWithType: Action<ISplashScreenOptions>
+  fullName: System.Action<H.Modules.SplashScreen.ISplashScreenOptions>
+  nameWithType.vb: Action(Of ISplashScreenOptions)
+  fullName.vb: System.Action(Of H.Modules.SplashScreen.ISplashScreenOptions)
+  name.vb: Action(Of ISplashScreenOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Modules.SplashScreen.SplashScreenOption
-    name: SplashScreenOption
-    href: H.Modules.SplashScreen.SplashScreenOption.html
+  - uid: H.Modules.SplashScreen.ISplashScreenOptions
+    name: ISplashScreenOptions
+    href: H.Modules.SplashScreen.ISplashScreenOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1271,42 +1351,42 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Modules.SplashScreen.SplashScreenOption
-    name: SplashScreenOption
-    href: H.Modules.SplashScreen.SplashScreenOption.html
+  - uid: H.Modules.SplashScreen.ISplashScreenOptions
+    name: ISplashScreenOptions
+    href: H.Modules.SplashScreen.ISplashScreenOptions.html
   - name: )
-- uid: System.Extension.UseSplashScreen*
-  commentId: Overload:System.Extension.UseSplashScreen
-  href: System.Extension.html#System_Extension_UseSplashScreen_System_IApplicationBuilder_System_Action_H_Modules_SplashScreen_SplashScreenOption__
-  name: UseSplashScreen
-  nameWithType: Extension.UseSplashScreen
-  fullName: System.Extension.UseSplashScreen
-- uid: System.Extension.UseTheme*
-  commentId: Overload:System.Extension.UseTheme
-  href: System.Extension.html#System_Extension_UseTheme_System_IApplicationBuilder_System_Action_H_Modules_Theme_ThemeSetting__
-  name: UseTheme
-  nameWithType: Extension.UseTheme
-  fullName: System.Extension.UseTheme
-- uid: System.Action{H.Modules.Theme.ThemeSetting}
-  commentId: T:System.Action{H.Modules.Theme.ThemeSetting}
+- uid: System.Extension.UseSplashScreenOptions*
+  commentId: Overload:System.Extension.UseSplashScreenOptions
+  href: System.Extension.html#System_Extension_UseSplashScreenOptions_System_IApplicationBuilder_System_Action_H_Modules_SplashScreen_ISplashScreenOptions__
+  name: UseSplashScreenOptions
+  nameWithType: Extension.UseSplashScreenOptions
+  fullName: System.Extension.UseSplashScreenOptions
+- uid: System.Extension.AddTheme*
+  commentId: Overload:System.Extension.AddTheme
+  href: System.Extension.html#System_Extension_AddTheme_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Theme_IThemeOptions__
+  name: AddTheme
+  nameWithType: Extension.AddTheme
+  fullName: System.Extension.AddTheme
+- uid: System.Action{H.Modules.Theme.IThemeOptions}
+  commentId: T:System.Action{H.Modules.Theme.IThemeOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<ThemeSetting>
-  nameWithType: Action<ThemeSetting>
-  fullName: System.Action<H.Modules.Theme.ThemeSetting>
-  nameWithType.vb: Action(Of ThemeSetting)
-  fullName.vb: System.Action(Of H.Modules.Theme.ThemeSetting)
-  name.vb: Action(Of ThemeSetting)
+  name: Action<IThemeOptions>
+  nameWithType: Action<IThemeOptions>
+  fullName: System.Action<H.Modules.Theme.IThemeOptions>
+  nameWithType.vb: Action(Of IThemeOptions)
+  fullName.vb: System.Action(Of H.Modules.Theme.IThemeOptions)
+  name.vb: Action(Of IThemeOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Modules.Theme.ThemeSetting
-    name: ThemeSetting
-    href: H.Modules.Theme.ThemeSetting.html
+  - uid: H.Modules.Theme.IThemeOptions
+    name: IThemeOptions
+    href: H.Modules.Theme.IThemeOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1316,36 +1396,42 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Modules.Theme.ThemeSetting
-    name: ThemeSetting
-    href: H.Modules.Theme.ThemeSetting.html
+  - uid: H.Modules.Theme.IThemeOptions
+    name: IThemeOptions
+    href: H.Modules.Theme.IThemeOptions.html
   - name: )
-- uid: System.Extension.UseSwithTheme*
-  commentId: Overload:System.Extension.UseSwithTheme
-  href: System.Extension.html#System_Extension_UseSwithTheme_System_IApplicationBuilder_System_Action_H_Modules_Theme_SwitchThemeOptions__
-  name: UseSwithTheme
-  nameWithType: Extension.UseSwithTheme
-  fullName: System.Extension.UseSwithTheme
-- uid: System.Action{H.Modules.Theme.SwitchThemeOptions}
-  commentId: T:System.Action{H.Modules.Theme.SwitchThemeOptions}
+- uid: System.Extension.AddLoadThemeOptionsService*
+  commentId: Overload:System.Extension.AddLoadThemeOptionsService
+  href: System.Extension.html#System_Extension_AddLoadThemeOptionsService_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Theme_IThemeOptions__
+  name: AddLoadThemeOptionsService
+  nameWithType: Extension.AddLoadThemeOptionsService
+  fullName: System.Extension.AddLoadThemeOptionsService
+- uid: System.Extension.AddColorThemeViewPresenter*
+  commentId: Overload:System.Extension.AddColorThemeViewPresenter
+  href: System.Extension.html#System_Extension_AddColorThemeViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Theme_IColorThemeOptions__
+  name: AddColorThemeViewPresenter
+  nameWithType: Extension.AddColorThemeViewPresenter
+  fullName: System.Extension.AddColorThemeViewPresenter
+- uid: System.Action{H.Modules.Theme.IColorThemeOptions}
+  commentId: T:System.Action{H.Modules.Theme.IColorThemeOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<SwitchThemeOptions>
-  nameWithType: Action<SwitchThemeOptions>
-  fullName: System.Action<H.Modules.Theme.SwitchThemeOptions>
-  nameWithType.vb: Action(Of SwitchThemeOptions)
-  fullName.vb: System.Action(Of H.Modules.Theme.SwitchThemeOptions)
-  name.vb: Action(Of SwitchThemeOptions)
+  name: Action<IColorThemeOptions>
+  nameWithType: Action<IColorThemeOptions>
+  fullName: System.Action<H.Modules.Theme.IColorThemeOptions>
+  nameWithType.vb: Action(Of IColorThemeOptions)
+  fullName.vb: System.Action(Of H.Modules.Theme.IColorThemeOptions)
+  name.vb: Action(Of IColorThemeOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Modules.Theme.SwitchThemeOptions
-    name: SwitchThemeOptions
-    href: H.Modules.Theme.SwitchThemeOptions.html
+  - uid: H.Modules.Theme.IColorThemeOptions
+    name: IColorThemeOptions
+    href: H.Modules.Theme.IColorThemeOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1355,42 +1441,42 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Modules.Theme.SwitchThemeOptions
-    name: SwitchThemeOptions
-    href: H.Modules.Theme.SwitchThemeOptions.html
+  - uid: H.Modules.Theme.IColorThemeOptions
+    name: IColorThemeOptions
+    href: H.Modules.Theme.IColorThemeOptions.html
   - name: )
-- uid: System.Extension.AddSwitchThemeViewPresenter*
-  commentId: Overload:System.Extension.AddSwitchThemeViewPresenter
-  href: System.Extension.html#System_Extension_AddSwitchThemeViewPresenter_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Theme_SwitchThemeOptions__
-  name: AddSwitchThemeViewPresenter
-  nameWithType: Extension.AddSwitchThemeViewPresenter
-  fullName: System.Extension.AddSwitchThemeViewPresenter
+- uid: System.Extension.UseThemeOptions*
+  commentId: Overload:System.Extension.UseThemeOptions
+  href: System.Extension.html#System_Extension_UseThemeOptions_System_IApplicationBuilder_System_Action_H_Modules_Theme_IThemeOptions__
+  name: UseThemeOptions
+  nameWithType: Extension.UseThemeOptions
+  fullName: System.Extension.UseThemeOptions
 - uid: System.Extension.AddRevertible*
   commentId: Overload:System.Extension.AddRevertible
-  href: System.Extension.html#System_Extension_AddRevertible_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Extensions_Revertible_RevertibleOptions__
+  href: System.Extension.html#System_Extension_AddRevertible_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Extensions_Revertible_IRevertibleOptions__
   name: AddRevertible
   nameWithType: Extension.AddRevertible
   fullName: System.Extension.AddRevertible
-- uid: System.Action{H.Extensions.Revertible.RevertibleOptions}
-  commentId: T:System.Action{H.Extensions.Revertible.RevertibleOptions}
+- uid: System.Action{H.Extensions.Revertible.IRevertibleOptions}
+  commentId: T:System.Action{H.Extensions.Revertible.IRevertibleOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<RevertibleOptions>
-  nameWithType: Action<RevertibleOptions>
-  fullName: System.Action<H.Extensions.Revertible.RevertibleOptions>
-  nameWithType.vb: Action(Of RevertibleOptions)
-  fullName.vb: System.Action(Of H.Extensions.Revertible.RevertibleOptions)
-  name.vb: Action(Of RevertibleOptions)
+  name: Action<IRevertibleOptions>
+  nameWithType: Action<IRevertibleOptions>
+  fullName: System.Action<H.Extensions.Revertible.IRevertibleOptions>
+  nameWithType.vb: Action(Of IRevertibleOptions)
+  fullName.vb: System.Action(Of H.Extensions.Revertible.IRevertibleOptions)
+  name.vb: Action(Of IRevertibleOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Extensions.Revertible.RevertibleOptions
-    name: RevertibleOptions
-    href: H.Extensions.Revertible.RevertibleOptions.html
+  - uid: H.Extensions.Revertible.IRevertibleOptions
+    name: IRevertibleOptions
+    href: H.Extensions.Revertible.IRevertibleOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1400,36 +1486,42 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Extensions.Revertible.RevertibleOptions
-    name: RevertibleOptions
-    href: H.Extensions.Revertible.RevertibleOptions.html
+  - uid: H.Extensions.Revertible.IRevertibleOptions
+    name: IRevertibleOptions
+    href: H.Extensions.Revertible.IRevertibleOptions.html
   - name: )
+- uid: System.Extension.UseRevertibleOptions*
+  commentId: Overload:System.Extension.UseRevertibleOptions
+  href: System.Extension.html#System_Extension_UseRevertibleOptions_System_IApplicationBuilder_System_Action_H_Extensions_Revertible_IRevertibleOptions__
+  name: UseRevertibleOptions
+  nameWithType: Extension.UseRevertibleOptions
+  fullName: System.Extension.UseRevertibleOptions
 - uid: System.Extension.AddTag*
   commentId: Overload:System.Extension.AddTag
-  href: System.Extension.html#System_Extension_AddTag_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_TagBox_TagOptions__
+  href: System.Extension.html#System_Extension_AddTag_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_TagBox_ITagOptions__
   name: AddTag
   nameWithType: Extension.AddTag
   fullName: System.Extension.AddTag
-- uid: System.Action{H.Controls.TagBox.TagOptions}
-  commentId: T:System.Action{H.Controls.TagBox.TagOptions}
+- uid: System.Action{H.Controls.TagBox.ITagOptions}
+  commentId: T:System.Action{H.Controls.TagBox.ITagOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<TagOptions>
-  nameWithType: Action<TagOptions>
-  fullName: System.Action<H.Controls.TagBox.TagOptions>
-  nameWithType.vb: Action(Of TagOptions)
-  fullName.vb: System.Action(Of H.Controls.TagBox.TagOptions)
-  name.vb: Action(Of TagOptions)
+  name: Action<ITagOptions>
+  nameWithType: Action<ITagOptions>
+  fullName: System.Action<H.Controls.TagBox.ITagOptions>
+  nameWithType.vb: Action(Of ITagOptions)
+  fullName.vb: System.Action(Of H.Controls.TagBox.ITagOptions)
+  name.vb: Action(Of ITagOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Controls.TagBox.TagOptions
-    name: TagOptions
-    href: H.Controls.TagBox.TagOptions.html
+  - uid: H.Controls.TagBox.ITagOptions
+    name: ITagOptions
+    href: H.Controls.TagBox.ITagOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1439,42 +1531,42 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Controls.TagBox.TagOptions
-    name: TagOptions
-    href: H.Controls.TagBox.TagOptions.html
+  - uid: H.Controls.TagBox.ITagOptions
+    name: ITagOptions
+    href: H.Controls.TagBox.ITagOptions.html
   - name: )
-- uid: System.Extension.UseTag*
-  commentId: Overload:System.Extension.UseTag
-  href: System.Extension.html#System_Extension_UseTag_System_IApplicationBuilder_System_Action_H_Controls_TagBox_TagOptions__
-  name: UseTag
-  nameWithType: Extension.UseTag
-  fullName: System.Extension.UseTag
+- uid: System.Extension.UseTagOptions*
+  commentId: Overload:System.Extension.UseTagOptions
+  href: System.Extension.html#System_Extension_UseTagOptions_System_IApplicationBuilder_System_Action_H_Controls_TagBox_ITagOptions__
+  name: UseTagOptions
+  nameWithType: Extension.UseTagOptions
+  fullName: System.Extension.UseTagOptions
 - uid: System.Extension.AddFavorite*
   commentId: Overload:System.Extension.AddFavorite
-  href: System.Extension.html#System_Extension_AddFavorite_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_FavoriteBox_FavoriteOptions__
+  href: System.Extension.html#System_Extension_AddFavorite_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Controls_FavoriteBox_IFavoriteOptions__
   name: AddFavorite
   nameWithType: Extension.AddFavorite
   fullName: System.Extension.AddFavorite
-- uid: System.Action{H.Controls.FavoriteBox.FavoriteOptions}
-  commentId: T:System.Action{H.Controls.FavoriteBox.FavoriteOptions}
+- uid: System.Action{H.Controls.FavoriteBox.IFavoriteOptions}
+  commentId: T:System.Action{H.Controls.FavoriteBox.IFavoriteOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<FavoriteOptions>
-  nameWithType: Action<FavoriteOptions>
-  fullName: System.Action<H.Controls.FavoriteBox.FavoriteOptions>
-  nameWithType.vb: Action(Of FavoriteOptions)
-  fullName.vb: System.Action(Of H.Controls.FavoriteBox.FavoriteOptions)
-  name.vb: Action(Of FavoriteOptions)
+  name: Action<IFavoriteOptions>
+  nameWithType: Action<IFavoriteOptions>
+  fullName: System.Action<H.Controls.FavoriteBox.IFavoriteOptions>
+  nameWithType.vb: Action(Of IFavoriteOptions)
+  fullName.vb: System.Action(Of H.Controls.FavoriteBox.IFavoriteOptions)
+  name.vb: Action(Of IFavoriteOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Controls.FavoriteBox.FavoriteOptions
-    name: FavoriteOptions
-    href: H.Controls.FavoriteBox.FavoriteOptions.html
+  - uid: H.Controls.FavoriteBox.IFavoriteOptions
+    name: IFavoriteOptions
+    href: H.Controls.FavoriteBox.IFavoriteOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1484,16 +1576,16 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Controls.FavoriteBox.FavoriteOptions
-    name: FavoriteOptions
-    href: H.Controls.FavoriteBox.FavoriteOptions.html
+  - uid: H.Controls.FavoriteBox.IFavoriteOptions
+    name: IFavoriteOptions
+    href: H.Controls.FavoriteBox.IFavoriteOptions.html
   - name: )
-- uid: System.Extension.UseFavorite*
-  commentId: Overload:System.Extension.UseFavorite
-  href: System.Extension.html#System_Extension_UseFavorite_System_IApplicationBuilder_System_Action_H_Controls_FavoriteBox_FavoriteOptions__
-  name: UseFavorite
-  nameWithType: Extension.UseFavorite
-  fullName: System.Extension.UseFavorite
+- uid: System.Extension.UseFavoriteOptions*
+  commentId: Overload:System.Extension.UseFavoriteOptions
+  href: System.Extension.html#System_Extension_UseFavoriteOptions_System_IApplicationBuilder_System_Action_H_Controls_FavoriteBox_IFavoriteOptions__
+  name: UseFavoriteOptions
+  nameWithType: Extension.UseFavoriteOptions
+  fullName: System.Extension.UseFavoriteOptions
 - uid: System.Extension.AddSchedule*
   commentId: Overload:System.Extension.AddSchedule
   href: System.Extension.html#System_Extension_AddSchedule_Microsoft_Extensions_DependencyInjection_IServiceCollection_
@@ -1502,30 +1594,30 @@ references:
   fullName: System.Extension.AddSchedule
 - uid: System.Extension.AddFeedBack*
   commentId: Overload:System.Extension.AddFeedBack
-  href: System.Extension.html#System_Extension_AddFeedBack_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Feedback_FeedbackOptions__
+  href: System.Extension.html#System_Extension_AddFeedBack_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_H_Modules_Feedback_IFeedbackOptions__
   name: AddFeedBack
   nameWithType: Extension.AddFeedBack
   fullName: System.Extension.AddFeedBack
-- uid: System.Action{H.Modules.Feedback.FeedbackOptions}
-  commentId: T:System.Action{H.Modules.Feedback.FeedbackOptions}
+- uid: System.Action{H.Modules.Feedback.IFeedbackOptions}
+  commentId: T:System.Action{H.Modules.Feedback.IFeedbackOptions}
   parent: System
   definition: System.Action`1
   href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: Action<FeedbackOptions>
-  nameWithType: Action<FeedbackOptions>
-  fullName: System.Action<H.Modules.Feedback.FeedbackOptions>
-  nameWithType.vb: Action(Of FeedbackOptions)
-  fullName.vb: System.Action(Of H.Modules.Feedback.FeedbackOptions)
-  name.vb: Action(Of FeedbackOptions)
+  name: Action<IFeedbackOptions>
+  nameWithType: Action<IFeedbackOptions>
+  fullName: System.Action<H.Modules.Feedback.IFeedbackOptions>
+  nameWithType.vb: Action(Of IFeedbackOptions)
+  fullName.vb: System.Action(Of H.Modules.Feedback.IFeedbackOptions)
+  name.vb: Action(Of IFeedbackOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: H.Modules.Feedback.FeedbackOptions
-    name: FeedbackOptions
-    href: H.Modules.Feedback.FeedbackOptions.html
+  - uid: H.Modules.Feedback.IFeedbackOptions
+    name: IFeedbackOptions
+    href: H.Modules.Feedback.IFeedbackOptions.html
   - name: '>'
   spec.vb:
   - uid: System.Action`1
@@ -1535,13 +1627,52 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: H.Modules.Feedback.FeedbackOptions
-    name: FeedbackOptions
-    href: H.Modules.Feedback.FeedbackOptions.html
+  - uid: H.Modules.Feedback.IFeedbackOptions
+    name: IFeedbackOptions
+    href: H.Modules.Feedback.IFeedbackOptions.html
   - name: )
-- uid: System.Extension.UseFeedBack*
-  commentId: Overload:System.Extension.UseFeedBack
-  href: System.Extension.html#System_Extension_UseFeedBack_System_IApplicationBuilder_System_Action_H_Modules_Feedback_FeedbackOptions__
-  name: UseFeedBack
-  nameWithType: Extension.UseFeedBack
-  fullName: System.Extension.UseFeedBack
+- uid: System.Extension.UseFeedBackOptions*
+  commentId: Overload:System.Extension.UseFeedBackOptions
+  href: System.Extension.html#System_Extension_UseFeedBackOptions_System_IApplicationBuilder_System_Action_H_Modules_Feedback_IFeedbackOptions__
+  name: UseFeedBackOptions
+  nameWithType: Extension.UseFeedBackOptions
+  fullName: System.Extension.UseFeedBackOptions
+- uid: System.Extension.UseStyleOptions*
+  commentId: Overload:System.Extension.UseStyleOptions
+  href: System.Extension.html#System_Extension_UseStyleOptions_System_IApplicationBuilder_System_Action_H_Modules_Style_IStyleOptions__
+  name: UseStyleOptions
+  nameWithType: Extension.UseStyleOptions
+  fullName: System.Extension.UseStyleOptions
+- uid: System.Action{H.Modules.Style.IStyleOptions}
+  commentId: T:System.Action{H.Modules.Style.IStyleOptions}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<IStyleOptions>
+  nameWithType: Action<IStyleOptions>
+  fullName: System.Action<H.Modules.Style.IStyleOptions>
+  nameWithType.vb: Action(Of IStyleOptions)
+  fullName.vb: System.Action(Of H.Modules.Style.IStyleOptions)
+  name.vb: Action(Of IStyleOptions)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: H.Modules.Style.IStyleOptions
+    name: IStyleOptions
+    href: H.Modules.Style.IStyleOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: H.Modules.Style.IStyleOptions
+    name: IStyleOptions
+    href: H.Modules.Style.IStyleOptions.html
+  - name: )

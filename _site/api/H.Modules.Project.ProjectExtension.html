@@ -152,9 +152,203 @@ Class ProjectExtension
 </h2>
 
 
+  <a id="H_Modules_Project_ProjectExtension_Contain_" data-uid="H.Modules.Project.ProjectExtension.Contain*"></a>
+
+  <h3 id="H_Modules_Project_ProjectExtension_Contain_H_Services_Project_IProjectService_H_Services_Project_IProjectItem_" data-uid="H.Modules.Project.ProjectExtension.Contain(H.Services.Project.IProjectService,H.Services.Project.IProjectItem)">
+  Contain(IProjectService, IProjectItem)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Contain(this IProjectService projectService, IProjectItem projectItem)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
+    <dd></dd>
+    <dt><code>projectItem</code> <a class="xref" href="H.Services.Project.IProjectItem.html">IProjectItem</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Modules_Project_ProjectExtension_ShowDeleteProject_" data-uid="H.Modules.Project.ProjectExtension.ShowDeleteProject*"></a>
+
+  <h3 id="H_Modules_Project_ProjectExtension_ShowDeleteProject_H_Services_Project_IProjectService_H_Services_Project_IProjectItem_" data-uid="H.Modules.Project.ProjectExtension.ShowDeleteProject(H.Services.Project.IProjectService,H.Services.Project.IProjectItem)">
+  ShowDeleteProject(IProjectService, IProjectItem)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowDeleteProject(this IProjectService projectService, IProjectItem project)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
+    <dd></dd>
+    <dt><code>project</code> <a class="xref" href="H.Services.Project.IProjectItem.html">IProjectItem</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Modules_Project_ProjectExtension_ShowEidtProject_" data-uid="H.Modules.Project.ProjectExtension.ShowEidtProject*"></a>
+
+  <h3 id="H_Modules_Project_ProjectExtension_ShowEidtProject_H_Services_Project_IProjectService_H_Services_Project_IProjectItem_System_Action_H_Services_Message_Dialog_IDialog__" data-uid="H.Modules.Project.ProjectExtension.ShowEidtProject(H.Services.Project.IProjectService,H.Services.Project.IProjectItem,System.Action{H.Services.Message.Dialog.IDialog})">
+  ShowEidtProject(IProjectService, IProjectItem, Action&lt;IDialog&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowEidtProject(this IProjectService projectService, IProjectItem project, Action&lt;IDialog&gt; action = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
+    <dd></dd>
+    <dt><code>project</code> <a class="xref" href="H.Services.Project.IProjectItem.html">IProjectItem</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Modules_Project_ProjectExtension_ShowNewProject_" data-uid="H.Modules.Project.ProjectExtension.ShowNewProject*"></a>
+
+  <h3 id="H_Modules_Project_ProjectExtension_ShowNewProject_H_Services_Project_IProjectService_System_Action_H_Services_Message_Dialog_IDialog__System_String_" data-uid="H.Modules.Project.ProjectExtension.ShowNewProject(H.Services.Project.IProjectService,System.Action{H.Services.Message.Dialog.IDialog},System.String)">
+  ShowNewProject(IProjectService, Action&lt;IDialog&gt;, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowNewProject(this IProjectService projectService, Action&lt;IDialog&gt; action = null, string defalultName = &quot;项目&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>defalultName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Modules_Project_ProjectExtension_ShowOpenProject_" data-uid="H.Modules.Project.ProjectExtension.ShowOpenProject*"></a>
+
+  <h3 id="H_Modules_Project_ProjectExtension_ShowOpenProject_H_Services_Project_IProjectService_H_Services_Project_IProjectItem_" data-uid="H.Modules.Project.ProjectExtension.ShowOpenProject(H.Services.Project.IProjectService,H.Services.Project.IProjectItem)">
+  ShowOpenProject(IProjectService, IProjectItem)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowOpenProject(this IProjectService projectService, IProjectItem project)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
+    <dd></dd>
+    <dt><code>project</code> <a class="xref" href="H.Services.Project.IProjectItem.html">IProjectItem</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="H_Modules_Project_ProjectExtension_ShowProjectsDialog_" data-uid="H.Modules.Project.ProjectExtension.ShowProjectsDialog*"></a>
 
-  <h3 id="H_Modules_Project_ProjectExtension_ShowProjectsDialog_H_Services_Common_IProjectService_System_Action_H_Services_Common_IDialog__" data-uid="H.Modules.Project.ProjectExtension.ShowProjectsDialog(H.Services.Common.IProjectService,System.Action{H.Services.Common.IDialog})">
+  <h3 id="H_Modules_Project_ProjectExtension_ShowProjectsDialog_H_Services_Project_IProjectService_System_Action_H_Services_Message_Dialog_IDialog__" data-uid="H.Modules.Project.ProjectExtension.ShowProjectsDialog(H.Services.Project.IProjectService,System.Action{H.Services.Message.Dialog.IDialog})">
   ShowProjectsDialog(IProjectService, Action&lt;IDialog&gt;)
   
   </h3>
@@ -168,9 +362,9 @@ Class ProjectExtension
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>projectService</code> <a class="xref" href="H.Services.Common.IProjectService.html">IProjectService</a></dt>
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
     <dd></dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Common.IDialog.html">IDialog</a>&gt;</dt>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="H.Services.Message.Dialog.IDialog.html">IDialog</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -192,7 +386,7 @@ Class ProjectExtension
 
   <a id="H_Modules_Project_ProjectExtension_ShowProjectsOrNewDialog_" data-uid="H.Modules.Project.ProjectExtension.ShowProjectsOrNewDialog*"></a>
 
-  <h3 id="H_Modules_Project_ProjectExtension_ShowProjectsOrNewDialog_H_Services_Common_IProjectService_" data-uid="H.Modules.Project.ProjectExtension.ShowProjectsOrNewDialog(H.Services.Common.IProjectService)">
+  <h3 id="H_Modules_Project_ProjectExtension_ShowProjectsOrNewDialog_H_Services_Project_IProjectService_" data-uid="H.Modules.Project.ProjectExtension.ShowProjectsOrNewDialog(H.Services.Project.IProjectService)">
   ShowProjectsOrNewDialog(IProjectService)
   
   </h3>
@@ -206,7 +400,79 @@ Class ProjectExtension
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>projectService</code> <a class="xref" href="H.Services.Common.IProjectService.html">IProjectService</a></dt>
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Modules_Project_ProjectExtension_ShowSaveProject_" data-uid="H.Modules.Project.ProjectExtension.ShowSaveProject*"></a>
+
+  <h3 id="H_Modules_Project_ProjectExtension_ShowSaveProject_H_Services_Project_IProjectService_" data-uid="H.Modules.Project.ProjectExtension.ShowSaveProject(H.Services.Project.IProjectService)">
+  ShowSaveProject(IProjectService)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowSaveProject(this IProjectService projectService)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="H_Modules_Project_ProjectExtension_ShowSaveProjects_" data-uid="H.Modules.Project.ProjectExtension.ShowSaveProjects*"></a>
+
+  <h3 id="H_Modules_Project_ProjectExtension_ShowSaveProjects_H_Services_Project_IProjectService_" data-uid="H.Modules.Project.ProjectExtension.ShowSaveProjects(H.Services.Project.IProjectService)">
+  ShowSaveProjects(IProjectService)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool?&gt; ShowSaveProjects(this IProjectService projectService)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectService</code> <a class="xref" href="H.Services.Project.IProjectService.html">IProjectService</a></dt>
     <dd></dd>
   </dl>
 

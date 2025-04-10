@@ -1,14 +1,214 @@
 ### YamlMime:TableOfContent
 items:
-- uid: BezierCurveSample.View.Utils
-  name: BezierCurveSample.View.Utils
+- uid: H.ApplicationBases.Default
+  name: H.ApplicationBases.Default
   type: Namespace
   items:
-  - uid: BezierCurveSample.View.Utils.BeizerExtension
-    name: BeizerExtension
+  - uid: H.ApplicationBases.Default.DefaultApplicationBase
+    name: DefaultApplicationBase
     type: Class
-  - uid: BezierCurveSample.View.Utils.BeizerExtension.BeizerCurveSegment
-    name: BeizerExtension.BeizerCurveSegment
+  - uid: H.ApplicationBases.Default.DefaultApplicationOptions
+    name: DefaultApplicationOptions
+    type: Class
+  - uid: H.ApplicationBases.Default.IDefaultApplicationOptions
+    name: IDefaultApplicationOptions
+    type: Interface
+- uid: H.ApplicationBases.Identify
+  name: H.ApplicationBases.Identify
+  type: Namespace
+  items:
+  - uid: H.ApplicationBases.Identify.IdentifyApplicationBase
+    name: IdentifyApplicationBase
+    type: Class
+- uid: H.ApplicationBases.Messages
+  name: H.ApplicationBases.Messages
+  type: Namespace
+  items:
+  - uid: H.ApplicationBases.Messages.MessageApplicationBase
+    name: MessageApplicationBase
+    type: Class
+- uid: H.ApplicationBases.Module
+  name: H.ApplicationBases.Module
+  type: Namespace
+  items:
+  - uid: H.ApplicationBases.Module.DefaultModuleOptions
+    name: DefaultModuleOptions
+    type: Class
+  - uid: H.ApplicationBases.Module.IDefaultModuleOptions
+    name: IDefaultModuleOptions
+    type: Interface
+- uid: H.ApplicationBases.Modules
+  name: H.ApplicationBases.Modules
+  type: Namespace
+  items:
+  - uid: H.ApplicationBases.Modules.ModulesApplicationBase
+    name: ModulesApplicationBase
+    type: Class
+- uid: H.ApplicationBases.Themes
+  name: H.ApplicationBases.Themes
+  type: Namespace
+  items:
+  - uid: H.ApplicationBases.Themes.DefaultThemeOptions
+    name: DefaultThemeOptions
+    type: Class
+  - uid: H.ApplicationBases.Themes.IDefaultThemeOptions
+    name: IDefaultThemeOptions
+    type: Interface
+  - uid: H.ApplicationBases.Themes.ThemesApplicationBase
+    name: ThemesApplicationBase
+    type: Class
+- uid: H.Common
+  name: H.Common
+  type: Namespace
+  items:
+  - uid: H.Common.BindingProxy
+    name: BindingProxy
+    type: Class
+  - uid: H.Common.LazyInstance`1
+    name: LazyInstance<T>
+    type: Class
+  - uid: H.Common.Stopwatchable
+    name: Stopwatchable
+    type: Class
+- uid: H.Common.Attributes
+  name: H.Common.Attributes
+  type: Namespace
+  items:
+  - uid: H.Common.Attributes.IDAttribute
+    name: IDAttribute
+    type: Class
+  - uid: H.Common.Attributes.IconAttribute
+    name: IconAttribute
+    type: Class
+- uid: H.Common.Commands
+  name: H.Common.Commands
+  type: Namespace
+  items:
+  - uid: H.Common.Commands.AsyncMarkupCommandBase
+    name: AsyncMarkupCommandBase
+    type: Class
+  - uid: H.Common.Commands.DisplayMarkupCommandBase
+    name: DisplayMarkupCommandBase
+    type: Class
+  - uid: H.Common.Commands.MarkupCommandBase
+    name: MarkupCommandBase
+    type: Class
+- uid: H.Common.Interfaces
+  name: H.Common.Interfaces
+  type: Namespace
+  items:
+  - uid: H.Common.Interfaces.IClearable
+    name: IClearable
+    type: Interface
+  - uid: H.Common.Interfaces.IDable
+    name: IDable
+    type: Interface
+  - uid: H.Common.Interfaces.IDataSource`1
+    name: IDataSource<T>
+    type: Interface
+  - uid: H.Common.Interfaces.IDefaultable
+    name: IDefaultable
+    type: Interface
+  - uid: H.Common.Interfaces.IDescriptionable
+    name: IDescriptionable
+    type: Interface
+  - uid: H.Common.Interfaces.IDesignPresenterBase
+    name: IDesignPresenterBase
+    type: Interface
+  - uid: H.Common.Interfaces.IDesignable
+    name: IDesignable
+    type: Interface
+  - uid: H.Common.Interfaces.IGroupable
+    name: IGroupable
+    type: Interface
+  - uid: H.Common.Interfaces.IIconable
+    name: IIconable
+    type: Interface
+  - uid: H.Common.Interfaces.ILayoutable
+    name: ILayoutable
+    type: Interface
+  - uid: H.Common.Interfaces.ILoadable
+    name: ILoadable
+    type: Interface
+  - uid: H.Common.Interfaces.ILoginedSplashLoad
+    name: ILoginedSplashLoad
+    type: Interface
+  - uid: H.Common.Interfaces.IMessageable
+    name: IMessageable
+    type: Interface
+  - uid: H.Common.Interfaces.INameable
+    name: INameable
+    type: Interface
+  - uid: H.Common.Interfaces.IOrderable
+    name: IOrderable
+    type: Interface
+  - uid: H.Common.Interfaces.ISaveable
+    name: ISaveable
+    type: Interface
+  - uid: H.Common.Interfaces.ISearchable
+    name: ISearchable
+    type: Interface
+  - uid: H.Common.Interfaces.ISelectable
+    name: ISelectable
+    type: Interface
+  - uid: H.Common.Interfaces.ISplashLoad
+    name: ISplashLoad
+    type: Interface
+  - uid: H.Common.Interfaces.ISplashSave
+    name: ISplashSave
+    type: Interface
+  - uid: H.Common.Interfaces.IStopwatchable
+    name: IStopwatchable
+    type: Interface
+  - uid: H.Common.Interfaces.ITextable
+    name: ITextable
+    type: Interface
+  - uid: H.Common.Interfaces.ITitleable
+    name: ITitleable
+    type: Interface
+  - uid: H.Common.Interfaces.IZoombox
+    name: IZoombox
+    type: Interface
+  - uid: H.Common.Interfaces.LayoutableExtension
+    name: LayoutableExtension
+    type: Class
+- uid: H.Common.Interfaces.Where
+  name: H.Common.Interfaces.Where
+  type: Namespace
+  items:
+  - uid: H.Common.Interfaces.Where.IDisplayFilter
+    name: IDisplayFilter
+    type: Interface
+  - uid: H.Common.Interfaces.Where.IDisplayable
+    name: IDisplayable
+    type: Interface
+  - uid: H.Common.Interfaces.Where.IFilterable
+    name: IFilterable
+    type: Interface
+  - uid: H.Common.Interfaces.Where.IOrderWhereable
+    name: IOrderWhereable
+    type: Interface
+  - uid: H.Common.Interfaces.Where.IWhereable
+    name: IWhereable
+    type: Interface
+- uid: H.Common.Transitionable
+  name: H.Common.Transitionable
+  type: Namespace
+  items:
+  - uid: H.Common.Transitionable.ITransitionHostable
+    name: ITransitionHostable
+    type: Interface
+  - uid: H.Common.Transitionable.ITransitionable
+    name: ITransitionable
+    type: Interface
+  - uid: H.Common.Transitionable.IsHitTestVisibleDisposable
+    name: IsHitTestVisibleDisposable
+    type: Class
+  - uid: H.Common.Transitionable.RenderTransformDisposable
+    name: RenderTransformDisposable
+    type: Class
+  - uid: H.Common.Transitionable.TransitionHostableExtensions
+    name: TransitionHostableExtensions
     type: Class
 - uid: H.Controls.Adorner
   name: H.Controls.Adorner
@@ -17,31 +217,35 @@ items:
   - uid: H.Controls.Adorner.AdornerSetting
     name: AdornerSetting
     type: Class
-  - uid: H.Controls.Adorner.BorderAdorner
+  - uid: H.Controls.Adorner.Extention
+    name: Extention
+    type: Class
+- uid: H.Controls.Adorner.Adorner
+  name: H.Controls.Adorner.Adorner
+  type: Namespace
+  items:
+  - uid: H.Controls.Adorner.Adorner.BorderAdorner
     name: BorderAdorner
     type: Class
-  - uid: H.Controls.Adorner.ErrorAdorner
+  - uid: H.Controls.Adorner.Adorner.ErrorAdorner
     name: ErrorAdorner
     type: Class
-  - uid: H.Controls.Adorner.GridLineAdorner
+  - uid: H.Controls.Adorner.Adorner.GridLineAdorner
     name: GridLineAdorner
     type: Class
-  - uid: H.Controls.Adorner.IDynimacAdorner
+  - uid: H.Controls.Adorner.Adorner.IDynimacAdorner
     name: IDynimacAdorner
     type: Interface
-  - uid: H.Controls.Adorner.LineAdorner
+  - uid: H.Controls.Adorner.Adorner.LineAdorner
     name: LineAdorner
     type: Class
-  - uid: H.Controls.Adorner.OverAdorner
+  - uid: H.Controls.Adorner.Adorner.OverAdorner
     name: OverAdorner
     type: Class
-  - uid: H.Controls.Adorner.PresenterAdorner
+  - uid: H.Controls.Adorner.Adorner.PresenterAdorner
     name: PresenterAdorner
     type: Class
-  - uid: H.Controls.Adorner.ResizeAdorner
-    name: ResizeAdorner
-    type: Class
-  - uid: H.Controls.Adorner.SelectedAdorner
+  - uid: H.Controls.Adorner.Adorner.SelectedAdorner
     name: SelectedAdorner
     type: Class
 - uid: H.Controls.Adorner.Adorner.Base
@@ -60,6 +264,9 @@ items:
   items:
   - uid: H.Controls.Adorner.Adorner.ControlTemplateAdorners.ControlTemplateAdorner
     name: ControlTemplateAdorner
+    type: Class
+  - uid: H.Controls.Adorner.Adorner.ControlTemplateAdorners.ResizeAdorner
+    name: ResizeAdorner
     type: Class
   - uid: H.Controls.Adorner.Adorner.ControlTemplateAdorners.SelectedControlTemplateAdorner
     name: SelectedControlTemplateAdorner
@@ -1239,17 +1446,14 @@ items:
   - uid: H.Controls.Diagram.Presenters.OpenCV.MoviePath
     name: MoviePath
     type: Class
-  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVDetector
-    name: OpenCVDetector
-    type: Class
-  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVDiagramData
-    name: OpenCVDiagramData
+  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVImageDiagramData
+    name: OpenCVImageDiagramData
     type: Class
   - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVImages
     name: OpenCVImages
     type: Class
-  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVVideo
-    name: OpenCVVideo
+  - uid: H.Controls.Diagram.Presenters.OpenCV.OpenCVVideoDiagramData
+    name: OpenCVVideoDiagramData
     type: Class
   - uid: H.Controls.Diagram.Presenters.OpenCV.OpenvCVExtension
     name: OpenvCVExtension
@@ -1303,11 +1507,17 @@ items:
   - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IOtherOpenCVNodeData
     name: IOtherOpenCVNodeData
     type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathable
+    name: ISrcFilePathable
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcFilePathableStartNodeData
+    name: ISrcFilePathableStartNodeData
+    type: Interface
   - uid: H.Controls.Diagram.Presenters.OpenCV.Base.ISrcImageNodeData
     name: ISrcImageNodeData
     type: Interface
-  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoCaptureImageImportNodeData
-    name: IVideoCaptureImageImportNodeData
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IVideoNodeData
+    name: IVideoNodeData
     type: Interface
   - uid: H.Controls.Diagram.Presenters.OpenCV.Base.IYolovOpenCVNodeData
     name: IYolovOpenCVNodeData
@@ -1345,8 +1555,8 @@ items:
   - uid: H.Controls.Diagram.Presenters.OpenCV.Base.SrcImageNodeDataBase
     name: SrcImageNodeDataBase
     type: Class
-  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureImageImportNodeDataBase
-    name: VideoCaptureImageImportNodeDataBase
+  - uid: H.Controls.Diagram.Presenters.OpenCV.Base.VideoCaptureSrcNodeDataBase
+    name: VideoCaptureSrcNodeDataBase
     type: Class
   - uid: H.Controls.Diagram.Presenters.OpenCV.Base.YolovOpenCVNodeDataBase
     name: YolovOpenCVNodeDataBase
@@ -1376,6 +1586,12 @@ items:
   - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IBasicDataGroup
     name: IBasicDataGroup
     type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IImageDataGroup
+    name: IImageDataGroup
+    type: Interface
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IVideoDataGroup
+    name: IVideoDataGroup
+    type: Interface
   - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.IfConditionDataGroup
     name: IfConditionDataGroup
     type: Class
@@ -1393,6 +1609,9 @@ items:
     type: Class
   - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoCaptureDataGroup
     name: VideoCaptureDataGroup
+    type: Class
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.VideoDataGroupBase
+    name: VideoDataGroupBase
     type: Class
   - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDataGroups.YolovCaptureDataGroup
     name: YolovCaptureDataGroup
@@ -1571,8 +1790,8 @@ items:
   - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.Match
     name: Match
     type: Class
-  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.OpenCVImageNodeData
-    name: OpenCVImageNodeData
+  - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.OpenCVSrcImageNodeData
+    name: OpenCVSrcImageNodeData
     type: Class
   - uid: H.Controls.Diagram.Presenters.OpenCV.NodeDatas.Image.PixelThresholdIfCondition
     name: PixelThresholdIfCondition
@@ -2180,6 +2399,9 @@ items:
   - uid: H.Controls.FavoriteBox.IFavoriteItem
     name: IFavoriteItem
     type: Interface
+  - uid: H.Controls.FavoriteBox.IFavoriteOptions
+    name: IFavoriteOptions
+    type: Interface
   - uid: H.Controls.FavoriteBox.IFavoriteService
     name: IFavoriteService
     type: Interface
@@ -2369,35 +2591,8 @@ items:
   name: H.Controls.Form
   type: Namespace
   items:
-  - uid: H.Controls.Form.BindingAttribute
-    name: BindingAttribute
-    type: Class
-  - uid: H.Controls.Form.BindingVisiblableMethodNameAttribute
-    name: BindingVisiblableMethodNameAttribute
-    type: Class
-  - uid: H.Controls.Form.BindingVisiblablePropertyItemBase
-    name: BindingVisiblablePropertyItemBase
-    type: Class
-  - uid: H.Controls.Form.BoolNullablePropertyItem
-    name: BoolNullablePropertyItem
-    type: Class
-  - uid: H.Controls.Form.BoolPropertyItem
-    name: BoolPropertyItem
-    type: Class
-  - uid: H.Controls.Form.CommandPropertyItem
-    name: CommandPropertyItem
-    type: Class
   - uid: H.Controls.Form.ControlTypeConverterModel
     name: ControlTypeConverterModel
-    type: Class
-  - uid: H.Controls.Form.DateTimePropertyItem
-    name: DateTimePropertyItem
-    type: Class
-  - uid: H.Controls.Form.DictionaryPropertyViewItem
-    name: DictionaryPropertyViewItem
-    type: Class
-  - uid: H.Controls.Form.EnumPropertyItem
-    name: EnumPropertyItem
     type: Class
   - uid: H.Controls.Form.Form
     name: Form
@@ -2405,50 +2600,8 @@ items:
   - uid: H.Controls.Form.FormPresenter
     name: FormPresenter
     type: Class
-  - uid: H.Controls.Form.IBindingVisibleable
-    name: IBindingVisibleable
-    type: Interface
-  - uid: H.Controls.Form.IPropertyItem
-    name: IPropertyItem
-    type: Interface
-  - uid: H.Controls.Form.IPropertyValueChanged
-    name: IPropertyValueChanged
-    type: Interface
-  - uid: H.Controls.Form.IPropertyValueChanged`1
-    name: IPropertyValueChanged<PropertyType>
-    type: Interface
-  - uid: H.Controls.Form.IPropertyViewItem
-    name: IPropertyViewItem
-    type: Interface
-  - uid: H.Controls.Form.IRefreshOnValueChanged
-    name: IRefreshOnValueChanged
-    type: Interface
   - uid: H.Controls.Form.ItemsFormPresenter
     name: ItemsFormPresenter
-    type: Class
-  - uid: H.Controls.Form.ItemsSourcePropertyItem`1
-    name: ItemsSourcePropertyItem<T>
-    type: Class
-  - uid: H.Controls.Form.NotifyMethodNameAttribute
-    name: NotifyMethodNameAttribute
-    type: Class
-  - uid: H.Controls.Form.ObjectPropertyItem`1
-    name: ObjectPropertyItem<T>
-    type: Class
-  - uid: H.Controls.Form.PresenterPropertyItem
-    name: PresenterPropertyItem
-    type: Class
-  - uid: H.Controls.Form.PropertyAttribute
-    name: PropertyAttribute
-    type: Class
-  - uid: H.Controls.Form.PropertyInfoExtention
-    name: PropertyInfoExtention
-    type: Class
-  - uid: H.Controls.Form.PropertyItemAttribute
-    name: PropertyItemAttribute
-    type: Class
-  - uid: H.Controls.Form.RefreshOnValueChangedAttribute
-    name: RefreshOnValueChangedAttribute
     type: Class
   - uid: H.Controls.Form.StaticForm
     name: StaticForm
@@ -2456,39 +2609,42 @@ items:
   - uid: H.Controls.Form.StaticFormPresenter
     name: StaticFormPresenter
     type: Class
-  - uid: H.Controls.Form.StringHost
-    name: StringHost
-    type: Class
   - uid: H.Controls.Form.TabFormPresenter
     name: TabFormPresenter
     type: Class
   - uid: H.Controls.Form.TestType
     name: TestType
     type: Enum
-  - uid: H.Controls.Form.TextBoxAttribute
-    name: TextBoxAttribute
-    type: Class
-  - uid: H.Controls.Form.TextPropertyItem
-    name: TextPropertyItem
-    type: Class
-  - uid: H.Controls.Form.TextPropertyViewItem
-    name: TextPropertyViewItem
-    type: Class
   - uid: H.Controls.Form.TypeCTestModel
     name: TypeCTestModel
     type: Class
-  - uid: H.Controls.Form.UnitAttribute
-    name: UnitAttribute
-    type: Class
-- uid: H.Controls.Form.Base
-  name: H.Controls.Form.Base
+- uid: H.Controls.Form.Attributes
+  name: H.Controls.Form.Attributes
   type: Namespace
   items:
-  - uid: H.Controls.Form.Base.IValueChangeable
-    name: IValueChangeable
-    type: Interface
-  - uid: H.Controls.Form.Base.ObjectPropertyItemBase
-    name: ObjectPropertyItemBase
+  - uid: H.Controls.Form.Attributes.BindingAttribute
+    name: BindingAttribute
+    type: Class
+  - uid: H.Controls.Form.Attributes.BindingVisiblableMethodNameAttribute
+    name: BindingVisiblableMethodNameAttribute
+    type: Class
+  - uid: H.Controls.Form.Attributes.NotifyMethodNameAttribute
+    name: NotifyMethodNameAttribute
+    type: Class
+  - uid: H.Controls.Form.Attributes.PropertyAttribute
+    name: PropertyAttribute
+    type: Class
+  - uid: H.Controls.Form.Attributes.PropertyItemAttribute
+    name: PropertyItemAttribute
+    type: Class
+  - uid: H.Controls.Form.Attributes.RefreshOnValueChangedAttribute
+    name: RefreshOnValueChangedAttribute
+    type: Class
+  - uid: H.Controls.Form.Attributes.TextBoxAttribute
+    name: TextBoxAttribute
+    type: Class
+  - uid: H.Controls.Form.Attributes.UnitAttribute
+    name: UnitAttribute
     type: Class
 - uid: H.Controls.Form.PropertyItem
   name: H.Controls.Form.PropertyItem
@@ -2505,12 +2661,6 @@ items:
     type: Class
   - uid: H.Controls.Form.PropertyItem.EnumerablePropertyItemDemoModel
     name: EnumerablePropertyItemDemoModel
-    type: Class
-  - uid: H.Controls.Form.PropertyItem.ExpanderFormPropertyItem
-    name: ExpanderFormPropertyItem
-    type: Class
-  - uid: H.Controls.Form.PropertyItem.FormPropertyItem
-    name: FormPropertyItem
     type: Class
   - uid: H.Controls.Form.PropertyItem.FormPropertyItemDemoModel
     name: FormPropertyItemDemoModel
@@ -2634,6 +2784,9 @@ items:
   - uid: H.Controls.Form.PropertyItem.TextPropertyItems.DeleteSystemPathTextPropertyItem
     name: DeleteSystemPathTextPropertyItem
     type: Class
+  - uid: H.Controls.Form.PropertyItem.TextPropertyItems.HyperlinkPropertyItem
+    name: HyperlinkPropertyItem
+    type: Class
   - uid: H.Controls.Form.PropertyItem.TextPropertyItems.OpenDeleteSystemPathTextPropertyItem
     name: OpenDeleteSystemPathTextPropertyItem
     type: Class
@@ -2652,6 +2805,90 @@ items:
   items:
   - uid: H.Controls.Form.PropertyItem.TextPropertyItems.Base.CommandsTextPropertyItemBase
     name: CommandsTextPropertyItemBase
+    type: Class
+- uid: H.Controls.Form.PropertyItems
+  name: H.Controls.Form.PropertyItems
+  type: Namespace
+  items:
+  - uid: H.Controls.Form.PropertyItems.BoolNullablePropertyItem
+    name: BoolNullablePropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.BoolPropertyItem
+    name: BoolPropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.CommandPropertyItem
+    name: CommandPropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.DateTimePropertyItem
+    name: DateTimePropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.DictionaryPropertyViewItem
+    name: DictionaryPropertyViewItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.EnumPropertyItem
+    name: EnumPropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.ExpanderFormPropertyItem
+    name: ExpanderFormPropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.FormPropertyItem
+    name: FormPropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.PresenterPropertyItem
+    name: PresenterPropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.TextPropertyItem
+    name: TextPropertyItem
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.TextPropertyViewItem
+    name: TextPropertyViewItem
+    type: Class
+- uid: H.Controls.Form.PropertyItems.Base
+  name: H.Controls.Form.PropertyItems.Base
+  type: Namespace
+  items:
+  - uid: H.Controls.Form.PropertyItems.Base.BindingVisiblablePropertyItemBase
+    name: BindingVisiblablePropertyItemBase
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.Base.IBindingVisibleable
+    name: IBindingVisibleable
+    type: Interface
+  - uid: H.Controls.Form.PropertyItems.Base.IPropertyItem
+    name: IPropertyItem
+    type: Interface
+  - uid: H.Controls.Form.PropertyItems.Base.IPropertyValueChanged
+    name: IPropertyValueChanged
+    type: Interface
+  - uid: H.Controls.Form.PropertyItems.Base.IPropertyValueChanged`1
+    name: IPropertyValueChanged<PropertyType>
+    type: Interface
+  - uid: H.Controls.Form.PropertyItems.Base.IPropertyViewItem
+    name: IPropertyViewItem
+    type: Interface
+  - uid: H.Controls.Form.PropertyItems.Base.IRefreshOnValueChanged
+    name: IRefreshOnValueChanged
+    type: Interface
+  - uid: H.Controls.Form.PropertyItems.Base.IValueChangeable
+    name: IValueChangeable
+    type: Interface
+  - uid: H.Controls.Form.PropertyItems.Base.ItemsSourcePropertyItem`1
+    name: ItemsSourcePropertyItem<T>
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.Base.ObjectPropertyItemBase
+    name: ObjectPropertyItemBase
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.Base.ObjectPropertyItem`1
+    name: ObjectPropertyItem<T>
+    type: Class
+  - uid: H.Controls.Form.PropertyItems.Base.StringHost
+    name: StringHost
+    type: Class
+- uid: H.Controls.Form.Provider
+  name: H.Controls.Form.Provider
+  type: Namespace
+  items:
+  - uid: H.Controls.Form.Provider.PropertyInfoExtention
+    name: PropertyInfoExtention
     type: Class
 - uid: H.Controls.GridSplitterBox
   name: H.Controls.GridSplitterBox
@@ -3616,6 +3853,9 @@ items:
   - uid: H.Controls.TagBox.ITag
     name: ITag
     type: Interface
+  - uid: H.Controls.TagBox.ITagOptions
+    name: ITagOptions
+    type: Interface
   - uid: H.Controls.TagBox.ITagService
     name: ITagService
     type: Interface
@@ -3936,6 +4176,16 @@ items:
   - uid: H.Extensions.Animations.TranslateTransitionable
     name: TranslateTransitionable
     type: Class
+- uid: H.Extensions.AppPath
+  name: H.Extensions.AppPath
+  type: Namespace
+  items:
+  - uid: H.Extensions.AppPath.AppPathServce
+    name: AppPathServce
+    type: Class
+  - uid: H.Extensions.AppPath.ClearCacheDataCommand
+    name: ClearCacheDataCommand
+    type: Class
 - uid: H.Extensions.ApplicationBase
   name: H.Extensions.ApplicationBase
   type: Namespace
@@ -3945,6 +4195,12 @@ items:
     type: Class
   - uid: H.Extensions.ApplicationBase.ApplicationBuilder
     name: ApplicationBuilder
+    type: Class
+  - uid: H.Extensions.ApplicationBase.CacheActionOptionsBase
+    name: CacheActionOptionsBase
+    type: Class
+  - uid: H.Extensions.ApplicationBase.IocSaveAllCommand
+    name: IocSaveAllCommand
     type: Class
 - uid: H.Extensions.Attach
   name: H.Extensions.Attach
@@ -3960,143 +4216,191 @@ items:
   name: H.Extensions.Behvaiors
   type: Namespace
   items:
-  - uid: H.Extensions.Behvaiors.AddItemButtonBehaviorBase
-    name: AddItemButtonBehaviorBase
-    type: Class
-  - uid: H.Extensions.Behvaiors.AdornerBehaviorBase
-    name: AdornerBehaviorBase
-    type: Class
   - uid: H.Extensions.Behvaiors.Behaviors
     name: Behaviors
     type: Class
   - uid: H.Extensions.Behvaiors.BehvaiorAttach
     name: BehvaiorAttach
     type: Class
-  - uid: H.Extensions.Behvaiors.ButtonAddItemBehavior
-    name: ButtonAddItemBehavior
+- uid: H.Extensions.Behvaiors.Adorners
+  name: H.Extensions.Behvaiors.Adorners
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.Adorners.AdornerBehaviorBase
+    name: AdornerBehaviorBase
     type: Class
-  - uid: H.Extensions.Behvaiors.ButtonBehaviorBase
-    name: ButtonBehaviorBase
-    type: Class
-  - uid: H.Extensions.Behvaiors.ButtonClearItemBehavior
-    name: ButtonClearItemBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.ButtonInsertItemBehavior
-    name: ButtonInsertItemBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.ButtonRemoveCheckedItemBehavior
-    name: ButtonRemoveCheckedItemBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.ButtonRemoveItemBehavior
-    name: ButtonRemoveItemBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.CallMethodActionEx
-    name: CallMethodActionEx
-    type: Class
-  - uid: H.Extensions.Behvaiors.ContextMenuDisplayBehavior
-    name: ContextMenuDisplayBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.DataGridAutoColumnBehavior
-    name: DataGridAutoColumnBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.DataGridColumnAttribute
-    name: DataGridColumnAttribute
-    type: Class
-  - uid: H.Extensions.Behvaiors.DragOverHitTestAdornerBehavior
+  - uid: H.Extensions.Behvaiors.Adorners.DragOverHitTestAdornerBehavior
     name: DragOverHitTestAdornerBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.ElementDragStateBehavior
-    name: ElementDragStateBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.HitTestAdornerBehavior
+  - uid: H.Extensions.Behvaiors.Adorners.HitTestAdornerBehavior
     name: HitTestAdornerBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.IDataGridColumn
-    name: IDataGridColumn
-    type: Interface
-  - uid: H.Extensions.Behvaiors.IGetDragAdorner
+  - uid: H.Extensions.Behvaiors.Adorners.IGetDragAdorner
     name: IGetDragAdorner
     type: Interface
-  - uid: H.Extensions.Behvaiors.IGetDropAdorner
+  - uid: H.Extensions.Behvaiors.Adorners.IGetDropAdorner
     name: IGetDropAdorner
     type: Interface
-  - uid: H.Extensions.Behvaiors.IHitTestElementDrag
+  - uid: H.Extensions.Behvaiors.Adorners.IHitTestElementDrag
     name: IHitTestElementDrag
     type: Interface
-  - uid: H.Extensions.Behvaiors.IHitTestElementDrop
+  - uid: H.Extensions.Behvaiors.Adorners.IHitTestElementDrop
     name: IHitTestElementDrop
     type: Interface
-  - uid: H.Extensions.Behvaiors.ItemsControlFilterBehavior
-    name: ItemsControlFilterBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.ItemsControlSearchTextBehavior
-    name: ItemsControlSearchTextBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.ListBoxBindingSelectedItemsBehavior
-    name: ListBoxBindingSelectedItemsBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.LoadedAdornerBehavior
+  - uid: H.Extensions.Behvaiors.Adorners.LoadedAdornerBehavior
     name: LoadedAdornerBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.MouseOverAdornerBehavior
+  - uid: H.Extensions.Behvaiors.Adorners.MouseOverAdornerBehavior
     name: MouseOverAdornerBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.MouseOverContextMenuBehavior
-    name: MouseOverContextMenuBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.MouseOverHitTestAdornerBehavior
+  - uid: H.Extensions.Behvaiors.Adorners.MouseOverHitTestAdornerBehavior
     name: MouseOverHitTestAdornerBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.MousePressClickTrigger
-    name: MousePressClickTrigger
-    type: Class
-  - uid: H.Extensions.Behvaiors.MousePressTrigger
-    name: MousePressTrigger
-    type: Class
-  - uid: H.Extensions.Behvaiors.MouseTrigger
-    name: MouseTrigger
-    type: Class
-  - uid: H.Extensions.Behvaiors.MouseTriggerMode
-    name: MouseTriggerMode
-    type: Enum
-  - uid: H.Extensions.Behvaiors.PasswordBindingBehavior
-    name: PasswordBindingBehavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.ScrollViewerBebavior
-    name: ScrollViewerBebavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.SelectedHitTestAdornerBehavior
+  - uid: H.Extensions.Behvaiors.Adorners.SelectedHitTestAdornerBehavior
     name: SelectedHitTestAdornerBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.TextBlockCountBehavior
-    name: TextBlockCountBehavior
+- uid: H.Extensions.Behvaiors.ContextMenus
+  name: H.Extensions.Behvaiors.ContextMenus
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.ContextMenus.ContextMenuDisplayBehavior
+    name: ContextMenuDisplayBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.TextBlockIndexOfBebavior
-    name: TextBlockIndexOfBebavior
+  - uid: H.Extensions.Behvaiors.ContextMenus.MouseOverContextMenuBehavior
+    name: MouseOverContextMenuBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.TextBoxEditOnDoubleClickBebavior
-    name: TextBoxEditOnDoubleClickBebavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.TextBoxUpdateSourceOnKeyDownBebavior
-    name: TextBoxUpdateSourceOnKeyDownBebavior
-    type: Class
-  - uid: H.Extensions.Behvaiors.ToggleButtonContextMenuBehavior
+  - uid: H.Extensions.Behvaiors.ContextMenus.ToggleButtonContextMenuBehavior
     name: ToggleButtonContextMenuBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.TreeViewItemContainSelectItemBehavior
+- uid: H.Extensions.Behvaiors.DataGrids
+  name: H.Extensions.Behvaiors.DataGrids
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.DataGrids.DataGridAutoColumnBehavior
+    name: DataGridAutoColumnBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.DataGrids.DataGridColumnAttribute
+    name: DataGridColumnAttribute
+    type: Class
+  - uid: H.Extensions.Behvaiors.DataGrids.IDataGridColumn
+    name: IDataGridColumn
+    type: Interface
+- uid: H.Extensions.Behvaiors.FrameworkElements
+  name: H.Extensions.Behvaiors.FrameworkElements
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.FrameworkElements.ElementDragStateBehavior
+    name: ElementDragStateBehavior
+    type: Class
+- uid: H.Extensions.Behvaiors.ItemsControls
+  name: H.Extensions.Behvaiors.ItemsControls
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.ItemsControls.AddItemButtonBehaviorBase
+    name: AddItemButtonBehaviorBase
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ButtonAddItemBehavior
+    name: ButtonAddItemBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ButtonBehaviorBase
+    name: ButtonBehaviorBase
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ButtonClearItemBehavior
+    name: ButtonClearItemBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ButtonInsertItemBehavior
+    name: ButtonInsertItemBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ButtonRemoveCheckedItemBehavior
+    name: ButtonRemoveCheckedItemBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ButtonRemoveItemBehavior
+    name: ButtonRemoveItemBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ItemsControlFilterBehavior
+    name: ItemsControlFilterBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ItemsControlSearchTextBehavior
+    name: ItemsControlSearchTextBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.ItemsControls.ListBoxBindingSelectedItemsBehavior
+    name: ListBoxBindingSelectedItemsBehavior
+    type: Class
+- uid: H.Extensions.Behvaiors.PasswordBoxs
+  name: H.Extensions.Behvaiors.PasswordBoxs
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.PasswordBoxs.PasswordBindingBehavior
+    name: PasswordBindingBehavior
+    type: Class
+- uid: H.Extensions.Behvaiors.ScrollViewers
+  name: H.Extensions.Behvaiors.ScrollViewers
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.ScrollViewers.ScrollViewerBebavior
+    name: ScrollViewerBebavior
+    type: Class
+- uid: H.Extensions.Behvaiors.TextBlocks
+  name: H.Extensions.Behvaiors.TextBlocks
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.TextBlocks.TextBlockCountBehavior
+    name: TextBlockCountBehavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.TextBlocks.TextBlockIndexOfBebavior
+    name: TextBlockIndexOfBebavior
+    type: Class
+- uid: H.Extensions.Behvaiors.TextBoxs
+  name: H.Extensions.Behvaiors.TextBoxs
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.TextBoxs.TextBoxEditOnDoubleClickBebavior
+    name: TextBoxEditOnDoubleClickBebavior
+    type: Class
+  - uid: H.Extensions.Behvaiors.TextBoxs.TextBoxUpdateSourceOnKeyDownBebavior
+    name: TextBoxUpdateSourceOnKeyDownBebavior
+    type: Class
+- uid: H.Extensions.Behvaiors.TreeViews
+  name: H.Extensions.Behvaiors.TreeViews
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.TreeViews.TreeViewItemContainSelectItemBehavior
     name: TreeViewItemContainSelectItemBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.TreeViewItemSetSelectedOnMouseDownBehavior
+  - uid: H.Extensions.Behvaiors.TreeViews.TreeViewItemSetSelectedOnMouseDownBehavior
     name: TreeViewItemSetSelectedOnMouseDownBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.TreeViewSelectNoneOnMouseDownBehavior
+  - uid: H.Extensions.Behvaiors.TreeViews.TreeViewSelectNoneOnMouseDownBehavior
     name: TreeViewSelectNoneOnMouseDownBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.TreeViewSelectedItemBindableBehavior
+  - uid: H.Extensions.Behvaiors.TreeViews.TreeViewSelectedItemBindableBehavior
     name: TreeViewSelectedItemBindableBehavior
     type: Class
-  - uid: H.Extensions.Behvaiors.TreeViewSelectedItemsBindableBehavior
+  - uid: H.Extensions.Behvaiors.TreeViews.TreeViewSelectedItemsBindableBehavior
     name: TreeViewSelectedItemsBindableBehavior
+    type: Class
+- uid: H.Extensions.Behvaiors.Triggers
+  name: H.Extensions.Behvaiors.Triggers
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.Triggers.MousePressClickTrigger
+    name: MousePressClickTrigger
+    type: Class
+  - uid: H.Extensions.Behvaiors.Triggers.MousePressTrigger
+    name: MousePressTrigger
+    type: Class
+  - uid: H.Extensions.Behvaiors.Triggers.MouseTrigger
+    name: MouseTrigger
+    type: Class
+  - uid: H.Extensions.Behvaiors.Triggers.MouseTriggerMode
+    name: MouseTriggerMode
+    type: Enum
+- uid: H.Extensions.Behvaiors.Triggers.Action
+  name: H.Extensions.Behvaiors.Triggers.Action
+  type: Namespace
+  items:
+  - uid: H.Extensions.Behvaiors.Triggers.Action.CallMethodActionEx
+    name: CallMethodActionEx
     type: Class
 - uid: H.Extensions.Color
   name: H.Extensions.Color
@@ -4172,46 +4476,54 @@ items:
   - uid: H.Extensions.Command.ProcessCommand
     name: ProcessCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerLineDownCommand
+- uid: H.Extensions.Command.ScrollViewers
+  name: H.Extensions.Command.ScrollViewers
+  type: Namespace
+  items:
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerLineDownCommand
     name: ScrollViewerLineDownCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerLineLeftCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerLineLeftCommand
     name: ScrollViewerLineLeftCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerLineRightCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerLineRightCommand
     name: ScrollViewerLineRightCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerLineUpCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerLineUpCommand
     name: ScrollViewerLineUpCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerPageDownCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerPageDownCommand
     name: ScrollViewerPageDownCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerPageLeftCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerPageLeftCommand
     name: ScrollViewerPageLeftCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerPageRightCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerPageRightCommand
     name: ScrollViewerPageRightCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerPageUpCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerPageUpCommand
     name: ScrollViewerPageUpCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerScrollToBottomCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerScrollToBottomCommand
     name: ScrollViewerScrollToBottomCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerScrollToCommandBase
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerScrollToCommandBase
     name: ScrollViewerScrollToCommandBase
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerScrollToEndCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerScrollToEndCommand
     name: ScrollViewerScrollToEndCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerScrollToHomeCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerScrollToHomeCommand
     name: ScrollViewerScrollToHomeCommand
     type: Class
-  - uid: H.Extensions.Command.ScrollViewerScrollToTopCommand
+  - uid: H.Extensions.Command.ScrollViewers.ScrollViewerScrollToTopCommand
     name: ScrollViewerScrollToTopCommand
     type: Class
-  - uid: H.Extensions.Command.TextBoxClearTextCommand
+- uid: H.Extensions.Command.TextBoxs
+  name: H.Extensions.Command.TextBoxs
+  type: Namespace
+  items:
+  - uid: H.Extensions.Command.TextBoxs.TextBoxClearTextCommand
     name: TextBoxClearTextCommand
     type: Class
 - uid: H.Extensions.Common
@@ -4227,17 +4539,53 @@ items:
   - uid: H.Extensions.Common.DirectoryEx
     name: DirectoryEx
     type: Class
+  - uid: H.Extensions.Common.DrawingContextExtension
+    name: DrawingContextExtension
+    type: Class
+  - uid: H.Extensions.Common.ElementExtention
+    name: ElementExtention
+    type: Class
   - uid: H.Extensions.Common.FileEx
     name: FileEx
     type: Class
   - uid: H.Extensions.Common.FileExtension
     name: FileExtension
     type: Class
-  - uid: H.Extensions.Common.IODialogExtension
-    name: IODialogExtension
+  - uid: H.Extensions.Common.GeometryExtension
+    name: GeometryExtension
+    type: Class
+  - uid: H.Extensions.Common.GridExtension
+    name: GridExtension
+    type: Class
+  - uid: H.Extensions.Common.ImageEx
+    name: ImageEx
+    type: Class
+  - uid: H.Extensions.Common.ImageExtention
+    name: ImageExtention
+    type: Class
+  - uid: H.Extensions.Common.ObjectExtension
+    name: ObjectExtension
+    type: Class
+  - uid: H.Extensions.Common.ObservableExtension
+    name: ObservableExtension
     type: Class
   - uid: H.Extensions.Common.PathExtension
     name: PathExtension
+    type: Class
+  - uid: H.Extensions.Common.RectExtension
+    name: RectExtension
+    type: Class
+  - uid: H.Extensions.Common.RectExtenstion
+    name: RectExtenstion
+    type: Class
+  - uid: H.Extensions.Common.RenderTargetBitmapExtensions
+    name: RenderTargetBitmapExtensions
+    type: Class
+  - uid: H.Extensions.Common.TreeViewExtension
+    name: TreeViewExtension
+    type: Class
+  - uid: H.Extensions.Common.TypeJsonConverter`1
+    name: TypeJsonConverter<T>
     type: Class
 - uid: H.Extensions.DataBase
   name: H.Extensions.DataBase
@@ -4270,21 +4618,46 @@ items:
   - uid: H.Extensions.DataBase.StringEntityBase
     name: StringEntityBase
     type: Class
+- uid: H.Extensions.DataBase.Repository
+  name: H.Extensions.DataBase.Repository
+  type: Namespace
+  items:
+  - uid: H.Extensions.DataBase.Repository.DateRepositoryBindable`1
+    name: DateRepositoryBindable<TEntity>
+    type: Class
+  - uid: H.Extensions.DataBase.Repository.IRepositoryBindable
+    name: IRepositoryBindable
+    type: Interface
+  - uid: H.Extensions.DataBase.Repository.IRepositoryBindableBase`1
+    name: IRepositoryBindableBase<TEntity>
+    type: Interface
+  - uid: H.Extensions.DataBase.Repository.IRepositoryBindable`1
+    name: IRepositoryBindable<TEntity>
+    type: Interface
+  - uid: H.Extensions.DataBase.Repository.ITreePath
+    name: ITreePath
+    type: Interface
+  - uid: H.Extensions.DataBase.Repository.ITreeRepositoryBindable`1
+    name: ITreeRepositoryBindable<TEntity>
+    type: Interface
+  - uid: H.Extensions.DataBase.Repository.RepositoryBindableBase
+    name: RepositoryBindableBase
+    type: Class
+  - uid: H.Extensions.DataBase.Repository.RepositoryBindableBase`2
+    name: RepositoryBindableBase<TViewModel, TEntity>
+    type: Class
+  - uid: H.Extensions.DataBase.Repository.RepositoryBindable`1
+    name: RepositoryBindable<TEntity>
+    type: Class
+  - uid: H.Extensions.DataBase.Repository.TreeRepositoryBindable`1
+    name: TreeRepositoryBindable<TEntity>
+    type: Class
 - uid: H.Extensions.Encryption
   name: H.Extensions.Encryption
   type: Namespace
   items:
-  - uid: H.Extensions.Encryption.AESExtension
-    name: AESExtension
-    type: Class
-  - uid: H.Extensions.Encryption.Base64Extension
-    name: Base64Extension
-    type: Class
   - uid: H.Extensions.Encryption.DESCryptService
     name: DESCryptService
-    type: Class
-  - uid: H.Extensions.Encryption.DESExtension
-    name: DESExtension
     type: Class
   - uid: H.Extensions.Encryption.DateTimeEncriyptoConverter
     name: DateTimeEncriyptoConverter
@@ -4295,10 +4668,23 @@ items:
   - uid: H.Extensions.Encryption.EncriyptoValueSerializer
     name: EncriyptoValueSerializer
     type: Class
-  - uid: H.Extensions.Encryption.MD5Extension
+- uid: H.Extensions.Encryption.String
+  name: H.Extensions.Encryption.String
+  type: Namespace
+  items:
+  - uid: H.Extensions.Encryption.String.AESExtension
+    name: AESExtension
+    type: Class
+  - uid: H.Extensions.Encryption.String.Base64Extension
+    name: Base64Extension
+    type: Class
+  - uid: H.Extensions.Encryption.String.DESExtension
+    name: DESExtension
+    type: Class
+  - uid: H.Extensions.Encryption.String.MD5Extension
     name: MD5Extension
     type: Class
-  - uid: H.Extensions.Encryption.SHA1Extension
+  - uid: H.Extensions.Encryption.String.SHA1Extension
     name: SHA1Extension
     type: Class
 - uid: H.Extensions.Excel
@@ -4318,6 +4704,9 @@ items:
   - uid: H.Extensions.FFMpeg.FFMpegService
     name: FFMpegService
     type: Class
+  - uid: H.Extensions.FFMpeg.IFFMpegOption
+    name: IFFMpegOption
+    type: Interface
   - uid: H.Extensions.FFMpeg.IFFMpegService
     name: IFFMpegService
     type: Interface
@@ -4337,6 +4726,9 @@ items:
   - uid: H.Extensions.FontIcon.GetIconSegoesExtension
     name: GetIconSegoesExtension
     type: Class
+  - uid: H.Extensions.FontIcon.IconFontFamilys
+    name: IconFontFamilys
+    type: Class
   - uid: H.Extensions.FontIcon.IconSegoe
     name: IconSegoe
     type: Class
@@ -4350,6 +4742,12 @@ items:
   name: H.Extensions.Geometry
   type: Namespace
   items:
+  - uid: H.Extensions.Geometry.BeizerExtension
+    name: BeizerExtension
+    type: Class
+  - uid: H.Extensions.Geometry.BeizerExtension.BeizerCurveSegment
+    name: BeizerExtension.BeizerCurveSegment
+    type: Class
   - uid: H.Extensions.Geometry.GemetrysSourceExtension
     name: GemetrysSourceExtension
     type: Class
@@ -4359,19 +4757,44 @@ items:
   - uid: H.Extensions.Geometry.Geometrys
     name: Geometrys
     type: Class
+- uid: H.Extensions.IocPresenter
+  name: H.Extensions.IocPresenter
+  type: Namespace
+  items:
+  - uid: H.Extensions.IocPresenter.IocDisplayBindableBase`2
+    name: IocDisplayBindableBase<T, Interface>
+    type: Class
+  - uid: H.Extensions.IocPresenter.IocLayoutPresenterBase`2
+    name: IocLayoutPresenterBase<T, Interface>
+    type: Class
+  - uid: H.Extensions.IocPresenter.IocTitlePresenterBase`2
+    name: IocTitlePresenterBase<T, Interface>
+    type: Class
 - uid: H.Extensions.Log4net
   name: H.Extensions.Log4net
   type: Namespace
   items:
+  - uid: H.Extensions.Log4net.ILog4netOptions
+    name: ILog4netOptions
+    type: Interface
+  - uid: H.Extensions.Log4net.Log4netOptions
+    name: Log4netOptions
+    type: Class
   - uid: H.Extensions.Log4net.Log4netService
     name: Log4netService
+    type: Class
+  - uid: H.Extensions.Log4net.ShowLog4netPathCommand
+    name: ShowLog4netPathCommand
     type: Class
 - uid: H.Extensions.Mail
   name: H.Extensions.Mail
   type: Namespace
   items:
-  - uid: H.Extensions.Mail.MailLogService
-    name: MailLogService
+  - uid: H.Extensions.Mail.ISmtpSendOptions
+    name: ISmtpSendOptions
+    type: Interface
+  - uid: H.Extensions.Mail.LogMailService
+    name: LogMailService
     type: Class
   - uid: H.Extensions.Mail.MailMessagePresenter
     name: MailMessagePresenter
@@ -4384,6 +4807,9 @@ items:
     type: Class
   - uid: H.Extensions.Mail.SmtpSendOptions
     name: SmtpSendOptions
+    type: Class
+  - uid: H.Extensions.Mail.SmtpSendOptions`1
+    name: SmtpSendOptions<T>
     type: Class
 - uid: H.Extensions.MarkupExtension
   name: H.Extensions.MarkupExtension
@@ -4480,6 +4906,9 @@ items:
   - uid: H.Extensions.NewtonsoftJson.EnumConverter
     name: EnumConverter
     type: Class
+  - uid: H.Extensions.NewtonsoftJson.INewtonsoftJsonOptions
+    name: INewtonsoftJsonOptions
+    type: Interface
   - uid: H.Extensions.NewtonsoftJson.NewtonsoftJsonMetaSettingService
     name: NewtonsoftJsonMetaSettingService
     type: Class
@@ -4517,6 +4946,19 @@ items:
   - uid: H.Extensions.NewtonsoftJson.Jsonable.NewtonsoftJsonableBase
     name: NewtonsoftJsonableBase
     type: Class
+- uid: H.Extensions.ObservableSource
+  name: H.Extensions.ObservableSource
+  type: Namespace
+  items:
+  - uid: H.Extensions.ObservableSource.IObservableSource
+    name: IObservableSource
+    type: Interface
+  - uid: H.Extensions.ObservableSource.IObservableSource`1
+    name: IObservableSource<T>
+    type: Interface
+  - uid: H.Extensions.ObservableSource.ObservableSource`1
+    name: ObservableSource<T>
+    type: Class
 - uid: H.Extensions.OpenFolderDialog
   name: H.Extensions.OpenFolderDialog
   type: Namespace
@@ -4528,16 +4970,16 @@ items:
   name: H.Extensions.Process
   type: Namespace
   items:
-  - uid: H.Extensions.Process.ProcessServoce
-    name: ProcessServoce
+  - uid: H.Extensions.Process.ProcessService
+    name: ProcessService
     type: Class
 - uid: H.Extensions.Revertible
   name: H.Extensions.Revertible
   type: Namespace
   items:
-  - uid: H.Extensions.Revertible.Log4netOptions
-    name: Log4netOptions
-    type: Class
+  - uid: H.Extensions.Revertible.IRevertibleOptions
+    name: IRevertibleOptions
+    type: Interface
   - uid: H.Extensions.Revertible.PropertyChangedRevertiblePrensenterBase
     name: PropertyChangedRevertiblePrensenterBase
     type: Class
@@ -4563,15 +5005,6 @@ items:
   name: H.Extensions.Setting
   type: Namespace
   items:
-  - uid: H.Extensions.Setting.CancelSettingDataCommand
-    name: CancelSettingDataCommand
-    type: Class
-  - uid: H.Extensions.Setting.ClearCacheDataCommand
-    name: ClearCacheDataCommand
-    type: Class
-  - uid: H.Extensions.Setting.ClearSettingDataCommand
-    name: ClearSettingDataCommand
-    type: Class
   - uid: H.Extensions.Setting.IocOptionInstance`1
     name: IocOptionInstance<Setting>
     type: Class
@@ -4587,27 +5020,15 @@ items:
   - uid: H.Extensions.Setting.Settable`1
     name: Settable<T>
     type: Class
-  - uid: H.Extensions.Setting.SumitSettingDataCommand
-    name: SumitSettingDataCommand
-    type: Class
 - uid: H.Extensions.StoryBoard
   name: H.Extensions.StoryBoard
   type: Namespace
   items:
-  - uid: H.Extensions.StoryBoard.CubicBezierEase
-    name: CubicBezierEase
-    type: Class
   - uid: H.Extensions.StoryBoard.DoubleStoryboard
     name: DoubleStoryboard
     type: Class
-  - uid: H.Extensions.StoryBoard.EasingFunctionFactroy
-    name: EasingFunctionFactroy
-    type: Class
-  - uid: H.Extensions.StoryBoard.PointEx
-    name: PointEx
-    type: Class
-  - uid: H.Extensions.StoryBoard.PowerEasingFunction
-    name: PowerEasingFunction
+  - uid: H.Extensions.StoryBoard.ElementExtention
+    name: ElementExtention
     type: Class
   - uid: H.Extensions.StoryBoard.StoryBoardKeys
     name: StoryBoardKeys
@@ -4626,6 +5047,22 @@ items:
     type: Class
   - uid: H.Extensions.StoryBoard.StoryboardSetting
     name: StoryboardSetting
+    type: Class
+- uid: H.Extensions.StoryBoard.EasingFunction
+  name: H.Extensions.StoryBoard.EasingFunction
+  type: Namespace
+  items:
+  - uid: H.Extensions.StoryBoard.EasingFunction.CubicBezierEase
+    name: CubicBezierEase
+    type: Class
+  - uid: H.Extensions.StoryBoard.EasingFunction.EasingFunctionFactroy
+    name: EasingFunctionFactroy
+    type: Class
+  - uid: H.Extensions.StoryBoard.EasingFunction.PointEx
+    name: PointEx
+    type: Class
+  - uid: H.Extensions.StoryBoard.EasingFunction.PowerEasingFunction
+    name: PowerEasingFunction
     type: Class
 - uid: H.Extensions.TextJsonable
   name: H.Extensions.TextJsonable
@@ -4649,6 +5086,9 @@ items:
   - uid: H.Extensions.TextJsonable.MyJsonBindable
     name: MyJsonBindable
     type: Class
+  - uid: H.Extensions.TextJsonable.TextJsonMetaSettingService
+    name: TextJsonMetaSettingService
+    type: Class
   - uid: H.Extensions.TextJsonable.TextJsonableBase
     name: TextJsonableBase
     type: Class
@@ -4671,20 +5111,24 @@ items:
   - uid: H.Extensions.Torrent.IocTorrentService
     name: IocTorrentService
     type: Class
-  - uid: H.Extensions.Torrent.Piece
-    name: Piece
-    type: Class
-  - uid: H.Extensions.Torrent.Sha1Hash
-    name: Sha1Hash
-    type: Class
-  - uid: H.Extensions.Torrent.TorrentFile
-    name: TorrentFile
-    type: Class
   - uid: H.Extensions.Torrent.TorrentInfo
     name: TorrentInfo
     type: Class
   - uid: H.Extensions.Torrent.TorrentService
     name: TorrentService
+    type: Class
+- uid: H.Extensions.Torrent.Provider
+  name: H.Extensions.Torrent.Provider
+  type: Namespace
+  items:
+  - uid: H.Extensions.Torrent.Provider.Piece
+    name: Piece
+    type: Class
+  - uid: H.Extensions.Torrent.Provider.Sha1Hash
+    name: Sha1Hash
+    type: Class
+  - uid: H.Extensions.Torrent.Provider.TorrentFile
+    name: TorrentFile
     type: Class
 - uid: H.Extensions.Tree
   name: H.Extensions.Tree
@@ -4746,6 +5190,9 @@ items:
   name: H.Extensions.TypeLicense
   type: Namespace
   items:
+  - uid: H.Extensions.TypeLicense.ITypeLicenseOptions
+    name: ITypeLicenseOptions
+    type: Interface
   - uid: H.Extensions.TypeLicense.ITypeLicenseService
     name: ITypeLicenseService
     type: Interface
@@ -5292,15 +5739,6 @@ items:
   name: H.Extensions.Validation
   type: Namespace
   items:
-  - uid: H.Extensions.Validation.RegularExpressionValidationRule
-    name: RegularExpressionValidationRule
-    type: Class
-  - uid: H.Extensions.Validation.RequiredValidationRule
-    name: RequiredValidationRule
-    type: Class
-  - uid: H.Extensions.Validation.TypeConverterValidationAttribute
-    name: TypeConverterValidationAttribute
-    type: Class
   - uid: H.Extensions.Validation.ValidationModelViewModel`1
     name: ValidationModelViewModel<T>
     type: Class
@@ -5313,31 +5751,33 @@ items:
   - uid: H.Extensions.Validation.ValidationProperty`1
     name: ValidationProperty<V>
     type: Class
-  - uid: H.Extensions.Validation.ValidationRuleBase
-    name: ValidationRuleBase
-    type: Class
   - uid: H.Extensions.Validation.ValidationSelectedViewModel`1
     name: ValidationSelectedViewModel<T>
+    type: Class
+- uid: H.Extensions.Validation.Attributes
+  name: H.Extensions.Validation.Attributes
+  type: Namespace
+  items:
+  - uid: H.Extensions.Validation.Attributes.TypeConverterValidationAttribute
+    name: TypeConverterValidationAttribute
+    type: Class
+- uid: H.Extensions.Validation.ValidationRules
+  name: H.Extensions.Validation.ValidationRules
+  type: Namespace
+  items:
+  - uid: H.Extensions.Validation.ValidationRules.RegularExpressionValidationRule
+    name: RegularExpressionValidationRule
+    type: Class
+  - uid: H.Extensions.Validation.ValidationRules.RequiredValidationRule
+    name: RequiredValidationRule
+    type: Class
+  - uid: H.Extensions.Validation.ValidationRules.ValidationRuleBase
+    name: ValidationRuleBase
     type: Class
 - uid: H.Extensions.ValueConverter
   name: H.Extensions.ValueConverter
   type: Namespace
   items:
-  - uid: H.Extensions.ValueConverter.BackgroundToForegroundConverter
-    name: BackgroundToForegroundConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.BoolAndConverter
-    name: BoolAndConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.BoolOrConverter
-    name: BoolOrConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.BrushRoundConverter
-    name: BrushRoundConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.ColorToBrushConverter
-    name: ColorToBrushConverter
-    type: Class
   - uid: H.Extensions.ValueConverter.Converter
     name: Converter
     type: Class
@@ -5347,68 +5787,11 @@ items:
   - uid: H.Extensions.ValueConverter.ConverterBase`3
     name: ConverterBase<T, P, R>
     type: Class
-  - uid: H.Extensions.ValueConverter.CornerRadiusToDouble
-    name: CornerRadiusToDouble
-    type: Class
   - uid: H.Extensions.ValueConverter.DependencyConverterBase
     name: DependencyConverterBase
     type: Class
-  - uid: H.Extensions.ValueConverter.GetBoolToValueConverter
-    name: GetBoolToValueConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetByteToSizeDisplayConverter
-    name: GetByteToSizeDisplayConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetCollpseLastItemItemsControlConverter
-    name: GetCollpseLastItemItemsControlConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetDoubleTextConverter
-    name: GetDoubleTextConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetEqualsToVisibilityStringConverter
-    name: GetEqualsToVisibilityStringConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetFilePathSizeToDisplayConverter
-    name: GetFilePathSizeToDisplayConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetFilePathToSystemInfoIconConverter
-    name: GetFilePathToSystemInfoIconConverter
-    type: Class
   - uid: H.Extensions.ValueConverter.GetGemeotryFromStringConverter
     name: GetGemeotryFromStringConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetIconToImageSourceConverter
-    name: GetIconToImageSourceConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetImageSourceFromBase64Converter
-    name: GetImageSourceFromBase64Converter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetImageSourceFromFilePathConverter
-    name: GetImageSourceFromFilePathConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetIntToValueConverter
-    name: GetIntToValueConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetIsFirstItemInItemsControlConverter
-    name: GetIsFirstItemInItemsControlConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetIsLastItemInItemsControlConverter
-    name: GetIsLastItemInItemsControlConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetItemInListToVisibilityConverter
-    name: GetItemInListToVisibilityConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetLevelColorConverter
-    name: GetLevelColorConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetStringSplitIndexConverter
-    name: GetStringSplitIndexConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetTrueToFalseValueConverter
-    name: GetTrueToFalseValueConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.GetTypeAttributeConverter
-    name: GetTypeAttributeConverter
     type: Class
   - uid: H.Extensions.ValueConverter.GetWriteObjectConverter
     name: GetWriteObjectConverter
@@ -5434,63 +5817,147 @@ items:
   - uid: H.Extensions.ValueConverter.MarkupValueConverterBase
     name: MarkupValueConverterBase
     type: Class
-  - uid: H.Extensions.ValueConverter.MultiComboboxSelectConverter
-    name: MultiComboboxSelectConverter
-    type: Class
   - uid: H.Extensions.ValueConverter.MultiConverterBase`2
     name: MultiConverterBase<T, R>
     type: Class
-  - uid: H.Extensions.ValueConverter.PercentToAngleConverter
-    name: PercentToAngleConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.StringReplaceConverter
-    name: StringReplaceConverter
-    type: Class
-  - uid: H.Extensions.ValueConverter.ThicknessToDoubleConverter
-    name: ThicknessToDoubleConverter
-    type: Class
-- uid: H.Extensions.ViewModel
-  name: H.Extensions.ViewModel
+- uid: H.Extensions.ValueConverter.Bools
+  name: H.Extensions.ValueConverter.Bools
   type: Namespace
   items:
-  - uid: H.Extensions.ViewModel.DateRepositoryBindable`1
-    name: DateRepositoryBindable<TEntity>
+  - uid: H.Extensions.ValueConverter.Bools.GetBoolToValueConverter
+    name: GetBoolToValueConverter
     type: Class
-  - uid: H.Extensions.ViewModel.IObservableSource
-    name: IObservableSource
-    type: Interface
-  - uid: H.Extensions.ViewModel.IObservableSource`1
-    name: IObservableSource<T>
-    type: Interface
-  - uid: H.Extensions.ViewModel.IRepositoryBindable
-    name: IRepositoryBindable
-    type: Interface
-  - uid: H.Extensions.ViewModel.IRepositoryBindableBase`1
-    name: IRepositoryBindableBase<TEntity>
-    type: Interface
-  - uid: H.Extensions.ViewModel.IRepositoryBindable`1
-    name: IRepositoryBindable<TEntity>
-    type: Interface
-  - uid: H.Extensions.ViewModel.ITreePath
-    name: ITreePath
-    type: Interface
-  - uid: H.Extensions.ViewModel.ITreeRepositoryBindable`1
-    name: ITreeRepositoryBindable<TEntity>
-    type: Interface
-  - uid: H.Extensions.ViewModel.ObservableSource`1
-    name: ObservableSource<T>
+  - uid: H.Extensions.ValueConverter.Bools.GetTrueToCollapsedConverter
+    name: GetTrueToCollapsedConverter
     type: Class
-  - uid: H.Extensions.ViewModel.RepositoryBindableBase
-    name: RepositoryBindableBase
+  - uid: H.Extensions.ValueConverter.Bools.GetTrueToFalseValueConverter
+    name: GetTrueToFalseValueConverter
     type: Class
-  - uid: H.Extensions.ViewModel.RepositoryBindableBase`2
-    name: RepositoryBindableBase<TViewModel, TEntity>
+  - uid: H.Extensions.ValueConverter.Bools.GetTrueToVisibleConverter
+    name: GetTrueToVisibleConverter
     type: Class
-  - uid: H.Extensions.ViewModel.RepositoryBindable`1
-    name: RepositoryBindable<TEntity>
+- uid: H.Extensions.ValueConverter.Brushs
+  name: H.Extensions.ValueConverter.Brushs
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.Brushs.BrushRoundConverter
+    name: BrushRoundConverter
     type: Class
-  - uid: H.Extensions.ViewModel.TreeRepositoryBindable`1
-    name: TreeRepositoryBindable<TEntity>
+  - uid: H.Extensions.ValueConverter.Brushs.GetBackgroundToForegroundConverter
+    name: GetBackgroundToForegroundConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Brushs.GetColorToBrushConverter
+    name: GetColorToBrushConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Brushs.GetLevelColorConverter
+    name: GetLevelColorConverter
+    type: Class
+- uid: H.Extensions.ValueConverter.Doubles
+  name: H.Extensions.ValueConverter.Doubles
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.Doubles.GetCornerRadiusToDoubleConverter
+    name: GetCornerRadiusToDoubleConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Doubles.GetPercentToAngleConverter
+    name: GetPercentToAngleConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Doubles.GetThicknessToDoubleConverter
+    name: GetThicknessToDoubleConverter
+    type: Class
+- uid: H.Extensions.ValueConverter.Files
+  name: H.Extensions.ValueConverter.Files
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.Files.GetByteToSizeDisplayConverter
+    name: GetByteToSizeDisplayConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Files.GetFilePathSizeToDisplayConverter
+    name: GetFilePathSizeToDisplayConverter
+    type: Class
+- uid: H.Extensions.ValueConverter.IEnumerables
+  name: H.Extensions.ValueConverter.IEnumerables
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.IEnumerables.GetAnyConverter
+    name: GetAnyConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.IEnumerables.GetMultiComboboxSelectConverter
+    name: GetMultiComboboxSelectConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.IEnumerables.GetTrueForAllConverter
+    name: GetTrueForAllConverter
+    type: Class
+- uid: H.Extensions.ValueConverter.Images
+  name: H.Extensions.ValueConverter.Images
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.Images.GetFilePathToSystemInfoIconConverter
+    name: GetFilePathToSystemInfoIconConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Images.GetIconToImageSourceConverter
+    name: GetIconToImageSourceConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Images.GetImageSourceFromBase64Converter
+    name: GetImageSourceFromBase64Converter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Images.GetImageSourceFromFilePathConverter
+    name: GetImageSourceFromFilePathConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Images.IconHelper
+    name: IconHelper
+    type: Class
+  - uid: H.Extensions.ValueConverter.Images.SHFILEINFO
+    name: SHFILEINFO
+    type: Struct
+  - uid: H.Extensions.ValueConverter.Images.SHGFI
+    name: SHGFI
+    type: Enum
+- uid: H.Extensions.ValueConverter.Ints
+  name: H.Extensions.ValueConverter.Ints
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.Ints.GetDoubleTextConverter
+    name: GetDoubleTextConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Ints.GetIntToValueConverter
+    name: GetIntToValueConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Ints.GetStringReplaceConverter
+    name: GetStringReplaceConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Ints.GetStringSplitIndexConverter
+    name: GetStringSplitIndexConverter
+    type: Class
+- uid: H.Extensions.ValueConverter.ItemsControls
+  name: H.Extensions.ValueConverter.ItemsControls
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.ItemsControls.GetCollpseLastItemItemsControlConverter
+    name: GetCollpseLastItemItemsControlConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.ItemsControls.GetIsFirstItemInItemsControlConverter
+    name: GetIsFirstItemInItemsControlConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.ItemsControls.GetIsLastItemInItemsControlConverter
+    name: GetIsLastItemInItemsControlConverter
+    type: Class
+- uid: H.Extensions.ValueConverter.Types
+  name: H.Extensions.ValueConverter.Types
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.Types.GetTypeAttributeConverter
+    name: GetTypeAttributeConverter
+    type: Class
+- uid: H.Extensions.ValueConverter.Visiblilitys
+  name: H.Extensions.ValueConverter.Visiblilitys
+  type: Namespace
+  items:
+  - uid: H.Extensions.ValueConverter.Visiblilitys.GetEqualsToVisibilityStringConverter
+    name: GetEqualsToVisibilityStringConverter
+    type: Class
+  - uid: H.Extensions.ValueConverter.Visiblilitys.GetItemInListToVisibilityConverter
+    name: GetItemInListToVisibilityConverter
     type: Class
 - uid: H.Extensions.XmlSerialize
   name: H.Extensions.XmlSerialize
@@ -5579,26 +6046,50 @@ items:
   - uid: H.Iocable.Ioc`2
     name: Ioc<T, Interface>
     type: Class
+  - uid: H.Iocable.ThrowIfNoneIoc`1
+    name: ThrowIfNoneIoc<Interface>
+    type: Class
 - uid: H.Modules.About
   name: H.Modules.About
   type: Namespace
   items:
+  - uid: H.Modules.About.AboutOptions
+    name: AboutOptions
+    type: Class
   - uid: H.Modules.About.AboutViewPresenter
     name: AboutViewPresenter
     type: Class
-  - uid: H.Modules.About.IAboutViewPresenterOption
-    name: IAboutViewPresenterOption
+  - uid: H.Modules.About.IAboutOptions
+    name: IAboutOptions
     type: Interface
+  - uid: H.Modules.About.ShowAboutCommand
+    name: ShowAboutCommand
+    type: Class
+  - uid: H.Modules.About.ShowAgreementCommand
+    name: ShowAgreementCommand
+    type: Class
+  - uid: H.Modules.About.ShowPrivacyCommand
+    name: ShowPrivacyCommand
+    type: Class
 - uid: H.Modules.Feedback
   name: H.Modules.Feedback
   type: Namespace
   items:
+  - uid: H.Modules.Feedback.FeedBackMailService
+    name: FeedBackMailService
+    type: Class
   - uid: H.Modules.Feedback.FeedbackOptions
     name: FeedbackOptions
     type: Class
   - uid: H.Modules.Feedback.FeedbackViewPresenter
     name: FeedbackViewPresenter
     type: Class
+  - uid: H.Modules.Feedback.IFeedBackMailService
+    name: IFeedBackMailService
+    type: Interface
+  - uid: H.Modules.Feedback.IFeedbackOptions
+    name: IFeedbackOptions
+    type: Interface
   - uid: H.Modules.Feedback.ShowFeedbackCommand
     name: ShowFeedbackCommand
     type: Class
@@ -5639,6 +6130,9 @@ items:
   - uid: H.Modules.Guide.IGuideOptions
     name: IGuideOptions
     type: Interface
+  - uid: H.Modules.Guide.ShowGuideCommand
+    name: ShowGuideCommand
+    type: Class
   - uid: H.Modules.Guide.ShowGuideCommandBase
     name: ShowGuideCommandBase
     type: Class
@@ -5656,6 +6150,139 @@ items:
     type: Class
   - uid: H.Modules.Guide.ShowVersionGuideCommand
     name: ShowVersionGuideCommand
+    type: Class
+- uid: H.Modules.Help
+  name: H.Modules.Help
+  type: Namespace
+  items:
+  - uid: H.Modules.Help.ShowBlogContactCommand
+    name: ShowBlogContactCommand
+    type: Class
+  - uid: H.Modules.Help.ShowContactCommand
+    name: ShowContactCommand
+    type: Class
+  - uid: H.Modules.Help.ShowGitHubIssueContactCommand
+    name: ShowGitHubIssueContactCommand
+    type: Class
+  - uid: H.Modules.Help.ShowGithubContactCommand
+    name: ShowGithubContactCommand
+    type: Class
+  - uid: H.Modules.Help.ShowPodcastContactCommand
+    name: ShowPodcastContactCommand
+    type: Class
+  - uid: H.Modules.Help.ShowQQContactCommand
+    name: ShowQQContactCommand
+    type: Class
+  - uid: H.Modules.Help.ShowReleaseVersionsCommand
+    name: ShowReleaseVersionsCommand
+    type: Class
+  - uid: H.Modules.Help.ShowSendMailContactCommand
+    name: ShowSendMailContactCommand
+    type: Class
+  - uid: H.Modules.Help.ShowSupportCommand
+    name: ShowSupportCommand
+    type: Class
+  - uid: H.Modules.Help.ShowWebSiteCommand
+    name: ShowWebSiteCommand
+    type: Class
+- uid: H.Modules.Help.Base
+  name: H.Modules.Help.Base
+  type: Namespace
+  items:
+  - uid: H.Modules.Help.Base.IShowHelpService
+    name: IShowHelpService
+    type: Interface
+  - uid: H.Modules.Help.Base.IUriHelpOptions
+    name: IUriHelpOptions
+    type: Interface
+  - uid: H.Modules.Help.Base.ProcessExtension
+    name: ProcessExtension
+    type: Class
+  - uid: H.Modules.Help.Base.ShowHelpServiceBase
+    name: ShowHelpServiceBase
+    type: Class
+  - uid: H.Modules.Help.Base.UriHelpOptionsBase`1
+    name: UriHelpOptionsBase<T>
+    type: Class
+- uid: H.Modules.Help.Contact
+  name: H.Modules.Help.Contact
+  type: Namespace
+  items:
+  - uid: H.Modules.Help.Contact.ContactOptions
+    name: ContactOptions
+    type: Class
+  - uid: H.Modules.Help.Contact.ContactService
+    name: ContactService
+    type: Class
+  - uid: H.Modules.Help.Contact.Extention
+    name: Extention
+    type: Class
+  - uid: H.Modules.Help.Contact.IContactOptions
+    name: IContactOptions
+    type: Interface
+  - uid: H.Modules.Help.Contact.IContactService
+    name: IContactService
+    type: Interface
+- uid: H.Modules.Help.ReleaseVersions
+  name: H.Modules.Help.ReleaseVersions
+  type: Namespace
+  items:
+  - uid: H.Modules.Help.ReleaseVersions.Extention
+    name: Extention
+    type: Class
+  - uid: H.Modules.Help.ReleaseVersions.IReleaseVersionsOptions
+    name: IReleaseVersionsOptions
+    type: Interface
+  - uid: H.Modules.Help.ReleaseVersions.IReleaseVersionsService
+    name: IReleaseVersionsService
+    type: Interface
+  - uid: H.Modules.Help.ReleaseVersions.ReleaseVersionsOptions
+    name: ReleaseVersionsOptions
+    type: Class
+  - uid: H.Modules.Help.ReleaseVersions.ReleaseVersionsService
+    name: ReleaseVersionsService
+    type: Class
+- uid: H.Modules.Help.Support
+  name: H.Modules.Help.Support
+  type: Namespace
+  items:
+  - uid: H.Modules.Help.Support.Extention
+    name: Extention
+    type: Class
+  - uid: H.Modules.Help.Support.ISupportOptions
+    name: ISupportOptions
+    type: Interface
+  - uid: H.Modules.Help.Support.ISupportService
+    name: ISupportService
+    type: Interface
+  - uid: H.Modules.Help.Support.SupportOptions
+    name: SupportOptions
+    type: Class
+  - uid: H.Modules.Help.Support.SupportService
+    name: SupportService
+    type: Class
+- uid: H.Modules.Help.WebSite
+  name: H.Modules.Help.WebSite
+  type: Namespace
+  items:
+  - uid: H.Modules.Help.WebSite.IWebsiteOptions
+    name: IWebsiteOptions
+    type: Interface
+  - uid: H.Modules.Help.WebSite.IWebsiteService
+    name: IWebsiteService
+    type: Interface
+  - uid: H.Modules.Help.WebSite.WebsiteOptions
+    name: WebsiteOptions
+    type: Class
+  - uid: H.Modules.Help.WebSite.WebsiteService
+    name: WebsiteService
+    type: Class
+- uid: H.Modules.Help.Website
+  name: H.Modules.Help.Website
+  type: Namespace
+  items:
+  - uid: H.Modules.Help.Website.Extention
+    name: Extention
     type: Class
 - uid: H.Modules.Identity
   name: H.Modules.Identity
@@ -5678,6 +6305,9 @@ items:
     type: Class
   - uid: H.Modules.Identity.IAuthorityOption
     name: IAuthorityOption
+    type: Interface
+  - uid: H.Modules.Identity.IIdentifyOptions
+    name: IIdentifyOptions
     type: Interface
   - uid: H.Modules.Identity.IdentifyDataContext
     name: IdentifyDataContext
@@ -5753,6 +6383,9 @@ items:
   - uid: H.Modules.License.ILicenseManager
     name: ILicenseManager
     type: Interface
+  - uid: H.Modules.License.ILicenseOptions
+    name: ILicenseOptions
+    type: Interface
   - uid: H.Modules.License.ILicenseService
     name: ILicenseService
     type: Interface
@@ -5801,6 +6434,12 @@ items:
     type: Class
   - uid: H.Modules.Login.ILoginOption
     name: ILoginOption
+    type: Interface
+  - uid: H.Modules.Login.ILoginOptions
+    name: ILoginOptions
+    type: Interface
+  - uid: H.Modules.Login.IRegistorOptions
+    name: IRegistorOptions
     type: Interface
   - uid: H.Modules.Login.LoginOptions
     name: LoginOptions
@@ -5983,6 +6622,9 @@ items:
   - uid: H.Modules.Project.GetIsCurrentProjectConverter
     name: GetIsCurrentProjectConverter
     type: Class
+  - uid: H.Modules.Project.IProjectOptions
+    name: IProjectOptions
+    type: Interface
   - uid: H.Modules.Project.ProjectBox
     name: ProjectBox
     type: Class
@@ -6033,94 +6675,179 @@ items:
   - uid: H.Modules.Project.Commands.ShowCurrentProjectFileCommand
     name: ShowCurrentProjectFileCommand
     type: Class
+  - uid: H.Modules.Project.Commands.ShowDeleteProjectCommand
+    name: ShowDeleteProjectCommand
+    type: Class
+  - uid: H.Modules.Project.Commands.ShowEditProjectCommand
+    name: ShowEditProjectCommand
+    type: Class
+  - uid: H.Modules.Project.Commands.ShowNewProjectCommand
+    name: ShowNewProjectCommand
+    type: Class
+  - uid: H.Modules.Project.Commands.ShowOpenProjectCommand
+    name: ShowOpenProjectCommand
+    type: Class
+  - uid: H.Modules.Project.Commands.ShowProjectCommandBase
+    name: ShowProjectCommandBase
+    type: Class
   - uid: H.Modules.Project.Commands.ShowProjectsCommand
     name: ShowProjectsCommand
     type: Class
   - uid: H.Modules.Project.Commands.ShowProjectsOrNewCommand
     name: ShowProjectsOrNewCommand
     type: Class
+  - uid: H.Modules.Project.Commands.ShowSaveProjectCommand
+    name: ShowSaveProjectCommand
+    type: Class
+  - uid: H.Modules.Project.Commands.ShowSaveProjectsCommand
+    name: ShowSaveProjectsCommand
+    type: Class
 - uid: H.Modules.Setting
   name: H.Modules.Setting
   type: Namespace
   items:
-  - uid: H.Modules.Setting.CancelSettingCommand
-    name: CancelSettingCommand
-    type: Class
-  - uid: H.Modules.Setting.FileSetting
-    name: FileSetting
-    type: Class
-  - uid: H.Modules.Setting.HotKeyItem
-    name: HotKeyItem
-    type: Class
-  - uid: H.Modules.Setting.HotKeySetting
-    name: HotKeySetting
-    type: Class
-  - uid: H.Modules.Setting.LoginSetting
-    name: LoginSetting
-    type: Class
-  - uid: H.Modules.Setting.MainSetting
-    name: MainSetting
-    type: Class
-  - uid: H.Modules.Setting.MessageSetting
-    name: MessageSetting
-    type: Class
-  - uid: H.Modules.Setting.NotifySetting
-    name: NotifySetting
-    type: Class
-  - uid: H.Modules.Setting.PasswordSetting
-    name: PasswordSetting
-    type: Class
-  - uid: H.Modules.Setting.PersonalSetting
-    name: PersonalSetting
-    type: Class
+  - uid: H.Modules.Setting.ISettingSecurityViewOption
+    name: ISettingSecurityViewOption
+    type: Interface
+  - uid: H.Modules.Setting.ISettingViewOptions
+    name: ISettingViewOptions
+    type: Interface
   - uid: H.Modules.Setting.SettableGroup
     name: SettableGroup
     type: Class
-  - uid: H.Modules.Setting.SettingButtonPresenter
-    name: SettingButtonPresenter
-    type: Class
-  - uid: H.Modules.Setting.SettingDefaultCommand
-    name: SettingDefaultCommand
+  - uid: H.Modules.Setting.SettingDataService
+    name: SettingDataService
     type: Class
   - uid: H.Modules.Setting.SettingViewPresenter
     name: SettingViewPresenter
     type: Class
-  - uid: H.Modules.Setting.ShowSettingCommand
-    name: ShowSettingCommand
+- uid: H.Modules.Setting.Base
+  name: H.Modules.Setting.Base
+  type: Namespace
+  items:
+  - uid: H.Modules.Setting.Base.FileSetting
+    name: FileSetting
     type: Class
-  - uid: H.Modules.Setting.StateSetting
+  - uid: H.Modules.Setting.Base.HotKeyItem
+    name: HotKeyItem
+    type: Class
+  - uid: H.Modules.Setting.Base.HotKeySetting
+    name: HotKeySetting
+    type: Class
+  - uid: H.Modules.Setting.Base.LoginSetting
+    name: LoginSetting
+    type: Class
+  - uid: H.Modules.Setting.Base.MainSetting
+    name: MainSetting
+    type: Class
+  - uid: H.Modules.Setting.Base.MessageSetting
+    name: MessageSetting
+    type: Class
+  - uid: H.Modules.Setting.Base.NotifySetting
+    name: NotifySetting
+    type: Class
+  - uid: H.Modules.Setting.Base.PasswordSetting
+    name: PasswordSetting
+    type: Class
+  - uid: H.Modules.Setting.Base.PersonalSetting
+    name: PersonalSetting
+    type: Class
+  - uid: H.Modules.Setting.Base.StateSetting
     name: StateSetting
     type: Class
-  - uid: H.Modules.Setting.ViewSetting
+  - uid: H.Modules.Setting.Base.ViewSetting
     name: ViewSetting
+    type: Class
+- uid: H.Modules.Setting.Commands
+  name: H.Modules.Setting.Commands
+  type: Namespace
+  items:
+  - uid: H.Modules.Setting.Commands.CancelSettingCommand
+    name: CancelSettingCommand
+    type: Class
+  - uid: H.Modules.Setting.Commands.CancelSettingDataCommand
+    name: CancelSettingDataCommand
+    type: Class
+  - uid: H.Modules.Setting.Commands.SettingDefaultCommand
+    name: SettingDefaultCommand
+    type: Class
+  - uid: H.Modules.Setting.Commands.ShowSettingCommand
+    name: ShowSettingCommand
+    type: Class
+  - uid: H.Modules.Setting.Commands.SumitSettingDataCommand
+    name: SumitSettingDataCommand
     type: Class
 - uid: H.Modules.SplashScreen
   name: H.Modules.SplashScreen
   type: Namespace
   items:
-  - uid: H.Modules.SplashScreen.SplashScreenOption
-    name: SplashScreenOption
+  - uid: H.Modules.SplashScreen.ISplashScreenOptions
+    name: ISplashScreenOptions
+    type: Interface
+  - uid: H.Modules.SplashScreen.SplashScreenOptions
+    name: SplashScreenOptions
     type: Class
   - uid: H.Modules.SplashScreen.SplashScreenViewPresenter
     name: SplashScreenViewPresenter
+    type: Class
+- uid: H.Modules.Sponsor
+  name: H.Modules.Sponsor
+  type: Namespace
+  items:
+  - uid: H.Modules.Sponsor.ISponsorPresenter
+    name: ISponsorPresenter
+    type: Interface
+  - uid: H.Modules.Sponsor.ShowSponsorCommand
+    name: ShowSponsorCommand
+    type: Class
+- uid: H.Modules.Style
+  name: H.Modules.Style
+  type: Namespace
+  items:
+  - uid: H.Modules.Style.IStyleOptions
+    name: IStyleOptions
+    type: Interface
+  - uid: H.Modules.Style.StyleOptions
+    name: StyleOptions
     type: Class
 - uid: H.Modules.Theme
   name: H.Modules.Theme
   type: Namespace
   items:
-  - uid: H.Modules.Theme.SwitchThemeOptions
-    name: SwitchThemeOptions
+  - uid: H.Modules.Theme.ColorThemeViewPresenter
+    name: ColorThemeViewPresenter
+    type: Class
+  - uid: H.Modules.Theme.IColorThemeOptions
+    name: IColorThemeOptions
+    type: Interface
+  - uid: H.Modules.Theme.IColorThemeViewPresenter
+    name: IColorThemeViewPresenter
+    type: Interface
+  - uid: H.Modules.Theme.IIconFontFamilysOptions
+    name: IIconFontFamilysOptions
+    type: Interface
+  - uid: H.Modules.Theme.IThemeOptions
+    name: IThemeOptions
+    type: Interface
+  - uid: H.Modules.Theme.LoadThemeOptionsService
+    name: LoadThemeOptionsService
+    type: Class
+  - uid: H.Modules.Theme.ShowColorThemeViewCommand
+    name: ShowColorThemeViewCommand
     type: Class
   - uid: H.Modules.Theme.SwitchThemeViewPresenter
     name: SwitchThemeViewPresenter
     type: Class
-  - uid: H.Modules.Theme.ThemeSetting
-    name: ThemeSetting
+  - uid: H.Modules.Theme.ThemeOptions
+    name: ThemeOptions
     type: Class
 - uid: H.Modules.Upgrade
   name: H.Modules.Upgrade
   type: Namespace
   items:
+  - uid: H.Modules.Upgrade.IUpgradeOptions
+    name: IUpgradeOptions
+    type: Interface
   - uid: H.Modules.Upgrade.ShowUpgradeCommand
     name: ShowUpgradeCommand
     type: Class
@@ -6130,97 +6857,62 @@ items:
   - uid: H.Modules.Upgrade.UpgradeOptions
     name: UpgradeOptions
     type: Class
-- uid: H.Mvvm
-  name: H.Mvvm
+- uid: H.Mvvm.Commands
+  name: H.Mvvm.Commands
   type: Namespace
   items:
-  - uid: H.Mvvm.AsyncMarkupCommandBase
-    name: AsyncMarkupCommandBase
-    type: Class
-  - uid: H.Mvvm.BindingProxy
-    name: BindingProxy
-    type: Class
-  - uid: H.Mvvm.CommandBase
-    name: CommandBase
-    type: Class
-  - uid: H.Mvvm.Commands
+  - uid: H.Mvvm.Commands.Commands
     name: Commands
     type: Class
-  - uid: H.Mvvm.DisplayBindable`1
-    name: DisplayBindable<T>
-    type: Class
-  - uid: H.Mvvm.DisplayCommand
+  - uid: H.Mvvm.Commands.DisplayCommand
     name: DisplayCommand
     type: Class
-  - uid: H.Mvvm.DisplayCommand`1
+  - uid: H.Mvvm.Commands.DisplayCommand`1
     name: DisplayCommand<T>
     type: Class
-  - uid: H.Mvvm.DisplayMarkupCommandBase
-    name: DisplayMarkupCommandBase
-    type: Class
-  - uid: H.Mvvm.IDescriptionable
-    name: IDescriptionable
-    type: Interface
-  - uid: H.Mvvm.IDesignPresenterBase
-    name: IDesignPresenterBase
-    type: Interface
-  - uid: H.Mvvm.IDisplayBindable
-    name: IDisplayBindable
-    type: Interface
-  - uid: H.Mvvm.IDisplayCommand
+  - uid: H.Mvvm.Commands.IDisplayCommand
     name: IDisplayCommand
     type: Interface
-  - uid: H.Mvvm.IIconable
-    name: IIconable
-    type: Interface
-  - uid: H.Mvvm.IInvokeCommand
+  - uid: H.Mvvm.Commands.IInvokeCommand
     name: IInvokeCommand
     type: Interface
-  - uid: H.Mvvm.IModelBindable
-    name: IModelBindable
-    type: Interface
-  - uid: H.Mvvm.IModelBindable`1
-    name: IModelBindable<T>
-    type: Interface
-  - uid: H.Mvvm.IOrderable
-    name: IOrderable
-    type: Interface
-  - uid: H.Mvvm.ITreeNode
-    name: ITreeNode
-    type: Interface
-  - uid: H.Mvvm.InvokeCommand
+  - uid: H.Mvvm.Commands.InvokeCommand
     name: InvokeCommand
     type: Class
-  - uid: H.Mvvm.MarkupCommandBase
-    name: MarkupCommandBase
-    type: Class
-  - uid: H.Mvvm.ModelBindable`1
-    name: ModelBindable<T>
-    type: Class
-  - uid: H.Mvvm.RelayCommand
+  - uid: H.Mvvm.Commands.RelayCommand
     name: RelayCommand
     type: Class
-  - uid: H.Mvvm.RelayCommand`1
+  - uid: H.Mvvm.Commands.RelayCommand`1
     name: RelayCommand<T>
     type: Class
-  - uid: H.Mvvm.RoutedEventArgs`1
-    name: RoutedEventArgs<T>
-    type: Class
-  - uid: H.Mvvm.SelectBindable`1
-    name: SelectBindable<T>
-    type: Class
-  - uid: H.Mvvm.TreeNodeBase`1
-    name: TreeNodeBase<T>
-    type: Class
-- uid: H.Mvvm.Attributes
-  name: H.Mvvm.Attributes
+- uid: H.Mvvm.Commands.Base
+  name: H.Mvvm.Commands.Base
   type: Namespace
   items:
-  - uid: H.Mvvm.Attributes.IDAttribute
-    name: IDAttribute
+  - uid: H.Mvvm.Commands.Base.CommandBase
+    name: CommandBase
     type: Class
-  - uid: H.Mvvm.Attributes.IconAttribute
-    name: IconAttribute
+- uid: H.Mvvm.ViewModels
+  name: H.Mvvm.ViewModels
+  type: Namespace
+  items:
+  - uid: H.Mvvm.ViewModels.DisplayBindable`1
+    name: DisplayBindable<T>
+    type: Class
+  - uid: H.Mvvm.ViewModels.IDisplayBindable
+    name: IDisplayBindable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.IModelBindable
+    name: IModelBindable
+    type: Interface
+  - uid: H.Mvvm.ViewModels.IModelBindable`1
+    name: IModelBindable<T>
+    type: Interface
+  - uid: H.Mvvm.ViewModels.ModelBindable`1
+    name: ModelBindable<T>
+    type: Class
+  - uid: H.Mvvm.ViewModels.SelectBindable`1
+    name: SelectBindable<T>
     type: Class
 - uid: H.Mvvm.ViewModels.Base
   name: H.Mvvm.ViewModels.Base
@@ -6244,29 +6936,15 @@ items:
   - uid: H.Mvvm.ViewModels.Base.GroupDisplayBindableBase`1
     name: GroupDisplayBindableBase<T>
     type: Class
-  - uid: H.Mvvm.ViewModels.Base.IDable
-    name: IDable
+- uid: H.Mvvm.ViewModels.Tree
+  name: H.Mvvm.ViewModels.Tree
+  type: Namespace
+  items:
+  - uid: H.Mvvm.ViewModels.Tree.ITreeNode
+    name: ITreeNode
     type: Interface
-  - uid: H.Mvvm.ViewModels.Base.IGroupable
-    name: IGroupable
-    type: Interface
-  - uid: H.Mvvm.ViewModels.Base.IMessageable
-    name: IMessageable
-    type: Interface
-  - uid: H.Mvvm.ViewModels.Base.INameable
-    name: INameable
-    type: Interface
-  - uid: H.Mvvm.ViewModels.Base.ISearchable
-    name: ISearchable
-    type: Interface
-  - uid: H.Mvvm.ViewModels.Base.ISelectBindable
-    name: ISelectBindable
-    type: Interface
-  - uid: H.Mvvm.ViewModels.Base.IStopwatchable
-    name: IStopwatchable
-    type: Interface
-  - uid: H.Mvvm.ViewModels.Base.Stopwatchable
-    name: Stopwatchable
+  - uid: H.Mvvm.ViewModels.Tree.TreeNodeBase`1
+    name: TreeNodeBase<T>
     type: Class
 - uid: H.Presenters.Common
   name: H.Presenters.Common
@@ -6365,101 +7043,105 @@ items:
   - uid: H.Presenters.Common.WaitPresenter
     name: WaitPresenter
     type: Class
-- uid: H.Presenters.Design
-  name: H.Presenters.Design
+- uid: H.Presenters.Design.Base
+  name: H.Presenters.Design.Base
   type: Namespace
   items:
-  - uid: H.Presenters.Design.BorderKeys
-    name: BorderKeys
-    type: Class
-  - uid: H.Presenters.Design.CardPresenter
-    name: CardPresenter
-    type: Class
-  - uid: H.Presenters.Design.ColumnPropertyInfo
+  - uid: H.Presenters.Design.Base.ColumnPropertyInfo
     name: ColumnPropertyInfo
     type: Class
-  - uid: H.Presenters.Design.CommandsDesignPresenterBase
+  - uid: H.Presenters.Design.Base.CommandsDesignPresenterBase
     name: CommandsDesignPresenterBase
     type: Class
-  - uid: H.Presenters.Design.DataGridDesignPresenter
-    name: DataGridDesignPresenter
-    type: Class
-  - uid: H.Presenters.Design.DataGridPresenterBase
+  - uid: H.Presenters.Design.Base.DataGridPresenterBase
     name: DataGridPresenterBase
     type: Class
-  - uid: H.Presenters.Design.DateTimeNowPresenter
-    name: DateTimeNowPresenter
-    type: Class
-  - uid: H.Presenters.Design.DefinitionGrid
-    name: DefinitionGrid
-    type: Class
-  - uid: H.Presenters.Design.DefinitionGridPresenter
-    name: DefinitionGridPresenter
-    type: Class
-  - uid: H.Presenters.Design.DesignBorder
-    name: DesignBorder
-    type: Class
-  - uid: H.Presenters.Design.DesignPresenter
+  - uid: H.Presenters.Design.Base.DesignPresenter
     name: DesignPresenter
     type: Class
-  - uid: H.Presenters.Design.DropAdornerDesignPresenterBase
+  - uid: H.Presenters.Design.Base.DropAdornerDesignPresenterBase
     name: DropAdornerDesignPresenterBase
     type: Class
-  - uid: H.Presenters.Design.FixedGrid
-    name: FixedGrid
-    type: Class
-  - uid: H.Presenters.Design.FixedGridPresenter
-    name: FixedGridPresenter
-    type: Class
-  - uid: H.Presenters.Design.GridAreaPresenter
-    name: GridAreaPresenter
-    type: Class
-  - uid: H.Presenters.Design.GridBase
+  - uid: H.Presenters.Design.Base.GridBase
     name: GridBase
     type: Class
-  - uid: H.Presenters.Design.GridPresenterBase
+  - uid: H.Presenters.Design.Base.GridPresenterBase
     name: GridPresenterBase
     type: Class
-  - uid: H.Presenters.Design.HexClipConverter
-    name: HexClipConverter
-    type: Class
-  - uid: H.Presenters.Design.HexGrid
-    name: HexGrid
-    type: Class
-  - uid: H.Presenters.Design.HexItem
-    name: HexItem
-    type: Class
-  - uid: H.Presenters.Design.HexList
-    name: HexList
-    type: Class
-  - uid: H.Presenters.Design.IDesignPresenter
+  - uid: H.Presenters.Design.Base.IDesignPresenter
     name: IDesignPresenter
     type: Interface
-  - uid: H.Presenters.Design.ITextData
+  - uid: H.Presenters.Design.Base.ITextData
     name: ITextData
     type: Interface
-  - uid: H.Presenters.Design.ImagePresenter
-    name: ImagePresenter
-    type: Class
-  - uid: H.Presenters.Design.PanelPresenterBase
+  - uid: H.Presenters.Design.Base.PanelPresenterBase
     name: PanelPresenterBase
     type: Class
-  - uid: H.Presenters.Design.PropertyGridDesignPresenter
+- uid: H.Presenters.Design.Presenter
+  name: H.Presenters.Design.Presenter
+  type: Namespace
+  items:
+  - uid: H.Presenters.Design.Presenter.BorderKeys
+    name: BorderKeys
+    type: Class
+  - uid: H.Presenters.Design.Presenter.CardPresenter
+    name: CardPresenter
+    type: Class
+  - uid: H.Presenters.Design.Presenter.DataGridDesignPresenter
+    name: DataGridDesignPresenter
+    type: Class
+  - uid: H.Presenters.Design.Presenter.DateTimeNowPresenter
+    name: DateTimeNowPresenter
+    type: Class
+  - uid: H.Presenters.Design.Presenter.DefinitionGrid
+    name: DefinitionGrid
+    type: Class
+  - uid: H.Presenters.Design.Presenter.DefinitionGridPresenter
+    name: DefinitionGridPresenter
+    type: Class
+  - uid: H.Presenters.Design.Presenter.DesignBorder
+    name: DesignBorder
+    type: Class
+  - uid: H.Presenters.Design.Presenter.FixedGrid
+    name: FixedGrid
+    type: Class
+  - uid: H.Presenters.Design.Presenter.FixedGridPresenter
+    name: FixedGridPresenter
+    type: Class
+  - uid: H.Presenters.Design.Presenter.GridAreaPresenter
+    name: GridAreaPresenter
+    type: Class
+  - uid: H.Presenters.Design.Presenter.HexClipConverter
+    name: HexClipConverter
+    type: Class
+  - uid: H.Presenters.Design.Presenter.HexGrid
+    name: HexGrid
+    type: Class
+  - uid: H.Presenters.Design.Presenter.HexItem
+    name: HexItem
+    type: Class
+  - uid: H.Presenters.Design.Presenter.HexList
+    name: HexList
+    type: Class
+  - uid: H.Presenters.Design.Presenter.ImagePresenter
+    name: ImagePresenter
+    type: Class
+  - uid: H.Presenters.Design.Presenter.PropertyGridDesignPresenter
     name: PropertyGridDesignPresenter
     type: Class
-  - uid: H.Presenters.Design.TextBlockKeys
+  - uid: H.Presenters.Design.Presenter.TextBlockKeys
     name: TextBlockKeys
     type: Class
-  - uid: H.Presenters.Design.TextBlockPresenter
+  - uid: H.Presenters.Design.Presenter.TextBlockPresenter
     name: TextBlockPresenter
     type: Class
-  - uid: H.Presenters.Design.TitlePresenter
+  - uid: H.Presenters.Design.Presenter.TitlePresenter
     name: TitlePresenter
     type: Class
-  - uid: H.Presenters.Design.UniformGridPresenter
+  - uid: H.Presenters.Design.Presenter.UniformGridPresenter
     name: UniformGridPresenter
     type: Class
-  - uid: H.Presenters.Design.UserPresenter
+  - uid: H.Presenters.Design.Presenter.UserPresenter
     name: UserPresenter
     type: Class
 - uid: H.Presenters.Repository
@@ -6472,490 +7154,198 @@ items:
   - uid: H.Presenters.Repository.RepositoryPresenterExtension
     name: RepositoryPresenterExtension
     type: Class
+- uid: H.Services.AppPath
+  name: H.Services.AppPath
+  type: Namespace
+  items:
+  - uid: H.Services.AppPath.AppPathExtension
+    name: AppPathExtension
+    type: Class
+  - uid: H.Services.AppPath.AppPaths
+    name: AppPaths
+    type: Class
+  - uid: H.Services.AppPath.IAppPathServce
+    name: IAppPathServce
+    type: Interface
 - uid: H.Services.Common
   name: H.Services.Common
   type: Namespace
   items:
-  - uid: H.Services.Common.AppPaths
-    name: AppPaths
-    type: Class
-  - uid: H.Services.Common.Authority
-    name: Authority
-    type: Class
-  - uid: H.Services.Common.CancelDialogCommand
-    name: CancelDialogCommand
-    type: Class
-  - uid: H.Services.Common.CloseDialogCommand
-    name: CloseDialogCommand
-    type: Class
   - uid: H.Services.Common.DbIoc
     name: DbIoc
     type: Class
-  - uid: H.Services.Common.DialogButton
-    name: DialogButton
-    type: Enum
-  - uid: H.Services.Common.DialogCommandBase
-    name: DialogCommandBase
-    type: Class
-  - uid: H.Services.Common.DialogExtension
-    name: DialogExtension
-    type: Class
-  - uid: H.Services.Common.DialogMessageExtension
-    name: DialogMessageExtension
-    type: Class
-  - uid: H.Services.Common.FormMessageExtension
-    name: FormMessageExtension
-    type: Class
-  - uid: H.Services.Common.IAboutViewPresenter
+  - uid: H.Services.Common.IChartDataProvider
+    name: IChartDataProvider
+    type: Interface
+- uid: H.Services.Common.About
+  name: H.Services.Common.About
+  type: Namespace
+  items:
+  - uid: H.Services.Common.About.IAboutViewPresenter
     name: IAboutViewPresenter
     type: Interface
-  - uid: H.Services.Common.IAdornerDialogMessageService
-    name: IAdornerDialogMessageService
-    type: Interface
-  - uid: H.Services.Common.IAppLoadService
-    name: IAppLoadService
-    type: Interface
-  - uid: H.Services.Common.IAppPaths
-    name: IAppPaths
-    type: Interface
-  - uid: H.Services.Common.IAppSaveService
-    name: IAppSaveService
-    type: Interface
-  - uid: H.Services.Common.IAuthor
-    name: IAuthor
-    type: Interface
-  - uid: H.Services.Common.IAuthority
-    name: IAuthority
-    type: Interface
-  - uid: H.Services.Common.IAuthorityViewPresenter
-    name: IAuthorityViewPresenter
-    type: Interface
-  - uid: H.Services.Common.ICancelable
-    name: ICancelable
-    type: Interface
-  - uid: H.Services.Common.ICryptService
+- uid: H.Services.Common.Crypt
+  name: H.Services.Common.Crypt
+  type: Namespace
+  items:
+  - uid: H.Services.Common.Crypt.ICryptService
     name: ICryptService
     type: Interface
-  - uid: H.Services.Common.IDataSource`1
-    name: IDataSource<T>
-    type: Interface
-  - uid: H.Services.Common.IDbConnectService
-    name: IDbConnectService
-    type: Interface
-  - uid: H.Services.Common.IDbDisconnectService
-    name: IDbDisconnectService
-    type: Interface
-  - uid: H.Services.Common.IDefaultable
-    name: IDefaultable
-    type: Interface
-  - uid: H.Services.Common.IDesignable
-    name: IDesignable
-    type: Interface
-  - uid: H.Services.Common.IDialog
-    name: IDialog
-    type: Interface
-  - uid: H.Services.Common.IDialogMessageService
-    name: IDialogMessageService
-    type: Interface
-  - uid: H.Services.Common.IDisplayFilter
-    name: IDisplayFilter
-    type: Interface
-  - uid: H.Services.Common.IDisplayable
-    name: IDisplayable
-    type: Interface
-  - uid: H.Services.Common.IExcelService
-    name: IExcelService
-    type: Interface
-  - uid: H.Services.Common.IFeedbackViewPresenter
-    name: IFeedbackViewPresenter
-    type: Interface
-  - uid: H.Services.Common.IFilterable
-    name: IFilterable
-    type: Interface
-  - uid: H.Services.Common.IFormMessageService
-    name: IFormMessageService
-    type: Interface
-  - uid: H.Services.Common.IFormOption
-    name: IFormOption
-    type: Interface
-  - uid: H.Services.Common.IGuideService
-    name: IGuideService
-    type: Interface
-  - uid: H.Services.Common.IIOFileDialogOption
-    name: IIOFileDialogOption
-    type: Interface
-  - uid: H.Services.Common.IIOFileDialogService
-    name: IIOFileDialogService
-    type: Interface
-  - uid: H.Services.Common.IIOFolderDialogService
-    name: IIOFolderDialogService
-    type: Interface
-  - uid: H.Services.Common.IIOSaveFileDialogOption
-    name: IIOSaveFileDialogOption
-    type: Interface
-  - uid: H.Services.Common.ILayoutable
-    name: ILayoutable
-    type: Interface
-  - uid: H.Services.Common.ILicenseLoadService
-    name: ILicenseLoadService
-    type: Interface
-  - uid: H.Services.Common.ILoadable
-    name: ILoadable
-    type: Interface
-  - uid: H.Services.Common.ILoginService
-    name: ILoginService
-    type: Interface
-  - uid: H.Services.Common.ILoginViewPresenter
-    name: ILoginViewPresenter
-    type: Interface
-  - uid: H.Services.Common.ILoginedSplashLoad
-    name: ILoginedSplashLoad
-    type: Interface
-  - uid: H.Services.Common.ILoginedSplashViewPresenter
-    name: ILoginedSplashViewPresenter
-    type: Interface
-  - uid: H.Services.Common.IMainWindowSavableService
-    name: IMainWindowSavableService
-    type: Interface
-  - uid: H.Services.Common.IMetaSetting
-    name: IMetaSetting
-    type: Interface
-  - uid: H.Services.Common.IMetaSettingService
-    name: IMetaSettingService
-    type: Interface
-  - uid: H.Services.Common.INoticeItem
-    name: INoticeItem
-    type: Interface
-  - uid: H.Services.Common.INoticeMessageService
-    name: INoticeMessageService
-    type: Interface
-  - uid: H.Services.Common.IOFileDialogExtension
-    name: IOFileDialogExtension
-    type: Class
-  - uid: H.Services.Common.IOFileDialogOption
-    name: IOFileDialogOption
-    type: Class
-  - uid: H.Services.Common.IOFileDialogOptionActions
-    name: IOFileDialogOptionActions
-    type: Class
-  - uid: H.Services.Common.IOFileDialogService
-    name: IOFileDialogService
-    type: Class
-  - uid: H.Services.Common.IOFolderDialogServiceExtension
-    name: IOFolderDialogServiceExtension
-    type: Class
-  - uid: H.Services.Common.IOSaveFileDialogOption
-    name: IOSaveFileDialogOption
-    type: Class
-  - uid: H.Services.Common.IOpenFilePathable
-    name: IOpenFilePathable
-    type: Interface
-  - uid: H.Services.Common.IOrderWhereable
-    name: IOrderWhereable
-    type: Interface
-  - uid: H.Services.Common.IPercentNoticeItem
-    name: IPercentNoticeItem
-    type: Interface
-  - uid: H.Services.Common.IPercentPresenter
-    name: IPercentPresenter
-    type: Interface
-  - uid: H.Services.Common.IPercentSnackItem
-    name: IPercentSnackItem
-    type: Interface
-  - uid: H.Services.Common.IProjectItem
-    name: IProjectItem
-    type: Interface
-  - uid: H.Services.Common.IProjectService
-    name: IProjectService
-    type: Interface
-  - uid: H.Services.Common.IProjectViewPresenter
-    name: IProjectViewPresenter
-    type: Interface
-  - uid: H.Services.Common.IRegisterService
-    name: IRegisterService
-    type: Interface
-  - uid: H.Services.Common.IRole
-    name: IRole
-    type: Interface
-  - uid: H.Services.Common.IRoleViewPresenter
-    name: IRoleViewPresenter
-    type: Interface
-  - uid: H.Services.Common.ISaveable
-    name: ISaveable
-    type: Interface
-  - uid: H.Services.Common.IScheduledTaskService
-    name: IScheduledTaskService
-    type: Interface
-  - uid: H.Services.Common.ISettable
-    name: ISettable
-    type: Interface
-  - uid: H.Services.Common.ISettingButtonPresenter
-    name: ISettingButtonPresenter
-    type: Interface
-  - uid: H.Services.Common.ISettingDataManagerOption
-    name: ISettingDataManagerOption
-    type: Interface
-  - uid: H.Services.Common.ISettingOption
-    name: ISettingOption
-    type: Interface
-  - uid: H.Services.Common.ISettingSecurityViewOption
-    name: ISettingSecurityViewOption
-    type: Interface
-  - uid: H.Services.Common.ISettingViewOption
-    name: ISettingViewOption
-    type: Interface
-  - uid: H.Services.Common.ISettingViewPresenter
-    name: ISettingViewPresenter
-    type: Interface
-  - uid: H.Services.Common.ISnackItem
-    name: ISnackItem
-    type: Interface
-  - uid: H.Services.Common.ISnackMessageService
-    name: ISnackMessageService
-    type: Interface
-  - uid: H.Services.Common.ISplashLoad
-    name: ISplashLoad
-    type: Interface
-  - uid: H.Services.Common.ISplashSave
-    name: ISplashSave
-    type: Interface
-  - uid: H.Services.Common.ISplashScreenViewPresenter
-    name: ISplashScreenViewPresenter
-    type: Interface
-  - uid: H.Services.Common.IStringPresenter
-    name: IStringPresenter
-    type: Interface
-  - uid: H.Services.Common.ISwitchThemeViewPresenter
-    name: ISwitchThemeViewPresenter
-    type: Interface
-  - uid: H.Services.Common.ISystemNotifyMessage
-    name: ISystemNotifyMessage
-    type: Interface
-  - uid: H.Services.Common.ITaskBarMessage
-    name: ITaskBarMessage
-    type: Interface
-  - uid: H.Services.Common.ITextable
-    name: ITextable
-    type: Interface
-  - uid: H.Services.Common.IThemeViewPresenter
-    name: IThemeViewPresenter
-    type: Interface
-  - uid: H.Services.Common.ITitleable
-    name: ITitleable
-    type: Interface
-  - uid: H.Services.Common.ITransitionHostable
-    name: ITransitionHostable
-    type: Interface
-  - uid: H.Services.Common.ITransitionable
-    name: ITransitionable
-    type: Interface
-  - uid: H.Services.Common.IUpgradeService
-    name: IUpgradeService
-    type: Interface
-  - uid: H.Services.Common.IUser
-    name: IUser
-    type: Interface
-  - uid: H.Services.Common.IUserViewPresenter
-    name: IUserViewPresenter
-    type: Interface
-  - uid: H.Services.Common.IWhereable
-    name: IWhereable
-    type: Interface
-  - uid: H.Services.Common.IWindowDialogMessageService
-    name: IWindowDialogMessageService
-    type: Interface
-  - uid: H.Services.Common.IZoombox
-    name: IZoombox
-    type: Interface
-  - uid: H.Services.Common.IocCrypt
+  - uid: H.Services.Common.Crypt.IocCrypt
     name: IocCrypt
     type: Class
-  - uid: H.Services.Common.IocDialog
-    name: IocDialog
-    type: Class
-  - uid: H.Services.Common.IocMessage
-    name: IocMessage
-    type: Class
-  - uid: H.Services.Common.IocProject
-    name: IocProject
-    type: Class
-  - uid: H.Services.Common.IocSaveAllCommand
-    name: IocSaveAllCommand
-    type: Class
-  - uid: H.Services.Common.IocUpgrade
-    name: IocUpgrade
-    type: Class
-  - uid: H.Services.Common.IsHitTestVisibleDisposable
-    name: IsHitTestVisibleDisposable
-    type: Class
-  - uid: H.Services.Common.JsonMetaSettingServiceBase
-    name: JsonMetaSettingServiceBase
-    type: Class
-  - uid: H.Services.Common.LayoutableExtension
-    name: LayoutableExtension
-    type: Class
-  - uid: H.Services.Common.LayoutablePresenterBase`2
-    name: LayoutablePresenterBase<T, Interface>
-    type: Class
-  - uid: H.Services.Common.LazyInstance`1
-    name: LazyInstance<T>
-    type: Class
-  - uid: H.Services.Common.MessageCommandBase
-    name: MessageCommandBase
-    type: Class
-  - uid: H.Services.Common.NotifyBalloonIcon
-    name: NotifyBalloonIcon
-    type: Enum
-  - uid: H.Services.Common.ProjectExtension
-    name: ProjectExtension
-    type: Class
-  - uid: H.Services.Common.ProjectSaveMode
-    name: ProjectSaveMode
-    type: Enum
-  - uid: H.Services.Common.RenderTransformDisposable
-    name: RenderTransformDisposable
-    type: Class
-  - uid: H.Services.Common.ScheduledTaskServiceBase
+- uid: H.Services.Common.DataBase
+  name: H.Services.Common.DataBase
+  type: Namespace
+  items:
+  - uid: H.Services.Common.DataBase.IDbConnectService
+    name: IDbConnectService
+    type: Interface
+  - uid: H.Services.Common.DataBase.IDbDisconnectService
+    name: IDbDisconnectService
+    type: Interface
+- uid: H.Services.Common.Excel
+  name: H.Services.Common.Excel
+  type: Namespace
+  items:
+  - uid: H.Services.Common.Excel.IExcelService
+    name: IExcelService
+    type: Interface
+- uid: H.Services.Common.Feedback
+  name: H.Services.Common.Feedback
+  type: Namespace
+  items:
+  - uid: H.Services.Common.Feedback.IFeedbackViewPresenter
+    name: IFeedbackViewPresenter
+    type: Interface
+- uid: H.Services.Common.Guide
+  name: H.Services.Common.Guide
+  type: Namespace
+  items:
+  - uid: H.Services.Common.Guide.IGuideService
+    name: IGuideService
+    type: Interface
+- uid: H.Services.Common.MainWindow
+  name: H.Services.Common.MainWindow
+  type: Namespace
+  items:
+  - uid: H.Services.Common.MainWindow.IMainWindowSavableService
+    name: IMainWindowSavableService
+    type: Interface
+- uid: H.Services.Common.Schedule
+  name: H.Services.Common.Schedule
+  type: Namespace
+  items:
+  - uid: H.Services.Common.Schedule.IScheduledTaskService
+    name: IScheduledTaskService
+    type: Interface
+  - uid: H.Services.Common.Schedule.ScheduledTaskServiceBase
     name: ScheduledTaskServiceBase
     type: Class
-  - uid: H.Services.Common.SettingDataManager
-    name: SettingDataManager
+- uid: H.Services.Common.Serialize.Meta
+  name: H.Services.Common.Serialize.Meta
+  type: Namespace
+  items:
+  - uid: H.Services.Common.Serialize.Meta.IMetaSetting
+    name: IMetaSetting
+    type: Interface
+  - uid: H.Services.Common.Serialize.Meta.IMetaSettingService
+    name: IMetaSettingService
+    type: Interface
+  - uid: H.Services.Common.Serialize.Meta.JsonMetaSettingServiceBase
+    name: JsonMetaSettingServiceBase
     type: Class
-  - uid: H.Services.Common.SettingGroupNames
-    name: SettingGroupNames
+- uid: H.Services.Common.SplashScreen
+  name: H.Services.Common.SplashScreen
+  type: Namespace
+  items:
+  - uid: H.Services.Common.SplashScreen.IAppLoadService
+    name: IAppLoadService
+    type: Interface
+  - uid: H.Services.Common.SplashScreen.IAppSaveService
+    name: IAppSaveService
+    type: Interface
+  - uid: H.Services.Common.SplashScreen.ILicenseLoadService
+    name: ILicenseLoadService
+    type: Interface
+  - uid: H.Services.Common.SplashScreen.ISplashScreenViewPresenter
+    name: ISplashScreenViewPresenter
+    type: Interface
+- uid: H.Services.Common.Theme
+  name: H.Services.Common.Theme
+  type: Namespace
+  items:
+  - uid: H.Services.Common.Theme.ILoadThemeOptionsService
+    name: ILoadThemeOptionsService
+    type: Interface
+  - uid: H.Services.Common.Theme.ISwitchThemeViewPresenter
+    name: ISwitchThemeViewPresenter
+    type: Interface
+  - uid: H.Services.Common.Theme.IThemeViewPresenter
+    name: IThemeViewPresenter
+    type: Interface
+- uid: H.Services.Common.Upgrade
+  name: H.Services.Common.Upgrade
+  type: Namespace
+  items:
+  - uid: H.Services.Common.Upgrade.IUpgradeService
+    name: IUpgradeService
+    type: Interface
+  - uid: H.Services.Common.Upgrade.IocUpgrade
+    name: IocUpgrade
     type: Class
-  - uid: H.Services.Common.ShowAboutCommand
-    name: ShowAboutCommand
+- uid: H.Services.Identity
+  name: H.Services.Identity
+  type: Namespace
+  items:
+  - uid: H.Services.Identity.ILoginService
+    name: ILoginService
+    type: Interface
+  - uid: H.Services.Identity.ILoginViewPresenter
+    name: ILoginViewPresenter
+    type: Interface
+  - uid: H.Services.Identity.ILoginedSplashViewPresenter
+    name: ILoginedSplashViewPresenter
+    type: Interface
+  - uid: H.Services.Identity.IRegisterService
+    name: IRegisterService
+    type: Interface
+- uid: H.Services.Identity.Author
+  name: H.Services.Identity.Author
+  type: Namespace
+  items:
+  - uid: H.Services.Identity.Author.Authority
+    name: Authority
     type: Class
-  - uid: H.Services.Common.ShowCommand
-    name: ShowCommand
-    type: Class
-  - uid: H.Services.Common.ShowDeleteProjectCommand
-    name: ShowDeleteProjectCommand
-    type: Class
-  - uid: H.Services.Common.ShowDialogCommandBase
-    name: ShowDialogCommandBase
-    type: Class
-  - uid: H.Services.Common.ShowDialogNoticeMessageCommand
-    name: ShowDialogNoticeMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowDialogSnackMessageCommand
-    name: ShowDialogSnackMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowEditCommand
-    name: ShowEditCommand
-    type: Class
-  - uid: H.Services.Common.ShowEditProjectCommand
-    name: ShowEditProjectCommand
-    type: Class
-  - uid: H.Services.Common.ShowErrorNoticeMessageCommand
-    name: ShowErrorNoticeMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowErrorSnackMessageCommand
-    name: ShowErrorSnackMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowFatalNoticeMessageCommand
-    name: ShowFatalNoticeMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowFatalSnackMessageCommand
-    name: ShowFatalSnackMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowGuideCommand
-    name: ShowGuideCommand
-    type: Class
-  - uid: H.Services.Common.ShowInfoNoticeMessageCommand
-    name: ShowInfoNoticeMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowInfoSnackMessageCommand
-    name: ShowInfoSnackMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowIocCommand
-    name: ShowIocCommand
-    type: Class
-  - uid: H.Services.Common.ShowIocCommandBase`1
-    name: ShowIocCommandBase<T>
-    type: Class
-  - uid: H.Services.Common.ShowMessageCommand
-    name: ShowMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowNewProjectCommand
-    name: ShowNewProjectCommand
-    type: Class
-  - uid: H.Services.Common.ShowNotImplementedCommand
-    name: ShowNotImplementedCommand
-    type: Class
-  - uid: H.Services.Common.ShowNoticeMessageCommandBase
-    name: ShowNoticeMessageCommandBase
-    type: Class
-  - uid: H.Services.Common.ShowOpenFilePathableDialog
-    name: ShowOpenFilePathableDialog
-    type: Class
-  - uid: H.Services.Common.ShowOpenProjectCommand
-    name: ShowOpenProjectCommand
-    type: Class
-  - uid: H.Services.Common.ShowPercentCommand
-    name: ShowPercentCommand
-    type: Class
-  - uid: H.Services.Common.ShowProgressNoticeMessageCommand
-    name: ShowProgressNoticeMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowProgressSnackMessageCommand
-    name: ShowProgressSnackMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowProjectCommandBase
-    name: ShowProjectCommandBase
-    type: Class
-  - uid: H.Services.Common.ShowSaveProjectCommand
-    name: ShowSaveProjectCommand
-    type: Class
-  - uid: H.Services.Common.ShowSaveProjectsCommand
-    name: ShowSaveProjectsCommand
-    type: Class
-  - uid: H.Services.Common.ShowSnackMessageCommandBase
-    name: ShowSnackMessageCommandBase
-    type: Class
-  - uid: H.Services.Common.ShowStringCommand
-    name: ShowStringCommand
-    type: Class
-  - uid: H.Services.Common.ShowStringNoticeMessageCommand
-    name: ShowStringNoticeMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowStringSnackMessageCommand
-    name: ShowStringSnackMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowSuccessNoticeMessageCommand
-    name: ShowSuccessNoticeMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowSuccessSnackMessageCommand
-    name: ShowSuccessSnackMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowTabEditCommand
-    name: ShowTabEditCommand
-    type: Class
-  - uid: H.Services.Common.ShowViewCommand
-    name: ShowViewCommand
-    type: Class
-  - uid: H.Services.Common.ShowWaitCommand
-    name: ShowWaitCommand
-    type: Class
-  - uid: H.Services.Common.ShowWarnNoticeMessageCommand
-    name: ShowWarnNoticeMessageCommand
-    type: Class
-  - uid: H.Services.Common.ShowWarnSnackMessageCommand
-    name: ShowWarnSnackMessageCommand
-    type: Class
-  - uid: H.Services.Common.SumitDialogCommand
-    name: SumitDialogCommand
-    type: Class
-  - uid: H.Services.Common.TextJsonMetaSettingService
-    name: TextJsonMetaSettingService
-    type: Class
-  - uid: H.Services.Common.TitleablePresenterBase`2
-    name: TitleablePresenterBase<T, Interface>
-    type: Class
-  - uid: H.Services.Common.TransitionHostableExtensions
-    name: TransitionHostableExtensions
-    type: Class
+  - uid: H.Services.Identity.Author.IAuthor
+    name: IAuthor
+    type: Interface
+  - uid: H.Services.Identity.Author.IAuthority
+    name: IAuthority
+    type: Interface
+  - uid: H.Services.Identity.Author.IAuthorityViewPresenter
+    name: IAuthorityViewPresenter
+    type: Interface
+- uid: H.Services.Identity.Role
+  name: H.Services.Identity.Role
+  type: Namespace
+  items:
+  - uid: H.Services.Identity.Role.IRole
+    name: IRole
+    type: Interface
+  - uid: H.Services.Identity.Role.IRoleViewPresenter
+    name: IRoleViewPresenter
+    type: Interface
+- uid: H.Services.Identity.User
+  name: H.Services.Identity.User
+  type: Namespace
+  items:
+  - uid: H.Services.Identity.User.IUser
+    name: IUser
+    type: Interface
+  - uid: H.Services.Identity.User.IUserViewPresenter
+    name: IUserViewPresenter
+    type: Interface
 - uid: H.Services.Logger
   name: H.Services.Logger
   type: Namespace
@@ -6976,8 +7366,8 @@ items:
   name: H.Services.Mail
   type: Namespace
   items:
-  - uid: H.Services.Mail.IMailLogService
-    name: IMailLogService
+  - uid: H.Services.Mail.ILogMailService
+    name: ILogMailService
     type: Interface
   - uid: H.Services.Mail.IMailService
     name: IMailService
@@ -6985,6 +7375,258 @@ items:
   - uid: H.Services.Mail.MailMessageItem
     name: MailMessageItem
     type: Class
+- uid: H.Services.Message
+  name: H.Services.Message
+  type: Namespace
+  items:
+  - uid: H.Services.Message.DialogExtension
+    name: DialogExtension
+    type: Class
+  - uid: H.Services.Message.FormMessageExtension
+    name: FormMessageExtension
+    type: Class
+  - uid: H.Services.Message.IocMessage
+    name: IocMessage
+    type: Class
+- uid: H.Services.Message.Dialog
+  name: H.Services.Message.Dialog
+  type: Namespace
+  items:
+  - uid: H.Services.Message.Dialog.CancelDialogCommand
+    name: CancelDialogCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.CloseDialogCommand
+    name: CloseDialogCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.DialogButton
+    name: DialogButton
+    type: Enum
+  - uid: H.Services.Message.Dialog.DialogCommandBase
+    name: DialogCommandBase
+    type: Class
+  - uid: H.Services.Message.Dialog.DialogMessageExtension
+    name: DialogMessageExtension
+    type: Class
+  - uid: H.Services.Message.Dialog.IAdornerDialogMessageService
+    name: IAdornerDialogMessageService
+    type: Interface
+  - uid: H.Services.Message.Dialog.ICancelable
+    name: ICancelable
+    type: Interface
+  - uid: H.Services.Message.Dialog.IDialog
+    name: IDialog
+    type: Interface
+  - uid: H.Services.Message.Dialog.IDialogMessageService
+    name: IDialogMessageService
+    type: Interface
+  - uid: H.Services.Message.Dialog.IPercentPresenter
+    name: IPercentPresenter
+    type: Interface
+  - uid: H.Services.Message.Dialog.IStringPresenter
+    name: IStringPresenter
+    type: Interface
+  - uid: H.Services.Message.Dialog.IWindowDialogMessageService
+    name: IWindowDialogMessageService
+    type: Interface
+  - uid: H.Services.Message.Dialog.IocDialog
+    name: IocDialog
+    type: Class
+  - uid: H.Services.Message.Dialog.SumitDialogCommand
+    name: SumitDialogCommand
+    type: Class
+- uid: H.Services.Message.Dialog.Commands
+  name: H.Services.Message.Dialog.Commands
+  type: Namespace
+  items:
+  - uid: H.Services.Message.Dialog.Commands.IocCommandBase`1
+    name: IocCommandBase<T>
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowCommand
+    name: ShowCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowDialogCommandBase
+    name: ShowDialogCommandBase
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowEditCommand
+    name: ShowEditCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowIocCommand
+    name: ShowIocCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowIocPresenterCommandBase`1
+    name: ShowIocPresenterCommandBase<T>
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowMessageCommand
+    name: ShowMessageCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowMessageDialogCommandBase
+    name: ShowMessageDialogCommandBase
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowNotImplementedCommand
+    name: ShowNotImplementedCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowPercentCommand
+    name: ShowPercentCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowStringCommand
+    name: ShowStringCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowTabEditCommand
+    name: ShowTabEditCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowViewCommand
+    name: ShowViewCommand
+    type: Class
+  - uid: H.Services.Message.Dialog.Commands.ShowWaitCommand
+    name: ShowWaitCommand
+    type: Class
+- uid: H.Services.Message.Form
+  name: H.Services.Message.Form
+  type: Namespace
+  items:
+  - uid: H.Services.Message.Form.IFormMessageService
+    name: IFormMessageService
+    type: Interface
+  - uid: H.Services.Message.Form.IFormOption
+    name: IFormOption
+    type: Interface
+- uid: H.Services.Message.IODialog
+  name: H.Services.Message.IODialog
+  type: Namespace
+  items:
+  - uid: H.Services.Message.IODialog.IIOFileDialogOption
+    name: IIOFileDialogOption
+    type: Interface
+  - uid: H.Services.Message.IODialog.IIOFileDialogService
+    name: IIOFileDialogService
+    type: Interface
+  - uid: H.Services.Message.IODialog.IIOFolderDialogService
+    name: IIOFolderDialogService
+    type: Interface
+  - uid: H.Services.Message.IODialog.IIOSaveFileDialogOption
+    name: IIOSaveFileDialogOption
+    type: Interface
+  - uid: H.Services.Message.IODialog.IOFileDialogExtension
+    name: IOFileDialogExtension
+    type: Class
+  - uid: H.Services.Message.IODialog.IOFileDialogOption
+    name: IOFileDialogOption
+    type: Class
+  - uid: H.Services.Message.IODialog.IOFileDialogOptionActions
+    name: IOFileDialogOptionActions
+    type: Class
+  - uid: H.Services.Message.IODialog.IOFileDialogService
+    name: IOFileDialogService
+    type: Class
+  - uid: H.Services.Message.IODialog.IOFolderDialogServiceExtension
+    name: IOFolderDialogServiceExtension
+    type: Class
+  - uid: H.Services.Message.IODialog.IOSaveFileDialogOption
+    name: IOSaveFileDialogOption
+    type: Class
+  - uid: H.Services.Message.IODialog.IOpenFilePathable
+    name: IOpenFilePathable
+    type: Interface
+  - uid: H.Services.Message.IODialog.ShowOpenFilePathableDialog
+    name: ShowOpenFilePathableDialog
+    type: Class
+- uid: H.Services.Message.Notice
+  name: H.Services.Message.Notice
+  type: Namespace
+  items:
+  - uid: H.Services.Message.Notice.INoticeItem
+    name: INoticeItem
+    type: Interface
+  - uid: H.Services.Message.Notice.INoticeMessageService
+    name: INoticeMessageService
+    type: Interface
+  - uid: H.Services.Message.Notice.IPercentNoticeItem
+    name: IPercentNoticeItem
+    type: Interface
+  - uid: H.Services.Message.Notice.ShowDialogNoticeMessageCommand
+    name: ShowDialogNoticeMessageCommand
+    type: Class
+  - uid: H.Services.Message.Notice.ShowErrorNoticeMessageCommand
+    name: ShowErrorNoticeMessageCommand
+    type: Class
+  - uid: H.Services.Message.Notice.ShowFatalNoticeMessageCommand
+    name: ShowFatalNoticeMessageCommand
+    type: Class
+  - uid: H.Services.Message.Notice.ShowInfoNoticeMessageCommand
+    name: ShowInfoNoticeMessageCommand
+    type: Class
+  - uid: H.Services.Message.Notice.ShowNoticeMessageCommandBase
+    name: ShowNoticeMessageCommandBase
+    type: Class
+  - uid: H.Services.Message.Notice.ShowProgressNoticeMessageCommand
+    name: ShowProgressNoticeMessageCommand
+    type: Class
+  - uid: H.Services.Message.Notice.ShowStringNoticeMessageCommand
+    name: ShowStringNoticeMessageCommand
+    type: Class
+  - uid: H.Services.Message.Notice.ShowSuccessNoticeMessageCommand
+    name: ShowSuccessNoticeMessageCommand
+    type: Class
+  - uid: H.Services.Message.Notice.ShowWarnNoticeMessageCommand
+    name: ShowWarnNoticeMessageCommand
+    type: Class
+- uid: H.Services.Message.Notify
+  name: H.Services.Message.Notify
+  type: Namespace
+  items:
+  - uid: H.Services.Message.Notify.ISystemNotifyMessage
+    name: ISystemNotifyMessage
+    type: Interface
+  - uid: H.Services.Message.Notify.NotifyBalloonIcon
+    name: NotifyBalloonIcon
+    type: Enum
+- uid: H.Services.Message.Snack
+  name: H.Services.Message.Snack
+  type: Namespace
+  items:
+  - uid: H.Services.Message.Snack.IPercentSnackItem
+    name: IPercentSnackItem
+    type: Interface
+  - uid: H.Services.Message.Snack.ISnackItem
+    name: ISnackItem
+    type: Interface
+  - uid: H.Services.Message.Snack.ISnackMessageService
+    name: ISnackMessageService
+    type: Interface
+  - uid: H.Services.Message.Snack.ShowDialogSnackMessageCommand
+    name: ShowDialogSnackMessageCommand
+    type: Class
+  - uid: H.Services.Message.Snack.ShowErrorSnackMessageCommand
+    name: ShowErrorSnackMessageCommand
+    type: Class
+  - uid: H.Services.Message.Snack.ShowFatalSnackMessageCommand
+    name: ShowFatalSnackMessageCommand
+    type: Class
+  - uid: H.Services.Message.Snack.ShowInfoSnackMessageCommand
+    name: ShowInfoSnackMessageCommand
+    type: Class
+  - uid: H.Services.Message.Snack.ShowProgressSnackMessageCommand
+    name: ShowProgressSnackMessageCommand
+    type: Class
+  - uid: H.Services.Message.Snack.ShowSnackMessageCommandBase
+    name: ShowSnackMessageCommandBase
+    type: Class
+  - uid: H.Services.Message.Snack.ShowStringSnackMessageCommand
+    name: ShowStringSnackMessageCommand
+    type: Class
+  - uid: H.Services.Message.Snack.ShowSuccessSnackMessageCommand
+    name: ShowSuccessSnackMessageCommand
+    type: Class
+  - uid: H.Services.Message.Snack.ShowWarnSnackMessageCommand
+    name: ShowWarnSnackMessageCommand
+    type: Class
+- uid: H.Services.Message.TaskBar
+  name: H.Services.Message.TaskBar
+  type: Namespace
+  items:
+  - uid: H.Services.Message.TaskBar.ITaskBarMessage
+    name: ITaskBarMessage
+    type: Interface
 - uid: H.Services.Operation
   name: H.Services.Operation
   type: Namespace
@@ -6997,6 +7639,25 @@ items:
     type: Interface
   - uid: H.Services.Operation.OperationType
     name: OperationType
+    type: Enum
+- uid: H.Services.Project
+  name: H.Services.Project
+  type: Namespace
+  items:
+  - uid: H.Services.Project.IProjectItem
+    name: IProjectItem
+    type: Interface
+  - uid: H.Services.Project.IProjectService
+    name: IProjectService
+    type: Interface
+  - uid: H.Services.Project.IProjectViewPresenter
+    name: IProjectViewPresenter
+    type: Interface
+  - uid: H.Services.Project.IocProject
+    name: IocProject
+    type: Class
+  - uid: H.Services.Project.ProjectSaveMode
+    name: ProjectSaveMode
     type: Enum
 - uid: H.Services.Revertible
   name: H.Services.Revertible
@@ -7033,6 +7694,9 @@ items:
   name: H.Services.Serializable
   type: Namespace
   items:
+  - uid: H.Services.Serializable.Extention
+    name: Extention
+    type: Class
   - uid: H.Services.Serializable.ICloneService
     name: ICloneService
     type: Interface
@@ -7042,12 +7706,6 @@ items:
   - uid: H.Services.Serializable.ISerializerService
     name: ISerializerService
     type: Interface
-  - uid: H.Services.Serializable.IWebJsonSerializerService
-    name: IWebJsonSerializerService
-    type: Interface
-  - uid: H.Services.Serializable.IWebXmlSerializerService
-    name: IWebXmlSerializerService
-    type: Interface
   - uid: H.Services.Serializable.IXmlSerializerService
     name: IXmlSerializerService
     type: Interface
@@ -7056,9 +7714,6 @@ items:
     type: Interface
   - uid: H.Services.Serializable.IocSerializer
     name: IocSerializer
-    type: Class
-  - uid: H.Services.Serializable.IocXmlWebSerializer
-    name: IocXmlWebSerializer
     type: Class
   - uid: H.Services.Serializable.JsonCloneService
     name: JsonCloneService
@@ -7075,231 +7730,383 @@ items:
   - uid: H.Services.Serializable.TypeConverterJsonConverter
     name: TypeConverterJsonConverter
     type: Class
-  - uid: H.Services.Serializable.XmlWebSerializerService
-    name: XmlWebSerializerService
-    type: Class
-- uid: H.Styles.Default
-  name: H.Styles.Default
+- uid: H.Services.Serializable.Web
+  name: H.Services.Serializable.Web
   type: Namespace
   items:
-  - uid: H.Styles.Default.BorderKeys
-    name: BorderKeys
+  - uid: H.Services.Serializable.Web.IWebJsonSerializerService
+    name: IWebJsonSerializerService
+    type: Interface
+  - uid: H.Services.Serializable.Web.IWebXmlSerializerService
+    name: IWebXmlSerializerService
+    type: Interface
+  - uid: H.Services.Serializable.Web.IocXmlWebSerializer
+    name: IocXmlWebSerializer
     type: Class
-  - uid: H.Styles.Default.ButtonKeys
-    name: ButtonKeys
+  - uid: H.Services.Serializable.Web.XmlWebSerializerService
+    name: XmlWebSerializerService
     type: Class
-  - uid: H.Styles.Default.CalendarKeys
-    name: CalendarKeys
+- uid: H.Services.Setting
+  name: H.Services.Setting
+  type: Namespace
+  items:
+  - uid: H.Services.Setting.ISettable
+    name: ISettable
+    type: Interface
+  - uid: H.Services.Setting.ISettingButtonPresenter
+    name: ISettingButtonPresenter
+    type: Interface
+  - uid: H.Services.Setting.ISettingDataOption
+    name: ISettingDataOption
+    type: Interface
+  - uid: H.Services.Setting.ISettingDataService
+    name: ISettingDataService
+    type: Interface
+  - uid: H.Services.Setting.ISettingViewPresenter
+    name: ISettingViewPresenter
+    type: Interface
+  - uid: H.Services.Setting.IocSetting
+    name: IocSetting
     type: Class
-  - uid: H.Styles.Default.CheckBoxKeys
-    name: CheckBoxKeys
+  - uid: H.Services.Setting.SettingGroupNames
+    name: SettingGroupNames
     type: Class
-  - uid: H.Styles.Default.CloseAfterSaveWindowCommand
-    name: CloseAfterSaveWindowCommand
+- uid: H.Style
+  name: H.Style
+  type: Namespace
+  items:
+  - uid: H.Style.StyleType
+    name: StyleType
+    type: Enum
+- uid: H.Styles
+  name: H.Styles
+  type: Namespace
+  items:
+  - uid: H.Styles.ConciseStyleExtension
+    name: ConciseStyleExtension
     type: Class
-  - uid: H.Styles.Default.CloseWindowCommand
-    name: CloseWindowCommand
-    type: Class
-  - uid: H.Styles.Default.ComboBoxItemKeys
-    name: ComboBoxItemKeys
-    type: Class
-  - uid: H.Styles.Default.ComboBoxKeys
-    name: ComboBoxKeys
-    type: Class
-  - uid: H.Styles.Default.ContextMenuKeys
-    name: ContextMenuKeys
-    type: Class
-  - uid: H.Styles.Default.DataGridCheckBoxColumn
-    name: DataGridCheckBoxColumn
-    type: Class
-  - uid: H.Styles.Default.DataGridComboBoxColumn
-    name: DataGridComboBoxColumn
-    type: Class
-  - uid: H.Styles.Default.DataGridHyperlinkColumn
-    name: DataGridHyperlinkColumn
-    type: Class
-  - uid: H.Styles.Default.DataGridKeys
-    name: DataGridKeys
-    type: Class
-  - uid: H.Styles.Default.DataGridTextColumn
-    name: DataGridTextColumn
-    type: Class
-  - uid: H.Styles.Default.DatePickerKeys
-    name: DatePickerKeys
-    type: Class
-  - uid: H.Styles.Default.DefaultStyleThemeExtension
-    name: DefaultStyleThemeExtension
-    type: Class
-  - uid: H.Styles.Default.DeleteTextTextBoxCommand
-    name: DeleteTextTextBoxCommand
-    type: Class
-  - uid: H.Styles.Default.DocumentViewerKeys
-    name: DocumentViewerKeys
-    type: Class
-  - uid: H.Styles.Default.ExpanderKeys
-    name: ExpanderKeys
-    type: Class
-  - uid: H.Styles.Default.Extension
+  - uid: H.Styles.Extension
     name: Extension
     type: Class
-  - uid: H.Styles.Default.FontIconButton
-    name: FontIconButton
-    type: Class
-  - uid: H.Styles.Default.FontIconButtonKeys
-    name: FontIconButtonKeys
-    type: Class
-  - uid: H.Styles.Default.FontIconTextBlock
-    name: FontIconTextBlock
-    type: Class
-  - uid: H.Styles.Default.FontIconToggleButton
-    name: FontIconToggleButton
-    type: Class
-  - uid: H.Styles.Default.FontIconToggleButtonKeys
-    name: FontIconToggleButtonKeys
-    type: Class
-  - uid: H.Styles.Default.FrameKeys
-    name: FrameKeys
-    type: Class
-  - uid: H.Styles.Default.GridSplitterKeys
-    name: GridSplitterKeys
-    type: Class
-  - uid: H.Styles.Default.GridViewKeys
-    name: GridViewKeys
-    type: Class
-  - uid: H.Styles.Default.GroupBoxKeys
-    name: GroupBoxKeys
-    type: Class
-  - uid: H.Styles.Default.GroupItemKeys
-    name: GroupItemKeys
-    type: Class
-  - uid: H.Styles.Default.LabelKeys
-    name: LabelKeys
-    type: Class
-  - uid: H.Styles.Default.ListBoxItemKeys
-    name: ListBoxItemKeys
-    type: Class
-  - uid: H.Styles.Default.ListBoxKeys
-    name: ListBoxKeys
-    type: Class
-  - uid: H.Styles.Default.ListViewItemKeys
-    name: ListViewItemKeys
-    type: Class
-  - uid: H.Styles.Default.ListViewKeys
-    name: ListViewKeys
-    type: Class
-  - uid: H.Styles.Default.LogoDataProvider
+  - uid: H.Styles.LogoDataProvider
     name: LogoDataProvider
     type: Class
-  - uid: H.Styles.Default.LogoExtension
+  - uid: H.Styles.LogoExtension
     name: LogoExtension
     type: Class
-  - uid: H.Styles.Default.MainWindowOption
-    name: MainWindowOption
+- uid: H.Styles.Bootstrap
+  name: H.Styles.Bootstrap
+  type: Namespace
+  items:
+  - uid: H.Styles.Bootstrap.BootstrapStyleExtension
+    name: BootstrapStyleExtension
     type: Class
-  - uid: H.Styles.Default.MainWindowSavableService
-    name: MainWindowSavableService
+- uid: H.Styles.Bootstrap.StyleResources
+  name: H.Styles.Bootstrap.StyleResources
+  type: Namespace
+  items:
+  - uid: H.Styles.Bootstrap.StyleResources.BootstrapStyleResource
+    name: BootstrapStyleResource
     type: Class
-  - uid: H.Styles.Default.MaximizeWindowCommand
+- uid: H.Styles.Commands
+  name: H.Styles.Commands
+  type: Namespace
+  items:
+  - uid: H.Styles.Commands.CloseAfterSaveWindowCommand
+    name: CloseAfterSaveWindowCommand
+    type: Class
+  - uid: H.Styles.Commands.CloseWindowCommand
+    name: CloseWindowCommand
+    type: Class
+  - uid: H.Styles.Commands.MaximizeWindowCommand
     name: MaximizeWindowCommand
     type: Class
-  - uid: H.Styles.Default.MenuItemKeys
-    name: MenuItemKeys
-    type: Class
-  - uid: H.Styles.Default.MenuKeys
-    name: MenuKeys
-    type: Class
-  - uid: H.Styles.Default.MinimizeWindowCommand
+  - uid: H.Styles.Commands.MinimizeWindowCommand
     name: MinimizeWindowCommand
     type: Class
-  - uid: H.Styles.Default.NavigationWindowKeys
-    name: NavigationWindowKeys
-    type: Class
-  - uid: H.Styles.Default.PasswordBoxKeys
-    name: PasswordBoxKeys
-    type: Class
-  - uid: H.Styles.Default.PathKeys
-    name: PathKeys
-    type: Class
-  - uid: H.Styles.Default.ProgressBarKeys
-    name: ProgressBarKeys
-    type: Class
-  - uid: H.Styles.Default.RadioButtonKeys
-    name: RadioButtonKeys
-    type: Class
-  - uid: H.Styles.Default.RepeatButtonKeys
-    name: RepeatButtonKeys
-    type: Class
-  - uid: H.Styles.Default.ResizeGripKeys
-    name: ResizeGripKeys
-    type: Class
-  - uid: H.Styles.Default.RestoreWindowCommand
+  - uid: H.Styles.Commands.RestoreWindowCommand
     name: RestoreWindowCommand
     type: Class
-  - uid: H.Styles.Default.ScrollBarKeys
-    name: ScrollBarKeys
-    type: Class
-  - uid: H.Styles.Default.ScrollViewerKeys
-    name: ScrollViewerKeys
-    type: Class
-  - uid: H.Styles.Default.ScrollViewerSetting
-    name: ScrollViewerSetting
-    type: Class
-  - uid: H.Styles.Default.SeparatorKeys
-    name: SeparatorKeys
-    type: Class
-  - uid: H.Styles.Default.SliderKeys
-    name: SliderKeys
-    type: Class
-  - uid: H.Styles.Default.StatusBarItemKeys
-    name: StatusBarItemKeys
-    type: Class
-  - uid: H.Styles.Default.StatusBarKeys
-    name: StatusBarKeys
-    type: Class
-  - uid: H.Styles.Default.SumitWindowCommand
+  - uid: H.Styles.Commands.SumitWindowCommand
     name: SumitWindowCommand
     type: Class
-  - uid: H.Styles.Default.TabControlKeys
-    name: TabControlKeys
-    type: Class
-  - uid: H.Styles.Default.TabItemKeys
-    name: TabItemKeys
-    type: Class
-  - uid: H.Styles.Default.TextBlockIconKeys
-    name: TextBlockIconKeys
-    type: Class
-  - uid: H.Styles.Default.TextBoxKeys
-    name: TextBoxKeys
-    type: Class
-  - uid: H.Styles.Default.ThumbKeys
-    name: ThumbKeys
-    type: Class
-  - uid: H.Styles.Default.ToggleButtonKeys
-    name: ToggleButtonKeys
-    type: Class
-  - uid: H.Styles.Default.ToolBarKeys
-    name: ToolBarKeys
-    type: Class
-  - uid: H.Styles.Default.ToolTipKeys
-    name: ToolTipKeys
-    type: Class
-  - uid: H.Styles.Default.TranslationCloseWindowCommand
+  - uid: H.Styles.Commands.TranslationCloseWindowCommand
     name: TranslationCloseWindowCommand
     type: Class
-  - uid: H.Styles.Default.TreeViewItemKeys
-    name: TreeViewItemKeys
-    type: Class
-  - uid: H.Styles.Default.TreeViewKeys
-    name: TreeViewKeys
-    type: Class
-  - uid: H.Styles.Default.WindowCommandBase
+  - uid: H.Styles.Commands.WindowCommandBase
     name: WindowCommandBase
     type: Class
-  - uid: H.Styles.Default.WindowKeys
+- uid: H.Styles.Controls
+  name: H.Styles.Controls
+  type: Namespace
+  items:
+  - uid: H.Styles.Controls.BorderKeys
+    name: BorderKeys
+    type: Class
+  - uid: H.Styles.Controls.ButtonKeys
+    name: ButtonKeys
+    type: Class
+  - uid: H.Styles.Controls.CalendarKeys
+    name: CalendarKeys
+    type: Class
+  - uid: H.Styles.Controls.CheckBoxKeys
+    name: CheckBoxKeys
+    type: Class
+  - uid: H.Styles.Controls.ComboBoxItemKeys
+    name: ComboBoxItemKeys
+    type: Class
+  - uid: H.Styles.Controls.ComboBoxKeys
+    name: ComboBoxKeys
+    type: Class
+  - uid: H.Styles.Controls.ContextMenuKeys
+    name: ContextMenuKeys
+    type: Class
+  - uid: H.Styles.Controls.DataGridCheckBoxColumn
+    name: DataGridCheckBoxColumn
+    type: Class
+  - uid: H.Styles.Controls.DataGridComboBoxColumn
+    name: DataGridComboBoxColumn
+    type: Class
+  - uid: H.Styles.Controls.DataGridHyperlinkColumn
+    name: DataGridHyperlinkColumn
+    type: Class
+  - uid: H.Styles.Controls.DataGridKeys
+    name: DataGridKeys
+    type: Class
+  - uid: H.Styles.Controls.DataGridTextColumn
+    name: DataGridTextColumn
+    type: Class
+  - uid: H.Styles.Controls.DatePickerKeys
+    name: DatePickerKeys
+    type: Class
+  - uid: H.Styles.Controls.DeleteTextTextBoxCommand
+    name: DeleteTextTextBoxCommand
+    type: Class
+  - uid: H.Styles.Controls.DocumentViewerKeys
+    name: DocumentViewerKeys
+    type: Class
+  - uid: H.Styles.Controls.ExpanderKeys
+    name: ExpanderKeys
+    type: Class
+  - uid: H.Styles.Controls.Extension
+    name: Extension
+    type: Class
+  - uid: H.Styles.Controls.FontIconButton
+    name: FontIconButton
+    type: Class
+  - uid: H.Styles.Controls.FontIconButtonKeys
+    name: FontIconButtonKeys
+    type: Class
+  - uid: H.Styles.Controls.FontIconTextBlock
+    name: FontIconTextBlock
+    type: Class
+  - uid: H.Styles.Controls.FontIconToggleButton
+    name: FontIconToggleButton
+    type: Class
+  - uid: H.Styles.Controls.FontIconToggleButtonKeys
+    name: FontIconToggleButtonKeys
+    type: Class
+  - uid: H.Styles.Controls.FrameKeys
+    name: FrameKeys
+    type: Class
+  - uid: H.Styles.Controls.GridSplitterKeys
+    name: GridSplitterKeys
+    type: Class
+  - uid: H.Styles.Controls.GridViewKeys
+    name: GridViewKeys
+    type: Class
+  - uid: H.Styles.Controls.GroupBoxKeys
+    name: GroupBoxKeys
+    type: Class
+  - uid: H.Styles.Controls.GroupItemKeys
+    name: GroupItemKeys
+    type: Class
+  - uid: H.Styles.Controls.LabelKeys
+    name: LabelKeys
+    type: Class
+  - uid: H.Styles.Controls.ListBoxItemKeys
+    name: ListBoxItemKeys
+    type: Class
+  - uid: H.Styles.Controls.ListBoxKeys
+    name: ListBoxKeys
+    type: Class
+  - uid: H.Styles.Controls.ListViewItemKeys
+    name: ListViewItemKeys
+    type: Class
+  - uid: H.Styles.Controls.ListViewKeys
+    name: ListViewKeys
+    type: Class
+  - uid: H.Styles.Controls.MainWindowOption
+    name: MainWindowOption
+    type: Class
+  - uid: H.Styles.Controls.MainWindowSavableService
+    name: MainWindowSavableService
+    type: Class
+  - uid: H.Styles.Controls.MenuItemKeys
+    name: MenuItemKeys
+    type: Class
+  - uid: H.Styles.Controls.MenuKeys
+    name: MenuKeys
+    type: Class
+  - uid: H.Styles.Controls.NavigationWindowKeys
+    name: NavigationWindowKeys
+    type: Class
+  - uid: H.Styles.Controls.PasswordBoxKeys
+    name: PasswordBoxKeys
+    type: Class
+  - uid: H.Styles.Controls.PathKeys
+    name: PathKeys
+    type: Class
+  - uid: H.Styles.Controls.ProgressBarKeys
+    name: ProgressBarKeys
+    type: Class
+  - uid: H.Styles.Controls.RadioButtonKeys
+    name: RadioButtonKeys
+    type: Class
+  - uid: H.Styles.Controls.RepeatButtonKeys
+    name: RepeatButtonKeys
+    type: Class
+  - uid: H.Styles.Controls.ResizeGripKeys
+    name: ResizeGripKeys
+    type: Class
+  - uid: H.Styles.Controls.ScrollBarKeys
+    name: ScrollBarKeys
+    type: Class
+  - uid: H.Styles.Controls.ScrollViewerKeys
+    name: ScrollViewerKeys
+    type: Class
+  - uid: H.Styles.Controls.ScrollViewerSetting
+    name: ScrollViewerSetting
+    type: Class
+  - uid: H.Styles.Controls.SeparatorKeys
+    name: SeparatorKeys
+    type: Class
+  - uid: H.Styles.Controls.SliderKeys
+    name: SliderKeys
+    type: Class
+  - uid: H.Styles.Controls.StatusBarItemKeys
+    name: StatusBarItemKeys
+    type: Class
+  - uid: H.Styles.Controls.StatusBarKeys
+    name: StatusBarKeys
+    type: Class
+  - uid: H.Styles.Controls.TabControlKeys
+    name: TabControlKeys
+    type: Class
+  - uid: H.Styles.Controls.TabItemKeys
+    name: TabItemKeys
+    type: Class
+  - uid: H.Styles.Controls.TextBlockIconKeys
+    name: TextBlockIconKeys
+    type: Class
+  - uid: H.Styles.Controls.TextBoxKeys
+    name: TextBoxKeys
+    type: Class
+  - uid: H.Styles.Controls.ThumbKeys
+    name: ThumbKeys
+    type: Class
+  - uid: H.Styles.Controls.ToggleButtonKeys
+    name: ToggleButtonKeys
+    type: Class
+  - uid: H.Styles.Controls.ToolBarKeys
+    name: ToolBarKeys
+    type: Class
+  - uid: H.Styles.Controls.ToolTipKeys
+    name: ToolTipKeys
+    type: Class
+  - uid: H.Styles.Controls.TreeViewItemKeys
+    name: TreeViewItemKeys
+    type: Class
+  - uid: H.Styles.Controls.TreeViewKeys
+    name: TreeViewKeys
+    type: Class
+  - uid: H.Styles.Controls.WindowKeys
     name: WindowKeys
     type: Class
-  - uid: H.Styles.Default.WindowSetting
+  - uid: H.Styles.Controls.WindowSetting
     name: WindowSetting
+    type: Class
+- uid: H.Styles.StyleResources
+  name: H.Styles.StyleResources
+  type: Namespace
+  items:
+  - uid: H.Styles.StyleResources.ConciseStyleExtension
+    name: ConciseStyleExtension
+    type: Class
+  - uid: H.Styles.StyleResources.ConciseStyleResource
+    name: ConciseStyleResource
+    type: Class
+  - uid: H.Styles.StyleResources.IStyleResource
+    name: IStyleResource
+    type: Interface
+  - uid: H.Styles.StyleResources.NoneStyleResource
+    name: NoneStyleResource
+    type: Class
+- uid: H.Themes
+  name: H.Themes
+  type: Namespace
+  items:
+  - uid: H.Themes.BrushKeys
+    name: BrushKeys
+    type: Class
+  - uid: H.Themes.IResourceable
+    name: IResourceable
+    type: Interface
+- uid: H.Themes.Backgrounds
+  name: H.Themes.Backgrounds
+  type: Namespace
+  items:
+  - uid: H.Themes.Backgrounds.BackgroundThemeExtension
+    name: BackgroundThemeExtension
+    type: Class
+  - uid: H.Themes.Backgrounds.BackgroundThemeType
+    name: BackgroundThemeType
+    type: Enum
+  - uid: H.Themes.Backgrounds.DrawingBrushResource
+    name: DrawingBrushResource
+    type: Class
+  - uid: H.Themes.Backgrounds.IBackgroundResource
+    name: IBackgroundResource
+    type: Interface
+  - uid: H.Themes.Backgrounds.ImageBrushResource
+    name: ImageBrushResource
+    type: Class
+  - uid: H.Themes.Backgrounds.LinearGradientBrushResource
+    name: LinearGradientBrushResource
+    type: Class
+  - uid: H.Themes.Backgrounds.RadialGradientBrushResource
+    name: RadialGradientBrushResource
+    type: Class
+  - uid: H.Themes.Backgrounds.SolidColorBrushResource
+    name: SolidColorBrushResource
+    type: Class
+- uid: H.Themes.Colors
+  name: H.Themes.Colors
+  type: Namespace
+  items:
+  - uid: H.Themes.Colors.ColorKeys
+    name: ColorKeys
+    type: Class
+  - uid: H.Themes.Colors.ColorResourceBase
+    name: ColorResourceBase
+    type: Class
+  - uid: H.Themes.Colors.ColorThemeExtension
+    name: ColorThemeExtension
+    type: Class
+  - uid: H.Themes.Colors.ColorThemeType
+    name: ColorThemeType
+    type: Enum
+  - uid: H.Themes.Colors.DarkColorResource
+    name: DarkColorResource
+    type: Class
+  - uid: H.Themes.Colors.DefaultColorResource
+    name: DefaultColorResource
+    type: Class
+  - uid: H.Themes.Colors.IColorResource
+    name: IColorResource
+    type: Interface
+  - uid: H.Themes.Colors.LightColorResource
+    name: LightColorResource
     type: Class
 - uid: H.Themes.Colors.Accent
   name: H.Themes.Colors.Accent
@@ -7333,6 +8140,19 @@ items:
   - uid: H.Themes.Colors.Blue.BlueLightThemeExtension
     name: BlueLightThemeExtension
     type: Class
+- uid: H.Themes.Colors.Copper
+  name: H.Themes.Colors.Copper
+  type: Namespace
+  items:
+  - uid: H.Themes.Colors.Copper.CopperColorResource
+    name: CopperColorResource
+    type: Class
+  - uid: H.Themes.Colors.Copper.CopperThemeExtension
+    name: CopperThemeExtension
+    type: Class
+  - uid: H.Themes.Colors.Copper.VintageFilmColorResource
+    name: VintageFilmColorResource
+    type: Class
 - uid: H.Themes.Colors.Gray
   name: H.Themes.Colors.Gray
   type: Namespace
@@ -7348,6 +8168,36 @@ items:
     type: Class
   - uid: H.Themes.Colors.Gray.GrayLightThemeExtension
     name: GrayLightThemeExtension
+    type: Class
+- uid: H.Themes.Colors.Industrial
+  name: H.Themes.Colors.Industrial
+  type: Namespace
+  items:
+  - uid: H.Themes.Colors.Industrial.IndustrialDarkColorResource
+    name: IndustrialDarkColorResource
+    type: Class
+- uid: H.Themes.Colors.Mineral
+  name: H.Themes.Colors.Mineral
+  type: Namespace
+  items:
+  - uid: H.Themes.Colors.Mineral.MineralColorResource
+    name: MineralColorResource
+    type: Class
+  - uid: H.Themes.Colors.Mineral.MineralThemeExtension
+    name: MineralThemeExtension
+    type: Class
+- uid: H.Themes.Colors.Platform
+  name: H.Themes.Colors.Platform
+  type: Namespace
+  items:
+  - uid: H.Themes.Colors.Platform.AppleColorResource
+    name: AppleColorResource
+    type: Class
+  - uid: H.Themes.Colors.Platform.FluentUIColorResource
+    name: FluentUIColorResource
+    type: Class
+  - uid: H.Themes.Colors.Platform.MaterialDesignColorResource
+    name: MaterialDesignColorResource
     type: Class
 - uid: H.Themes.Colors.Purple
   name: H.Themes.Colors.Purple
@@ -7365,57 +8215,120 @@ items:
   - uid: H.Themes.Colors.Purple.PurpleLightThemeExtension
     name: PurpleLightThemeExtension
     type: Class
-- uid: H.Themes.Default
-  name: H.Themes.Default
+- uid: H.Themes.Colors.Solid
+  name: H.Themes.Colors.Solid
   type: Namespace
   items:
-  - uid: H.Themes.Default.BrushKeys
-    name: BrushKeys
+  - uid: H.Themes.Colors.Solid.ChambrayDarkColorResource
+    name: ChambrayDarkColorResource
     type: Class
-  - uid: H.Themes.Default.ColorKeys
-    name: ColorKeys
+  - uid: H.Themes.Colors.Solid.OracleDarkColorResource
+    name: OracleDarkColorResource
     type: Class
-  - uid: H.Themes.Default.ColorThemeExtension
-    name: ColorThemeExtension
+  - uid: H.Themes.Colors.Solid.VikingDarkColorResource
+    name: VikingDarkColorResource
     type: Class
-  - uid: H.Themes.Default.ColorThemeType
-    name: ColorThemeType
-    type: Enum
-  - uid: H.Themes.Default.DarkColorResource
-    name: DarkColorResource
+- uid: H.Themes.Colors.Technology
+  name: H.Themes.Colors.Technology
+  type: Namespace
+  items:
+  - uid: H.Themes.Colors.Technology.AmberTerminalDarkColorResource
+    name: AmberTerminalDarkColorResource
     type: Class
-  - uid: H.Themes.Default.DefaultColorResource
-    name: DefaultColorResource
+  - uid: H.Themes.Colors.Technology.CyberpunkColorResource
+    name: CyberpunkColorResource
     type: Class
-  - uid: H.Themes.Default.FontSizeKeys
-    name: FontSizeKeys
+  - uid: H.Themes.Colors.Technology.CyberpunkThemeExtension
+    name: CyberpunkThemeExtension
     type: Class
-  - uid: H.Themes.Default.FontSizeThemeExtension
+  - uid: H.Themes.Colors.Technology.FuturismColorResource
+    name: FuturismColorResource
+    type: Class
+  - uid: H.Themes.Colors.Technology.FuturismThemeExtension
+    name: FuturismThemeExtension
+    type: Class
+  - uid: H.Themes.Colors.Technology.FuturisticGreenDarkColorResource
+    name: FuturisticGreenDarkColorResource
+    type: Class
+  - uid: H.Themes.Colors.Technology.MinimalFuturismColorResource
+    name: MinimalFuturismColorResource
+    type: Class
+  - uid: H.Themes.Colors.Technology.TechnologyBlueDarkColorResource
+    name: TechnologyBlueDarkColorResource
+    type: Class
+  - uid: H.Themes.Colors.Technology.TechnologyCyanColorResource
+    name: TechnologyCyanColorResource
+    type: Class
+  - uid: H.Themes.Colors.Technology.TechnologyIndigoColorResource
+    name: TechnologyIndigoColorResource
+    type: Class
+  - uid: H.Themes.Colors.Technology.TechnologyPinkColorResource
+    name: TechnologyPinkColorResource
+    type: Class
+  - uid: H.Themes.Colors.Technology.TechnologyPurpleColorResource
+    name: TechnologyPurpleColorResource
+    type: Class
+  - uid: H.Themes.Colors.Technology.TechnologySOIORColorResource
+    name: TechnologySOIORColorResource
+    type: Class
+- uid: H.Themes.Colors.Web
+  name: H.Themes.Colors.Web
+  type: Namespace
+  items:
+  - uid: H.Themes.Colors.Web.AntDesignProColorResource
+    name: AntDesignProColorResource
+    type: Class
+  - uid: H.Themes.Colors.Web.BootstrapColorResource
+    name: BootstrapColorResource
+    type: Class
+  - uid: H.Themes.Colors.Web.ColorUIGAColorResource
+    name: ColorUIGAColorResource
+    type: Class
+  - uid: H.Themes.Colors.Web.LayUIColorResource
+    name: LayUIColorResource
+    type: Class
+  - uid: H.Themes.Colors.Web.WeUIColorResource
+    name: WeUIColorResource
+    type: Class
+- uid: H.Themes.Extensions
+  name: H.Themes.Extensions
+  type: Namespace
+  items:
+  - uid: H.Themes.Extensions.FontSizeThemeExtension
     name: FontSizeThemeExtension
     type: Class
-  - uid: H.Themes.Default.FontSizeThemeType
+  - uid: H.Themes.Extensions.FontSizeThemeType
     name: FontSizeThemeType
     type: Enum
-  - uid: H.Themes.Default.IColorResource
-    name: IColorResource
-    type: Interface
-  - uid: H.Themes.Default.LayoutKeys
-    name: LayoutKeys
-    type: Class
-  - uid: H.Themes.Default.LayoutThemeExtension
+  - uid: H.Themes.Extensions.LayoutThemeExtension
     name: LayoutThemeExtension
     type: Class
-  - uid: H.Themes.Default.LayoutThemeType
+  - uid: H.Themes.Extensions.LayoutThemeType
     name: LayoutThemeType
     type: Enum
-  - uid: H.Themes.Default.LightColorResource
-    name: LightColorResource
-    type: Class
-  - uid: H.Themes.Default.SystemKeys
-    name: SystemKeys
-    type: Class
-  - uid: H.Themes.Default.ThemeTypeExtension
+  - uid: H.Themes.Extensions.ThemeTypeExtension
     name: ThemeTypeExtension
+    type: Class
+- uid: H.Themes.FontSizes
+  name: H.Themes.FontSizes
+  type: Namespace
+  items:
+  - uid: H.Themes.FontSizes.FontSizeKeys
+    name: FontSizeKeys
+    type: Class
+- uid: H.Themes.Layouts
+  name: H.Themes.Layouts
+  type: Namespace
+  items:
+  - uid: H.Themes.Layouts.LayoutKeys
+    name: LayoutKeys
+    type: Class
+- uid: H.Themes.Systems
+  name: H.Themes.Systems
+  type: Namespace
+  items:
+  - uid: H.Themes.Systems.SystemKeys
+    name: SystemKeys
     type: Class
 - uid: H.Windows.Dialog
   name: H.Windows.Dialog
@@ -7562,25 +8475,6 @@ items:
   - uid: H.Windows.Ribbon.ToggleButtonBindable
     name: ToggleButtonBindable
     type: Class
-  - uid: H.Windows.Ribbon.VisualTreeExtention
-    name: VisualTreeExtention
-    type: Class
-- uid: HeBianGu.App.Tool
-  name: HeBianGu.App.Tool
-  type: Namespace
-  items:
-  - uid: HeBianGu.App.Tool.GetIconToImageSourceConverter
-    name: GetIconToImageSourceConverter
-    type: Class
-  - uid: HeBianGu.App.Tool.IconHelper
-    name: IconHelper
-    type: Class
-  - uid: HeBianGu.App.Tool.SHFILEINFO
-    name: SHFILEINFO
-    type: Struct
-  - uid: HeBianGu.App.Tool.SHGFI
-    name: SHGFI
-    type: Enum
 - uid: Microsoft.Windows.Shell
   name: Microsoft.Windows.Shell
   type: Namespace
@@ -7610,17 +8504,11 @@ items:
   - uid: System.IApplicationBuilder
     name: IApplicationBuilder
     type: Interface
-  - uid: System.IChartDataProvider
-    name: IChartDataProvider
+  - uid: System.IConfigureableApplication
+    name: IConfigureableApplication
     type: Interface
   - uid: System.LicenseExtention
     name: LicenseExtention
-    type: Class
-  - uid: System.ObjectExtension
-    name: ObjectExtension
-    type: Class
-  - uid: System.ObservableExtension
-    name: ObservableExtension
     type: Class
   - uid: System.PropertyGridExtention
     name: PropertyGridExtention
@@ -7634,50 +8522,12 @@ items:
   - uid: System.SystemSettingExtention
     name: SystemSettingExtention
     type: Class
-  - uid: System.TypeJsonConverter`1
-    name: TypeJsonConverter<T>
-    type: Class
-- uid: System.IO
-  name: System.IO
-  type: Namespace
-  items:
-  - uid: System.IO.ImageEx
-    name: ImageEx
-    type: Class
-  - uid: System.IO.ImageExtention
-    name: ImageExtention
-    type: Class
 - uid: System.Windows
   name: System.Windows
   type: Namespace
   items:
-  - uid: System.Windows.ElementExtention
-    name: ElementExtention
-    type: Class
-  - uid: System.Windows.GridExtension
-    name: GridExtension
-    type: Class
-  - uid: System.Windows.RectExtenstion
-    name: RectExtenstion
-    type: Class
-  - uid: System.Windows.RenderTargetBitmapExtensions
-    name: RenderTargetBitmapExtensions
-    type: Class
-  - uid: System.Windows.TreeViewExtension
-    name: TreeViewExtension
-    type: Class
-- uid: System.Windows.Media
-  name: System.Windows.Media
-  type: Namespace
-  items:
-  - uid: System.Windows.Media.DrawingContextExtension
-    name: DrawingContextExtension
-    type: Class
-  - uid: System.Windows.Media.GeometryExtension
-    name: GeometryExtension
-    type: Class
-  - uid: System.Windows.Media.RectExtension
-    name: RectExtension
+  - uid: System.Windows.RoutedEventArgs`1
+    name: RoutedEventArgs<T>
     type: Class
 - uid: System.Windows.Threading
   name: System.Windows.Threading

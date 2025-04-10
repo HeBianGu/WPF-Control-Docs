@@ -127,14 +127,14 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><a class="xref" href="H.Mvvm.IDisplayBindable.html">IDisplayBindable</a></div>
-      <div><a class="xref" href="H.Mvvm.IIconable.html">IIconable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.INameable.html">INameable</a></div>
-      <div><a class="xref" href="H.Mvvm.IOrderable.html">IOrderable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IGroupable.html">IGroupable</a></div>
-      <div><a class="xref" href="H.Mvvm.ViewModels.Base.IDable.html">IDable</a></div>
-      <div><a class="xref" href="H.Mvvm.IDescriptionable.html">IDescriptionable</a></div>
-      <div><a class="xref" href="H.Mvvm.IDesignPresenterBase.html">IDesignPresenterBase</a></div>
+      <div><a class="xref" href="H.Mvvm.ViewModels.IDisplayBindable.html">IDisplayBindable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IIconable.html">IIconable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.INameable.html">INameable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IOrderable.html">IOrderable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IGroupable.html">IGroupable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDable.html">IDable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDescriptionable.html">IDescriptionable</a></div>
+      <div><a class="xref" href="H.Common.Interfaces.IDesignPresenterBase.html">IDesignPresenterBase</a></div>
     </dd>
   </dl>
 
@@ -222,6 +222,12 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
     </div>
     <div>
       <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_MinWidth">DesignPresenterBase.MinWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_MaxHeight">DesignPresenterBase.MaxHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_MaxWidth">DesignPresenterBase.MaxWidth</a>
     </div>
     <div>
       <a class="xref" href="H.Mvvm.ViewModels.Base.DesignPresenterBase.html#H_Mvvm_ViewModels_Base_DesignPresenterBase_Margin">DesignPresenterBase.Margin</a>
@@ -370,10 +376,10 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneCast__1___0_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneCast&lt;T&gt;(T, Predicate&lt;PropertyInfo&gt;)</a>
+      <a class="xref" href="H.Extensions.NewtonsoftJson.NewtonsoftJsonSerializerServiceExtension.html#H_Extensions_NewtonsoftJson_NewtonsoftJsonSerializerServiceExtension_CloneByNewtonsoftJson__1___0_">NewtonsoftJsonSerializerServiceExtension.CloneByNewtonsoftJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue_System_Object_System_String_">Extensions.GetPropertyValue(object, string)</a>
@@ -382,7 +388,40 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
       <a class="xref" href="H.Controls.FilterColumnDataGrid.Extensions.html#H_Controls_FilterColumnDataGrid_Extensions_GetPropertyValue__1_System_Object_System_String_">Extensions.GetPropertyValue&lt;T&gt;(object, string)</a>
   </div>
   <div>
-      <a class="xref" href="H.Controls.Form.PropertyInfoExtention.html#H_Controls_Form_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+      <a class="xref" href="H.Controls.Form.Provider.PropertyInfoExtention.html#H_Controls_Form_Provider_PropertyInfoExtention_ChangeType__1_System_Object_">PropertyInfoExtention.ChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="H.Extensions.Common.ObjectExtension.html#H_Extensions_Common_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_GetJsonPropertyInfos_System_Object_">TextJsonableExtensions.GetJsonPropertyInfos(object)</a>
@@ -392,39 +431,6 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
   </div>
   <div>
       <a class="xref" href="H.Extensions.TextJsonable.TextJsonableExtensions.html#H_Extensions_TextJsonable_TextJsonableExtensions_WriteType_System_Object_System_Text_Json_Utf8JsonWriter_">TextJsonableExtensions.WriteType(object, Utf8JsonWriter)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CloneBy_System_Object_System_Predicate_System_Reflection_PropertyInfo__">ObjectExtension.CloneBy(object, Predicate&lt;PropertyInfo&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_CopyPropertyValueFrom_System_Object_System_Object_System_Predicate_System_Reflection_PropertyInfo__System_Func_System_Reflection_PropertyInfo_System_Reflection_PropertyInfo_System_Boolean__">ObjectExtension.CopyPropertyValueFrom(object, object, Predicate&lt;PropertyInfo&gt;, Func&lt;PropertyInfo, PropertyInfo, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_Func_System_Reflection_PropertyInfo_System_Object_System_Boolean__">ObjectExtension.IsMacth(object, Func&lt;PropertyInfo, object, bool&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_IsMacth_System_Object_System_String_">ObjectExtension.IsMacth(object, string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelState_System_Object_System_Collections_Generic_List_System_String___">ObjectExtension.ModelState(object, out List&lt;string&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_ModelStateDeep_System_Object_System_String__">ObjectExtension.ModelStateDeep(object, out string)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType_System_Object_System_Type_System_Object__">ObjectExtension.TryChangeType(object, Type, out object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object_">ObjectExtension.TryChangeType&lt;T&gt;(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryChangeType__1_System_Object___0__">ObjectExtension.TryChangeType&lt;T&gt;(object, out T)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_">ObjectExtension.TryConvertToString(object)</a>
-  </div>
-  <div>
-      <a class="xref" href="System.ObjectExtension.html#System_ObjectExtension_TryConvertToString_System_Object_System_String__">ObjectExtension.TryConvertToString(object, out string)</a>
   </div>
   <div>
       <a class="xref" href="System.Windows.Threading.DispatcherExtension.html#System_Windows_Threading_DispatcherExtension_DelayInvoke_System_Object_System_Action_System_Windows_Threading_DispatcherPriority_">DispatcherExtension.DelayInvoke(object, Action, DispatcherPriority)</a>
@@ -473,8 +479,8 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
 
   <a id="H_Controls_Chart2D_BarPresenter__ctor_" data-uid="H.Controls.Chart2D.BarPresenter.#ctor*"></a>
 
-  <h3 id="H_Controls_Chart2D_BarPresenter__ctor_System_Collections_Generic_IEnumerable_System_Double__" data-uid="H.Controls.Chart2D.BarPresenter.#ctor(System.Collections.Generic.IEnumerable{System.Double})">
-  BarPresenter(IEnumerable&lt;double&gt;)
+  <h3 id="H_Controls_Chart2D_BarPresenter__ctor_H_Services_Common_IChartDataProvider_" data-uid="H.Controls.Chart2D.BarPresenter.#ctor(H.Services.Common.IChartDataProvider)">
+  BarPresenter(IChartDataProvider)
   
   </h3>
 
@@ -482,12 +488,12 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarPresenter(IEnumerable&lt;double&gt; data)</code></pre>
+    <pre><code class="lang-csharp hljs">public BarPresenter(IChartDataProvider dataProvider)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dt><code>dataProvider</code> <a class="xref" href="H.Services.Common.IChartDataProvider.html">IChartDataProvider</a></dt>
     <dd></dd>
   </dl>
 
@@ -504,8 +510,8 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
 
   <a id="H_Controls_Chart2D_BarPresenter__ctor_" data-uid="H.Controls.Chart2D.BarPresenter.#ctor*"></a>
 
-  <h3 id="H_Controls_Chart2D_BarPresenter__ctor_System_IChartDataProvider_" data-uid="H.Controls.Chart2D.BarPresenter.#ctor(System.IChartDataProvider)">
-  BarPresenter(IChartDataProvider)
+  <h3 id="H_Controls_Chart2D_BarPresenter__ctor_System_Collections_Generic_IEnumerable_System_Double__" data-uid="H.Controls.Chart2D.BarPresenter.#ctor(System.Collections.Generic.IEnumerable{System.Double})">
+  BarPresenter(IEnumerable&lt;double&gt;)
   
   </h3>
 
@@ -513,12 +519,12 @@ public class BarPresenter : LinePresenter, INotifyPropertyChanged, IDisplayBinda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarPresenter(IChartDataProvider dataProvider)</code></pre>
+    <pre><code class="lang-csharp hljs">public BarPresenter(IEnumerable&lt;double&gt; data)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>dataProvider</code> <a class="xref" href="System.IChartDataProvider.html">IChartDataProvider</a></dt>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
     <dd></dd>
   </dl>
 
